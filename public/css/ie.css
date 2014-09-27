@@ -1,0 +1,12 @@
+body{min-width: 960px;}
+.container{width: 960px !important;}
+.social-networks li a:hover{-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";}
+#header .right-block{width: 53.8%;}
+#header .navbar{width: 459px;}
+#header .navbar-header{display: none !important;}
+#header .navbar-collapse{display: block !important; border-top: none;}
+.video-btn .btn-play{min-width: 20px;}
+.video-btn:hover,
+.video-btn:hover .btn-play,
+.video-btn:hover .slide{background: #5cb564;}
+.video-btn:hover:before{background-image: url(../images/arrow-top02.png);}

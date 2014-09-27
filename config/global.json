@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "EverCharge": {
+            "applicationId": "6GCYaayr8edzs5eOPZoSqv8kohQNjBNN3FxCsFFd", 
+            "masterKey": "iCmr7cNm3XwDQU0EwNl7huvMYiQTJsppjZaVjeFS"
+        }, 
+        "_default": {
+            "link": "EverCharge"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.19"
+    }
+}
