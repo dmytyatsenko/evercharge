@@ -12,6 +12,14 @@ app.config['SECRET_KEY'] = SECRET_KEY
 def evercharge():
 	return render_template("index.html")
 
+@app.route('/ev-owner', methods = ['POST', 'GET'])
+def ev_owner():
+	return render_template("inner-owner.html")
+
+@app.route('/hoa-pm', methods = ['POST', 'GET'])
+def hoa_property_manager():
+	return render_template("inner-pms.html")
+
 
 if __name__ == '__main__':
 	PORT = int(os.environ.get("PORT",5000))
