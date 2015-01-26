@@ -51,15 +51,21 @@ a:focus{outline: none !important; text-decoration: none;}
 /* page logo styles */
 .logo{
 	float: left;
-	text-indent: -9999px;
+	/*text-indent: -9999px;*/
 	overflow: hidden;
 	width: 249px;
-	height: 33px;
+	height: 67px;
 	background: url(../images/logo.png) no-repeat;
+	margin-bottom: -34px;
+}
+.logo h2{
+	margin: -10px 0px 0px 43px;
 }
 .logo a{
 	display: block;
 	height: 100%;
+	height: 40px;
+	color: #FFF;
 }
 #header .right-block{
 	float: right;
@@ -174,7 +180,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	line-height: 26px;
 	text-transform: uppercase;
 	font-weight: 800;
-	margin: 0;
+	margin-bottom: 0px;
 }
 .banner .article-quote h2{margin-bottom: 33px;}
 .banner .desc{padding: 0 10px;}
@@ -588,8 +594,14 @@ a:focus{outline: none !important; text-decoration: none;}
 	.add #header .right-block{width: auto;}
 	#header .logo{
 		width: 163px;
-		height: 22px;
+		height: 43px;
 		background-image: url(../images/logo-small.png);
+	}
+	#header .logo h2{
+		margin: -5px 0px 0px 31px;
+	}
+	#header .logo a{
+		height: 23px;
 	}
 	#header .right-block{
 		width: 79px;

@@ -19,6 +19,7 @@
 	<script src="js/jquery-1.8.3.min.js"></script>
 	<!-- include bootstrap javascript -->
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-formhelpers-phone.js"></script>
 	<!-- include custom JavaScript -->
 	<script type="text/javascript" src="js/jquery.main.js"></script>
 	<!-- include script for window -->
@@ -60,7 +61,10 @@
 				<!-- header of the page -->
 				<header class="row" id="header">
 					<!-- logo of the page -->
-					<strong class="logo"><a href="index.html">Evercharge</a></strong>
+					<div class="logo">
+						<div><a href="index.html"></a></div>
+						<center><h2><a href="tel:18883427383">(888) 342-7383</a></h2></center>
+					</div>
 					<div class="right-block">
 						<!-- social networks -->
 						<ul class="social-networks">
@@ -112,21 +116,21 @@
 				<article class="col-md-5 col-xs-5">
 					<img src="images/image05.png" alt="image description" width="255" height="247">
 					<div class="desc">
-						<h2><a href="#">Easy Install</a></h2>
+						<h2>Easy Install</h2>
 						<p>No new meters, large holes in the concrete, or massive conduit running to the main supply are required.</p>
 					</div>
 				</article>
 				<article class="col-md-6 col-xs-6">
 					<img src="images/image06.png" alt="image description" width="255" height="247">
 					<div class="desc">
-						<h2><a href="#">Ready to Expand</a></h2>
+						<h2>Ready to Expand</h2>
 						<p>Continue adding vehicle capacity as demand for EV charging grows within your business.</p>
 					</div>
 				</article>
 				<article class="col-md-5 col-xs-5">
 					<img src="images/image08.png" alt="image description" width="274" height="247">
 					<div class="desc">
-						<h2><a href="#">Save on Power</a></h2>
+						<h2>Save on Power</h2>
 						<p>Drastically lower the overall expense of providing power to your employees.</p>
 					</div>
 				</article>
@@ -171,7 +175,7 @@
 								</div>
 								<div class="form-group">
 									<label for="label3" class="label3">phone</label>
-									<input name="contact[phone]" type="tel" class="form-control required-number" id="label3" placeholder="phone">
+									<input name="contact[phone]" type="tel" class="form-control bfh-phone" id="label3" placeholder="phone" data-format="ddd-ddd-dddd">
 								</div>
 								<div class="form-group">
 									<label for="label4" class="label4">address</label>
@@ -192,6 +196,7 @@
 				<!-- footer navigation -->
 				<ul class="footer-nav">
 					<li><a href="index.html">Home</a></li>
+					<li><a href="mailto:sales@evercharge.net">Contact Us</a></li>
 					<li><a href="mailto:support@evercharge.net">Installers</a></li>
 					<!-- <li><a href="#">About Us</a></li> -->
 				</ul>
