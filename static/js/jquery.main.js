@@ -14,7 +14,7 @@ function initValidation() {
     var errorClass = 'error';
     var successClass = 'success';
     var regEmail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    var regPhone = /^[0-9]+$/;
+    var regPhone = /^([0-9]{3})+\-([0-9]{3})+\-([0-9]{4})+$/;
 
     jQuery('form.validate-form').each(function() {
         var form = jQuery(this).attr('novalidate', 'novalidate');
