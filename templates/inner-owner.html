@@ -5,142 +5,55 @@
 	{% endblock %}
 
 
+	{% block maincontent %}
 
-						<nav class="navbar navbar-default" role="navigation">
-							<!-- Brand and toggle get grouped for better mobile display -->
-							<div class="navbar-header">
-								<button title="Menu" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-									<span class="sr-only">Menu</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-							</div>
-							<!-- Collect the nav links, forms, and other content for toggling -->
-							<div class="collapse navbar-collapse" id="navbar-collapse-1">
-								<ul id="nav">
-									<li class="menu1"><a href="inner-owner.html">Ev owner</a></li>
-									<li class="menu2"><a href="inner-pms.html">Property manager &amp; hoa</a></li>
-									<li class="menu3"><a href="inner-workplace.html">Workplace</a></li>
-								</ul>
-							</div>
-						</nav>
-
-					</div>
-				</header>
-				<div class="row text-center">
-					<div class="col-md-14 col-md-offset-1 article-quote">
-						<img src="images/image02.png" alt="image description" class="img-circle" width="126" height="125">
-						<h1>EV Owner</h1>
-						<h2>Recharge RIGHT FROM YOUR OWN PARKING SPACE</h2>
-						<a href="#quote" class="btn">Get a quote</a>
-					</div>
-				</div>
-			</div>
+		<div class="col-md-14 col-md-offset-1 article-quote">
+			<img src="images/image02.png" alt="image description" class="img-circle" width="126" height="125">
+			<h1>EV Owner</h1>
+			<h2>Recharge RIGHT FROM YOUR OWN PARKING SPACE</h2>
+			<a href="#quote" class="btn">Get a quote</a>
 		</div>
+
+
+{% endblock %}
 		<!-- contain main informative part of the site -->
-		<main id="content" class="container">
-			<div class="video-btn text-center">
-				<div class="slide">
-					<iframe width="560" height="315" src="" data-url="http://www.youtube.com/embed/M4t47yjCGWw?autoplay=1" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<a href="#" class="btn-play">see how it works</a>
-			</div>
+
+{% block content_one %}
 			<!-- features -->
 			<div class="row features">
-				<article class="col-md-5 col-xs-5">
+				<article class="col-md-4 col-xs-5">
 					<img src="images/image12.png" alt="image description" width="252" height="248">
 					<h2>Tap to Charge</h2>
 					<p>Just tap your RFID access card and plug in. EverCharge automatically authenticates your vehicle and logs your usage for billing purposes.</p>
 				</article>
-				<article class="col-md-6 col-xs-6">
-					<img src="images/image13.png" alt="image description" width="253" height="248">
+				<article class="col-md-4 col-xs-5">
+					<img src="images/image13.png" alt="compatibility image" width="253" height="248">
 					<h2>Fits Any EV</h2>
 					<p>Our Charging System is compatable with all production plugin vehicles currently sold in the United States, including Teslas.</p>
 				</article>
-				<article class="col-md-5 col-xs-5">
-					<img src="images/image14.png" alt="image description" width="255" height="248">
-					<h2>Automatic Billing</h2>
+				<article class="col-md-4 col-xs-5">
+					<img src="images/image14.png" alt="automatic billing image" width="255" height="248">
+					<h2>Auto Billing</h2>
 					<p>You’ll automatically be billed once per month for the electricity that you use. Choose from unlimited charging or pay-as-you-go.</p>
 				</article>
+				<article class="col-md-4 col-xs-5">
+					<img src="images/image07.png" alt="add value image" width="255" height="248">
+					<h2>Add Value</h2>
+					<p>Increase property values and make your units more desirable.</p>
+				</article>
 			</div>
+{% endblock %}
+
+
+{% block content_two %}
 			<!-- jumbotron -->
 			<article class="jumbotron">
 				<h2>Do you know your rights?</h2>
 				<p>Many states prohibit Homeowner's Associations from <br>denying residents the right to charge at home.</p>
-<!-- 				<form action="#">
+				<form action="#">
 					<fieldset>
 						<input type="text" class="form-control" placeholder="enter your zip code">
 					</fieldset>
-				</form> -->
+				</form>
 			</article>
-			<!-- get quote form -->
-			<form action="https://app01.nutshell.com/api/v1/public/lead/95057:5ded4008eea8b5062ba4f9030d118ca689753968" method="post" class="get-quote validate-form" id="quote">
-				<input name="successUrl" value="http://evercharge.net/thankyou.html" type="hidden">
-				<input name="source[name]" value="Web Signup" type="hidden">
-        		<fieldset>
-					<legend><span>Get a Free Quote</span></legend>
-					<div class="wrap">
-						<div class="col">
-							<h3>What are you?</h3>
-							<ul class="tabset js-ajax-tabs">
-								<li data-href="inc/tab00.html" class="active">
-									<input type="radio" checked="checked" value="EV Driver" name="type" class="radio1">
-								</li>
-								<li data-href="inc/tab01.html">
-									<input type="radio" value="Property Manager" name="type" class="radio2">
-								</li>
-								<li data-href="inc/tab02.html">
-									<input type="radio" value="Workpace Manager" name="type" class="radio3">
-								</li>
-							</ul>
-							<div class="tab-content ajax-hold"></div>
-						</div>
-						<div class="col">
-							<h3>How can we contact you?</h3>
-							<div class="holder">
-								<div class="form-group">
-									<label for="label1" class="label1">name</label>
-									<input name="contact[name]" type="text" class="form-control" id="label1" placeholder="name">
-								</div>
-								<div class="form-group">
-									<label for="label2" class="label2">email</label>
-									<input name="contact[email]" type="email" class="form-control required-email" id="label2" placeholder="email">
-								</div>
-								<div class="form-group">
-									<label for="label3" class="label3">phone</label>
-									<input name="contact[phone]" type="tel" class="form-control bfh-phone" id="label3" placeholder="phone" data-format="ddd-ddd-dddd" >
-								</div>
-								<div class="form-group">
-									<label for="label4" class="label4">address</label>
-									<input name="contact[address][address_1]" type="text" class="form-control" id="label4" placeholder="address">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="btn-wrapper">
-						<input type="submit" value="get your quote">
-					</div>
-				</fieldset>
-			</form>
-
-		</main>
-		<!-- footer of the page -->
-		<footer id="footer">
-			<div class="container">
-
-				<!-- footer navigation -->
-				<ul class="footer-nav">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="mailto:sales@evercharge.net">Contact Us</a></li>
-					<li><a href="mailto:support@evercharge.net">Installers</a></li>
-					<!-- <li><a href="#">About Us</a></li> -->
-				</ul>
-				<!-- copyright -->
-				<span class="copyright">&copy; 2014 GreenIt!, Inc. All Right Reserved. Made in California.</span>
-
-			</div>
-		</footer>
-	</div>
-</body>
-</html>
+ {% endblock %}

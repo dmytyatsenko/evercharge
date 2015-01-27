@@ -1,98 +1,10 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<!-- set the encoding of your site -->
-	<meta charset="utf-8">
-	<!-- set the viewport width and initial-scale on mobile devices -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>EverCharge</title>
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	<!-- include the bootstrap stylesheet -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="css/all.css">
-	<!-- include the google font -->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
-	<!-- include jQuery library -->
-	<script src="js/jquery-1.8.3.min.js"></script>
-	<!-- include bootstrap javascript -->
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/bootstrap-formhelpers-phone.js"></script>
-	<!-- include custom JavaScript -->
-	<script type="text/javascript" src="js/jquery.main.js"></script>
-	<!-- include script for window -->
-	<script type="text/javascript">
-		if (navigator.userAgent.match(/IEMobile\/10\.0/) || navigator.userAgent.match(/MSIE 10.*Touch/)) {
-			var msViewportStyle = document.createElement('style')
-			msViewportStyle.appendChild(
-				document.createTextNode(
-					'@-ms-viewport{width:auto !important}'
-				)
-			)
-			document.querySelector('head').appendChild(msViewportStyle)
-		}
-	</script>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+{% extends 'base.html' %}
+	
+	{% block background %}
+	<img src="images/image11.jpg" alt="everchrge garage" width="1200" height="526">
+	{% endblock %}
 
-	  ga('create', 'UA-55104339-1', 'auto');
-	  ga('require', 'displayfeatures');
-	  ga('send', 'pageview');
-
-	</script>
-	 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<link rel="stylesheet" href="css/ie.css">
-	<![endif]-->
-</head>
-<body>
-	<!-- main container of all the page elements -->
-	<div id="wrapper">
-		<div class="banner">
-			<div class="bg-stretch"><img src="images/image11.jpg" alt="image description" width="1200" height="526"></div>
-			<div class="container">
-				<!-- header of the page -->
-				<header class="row" id="header">
-					<!-- logo of the page -->
-					<div class="logo">
-						<div><a href="index.html"></a></div>
-						<center><h2><a href="tel:18883427383">(888) 342-7383</a></h2></center>
-					</div>
-					<div class="right-block">
-						<!-- social networks -->
-						<ul class="social-networks">
-							<li class="facebook"><a href="https://www.facebook.com/evevercharge">facebook</a></li>
-							<li class="twitter"><a href="https://twitter.com/evercharge">twitter</a></li>
-						</ul>
-						<nav class="navbar navbar-default" role="navigation">
-							<!-- Brand and toggle get grouped for better mobile display -->
-							<div class="navbar-header">
-								<button title="Menu" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-									<span class="sr-only">Menu</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-							</div>
-							<!-- Collect the nav links, forms, and other content for toggling -->
-							<div class="collapse navbar-collapse" id="navbar-collapse-1">
-								<ul id="nav">
-									<li class="menu1"><a href="inner-owner.html">Ev owner</a></li>
-									<li class="menu2"><a href="inner-pms.html">Property manager &amp; hoa</a></li>
-									<li class="menu3"><a href="inner-workplace.html">Workplace</a></li>
-								</ul>
-							</div>
-						</nav>
-					</div>
-				</header>
-				<div class="row text-center">
+	{% block maincontent %}
 					<div class="col-md-14 col-md-offset-1 article-quote">
 						<img src="images/image03.png" class="img-circle" alt="image description" width="126" height="125">
 						<h1><span class="hidden-xs">Property Manager</span> <span class="visible">PM</span> &amp; HOA</h1>
@@ -102,14 +14,10 @@
 				</div>
 			</div>
 		</div>
+	{% endblock %}
 		<!-- contain main informative part of the site -->
-		<main id="content" class="container">
-			<div class="video-btn text-center">
-				<div class="slide">
-					<iframe width="560" height="315" src="" data-url="http://www.youtube.com/embed/M4t47yjCGWw?autoplay=1" frameborder="0" allowfullscreen></iframe>
-				</div>
-				<a href="#" class="btn-play">see how it works</a>
-			</div>
+
+	{% block content_one %}
 			<!-- features -->
 			<div class="row features">
 				<article class="col-md-5 col-xs-5">
@@ -143,80 +51,16 @@
 					<p>EV owners charge with their own EVSE in their own parking space.</p>
 				</article>
 			</div>
+	{% endblock %}
+	{% block content_two %}
 			<!-- jumbotron -->
 			<article class="jumbotron">
 				<h2>Legal Compliance</h2>
 				<p>We help navigate the complex legalities to comply with state laws, <br>which may require HOAs to comply with a member's request for EV charging</p>
-<!-- 				<form action="#">
+				<form action="#">
 					<fieldset>
 						<input type="text" class="form-control" placeholder="enter your zip code">
 					</fieldset>
-				</form> -->
+				</form>
 			</article>
-			<!-- get quote form -->
-			<form action="https://app01.nutshell.com/api/v1/public/lead/95057:5ded4008eea8b5062ba4f9030d118ca689753968" method="post" class="get-quote validate-form" id="quote">
-				<input name="successUrl" value="http://evercharge.net/thankyou.html" type="hidden">
-				<input name="source[name]" value="Web Signup" type="hidden">
-        		<fieldset>
-					<legend><span>Get a Free Quote</span></legend>
-					<div class="wrap">
-						<div class="col">
-							<h3>What are you?</h3>
-							<ul class="tabset js-ajax-tabs">
-								<li data-href="inc/tab00.html" class="active">
-									<input type="radio" checked="checked" value="EV Driver" name="type" class="radio1">
-								</li>
-								<li data-href="inc/tab01.html">
-									<input type="radio" value="Property Manager" name="type" class="radio2">
-								</li>
-								<li data-href="inc/tab02.html">
-									<input type="radio" value="Workpace Manager" name="type" class="radio3">
-								</li>
-							</ul>
-							<div class="tab-content ajax-hold"></div>
-						</div>
-						<div class="col">
-							<h3>How can we contact you?</h3>
-							<div class="holder">
-								<div class="form-group">
-									<label for="label1" class="label1">name</label>
-									<input name="contact[name]" type="text" class="form-control" id="label1" placeholder="name">
-								</div>
-								<div class="form-group">
-									<label for="label2" class="label2">email</label>
-									<input name="contact[email]" type="email" class="form-control required-email" id="label2" placeholder="email">
-								</div>
-								<div class="form-group">
-									<label for="label3" class="label3">phone</label>
-									<input name="contact[phone]" type="tel" class="form-control bfh-phone" id="label3" placeholder="phone" data-format="ddd-ddd-dddd">
-								</div>
-								<div class="form-group">
-									<label for="label4" class="label4">address</label>
-									<input name="contact[address][address_1]" type="text" class="form-control" id="label4" placeholder="address">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="btn-wrapper">
-						<input type="submit" value="get your quote">
-					</div>
-				</fieldset>
-			</form>
-		</main>
-		<!-- footer of the page -->
-		<footer id="footer">
-			<div class="container">
-				<!-- footer navigation -->
-				<ul class="footer-nav">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="mailto:sales@evercharge.net">Contact Us</a></li>
-					<li><a href="mailto:support@evercharge.net">Installers</a></li>
-					<!-- <li><a href="#">About Us</a></li> -->
-				</ul>
-				<!-- copyright -->
-				<span class="copyright">&copy; 2014 GreenIt!, Inc. All Right Reserved. Made in California.</span>
-			</div>
-		</footer>
-	</div>
-</body>
-</html>
+	{% endblock %}
