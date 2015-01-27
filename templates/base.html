@@ -29,6 +29,9 @@
 	<script src="js/bootstrap-formhelpers-phone.js"></script>
 	<!-- include custom JavaScript -->
 	<script type="text/javascript" src="js/jquery.main.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+	<script type="text/javascript" src="js/typeahead.bundle.js"></script>
+
 	<!-- <script type="text/javascript" src="js/shadowbox.js"></script>
 	 <script type="text/javascript">
 		Shadowbox.init({
@@ -192,7 +195,8 @@
 								</div>
 								<div class="form-group">
 									<label for="label4" class="label4">address</label>
-									<input name="contact[address][address_1]" type="text" class="form-control" id="label4" placeholder="address">
+									<input type="text" data-provide="typeahead" class="typeahead form-control" id="label4" placeholder="address" name="contact[address][address_1]"></input>
+
 								</div>
 							</div>
 						</div>
