@@ -143,13 +143,18 @@
 					<iframe width="560" height="315" src="" data-url="http://www.youtube.com/embed/M4t47yjCGWw?autoplay=1" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<a href="#" class="btn-play">see how it works</a>
-
+				</div>
 				</br></br>
+
+				{% block body %}
+
 				<legend><span>The World’s smartest EV Charging Station</span></legend>
 				EverCharge offers the only fully managed, affordable, scalable charging solution designed for apartments and condominiums.</br></br>
 
 				EverCharge navigates the complexity of obtaining charging in multi tenant buildings so you can focus on enjoying your EV.</br></br>
-			</div>
+				
+				
+
 			<!-- get quote form -->
 			<form action="https://app01.nutshell.com/api/v1/public/lead/95057:5ded4008eea8b5062ba4f9030d118ca689753968" method="post" class="get-quote validate-form">
 				<input name="successUrl" value="http://evercharge.net/thankyou.html" type="hidden">
@@ -198,6 +203,9 @@
 				</fieldset>
 			</form>
 			</br></br>
+
+
+
 			<legend><span><center>Why EverCharge</center></span></legend>
 			Forget Public Charging. EverCharge is installed directly in resident parking spaces for relibable, exclusive use.</br>
 			</br>
@@ -213,6 +221,9 @@
 			</div>
 
 		</main>
+
+{% endblock %}
+
 		<!-- footer of the page -->
 		<footer id="footer">
 			<div class="container">
@@ -222,12 +233,15 @@
           <li><a href="mailto:sales@evercharge.net">Contact Us</a></li>
           <li><a href="mailto:support@evercharge.net">Installers</a></li>
           <li><a href="mailto:jobs@evercharge.net">Jobs</a></li>
-          <!-- <li><a href="#">About Us</a></li> -->
+          <li><a href="/aboutus">About Us</a></li>
+          <li><a href="/faqs">FAQs</a></li>
 				</ul>
 				<!-- copyright -->
 				<span class="copyright">&copy; 2015 EverCharge, Inc. All Right Reserved. Made in California.</span>
 			</div>
 		</footer>
 	</div>
+
+
 </body>
 </html>

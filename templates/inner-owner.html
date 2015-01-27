@@ -1,3 +1,5 @@
+{% extends 'index.html' %}
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -67,12 +69,15 @@
 						<center><h2><a href="tel:18883427383">(888) 342-7383</a></h2></center>
 					</div>
 					<div class="right-block">
+
+
 						<!-- social networks -->
 						<ul class="social-networks">
 							<li class="facebook"><a href="https://www.facebook.com/evevercharge">facebook</a></li>
 							<li class="twitter"><a href="https://twitter.com/evercharge">twitter</a></li>
 						</ul>
 						<!-- main navigation of the page -->
+						{% block header_navigation %}
 						<nav class="navbar navbar-default" role="navigation">
 							<!-- Brand and toggle get grouped for better mobile display -->
 							<div class="navbar-header">
@@ -92,6 +97,7 @@
 								</ul>
 							</div>
 						</nav>
+						{% endblock %}
 					</div>
 				</header>
 				<div class="row text-center">
@@ -189,10 +195,12 @@
 					</div>
 				</fieldset>
 			</form>
+
 		</main>
 		<!-- footer of the page -->
 		<footer id="footer">
 			<div class="container">
+
 				<!-- footer navigation -->
 				<ul class="footer-nav">
 					<li><a href="index.html">Home</a></li>
@@ -202,6 +210,7 @@
 				</ul>
 				<!-- copyright -->
 				<span class="copyright">&copy; 2014 GreenIt!, Inc. All Right Reserved. Made in California.</span>
+
 			</div>
 		</footer>
 	</div>

@@ -20,6 +20,14 @@ def ev_owner():
 def hoa_property_manager():
 	return render_template("inner-pms.html")
 
+@app.route('/aboutus', methods = ['POST', 'GET'])
+def about_us():
+	return render_template("about-us.html")
+
+@app.route('/faqs', methods = ['POST', 'GET'])
+def faqs():
+	return render_template("faqs.html")
+
 
 if __name__ == '__main__':
 	PORT = int(os.environ.get("PORT",5000))
