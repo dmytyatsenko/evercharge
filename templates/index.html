@@ -49,18 +49,32 @@
 	{% endblock %}
 
 	{% block content_one_bottom %}
+	<article class="jumbotron greyjumbo">
 			<legend><span><center>Why EverCharge</center></span></legend>
-			Forget Public Charging. EverCharge is installed directly in resident parking spaces for relibable, exclusive use.</br>
-			</br>
-			We take care of the entire process to make charging at your property simple. </br>
-			</br>
-			As an HOA or building owner enable your property to provide a scalable solution at no cost to the association. </br>
+			<p>Forget Public Charging. EverCharge is installed directly in resident parking spaces for relibable, exclusive use.</p>
 
-			<div class="btn-wrapper">
-				Residents Learn more
-			</div>
-			<div class="btn-wrapper">
-				Buildings Learn More
-			</div>
+			<p>We take care of the entire process to make charging at your property simple.
+			<br><br>
+				<a href="/ev-owner" class="btn"><span>Residents</span>Learn More</a>
+			</p>
+			
+			<p>As an HOA or building owner enable your property to provide a scalable solution at no cost to the association. 
+			<br><br>
+				<a href="/hoa-pm" class="btn"><span>Buildings</span> Learn More</a>
+			</p>
+
+
+	</article>
+	<br>
+	<br>
+	<article class="jumbotron">
+		<h2>Do you know your rights?</h2>
+		<p>Many states prohibit Homeowner's Associations from <br>denying residents the right to charge at home.</p>
+		<form action="#">
+			<fieldset>
+				<input type="text" class="form-control" placeholder="enter your zip code">
+			</fieldset>
+		</form>
+	</article>
 
 	{% endblock %}
