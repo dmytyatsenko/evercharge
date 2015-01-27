@@ -79,12 +79,18 @@
 		<link rel="stylesheet" href="css/ie.css">
 	<![endif]-->
 </head>
+
+
 <body>
 	<!-- main container of all the page elements -->
 	<div id="wrapper" class="add">
 		<div class="banner">
-			<div class="bg-stretch"><img src="images/image01.jpg" alt="image description" width="1200" height="688"></div>
-			<div class="container">
+
+			<div class="bg-stretch">
+				{% block background %}
+				{% endblock %}
+			</div>
+				<div class="container">
 				<!-- header of the page -->
 				<header class="row" id="header">
 					<!-- logo of the page -->
@@ -92,51 +98,45 @@
 						<div><a href="index.html"></a></div>
 						<center><h2><a href="tel:18883427383">(888) 342-7383</a></h2></center>
 					</div>
-					
 					<div class="right-block">
 						<!-- social networks -->
 						<ul class="social-networks">
 							<li class="facebook"><a href="https://www.facebook.com/evevercharge">facebook</a></li>
 							<li class="twitter"><a href="https://twitter.com/evercharge">twitter</a></li>
 						</ul>
+						<nav class="navbar navbar-default" role="navigation">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button title="Menu" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+									<span class="sr-only">Menu</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="navbar-collapse-1">
+								<ul id="nav">
+									<li class="menu1"><a href="inner-owner.html">Ev owner</a></li>
+									<li class="menu2"><a href="inner-pms.html">Property manager &amp; hoa</a></li>
+								</ul>
+							</div>
+						</nav>
 					</div>
 				</header>
-				<div class="row text-center">
-					<section class="col-md-12 col-md-offset-2">
-						<header>
-							<h1>Get Charged</h1>
-							<h2>the world’s smartest EV charging system</h2>
-						</header>
-						<div class="row threecolumn">
-							<article class="col-md-8 col-sm-8 col-xs-8">
-								<a href="/ev-owner">
-								<img src="images/image02.png" alt="image description" class="img-circle" width="126" height="125"></a>
-								<div class="desc">
-									<div class="text">
-										<h3>EV OWNER</h3>
-										<p>Recharge from your<br>own parking space</p>
-									</div>
-									<a href="/ev-owner" class="btn"><span>learn</span> more</a>
-								</div>
-							</article>
-							<article class="col-md-8 col-sm-8 col-xs-8">
-								<a href="/hoa-pm">
-								<img src="images/image03.png" alt="image description" class="img-circle" width="126" height="125"></a>
-								<div class="desc">
-									<div class="text">
-										<h3><span class="hidden-xs">property manager</span><span class="visible">PM</span> & HOA</h3>
-										<p>A valuable amenity<br>for your residents</p>
-									</div>
-									<a href="/hoa-pm" class="btn"><span>learn</span> more</a>
-								</div>
-							</article>
 
-						</div>
-					</section>
+
+				<div class="row text-center">
+
+						{% block maincontent %}
+
+						{% endblock %}
 				</div>
 			</div>
 		</div>
-		<!-- contain main informative part of the site -->
+
+
+		<!-- video -->
 		<main id="content" class="container">
 			<div class="video-btn text-center">
 				<div class="slide video-container">
@@ -146,13 +146,14 @@
 				</div>
 				</br></br>
 
-				{% block body %}
+		{% block content_one %}
+		{% endblock %}	
 
-				<legend><span>The World’s smartest EV Charging Station</span></legend>
-				EverCharge offers the only fully managed, affordable, scalable charging solution designed for apartments and condominiums.</br></br>
+		{% block content_two %}
+		{% endblock %}
 
-				EverCharge navigates the complexity of obtaining charging in multi tenant buildings so you can focus on enjoying your EV.</br></br>
-				
+		{% block content_three %}
+		{% endblock %}
 	
 
 			<!-- get quote form -->
@@ -204,22 +205,11 @@
 			</form>
 			</br></br>
 
+	{% block content_one_bottom %}
 
 
-			<legend><span><center>Why EverCharge</center></span></legend>
-			Forget Public Charging. EverCharge is installed directly in resident parking spaces for relibable, exclusive use.</br>
-			</br>
-			We take care of the entire process to make charging at your property simple. </br>
-			</br>
-			As an HOA or building owner enable your property to provide a scalable solution at no cost to the association. </br>
+	{% endblock %}
 
-			<div class="btn-wrapper">
-						Residents Learn more
-			</div>
-			<div class="btn-wrapper">
-						Buildings Learn More
-			</div>
-{% endblock %}
 		</main>
 
 
