@@ -15,23 +15,21 @@ function initialize() {
 
             console.log(userLat);
             console.log(userLon);
-            console.log(address);
+            console.log(typeof address);
 
-            var userLocation = userLat + "," + userLon;
-            console.log(userLocation);
-            userLocation = userLocation + '';
-            // $("#lat_long_from_js").load(userLocation);
-            $.ajax({
-                type: "GET",
-                url: location,
-                data: JSON.stringify(address),
-                dataType: 'json',
-                contentType: 'application/json; charset=utf-8'
-            }).done(function(msg) {
-                alert("Data Saved:" + msg);
-                console.log(msg);
-            });
 
+            // address = address + '';
+            // userLocation = userLocation + '';
+            // $.ajax({
+            //     type: "GET",
+            //     url: location,
+            //     data: JSON.stringify(address),
+            //     dataType: 'json',
+            //     contentType: 'application/json; charset=utf-8'
+            // }).done(function(msg) {
+            //     alert("Data Saved:" + msg);
+            //     console.log(msg);
+            // });
 
 
             return address;
