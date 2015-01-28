@@ -922,8 +922,8 @@ a:focus{outline: none !important; text-decoration: none;}
 
 .video-container {
     position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 10px; height: 0; overflow: hidden;
+    padding-bottom: 50%;
+    padding-top: 0px; height: 0; overflow: hidden;
 }
  
 .video-container iframe,
