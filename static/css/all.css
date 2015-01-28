@@ -464,7 +464,7 @@ a:focus{outline: none !important; text-decoration: none;}
 /* jumbotron */
 #content .jumbotron{
 	padding: 41px 10084px 15px;
-	margin: 0 -9999px 66px;
+	margin: 0 -9999px 15px;
 }
 .jumbotron h2{
 	margin: 0 0 21px;
@@ -903,6 +903,7 @@ a:focus{outline: none !important; text-decoration: none;}
 
 .whitejumbo {
 	background-color: white;
+	margin-bottom: 0px;
 }
 
 .greyjumbo .btn{
