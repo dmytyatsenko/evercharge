@@ -22,6 +22,8 @@ function initialize() {
 function parseAddress() {
   // Get the place details from the autocomplete object.
   var place = autocomplete.getPlace();
+  console.log(place);
+  console.log(route);
 
   for (var component in componentForm) {
     document.getElementById(component).value = '';
