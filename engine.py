@@ -28,6 +28,10 @@ def about_us():
 def faqs():
 	return render_template("faqs.html")
 
+@app.route('/thankyou', methods = ['POST', 'GET'])
+def thank_you():
+	return render_template("thankyou.html")
+
 
 if __name__ == '__main__':
 	PORT = int(os.environ.get("PORT",5000))
