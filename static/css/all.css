@@ -151,7 +151,7 @@ a:focus{outline: none !important; text-decoration: none;}
 .banner{
 	width: 100%;
 	position: relative;
-	height: 531px;
+	minimum-height: 531px;
 	overflow: hidden;
 	z-index: 1;
 	color: #fff;
@@ -208,6 +208,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	font-weight: 600;
 	min-width: 160px;
 	border-radius: 14px 15px 15px 14px/15px 15px 14px 14px;
+	margin-bottom: 20px;
 }
 .banner .text{padding-bottom: 22px;}
 .banner .btn:hover,
