@@ -66,69 +66,18 @@
 	{% block quote_form %}
 	<br>
 	<br>
-			<form action="https://app01.nutshell.com/api/v1/public/lead/95057:5ded4008eea8b5062ba4f9030d118ca689753968" method="post" class="get-quote validate-form">
-				<input name="successUrl" value="http://www.evercharge.net/thankyou" type="hidden">
-				<input name="source[name]" value="Web Signup" type="hidden">
-        <fieldset>
-					<legend id="quote"><span>Have time for a few more questions?</span></legend>
+	<form id='follow-up-form' action="/followup", method='post'>
+      <div class="search-bar">
+        <div class="search-and-submit">
+          <input type='text' name='parking_spot' placeholder='Parking Spot'>
+          <input type='text' name='tesla_contact' placeholder='Tesla Contact'>
 
-					<div class="wrap">
-
-						<div class="col">
-							<h3>{{ test }}</h3>
-							<ul class="tabset js-ajax-tabs">
-								<li data-href="inc/tab00.html" class="active">
-									<input type="radio" checked="checked" value="EV Driver" name="type" class="radio1">
-								</li>
-								<li data-href="inc/tab01.html">
-									<input type="radio" value="Property Manager" name="type" class="radio2">
-								</li>
-
-							</ul>
-							<div class="tab-content ajax-hold"></div>
-						</div>
-						<div class="col">
-							<h3>How can we contact you?</h3>
-							<div class="holder">
-								<div class="form-group">
-									<label for="label1" class="label4">name</label>
-									<input name="contact[name]" type="text" class="form-control required" id="label1" placeholder="name">
-								</div>
-								<span id="hoa">Approximate date of next HOA meeting</span>
-								<div class="form-group">
-
-									<label for="label2" class="label2">next hoa meeting</label>
-									<input name="contact[email]" type="date" class="form-control required-email" id="label2" placeholder="date">
-								</div>
-								<div class="form-group">
-									<label for="label3" class="label3">phone</label>
-									<input name="contact[phone]" type="tel" class="form-control bfh-phone required-number" id="label3" placeholder="phone" data-format="ddd-ddd-dddd" >
-								</div>
-								<div class="form-group">
-									<label for="label3" class="label3">phone</label>
-									<input name="contact[phone]" type="tel" class="form-control bfh-phone required-number" id="label3" placeholder="phone" data-format="ddd-ddd-dddd" >
-								</div>
-								<div class="form-group">
-									<label for="label4" class="label4">address</label>
-									<input type="text" data-provide="typeahead" class="typeahead form-control" id="label4" placeholder="address"></input>
-							</fieldset>
-
-									<input id="street_number" class="field" type="hidden" name="contact[address][address_1]">
-									<input id="route" class="field" type="hidden" name="contact[address][address_2]">
-									<input id="locality" class="field" type="hidden" name="contact[address][city]">
-									<input id="administrative_area_level_1" class="field" type="hidden" name="contact[address][state]">
-									<input id="country" class="field" type="hidden" name="contact[address][country]">
-									<input id="postal_code" class="field" type="hidden" name="contact[address][postal_code]">
-
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="btn-wrapper">
-						<input type="submit" value="Get your quote">
-					</div>
-			</form>
-
+          <button type="submit">
+            submit
+          </button>
+        </form>
+        </div>
+      </div>
 
 
 	{% endblock %}

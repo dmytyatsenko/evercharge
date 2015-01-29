@@ -1,6 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import os
-from NutshellCrumpy import Nutshell
+from nutshell_integration import update_parking_spot
+
 
 SECRET_KEY 	= os.environ.get("FLASK_SECRET_KEY")
 
@@ -31,22 +32,17 @@ def faqs():
 @app.route('/thankyou', methods = ['POST', 'GET'])
 def thank_you():
 
+	return render_template("thankyou.html")
 
-	n = Nutshell('kate@evercharge.net', '91bd928f9b1cf611b758d15e44849227c7d46389')
-	test_add = n.add(3, 4)['result']
-	print n
-	print test_add
+@app.route('/followup', methods = ['POST', 'GET'])
+def follow_up():
+	parking = request.form.get('parking_spot')
+	parking = str(parking)
+	print parking
+	new_spot = update_parking_spot(24501, "REV_IGNORE", parking)
+	# print new_spot
 
-	test_edit = n.getLead(24501)
-	print test_edit
-
-	edited_lead = n.editLead(24501, 'REV_IGNORE', note="TEST NOTE")
-	print edited_lead
-
-
-
-	return render_template("thankyou.html", test = test_add)
-
+	return render_template('thankyou.html')
 
 if __name__ == '__main__':
 	PORT = int(os.environ.get("PORT",5000))
