@@ -23,6 +23,9 @@ def hoa_property_manager():
 
 @app.route('/aboutus', methods = ['POST', 'GET'])
 def about_us():
+
+	cool = nut.search_contacts('API')
+	print cool
 	return render_template("about-us.html")
 
 @app.route('/faqs', methods = ['POST', 'GET'])
@@ -31,6 +34,18 @@ def faqs():
 
 @app.route('/thankyou', methods = ['POST', 'GET'])
 def thank_you():
+
+	name 	= request.form.get('quote_name')
+	phone 	= request.form.get('quote_phone')
+	email 	= request.form.get('quote_email')
+	address = request.form.get('quote_address')
+
+	new_contact = nut.add_new_contact(name, email, phone, address)
+	contact_id = new_contact['result']['id']
+
+	new_lead = nut.add_new_lead(contacts={'id': contact_id})
+
+	print new_lead
 
 	return render_template("thankyou.html")
 
@@ -42,6 +57,8 @@ def follow_up():
 
 	new_spot 	= nut.update_parking_spot(24501, "REV_IGNORE", parking)
 	new_contact = nut.update_tesla_contact(24501, "REV_IGNORE", tesla_contact)
+
+
 	print new_spot
 	print new_contact
 

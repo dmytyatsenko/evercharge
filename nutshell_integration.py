@@ -2,15 +2,20 @@ from NutshellCrumpy import Nutshell
 
 n = Nutshell('kate@evercharge.net', '91bd928f9b1cf611b758d15e44849227c7d46389')
 
-def add_new_lead(name, email, phone, address):
-	new_lead = n.addContact(name, email, phone, address=None)
+def search_contacts(query):
+	return n.searchContacts(query)
+
+
+# Original Form
+def add_new_contact(name, email, phone, source, address=None):
+	new_contact = n.newContact(name=name, email=email, phone=phone, address=address)
+
+	return new_contact
+
+def add_new_lead(primary_id):
+	new_lead = n.newLead(primary_id)
 
 	return new_lead
-
-
-
-
-
 # Follow-up Form
 
 def update_parking_spot(lead_id, rev, parking_spot):
