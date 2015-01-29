@@ -196,7 +196,6 @@ a:focus{outline: none !important; text-decoration: none;}
 .banner .visible{display: none;}
 .banner .img-circle{
 	margin-bottom: 19px;
-	box-shadow: 2px 2px 5px #888888
 }
 .banner .article-quote .img-circle{margin-bottom: 40px;}
 .banner p{margin-bottom: 0;}
@@ -213,7 +212,7 @@ a:focus{outline: none !important; text-decoration: none;}
 }
 .banner .text{padding-bottom: 22px;}
 .banner .btn:hover,
-.get-quote input[type="submit"]:hover{background: #262826; box-shadow: 2px 2px 5px #888888}
+.get-quote input[type="submit"]:hover{background: #262826; }
 /* main informative part styles */
 #content{padding-bottom: 32px;}
 .video-btn{
@@ -698,7 +697,6 @@ a:focus{outline: none !important; text-decoration: none;}
 		width: 70px;
 		height: auto;
 		margin-bottom: 13px;
-		box-shadow: 2px 2px 5px #888888
 	}
 	.banner .article-quote .img-circle{
 		width: 111px;
@@ -945,6 +943,10 @@ a:focus{outline: none !important; text-decoration: none;}
 
 .jumbotron article {
 	text-align: left;
+}
+
+.greyjumbo a {
+	color: #33A23D;
 }
 
 
