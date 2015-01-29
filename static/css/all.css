@@ -943,10 +943,12 @@ a:focus{outline: none !important; text-decoration: none;}
 
 .jumbotron article {
 	text-align: left;
+
 }
 
 .greyjumbo a {
-	color: #33A23D;
+	color: #008736;
+	font-weight: 600;
 }
 
 
