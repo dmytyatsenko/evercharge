@@ -768,6 +768,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	.get-quote .label2{background-position: -56px -367px;}
 	.get-quote .label3{background-position: -98px -368px;}
 	.get-quote .label4{background-position: -129px -369px;}
+	.get-quote .label5{background-position: -51px 0;}
 	.get-quote .form-control{
 		font-size: 12px;
 		line-height: 16px;
@@ -949,6 +950,11 @@ a:focus{outline: none !important; text-decoration: none;}
 .greyjumbo a {
 	color: #008736;
 	font-weight: 600;
+}
+
+span#hoa {
+	font-size: .8em;
+	color: #B7B7B7;
 }
 
 
