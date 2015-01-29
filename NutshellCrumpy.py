@@ -1046,7 +1046,7 @@ class Nutshell(object):
     if phone != None:
       self.contact["phone"] = phone
     if description != None:
-      self.contact["description"] = desciption
+      self.contact["description"] = description
     if owner != None:
       self.contact["owner"] = owner
     if territoryId != None:

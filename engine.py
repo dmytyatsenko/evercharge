@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import os
-from nutshell_integration import update_parking_spot
+import nutshell_integration as nut
 
 
 SECRET_KEY 	= os.environ.get("FLASK_SECRET_KEY")
@@ -36,13 +36,16 @@ def thank_you():
 
 @app.route('/followup', methods = ['POST', 'GET'])
 def follow_up():
-	parking = request.form.get('parking_spot')
-	parking = str(parking)
-	print parking
-	new_spot = update_parking_spot(24501, "REV_IGNORE", parking)
-	# print new_spot
+	parking 		= request.form.get('parking_spot')
+	tesla_contact 	= request.form.get('tesla_contact')
 
-	return render_template('thankyou.html')
+
+	new_spot 	= nut.update_parking_spot(24501, "REV_IGNORE", parking)
+	new_contact = nut.update_tesla_contact(24501, "REV_IGNORE", tesla_contact)
+	print new_spot
+	print new_contact
+
+	return render_template('about-us.html')
 
 if __name__ == '__main__':
 	PORT = int(os.environ.get("PORT",5000))
