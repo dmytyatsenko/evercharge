@@ -7,8 +7,11 @@ def search_contacts(query):
 
 
 # Original Form
-def add_new_contact(name, email, phone, source, address=None):
-	new_contact = n.newContact(name=name, email=email, phone=phone, address=address)
+def add_new_contact(name, email, phone, address1, city, state, zipcode, country):
+	new_contact = n.newContact(name=name, email=email, phone=phone,
+		address=[{'address_1': address1, 'city': city,
+		'state': state, 'postalCode' : zipcode, 'country': country}])
+
 
 	return new_contact
 
@@ -18,24 +21,24 @@ def add_new_lead(contact_id):
 	return new_lead
 # Follow-up Form
 
-def update_parking_spot(lead_id, rev, parking_spot):
-	edited_lead = n.editLead(lead_id, rev, customFields=
-		{'Parking Spot #': parking_spot})
-
-	return edited_lead
-
-def update_tesla_contact(lead_id, rev, tesla_contact):
-	edited_lead = n.editLead(lead_id, rev, customFields=
-		{'Tesla Contact': tesla_contact})
-
-	return edited_lead
 
 
-# test_edit = n.getLead(24501)
-# print test_edit
 
-# # hoa_meeting = request.form.get('hoa_meeting')
+class UpdateLead(object):
+	"""Update lead after initial quote request"""
+	def __init__(self, lead_id):
+		super(UpdateLead, self).__init__()
+		self.lead_id = lead_id
 
-# edited_lead = n.editLead(24501, 'REV_IGNORE', 
-# 	customFields={'Parking Spot #': 255, 'Tesla Contact': "Johnny Testla"})
-# print edited_lead
+	def parking_spot(self, rev, parking_spot):
+		edited_lead = n.editLead(self.lead_id, rev, customFields=
+			{'Parking Spot #': parking_spot})
+
+		return edited_lead
+
+	def tesla_contact(self, rev, tesla_contact):
+		edited_lead = n.editLead(self.lead_id, rev, customFields=
+			{'Tesla Contact': tesla_contact})
+
+		return edited_lead
+

@@ -35,18 +35,19 @@ def faqs():
 @app.route('/thankyou', methods = ['POST', 'GET'])
 def thank_you():
 
-	name 	= request.form.get('quote_name')
-	phone 	= request.form.get('quote_phone')
-	email 	= request.form.get('quote_email')
-	address = request.form.get('quote_address')
+	name 		= request.form.get('quote_name')
+	phone 		= request.form.get('quote_phone')
+	email 		= request.form.get('quote_email')
+	address 	= request.form.get('address_1') + ' ' + request.form.get('address_2')
+	city 		= request.form.get('address_city')
+	state 		= request.form.get('address_state')
+	country 	= request.form.get('address_country')
+	postal_code = request.form.get('address_postal_code')
 
-	new_contact = nut.add_new_contact(name, email, phone, address)
+	# Create new contact and lead in Nutshell
+	new_contact = nut.add_new_contact(name, email, phone, address, city, state, postal_code, country,)
 	contact_id = new_contact['result']['id']
-	print contact_id
-
-	new_lead = nut.add_new_lead(contact_id)
-
-	print new_lead
+	nut.add_new_lead(contact_id)
 
 	return render_template("thankyou.html")
 
@@ -56,8 +57,8 @@ def follow_up():
 	tesla_contact 	= request.form.get('tesla_contact')
 
 
-	new_spot 	= nut.update_parking_spot(24501, "REV_IGNORE", parking)
-	new_contact = nut.update_tesla_contact(24501, "REV_IGNORE", tesla_contact)
+	new_spot 	= nut.UpdateLead(24501).parking_spot("REV_IGNORE", parking)
+	new_contact = nut.UpdateLead(24501).tesla_contact("REV_IGNORE", tesla_contact)
 
 
 	print new_spot
