@@ -46,19 +46,21 @@ def thank_you():
 
 	# Create new contact and lead in Nutshell
 	new_contact = nut.add_new_contact(name, email, phone, address, city, state, postal_code, country,)
-	contact_id = new_contact['result']['id']
-	nut.add_new_lead(contact_id)
+	contact_id 	= new_contact['result']['id']
+	newLeadId	= nut.add_new_lead(contact_id)['result']['id']
 
-	return render_template("thankyou.html")
+
+	return render_template("thankyou.html", newLeadId=newLeadId)
 
 @app.route('/followup', methods = ['POST', 'GET'])
 def follow_up():
 	parking 		= request.form.get('parking_spot')
 	tesla_contact 	= request.form.get('tesla_contact')
+	new_lead_id		= request.form.get('lead_id')
 
 
-	new_spot 	= nut.UpdateLead(24501).parking_spot("REV_IGNORE", parking)
-	new_contact = nut.UpdateLead(24501).tesla_contact("REV_IGNORE", tesla_contact)
+	new_spot 	= nut.UpdateLead(new_lead_id).parking_spot("REV_IGNORE", parking)
+	new_contact = nut.UpdateLead(new_lead_id).tesla_contact("REV_IGNORE", tesla_contact)
 
 
 	print new_spot

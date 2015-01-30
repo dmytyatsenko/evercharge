@@ -63,12 +63,38 @@
 
 
 
-	{% block quote_form %}
+	{% block quote_form %}	
 	<br>
 	<br>
-	<form id='follow-up-form' action="/followup", method='post'>
+
+	<form id='follow-up-form' action="/followup", method='post' class="get-quote validate-form">
+
+		<input name="lead_source" value="Web Signup" type="hidden">
+		<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
+    	<fieldset>
+			<legend id="quote"><span>Have time for a few more questions?</span></legend>
+			<div class="wrap">
+					<div class="col">
+         			<input type='text' name='parking_spot' placeholder='Parking Spot'>
+        			<input type='text' name='tesla_contact' placeholder='Tesla Contact'>
+					</div>
+
+					<div class="col">
+						
+					</div>
+			</div>
+
+			<div class="btn-wrapper">
+				<input type="submit" value="Get your quote">
+			</div>
+		</form>
+		</br></br>
+
+
+
       <div class="search-bar">
         <div class="search-and-submit">
+          
           <input type='text' name='parking_spot' placeholder='Parking Spot'>
           <input type='text' name='tesla_contact' placeholder='Tesla Contact'>
 
