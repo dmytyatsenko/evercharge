@@ -12,8 +12,8 @@ def add_new_contact(name, email, phone, source, address=None):
 
 	return new_contact
 
-def add_new_lead(primary_id):
-	new_lead = n.newLead(primary_id)
+def add_new_lead(contact_id):
+	new_lead = n.newLead(contacts=[{'id': contact_id}])
 
 	return new_lead
 # Follow-up Form

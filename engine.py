@@ -42,8 +42,9 @@ def thank_you():
 
 	new_contact = nut.add_new_contact(name, email, phone, address)
 	contact_id = new_contact['result']['id']
+	print contact_id
 
-	new_lead = nut.add_new_lead(contacts={'id': contact_id})
+	new_lead = nut.add_new_lead(contact_id)
 
 	print new_lead
 
