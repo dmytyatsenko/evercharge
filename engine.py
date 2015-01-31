@@ -19,13 +19,23 @@ def ev_owner():
 
 @app.route('/hoa-pm', methods = ['POST', 'GET'])
 def hoa_property_manager():
+
+	print  nut.search_sources('Web')
+
+
 	return render_template("inner-pms.html")
 
 @app.route('/aboutus', methods = ['POST', 'GET'])
 def about_us():
 
-	cool = nut.search_contacts('API')
+	cool = nut.search_contacts(24533)
+	print "~~~~~~~~~~~~~~~~"
+	print nut.get_lead(24533)
+	print "~~~~~~~~~~~~~~~~"
+
 	print cool
+
+
 	return render_template("about-us.html")
 
 @app.route('/faqs', methods = ['POST', 'GET'])
@@ -43,12 +53,28 @@ def thank_you():
 	state 		= request.form.get('address_state')
 	country 	= request.form.get('address_country')
 	postal_code = request.form.get('address_postal_code')
+	cust_type 	= request.form.get('customer_type')
+	veh_type	= request.form.get('veh_type')
+	build_size 	= request.form.get('building_size')
 
-	# Create new contact and lead in Nutshell
-	new_contact = nut.add_new_contact(name, email, phone, address, city, state, postal_code, country,)
-	contact_id 	= new_contact['result']['id']
-	newLeadId	= nut.add_new_lead(contact_id)['result']['id']
+	print build_size
+	
+	source		= ''
+	if cust_type == 'EV Driver':
+		source 	=  29
+		new_contact = nut.add_new_contact(name, email, phone,
+				address, city, state, postal_code, country, veh_type)
 
+		contact_id 	= new_contact['result']['id']
+		newLeadId 	= nut.add_new_lead(contact_id, source)['result']['id']
+
+	else:
+		source =  33
+		new_contact = nut.add_new_contact(name, email, phone,
+			address, city, state, postal_code, country)
+
+		contact_id 	= new_contact['result']['id']
+		newLeadId 	= nut.add_new_lead(contact_id, source, build_size)['result']['id']
 
 	return render_template("thankyou.html", newLeadId=newLeadId)
 

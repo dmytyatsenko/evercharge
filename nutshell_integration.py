@@ -3,21 +3,29 @@ from NutshellCrumpy import Nutshell
 n = Nutshell('kate@evercharge.net', '91bd928f9b1cf611b758d15e44849227c7d46389')
 
 def search_contacts(query):
-	return n.searchContacts(query)
+	return n.getContact(query)
 
+def get_lead(query):
+	return n.getLead(query)
+
+def search_sources(query):
+	return n.searchSources(query)
 
 # Original Form
-def add_new_contact(name, email, phone, address1, city, state, zipcode, country):
+def add_new_contact(name, email, phone, address1, 
+	city, state, zipcode, country, vehicleType=None):
 	new_contact = n.newContact(name=name, email=email, phone=phone,
 		address=[{'address_1': address1, 'city': city,
-		'state': state, 'postalCode' : zipcode, 'country': country}])
+		'state': state, 'postalCode' : zipcode, 'country': country}],
+		customFields={'Vehicle': vehicleType,})
 
 
 	return new_contact
 
-def add_new_lead(contact_id):
-	new_lead = n.newLead(contacts=[{'id': contact_id}])
-
+def add_new_lead(contact_id, source, buildingSize=None):
+	new_lead = n.newLead(contacts=[{'id': contact_id}], sources=[{'id': source}],
+	 customFields={'Building Size': buildingSize})
+	
 	return new_lead
 
 

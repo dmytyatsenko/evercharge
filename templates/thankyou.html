@@ -66,6 +66,90 @@
 	{% block quote_form %}	
 	<br>
 	<br>
+			<form id='thank-you-form' action="/thankyou", method='post' class="get-quote validate-form radio2">
+
+				
+        <fieldset><center>
+					<legend id="quote"><span>Have time for a few more questions?</span></legend>
+		
+
+
+							<h3>Is your building already an EverCharge Customer?</h3>
+
+							<ul>
+								<li>
+
+									<input type="radio" checked="checked" value="Yes" name="building_customer" class="radioblank">
+									<br>
+									YES
+								</li>
+								<li>
+								</li>
+								<li>
+								</li>
+								<li>
+								</li>
+								<li>
+									<input type="radio" value="No" name="building_customer" class="radioblank">
+									<br>
+									NO
+								</li>
+								<li>
+								</li>
+								<li>
+								</li>
+								<li>
+								</li>
+								<li>
+									<input type="radio" value="Unsure" name="building_customer" class="radioblank">
+									<br>
+									UNSURE
+								</li>
+							</ul>
+							
+
+						
+
+
+							<h3>How can we contact you?</h3>
+							<div class="holder">
+								<div class="form-group">
+									<label for="label1" class="label1">name</label>
+									<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="name">
+								</div>
+								<div class="form-group">
+									<label for="label2" class="label2">email</label>
+									<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="email">
+								</div>
+								<div class="form-group">
+									<label for="label3" class="label3">phone</label>
+									<input name="quote_phone" type="tel" class="form-control bfh-phone required-number" id="label3" placeholder="phone" data-format="ddd-ddd-dddd" >
+								</div>
+								<div class="form-group">
+									<label for="label4" class="label4">address</label>
+									<input type="text" data-provide="typeahead" class="typeahead form-control" id="label4" placeholder="address" name="quote_address"></input>
+							</fieldset>
+
+									<input id="street_number" class="field" type="hidden" name="address_1">
+									<input id="route" class="field" type="hidden" name="address_2">
+									<input id="locality" class="field" type="hidden" name="address_city">
+									<input id="administrative_area_level_1" class="field" type="hidden" name="address_state">
+									<input id="country" class="field" type="hidden" name="address_country">
+									<input id="postal_code" class="field" type="hidden" name="address_postal_code">
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-wrapper">
+						<input type="submit" value="Get your quote">
+					</div>
+			</form>
+			</br></br>
+
+
+
+
 
 	<form id='follow-up-form' action="/followup", method='post' class="get-quote validate-form">
 

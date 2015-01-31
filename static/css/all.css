@@ -328,7 +328,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	padding: 0 10px;
 }
 .get-quote .col:first-child{
-	width: 52%;
+	width: 50%;
 	float: left;
 }
 .get-quote h3{
@@ -507,6 +507,11 @@ a:focus{outline: none !important; text-decoration: none;}
 	border-radius: 50%;
 	background:#e7e7e7 url(../images/sprite.png) no-repeat;
 }
+
+.no-image {
+	background: #e7e7e7;
+}
+
 .rad-checked {
 	background-color: #33a23d;
 }
@@ -520,6 +525,7 @@ a:focus{outline: none !important; text-decoration: none;}
 .jcf-class-radio8{background-position: -114px -57px;}
 .jcf-class-radio9{background-position: -171px -57px;}
 .jcf-class-radio10{background-position: -228px -57px;}
+.jcf-class-radioblank{background-position: -298px -244px}
 .jcf-class-radio11,
 .jcf-class-radio12,
 .jcf-class-radio13,
@@ -557,6 +563,7 @@ a:focus{outline: none !important; text-decoration: none;}
 .jcf-class-radio12.rad-checked{background-position: -49px -358px}
 .jcf-class-radio13.rad-checked{background-position: -153px -358px}
 .jcf-class-radio14.rad-checked{background-position: -2px -492px;}
+.jcf-class-radioblank.rad-checked{background-position: -298px -244px}
 .rad-disabled {
 	background: #eee;
 }
@@ -574,6 +581,8 @@ a:focus{outline: none !important; text-decoration: none;}
 	width:100%;
 	height:100%;
 }*/
+
+
 
 /* ---------------------------------------------------------
 	4. Styles for responsive breakpoints
@@ -754,7 +763,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	.get-quote .tabset{padding-bottom: 23px;}
 	.get-quote li{margin: 0 3px 7px;}
 	.get-quote .tab.add li{margin: 0 7px 16px;}
-	.get-quote .col .holder{padding: 0 22px 0 27px;}
+	.get-quote .col .holder{padding: 0 18px 0 27px;}
 	.get-quote .form-group{margin-bottom: 3px;}
 	.get-quote label{
 		width: 34px;
@@ -778,7 +787,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	}
 	.get-quote .btn-wrapper{bottom: -14px;}
 	.get-quote input[type="submit"]{
-		font-size: 10px;
+		font-size: 12px;
 		line-height: 15px;
 		min-width: 134px;
 	}
@@ -797,6 +806,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	.jcf-class-radio8{background-position: 0 -102px;}
 	.jcf-class-radio9{background-position: -51px -102px;}
 	.jcf-class-radio10{background-position: -102px -102px;}
+	.jcf-class-radioblank{background-position: -298px -244px}
 	.jcf-class-radio11,
 	.jcf-class-radio12,
 	.jcf-class-radio13,
@@ -833,6 +843,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	.jcf-class-radio12.rad-checked{background-position: -42px -215px;}
 	.jcf-class-radio13.rad-checked{background-position:-119px -215px;}
 	.jcf-class-radio14.rad-checked{background-position: -3px -318px;}
+	.jcf-class-radioblank.rad-checked{background-position: -298px -244px}
 	#footer{
 		font-size: 9px;
 		line-height: 14px;
@@ -956,6 +967,12 @@ span#hoa {
 	font-size: .8em;
 	color: #B7B7B7;
 }
+
+select {
+	font-size: 100px
+}
+
+#thank-you-form radio {}
 
 
 @-webkit-viewport   { width: device-width; }
