@@ -69,53 +69,255 @@
 			<form id='thank-you-form' action="/followup", method='post' class="get-quote validate-form">
 
 			<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
-			<fieldset><center>
-			<legend id="quote"><span>Have time for a few more questions?</span></legend>
+			<fieldset>
+			<legend id="thankyou"><span>Have time for a few more questions?</span></legend>
 
 					<h3>Is your building already an EverCharge Customer?</h3>
-					<ul>
-						<li>
-
-							<input type="radio" checked="checked" value="Yes" name="building_customer" class="radioblank">
-							<br>
-							YES
-						</li>
-						<li>
-						</li>
-						<li>
-						</li>
-						<li>
-						</li>
-						<li>
-							<input type="radio" value="No" name="building_customer" class="radioblank">
-							<br>
-							NO
-						</li>
-						<li>
-						</li>
-						<li>
-						</li>
-						<li>
-						</li>
-						<li>
-							<input type="radio" value="Unsure" name="building_customer" class="radioblank">
-							<br>
-							UNSURE
-						</li>
-					</ul>
+						<div class="row features">
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" checked="checked" value="Yes" name="building_customer" class="radioblank">
+								</div>
+							<p>
+								Yes
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="No" name="building_customer" class="radioblank">
+								</div>
+							<p>
+								No
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Unsure" name="building_customer" class="radioblank">
+								</div>
+							<p>
+								Unsure
+							</p>
+							</div>
+						</article>
+					</div>
 					<br>
 					<br>
-
-				          <input type='text' name='parking_spot' placeholder='Parking Spot'>
-          <input type='text' name='tesla_contact' placeholder='Tesla Contact'>
-
-
-
 					<h3>Are your parking spots...</h3>
+						<div class="row features">
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" checked="checked"value="assigned" name="parking_type" class="radioblank">
+								</div>
+							<p>
+								Assigned
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="unassigned" name="parking_type" class="radioblank">
+								</div>
+							<p>
+								Unassigned
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="deeded" name="parking_type" class="radioblank">
+								</div>
+							<p>
+								Deeded
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="valet" name="parking_type" class="radioblank">
+								</div>
+							<p>
+								Valet
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="street" name="parking_type" class="radioblank">
+								</div>
+							<p>
+								Street Parking
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Unsure" name="parking_type" class="radioblank">
+								</div>
+							<p>
+								Unsure
+							</p>
+							</div>
+						</article>
+					</div>
+					<br>
+					<br>
+					<h3>How many parking spots are in your building?</h3>
+						<div class="row features">
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Less than 25" name="number_of_spots" class="radioblank">
+								</div>
+							<p>
+								Less than 25
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="26-50" name="number_of_spots" class="radioblank">
+								</div>
+							<p>
+								26 - 50
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="51-100" name="number_of_spots" class="radioblank">
+								</div>
+							<p>
+								51 - 100
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="100-201" name="number_of_spots" class="radioblank">
+								</div>
+							<p>
+								101 - 200
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="More than 200" name="number_of_spots" class="radioblank">
+								</div>
+							<p>
+								More than 200
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Unsure" name="number_of_spots" class="radioblank">
+								</div>
+							<p>
+								No Idea!
+							</p>
+							</div>
+						</article>
+					</div>
+					<br>
+					<br>
+
+					<h3>How did you hear about us?</h3>
+						<div class="row features">
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Website" name="reference" class="radioblank">
+								</div>
+							<p>
+								Website
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Online Ad" name="reference" class="radioblank">
+								</div>
+							<p>
+								Online Ad
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Property Manager/HOA" name="reference" class="radioblank">
+								</div>
+							<p>
+								Property Manager/HOA
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Friend" name="reference" class="radioblank">
+								</div>
+							<p>
+								Friend
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Other" name="reference" class="radioblank">
+								</div>
+							<p>
+								Other
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Tesla" name="reference" class="radioblank tesla">
+								</div>
+							<p>
+								Tesla
+							</p>
+							</div>
+						</article>
+						
+					</div>
+
 
 					</div>
 				</div>
 			</div>
+
+
+<div class="tesla_contact">
+	<input type='text' name='tesla_contact' placeholder='Tesla Contact'>
+</div>
+
+
+<input type='text' name='parking_spot' placeholder='Parking Spot'>
+
+
+
 			<div class="btn-wrapper">
 				<input type="submit" value="Submit">
 			</div>

@@ -119,7 +119,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	top: 0;
 	width: 30px;
 	height: 18px;
-	background: url(../images/sprite.png) no-repeat;
+	background: url(../images/sprite2.png) no-repeat;
 }
 #nav li.menu1:before{background-position: -2px -552px;}
 #nav li.menu2:before{background-position: -40px -554px;}
@@ -141,7 +141,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	text-indent: -9999px;
 	overflow: hidden;
 	text-decoration: none;
-	background: url(../images/sprite.png) no-repeat;
+	background: url(../images/sprite2.png) no-repeat;
 }
 .social-networks li.facebook a{background-position: -236px -242px}
 .social-networks li.twitter a{
@@ -260,7 +260,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	right: 175px;
 	top: 14px;
 	left: auto;
-	background: url(../images/sprite.png) no-repeat -189px -239px;
+	background: url(../images/sprite2.png) no-repeat -189px -239px;
 }
 /* get quote form styles */
 .get-quote{
@@ -362,7 +362,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	margin: 0;
 	text-indent: -9999px;
 	overflow: hidden;
-	background:#33a23d url(../images/sprite.png) no-repeat 5px -226px;
+	background:#33a23d url(../images/sprite2.png) no-repeat 5px -226px;
 }
 .get-quote .label1{background-position: 5px -226px;}
 .get-quote .label2{background-position: -41px  -226px;}
@@ -501,11 +501,11 @@ a:focus{outline: none !important; text-decoration: none;}
 /* custom radio styles */
 .rad-area {
 	margin: 0;
-	float: left;
+	/*float: left;*/
 	width: 57px;
 	height: 57px;
 	border-radius: 50%;
-	background:#e7e7e7 url(../images/sprite.png) no-repeat;
+	background:#e7e7e7 url(../images/sprite2.png) no-repeat;
 }
 
 .no-image {
@@ -525,7 +525,9 @@ a:focus{outline: none !important; text-decoration: none;}
 .jcf-class-radio8{background-position: -114px -57px;}
 .jcf-class-radio9{background-position: -171px -57px;}
 .jcf-class-radio10{background-position: -228px -57px;}
-.jcf-class-radioblank{background-position: -196px -556px;}
+.jcf-class-radioyes{background-position: -185px -540px}
+.jcf-class-radiono{background-position: -205px -540px}
+.jcf-class-radioblank{background-position: -2005px -5040px}
 .jcf-class-radio11,
 .jcf-class-radio12,
 .jcf-class-radio13,
@@ -563,7 +565,9 @@ a:focus{outline: none !important; text-decoration: none;}
 .jcf-class-radio12.rad-checked{background-position: -49px -358px}
 .jcf-class-radio13.rad-checked{background-position: -153px -358px}
 .jcf-class-radio14.rad-checked{background-position: -2px -492px;}
-.jcf-class-radioblank.rad-checked{background-position: -196px -556px;}
+.jcf-class-radioyes.rad-checked{background-position: -185px -540px}
+.jcf-class-radiono.rad-checked{background-position: -205px -540px}
+.jcf-class-radioblank.rad-checked{background-position: -2005px -5040px}
 .rad-disabled {
 	background: #eee;
 }
@@ -806,7 +810,9 @@ a:focus{outline: none !important; text-decoration: none;}
 	.jcf-class-radio8{background-position: 0 -102px;}
 	.jcf-class-radio9{background-position: -51px -102px;}
 	.jcf-class-radio10{background-position: -102px -102px;}
-	.jcf-class-radioblank{background-position: -196px -556px;}
+	.jcf-class-radioyes{background-position: -185px -540px}
+	.jcf-class-radiono{background-position: -205px -540px}
+	.jcf-class-radioblank{background-position: -2005px -5040px}
 	.jcf-class-radio11,
 	.jcf-class-radio12,
 	.jcf-class-radio13,
@@ -843,7 +849,9 @@ a:focus{outline: none !important; text-decoration: none;}
 	.jcf-class-radio12.rad-checked{background-position: -42px -215px;}
 	.jcf-class-radio13.rad-checked{background-position:-119px -215px;}
 	.jcf-class-radio14.rad-checked{background-position: -3px -318px;}
-	.jcf-class-radioblank.rad-checked{background-position: -196px -556px;}
+	.jcf-class-radioyes.rad-checked{background-position: -185px -540px}
+	.jcf-class-radiono.rad-checked{background-position: -205px -540px}
+	.jcf-class-radioblank{background-position: -2005px -5040px}
 	#footer{
 		font-size: 9px;
 		line-height: 14px;
@@ -972,8 +980,31 @@ select {
 	font-size: 100px
 }
 
-#thank-you-form radio {}
+.thank-you-option {
+	display: inline-block;
+	text-align: center;
+}
 
+.thank-you-option p {
+	display: block;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.thank-you-option .radio {
+	margin: 0 auto;
+	width: 60px;
+	height: 60px;
+	padding: 0;
+}
+
+.tesla_contact {
+	display: none;
+}
+
+.tesla:checked + .tesla_contact {
+	display: block;
+}
 
 @-webkit-viewport   { width: device-width; }
 @-moz-viewport      { width: device-width; }
