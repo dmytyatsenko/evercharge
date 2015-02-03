@@ -525,7 +525,7 @@ a:focus{outline: none !important; text-decoration: none;}
 .jcf-class-radio8{background-position: -114px -57px;}
 .jcf-class-radio9{background-position: -171px -57px;}
 .jcf-class-radio10{background-position: -228px -57px;}
-.jcf-class-radioblank{background-position: -298px -244px}
+.jcf-class-radioblank{background-position: -196px -556px;}
 .jcf-class-radio11,
 .jcf-class-radio12,
 .jcf-class-radio13,
@@ -563,7 +563,7 @@ a:focus{outline: none !important; text-decoration: none;}
 .jcf-class-radio12.rad-checked{background-position: -49px -358px}
 .jcf-class-radio13.rad-checked{background-position: -153px -358px}
 .jcf-class-radio14.rad-checked{background-position: -2px -492px;}
-.jcf-class-radioblank.rad-checked{background-position: -298px -244px}
+.jcf-class-radioblank.rad-checked{background-position: -196px -556px;}
 .rad-disabled {
 	background: #eee;
 }
@@ -806,7 +806,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	.jcf-class-radio8{background-position: 0 -102px;}
 	.jcf-class-radio9{background-position: -51px -102px;}
 	.jcf-class-radio10{background-position: -102px -102px;}
-	.jcf-class-radioblank{background-position: -298px -244px}
+	.jcf-class-radioblank{background-position: -196px -556px;}
 	.jcf-class-radio11,
 	.jcf-class-radio12,
 	.jcf-class-radio13,
@@ -843,7 +843,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	.jcf-class-radio12.rad-checked{background-position: -42px -215px;}
 	.jcf-class-radio13.rad-checked{background-position:-119px -215px;}
 	.jcf-class-radio14.rad-checked{background-position: -3px -318px;}
-	.jcf-class-radioblank.rad-checked{background-position: -298px -244px}
+	.jcf-class-radioblank.rad-checked{background-position: -196px -556px;}
 	#footer{
 		font-size: 9px;
 		line-height: 14px;
