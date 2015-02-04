@@ -83,11 +83,11 @@
 					
 					<hr>
 					<h3>Are your parking spots...</h3>
-						<div class="row features">
+						<div class="row features" id="parking_listener">
 						<article class="col-md-4 col-xs-6">
 							<div class="thank-you-option">
 								<div class="radio">
-									<input type="radio" value="Assigned/Deeded" name="parking_type" class="radioblank">
+									<input type="radio" value="Assigned/Deeded" name="parking_type" class="radioblank" id="assignedparking">
 								</div>
 							<p>
 								Assigned / Deeded
@@ -127,8 +127,16 @@
 							</div>
 						</article>
 					</div>
+
+
+				<div class="form-group" id="parking_spot_div">
+					<h3>What is your Parking Space Number?</h3>
+					Knowing your parking spot number helps us expedite your quote process.
+
+					<input name="parking_spot" type="text" class="form-control" placeholder="parking spot number">
+				</div>
+
 					<br>
-					
 					<hr>
 					<h3>How many parking spots are in your building?</h3>
 						<div class="row features">
@@ -197,7 +205,7 @@
 					<hr>
 
 					<h3>How did you hear about us?</h3>
-						<div class="row features">
+						<div class="row features" id="tesla_listener">
 						<article class="col-md-4 col-xs-6">
 							<div class="thank-you-option">
 								<div class="radio">
@@ -240,6 +248,16 @@
 						</article>
 						<article class="col-md-4 col-xs-6">
 							<div class="thank-you-option">
+								<div class="radio tesladiv">
+									<input type="radio" value="Tesla" name="reference" class="radioblank tesla" id="teslaradio_control">
+								</div>
+							<p>
+								Tesla
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
 								<div class="radio">
 									<input type="radio" value="Other" name="reference" class="radioblank">
 								</div>
@@ -248,25 +266,10 @@
 							</p>
 							</div>
 						</article>
-						<article class="col-md-4 col-xs-6">
-							<div class="thank-you-option">
-								<div class="radio">
-									<input type="radio" value="Tesla" name="reference" class="radioblank teslaopt">
-								
-								</div>	
-							<p>
-								Tesla
-							</p>
-						
-							
-
-						</article>
-						<div class="tesla_contact form-group">
-								<input type='text' name='tesla_contact' placeholder='Tesla Contact'>
-						</div>
 					</div>
-
-
+					<div class="form-group" id="tesla_div">
+						<p>Who from Tesla referred you?</p>
+						<input name="tesla_contact" type="text" class="form-control" placeholder="Contact at Tesla">
 					</div>
 				</div>
 			</div>
@@ -274,11 +277,11 @@
 			<hr>
 			<h3>Do you already have an Electric Vehicle?</h3>
 			
-			<div class="row features">
+			<div class="row features" id="delivery_listener">
 			<article class="col-md-4 col-xs-6">
 				<div class="thank-you-option">
 					<div class="radio">
-						<input type="radio" value="Already have an EV" name="delivery" class="radioblank">
+						<input type="radio" value="Already have an EV" name="delivery" class="delivery radioblank">
 					</div>
 				<p>
 					I already have an EV
@@ -288,7 +291,7 @@
 			<article class="col-md-4 col-xs-6">
 				<div class="thank-you-option">
 					<div class="radio">
-						<input type="radio" value="Just Browsing" name="delivery" class="radioblank">
+						<input type="radio" value="Just Browsing" name="delivery" class="delivery radioblank">
 					</div>
 				<p>
 					I'm just browsing
@@ -296,7 +299,7 @@
 				</div>
 			</article>
 			<article class="col-md-4 col-xs-6">
-				<div class="thank-you-option">
+				<div class="thank-you-option deliverydiv">
 					<div class="radio">
 						<input type="radio" value="Delivery Date" name="delivery" class="delivery radioblank" id="knowdelivery">
 					</div>
@@ -307,26 +310,21 @@
 			</article>
 		</div>
 
-<!-- 		<div class="form-group" id="delivery_div">
-					<input name="delivery_date" type="date" class="form-control required" id="label1" placeholder="estimated delivery date">
-		</div> -->
+		<div class="form-group" id="delivery_date_div">
+			<p>delivery date</p>
+				<input name="delivery_date" type="date" class="form-control required" id="label1" placeholder="estimated delivery date">
+		</div>
+
 			<br>
 			<hr>
-			<h3>Approximately how many miles do you drive per week?</h3>
+			<h3>Approximately how far is your daily commute?</h3>
 			<div class="form-group">
-					<input name="daily_commute" type="text" class="form-control" placeholder="roundtrip">
+					<input name="daily_commute" type="text" class="form-control" placeholder="Roundtrip (in miles)">
 			</div>
 			<br>
-			<br>
-			<hr>
-			<h3>If relevant, do You know your Parking Spot Number?</h3>
-			Knowing your parking spot number helps us expedite your quote process.
-			<br>
-			<div class="form-group">
-					<input name="parking_spot" type="text" class="form-control" placeholder="parking spot number">
-			</div>
 
-
+			
+			<br>
 
 
 			<div class="btn-wrapper">
@@ -336,12 +334,7 @@
 	</br></br>
 
 
-
-
-
-
-
-
+</div>
 
 
 

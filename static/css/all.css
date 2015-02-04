@@ -1010,12 +1010,17 @@ select {
 	display: none;
 }
 
-#delivery_date_div ~ .delivery {
-	display: block;
-
-
-
+#parking_spot_div {
+	display: none;
 }
+
+
+#tesla_div {
+	display: none;
+}
+
+
+
 hr { 
     display: block;
     margin-top: 0.5em;

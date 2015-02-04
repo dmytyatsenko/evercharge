@@ -50,11 +50,14 @@ def thank_you():
 	name 		= request.form.get('quote_name')
 	phone 		= request.form.get('quote_phone')
 	email 		= request.form.get('quote_email')
-	address1 	= ''
-	address2 	= ''
-	# address1 	= request.form.get('address_1')
-	# address2 	= request.form.get('address_2')
-	address 	= address1 + ' ' + address2
+	address1 	= request.form.get('address_1')
+	address2 	= request.form.get('address_2')
+
+	if address1:
+		address = address1 + ' ' + address2
+	else:
+		address = None
+
 	city 		= request.form.get('address_city')
 	state 		= request.form.get('address_state')
 	country 	= request.form.get('address_country')
@@ -100,7 +103,8 @@ def follow_up():
 	spot_type 		= request.form.get('parking_type')
 	daily_commute 	= request.form.get('daily_commute')
 	delivery_date 	= request.form.get('delivery_date')
-	print "DELIVERY DATE !!! %r" % type(delivery_date)
+	reference 		= request.form.get('reference')
+	print reference
 
 	if delivery_date:
 		date = time.mktime(datetime.strptime(delivery_date, "%Y-%m-%d").timetuple())
@@ -115,7 +119,7 @@ def follow_up():
 	new_spot_type 		= nut.UpdateLead(new_lead_id).spot_type("REV_IGNORE", spot_type)
 	new_commute 		= nut.UpdateLead(new_lead_id).miles("REV_IGNORE", daily_commute)
 	new_delivery_date 	= nut.UpdateContact(contact_id).car_delivery_date("REV_IGNORE", delivery_date)
-
+	new_reference		= nut.UpdateLead(new_lead_id).lead_reference("REV_IGNORE", reference)
 
 
 	return render_template('about-us.html')
