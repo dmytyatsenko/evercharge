@@ -181,22 +181,18 @@ class Nutshell(object):
   def editContact(self, contactId, rev=None,
       name=None, phone=None,
       owner=None,note=None,
-      description=None, tags=None):
+      description=None, tags=None, customFields=None):
     self.contact={}
     if name != None:
       self.contact["name"] = name
     if phone != None: #maybe some validation here
       self.contact["phone"]= phone
-    if activityTypeId != None:
-      self.contact["owner"] = owner
-    if participants != None:
-      self.contact["note"] = note
     if description != None:
       self.contact["description"] = description
     if tags != None:
       self.contact["tags"] = tags
-    if leads != None:
-      sel.contact["leads"] = leads
+    if customFields != None:
+      self.contact["customFields"] = customFields
     self.payload = json.dumps(
         {"method" : "editContact",
           "params" : {"contact":self.contact,"contactId" : contactId, "rev" : rev},

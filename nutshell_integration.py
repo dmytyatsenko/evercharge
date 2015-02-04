@@ -5,6 +5,8 @@ n = Nutshell('kate@evercharge.net', '91bd928f9b1cf611b758d15e44849227c7d46389')
 def search_contacts(query):
 	return n.getContact(query)
 
+
+
 def get_lead(query):
 	return n.getLead(query)
 
@@ -24,10 +26,9 @@ def add_new_contact(name, email, phone, address1,
 
 def add_new_lead(contact_id, source, buildingSize=None):
 	new_lead = n.newLead(contacts=[{'id': contact_id}], sources=[{'id': source}],
-	 customFields={'Building Size': buildingSize})
+	 customFields={'Approximate Bldg Size': buildingSize})
 	
 	return new_lead
-
 
 
 
@@ -50,4 +51,49 @@ class UpdateLead(object):
 			{'Tesla Contact': tesla_contact})
 
 		return edited_lead
+
+	def approx_bldg_size(self, rev, approx_bldg_size):
+		edited_lead = n.editLead(self.lead_id, rev, customFields=
+			{'Approximate Bldg Size': approx_bldg_size})
+
+		return edited_lead
+
+	def miles(self, rev, daily_commute):
+		edited_lead = n.editLead(self.lead_id, rev, customFields=
+			{'Average Daily Commute': daily_commute})
+
+		return edited_lead
+
+	def spot_type(self, rev, spot_type):
+		edited_lead = n.editLead(self.lead_id, rev, customFields=
+			{'Parking Spots Type': spot_type})
+
+		return edited_lead
+
+
+
+class UpdateContact(object):
+	"""Update account after initial quote request"""
+	def __init__(self, contact_id):
+		super(UpdateContact, self).__init__()
+		self.contact_id = contact_id
+
+	def car_delivery_date(self, rev, delivery_date):
+		edited_account = n.editContact(self.contact_id, rev, customFields=
+			{'Car Delivery Date': {'timestamp' : delivery_date}})
+		return edited_account
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

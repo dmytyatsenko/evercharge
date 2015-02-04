@@ -1002,9 +1002,30 @@ select {
 	display: none;
 }
 
-.tesla:checked + .tesla_contact {
+.teslaopt:checked ~ .tesla_contact {
 	display: block;
 }
+
+#delivery_date_div {
+	display: none;
+}
+
+#delivery_date_div ~ .delivery {
+	display: block;
+
+
+
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: groove;
+    border-width: 1px;
+    border-color: #E7E7E7;
+} 
 
 @-webkit-viewport   { width: device-width; }
 @-moz-viewport      { width: device-width; }
