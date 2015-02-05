@@ -1,3 +1,17 @@
+var teslaOptions = document.getElementById('tesla_listener');
+teslaOptions.addEventListener('click', teslaCheck);
+
+
+function teslaCheck() {
+    if (document.getElementById('teslaradio_control').checked) {
+        document.getElementById('tesla_div').style.display = 'block';
+    }
+    else document.getElementById('tesla_div').style.display = 'none';
+
+
+};
+
+
 
 var deliveryOptions = document.getElementById('delivery_listener');
 deliveryOptions.addEventListener('click', deliveryCheck);
@@ -27,18 +41,6 @@ function parkingCheck() {
 };
 
 
-var teslaOptions = document.getElementById('tesla_listener');
-teslaOptions.addEventListener('click', teslaCheck);
-
-
-function teslaCheck() {
-    if (document.getElementById('teslaradio_control').checked) {
-        document.getElementById('tesla_div').style.display = 'block';
-    }
-    else document.getElementById('tesla_div').style.display = 'none';
-
-
-};
 
 
 
