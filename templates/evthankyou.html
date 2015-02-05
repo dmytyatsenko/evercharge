@@ -1,0 +1,324 @@
+{% extends 'base.html' %}
+
+
+
+	{% block background %}
+	<img src="images/image11.jpg" alt="image description" width="1200" height="526">
+	{% endblock %}
+
+
+
+	{% block maincontent %}
+	<header>
+		<h1>Thank You</h1>
+		<h2>For requesting a quote from EverCharge!</h2>
+		You're one step closer to EV charging. We'll reach out to you shortly.
+		<br>
+		<br>
+		Want to talk to someone now? Call (888) 342-7383.
+
+	</header>
+
+
+
+	{% endblock %}
+	{% block video %}
+	{% endblock %}
+
+	{% block content_one %}
+
+<br>
+<br>
+	{% endblock %}
+
+
+
+	{% block quote_form %}	
+	<br>
+	<br>
+
+</div>
+			<form id='thank-you-form' action="/followup", method='post' class="get-quote validate-form">
+
+			<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
+			<input type='hidden' name='contact_id' value="{{ contactId }}">
+
+			<fieldset>
+			<legend id="thankyou"><span>Have time for a few more questions?</span></legend>
+
+					<h3>Is your building already an EverCharge Customer?</h3>
+					<p>If you've seen an EverCharge charger in your parking garage, then your building is already a customer -- typically this means we can install your unit more quickly.</p>
+					
+						<div class="row features">
+						<article class="col-md-5 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Yes" name="building_customer" class="radioblank">
+								</div>
+							<p>
+								Yes
+							</p>
+							</div>
+						</article>
+						<article class="col-md-5 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="No" name="building_customer" class="radioblank">
+								</div>
+							<p>
+								No
+							</p>
+							</div>
+						</article>
+						<article class="col-md-5 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Unsure" name="building_customer" class="radioblank">
+								</div>
+							<p>
+								Unsure
+							</p>
+							</div>
+						</article>
+					</div>
+
+					
+					<hr>
+					<h3>Are your parking spots...</h3>
+						<div class="row features" id="parking_listener">
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Assigned/Deeded" name="parking_type" class="radioblank" id="assignedparking">
+								</div>
+							<p>
+								Assigned / Deeded
+							</p>
+							</div>
+						</article>
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Unassigned" name="parking_type" class="radioblank">
+								</div>
+							<p>
+								Unassigned
+							</p>
+							</div>
+						</article>
+
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Valet" name="parking_type" class="radioblank">
+								</div>
+							<p>
+								Valet
+							</p>
+							</div>
+						</article>
+
+						<article class="col-md-4 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Other" name="parking_type" class="radioblank">
+								</div>
+							<p>
+								Other
+							</p>
+							</div>
+						</article>
+					</div>
+
+
+				<div class="form-group" id="parking_spot_div">
+					<h3>What is your Parking Space Number?</h3>
+					Knowing your parking spot number helps us expedite your quote process.
+
+					<input name="parking_spot" type="text" class="form-control" placeholder="parking spot number">
+				</div>
+
+					<br>
+					<hr>
+					<h3>How many parking spots are in your building?</h3>
+						<div class="row features">
+						<article class="col-md-3 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Under 25" name="number_of_spots" class="radioblank">
+								</div>
+							<p>
+								Less than 25
+							</p>
+							</div>
+						</article>
+						<article class="col-md-3 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="26-50" name="number_of_spots" class="radioblank">
+								</div>
+							<p>
+								26 - 50
+							</p>
+							</div>
+						</article>
+						<article class="col-md-3 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="51-100" name="number_of_spots" class="radioblank">
+								</div>
+							<p>
+								51 - 100
+							</p>
+							</div>
+						</article>
+						<article class="col-md-3 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="101-200" name="number_of_spots" class="radioblank">
+								</div>
+							<p>
+								101 - 200
+							</p>
+							</div>
+						</article>
+						<article class="col-md-3 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Over 200" name="number_of_spots" class="radioblank">
+								</div>
+							<p>
+								More than 200
+							</p>
+							</div>
+						</article>
+					</div>
+
+					<hr>
+
+					<h3>How did you hear about us?</h3>
+						<div class="row features" id="tesla_listener">
+						<article class="col-md-3 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Website" name="reference" class="radioblank">
+								</div>
+							<p>
+								Online
+							</p>
+							</div>
+						</article>
+						<article class="col-md-3 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Property Manager/HOA" name="reference" class="radioblank">
+								</div>
+							<p>
+								Property Manager/HOA
+							</p>
+							</div>
+						</article>
+						<article class="col-md-3 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Friend" name="reference" class="radioblank">
+								</div>
+							<p>
+								Friend
+							</p>
+							</div>
+						</article>
+						<article class="col-md-3 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio tesladiv">
+									<input type="radio" value="Tesla" name="reference" class="radioblank tesla" id="teslaradio_control">
+								</div>
+							<p>
+								Tesla
+							</p>
+							</div>
+						</article>
+						<article class="col-md-3 col-xs-6">
+							<div class="thank-you-option">
+								<div class="radio">
+									<input type="radio" value="Other" name="reference" class="radioblank">
+								</div>
+							<p>
+								Other
+							</p>
+							</div>
+						</article>
+					</div>
+					<div class="form-group" id="tesla_div">
+						<p>Who from Tesla referred you?</p>
+						<input name="tesla_contact" type="text" class="form-control" placeholder="Contact at Tesla">
+					</div>
+				</div>
+			</div>
+
+			<hr>
+			<h3>Do you already have an Electric Vehicle?</h3>
+			
+			<div class="row features" id="delivery_listener">
+			<article class="col-md-5 col-xs-6">
+				<div class="thank-you-option">
+					<div class="radio">
+						<input type="radio" value="Already have an EV" name="delivery" class="delivery radioblank">
+					</div>
+				<p>
+					I already have an EV
+				</p>
+				</div>
+			</article>
+			<article class="col-md-5 col-xs-6">
+				<div class="thank-you-option">
+					<div class="radio">
+						<input type="radio" value="Just Browsing" name="delivery" class="delivery radioblank">
+					</div>
+				<p>
+					I'm just browsing
+				</p>
+				</div>
+			</article>
+			<article class="col-md-5 col-xs-6">
+				<div class="thank-you-option deliverydiv">
+					<div class="radio">
+						<input type="radio" value="Delivery Date" name="delivery" class="delivery radioblank" id="knowdelivery">
+					</div>
+				<p>
+					I have my delivery date
+				</p>
+				</div>
+			</article>
+		</div>
+
+		<div class="form-group" id="delivery_date_div">
+			<p>delivery date</p>
+				<input name="delivery_date" type="date" class="form-control" id="label1" placeholder="estimated delivery date">
+		</div>
+
+
+			<hr>
+			<h3>Approximately how far is your daily commute?</h3>
+			<div class="form-group">
+					<input name="daily_commute" type="text" class="form-control" placeholder="Roundtrip (in miles)">
+			</div>
+			<br>
+
+			
+			<br>
+
+
+			<div class="btn-wrapper">
+				<input type="submit" value="Submit">
+			</div>
+	</form>
+	</br></br>
+
+
+</div>
+
+
+
+
+	{% endblock %}

@@ -32,6 +32,7 @@
 	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 	<script type="text/javascript" src="js/typeahead.bundle.js"></script>
 
+
 	<!-- <script type="text/javascript" src="js/shadowbox.js"></script>
 	 <script type="text/javascript">
 		Shadowbox.init({
@@ -182,9 +183,9 @@
 		{% block quote_form %}
 
 			<!-- get quote form -->
-			<form action="https://app01.nutshell.com/api/v1/public/lead/95057:5ded4008eea8b5062ba4f9030d118ca689753968" method="post" class="get-quote validate-form">
-				<input name="successUrl" value="http://www.evercharge.net/thankyou" type="hidden">
-				<input name="source[name]" value="Web Signup" type="hidden">
+			<form id='quote_form' action="/thankyou", method='post' class="get-quote validate-form">
+
+				<input name="lead_source" value="Web Signup" type="hidden">
         <fieldset>
 					<legend id="quote"><span>Get a Free Quote</span></legend>
 					<div class="wrap">
@@ -192,10 +193,10 @@
 							<h3>What are you?</h3>
 							<ul class="tabset js-ajax-tabs">
 								<li data-href="inc/tab00.html" class="active">
-									<input type="radio" checked="checked" value="EV Driver" name="type" class="radio1">
+									<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1">
 								</li>
 								<li data-href="inc/tab01.html">
-									<input type="radio" value="Property Manager" name="type" class="radio2">
+									<input type="radio" value="Property Manager" name="customer_type" class="radio2">
 								</li>
 
 							</ul>
@@ -206,27 +207,27 @@
 							<div class="holder">
 								<div class="form-group">
 									<label for="label1" class="label1">name</label>
-									<input name="contact[name]" type="text" class="form-control required" id="label1" placeholder="name">
+									<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name">
 								</div>
 								<div class="form-group">
 									<label for="label2" class="label2">email</label>
-									<input name="contact[email]" type="email" class="form-control required-email" id="label2" placeholder="email">
+									<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email">
 								</div>
 								<div class="form-group">
 									<label for="label3" class="label3">phone</label>
-									<input name="contact[phone]" type="tel" class="form-control bfh-phone required-number" id="label3" placeholder="phone" data-format="ddd-ddd-dddd" >
+									<input name="quote_phone" type="tel" class="form-control bfh-phone required-number" id="label3" placeholder="Phone" data-format="ddd-ddd-dddd" >
 								</div>
 								<div class="form-group">
 									<label for="label4" class="label4">address</label>
-									<input type="text" data-provide="typeahead" class="typeahead form-control" id="label4" placeholder="address"></input>
+									<input type="text" data-provide="typeahead" class="typeahead form-control" id="label4" placeholder="Address" name="quote_address"></input>
 							</fieldset>
 
-									<input id="street_number" class="field" type="hidden" name="contact[address][address_1]">
-									<input id="route" class="field" type="hidden" name="contact[address][address_2]">
-									<input id="locality" class="field" type="hidden" name="contact[address][city]">
-									<input id="administrative_area_level_1" class="field" type="hidden" name="contact[address][state]">
-									<input id="country" class="field" type="hidden" name="contact[address][country]">
-									<input id="postal_code" class="field" type="hidden" name="contact[address][postal_code]">
+									<input id="street_number" class="field" type="hidden" name="address_1">
+									<input id="route" class="field" type="hidden" name="address_2">
+									<input id="locality" class="field" type="hidden" name="address_city">
+									<input id="administrative_area_level_1" class="field" type="hidden" name="address_state">
+									<input id="country" class="field" type="hidden" name="address_country">
+									<input id="postal_code" class="field" type="hidden" name="address_postal_code">
 
 								</div>
 							</div>
@@ -267,4 +268,5 @@
 
 
 </body>
-</html>
+	<script type="text/javascript" src="js/conditionalform.js"></script>
+	<script type="text/javascript" src="js/tooltip.js"></script></html>
