@@ -42,29 +42,3 @@ function teslaCheck() {
 
 
 
-
-
-// deliveryCheck
-
-
-
-// function changeIt() {
-
-// 	var g = document.getElementById('knowdelivery');
-// 	if (g.style.display=='none') {
-// 		g.style.display='block';
-// 	} else {
-// 		g.style.display='none';
-// 	}
-// }
-
-
-// $("#generalAdmissionList").change(function () {
-// var selected = $("#generalAdmissionList option:selected").form();
-// $('div').hide();
-// $('#' + selected).show();
-// });
-
-// $(document).ready(function (e) {
-// $('div').hide();
-// });

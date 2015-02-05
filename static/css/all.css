@@ -187,7 +187,7 @@ a:focus{outline: none !important; text-decoration: none;}
 .banner .article-quote h2{margin-bottom: 33px;}
 .banner .desc{padding: 0 10px;}
 .banner h3{
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 18px;
 	font-weight: 400;
 	margin: 0 0 16px;
@@ -332,11 +332,11 @@ a:focus{outline: none !important; text-decoration: none;}
 	float: left;
 }
 .get-quote h3{
-	font-size: 15px;
-	line-height: 16px;
+	font-size: 16px;
+	line-height: 20px;
 	color: #999;
 	text-transform: uppercase;
-	font-weight: 800;
+	font-weight: 600;
 	margin: 0 0 13px;
 }
 .get-quote ul{
@@ -987,7 +987,6 @@ select {
 
 .thank-you-option p {
 	display: block;
-	text-transform: uppercase;
 	text-align: center;
 }
 
@@ -1023,7 +1022,7 @@ select {
 
 hr { 
     display: block;
-    margin-top: 0.5em;
+    margin-top: 0;
     margin-bottom: 0.5em;
     margin-left: auto;
     margin-right: auto;

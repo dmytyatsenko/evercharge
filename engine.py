@@ -30,12 +30,8 @@ def hoa_property_manager():
 @app.route('/aboutus', methods = ['POST', 'GET'])
 def about_us():
 
-	cool = nut.search_contacts(50169)
-	print "~~~~~~~~~~~~~~~~"
+	print nut.search_contacts(50169)
 
-	print "~~~~~~~~~~~~~~~~"
-
-	print cool
 
 
 	return render_template("about-us.html")
@@ -104,12 +100,11 @@ def follow_up():
 	daily_commute 	= request.form.get('daily_commute')
 	delivery_date 	= request.form.get('delivery_date')
 	reference 		= request.form.get('reference')
-	print reference
+
 
 	if delivery_date:
 		date = time.mktime(datetime.strptime(delivery_date, "%Y-%m-%d").timetuple())
 		delivery_date = str(int(date))
-		print delivery_date
 
 
 
