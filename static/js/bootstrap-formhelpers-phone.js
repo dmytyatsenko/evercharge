@@ -17,12 +17,7 @@
  * limitations under the License.
  * ========================================================== */
 
-$(document).ready(function(){
-    $(".tesladiv").click(function(){
-      console.log("HELLO???");
-        $("#delivery_div").toggle();
-    });
-});
+
 
 
 +function ($) {
