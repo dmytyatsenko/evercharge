@@ -204,6 +204,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	font-weight: 400;
 	margin: 0 0 16px;
 	text-transform: uppercase;
+	color: white;
 }
 .banner .visible{display: none;}
 .banner .img-circle{
