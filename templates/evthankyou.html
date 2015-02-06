@@ -54,17 +54,23 @@
 
 
 
-			<form id='existing_customer' action="/followup", method='post' class="get-quote validate-form" target="submit_frame">
+			<form id='existing_customer' action="/followup" method='post' class="get-quote validate-form" target="submit_frame">
 
 			<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
 			<input type='hidden' name='contact_id' value="{{ contactId }}">
 
-			
 			<legend id="thankyou"><span>Have time for a few more questions?</span></legend>
-				<form id='existing_customer' action="/followup", method='post' class="get-quote validate-form" target="submit_frame">
+
+				
+
+
 				<fieldset>
+				<form id="blank"></form>
+
+				<form id='existing_customer_form' action="/existingcustomer" method='post' class="validate-form" target="submit_frame">
 					<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
 					<input type='hidden' name='contact_id' value="{{ contactId }}">
+
 					<h3>Is your building already an EverCharge Customer?</h3>
 					<p>If you've seen an EverCharge charger in your parking garage, then your building is already a customer -- typically this means we can install your unit more quickly.</p>
 				
@@ -103,7 +109,12 @@
 				
 				</form>
 					
-					<hr>
+				<hr>
+
+				<form id='parking_spot_form' action="/parkingspot", method='post' class="validate-form" target="submit_frame">
+					<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
+
+
 					<h3>Are your parking spots...</h3>
 						<div class="row features" id="parking_listener">
 						<article class="col-md-4 col-xs-6">
@@ -149,19 +160,29 @@
 							</div>
 						</article>
 					</div>
+				</form>
+
+			<form id='spot_number_form' action="/parkingspotnumber", method='post' class=" validate-form" target="submit_frame">
+				<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
 
 
 				<div class="form-group" id="parking_spot_div">
 					<h3>What is your Parking Space Number?</h3>
 					Knowing your parking spot number helps us expedite your quote process.
 
-					<input name="parking_spot" type="text" class="form-control" placeholder="parking spot number">
+					<input name="parking_spot" id="parking_spot_number_input" type="text" class="form-control" placeholder="parking spot number" onchange="parkingSpotNumberSubmit()">
 				</div>
+			</form>
 
 					<br>
 					<hr>
+
+			<form id='number_spots_form' action="/numberofspots", method='post' class=" validate-form" target="submit_frame">
+				<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
+				<input type='hidden' name='contact_id' value="{{ contactId }}">
+
 					<h3>How many parking spots are in your building?</h3>
-						<div class="row features">
+						<div class="row features" id="number_spots_listener">
 						<article class="col-md-3 col-xs-6">
 							<div class="thank-you-option">
 								<div class="radio">
@@ -213,6 +234,11 @@
 							</div>
 						</article>
 					</div>
+				</form>
+
+				<form id='reference_form' action="/reference", method='post' class=" validate-form" target="submit_frame">
+					<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
+					<input type='hidden' name='contact_id' value="{{ contactId }}">
 
 					<hr>
 
@@ -269,9 +295,15 @@
 							</div>
 						</article>
 					</div>
+
+				</form>
+				<form id='tesla_contact_form' action="/teslacontact", method='post' class=" validate-form" target="submit_frame">
+				<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
+				<input type='hidden' name='contact_id' value="{{ contactId }}">
+
 					<div class="form-group" id="tesla_div">
 						<p>Who from Tesla referred you?</p>
-						<input name="tesla_contact" type="text" class="form-control" placeholder="Contact at Tesla">
+						<input name="tesla_contact" type="text" class="form-control" placeholder="Contact at Tesla" onchange="teslaContactSubmit()">
 					</div>
 				</div>
 			</div>

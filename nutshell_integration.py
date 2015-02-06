@@ -76,6 +76,12 @@ class UpdateLead(object):
 
 		return edited_lead
 
+	def bldg_customer_status(self, ref, cust_status):
+		edited_lead = n.editLead(self.lead_id, rev, customFields=
+			{'Building already customer?': cust_status})
+
+		return edited_lead
+
 
 
 class UpdateContact(object):
