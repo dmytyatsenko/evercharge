@@ -38,22 +38,41 @@
 	<br>
 
 </div>
-			<form id='thank-you-form' action="/followup", method='post' class="get-quote validate-form">
+
+
+<div style="display:none;">
+	<iframe id="submit_frame" name="submit_frame"></iframe>
+</div>
+
+<!-- <form id="ponyo_form" method="POST" action="http://www.website.com/transfer" target="ponyo_frame">
+<input type="text" name="id" value="10" />
+<input type="text" name="transfer_email" value="someone@aol.com" />
+</form> -->
+
+
+</div>
+
+
+
+			<form id='existing_customer' action="/followup", method='post' class="get-quote validate-form" target="submit_frame">
 
 			<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
 			<input type='hidden' name='contact_id' value="{{ contactId }}">
 
-			<fieldset>
+			
 			<legend id="thankyou"><span>Have time for a few more questions?</span></legend>
-
+				<form id='existing_customer' action="/followup", method='post' class="get-quote validate-form" target="submit_frame">
+				<fieldset>
+					<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
+					<input type='hidden' name='contact_id' value="{{ contactId }}">
 					<h3>Is your building already an EverCharge Customer?</h3>
 					<p>If you've seen an EverCharge charger in your parking garage, then your building is already a customer -- typically this means we can install your unit more quickly.</p>
-					
-						<div class="row features">
+				
+						<div class="row features" id="customer_listener">
 						<article class="col-md-5 col-xs-6">
 							<div class="thank-you-option">
 								<div class="radio">
-									<input type="radio" value="Yes" name="building_customer" class="radioblank">
+									<input type="radio" value="Yes" name="building_customer" class="radioblank cust_radio">
 								</div>
 							<p>
 								Yes
@@ -63,7 +82,7 @@
 						<article class="col-md-5 col-xs-6">
 							<div class="thank-you-option">
 								<div class="radio">
-									<input type="radio" value="No" name="building_customer" class="radioblank">
+									<input type="radio" value="No" name="building_customer" class="radioblank cust_radio">
 								</div>
 							<p>
 								No
@@ -73,7 +92,7 @@
 						<article class="col-md-5 col-xs-6">
 							<div class="thank-you-option">
 								<div class="radio">
-									<input type="radio" value="Unsure" name="building_customer" class="radioblank">
+									<input type="radio" value="Unsure" name="building_customer" class="radioblank cust_radio">
 								</div>
 							<p>
 								Unsure
@@ -81,7 +100,8 @@
 							</div>
 						</article>
 					</div>
-
+				
+				</form>
 					
 					<hr>
 					<h3>Are your parking spots...</h3>

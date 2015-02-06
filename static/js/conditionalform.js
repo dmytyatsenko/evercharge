@@ -1,3 +1,19 @@
+var customerListener = document.getElementById('customer_listener');
+customerListener.addEventListener('click', customerSubmit);
+
+function customerSubmit() {
+    var customerRadios = document.getElementsByName("building_customer");
+
+    for (var i=0, len = customerRadios.length; i < len; i++) {
+        if (customerRadios[i].checked) {
+            document.getElementById("existing_customer").submit();
+            console.log("submitted !")
+
+        }
+    }
+};
+
+
 var teslaOptions = document.getElementById('tesla_listener');
 teslaOptions.addEventListener('click', teslaCheck);
 
