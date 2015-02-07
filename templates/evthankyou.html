@@ -69,7 +69,6 @@
 
 				<form id='existing_customer_form' action="/existingcustomer" method='post' class="validate-form" target="submit_frame">
 					<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
-					<input type='hidden' name='contact_id' value="{{ contactId }}">
 
 					<h3>Is your building already an EverCharge Customer?</h3>
 					<p>If you've seen an EverCharge charger in your parking garage, then your building is already a customer -- typically this means we can install your unit more quickly.</p>
@@ -299,23 +298,25 @@
 				</form>
 				<form id='tesla_contact_form' action="/teslacontact", method='post' class=" validate-form" target="submit_frame">
 				<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
-				<input type='hidden' name='contact_id' value="{{ contactId }}">
 
 					<div class="form-group" id="tesla_div">
 						<p>Who from Tesla referred you?</p>
-						<input name="tesla_contact" type="text" class="form-control" placeholder="Contact at Tesla" onchange="teslaContactSubmit()">
+						<input name="tesla_contact" id="tesla_contact" type="text" class="form-control" placeholder="Contact at Tesla" onchange="teslaContactSubmit()">
 					</div>
 				</div>
 			</div>
 
 			<hr>
 			<h3>Do you already have an Electric Vehicle?</h3>
-			
+
+			<form id='ev_owner_form' action="/evownership", method='post' class=" validate-form" target="submit_frame">
+				<input type='hidden' name='contact_id' value="{{ contactId }}">
+
 			<div class="row features" id="delivery_listener">
 			<article class="col-md-5 col-xs-6">
 				<div class="thank-you-option">
 					<div class="radio">
-						<input type="radio" value="Already have an EV" name="delivery" class="delivery radioblank">
+						<input type="radio" value="Already have an EV" name="ev_status" class="delivery radioblank">
 					</div>
 				<p>
 					I already have an EV
@@ -325,7 +326,7 @@
 			<article class="col-md-5 col-xs-6">
 				<div class="thank-you-option">
 					<div class="radio">
-						<input type="radio" value="Just Browsing" name="delivery" class="delivery radioblank">
+						<input type="radio" value="Just Browsing" name="ev_status" class="delivery radioblank">
 					</div>
 				<p>
 					I'm just browsing
@@ -335,7 +336,7 @@
 			<article class="col-md-5 col-xs-6">
 				<div class="thank-you-option deliverydiv">
 					<div class="radio">
-						<input type="radio" value="Delivery Date" name="delivery" class="delivery radioblank" id="knowdelivery">
+						<input type="radio" value="Delivery Date" name="ev_status" class="delivery radioblank" id="knowdelivery">
 					</div>
 				<p>
 					I have my delivery date
@@ -343,12 +344,17 @@
 				</div>
 			</article>
 		</div>
+		</form>
+		<form id='delivery_date_form' action="/evdeliverydate", method='post' class=" validate-form" target="submit_frame">
+			<input type='hidden' name='contact_id' value="{{ contactId }}">
+
 
 		<div class="form-group" id="delivery_date_div">
 			<p>delivery date</p>
-				<input name="delivery_date" type="date" class="form-control" id="label1" placeholder="estimated delivery date">
+				<input name="delivery_date" type="date" class="form-control" id="label1" placeholder="estimated delivery date" onchange="deliveryDateSubmit()">
 		</div>
 
+		</form>
 
 			<hr>
 			<h3>Approximately how far is your daily commute?</h3>

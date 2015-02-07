@@ -1,3 +1,7 @@
+
+
+
+
 // PARKING SPOT TYPE AUTOSUBMIT (EV and HOA form)
 
 var parkingOptions = document.getElementById('parking_listener');
@@ -107,8 +111,28 @@ function teslaContactSubmit() {
 
 };
 
+// DO YOU HAVE AN EV?
+
+var ownerListener = document.getElementById('delivery_listener');
+ownerListener.addEventListener('click', numberSpotsSubmit, false);
+
+function evOwnerSubmit() {
+    var ownerRadios = document.getElementsByName("ev_status");
 
 
+    for (var i=0, len = ownerRadios.length; i < len; i++) {
+        if (ownerRadios[i].checked) {
+            document.getElementById("ev_owner_form").submit();
+            console.log("submitted ev owner status !!!!")
+
+        }
+    }
+};
+
+
+
+
+// DELIVERY DATE
 
 var deliveryOptions = document.getElementById('delivery_listener');
 deliveryOptions.addEventListener('click', deliveryCheck);
@@ -125,7 +149,10 @@ function deliveryCheck() {
 };
 
 
+function deliveryDateSubmit() {
+    document.getElementById("delivery_date_form").submit();
 
+};
 
 
 

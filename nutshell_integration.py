@@ -76,11 +76,13 @@ class UpdateLead(object):
 
 		return edited_lead
 
-	def bldg_customer_status(self, ref, cust_status):
+	def bldg_customer_status(self, rev, cust_status):
 		edited_lead = n.editLead(self.lead_id, rev, customFields=
 			{'Building already customer?': cust_status})
 
 		return edited_lead
+
+
 
 
 
@@ -93,7 +95,14 @@ class UpdateContact(object):
 	def car_delivery_date(self, rev, delivery_date):
 		edited_account = n.editContact(self.contact_id, rev, customFields=
 			{'Car Delivery Date': {'timestamp' : delivery_date}})
+		
 		return edited_account
+
+	def ev_ownership_status(self, rev, ownership_status):
+		edited_lead = n.editLead(self.lead_id, rev, customFields=
+			{'EV Ownership Status': ownership_status})
+
+		return edited_lead
 
 
 

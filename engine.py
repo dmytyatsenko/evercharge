@@ -145,6 +145,15 @@ def tesla_contact():
 
 	return "Successfully added Tesla contact."
 
+@app.route('/evownership', methods = ['POST', 'GET'])
+def ev_owner_status():
+	owner_status 	= request.form.get('ev_owner')
+	contact_id 		= request.form.get('contact_id')
+
+	nut.UpdateContact(contact_id).ev_ownership_status("REV_IGNORE", owner_status)
+
+	return "Successfully added EV ownership status."
+
 
 @app.route('/evdeliverydate', methods=['POST', 'GET'])
 def ev_delivery_date():
