@@ -123,7 +123,7 @@ function evOwnerSubmit() {
     for (var i=0, len = ownerRadios.length; i < len; i++) {
         if (ownerRadios[i].checked) {
             document.getElementById("ev_owner_form").submit();
-            console.log("submitted ev owner status !!!!")
+            console.log("submitted ev owner status.")
 
         }
     }
@@ -151,6 +151,7 @@ function deliveryCheck() {
 
 function deliveryDateSubmit() {
     document.getElementById("delivery_date_form").submit();
+    console.log(document.getElementById("delivery_date_form").value);
 
 };
 
