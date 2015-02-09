@@ -44,12 +44,6 @@
 	<iframe id="submit_frame" name="submit_frame"></iframe>
 </div>
 
-<!-- <form id="ponyo_form" method="POST" action="http://www.website.com/transfer" target="ponyo_frame">
-<input type="text" name="id" value="10" />
-<input type="text" name="transfer_email" value="someone@aol.com" />
-</form> -->
-
-
 </div>
 
 
@@ -337,7 +331,7 @@
 			<article class="col-md-5 col-xs-6">
 				<div class="thank-you-option deliverydiv">
 					<div class="radio">
-						<input type="radio" value="Delivery Date" name="ev_status" class="delivery radioblank" id="knowdelivery">
+						<input type="radio" value="Know Delivery Date" name="ev_status" class="delivery radioblank" id="knowdelivery">
 					</div>
 				<p>
 					I have my delivery date
@@ -356,16 +350,15 @@
 		</div>
 
 		</form>
+		<form id='commute_form' action="/commute", method='post' class=" validate-form" target="submit_frame">
+			<input type='hidden' name='lead_id' value= "{{ newLeadId }}">
 
 			<hr>
 			<h3>Approximately how far is your daily commute?</h3>
 			<div class="form-group">
-					<input name="daily_commute" type="text" class="form-control" placeholder="Roundtrip (in miles)">
+					<input name="daily_commute" id="commute_input" type="text" class="form-control" placeholder="Roundtrip (in miles)" onchange="dailyCommuteSubmit()">
 			</div>
-			<br>
-
-			
-			<br>
+		</form>
 
 
 			<div class="btn-wrapper">
@@ -376,6 +369,7 @@
 
 
 </div>
+
 
 
 

@@ -114,7 +114,7 @@ function teslaContactSubmit() {
 // DO YOU HAVE AN EV?
 
 var ownerListener = document.getElementById('delivery_listener');
-ownerListener.addEventListener('click', numberSpotsSubmit, false);
+ownerListener.addEventListener('click', evOwnerSubmit, false);
 
 function evOwnerSubmit() {
     var ownerRadios = document.getElementsByName("ev_status");
@@ -151,9 +151,12 @@ function deliveryCheck() {
 
 function deliveryDateSubmit() {
     document.getElementById("delivery_date_form").submit();
-    console.log(document.getElementById("delivery_date_form").value);
 
 };
 
-
+function dailyCommuteSubmit() {
+    document.getElementById("commute_form").submit();
+    var commuteTime = document.getElementById("commute_input");
+    console.log(commuteTime.value);
+}
 

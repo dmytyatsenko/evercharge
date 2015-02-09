@@ -104,7 +104,8 @@ def is_existing_customer():
 	cust_status = request.form.get('building_customer')
 	new_lead_id	= request.form.get('lead_id')
 
-	nut.UpdateLead(new_lead_id).bldg_customer_status("REV IGNORE", cust_status)
+	print cust_status 
+	nut.UpdateLead(new_lead_id).bldg_customer_status("REV_IGNORE", cust_status)
 
 	return "Successfully added building's customer status."
 
@@ -147,7 +148,7 @@ def tesla_contact():
 
 @app.route('/evownership', methods = ['POST', 'GET'])
 def ev_owner_status():
-	owner_status 	= request.form.get('ev_owner')
+	owner_status 	= request.form.get('ev_status')
 	contact_id 		= request.form.get('contact_id')
 
 	nut.UpdateContact(contact_id).ev_ownership_status("REV_IGNORE", owner_status)
