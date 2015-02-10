@@ -71,7 +71,7 @@ a:focus{outline: none !important; text-decoration: none;}
 }
 #header .right-block{
 	float: right;
-	width: 51.8%;
+	width: 57%;
 }
 /* main navigation styles */
 #header .navbar{
@@ -83,7 +83,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	border:none;
 	margin-bottom: 0;
 	padding-top: 6px;
-	width: 369px;
+	width: 450px;
 }
 .navbar-collapse{
 	padding: 0;
@@ -99,7 +99,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	clear: both;
 }
 #nav li{
-	float: left;
+	float: right;
 	position: relative;
 	padding:2px 9px 2px 38px;
 	font-size: 14px;
@@ -130,7 +130,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	margin: 0;
 	list-style: none;
 	padding: 1px 0 0;
-	width: 57px;
+	width: 70px;
 }
 .social-networks li{float: left;}
 .social-networks li + li{margin-left: 17px;}
@@ -147,6 +147,16 @@ a:focus{outline: none !important; text-decoration: none;}
 .social-networks li.twitter a{
 	width: 26px;
 	background-position: -268px -244px;
+}
+
+/*.social-networks .blog a{
+	font-size: 1.25em;
+	color: white;
+	text-decoration: none;
+	padding: 0px 0px 0px 17px;
+	vertical-align: text-bottom;
+*/
+
 }
 .banner{
 	width: 100%;
@@ -176,6 +186,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	line-height: 76px;
 	font-weight: 300;
 	margin: 0 0 48px;
+	color: white;
 }
 .banner h2{
 	font-size: 24px;
@@ -183,6 +194,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	text-transform: uppercase;
 	font-weight: 400;
 	margin-bottom: 0px;
+	color: white;
 }
 .banner .article-quote h2{margin-bottom: 33px;}
 .banner .desc{padding: 0 10px;}
@@ -192,13 +204,14 @@ a:focus{outline: none !important; text-decoration: none;}
 	font-weight: 400;
 	margin: 0 0 16px;
 	text-transform: uppercase;
+	color: white;
 }
 .banner .visible{display: none;}
 .banner .img-circle{
 	margin-bottom: 19px;
 }
 .banner .article-quote .img-circle{margin-bottom: 40px;}
-.banner p{margin-bottom: 0;}
+.banner p{margin-bottom: 0; color: #fff;}
 .banner .btn{
 	background: #000;
 	color: #fff;

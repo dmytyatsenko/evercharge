@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 import os
 import nutshell_integration as nut
 from datetime import datetime
@@ -203,6 +203,10 @@ def follow_up():
 
 
 	return render_template('about-us.html')
+
+@app.route('/blog', methods=['GET'])
+def display_blog():
+	return redirect('http://blog.evercharge.net')
 
 if __name__ == '__main__':
 	PORT = int(os.environ.get("PORT",5000))
