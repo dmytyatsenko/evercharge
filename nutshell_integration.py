@@ -61,7 +61,7 @@ class UpdateLead(object):
 	def miles(self, rev, daily_commute):
 		edited_lead = n.editLead(self.lead_id, rev, customFields=
 			{'Average Daily Commute': daily_commute})
-
+		print edited_lead
 		return edited_lead
 
 	def spot_type(self, rev, spot_type):
@@ -76,6 +76,14 @@ class UpdateLead(object):
 
 		return edited_lead
 
+	def bldg_customer_status(self, rev, cust_status):
+		edited_lead = n.editLead(self.lead_id, rev, customFields=
+			{'Building already customer?': cust_status})
+
+		return edited_lead
+
+
+
 
 
 class UpdateContact(object):
@@ -85,9 +93,18 @@ class UpdateContact(object):
 		self.contact_id = contact_id
 
 	def car_delivery_date(self, rev, delivery_date):
-		edited_account = n.editContact(self.contact_id, rev, customFields=
+		edited_contact = n.editContact(self.contact_id, rev, customFields=
 			{'Car Delivery Date': {'timestamp' : delivery_date}})
-		return edited_account
+		
+		return edited_contact
+
+	def ev_ownership_status(self, rev, ownership_status):
+		edited_contact = n.editContact(self.contact_id, rev, customFields=
+			{'EV Owner': ownership_status})
+
+		print edited_contact
+
+		return edited_contact
 
 
 

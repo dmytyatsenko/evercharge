@@ -89,32 +89,117 @@ def thank_you():
 
 		return render_template("hoathankyou.html", newLeadId=newLeadId, contactId=contactId)
 
-@app.route('/followup', methods = ['POST', 'GET'])
-def follow_up():
-	parking 		= request.form.get('parking_spot')
+
+@app.route('/parkingspot', methods = ['POST', 'GET'])
+def parking_spot():
+	spot_type 		= request.form.get('parking_type')
+	new_lead_id		= request.form.get('lead_id')
+	
+	nut.UpdateLead(new_lead_id).spot_type("REV_IGNORE", spot_type)
+
+	return "Successfully added parking type."
+
+@app.route('/existingcustomer', methods=['POST', 'GET'])
+def is_existing_customer():
+	cust_status = request.form.get('building_customer')
+	new_lead_id	= request.form.get('lead_id')
+
+	print cust_status 
+	nut.UpdateLead(new_lead_id).bldg_customer_status("REV_IGNORE", cust_status)
+
+	return "Successfully added building's customer status."
+
+
+@app.route('/parkingspotnumber', methods = ['POST', 'GET'])
+def parking_spot_number():
+	parking 	= request.form.get('parking_spot')
+	new_lead_id	= request.form.get('lead_id')
+	
+	nut.UpdateLead(new_lead_id).parking_spot("REV_IGNORE", parking)
+
+	return "Successfully added parking spot number."
+
+@app.route('/numberofspots', methods = ['POST', 'GET'])
+def approximate_number_spots():
+	approx_bldg_size	= request.form.get('number_of_spots')
+	new_lead_id			= request.form.get('lead_id')
+
+	nut.UpdateLead(new_lead_id).approx_bldg_size("REV_IGNORE", approx_bldg_size)
+
+	return "Successfully added number of spots."
+
+@app.route('/reference', methods = ['POST', 'GET'])
+def referred_customer():
+	reference 		= request.form.get('reference')
+	new_lead_id		= request.form.get('lead_id')
+
+	nut.UpdateLead(new_lead_id).lead_reference("REV_IGNORE", reference)
+
+	return "Successfully added reference to EverCharge."
+
+@app.route('/teslacontact', methods = ['POST', 'GET'])
+def tesla_contact():
 	tesla_contact 	= request.form.get('tesla_contact')
 	new_lead_id		= request.form.get('lead_id')
-	contact_id 		= request.form.get('contact_id')
-	approx_bldg_size= request.form.get('number_of_spots')
-	spot_type 		= request.form.get('parking_type')
-	daily_commute 	= request.form.get('daily_commute')
-	delivery_date 	= request.form.get('delivery_date')
-	reference 		= request.form.get('reference')
 
+	nut.UpdateLead(new_lead_id).tesla_contact("REV_IGNORE", tesla_contact)
+
+	return "Successfully added Tesla contact."
+
+@app.route('/evownership', methods = ['POST', 'GET'])
+def ev_owner_status():
+	owner_status 	= request.form.get('ev_status')
+	contact_id 		= request.form.get('contact_id')
+
+	nut.UpdateContact(contact_id).ev_ownership_status("REV_IGNORE", owner_status)
+
+	return "Successfully added EV ownership status."
+
+
+@app.route('/evdeliverydate', methods=['POST', 'GET'])
+def ev_delivery_date():
+	delivery_date 	= request.form.get('delivery_date')
+	contact_id 		= request.form.get('contact_id')
 
 	if delivery_date:
 		date = time.mktime(datetime.strptime(delivery_date, "%Y-%m-%d").timetuple())
 		delivery_date = str(int(date))
 
+	nut.UpdateContact(contact_id).car_delivery_date("REV_IGNORE", delivery_date)
+
+	return "Successfully added delivery date."
+
+@app.route('/commute', methods = ['POST', 'GET'])
+def avg_commute():
+	daily_commute 	= request.form.get('daily_commute')
+	new_lead_id		= request.form.get('lead_id')
+
+	nut.UpdateLead(new_lead_id).miles("REV_IGNORE", daily_commute)
+
+	return "Succesfully added daily commute."
 
 
-	new_spot 			= nut.UpdateLead(new_lead_id).parking_spot("REV_IGNORE", parking)
-	new_contact 		= nut.UpdateLead(new_lead_id).tesla_contact("REV_IGNORE", tesla_contact)
-	new_building_size 	= nut.UpdateLead(new_lead_id).approx_bldg_size("REV_IGNORE", approx_bldg_size)
-	new_spot_type 		= nut.UpdateLead(new_lead_id).spot_type("REV_IGNORE", spot_type)
-	new_commute 		= nut.UpdateLead(new_lead_id).miles("REV_IGNORE", daily_commute)
-	new_delivery_date 	= nut.UpdateContact(contact_id).car_delivery_date("REV_IGNORE", delivery_date)
-	new_reference		= nut.UpdateLead(new_lead_id).lead_reference("REV_IGNORE", reference)
+
+@app.route('/followup', methods = ['POST', 'GET'])
+def follow_up():
+	
+	new_lead_id		= request.form.get('lead_id')
+	contact_id 		= request.form.get('contact_id')
+
+	print new_lead_id
+	print contact_id
+	
+
+
+
+
+	# new_spot 			= nut.UpdateLead(new_lead_id).parking_spot("REV_IGNORE", parking)
+	# new_contact 		= nut.UpdateLead(new_lead_id).tesla_contact("REV_IGNORE", tesla_contact)
+	# new_building_size 	= nut.UpdateLead(new_lead_id).approx_bldg_size("REV_IGNORE", approx_bldg_size)
+	# new_spot_type 		= nut.UpdateLead(new_lead_id).spot_type("REV_IGNORE", spot_type)
+	# new_commute 		= nut.UpdateLead(new_lead_id).miles("REV_IGNORE", daily_commute)
+	# new_delivery_date 	= nut.UpdateContact(contact_id).car_delivery_date("REV_IGNORE", delivery_date)
+	# new_reference		= nut.UpdateLead(new_lead_id).lead_reference("REV_IGNORE", reference)
 
 
 	return render_template('about-us.html')
