@@ -463,7 +463,7 @@ a:focus{outline: none !important; text-decoration: none;}
 .features h2 a:hover{color: #b4b4b4;}
 /* jumbotron */
 #content .jumbotron{
-	padding: 41px 10084px 15px;
+	padding: 41px 10000px 15px;
 	margin: 0 -9999px 15px;
 }
 .jumbotron h2{
@@ -571,7 +571,20 @@ a:focus{outline: none !important; text-decoration: none;}
 .rad-disabled {
 	background: #eee;
 }
-
+/*.video-container {
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+.video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}*/
 
 
 
