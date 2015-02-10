@@ -8,6 +8,23 @@ function replaceForm() {
     document.getElementById("primary_form_content").innerHTML = "<p style='text-align:center;'> The additional information you provided will help us expedite your quote. We will be in touch shortly.";
 }
 
+// TYPE OF SPOTS
+
+var parkingOptions = document.getElementById('parking_listener');
+parkingOptions.addEventListener('click', parkingSubmit, false);
+
+
+
+function parkingSubmit() {
+    var parkingRadios = document.getElementsByName("parking_type");
+
+    for (var i=0, len = parkingRadios.length; i < len; i++) {
+        if (parkingRadios[i].checked) {
+            document.getElementById("parking_spot_form").submit();
+            console.log("SUBMITTED PARKING SPOT !!!");
+        }
+    }
+};
 
 // NUMBER OF SPOTS AUTOSUBMIT
 
@@ -63,12 +80,9 @@ function teslaContactSubmit() {
 
 
 
-// PARKING SPOT TYPE AUTOSUBMIT (EV and HOA form)
+// PARKING SPOT NUMBER
 
-var parkingOptions = document.getElementById('parking_listener');
-parkingOptions.addEventListener('click', parkingSubmit, false);
 parkingOptions.addEventListener('click', parkingCheck, false);
-
 
 function parkingCheck() {
     if (document.getElementById('assignedparking').checked) {
@@ -77,17 +91,6 @@ function parkingCheck() {
     else document.getElementById('parking_spot_div').style.display = 'none';
 
 
-};
-
-function parkingSubmit() {
-    var parkingRadios = document.getElementsByName("parking_type");
-
-    for (var i=0, len = parkingRadios.length; i < len; i++) {
-        if (parkingRadios[i].checked) {
-            document.getElementById("parking_spot_form").submit();
-            console.log("SUBMITTED PARKING SPOT !!!");
-        }
-    }
 };
 
 
