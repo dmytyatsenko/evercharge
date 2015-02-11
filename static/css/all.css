@@ -16,7 +16,7 @@ body{
 }
 img{vertical-align: top; border:none; height: auto;}
 input[type=image]{padding:0;border:none;}
-input[type=email],
+input [type=email],
 input[type=search],
 input[type=text],
 input[type=password],
@@ -99,7 +99,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	clear: both;
 }
 #nav li{
-	float: right;
+	float: left;
 	position: relative;
 	padding:2px 9px 2px 38px;
 	font-size: 14px;
@@ -130,7 +130,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	margin: 0;
 	list-style: none;
 	padding: 1px 0 0;
-	width: 70px;
+	width: 57px;
 }
 .social-networks li{float: left;}
 .social-networks li + li{margin-left: 17px;}
@@ -148,20 +148,10 @@ a:focus{outline: none !important; text-decoration: none;}
 	width: 26px;
 	background-position: -268px -244px;
 }
-
-/*.social-networks .blog a{
-	font-size: 1.25em;
-	color: white;
-	text-decoration: none;
-	padding: 0px 0px 0px 17px;
-	vertical-align: text-bottom;
-*/
-
-}
 .banner{
 	width: 100%;
 	position: relative;
-	minimum-height: 275px;
+	minimum-height: 531px;
 	overflow: hidden;
 	z-index: 1;
 	color: #fff;
@@ -182,11 +172,10 @@ a:focus{outline: none !important; text-decoration: none;}
 }*/
 .banner header{padding-bottom: 60px;}
 .banner h1{
-	font-size: 70px;
-	line-height: 85px;
+	font-size: 72px;
+	line-height: 76px;
 	font-weight: 300;
-	margin: 0;
-	color: white;
+	margin: 0 0 48px;
 }
 .banner h2{
 	font-size: 24px;
@@ -194,13 +183,8 @@ a:focus{outline: none !important; text-decoration: none;}
 	text-transform: uppercase;
 	font-weight: 400;
 	margin-bottom: 0px;
-	color: white;
 }
-.banner .article-quote h2{
-	margin-bottom: 5px;
-	margin-top: 0px;
-	font-size: 1.2em;
-}
+.banner .article-quote h2{margin-bottom: 33px;}
 .banner .desc{padding: 0 10px;}
 .banner h3{
 	font-size: 16px;
@@ -208,24 +192,22 @@ a:focus{outline: none !important; text-decoration: none;}
 	font-weight: 400;
 	margin: 0 0 16px;
 	text-transform: uppercase;
-	color: white;
 }
 .banner .visible{display: none;}
 .banner .img-circle{
 	margin-bottom: 19px;
 }
-.banner .article-quote .img-circle{margin-bottom: 5px;}
-.banner p{margin-bottom: 0; color: #fff;}
+.banner .article-quote .img-circle{margin-bottom: 40px;}
+.banner p{margin-bottom: 0;}
 .banner .btn{
 	background: #000;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 13px;
+	line-height: 22px;
 	font-weight: 600;
 	min-width: 160px;
 	border-radius: 14px 15px 15px 14px/15px 15px 14px 14px;
-	border: white 2px solid;
 	margin-bottom: 20px;
 }
 .banner .text{padding-bottom: 22px;}
@@ -481,7 +463,7 @@ a:focus{outline: none !important; text-decoration: none;}
 .features h2 a:hover{color: #b4b4b4;}
 /* jumbotron */
 #content .jumbotron{
-	padding: 41px 10000px 15px;
+	padding: 41px 10084px 15px;
 	margin: 0 -9999px 15px;
 }
 .jumbotron h2{
@@ -711,7 +693,8 @@ a:focus{outline: none !important; text-decoration: none;}
 	.banner .article-quote h2{margin-bottom: 23px;}
 	.banner h2{
 		font-size: 16px;
- 	}
+		line-height: 22px;
+	}
 	.banner h3{
 		font-size: 12px;
 		line-height: 14px;
