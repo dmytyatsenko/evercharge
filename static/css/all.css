@@ -474,6 +474,12 @@ a:focus{outline: none !important; text-decoration: none;}
 	margin-bottom: 39px;
 	max-width: 100%;
 }
+.features img:hover{
+	margin-bottom: 39px;
+	max-width: 100%;
+	opacity: 0.5;
+}
+
 
 .features img.oblong{
 	margin-top: 21px;

@@ -149,9 +149,12 @@ def tesla_contact():
 @app.route('/evownership', methods = ['POST', 'GET'])
 def ev_owner_status():
 	owner_status 	= request.form.get('ev_status')
+	dummy_date		= '1420099200'
+	#dummy date to add to Nutshell is Jan 1, 2015 -- expedites Sales process
 	contact_id 		= request.form.get('contact_id')
 
 	nut.UpdateContact(contact_id).ev_ownership_status("REV_IGNORE", owner_status)
+	nut.UpdateContact(contact_id).car_delivery_date("REV_IGNORE", dummy_date)
 
 	return "Successfully added EV ownership status."
 
