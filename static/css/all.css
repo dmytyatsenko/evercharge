@@ -99,7 +99,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	clear: both;
 }
 #nav li{
-	float: left;
+	float: right;
 	position: relative;
 	padding:2px 9px 2px 38px;
 	font-size: 14px;
@@ -172,19 +172,19 @@ a:focus{outline: none !important; text-decoration: none;}
 }*/
 .banner header{padding-bottom: 60px;}
 .banner h1{
-	font-size: 72px;
-	line-height: 76px;
+	font-size: 65px;
+	line-height: 72px;
 	font-weight: 300;
-	margin: 0 0 48px;
+	margin: 0 0 10px;
 }
 .banner h2{
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 26px;
 	text-transform: uppercase;
 	font-weight: 400;
 	margin-bottom: 0px;
 }
-.banner .article-quote h2{margin-bottom: 33px;}
+.banner .article-quote h2{margin-bottom: 5px;}
 .banner .desc{padding: 0 10px;}
 .banner h3{
 	font-size: 16px;
@@ -195,9 +195,9 @@ a:focus{outline: none !important; text-decoration: none;}
 }
 .banner .visible{display: none;}
 .banner .img-circle{
-	margin-bottom: 19px;
+	margin-bottom: 5px;
 }
-.banner .article-quote .img-circle{margin-bottom: 40px;}
+.banner .article-quote .img-circle{margin-bottom: 5px;}
 .banner p{margin-bottom: 0;}
 .banner .btn{
 	background: #000;
