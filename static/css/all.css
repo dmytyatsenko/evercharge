@@ -16,7 +16,7 @@ body{
 }
 img{vertical-align: top; border:none; height: auto;}
 input[type=image]{padding:0;border:none;}
-input [type=email],
+input[type=email],
 input[type=search],
 input[type=text],
 input[type=password],
@@ -161,7 +161,7 @@ a:focus{outline: none !important; text-decoration: none;}
 .banner{
 	width: 100%;
 	position: relative;
-	minimum-height: 531px;
+	minimum-height: 275px;
 	overflow: hidden;
 	z-index: 1;
 	color: #fff;
@@ -182,10 +182,10 @@ a:focus{outline: none !important; text-decoration: none;}
 }*/
 .banner header{padding-bottom: 60px;}
 .banner h1{
-	font-size: 72px;
-	line-height: 76px;
+	font-size: 70px;
+	line-height: 85px;
 	font-weight: 300;
-	margin: 0 0 48px;
+	margin: 0;
 	color: white;
 }
 .banner h2{
@@ -196,7 +196,11 @@ a:focus{outline: none !important; text-decoration: none;}
 	margin-bottom: 0px;
 	color: white;
 }
-.banner .article-quote h2{margin-bottom: 33px;}
+.banner .article-quote h2{
+	margin-bottom: 5px;
+	margin-top: 0px;
+	font-size: 1.2em;
+}
 .banner .desc{padding: 0 10px;}
 .banner h3{
 	font-size: 16px;
@@ -210,17 +214,18 @@ a:focus{outline: none !important; text-decoration: none;}
 .banner .img-circle{
 	margin-bottom: 19px;
 }
-.banner .article-quote .img-circle{margin-bottom: 40px;}
+.banner .article-quote .img-circle{margin-bottom: 5px;}
 .banner p{margin-bottom: 0; color: #fff;}
 .banner .btn{
 	background: #000;
 	color: #fff;
 	text-transform: uppercase;
-	font-size: 13px;
-	line-height: 22px;
+	font-size: 16px;
+	line-height: 24px;
 	font-weight: 600;
 	min-width: 160px;
 	border-radius: 14px 15px 15px 14px/15px 15px 14px 14px;
+	border: white 2px solid;
 	margin-bottom: 20px;
 }
 .banner .text{padding-bottom: 22px;}
@@ -706,8 +711,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	.banner .article-quote h2{margin-bottom: 23px;}
 	.banner h2{
 		font-size: 16px;
-		line-height: 22px;
-	}
+ 	}
 	.banner h3{
 		font-size: 12px;
 		line-height: 14px;
