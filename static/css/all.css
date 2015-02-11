@@ -14,6 +14,12 @@ body{
 	-webkit-text-size-adjust:100%;
     -ms-text-size-adjust: none;
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 img{vertical-align: top; border:none; height: auto;}
 input[type=image]{padding:0;border:none;}
 input [type=email],
@@ -36,6 +42,7 @@ a:focus{outline: none !important; text-decoration: none;}
 #wrapper{
 	overflow: hidden;
 	width: 100%;
+	height: 100%;
 }
 .bg-stretch{
 	position: absolute;
@@ -46,8 +53,10 @@ a:focus{outline: none !important; text-decoration: none;}
 	z-index: -1;
 }
 /* header styles */
-#header{padding: 16px 0 46px;}
-.add #header{padding: 16px 0 82px;}
+#header{
+	padding: 16px 0 20px;
+}
+.add #header{padding: 16px 0 85px;}
 /* page logo styles */
 .logo{
 	float: left;
@@ -170,7 +179,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	z-index: -1;
 	background: url(../images/arrow-top.png) repeat-x 50% 0;
 }*/
-.banner header{padding-bottom: 60px;}
+.banner header{padding-bottom: 15px;}
 .banner h1{
 	font-size: 65px;
 	line-height: 72px;
@@ -182,9 +191,12 @@ a:focus{outline: none !important; text-decoration: none;}
 	line-height: 26px;
 	text-transform: uppercase;
 	font-weight: 400;
-	margin-bottom: 0px;
+	margin-bottom: 10px;
 }
-.banner .article-quote h2{margin-bottom: 5px;}
+.banner .article-quote h2{
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
 .banner .desc{padding: 0 10px;}
 .banner h3{
 	font-size: 16px;
@@ -197,6 +209,10 @@ a:focus{outline: none !important; text-decoration: none;}
 .banner .img-circle{
 	margin-bottom: 5px;
 }
+
+.banner .img-circle:hover {
+	box-shadow: 2px 2px 3px #888888;
+}
 .banner .article-quote .img-circle{margin-bottom: 5px;}
 .banner p{margin-bottom: 0;}
 .banner .btn{
@@ -207,12 +223,13 @@ a:focus{outline: none !important; text-decoration: none;}
 	line-height: 22px;
 	font-weight: 600;
 	min-width: 160px;
-	border-radius: 14px 15px 15px 14px/15px 15px 14px 14px;
+	border-radius: 21px;
 	margin-bottom: 20px;
+	border: 2px white solid;
 }
 .banner .text{padding-bottom: 22px;}
 .banner .btn:hover,
-.get-quote input[type="submit"]:hover{background: #262826; }
+.get-quote input[type="submit"]:hover{background: #262826;}
 /* main informative part styles */
 #content{padding-bottom: 32px;}
 .video-btn{
@@ -363,6 +380,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	text-indent: -9999px;
 	overflow: hidden;
 	background:#33a23d url(../images/sprite2.png) no-repeat 5px -226px;
+	border-radius: 3px 0 0 3px;
 }
 .get-quote .label1{background-position: 5px -226px;}
 .get-quote .label2{background-position: -41px  -226px;}
@@ -373,8 +391,8 @@ a:focus{outline: none !important; text-decoration: none;}
 	width: 83.8%;
 	height: 47px;
 	line-height: 31px;
-	border-radius: 0;
-	box-shadow: none;
+	border-radius: 0 3px 3px 0;
+	border: 0;
 }
 .get-quote .error .form-control{
 	border-color: #F96666;
@@ -400,6 +418,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	border:none;
 	padding:11px 15px 12px;
 	min-width: 175px;
+	border: 2px white solid;
 }
 #tab2 li,
 #tab3 li{
@@ -455,6 +474,10 @@ a:focus{outline: none !important; text-decoration: none;}
 	margin-bottom: 39px;
 	max-width: 100%;
 }
+
+.features img.oblong{
+	margin-top: 21px;
+}
 .features h2{
 	margin: 0 0 20px;
 	font-weight: 300;
@@ -467,7 +490,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	margin: 0 -9999px 15px;
 }
 .jumbotron h2{
-	margin: 0 0 21px;
+	margin: 0 0 10px;
 	font-size: 24px;
 	line-height: 26px;
 	font-weight: 400;
@@ -508,12 +531,23 @@ a:focus{outline: none !important; text-decoration: none;}
 	background:#e7e7e7 url(../images/sprite2.png) no-repeat;
 }
 
+.rad-area:hover {
+	background-color: #C2C2C2;
+	cursor: pointer;
+}
+
+}
+
 .no-image {
 	background: #e7e7e7;
 }
 
 .rad-checked {
 	background-color: #33a23d;
+}
+
+.rad-checked:hover {
+	background-color: #298231;
 }
 .jcf-class-radio1{background-position: 0 0;}
 .jcf-class-radio2{background-position: -57px 0;}
@@ -536,6 +570,12 @@ a:focus{outline: none !important; text-decoration: none;}
 	width: 22px;
 	height: 48px;
 	border-radius: 0;
+	background-color: transparent;
+}
+.jcf-class-radio11:hover,
+.jcf-class-radio12:hover,
+.jcf-class-radio13:hover,
+.jcf-class-radio14:hover{
 	background-color: transparent;
 }
 .jcf-class-radio12{
@@ -934,7 +974,8 @@ a:focus{outline: none !important; text-decoration: none;}
 	line-height: 22px;
 	font-weight: 600;
 	min-width: 200px;
-	border-radius: 14px 15px 15px 14px/15px 15px 14px 14px;
+	border-radius: 21px;
+	border: 3px white solid;
 }
 
 .greyjumbo .btn:hover{
@@ -943,8 +984,13 @@ a:focus{outline: none !important; text-decoration: none;}
 
 }
 
+.greyjumbo legend {
+	margin-bottom: 5px;
+}
 
-
+.greyjumbo .states {
+	padding-top: 40px;
+}
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -969,6 +1015,23 @@ a:focus{outline: none !important; text-decoration: none;}
 .greyjumbo a {
 	color: #008736;
 	font-weight: 600;
+}
+
+.infobox {
+	border: 1px #939393 solid;
+	margin: auto;
+	padding: 10px;
+	border-radius: 3px;
+	box-shadow: 2px 2px 5px #888888;
+}
+
+.infobox:hover {
+	background: url(../images/image11.jpg);
+	background-position: top;
+	/*background-color: #292929;*/
+	color: #fff;
+	font-weight: 600;
+	opacity: 0.9;
 }
 
 span#hoa {
@@ -1018,6 +1081,15 @@ select {
 	display: none;
 }
 
+
+input:hover {
+	background: #C2C2C2;
+
+}
+input:focus {
+	background: #A4A4A4;
+
+}
 
 
 hr { 
