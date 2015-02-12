@@ -196,6 +196,7 @@ a:focus{outline: none !important; text-decoration: none;}
 .banner .article-quote h2{
 	margin-bottom: 5px;
 	margin-top: 5px;
+
 }
 .banner .desc{padding: 0 10px;}
 .banner h3{
@@ -213,6 +214,7 @@ a:focus{outline: none !important; text-decoration: none;}
 .banner .img-circle:hover {
 	box-shadow: 2px 2px 3px #888888;
 }
+
 .banner .article-quote .img-circle{margin-bottom: 5px;}
 .banner p{margin-bottom: 0;}
 .banner .btn{
