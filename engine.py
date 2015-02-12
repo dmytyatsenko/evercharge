@@ -90,7 +90,7 @@ def thank_you():
 		return render_template("hoathankyou.html", newLeadId=newLeadId, contactId=contactId)
 
 
-@app.route('/parkingspot', methods = ['POST', 'GET'])
+@app.route('/nutshell/parkingspot', methods = ['POST', 'GET'])
 def parking_spot():
 	spot_type 		= request.form.get('parking_type')
 	new_lead_id		= request.form.get('lead_id')
@@ -99,7 +99,7 @@ def parking_spot():
 
 	return "Successfully added parking type."
 
-@app.route('/existingcustomer', methods=['POST', 'GET'])
+@app.route('/nutshell/existingcustomer', methods=['POST', 'GET'])
 def is_existing_customer():
 	cust_status = request.form.get('building_customer')
 	new_lead_id	= request.form.get('lead_id')
@@ -110,7 +110,7 @@ def is_existing_customer():
 	return "Successfully added building's customer status."
 
 
-@app.route('/parkingspotnumber', methods = ['POST', 'GET'])
+@app.route('/nutshell/parkingspotnumber', methods = ['POST', 'GET'])
 def parking_spot_number():
 	parking 	= request.form.get('parking_spot')
 	new_lead_id	= request.form.get('lead_id')
@@ -119,7 +119,7 @@ def parking_spot_number():
 
 	return "Successfully added parking spot number."
 
-@app.route('/numberofspots', methods = ['POST', 'GET'])
+@app.route('/nutshell/numberofspots', methods = ['POST', 'GET'])
 def approximate_number_spots():
 	approx_bldg_size	= request.form.get('number_of_spots')
 	new_lead_id			= request.form.get('lead_id')
@@ -128,7 +128,7 @@ def approximate_number_spots():
 
 	return "Successfully added number of spots."
 
-@app.route('/reference', methods = ['POST', 'GET'])
+@app.route('/nutshell/reference', methods = ['POST', 'GET'])
 def referred_customer():
 	reference 		= request.form.get('reference')
 	new_lead_id		= request.form.get('lead_id')
@@ -137,7 +137,7 @@ def referred_customer():
 
 	return "Successfully added reference to EverCharge."
 
-@app.route('/teslacontact', methods = ['POST', 'GET'])
+@app.route('/nutshell/teslacontact', methods = ['POST', 'GET'])
 def tesla_contact():
 	tesla_contact 	= request.form.get('tesla_contact')
 	new_lead_id		= request.form.get('lead_id')
@@ -146,7 +146,7 @@ def tesla_contact():
 
 	return "Successfully added Tesla contact."
 
-@app.route('/evownership', methods = ['POST', 'GET'])
+@app.route('/nutshell/evownership', methods = ['POST', 'GET'])
 def ev_owner_status():
 	owner_status 	= request.form.get('ev_status')
 	contact_id 		= request.form.get('contact_id')
@@ -156,7 +156,7 @@ def ev_owner_status():
 	return "Successfully added EV ownership status."
 
 
-@app.route('/evdeliverydate', methods=['POST', 'GET'])
+@app.route('/nutshell/evdeliverydate', methods=['POST', 'GET'])
 def ev_delivery_date():
 	delivery_date 	= request.form.get('delivery_date')
 	contact_id 		= request.form.get('contact_id')
@@ -169,7 +169,7 @@ def ev_delivery_date():
 
 	return "Successfully added delivery date."
 
-@app.route('/commute', methods = ['POST', 'GET'])
+@app.route('/nutshell/commute', methods = ['POST', 'GET'])
 def avg_commute():
 	daily_commute 	= request.form.get('daily_commute')
 	new_lead_id		= request.form.get('lead_id')
@@ -180,7 +180,7 @@ def avg_commute():
 
 
 
-@app.route('/followup', methods = ['POST', 'GET'])
+@app.route('/nutshell/submit', methods = ['POST', 'GET'])
 def follow_up():
 	
 	new_lead_id		= request.form.get('lead_id')
