@@ -25,7 +25,7 @@
 						<ul id="nav">
 							
 
-							<li class="menu3"><a href="http://blog.evercharge.net">Blog</a></li>
+							<li style="font-size:1.4em; margin-right:8px"><a href="http://blog.evercharge.net">Blog</a></li>
 							
 						</ul>
 					</div>
@@ -50,7 +50,7 @@
 					<h3>EV OWNER</h3>
 					<p>Recharge from your<br>own parking space</p>
 				</div>
-				<a href="/ev-owner" class="btn"><span>learn</span> more</a>
+				<!-- <a href="/ev-owner" class="btn"><span>learn</span> more</a> -->
 			</div>
 		</article>
 		<article class="col-md-8 col-sm-8 col-xs-8">
@@ -61,40 +61,74 @@
 					<h3><span class="hidden-xs">property manager</span><span class="visible">PM</span> & HOA</h3>
 					<p>A valuable amenity<br>for your residents</p>
 				</div>
-				<a href="/hoa-pm" class="btn"><span>learn</span> more</a>
+				<!-- <a href="/hoa-pm" class="btn"><span>learn</span> more</a> -->
 
 			</div>
 		</article>
+		<article class="col-md-16 col-sm-16 col-xs-16">
+				<a href="#video" class="btn"><span>What is</span> Evercharge?</a>
+
+			</div>
+		</article>
+
+
 	</div>
 
 	{% endblock %}
 
+
+
+
 	{% block content_one %}
 
-<br>
-			<legend><span><center>The World’s smartest EV Charging Station</center></span></legend>
-		EverCharge offers the only fully managed, affordable, scalable charging solution designed for apartments and condominiums.</br></br>
 
-		EverCharge navigates the complexity of obtaining charging multi tenant buildings so you can focus on enjoying your EV.<br><br><br><br>
+	<article class="jumbotron greyjumbo why_everycharge" style="margin-top:0">
+			<legend><span><center>The World's Smartest EV Charging System.</center></span></legend>
+			<hr>
+			<p>Forget public charging: EverCharge is installed directly into residents' parking spaces for reliable, exclusive use.</p>
+			<p>Our patented technology ensures that Housing Associations and residents alike get the most scalable, easy to use, and affordable EV charging solution.</p>
+
+			<div class="row features">
+				
+				<div class="col-md-7 col-xs-5 infobox">
+
+					<div>
+						<h2>EV Owners</h2>
+						<hr>
+					</div>
+					
+					<br>
+					
+					<p>EverCharge navigates the complexity of charging in multi-tenant buildings. We take care of the entire process so you can focus on enjoying your EV.
+						<br>
+						<br>
+						<a href="/ev-owner" class="btn"><span>Drivers</span>: Learn More</a>
+					</p>
+
+				</div>
+			
+				<div class="col-md-2 col-xs-5"></div>
+			
+				<div class="col-md-7 col-xs-5 infobox">
+					<h2>HOA<span style="text-transform:lowercase;">s</span> & Managers</h2>
+					<hr>
+					<br>
+					<p>EverCharge enables you to provide a cost-effective, scalable EV charging solution for your your property - with no cost to the Association or the building owner.
+						<br>
+						<br>
+						<a href="/hoa-pm" class="btn"><span>Managers:</span> Learn More</a>
+					</p>
+				</div>
+			
+			</div>
+	</article>
+
+<br>
+		
 	{% endblock %}
 
 	{% block content_one_bottom %}
-	<article class="jumbotron greyjumbo">
-			<legend><span><center>Why EverCharge</center></span></legend>
-			<p>Forget Public Charging. EverCharge is installed directly in resident parking spaces for reliable, exclusive use.</p>
 
-			<p>We take care of the entire process to make charging at your property simple.
-			<br><br>
-				<a href="/ev-owner" class="btn"><span>Residents</span> Learn More</a>
-			</p>
-			
-			<p>As an HOA or building owner enable your property to provide a scalable solution at no cost to the association. 
-			<br><br>
-				<a href="/hoa-pm" class="btn"><span>Buildings</span> Learn More</a>
-			</p>
-
-
-	</article>
 
 	<!-- DO YOU KNOW YOUR RIGHTS -->
 <!-- 	<article class="jumbotron">
