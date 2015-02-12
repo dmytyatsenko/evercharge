@@ -168,7 +168,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	line-height: 16px;
 	font-weight: 600;
 }
-.add .banner{height: 662px;}
+/*.add .banner{height: 662px;}*/
 /*.banner:after{
 	content: '';
 	position: absolute;
@@ -230,6 +230,16 @@ a:focus{outline: none !important; text-decoration: none;}
 	border-radius: 21px;
 	margin-bottom: 20px;
 	border: 2px white solid;
+}
+
+.add .banner .btn {
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: 300;
+	text-transform: none;
+	margin-top: 20px;
+	padding: 5px 25px 5px 25px;
+	margin-bottom: 50px;
 }
 .banner .text{padding-bottom: 22px;}
 .banner .btn:hover,
