@@ -440,8 +440,8 @@ a:focus{outline: none !important; text-decoration: none;}
 	float: right;
 	font-size: 11px;
 	line-height: 18px;
-	width: 35%;
-	text-align: right;
+	width: 100%;
+	text-align: center;
 }
 /* footer nav styles */
 #footer .footer-nav{
@@ -451,16 +451,22 @@ a:focus{outline: none !important; text-decoration: none;}
 	padding: 0;
 	list-style: none;
 }
+
+.footer-nav ul{
+	list-style-type: none;
+}
 .footer-nav li{
-	float: left;
+
 	font-weight: 700;
 	text-transform: uppercase;
+	text-align: left;
 }
-.footer-nav li + li:before{
-	content: ":";
-	float: left;
-	padding: 0 11px 0 5px;
+
+footer article h4{
+	text-align: left;
 }
+
+
 .footer-nav li a{color: #fff;}
 .features{
 	padding-bottom: 20px;
@@ -901,6 +907,10 @@ a:focus{outline: none !important; text-decoration: none;}
 	#footer{
 		font-size: 9px;
 		line-height: 14px;
+	}
+
+	.footer-list {
+		margin: auto;
 	}
 	#footer .container{
 		padding: 9px 18px;

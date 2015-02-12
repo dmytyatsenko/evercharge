@@ -6,8 +6,21 @@ function replaceForm()
     {
         document.getElementById("form_heading").innerHTML = "Thank you!";
         document.getElementById("primary_form_content").innerHTML =
-            "<p style='text-align:center;'> The additional information you provided will help us expedite your quote. We will be in touch shortly.";
+            "<p style='text-align:center; font-size: 1.15em;'>The additional information you provided will help us expedite your quote.</p><p style='text-align:center;'>You're even closer to EV charging. An EverCharge expert will reach out soon. <br><br><span style='font-size:1.1em'>Want to talk to someone now? <strong>Call (888) 342-7383</strong></span>.";
+        document.getElementById("thankyouHeader").innerHTML = "";
+
     }
+    
+
+
+
+
+
+
+
+
+
+
     // TYPE OF SPOTS
 var parkingOptions = document.getElementById('parking_listener');
 parkingOptions.addEventListener('click', parkingSubmit, false);
