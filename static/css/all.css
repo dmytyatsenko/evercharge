@@ -368,7 +368,16 @@ a:focus{outline: none !important; text-decoration: none;}
 	color: #999;
 	text-transform: uppercase;
 	font-weight: 600;
-	margin: 0 0 13px;
+	margin: 0 0 8px;
+}
+
+.get-quote p {
+	font-size: 12px;
+	line-height: 14px;
+	color: #999;
+	font-weight: 300;
+	text-align: center;
+	margin: 4px 0 0 0;
 }
 .get-quote ul{
 	list-style: none;
@@ -380,7 +389,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	vertical-align: top;
 	margin:0 6px 7px 0;
 }
-.get-quote .tabset{padding-bottom: 26px;}
+.get-quote .tabset{padding-bottom: 5px;}
 .get-quote .tab-content{min-height: 160px;}
 .get-quote .form-group{
 	overflow: hidden;
@@ -575,8 +584,8 @@ footer article h4{
 .rad-checked:hover {
 	background-color: #298231;
 }
-.jcf-class-radio1{background-position: 0 0;}
-.jcf-class-radio2{background-position: -57px 0;}
+.jcf-class-radio1{background-position: 0 0; margin:auto;}
+.jcf-class-radio2{background-position: -57px 0; margin: auto;}
 .jcf-class-radio3{background-position: -114px 0;}
 .jcf-class-radio4{background-position: -171px 0;}
 .jcf-class-radio5{background-position: -228px 0;}
