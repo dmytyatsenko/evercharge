@@ -7,18 +7,18 @@
 
 
 {% block maincontent %}
-	<header>
+	<header id="thankyouHeader">
 		<h1>Thank You</h1>
 		<h2>For requesting a quote from EverCharge!</h2>
-		You're one step closer to EV charging. We'll reach out to you shortly.
+		<h3>You're one step closer to EV charging. We'll reach out to you shortly.
 		<br>
 		<br>
-		Want to talk to someone now? Call (888) 342-7383.
+		Want to talk to someone now? Call (888) 342-7383.</h3>
 	</header>
 
 
 {% endblock %}
-{% block video %} {% endblock %}
+
 
 {% block content_one %}
 <br>
@@ -38,7 +38,7 @@
 </div>
 
 
-<form action="/followup" class="get-quote validate-form" id='existing_customer'
+<form action="/nutshell/submit" class="get-quote validate-form" id='existing_customer'
 method='post' name="existing_customer" target="submit_frame">
 	<input name='lead_id' type='hidden' value="{{ newLeadId }}"> <input name=
 	'contact_id' type='hidden' value="{{ contactId }}"> <legend id=
@@ -50,7 +50,7 @@ method='post' name="existing_customer" target="submit_frame">
 		</form>
 
 
-		<form action="/existingcustomer" class="validate-form" id=
+		<form action="/nutshell/existingcustomer" class="validate-form" id=
 		'existing_customer_form' method='post' name="existing_customer_form"
 		target="submit_frame">
 			<input name='lead_id' type='hidden' value="{{ newLeadId }}">
@@ -107,7 +107,7 @@ method='post' name="existing_customer" target="submit_frame">
 		<hr>
 
 
-		<form action="/parkingspot" class="validate-form" id=
+		<form action="/nutshell/parkingspot" class="validate-form" id=
 		'parking_spot_form' method='post' name="parking_spot_form" target=
 		"submit_frame">
 			<input name='lead_id' type='hidden' value="{{ newLeadId }}">
@@ -171,7 +171,7 @@ method='post' name="existing_customer" target="submit_frame">
 		</form>
 
 
-		<form action="/parkingspotnumber" class=" validate-form" id=
+		<form action="/nutshell/parkingspotnumber" class=" validate-form" id=
 		'spot_number_form' method='post' name="spot_number_form" target=
 		"submit_frame">
 			<input name='lead_id' type='hidden' value="{{ newLeadId }}">
@@ -190,7 +190,7 @@ method='post' name="existing_customer" target="submit_frame">
 		<hr>
 
 
-		<form action="/numberofspots" class=" validate-form" id=
+		<form action="/nutshell/numberofspots" class=" validate-form" id=
 		'number_spots_form' method='post' name="number_spots_form" target=
 		"submit_frame">
 			<input name='lead_id' type='hidden' value="{{ newLeadId }}">
@@ -267,7 +267,7 @@ method='post' name="existing_customer" target="submit_frame">
 		</form>
 
 
-		<form action="/reference" class=" validate-form" id='reference_form'
+		<form action="/nutshell/reference" class=" validate-form" id='reference_form'
 		method='post' name="reference_form" target="submit_frame">
 			<input name='lead_id' type='hidden' value="{{ newLeadId }}">
 			<input name='contact_id' type='hidden' value="{{ contactId }}">
@@ -347,7 +347,7 @@ method='post' name="existing_customer" target="submit_frame">
 		</form>
 
 
-		<form action="/teslacontact" class=" validate-form" id=
+		<form action="/nutshell/teslacontact" class=" validate-form" id=
 		'tesla_contact_form' method='post' name="tesla_contact_form" target=
 		"submit_frame">
 			<input name='lead_id' type='hidden' value="{{ newLeadId }}">
@@ -366,7 +366,7 @@ method='post' name="existing_customer" target="submit_frame">
 		<h3>Do you already have an Electric Vehicle?</h3>
 
 
-		<form action="/evownership" class=" validate-form" id='ev_owner_form'
+		<form action="/nutshell/evownership" class=" validate-form" id='ev_owner_form'
 		method='post' name="ev_owner_form" target="submit_frame">
 			<input name='contact_id' type='hidden' value="{{ contactId }}">
 
@@ -413,7 +413,7 @@ method='post' name="existing_customer" target="submit_frame">
 		</form>
 
 
-		<form action="/evdeliverydate" class=" validate-form" id=
+		<form action="/nutshell/evdeliverydate" class=" validate-form" id=
 		'delivery_date_form' method='post' name="delivery_date_form" target=
 		"submit_frame">
 			<input name='contact_id' type='hidden' value="{{ contactId }}">
@@ -427,7 +427,7 @@ method='post' name="existing_customer" target="submit_frame">
 		</form>
 
 
-		<form action="/commute" class=" validate-form" id='commute_form'
+		<form action="/nutshell/commute" class=" validate-form" id='commute_form'
 		method='post' name="commute_form" target="submit_frame">
 			<input name='lead_id' type='hidden' value="{{ newLeadId }}">
 
