@@ -709,6 +709,7 @@ footer article h4{
 		float: right;
 		padding-top: 0;
 		width:27px;
+		display:none;
 	}
 	.navbar-toggle{
 		padding: 4px;
