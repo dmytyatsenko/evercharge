@@ -682,6 +682,10 @@ footer article h4{
 	.banner h1{font-size: 58px;}
 	.features .col-xs-5,
 	.features .col-xs-6{width: 100%;}
+
+	#header .navbar {
+		display:none;
+	}
 }
 /* styles for screens 320px wide and narrower */
 @media only screen and (max-width: 767px){
