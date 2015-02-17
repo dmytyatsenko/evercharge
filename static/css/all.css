@@ -92,7 +92,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	border:none;
 	margin-bottom: 0;
 	padding-top: 6px;
-	width: 450px;
+	width: 400px;
 }
 .navbar-collapse{
 	padding: 0;
@@ -139,7 +139,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	margin: 0;
 	list-style: none;
 	padding: 1px 0 0;
-	width: 57px;
+	width: 124px;
 }
 .social-networks li{float: left;}
 .social-networks li + li{margin-left: 17px;}
@@ -152,6 +152,26 @@ a:focus{outline: none !important; text-decoration: none;}
 	text-decoration: none;
 	background: url(../images/sprite2.png) no-repeat;
 }
+
+
+.social-networks li.blog a{
+	display:block;
+	text-indent: 0px;
+	width: 50px;
+	float: right;
+	text-transform: uppercase;
+	font-size: 1.4em;
+	background: none;
+	color: #fff;
+	padding-top: 5px;
+
+
+}
+
+.social-networks li.blog a:hover{
+	color: #33a23d;
+}
+
 .social-networks li.facebook a{background-position: -236px -242px}
 .social-networks li.twitter a{
 	width: 26px;
@@ -680,12 +700,19 @@ footer article h4{
 		width: 41%;
 	}
 	.banner h1{font-size: 58px;}
+	.add .banner .btn,
+	.banner .btn {
+		margin-bottom: 30px;
+		font-size: 14px;
+		line-height: 24px;
+	}
 	.features .col-xs-5,
 	.features .col-xs-6{width: 100%;}
 
 	#header .navbar {
 		display:none;
 	}
+
 }
 /* styles for screens 320px wide and narrower */
 @media only screen and (max-width: 767px){
@@ -715,6 +742,8 @@ footer article h4{
 		width:27px;
 		display:none;
 	}
+
+
 	.navbar-toggle{
 		padding: 4px;
 		margin-right: 2px;
@@ -752,10 +781,15 @@ footer article h4{
 	.social-networks{
 		float: left;
 		overflow: hidden;
+		width: 100px;
 	}
 	.social-networks li.facebook a{
 		width: 10px;
 		height: 17px;
+	}
+	.social-networks li.blog a{
+		padding-top: 3px;
+		
 	}
 	.social-networks li.facebook a{background-position: -133px -556px;}
 	.social-networks li.twitter a{
@@ -763,7 +797,7 @@ footer article h4{
 		background-position: -156px -557px;
 	}
 	.banner {height: 393px;}
-	.add .banner{height: 465px;}
+	.add .banner{height: 485px;}
 	.banner header{padding-bottom: 38px;}
 	.banner h1{
 		font-size: 39px;
@@ -795,7 +829,8 @@ footer article h4{
 		width: 111px;
 		margin-bottom: 18px;
 	}
-	.banner .btn span{display: none;}
+	.banner .btn{
+		font-size: 14px}
 	.banner .col-xs-5,
 	.banner .col-xs-6{padding:0 4.9px; width: 33.33%;}
 	.banner .visible{display: inline;}
