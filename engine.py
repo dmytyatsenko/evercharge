@@ -211,7 +211,7 @@ def follow_up():
 def display_blog():
 	return redirect('http://blog.evercharge.net')
 
-@app.route('/keyterms', methods=['GET'])
+@app.route('/memberkeyterms', methods=['GET'])
 def display_key_terms():
 	return render_template('keyterms.html')
 	
