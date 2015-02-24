@@ -211,6 +211,10 @@ def follow_up():
 def display_blog():
 	return redirect('http://blog.evercharge.net')
 
+@app.route('/keyterms', methods=['GET'])
+def display_key_terms():
+	return render_template('keyterms.html')
+	
 if __name__ == '__main__':
 	PORT = int(os.environ.get("PORT",5000))
 	DEBUG = "NO_DEBUG" not in os.environ
