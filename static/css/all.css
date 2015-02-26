@@ -201,13 +201,13 @@ a:focus{outline: none !important; text-decoration: none;}
 }*/
 .banner header{padding-bottom: 15px;}
 .banner h1{
-	font-size: 65px;
+	font-size: 55px;
 	line-height: 72px;
 	font-weight: 300;
 	margin: 0 0 10px;
 }
 .banner h2{
-	font-size: 22px;
+	font-size: 20px;
 	line-height: 26px;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -436,6 +436,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	line-height: 31px;
 	border-radius: 0 3px 3px 0;
 	border: 0;
+	font-size: 13px;
 }
 .get-quote .error .form-control{
 	border-color: #F96666;
@@ -536,6 +537,7 @@ footer article h4{
 .features h2{
 	margin: 0 0 20px;
 	font-weight: 300;
+	font-size: 27px;
 }
 .features h2 a{color: #010101;}
 .features h2 a:hover{color: #b4b4b4;}
@@ -1159,7 +1161,6 @@ select {
 #tesla_div {
 	display: none;
 }
-
 
 input:hover {
 	background: #C2C2C2;
