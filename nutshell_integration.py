@@ -82,6 +82,11 @@ class UpdateLead(object):
 
 		return edited_lead
 
+	def ev_delivery_date(self, rev, delivery_date):
+		edited_lead = n.editLead(self.lead_id, rev, customFields=
+			{'EV Delivery Date': delivery_date})
+
+		return edited_lead
 
 
 

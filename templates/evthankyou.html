@@ -385,7 +385,8 @@ method='post' name="existing_customer" target="submit_frame">
 		<form action="/nutshell/evownership" class=" validate-form" id='ev_owner_form'
 		method='post' name="ev_owner_form" target="submit_frame">
 			<input name='contact_id' type='hidden' value="{{ contactId }}">
-
+			<input name='lead_id' type='hidden' value="{{ newLeadId }}">
+			
 			<div class="row features" id="delivery_listener">
 				<article class="col-md-5 col-xs-6">
 					<div class="thank-you-option">
@@ -433,6 +434,7 @@ method='post' name="existing_customer" target="submit_frame">
 		'delivery_date_form' method='post' name="delivery_date_form" target=
 		"submit_frame">
 			<input name='contact_id' type='hidden' value="{{ contactId }}">
+			<input name='lead_id' type='hidden' value="{{ newLeadId }}">
 
 			<div class="form-group" id="delivery_date_div">
 				<p>delivery date</p>
