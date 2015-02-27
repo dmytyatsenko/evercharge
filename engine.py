@@ -152,9 +152,13 @@ def ev_owner_status():
 	dummy_date		= '1420099200'
 	#dummy date to add to Nutshell is Jan 1, 2015 -- expedites Sales process
 	contact_id 		= request.form.get('contact_id')
+	new_lead_id		= request.form.get('lead_id')
 
 	nut.UpdateContact(contact_id).ev_ownership_status("REV_IGNORE", owner_status)
-	nut.UpdateContact(contact_id).car_delivery_date("REV_IGNORE", dummy_date)
+	
+	if owner_status == 'Already have an EV':
+		nut.UpdateContact(contact_id).car_delivery_date("REV_IGNORE", dummy_date)
+		nut.UpdateLead(new_lead_id).ev_delivery_date("REV_IGNORE", dummy_date)
 
 	return "Successfully added EV ownership status."
 
@@ -163,12 +167,14 @@ def ev_owner_status():
 def ev_delivery_date():
 	delivery_date 	= request.form.get('delivery_date')
 	contact_id 		= request.form.get('contact_id')
+	new_lead_id		= request.form.get('lead_id')
 
 	if delivery_date:
 		date = time.mktime(datetime.strptime(delivery_date, "%Y-%m-%d").timetuple())
 		delivery_date = str(int(date))
 
 	nut.UpdateContact(contact_id).car_delivery_date("REV_IGNORE", delivery_date)
+	nut.UpdateLead(new_lead_id).ev_delivery_date("REV_IGNORE", delivery_date)
 
 	return "Successfully added delivery date."
 
