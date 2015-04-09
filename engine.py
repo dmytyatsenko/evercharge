@@ -5,15 +5,24 @@ from datetime import datetime
 import time
 
 
+
 SECRET_KEY 	= os.environ.get("FLASK_SECRET_KEY")
 
 app = Flask(__name__, static_url_path='')
+
+
 app.config['SECRET_KEY'] = SECRET_KEY
+
 
 
 @app.route('/', methods = ['POST', 'GET'])
 def evercharge():
 	return render_template("index.html")
+
+@app.route('/robots.txt', methods=['GET'])
+def root():
+	return app.send_static_file('robots.txt')
+
 
 @app.route('/ev-owner', methods = ['POST', 'GET'])
 def ev_owner():
