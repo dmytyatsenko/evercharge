@@ -158,18 +158,18 @@
 	<main id="content" class="container" style="max-width: 790px;">
 		<!-- video -->
 
+
+
+		{% block content_one %}
+		{% endblock %}
+
 		{% block video %}
-		<article class='whitejumbo jumbotron' id='video'>
+		<article class='whitejumbo jumbotron hideme' id='video'>
 		<div class="video-container">
 			<iframe src="http://www.youtube.com/embed/M4t47yjCGWw?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
 		</div>
 		</article>
-
-
         {% endblock %}
-
-		{% block content_one %}
-		{% endblock %}	
 
 		{% block content_two %}
 		{% endblock %}
@@ -180,7 +180,7 @@
 		{% block quote_form %}
 
 			<!-- get quote form -->
-			<form id='quote_form' action="/thankyou", method='post' class="get-quote validate-form">
+			<form id='quote_form' action="/thankyou", method='post' class="get-quote validate-form hideme">
 
 				<input name="lead_source" value="Web Signup" type="hidden">
         <fieldset>
@@ -306,6 +306,7 @@
 
 </body>
 	<script type="text/javascript" src="js/conditionalform.js"></script>
+	<script type="text/javascript" src="js/scroll_fade.js"></script>
 
 
 

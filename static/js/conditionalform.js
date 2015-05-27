@@ -12,15 +12,6 @@ function replaceForm()
     }
     
 
-
-
-
-
-
-
-
-
-
     // TYPE OF SPOTS
 var parkingOptions = document.getElementById('parking_listener');
 parkingOptions.addEventListener('click', parkingSubmit, false);
