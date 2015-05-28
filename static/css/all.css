@@ -524,11 +524,7 @@ footer article h4{
 	margin-bottom: 39px;
 	max-width: 100%;
 }
-.features img:hover{
-	margin-bottom: 39px;
-	max-width: 100%;
-	opacity: 0.5;
-}
+
 
 
 .features img.oblong{
@@ -1100,7 +1096,7 @@ footer article h4{
     height: 100%;
 }
 
-.jumbotron article {
+.jumbotron article, span {
 	text-align: left;
 
 }
