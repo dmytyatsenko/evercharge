@@ -1199,10 +1199,17 @@ hr {
 	opacity: 0;
 }
 
+
 img.desaturate {
 	filter: grayscale(100%);
 	-webkit-filter: grayscale(100%);
 }
+
+
+#green_header {
+	color: #409E2A;
+}
+
 
 @-webkit-viewport   { width: device-width; }
 @-moz-viewport      { width: device-width; }
