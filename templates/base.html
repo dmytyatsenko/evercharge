@@ -158,16 +158,18 @@
 	<main id="content" class="container">
 		<!-- video -->
 
-
+		{% block intro %}
+		{% endblock %}
 
 		{% block content_one %}
 		{% endblock %}
 
 		{% block video %}
 		<article class='whitejumbo jumbotron' id='video'>
-		<div class="video-container">
-			<iframe src="http://www.youtube.com/embed/M4t47yjCGWw?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-		</div>
+			<h2>Check out our video to learn more</h2>
+			<div class="video-container">
+				<iframe src="http://www.youtube.com/embed/M4t47yjCGWw?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+			</div>
 		</article>
         {% endblock %}
 
@@ -176,6 +178,9 @@
 
 		{% block content_three %}
 		{% endblock %}
+
+
+
 	
 		{% block quote_form %}
 
