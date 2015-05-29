@@ -521,14 +521,14 @@ footer article h4{
 	line-height: 24px;
 }
 .features img{
-	margin-bottom: 39px;
+	margin-bottom: 22px;
 	max-width: 100%;
 }
-.features img:hover{
-	margin-bottom: 39px;
-	max-width: 100%;
-	opacity: 0.5;
+
+.features h4 {
+	margin-top: 0;
 }
+
 
 
 .features img.oblong{
@@ -542,15 +542,16 @@ footer article h4{
 .features h2 a{color: #010101;}
 .features h2 a:hover{color: #b4b4b4;}
 /* jumbotron */
+
 #content .jumbotron{
 	padding: 41px 10084px 15px;
 	margin: 0 -9999px 15px;
 }
 .jumbotron h2{
-	margin: 0 0 10px;
-	font-size: 24px;
-	line-height: 26px;
-	font-weight: 400;
+	margin: 		0 0 10px;
+	font-size: 		24px;
+	line-height: 	26px;
+	font-weight: 	400;
 	text-transform: uppercase;
 }
 .jumbotron .form-control{
@@ -1041,8 +1042,23 @@ footer article h4{
 	color: black;
 }
 
-.darkgreyjumbo {
-	background-color: #474342;
+.greenjumbo {
+	background-color: #43A048;
+	color: white;
+
+}
+
+.greenjumbo h4, h5, h2 {
+	font-weight: 300;
+	line-height: 32px;
+}
+
+.greenjumbo a {
+	text-decoration: none;
+	color: #272822;
+}
+
+.greenjumbo hr {
 	color: white;
 }
 
@@ -1053,6 +1069,9 @@ footer article h4{
 	font-size: 16px;
 }
 
+.whitejumbo h5 {
+	line-height: 24px;
+}
 .greyjumbo .btn{
 	background: #000;
 	color: #fff;
@@ -1100,7 +1119,7 @@ footer article h4{
     height: 100%;
 }
 
-.jumbotron article {
+.jumbotron article, span {
 	text-align: left;
 
 }
@@ -1198,6 +1217,13 @@ hr {
 .hideme {
 	opacity: 0;
 }
+
+
+img.desaturate {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+
 
 #green_header {
 	color: #409E2A;
