@@ -25,17 +25,8 @@
 	<!-- include the google font -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
 	<!-- include jQuery library -->
-	<script src="js/jquery-1.8.3.min.js"></script>
-	<!-- include bootstrap javascript -->
-	<script src="js/bootstrap.min.js"></script>
 
-	<script src="js/bootstrap-formhelpers-phone.js"></script>
-	<!-- include custom JavaScript -->
-	<script type="text/javascript" src="js/jquery.main.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-	<script type="text/javascript" src="js/typeahead.bundle.js"></script>
-	<script type="text/javascript" src="js/smoothscroll.js"></script>
-	<script type="text/javascript" src="transition.js"></script>
+
 
 
 	<!-- <script type="text/javascript" src="js/shadowbox.js"></script>
@@ -158,26 +149,27 @@
 	<main id="content" class="container">
 		<!-- video -->
 
-		{% block intro %}
-		{% endblock %}
+{% block intro %}
+{% endblock %}
 
-		{% block content_one %}
-		{% endblock %}
+{% block content_one %}
+{% endblock %}
 
-		{% block video %}
-		<article class='whitejumbo jumbotron' id='video'>
-			<h2>Check out our video to learn more</h2>
-			<div class="video-container">
-				<iframe src="http://www.youtube.com/embed/M4t47yjCGWw?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</article>
-        {% endblock %}
+{% block video %}
+	<article class='whitejumbo jumbotron' id='video'>
+		<h2>Check out our video to learn more</h2>
 
-		{% block content_two %}
-		{% endblock %}
+		<div class="video-container">
+			<iframe src="http://www.youtube.com/embed/M4t47yjCGWw?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</article>
+{% endblock %}
 
-		{% block content_three %}
-		{% endblock %}
+{% block content_two %}
+{% endblock %}
+
+{% block content_three %}
+{% endblock %}
 
 
 
@@ -310,8 +302,19 @@
 
 
 </body>
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-formhelpers-phone.js"></script>
+
+	<script type="text/javascript" src="js/jquery.main.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+	<script type="text/javascript" src="js/typeahead.bundle.js"></script>
+	<script type="text/javascript" src="js/smoothscroll.js"></script>
 	<script type="text/javascript" src="js/conditionalform.js"></script>
 	<script type="text/javascript" src="js/scroll_fade.js"></script>
+	<script type='text/javascript' src='js/transition.js'></script>
+	<script type='text/javascript' src='js/collapse.js'></script>
 
 
 
