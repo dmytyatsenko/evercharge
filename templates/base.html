@@ -182,14 +182,14 @@
 
 
 	
-		{% block quote_form %}
+{% block quote_form %}
 
-			<!-- get quote form -->
-			<form id='quote_form' action="/thankyou", method='post' class="get-quote validate-form">
-
-				<input name="lead_source" value="Web Signup" type="hidden">
-        <fieldset>
-					<legend id="quote"><span>Get a Free Quote</span></legend>
+<form id='quote_form' action="/thankyou", method='post' class="get-quote validate-form">
+	<input name="lead_source" value="Web Signup" type="hidden">
+		<fieldset>
+			<legend id="quote"><span>
+				{% block form_name %}Get a Free Quote{% endblock %}
+			</span></legend>
 					<div class="wrap">
 						<div class="col">
 							<h3>What are you?</h3>
