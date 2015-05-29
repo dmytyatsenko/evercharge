@@ -1214,7 +1214,7 @@ hr {
     border-color: #E7E7E7;
 } 
 
-.hideme {
+.hideme, .autoshow {
 	opacity: 0;
 }
 
