@@ -11,13 +11,14 @@
 	<title>EverCharge</title>
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
-	<!-- include the bootstrap stylesheet -->
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+
 	<!-- include the site stylesheet -->
+
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
+
 	<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="/css/all.css">
+	<link rel="stylesheet" href="/css/modal.css">
 
 
 	<link rel="stylesheet" type="text/css" href="/css/shadowbox.css">
@@ -304,7 +305,7 @@
 </body>
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	
-	<script src="js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="js/bootstrap-formhelpers-phone.js"></script>
 
 	<script type="text/javascript" src="js/jquery.main.js"></script>
@@ -315,6 +316,11 @@
 	<script type="text/javascript" src="js/scroll_fade.js"></script>
 	<script type='text/javascript' src='js/transition.js'></script>
 	<script type='text/javascript' src='js/collapse.js'></script>
+	<script>
+	$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').focus()
+})
+	</script>
 
 
 
