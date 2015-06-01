@@ -1,36 +1,36 @@
 {% extends 'base.html' %}
-	
-	{% block background %}
+
+{% block background %}
 	<img src="images/image11.jpg" alt="evercharge garage" width="1200" height="526">
-	{% endblock %}
+{% endblock %}
 
-	{% block maincontent %}
-					<div class="col-md-14 col-md-offset-1 article-quote">
-						<img src="images/image03.png" class="img-circle" alt="image description" width="100" height="100">
-						<h1><span class="hidden-xs">Property Manager</span> <span class="visible">PM</span> &amp; HOA</h1>
-						<h2>A valuable amenity for your residents</h2>
-						<a href="#quote" class="btn">Get a quote</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	{% endblock %}
-		<!-- contain main informative part of the site -->
-	{% block video %}
+{% block maincontent %}
+	<div class="col-md-14 col-md-offset-1 article-quote">
+		<img src="images/image03.png" class="img-circle" alt="image description" width="100" height="100">
+		<h1><span class="hidden-xs">Property Manager</span> <span class="visible">PM</span> &amp; HOA</h1>
+		<h2>A valuable amenity for your residents</h2>
+		<a href="#quote" class="btn">Get a quote</a>
+	</div>
+
+</div>
+</div>
+</div>
+{% endblock %}
+
+{% block video %}
 	<article class='jumbotron whitejumbo'>
-
 		<div class="video-container">
 			<iframe src="http://www.youtube.com/embed/8fpj8MhywaU?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" width="560" height="315" allowfullscreen></iframe>
 		</div>
-		</article>
-	{% endblock %}
-{% block content_one %}
+	</article>
+{% endblock %}
 
+{% block content_one %}
 	<article class='jumbotron whitejumbo'>
 		<h2>Are your properties ready for the growing EV demand?</h2>
-			<h5>
-				Nearly <strong id="green_header">88 million</strong> Americans live in a multi-tenant residence, and as the demand for Electric Vehicles grows, will your buildings be equipped to handle charging? EV charging in condos and apartments can be complicated -- let EverCharge navigate the process for you.
-			</h5>
+		<h5>
+			Nearly <strong id="green_header">88 million</strong> Americans live in a multi-tenant residence, and as the demand for Electric Vehicles grows, will your buildings be equipped to handle charging? EV charging in condos and apartments can be complicated -- let EverCharge navigate the process for you.
+		</h5>
 	</article>
 
 	<div class='row features'>
@@ -76,61 +76,73 @@
 		</article>
 	</div>
 
-<article class='jumbotron greenjumbo'>
-	<legend>Let EverCharge handle everything for you.</legend>
-	
-	<h4>We are the only EV charging system that allows multi-tenant residents to charge their EV in their own parking space.</h4>
-	<br>
+	<article class='jumbotron greenjumbo'>
+		<legend>Let EverCharge handle everything for you.</legend>
+		
+		<h4>
+			We are the only EV charging system that allows multi-tenant residents to charge their EV in their own parking space.
+		</h4>
+		<br>
 
-	<a href="#quote" class="btn hideme">Learn More</a>
-</article>
+		<a href="#quote" class="btn hideme">Learn More</a>
+	</article>
 
 
 	<article class='jumbotron whitejumbo'>
 		<h2>What makes EverCharge different?</h2>
 	</article>
-			<!-- features -->
-
-			<div class="row features">
-				<article class="col-md-1"></article>
-				<article class="col-md-4 col-xs-5">
-					<img src="images/image05.png" alt="image description" width="255" height="247">
-					<h2>Easy Install</h2>
-					<p class='hideme'>No new meters, large holes in the concrete, or massive conduit running to the main supply are required.</p>
-				</article>
-				<article class="col-md-1"></article>
-				<article class="col-md-4 col-xs-5">
-					<img src="images/image06.png" alt="image description" width="257" height="248">
-					<h2>Scalable</h2>
-					<p class='hideme'>Continue adding vehicle capacity as demand for EV charging grows within your building.</p>
-				</article>
-				<article class="col-md-1"></article>
-				<article class="col-md-4 col-xs-5">
-					<img src="images/image07.png" alt="image description" width="255" height="248">
-					<h2>Add Value</h2>
-					<p class='hideme'>Increase property values and rental rates. Make your units more desirable.</p>
-				</article>
-				<article class="col-md-1"></article>
-				<article class="col-md-1"></article>
-				<article class="col-md-4 col-xs-5">
-					<img src="images/image08.png" alt="image description" width="274" height="247" class="oblong">
-					<h2>Save on Infrastructure</h2>
-					<p class='hideme'>Drastically lower the overall expense of providing power to residents.</p>
-				</article>
-				<article class="col-md-1"></article>
-				<article class="col-md-4 col-xs-5">
-					<img src="images/image09.png" alt="image description" width="248" height="247">
-					<h2>Users Pay for their Power</h2>
-					<p class='hideme'>The HOA is reimbursed quarterly for all common area electricity used.</p>
-				</article>
-				<article class="col-md-1"></article>
-				<article class="col-md-4 col-xs-5">
-					<img src="images/image10.png" alt="image description" width="248" height="247">
-					<h2>Parking Spots Stay The Same</h2>
-					<p class='hideme'>EV owners charge with their own EVSE in their own parking space.</p>
-				</article>
-				<article class="col-md-1"></article>
-			</div>
+	<div class="row features">
+		<article class="col-md-1"></article>
+		<article class="col-md-4 col-xs-5">
+			<img src="images/image05.png" alt="image description" width="125">
+			<h2>Easy Install</h2>
+			<h5>
+				No new meters, large holes in concrete, or massive conduit running to the main supply.
+			</h5>
+		</article>
+		<article class="col-md-1"></article>
+		<article class="col-md-4 col-xs-5">
+			<img src="images/image06.png" alt="image description" width="125">
+			<h2>Scalable</h2>
+			<h5>
+				Add vehicle capacity as demand for EV charging grows within your building.
+			</h5>
+		</article>
+		<article class="col-md-1"></article>
+		<article class="col-md-4 col-xs-5">
+			<img src="images/image07.png" alt="image description" width="125">
+			<h2>Add Value</h2>
+			<h5>
+				Increase property values and rental rates. Make your units more desirable.\
+			</h5>
+		</article>
+		<article class="col-md-1"></article>
+		<article class="col-md-1"></article>
+		<article class="col-md-4 col-xs-5">
+			<img src="images/image08.png" alt="image description" width="125" class="oblong">
+			<h2>Save on Infrastructure</h2>
+			<h5>
+				Drastically lower the overall expense of providing power to residents.
+			</h5>
+		</article>
+		<article class="col-md-1"></article>
+		<article class="col-md-4 col-xs-5">
+			<img src="images/image09.png" alt="image description" width="125">
+			<h2>Users Pay for their Power</h2>
+			<h5>
+				The HOA is reimbursed quarterly for all common area electricity used.
+			</h5>
+		</article>
+		<article class="col-md-1"></article>
+		<article class="col-md-4 col-xs-5">
+			<img src="images/image10.png" alt="image description" width="125">
+			<h2>Parking Spots Stay The Same</h2>
+			<h5>
+				EV owners charge with their own EVSE in their own parking space.
+			</h5>
+		</article>
+		<article class="col-md-1"></article>
+	</div>
 
 
 	<article class="jumbotron">

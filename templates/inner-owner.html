@@ -1,24 +1,20 @@
 {% extends 'base.html' %}
 	
-	{% block background %}
+{% block background %}
 	<img src="images/image11.jpg" alt="image description" width="1200" height="526">
-	{% endblock %}
-
-
-	{% block maincontent %}
-
-		<div class="col-md-14 col-md-offset-1 article-quote">
-			<img src="images/image02.png" alt="image description" class="img-circle" width="95" height="95">
-			<h1>EV Owner</h1>
-			<h2>Charge right from your own parking space</h2>
-			<a href="#quote" class="btn">Get a quote</a>
-		</div>
-
-
 {% endblock %}
-		<!-- contain main informative part of the site -->
+
+
+{% block maincontent %}
+	<div class="col-md-14 col-md-offset-1 article-quote">
+		<img src="images/image02.png" alt="image description" class="img-circle" width="95" height="95">
+		<h1>EV Owner</h1>
+		<h2>Charge right from your own parking space</h2>
+		<a href="#quote" class="btn">Get a quote</a>
+	</div>
+{% endblock %}
+
 {% block intro %}
-	<!-- <article class='jumbotron whitejumbo'></article> -->
 	<article class='jumbotron whitejumbo'>
 		<h2>Are you an EV Owner, or looking to buy an EV soon?</h2>
 			<h5>
@@ -26,6 +22,9 @@
 				<br>
 				navigate the complexities of Electric Vehicle charging in condos and apartments.
 			</h5>
+			<h4>
+				At EverCharge, we handle:
+			</h4>
 	</article>
 
 	<div class='row features'>
@@ -51,52 +50,55 @@
 		</article>
 	</div>
 
-<article class='jumbotron greenjumbo'>
-	<legend>Let EverCharge handle everything for you</legend>
-	
-	<h4>We are the only EV charging system that allows
+	<article class='jumbotron greenjumbo'>
+		<legend>Let EverCharge handle everything for you</legend>
+		
+		<h4>We are the only EV charging system that allows
+			<br>
+			multi-tenant residents to charge their EV in their own parking space.</h4>
 		<br>
-		multi-tenant residents to charge their EV in their own parking space.</h4>
-	<br>
 
-	<a href="#quote" class="btn hideme">Contact Us</a>
-</article>
+		<a href="#quote" class="btn hideme">Contact Us</a>
+	</article>
 {% endblock %}
 
 {% block content_one %}
-			<article class='jumbotron whitejumbo'>
-				<h2>What makes EverCharge different?</h2>
-			</article>
-			<!-- features -->
-			<div class="row features">
-				<!-- <article class="col-md-3"></article> -->
-				<article class="col-md-8 col-xs-5">
-					<img src="images/image12.png" alt="image description" width="252" height="248">
-					<h2>Access</h2>
-					<p class='hideme'>Just tap your access card and plug in. We automatically authenticate your vehicle and log your usage for billing.</p>
-				</article>
-				<!-- <article class="col-md-2"></article> -->
-				<article class="col-md-8 col-xs-5">
-					<img src="images/image13.png" alt="compatibility image" width="253" height="248">
-					<h2>Fits Any EV</h2>
-					<p class='hideme'>Our Charging System is compatable with all production plugin vehicles currently sold in the United States, including Teslas.</p>
-				</article>
-				<!-- <article class="col-md-3"></article>
-				<article class="col-md-3"></article> -->
-				<article class="col-md-8 col-xs-5">
-					<img src="images/image14.png" alt="automatic billing image" width="255" height="248">
-					<h2>Auto Billing</h2>
-					<p class='hideme'>You’ll automatically be billed once per month for the electricity that you use. Choose from unlimited charging or pay-as-you-go.</p>
-				</article>
-				<!-- <article class="col-md-2"></article> -->
-				<article class="col-md-8 col-xs-5">
-					<img src="images/image07.png" alt="add value image" width="255" height="248">
-					<h2>Add Value</h2>
-					<p class='hideme'>Increase property values and make your unit more desirable; when it comes time to sell, market your unit as EV compatible.</p>
-				</article>
-				<!-- <article class="col-md-3"></article> -->
-			</div>
+	<article class='jumbotron whitejumbo'>
+		<h2>What Makes EverCharge Different?</h2>
+	</article>
+
+	<div class="row features">
+		<article class="col-md-8 col-xs-5">
+			<img src="images/image12.png" alt="image description" width="125">
+			<h2>Access</h2>
+			<h5>
+				Just tap your access card and plug in. We automatically authenticate your vehicle and log your usage for billing.
+			</h5>
 		</article>
+		<article class="col-md-8 col-xs-5">
+			<img src="images/image13.png" alt="compatibility image" width="125">
+			<h2>Fits Any EV</h2>
+			<h5>
+				Our Charging System is compatable with all production plugin vehicles currently sold in the United States, including Teslas.
+			</h5>
+		</article>
+		<article class="col-md-8 col-xs-5">
+			<img src="images/image14.png" alt="automatic billing image" width="125">
+			<h2>Auto Billing</h2>
+			<h5>
+				You’ll automatically be billed once per month for the electricity that you use. Choose from unlimited charging or pay-as-you-go.
+			</h5>
+		</article>
+
+		<article class="col-md-8 col-xs-5">
+			<img src="images/image07.png" alt="add value image" width="125">
+			<h2>Add Value</h2>
+			<h5>
+				Increase property values and make your unit more desirable; when it comes time to sell, market your unit as EV compatible.
+			</h5>
+		</article>
+	</div>
+</article>
 
 
 		<article class='jumbotron greyjumbo'>
@@ -174,7 +176,6 @@
 			<h4 span class='col-md-16 col-xs-16'>To get the process started, call us at (888) 342-7383 or fill out our <a href="#quote">quote form</a>.</h4>
 			</div>
 		</article>
-
 
 {% endblock %}
 
