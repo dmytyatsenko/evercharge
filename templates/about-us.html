@@ -1,84 +1,149 @@
 {% extends 'base.html' %}
-	
-	{% block background %}
+
+{% block background %}
 	<img src="images/image11.jpg" alt="image description" width="1200" height="526">
-	{% endblock %}
+{% endblock %}
 
+{% block maincontent %}
+	<div class="col-md-14 col-md-offset-1 article-quote">
+		<img src="images/evercharge-logo.png" alt="image description" class="img-circle" width="95" height="95">
+		<h1>About Us</h1>
+	</div>
+{% endblock %}
 
-	{% block maincontent %}
+{% block video %}
+{% endblock %}
 
-		<div class="col-md-14 col-md-offset-1 article-quote">
-			<img src="images/image02.png" alt="image description" class="img-circle" width="95" height="95">
-			<h1>About Us</h1>
+{% block content_one %}
+	<div style="height: 50px">
+	<!-- White Space -->
+	</div>
+	<article class='jumbotron whitejumbo'>
+		<h2>We are EverCharge</h2>
+			<h4>
+				The only EV charging system designed specifically for multi-tenant buildings.
+			</h4>
+			<h5>
+				What makes us different?
+			</h5>
+	</article>
 
+	<div class='row features'>
+		<article class='col-md-4 col-xs-8'>
+			<br>
+			<img src="images/ev_icon.png" width='51px'>
+			<h4>Exclusive Use</h4>
+			<p class='hideme'>
+				Our charging units are installed directly into residents' parking spaces for 24/7 access and exclusive use. With EverCharge, you'll never wait to charge again.
+
+		</article>
+		<article class='col-md-4 col-xs-8'>
+			<br>
+			<img src="images/full_battery.png" width='31px'>
+			<h4>Fully Managed</h4>
+			<p class='hideme'>
+				We’ve made things easy by providing an affordable service that includes insurance, maintenance, support, and billing for every customer.
+			</p>
+		</article>
+		<article class='col-md-4 col-xs-8'>
+			<br>
+			<img src="images/distributed.png" width='63px'>
+			<h4>Power Management</h4>
+			<p class='hideme'>
+				Our patented technology enables buildings to maximize their charging potential by up to 1000%,  avoid costly infrastructure upgrades, and lower installation costs.</p>
+		</article>
+		<article class='col-md-4 col-xs-8'>
+			<br>
+			<img src="images/and_more.png" width='55px'>
+			<h4>And More...</h4>
+			<p class='hideme'>
+				EverCharge is dedicated to providing the most reliable, efficient, and affordable EV charging solution for multi-tenant buildings. <a href='#quote'>Contact us today</a>.
+		</article>
+	</div>
+
+<article class='jumbotron greyjumbo'>
+	<legend>How it Works</legend>
+	<h5 class='hidme'>
+		Our patented power management technology not only allows us to scale up to 10x more than other solutions, it also means we get commercial electricity rates, which saves everyone money.
+	</h5>
+	<hr class='hideme'>
+	<br>
+	<br>
+	<div class="row features">
+		<span class='col-md-4 col-xs-4 hideme'>
+			<img src="images/buildings.png" width='75'>
+		</span>
+		<span class='col-md-12 col-xs-12'>
+			
+			<p>Our charging system connects to readily available common-area power in the building.</p>
+		</span>
+
+		<div class='col-md-16 col-xs-5'>
+			<hr class='hideme'>
+			<br>
 		</div>
+
+		<span class='col-md-4 col-xs-4 hideme'>
+			<img src="images/parking_garage.png" width='75'>
+		</span>
+		<span class='col-md-12 col-xs-12'>
+			<br>
+			<p>
+				Each EverCharge unit in the building uses the same power source, with the power balanced between each unit.
+			</p>
+		</span>
+		<div class='col-md-16 col-xs-5'>
+			<hr class='hideme'>
+			<br>
+		</div>
+
+		<span class='col-md-4 col-xs-4 hideme'>
+			<img src="images/meter.png" width='75'>
+		</span>
+		<span class='col-md-12 col-xs-12'>
+			<br>
+			<p>Each unit has a meter that keeps track of the electricity consumed.</p>
+		</span>
+		
+		<div class='col-md-16 col-xs-5'>
+			<hr class='hideme'>
+			<br>
+		</div>
+
+		<span class='col-md-4 col-xs-4 hideme'>
+			<img src="images/billing.png" width='75'>
+		</span>
+		<span class='col-md-12 col-xs-12'>
+			<br>
+			<p>Every month we bill customers for the electricty consumed, and reimburse the building for the electricity all EverCharge units consumed.</p>
+
+		</span>
+		
+	</div>
+</article>
+
+<article class='jumbotron whitejumbo'>
+	<center>
+		<img src='images/distributed.png' width='150' class='hideme'>
+	</center>
+	<h2>
+		Our Patented Power Management System
+	</h2>
+	<p>
+		EverCharge learns each driver's unique behavior through our <strong>Power Management System</strong>. The system splits available power and allocates it to vehicles as needed - ensuring every EverCharge customer gets the power they need, when they need it.
+	</p>
+	<p>
+		This patented technology increases the charging capacity of multi-tenant buildings by up to 10 times. Meaning other charging systems would only allow one to charge at a time, EverCharge leverages existing power to allow mulitple cars to charge at once. All without expensive electrical upgrades.
+	</p>
+
+</article>
+
+
+<article class="jumbotron" style="margin-bottom: 75px;">
+	<p style=><em><span style="font-size:3rem; line-height: 3rem">Have more questions?</em></span></p>
+	<a href="/faqs" class="btn hideme">Check out our FAQs</a>
+</article>
+
 
 
 {% endblock %}
-</div>
-	{% block video %}{% endblock %}
-
-	{% block content_one %}
-	<div style="height: 50px"></div>
-
-		<legend><span><center>We are EverCharge</center></span></legend>
-
-		
-		<div class="row features">
-		<article class="col-md-4 col-xs-5 hideme" style="padding-top: 25px;">
-			<img src="images/evercharge-logo.png" width="190">
-		</article>
-		<article class="col-md-12 col-xs-5" style="text-align:left;">
-
-
-			<p>EverCharge provides the only EV charging system designed specifically for condos, apartment buildings, and parking garages. Our charging units install directly into a resident’s parking space for <strong>exclusive</strong> use.</p>
-
-			<p>What makes us different? We offer the only <strong>fully managed</strong> and affordable solution for EV charging.  We’ve made things easy by providing insurance, maintenance, support and billing services for every customer.</p>
-
-			<p>Plus, our <strong>Power Management Technology</strong> enables you to maximize your building’s charging potential by up to 10x, avoiding costly infrastructure upgrades and lowering installation costs.</p>
-
-		</article>
-
-	
-	{% endblock %}
-
-	{% block content_two %}
-		<legend><span><center>How it Works</center></span></legend>
-	
-			<article class="col-md-10 col-xs-5" style="text-align:left;">
-				<p>Our system connects to readily available common area power in the building. This enables us to get commercial electricity rates and to easily scale throughout the garage for additional users.</p>
-
-				<p>Each unit meters the electricity consumed. We then bill the resident and fully reimburse the HOA.</p>
-
-				<p>All members receive <strong>ID Cards</strong> that your charging unit recognizes - just tap your card and charge away.</p>
-			</article>
-			<article class="col-md-6 col-xs-5 hideme" style="padding-top: 5px;">
-				<img src="images/image12.png" width="220">
-			</article>
-		
-
-	
-	{% endblock %}
-
-	{% block content_three %}
-		<legend><span><center>Power Management System</center></span></legend>
-			<article class="col-md-6 col-xs-5 hideme">
-				<img src="images/image13.png" width="190">
-		
-			</article>
-			<article class="col-md-10 col-xs-5" style="text-align:left;">
-			<p>EverCharge uniquely learns driver behaviors through its <strong>Power Management System</strong>. The system splits the available power and allocates it to vehicles as needed. </p>
-
-			<p>This increases the charging capacity by up to 10x, without the need for expensive electrical upgrades.</p>
-			</article>
-			</div>
-
-	<article class="jumbotron" style="margin-bottom: 75px;">
-				<!-- <center><span><legend>San Francisco Case Study</legend></span></center> -->
-				<p style=><em><span style="font-size:3rem; line-height: 3rem">Have more questions?</em></span></p>
-				<a href="/faqs" class="btn hideme">Check out our FAQs</a>
-	</article>
-
-
-	
-	{% endblock %}
