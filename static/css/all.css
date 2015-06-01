@@ -1092,6 +1092,10 @@ footer article h4{
 	margin-bottom: 5px;
 }
 
+.greenjumbo legend {
+	color: white;
+}
+
 .greyjumbo .states {
 	padding-top: 40px;
 }
