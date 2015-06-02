@@ -1246,6 +1246,27 @@ img.desaturate {
 	
 	}
 
+img.blinking {
+	opacity: .75;
+}
+
+img.blinking:hover {
+	-webkit-animation: blink 1.5s ease-in-out infinite alternate;
+	animation: blink 1.5s ease-in-out infinite alternate;
+	/*opacity: 0;*/
+}
+
+
+@-webkit-keyframes blink {
+	from {opacity: .75;}
+	to {opacity: 0;}
+}
+
+@keyframes blink {
+	from {opacity: .75;}
+	to {opacity: 0;}
+}
+
 
 @-webkit-viewport   { width: device-width; }
 @-moz-viewport      { width: device-width; }
