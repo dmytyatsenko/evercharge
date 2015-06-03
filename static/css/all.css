@@ -1275,7 +1275,7 @@ img.blinking:hover {
 	background-color: HSLA(0, 0%, 0%, .75);
 	/*text-align: left;*/
 	border-radius: 25px;
-	padding: 20px;
+	padding: 13px;
 	width: 50%;
 	margin: auto;
 }
