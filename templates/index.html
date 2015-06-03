@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block background %}
-	<img src="images/three_char.jpg" alt="image description">
+	<img src="images/image01.jpg" alt="image description">
 {% endblock %}
 
 {% block social_media %}
@@ -23,22 +23,42 @@
 
 	
 	{% block maincontent %}
-	<div id='dark_background'>
-		<header>
-			<h1>Get Charged</h1>
-			<h2>The World’s Smartest EV Charging System<br>for Condos and Apartments</h2>
-		</header>
-		
+<header>
+		<h1>Get Charged</h1>
+		<h2>The World’s Smartest EV charging system<br>for Condos and Apartments</h2>
+	</header>
+
+	<section class="col-md-12 col-md-offset-2">
+		<div class="row threecolumn">
+		<article class="col-md-8 col-sm-8 col-xs-8">
+			<a href="/ev-owner">
+			<img src="images/image02.png" alt="image description" class="img-circle" width="126" height="125"></a>
+			<div class="desc">
+				<div class="text">
+					<h3>EV OWNER</h3>
+					<p>Recharge from your<br>own parking space</p>
+				</div>
+			</div>
+		</article>
+		<article class="col-md-8 col-sm-8 col-xs-8">
+			<a href="/hoa-pm">
+			<img src="images/image03.png" alt="image description" class="img-circle" width="126" height="125"></a>
+			<div class="desc">
+				<div class="text">
+					<h3><span class="hidden-xs">PROPERTY MANAGER</span><span class="visible">PM</span> & HOA</h3>
+					<p>A valuable amenity<br>for your residents</p>
+				</div>
+
+			</div>
+		</article>
+		<article class="col-md-16 col-sm-16 col-xs-16">
+				<a href="#what_is_evercharge" class="btn"><span>What is</span> EverCharge?</a>
+
+			</div>
+		</article>
+
 
 	</div>
-
-
-		<div class="col-md-14 col-md-offset-1 article-quote">
-				<a href="#what_is_evercharge" class="btn"><span>What is</span> EverCharge?</a>
-		</div>
-
-			
-
 
 {% endblock %}
 
