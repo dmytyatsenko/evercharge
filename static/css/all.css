@@ -209,6 +209,10 @@ a:focus{outline: none !important; text-decoration: none;}
 	font-weight: 300;
 	margin: 0 0 10px;
 }
+.jumbotron h1 {
+	font-size: 40px;
+	font-weight: 300;
+}
 .banner h2{
 	font-size: 20px;
 	line-height: 26px;
@@ -746,7 +750,7 @@ footer article h4{
 		width:27px;
 		display:none;
 	}
-
+	h1 { font-size: 39px}
 
 	.navbar-toggle{
 		padding: 4px;

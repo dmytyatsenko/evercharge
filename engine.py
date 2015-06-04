@@ -23,12 +23,12 @@ def root():
 def ev_owner():
 	return render_template("inner-owner.html")
 
-@app.route('/hoa-pm', methods = ['POST', 'GET'])
+@app.route('/building-management', methods = ['POST', 'GET'])
 def hoa_property_manager():
 	# print  nut.search_sources('Web')
 	return render_template("inner-pms.html")
 
-@app.route('/aboutus', methods = ['POST', 'GET'])
+@app.route('/about-us', methods = ['POST', 'GET'])
 def about_us():
 	# print nut.search_contacts(50169)
 	return render_template("about-us.html")

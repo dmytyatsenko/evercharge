@@ -9,6 +9,9 @@
 	<img src="images/image01.jpg" alt="image description">
 {% endblock %}
 
+{% block rightheader %}
+{% endblock %}
+
 {% block social_media %}
 	<div class="right-block">
 		<!-- social networks -->
@@ -22,11 +25,11 @@
 {% endblock %}
 
 	
-	{% block maincontent %}
+{% block maincontent %}
 <header>
-		<h1>Get Charged</h1>
-		<h2>The World’s Smartest EV charging system<br>for Condos and Apartments</h2>
-	</header>
+	<h1>Get Charged</h1>
+	<h2>The World’s Smartest EV charging system<br>for Condos and Apartments</h2>
+l</header>
 
 	<section class="col-md-12 col-md-offset-2">
 		<div class="row threecolumn">
@@ -41,11 +44,11 @@
 			</div>
 		</article>
 		<article class="col-md-8 col-sm-8 col-xs-8">
-			<a href="/hoa-pm">
+			<a href="/building-management">
 			<img src="images/image03.png" alt="image description" class="img-circle" width="126" height="125"></a>
 			<div class="desc">
 				<div class="text">
-					<h3><span class="hidden-xs">PROPERTY MANAGER</span><span class="visible">PM</span> & HOA</h3>
+					<h3>BUILDING MANAGEMENT</h3>
 					<p>A valuable amenity<br>for your residents</p>
 				</div>
 
@@ -63,8 +66,139 @@
 {% endblock %}
 
 {% block content_one %}
+<article class='jumbotron whitejumbo'>
+	
+	<h1 id="what_is_evercharge">
+		What makes charging EVs in condos and apartments so difficult?
+	</h1>
+	<br>
+	<br>
 
+	<div class="row features">
+	<p>
+		<span class='col-md-2 col-xs-2'></span>
+		<span class='col-md-4 col-xs-4 hideme'>
+			<img src="images/buildings.png" width='60'>
+		</span>
+		<span class='col-md-10 col-xs-10'>
+			<br>
+			Buildings have limited power available for EV Charging.
 
+		</span>
+		</p>
+	<div class='col-md-16 col-xs-5'>
+		<hr class='hideme'>
+		<br>
+	</div>
+	<p>
+		<span class='col-md-2 col-xs-2'></span>
+		<span class='col-md-4 col-xs-4 hideme'>
+			<img src="images/ev_icon.png" width='60'>
+		</span>
+		<span class='col-md-10 col-xs-10'>
+			<br>
+			Chargers requires 208, 220, or 240v -- standard outlets are 110v.
+
+		</span>
+		</p>
+	<div class='col-md-16 col-xs-5'>
+		<hr class='hideme'>
+		<br>
+	</div>
+
+	<p>
+		<span class='col-md-2 col-xs-2'></span>
+		<span class='col-md-4 col-xs-4 hideme'>
+			<img src="images/permitting.png" width='60'>
+		</span>
+		<span class='col-md-10 col-xs-10'>
+			<br>
+			City permitting is required.
+
+		</span>
+		</p>
+	<div class='col-md-16 col-xs-5'>
+		<hr class='hideme'>
+		<br>
+	</div>
+	<p>
+		<span class='col-md-2 col-xs-2'></span>
+		<span class='col-md-4 col-xs-4 hideme'>
+			<img src="images/handshake.png" width='60'>
+		</span>
+		<span class='col-md-10 col-xs-10'>
+			<br>
+			Building management needs to approve installation plans.
+	</p>
+	<div class='col-md-16 col-xs-5'>
+		<hr class='hideme'>
+		<br>
+	</div>
+	<p>
+		<span class='col-md-2 col-xs-2'></span>
+		<span class='col-md-4 col-xs-4 hideme'>
+			<img src="images/insurance.png" width='60'>
+		</span>
+		<span class='col-md-10 col-xs-10'>
+			Liability insurance needs to be secured (California requires $1 million in coverage).
+		</span>
+	</p>
+	<div class='col-md-16 col-xs-5'>
+		<hr class='hideme'>
+		<br>
+	</div>
+	<p>
+		<span class='col-md-2 col-xs-2'></span>
+		<span class='col-md-4 col-xs-4 hideme'>
+			<img src="images/electrician.png" width='60'>
+		</span>
+		<span class='col-md-10 col-xs-10'>
+
+			Licensed, insured contractors with experience installing EV chargers are difficult to find.
+		</span>
+	</p>
+	<div class='col-md-16 col-xs-5'>
+		<hr class='hideme'>
+		<br>
+	</div>
+	<p>
+	<p>
+		<span class='col-md-2 col-xs-2'></span>
+		<span class='col-md-4 col-xs-4 hideme'>
+			<img src="images/maintenance.png" width='60'>
+		</span>
+		<span class='col-md-10 col-xs-10'>
+			<br>
+			Once a charger is installed, it can require maintenance.
+		</span>
+	</p>
+	<div class='col-md-16 col-xs-5'>
+		<hr class='hideme'>
+		<br>
+	</div>
+	<p>
+		<span class='col-md-2 col-xs-2'></span>
+		<span class='col-md-4 col-xs-4 hideme'>
+			<img src="images/and_more.png" width='60'>
+		</span>
+		<span class='col-md-10 col-xs-10'>
+			<br>
+			And more...
+		</span>
+	</p>
+	</em>
+
+	</div>
+</article>
+
+<article class='jumbotron greenjumbo'>
+	<legend>Let EverCharge Handle Everything for You</legend>
+	
+	<h4>We are a full-service EV charging system that allows multi-tenant residents to charge in their EV in their own parking space, 24 hours a day.</h4>
+	<br>
+
+	<a href="#quote" class="btn hideme">Get a Quote Today</a>
+</article>
 
 <article class='jumbotron whitejumbo'>
 	<h2>How does EverCharge work?</h2>
@@ -72,10 +206,10 @@
 			<!-- features -->
 <div class="row features">
 	<article class="col-md-4 col-xs-8" >
-		<img src="images/ev_icon.png" alt="image description" width="100">
+		<img src="images/ev_icon.png" alt="image description" width="112">
 		<h2>Personal Charging</h2>
 		<p class='hideme'>
-			EverCharge units are installed directly into residents' parking spaces - making EverCharge <strong>the only company</strong> to provide exclusive, reliable charging.
+			EverCharge units are installed directly into residents' parking spaces - EverCharge customers never need to worry about access to charging. 
 		</p>
 		</article>
 		<article class="col-md-4 col-xs-8">
@@ -87,7 +221,7 @@
 		</article>
 
 		<article class="col-md-4 col-xs-8">
-			<img src="images/distributed.png" alt="bar graph image" width="100">
+			<img src="images/distributed.png" alt="bar graph image" width="110">
 			<br>
 			<br>
 			<h2>Power Management</h2>
@@ -96,7 +230,7 @@
 		<article class="col-md-4 col-xs-8">
 			<img src="images/billing.png" alt="automatic billing image" width="95">
 			<h2>Automatic Monthly Billing</h2>
-			<p class='hideme'>Customers are automatically billed once per month for the electricity that they use, and HOAs or building managers are reimbursed.</p>
+			<p class='hideme'>Customers are automatically billed once per month for the electricity that they use, and building management is reimbursed.</p>
 		</article>
 	</div>
 </article>
@@ -128,110 +262,18 @@
 				<div class="col-md-2 col-xs-5"></div>
 			
 				<div class="col-md-7 col-xs-5 infobox">
-					<h2 class="hideme">HOA<span style="text-transform:lowercase;">s</span> & Managers</h2>
+					<h2 class="hideme">Building Management</h2>
 					<hr>
 					<br>
-					<p  class="hideme">EverCharge enables you to provide a cost-effective, scalable EV charging solution for your property - with no cost to the Association or the building owner.</p>
+					<p class="hideme">EverCharge enables you to provide a cost-effective, scalable EV charging solution for your property - with no cost to the Association or the building owner.</p>
 						<br>
 					<p>
-						<a href="/hoa-pm" class="btn"><span>Managers:</span> Learn More</a>
+						<a href="/building-management" class="btn"><span>Managers:</span> Learn More</a>
 					</p>
 				</div>
 			
 			</div>
 	</article>
-
-
-<article class='jumbotron whitejumbo'>
-	
-	<h4 id="what_is_evercharge">
-		EverCharge is <strong>the solution</strong> for charging Electric Vehicles in condos, apartments, and other multi-tenant residences.
-	</h4>
-	<br>
-	<h4>We handle the entire installation  process, from beginning-to-end:</h4>
-	<br>
-
-	<div class="row features">
-
-	<p>
-		<span class='col-md-2 col-xs-2'></span>
-		<span class='col-md-4 col-xs-4 hideme'>
-			<img src="images/permitting.png" width='60'>
-		</span>
-		<span class='col-md-10 col-xs-10'>
-			<br>
-			City Permitting
-
-		</span>
-		</p>
-	<div class='col-md-16 col-xs-5'>
-		<hr class='hideme'>
-		<br>
-	</div>
-	<p>
-		<span class='col-md-2 col-xs-2'></span>
-		<span class='col-md-4 col-xs-4 hideme'>
-			<img src="images/handshake.png" width='60'>
-		</span>
-		<span class='col-md-10 col-xs-10'>
-			<br>
-			HOA and/or Property Owner approval
-	</p>
-	<div class='col-md-16 col-xs-5'>
-		<hr class='hideme'>
-		<br>
-	</div>
-	<p>
-		<span class='col-md-2 col-xs-2'></span>
-		<span class='col-md-4 col-xs-4 hideme'>
-			<img src="images/insurance.png" width='60'>
-		</span>
-		<span class='col-md-10 col-xs-10'>
-			<br>
-			Insurance (California requires $1 million in coverage)
-		</span>
-	</p>
-	<div class='col-md-16 col-xs-5'>
-		<hr class='hideme'>
-		<br>
-	</div>
-	<p>
-		<span class='col-md-2 col-xs-2'></span>
-		<span class='col-md-4 col-xs-4 hideme'>
-			<img src="images/electrician.png" width='60'>
-		</span>
-		<span class='col-md-10 col-xs-10'>
-			<br>
-			Licensed, insured contractors
-		</span>
-	</p>
-	<div class='col-md-16 col-xs-5'>
-		<hr class='hideme'>
-		<br>
-	</div>
-	<p>
-		<span class='col-md-2 col-xs-2'></span>
-		<span class='col-md-4 col-xs-4 hideme'>
-			<img src="images/and_more.png" width='60'>
-		</span>
-		<span class='col-md-10 col-xs-10'>
-			<br>
-			And more...
-		</span>
-	</p>
-	</em>
-
-	</div>
-</article>
-
-<article class='jumbotron greenjumbo'>
-	<legend>Let EverCharge Handle Everything for You</legend>
-	
-	<h4>We are the only EV charging system that allows multi-tenant residents to charge their EV in their own parking space.</h4>
-	<br>
-
-	<a href="#quote" class="btn hideme">Get a Quote Today</a>
-</article>
 <br>
 		
 	{% endblock %}
