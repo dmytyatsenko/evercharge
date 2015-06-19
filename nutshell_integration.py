@@ -72,7 +72,7 @@ class UpdateLead(object):
 
 	def lead_reference(self, rev, reference):
 		edited_lead = n.editLead(self.lead_id, rev, customFields=
-			{'Reference to EverCharge': reference})
+			{'Reference to Evercharge': reference})
 
 		return edited_lead
 
