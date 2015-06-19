@@ -131,7 +131,7 @@ def referred_customer():
 
 	nut.UpdateLead(new_lead_id).lead_reference("REV_IGNORE", reference)
 
-	return "Successfully added reference to EverCharge."
+	return "Successfully added reference to Evercharge."
 
 @app.route('/nutshell/teslacontact', methods = ['POST', 'GET'])
 def tesla_contact():
