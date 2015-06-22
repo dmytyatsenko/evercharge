@@ -717,9 +717,6 @@ footer article h4{
 	.features .col-xs-5,
 	.features .col-xs-6{width: 100%;}
 
-	#header .navbar {
-		display:none;
-	}
 
 }
 /* styles for screens 320px wide and narrower */
@@ -1288,6 +1285,25 @@ img.blinking:hover {
 	color: black;
 
 
+}
+
+
+
+nav.navbar-fixed-top {
+	background-color: #14AB58;
+	background-image: none;
+	height: 75px;
+}
+
+.navbar-nav>li>a{
+	font-size: 16px;
+	color: #E7E7E7;
+	text-shadow: none;
+	padding: 10px;
+}
+
+.header_logo {
+	height: 50px ;
 }
 
 @-webkit-viewport   { width: device-width; }
