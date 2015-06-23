@@ -247,20 +247,8 @@ a:focus{outline: none !important; text-decoration: none;}
 	overflow: hidden;
 	margin-bottom: 15px;
 }
-.get-quote label{
-	float: left;
-	width: 44px;
-	height: 47px;
-	margin: 0;
-	text-indent: -9999px;
-	overflow: hidden;
-	background:#33a23d url(../images/sprite2.png) no-repeat 5px -226px;
-	border-radius: 3px 0 0 3px;
-}
-.get-quote .label1{background-position: 5px -226px;}
-.get-quote .label2{background-position: -41px  -226px;}
-.get-quote .label3{background-position: -85px  -226px;}
-.get-quote .label4{background-position: -139px  -226px;}
+
+
 .get-quote .form-control{
 	float: left;
 	width: 83.8%;
@@ -319,7 +307,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	width: 100%;
 	text-align: center;
 }
-/* footer nav styles */
+ footer nav styles 
 #footer .footer-nav{
 	float: left;
 	width: 60%;
@@ -721,9 +709,32 @@ h2.difficulties {
 	display: none;
 	font-size: 25px;
 	padding-top: 50px;
-	
+
 }
 
+button.flat_button {
+	background-color: RGBA(247, 112, 91, 1);
+	box-shadow: none;
+	border: none;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: 'Source Sans Pro', serif;
+	text-shadow: none;
+	color: white;
+	padding: 15px;
+}
+
+article.options {
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	background-color: RGBA(147, 147, 147, 1);
+	border: black 1px solid;
+}
+
+article.options:hover {
+	background-color: RGBA(20, 171, 88, .75);
+}
 
 /* ---------------------------------------------------------
 	3. Custom form styles
@@ -1025,26 +1036,8 @@ h2.difficulties {
 	.get-quote .tab.add li{margin: 0 7px 16px;}
 	.get-quote .col .holder{padding: 0 18px 0 27px;}
 	.get-quote .form-group{margin-bottom: 3px;}
-	.get-quote label{
-		width: 34px;
-		height: 37px;
-		margin-bottom: -37px;
-		position: relative;
-		z-index: 2;
-		background-image: url(../images/sprite-small.png);
-	}
-	.get-quote .label1{background-position: -6px -369px;}
-	.get-quote .label2{background-position: -56px -367px;}
-	.get-quote .label3{background-position: -98px -368px;}
-	.get-quote .label4{background-position: -129px -369px;}
-	.get-quote .label5{background-position: -51px 0;}
-	.get-quote .form-control{
-		font-size: 12px;
-		line-height: 16px;
-		height: 37px;
-		width: 100%;
-		padding-left: 44px;
-	}
+
+
 	.get-quote .btn-wrapper{bottom: -14px;}
 	.get-quote input[type="submit"]{
 		font-size: 12px;
