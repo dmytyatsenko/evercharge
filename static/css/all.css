@@ -707,8 +707,17 @@ h2.tagline {
 }
 
 
+h2.difficulties {
+	font-family: 'Source Sans Pro', serif;
+	font-size: 25px;
+	text-transform: uppercase;
+	font-weight: 100;
+	padding: 10px;
+}
 
-
+.hidden_difficulty {
+	display: none;
+}
 
 
 /* ---------------------------------------------------------

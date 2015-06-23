@@ -48,21 +48,42 @@
 
 <article class='jumbotron whitejumbo'>
 	<div class="row features">
+		<div class='col-md-16 col-xs-16 col-sm-16'>
+			<h1>What Makes EV Charging Difficult?</h1>
+			<hr>
+		</div>
 		<div class = 'col-md-6 col-xs-8'>
-			<h2>Limited Power</h2>
+			<h2 class='difficulties' id='limited_title'>Limited Power</h2>
 			<hr>
-			<h2>Scalability</h2>
+			<h2 class='difficulties' id='scalability_title'>Scalability</h2>
 			<hr>
-			<h2>Insurance</h2>
+			<h2 class='difficulties' id='insurance_title'>Insurance</h2>
 			<hr>
-			<h2>Maintenance</h2>
+			<h2 class='difficulties' id='maintenance_title'>Maintenance</h2>
 			<hr>
-			<h2>Support</h2>
+			<h2 class='difficulties' id='support_title'>Support</h2>
 			<hr>
-			<h2>HOA Approval</h2>
+			<h2 class='difficulties' id='hoa_title'>HOA Approval</h2>
 		</div>
 		<div class = 'col-md-10 col-xs-8'>
-			Whatever charging is super hard because of all of these really hard things can you believe how hard it is.
+			<div class='default_difficulty'>
+				Whatever charging is super hard because of all of these really hard things can you believe how hard it is.
+			</div>
+			<div class='hidden_difficulty' id='limited_info'>
+				Limited Power blah blah blah
+			</div>
+			<div class='hidden_difficulty' id='scalability_info'>
+				Scalability blah blah
+			</div>
+			<div class='hidden_difficu' id='insurance_info'>
+				Insurance blah blah
+			</div>
+			<div class='hidden_difficulty' id='suport_info'>
+				Support blah blah
+			</div>
+			<div class='hidden_difficulty' id='hoa_info'>
+				HOA approval blah blah
+			</div>
 		</div>
 
 	</div>
@@ -156,17 +177,4 @@
 	{% endblock %}
 
 	{% block content_one_bottom %}
-
-
-	<!-- DO YOU KNOW YOUR RIGHTS -->
-<!-- 	<article class="jumbotron">
-		<h2>Do you know your rights?</h2>
-		<p>Many states prohibit Homeowner's Associations from <br>denying residents the right to charge at home.</p>
-		<form action="#">
-			<fieldset>
-				<input type="text" class="form-control" placeholder="enter your zip code">
-			</fieldset>
-		</form>
-	</article> -->
-
 	{% endblock %}
