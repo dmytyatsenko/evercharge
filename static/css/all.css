@@ -713,10 +713,15 @@ h2.difficulties {
 	text-transform: uppercase;
 	font-weight: 100;
 	padding: 10px;
+	cursor: pointer;
+
 }
 
 .hidden_difficulty {
 	display: none;
+	font-size: 25px;
+	padding-top: 50px;
+	
 }
 
 
