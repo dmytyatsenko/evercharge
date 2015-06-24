@@ -736,25 +736,24 @@ article.options:hover {
 
 
 .progress_photos {
-	height: 500px;
+	height: 350px;
 	background-size: cover;
 	margin-bottom: 0;
 }
 
 #step_one_image {
-	background: url(../images/image01.jpg) ;
+	background: url(../images/meeting_hoa.jpg) ;
 }
-
 #step_two_image {
-	background: url(../images/image01.jpg);
+	background: url(../images/evaluation.jpg);
 }
 
 #step_three_image {
-	background: url(../images/image01.jpg);
+	background: url(../images/approval.jpg);
 }
 
 #step_four_image {
-	background: url(../images/image01.jpg);
+	background: url(../images/installation.jpg);
 }
 
 /* ---------------------------------------------------------
