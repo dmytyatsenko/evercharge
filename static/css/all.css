@@ -736,10 +736,26 @@ article.options:hover {
 	background-color: RGBA(20, 171, 88, .75);
 }
 
-#step_one_image {
+
+.progress_photos {
 	height: 500px;
-	background: url(../images/image01.jpg) ;
 	background-size: cover;
+}
+
+#step_one_image {
+	background: url(../images/image01.jpg) ;
+}
+
+#step_two_image {
+	background: url(../images/image02.png);
+}
+
+#step_three_image {
+	background: url(../images/image03.png);
+}
+
+#step_four_image {
+	background: url(../images/image04s.png);
 }
 
 /* ---------------------------------------------------------
