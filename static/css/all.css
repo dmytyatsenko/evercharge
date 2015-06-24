@@ -332,9 +332,7 @@ footer article h4{
 
 
 .footer-nav li a{color: #fff;}
-.features{
-	padding-bottom: 20px;
-}
+
 .features article{
 	text-align: center;
 	padding-bottom: 25px;
@@ -740,6 +738,7 @@ article.options:hover {
 .progress_photos {
 	height: 500px;
 	background-size: cover;
+	margin-bottom: 0;
 }
 
 #step_one_image {
@@ -747,15 +746,15 @@ article.options:hover {
 }
 
 #step_two_image {
-	background: url(../images/image02.png);
+	background: url(../images/image01.jpg);
 }
 
 #step_three_image {
-	background: url(../images/image03.png);
+	background: url(../images/image01.jpg);
 }
 
 #step_four_image {
-	background: url(../images/image04s.png);
+	background: url(../images/image01.jpg);
 }
 
 /* ---------------------------------------------------------
