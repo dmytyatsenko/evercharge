@@ -722,12 +722,23 @@ button.flat_button {
 	padding: 15px;
 }
 
-article.options {
+.nav-tabs li, article.options {
 	color: white;
 	text-transform: uppercase;
 	padding: 20px;
 	background-color: RGBA(147, 147, 147, 1);
 	border: black 1px solid;
+	font-size: 3rem;
+}
+
+
+.nav-tabs li.active a,
+.nav-tabs>li>a:hover,
+.nav-tabs li.active a:hover,
+.nav-tabs li.active a:focus {
+	color: white;
+	background-color: RGBA(147, 147, 147, 1);
+	border: none;
 }
 
 article.options:hover {
@@ -742,7 +753,7 @@ article.options:hover {
 }
 
 #step_one_image {
-	background: url(../images/meeting_hoa.jpg) ;
+	background: url(../images/meeting_hoa.jpg);
 }
 #step_two_image {
 	background: url(../images/evaluation.jpg);
@@ -755,6 +766,10 @@ article.options:hover {
 #step_four_image {
 	background: url(../images/installation.jpg);
 }
+
+
+
+
 
 /* ---------------------------------------------------------
 	3. Custom form styles
