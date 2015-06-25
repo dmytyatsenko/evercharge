@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block background %}
-	<img src="images/image01.jpg" alt="image description">
+	<img src="images/garage_wall.jpg" alt="image description">
 {% endblock %}
 
 {% block rightheader %}
@@ -35,7 +35,7 @@
 
 {% block content_one %}
 
-<article class='jumbotron whitejumbo'>
+<article class='jumbotron whitejumbo white_space'>
 	<button class='flat_button'>Get a Quote Now</button>
 </article>
 
@@ -44,25 +44,28 @@
 <!-- TABBING BETWEEN BUILDING MGMT and EV OWNER -->
 <div>
 
-	<ul class="nav nav-tabs navbar-right" role="tablist" id='myTabs'>
+<!-- 	<ul class="nav nav-tabs navbar-right" role="tablist" id='myTabs'>
 		<li role="presentation" class="active">
 			<a href="#ev_owner_tab" aria-controls="ev_owner_tab" role="tab" data-toggle="tab">Evercharge for EV Owners</a>
 		</li>
 		<li role="presentation">
 			<a href="#bldg_mgmt_tab" aria-controls="bldg_mgmt_tab" role="tab" data-toggle="tab">Evercharge for Building Management</a>
 		</li>
-
+ -->
 	</ul>
 
-	<div class="tab-content">
-		<div role="tabpanel" class="tab-pane fade in active" id="ev_owner_tab">
+	<section class="parallax" data-speed="4" data-type="background" id='parallax_process'>
+		<div class="container">
+			<div class="row-fluid">
+				<h1 class='parallax_header'>Why EV Charging is Difficult</h1>
+			</div>
+		</div>
+	</section>
+
+<!-- 	<div class="tab-content">
+		<div role="tabpanel" class="tab-pane fade in active" id="ev_owner_tab"> -->
 			<article class='jumbotron whitejumbo'>
 				<div class="row features">
-					<div class='col-md-16 col-xs-16 col-sm-16'>
-						<h1>What Makes EV Charging Difficult?</h1>
-						<hr>
-						<br>
-					</div>
 					<div class = 'col-md-6 col-xs-8'>
 						<h2 class='difficulties' id='limited'>Limited Power</h2>
 						<hr>
@@ -75,7 +78,7 @@
 						<h2 class='difficulties' id='support'>Support</h2>
 						<hr>
 						<h2 class='difficulties' id='hoa'>HOA Approval</h2>
-						<hr>
+						
 					</div>
 					<div class = 'col-md-10 col-xs-8'>
 						<div class='default_difficulty'>
@@ -106,10 +109,10 @@
 			</article>
 
 
-		</div>
-		<div role="tabpanel" class="tab-pane fade" id="bldg_mgmt_tab">
+<!-- 		</div>
+		<div role="tabpanel" class="tab-pane fade" id="bldg_mgmt_tab"> -->
 			
-			<article class='jumbotron whitejumbo'>
+<!-- 			<article class='jumbotron whitejumbo'>
 				<div class="row features">
 					<div class='col-md-16 col-xs-16 col-sm-16'>
 						<h1>What Makes EV Charging Difficult?</h1>
@@ -154,12 +157,12 @@
 
 				</div>
 			</article>
+ -->
 
-
-		</div>
+<!-- 		</div>
 	</div>
 
-</div>
+</div> -->
 
 
 
@@ -201,34 +204,53 @@
 <hr>
 
 
-	<section class="parallax" data-speed="4" data-type="background" id='parallax_process'>
-		<div class="container">
-			<div class="row-fluid">
-				<h1 id='parallax_header'>Our Process</h1>
-	    	</div>
-	    </div>
-	</section>
+<section class="parallax" data-speed="4" data-type="background" id='parallax_process'>
+	<div class="container">
+		<div class="row-fluid">
+			<h1 class='parallax_header'>Our Process</h1>
+		</div>
+	</div>
+</section>
 
 
 <div class='row features'>
-	<div class='col-md-8 col-sm-8 col-xs-16 progress_photos' id='step_one_image'>
-		<!-- IMAGE FOR FIRST STEP -->
-		<!-- <img src='images/meeting_hoa.jpg' class='process_img'> -->
-
+	<div class='col-md-8 col-sm-8 process_photos' id='step_one_image'>
+		<div class='show_on_mobile'>Meet with Management</div>
 	</div>
-	<div class='col-md-8 col-sm-8 col-xs-16'>
-		#1 TEXT
+	<div class='col-md-8 col-sm-8 hidden-xs process_text'>
+		<div class='vertical_aligned'>
+
+			<h2 class='step'>Step #1</h2>
+
+			<p class='step_title'>
+				Meet with Management
+			</p>
+			<br>
+			<p class='step_description'>
+				First, we meet with the building manager directly, to gain building access and answer any initial questions.
+			</p>
+		</div>
 	</div>
 </div>
 
 
 <div class='row features'>
 
-	<div class='col-md-8 col-sm-8 col-xs-16'>
-		#2 TEXT
+	<div class='col-md-8 col-sm-8 col-xs-16 process_text'>
+		<div class='vertical_aligned'>
+
+			<h2 class='step'>Step #2</h2>
+			<p class='step_title'>
+				On-Site Evaluation
+			</p>
+			<br>
+			<p class='step_description'>
+				One our insured, certified, and fully-licensed electricians will conduct an on-site evaluation.
+			</p>
+		</div>
 	</div>
 
-	<div class='col-md-8 col-sm-8 col-xs-16 progress_photos' id='step_two_image'>
+	<div class='col-md-8 col-sm-8 col-xs-16 process_photos' id='step_two_image'>
 		<!-- IMAGE FOR FIRST STEP -->
 		<!-- <img src='images/evaluation.jpg' class='process_img'> -->
 		<!-- <img src='images/image01.jpg'> -->
@@ -239,14 +261,24 @@
 
 
 <div class='row features'>
-	<div class='col-md-8 col-sm-8 col-xs-16 progress_photos' id='step_three_image'>
+	<div class='col-md-8 col-sm-8 col-xs-16 process_photos' id='step_three_image'>
 		<!-- IMAGE FOR FIRST STEP -->
 		<!-- <img src='images/approv÷al.jpg' class='process_img'> -->
 		<!-- <img src='images/image01.jpg'> -->
 
 	</div>
-	<div class='col-md-8 col-sm-8 col-xs-16'>
-		#3 TEXT
+	<div class='col-md-8 col-sm-8 col-xs-16 process_text'>
+		
+		<div class='vertical_aligned'>
+			<h2 class='step'>Step #3</h2>
+			<p class='step_title'>
+				Secure building Approval
+			</p>
+			<br>
+			<p class='step_description'>
+				We work with management to gain approval and move forward with the installation.
+			</p>
+		</div>
 	</div>
 </div>
 
@@ -254,11 +286,20 @@
 
 <div class='row features'>
 
-	<div class='col-md-8 col-sm-8 col-xs-16'>
-		#4 TEXT
+	<div class='col-md-8 col-sm-8 col-xs-16 process_text'>
+		<div class='vertical_aligned'>
+			<h2 class='step'>Step #4</h2>
+			<p class='step_title'>
+				Installation
+			</p>
+			<br>
+			<p class='step_description'>
+				We then schedule installation, so you can start charging as soon as possible.
+			</p>
+		</div>
 	</div>
 
-	<div class='col-md-8 col-sm-8 col-xs-16 progress_photos' id='step_four_image'>
+	<div class='col-md-8 col-sm-8 col-xs-16 process_photos' id='step_four_image'>
 		<!-- <img src='images/installation.jpg' class='process_img'> -->
 		<!-- <img src='images/image01.jpg'> -->
 

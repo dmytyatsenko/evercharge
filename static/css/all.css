@@ -746,11 +746,12 @@ article.options:hover {
 }
 
 
-.progress_photos {
+.process_photos {
 	height: 470px;
 	background-size: cover;
 	margin-bottom: 0;
 	padding: 0;
+	background-position: center;
 }
 
 #step_one_image {
@@ -787,17 +788,56 @@ article.options:hover {
 	font-family: 'Source Sans Pro', serif;
 	text-transform: uppercase;
 	font-size: 60px;
-	margin-bottom: 5px;
+	/*margin-bottom: 5px;*/
 }
+
+
 
 #parallax_process {
-	background: url(../images/garage_scape.jpg) 50% 0 fixed; 
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/garage_scape.jpg) 50% 0 fixed; 
 
 }
 
-h1#parallax_header {
+h1.parallax_header {
 	color: white;
 	font-size: 60px;
+	width: 100%;
+}
+
+article.white_space {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.process_text {
+	text-align: center;
+	height: 470px;
+	position: relative;
+}
+
+.vertical_aligned {
+	position:absolute;
+	margin: auto;
+	top:50%;
+	height:10em;
+	margin-top:-5em;
+}
+
+.step_title {
+	text-transform: uppercase;
+	font-size: 2.25rem;
+	color: RGBA(60, 61, 57, 1);
+	font-weight: 400;
+
+}
+
+.step_description {
+	font-size: 2rem;
+	font-weight: 200;
+}
+
+.show_on_mobile {
+	display: none;
 }
 
 
@@ -1240,6 +1280,17 @@ h1#parallax_header {
 	border-radius: 50%;
 	margin: auto;
 	vertical-align: middle;
+	}
+	
+
+	.show_on_mobile {
+		display: inline-block;
+		font-size: 3rem;
+		text-transform: uppercase;
+		color: white;
+		vertical-align: bottom;
+	}
+
 
 }
 
