@@ -703,10 +703,14 @@ h2.difficulties {
 
 }
 
+
 .hidden_difficulty {
 	display: none;
 	font-size: 25px;
-	padding-top: 50px;
+	font-weight: 100;
+	margin-top: 100px;
+	margin-right: 25%;
+	margin-left: 25%;
 
 }
 
@@ -813,11 +817,14 @@ article.white_space {
 	text-align: center;
 	height: 470px;
 	position: relative;
+	
+
 }
 
 .vertical_aligned {
 	position:absolute;
-	margin: auto;
+	margin-right: 25%;
+	margin-left: 25%;
 	top:50%;
 	height:10em;
 	margin-top:-5em;
@@ -1284,12 +1291,20 @@ article.white_space {
 	
 
 	.show_on_mobile {
-		display: inline-block;
+		display: block;
 		font-size: 3rem;
 		text-transform: uppercase;
 		color: white;
-		vertical-align: bottom;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: 10px;
+		font-weight: 200;
+		text-align: center;
+		background-color: RGBA(60, 61, 57, .7);
 	}
+
+	
 
 
 }
