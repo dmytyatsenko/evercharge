@@ -747,28 +747,58 @@ article.options:hover {
 
 
 .progress_photos {
-	height: 350px;
+	height: 470px;
 	background-size: cover;
 	margin-bottom: 0;
+	padding: 0;
 }
 
 #step_one_image {
-	background: url(../images/meeting_hoa.jpg);
+	background-image: url(../images/meeting_hoa.jpg);
+	background-position: center;
 }
 #step_two_image {
-	background: url(../images/evaluation.jpg);
+	background-image: url(../images/evaluation.jpg);
 }
 
 #step_three_image {
-	background: url(../images/approval.jpg);
+	background-image: url(../images/approval.jpg);
 }
 
 #step_four_image {
-	background: url(../images/installation.jpg);
+	/*background: url(../images/installation.jpg);*/
+	background-image: url(../images/installation.jpg);
 }
 
+.parallax { 
+	height: auto;  
+	margin: 0 auto; 
+	width: 100%; 
+	position: relative; 
+	box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
+	padding: 100px 0;
+	-webkit-filter:  grayscale(100%);
+	-moz-filter:  grayscale(100%);
+	-o-filter:  grayscale(100%);
+	-ms-filter:  grayscale(100%);
+	filter:  grayscale(100%);
+	color: white;
+	text-align: center;
+	font-family: 'Source Sans Pro', serif;
+	text-transform: uppercase;
+	font-size: 60px;
+	margin-bottom: 5px;
+}
 
+#parallax_process {
+	background: url(../images/garage_scape.jpg) 50% 0 fixed; 
 
+}
+
+h1#parallax_header {
+	color: white;
+	font-size: 60px;
+}
 
 
 /* ---------------------------------------------------------
