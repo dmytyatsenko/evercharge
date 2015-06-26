@@ -396,7 +396,7 @@ footer article h4{
 }
 
 .greenjumbo {
-	background-color: #43A048;
+	background-color: RGBA(20, 171, 88, 1);
 	color: white;
 
 }
@@ -562,14 +562,19 @@ input:focus {
 
 hr { 
     display: block;
-    margin-top: 0;
+    margin-top: 0.5em;
     margin-bottom: 0.5em;
     margin-left: auto;
     margin-right: auto;
     border-style: groove;
     border-width: 1px;
     border-color: #E7E7E7;
-} 
+}
+
+.short {
+	width: 10%;
+
+}
 
 .hideme, .autoshow {
 	opacity: 0;
@@ -847,6 +852,24 @@ article.white_space {
 	display: none;
 }
 
+
+img.distinguishing {
+	/*width: 140px;*/
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	opacity: .8;
+	border-radius: 50%;
+}
+
+h3.diff_title {
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+p.diff_text {
+	font-size: 2rem;
+	font-weight: 100;
+}
 
 /* ---------------------------------------------------------
 	3. Custom form styles
