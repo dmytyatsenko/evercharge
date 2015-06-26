@@ -146,8 +146,8 @@ a:focus{outline: none !important; text-decoration: none;}
 #content{padding-bottom: 32px;}
 
 /* get quote form styles */
-.get-quote{
-	max-width: 740px;
+form {
+	max-width: 960px;
 	margin: 0 auto 28px;
 	position:relative;
 }
@@ -165,7 +165,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	left: 0;
 	right: 0;
 	height: 5px;
-	background:url(../images/bg-dot.png) repeat-x;
+	/*background:url(../images/bg-dot.png) repeat-x;*/
 }
 .get-quote:after{
 	top: auto;
@@ -178,7 +178,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	right: auto;
 	bottom: 3px;
 	top: 3px;
-	background: url(../images/bg-dot01.png) repeat-y;
+	/*background: url(../images/bg-dot01.png) repeat-y;*/
 }
 .get-quote fieldset:before{
 	left: auto;
@@ -202,19 +202,19 @@ a:focus{outline: none !important; text-decoration: none;}
 	padding: 0 10px;
 	background: #fff;
 }
-.get-quote .wrap{
+.wrap{
 	overflow: hidden;
 }
-.get-quote .col{
+.col{
 	float: right;
 	width: 45.6%;
 	padding: 0 10px;
 }
-.get-quote .col:first-child{
+.col:first-child{
 	width: 54%;
 	float: left;
 }
-.get-quote h3{
+h3{
 	font-size: 16px;
 	line-height: 20px;
 	color: #999;
@@ -223,7 +223,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	margin: 0 0 8px;
 }
 
-.get-quote p {
+p {
 	font-size: 12px;
 	line-height: 14px;
 	color: #999;
@@ -231,25 +231,24 @@ a:focus{outline: none !important; text-decoration: none;}
 	text-align: center;
 	margin: 4px 0 0 0;
 }
-.get-quote ul{
+ul{
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-.get-quote li{
+li{
 	display: inline-block;
 	vertical-align: top;
 	margin:0 6px 7px 0;
 }
-.get-quote .tabset{padding-bottom: 5px;}
-.get-quote .tab-content{min-height: 160px;}
-.get-quote .form-group{
+.tabset{padding-bottom: 5px;}
+.tab-content{min-height: 160px;}
+.form-group{
 	overflow: hidden;
 	margin-bottom: 15px;
 }
 
-
-.get-quote .form-control{
+ .form-control{
 	float: left;
 	width: 83.8%;
 	height: 47px;
@@ -257,13 +256,11 @@ a:focus{outline: none !important; text-decoration: none;}
 	border-radius: 0 3px 3px 0;
 	border: 0;
 	font-size: 13px;
-}
-.get-quote .error .form-control{
+} .error .form-control{
 	border-color: #F96666;
 	background: #F96666;
 	opacity: 0.7;
-	}
-.get-quote .btn-wrapper{
+	} .btn-wrapper{
 	position: absolute;
 	bottom: -17px;
 	left: 10px;
@@ -271,7 +268,7 @@ a:focus{outline: none !important; text-decoration: none;}
 	text-align: center;
 	z-index: 1;
 }
-.get-quote input[type="submit"]{
+input[type="submit"]{
 	background: #000;
 	color: #fff;
 	font-size: 13px;
@@ -288,7 +285,7 @@ a:focus{outline: none !important; text-decoration: none;}
 #tab3 li{
 	margin: 0 0 17px; 
 }
-.get-quote .tab-content div.active{display: block;}
+.tab-content div.active{display: block;}
 /* footer sytles */
 #footer{
 	background: #000;
