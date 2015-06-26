@@ -227,7 +227,7 @@ h3{
 h4 { font-weight: 300 }
 p {
 	font-size: 12px;
-	line-height: 14px;
+	line-height: 2.5rem;
 	color: #999;
 	font-weight: 300;
 	text-align: center;
@@ -778,7 +778,6 @@ article.options:hover {
 
 #step_one_image {
 	background-image: url(../images/meeting_hoa.jpg);
-	background-position: center;
 }
 #step_two_image {
 	background-image: url(../images/evaluation.jpg);
@@ -791,6 +790,24 @@ article.options:hover {
 #step_four_image {
 	/*background: url(../images/installation.jpg);*/
 	background-image: url(../images/installation.jpg);
+}
+
+/*How it works photos*/
+
+#how_it_works_one {
+	background-image: url(../images/circuit_breaker.jpg)
+}
+
+#how_it_works_two {
+	background-image: url(../images/up_garage.jpg)
+}
+
+#how_it_works_three {
+	background-image: url(../images/meters.jpg)
+}
+
+#how_it_works_four {
+	background-image: url(../images/)
 }
 
 .parallax { 

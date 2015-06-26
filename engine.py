@@ -18,6 +18,9 @@ def evercharge():
 def root():
 	return app.send_static_file('robots.txt')
 
+@app.route('/learnmore', methods= ['GET'])
+def learn_more():
+	return render_template('learn-more.html')
 
 @app.route('/ev-owner', methods = ['POST', 'GET'])
 def ev_owner():
