@@ -233,12 +233,12 @@ p {
 	text-align: center;
 	margin: 4px 0 0 0;
 }
-ul{
+form ul{
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-li{
+form li{
 	display: inline-block;
 	vertical-align: top;
 	margin:0 6px 7px 0;
@@ -399,6 +399,8 @@ footer article h4{
 .greyjumbo {
 	background-color: #E7E7E7;
 	color: black;
+	font-size: 16px;
+	font-weight: 200;
 }
 
 .greenjumbo {
@@ -426,6 +428,7 @@ footer article h4{
 	margin-bottom: 0px;
 	color: #939393;
 	font-size: 16px;
+	font-weight: 200;
 }
 
 .whitejumbo h5 {
@@ -488,8 +491,8 @@ footer article h4{
 }
 
 .greyjumbo a {
-	color: #008736;
-	font-weight: 600;
+	color: RGBA(43, 145, 150, 1);
+	font-weight: 300;
 }
 
 .infobox {
@@ -830,6 +833,9 @@ article.options:hover {
 	/*margin-bottom: 5px;*/
 }
 
+.narrow {
+	padding: 75px 0;
+}
 
 
 #parallax_process {
@@ -903,6 +909,10 @@ p.diff_text {
 
 article.no_padding {
 	margin-bottom: 0;
+}
+
+.indented {
+	padding-left: 4em;
 }
 
 /* ---------------------------------------------------------
