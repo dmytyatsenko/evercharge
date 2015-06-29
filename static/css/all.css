@@ -915,6 +915,27 @@ article.no_padding {
 	padding-left: 4em;
 }
 
+
+.back-to-top {
+	background: none;
+	margin: 0;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 100px;
+	height: 100px;
+	z-index: 100;
+	display: none;
+	text-decoration: none;
+	color: RGBA(20, 171, 88, 1);
+	display: none;
+}
+
+.back-to-top i {
+	font-size: 80px;
+}
+
+
 /* ---------------------------------------------------------
 	3. Custom form styles
    ---------------------------------------------------------*/
