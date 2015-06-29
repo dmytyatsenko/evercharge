@@ -31,7 +31,7 @@ def hoa_property_manager():
 	# print  nut.search_sources('Web')
 	return render_template("inner-pms.html")
 
-@app.route('/about-us', methods = ['POST', 'GET'])
+@app.route('/aboutus', methods = ['POST', 'GET'])
 def about_us():
 	# print nut.search_contacts(50169)
 	return render_template("about-us.html")
