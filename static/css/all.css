@@ -586,8 +586,12 @@ hr {
     border-color: #E7E7E7;
 }
 
-.short {
+hr.short {
 	width: 10%;
+}
+
+hr.extra_short {
+	width: 3%;
 
 }
 
@@ -652,18 +656,11 @@ img.blinking:hover {
 	margin: auto;
 }
 
-#dark_social ul {
-	color: black;
-
-
-}
-
-
-
 nav.navbar-fixed-top {
 	background-color: #14AB58;
 	background-image: none;
 	height: 75px;
+	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
 
 .navbar-nav>li>a{
@@ -811,6 +808,21 @@ article.options:hover {
 
 #how_it_works_four {
 	background-image: url(../images/coins.jpg)
+}
+
+/*about us photos*/
+
+#about_us_one {
+	background-image: url(../images/red_car.jpg);
+	background-position: bottom;
+	height: 600px;
+}
+
+#about_us_two {
+	background-image: url(../images/black_car.jpg);
+	filter: contrast(115%) sepia(35%) opacity(90%);
+	-webkit-filter: contrast(115%) sepia(35%) opacity(90%);
+	height: 600px;
 }
 
 .parallax { 
