@@ -1042,7 +1042,7 @@ article.no_padding {
 	4. Styles for responsive breakpoints
    ---------------------------------------------------------*/
 /* styles for screens 769px wide and larger */
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: 1040px){
 	#header .right-block{width: 64.8%;}
 	#nav ul li{padding: 2px 1px 2px 38px;}
 	.social-networks{width: auto;}
@@ -1063,6 +1063,16 @@ article.no_padding {
 	}
 	.features .col-xs-5,
 	.features .col-xs-6{width: 100%;}
+
+	.navbar-nav>li>a {
+		font-size: 17px;
+		font-weight: 100;
+		color: #E7E7E7;
+		text-shadow: none;
+		padding: 10px;
+		padding-top: 25px;
+	}
+
 
 
 }
