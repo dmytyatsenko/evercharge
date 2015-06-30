@@ -371,7 +371,7 @@ footer article h4{
 	padding-bottom: 65px;
 }
 .jumbotron h2{
-	margin: 		0 0 10px;
+	margin: 		10px 0;
 	font-size: 		24px;
 	line-height: 	26px;
 	font-weight: 	200;
@@ -401,6 +401,10 @@ footer article h4{
 	color: black;
 	font-size: 16px;
 	font-weight: 200;
+}
+
+.jumbo_shadow {
+	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
 
 .greenjumbo {
@@ -831,7 +835,7 @@ article.options:hover {
 	width: 100%; 
 	position: relative; 
 	box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
-	padding: 150px 0;
+	padding: 125px 0;
 	-webkit-filter:  grayscale(100%);
 	-moz-filter:  grayscale(100%);
 	-o-filter:  grayscale(100%);
