@@ -1097,13 +1097,15 @@ article.no_padding {
 	h1 { font-size: 39px}
 
 	.navbar-toggle{
-		padding: 4px;
+		padding: 20px;
 		margin-right: 2px;
+		background-color: #14AB58;
 	}
 	.navbar-toggle .icon-bar{
-		height: 3px;
-		width: 13px;
-		border-radius: 0;
+		height: 10px;
+		padding-top: 10px;
+		width: 50px;
+		border-radius: 3px;
 	}
 	.navbar-toggle .icon-bar + .icon-bar{margin-top: 2px;}
 	.navbar-collapse{
@@ -1113,8 +1115,14 @@ article.no_padding {
 		width: 240px;
 		border:none;
 		z-index: 2;
-		padding: 10px 0;
-		background: RGBA(20, 171, 88, 1);
+		padding: 10px;
+		background: #14AB58;
+	}
+
+	.navbar-nav>li>a {
+		font-size: 18px;
+		line-height: 20px;
+		padding: 5px;
 	}
 	#nav li{
 		float: none;
@@ -1140,7 +1148,7 @@ article.no_padding {
 		height: 17px;
 	}
 	.social-networks li.blog a{
-		padding-top: 3px;
+		padding-top: 30px;
 		
 	}
 	.social-networks li.facebook a{background-position: -133px -556px;}
