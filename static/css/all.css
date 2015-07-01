@@ -913,14 +913,17 @@ img.distinguishing {
 	border-radius: 50%;
 }
 
-h3.diff_title {
+h2.diff_title {
 	font-weight: 100;
 	text-transform: uppercase;
+	font-size: ;
 }
 
 p.diff_text {
 	font-size: 2rem;
 	font-weight: 100;
+	padding-left: 15%;
+	padding-right: 15%;
 }
 
 article.no_padding {
@@ -951,6 +954,9 @@ article.no_padding {
 	font-size: 80px;
 }
 
+h2.lower_header {
+	text-transform: none;
+}
 
 /* ---------------------------------------------------------
 	3. Custom form styles
