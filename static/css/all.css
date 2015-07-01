@@ -663,7 +663,7 @@ img.blinking:hover {
 nav.navbar-fixed-top {
 	background-color: #14AB58;
 	background-image: none;
-	height: 75px;
+
 	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
 
@@ -746,6 +746,10 @@ button.flat_button {
 	text-shadow: none;
 	color: white;
 	padding: 15px;
+}
+
+li.pop_of_red {
+	background-color: RGBA(247, 112, 91, 1);
 }
 
 .nav-tabs li, article.options {
