@@ -663,7 +663,7 @@ img.blinking:hover {
 nav.navbar-fixed-top {
 	background-color: #14AB58;
 	background-image: none;
-
+	height: 75px;
 	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
 
@@ -696,7 +696,7 @@ h1.new_header {
 	text-transform: uppercase;
 	font-weight: 200;
 	font-size: 100px;
-	padding-top: 25%;
+	padding-top: 30%;
 }
 
 
@@ -707,7 +707,7 @@ div.text-center {
 }
 
 h2.tagline {
-	padding: 25px 100px 25px 100px;
+	padding: 10px 100px 10px 100px;
 	font-family: 'Source Sans Pro', serif;
 	font-weight: 100;
 	line-height: 35px;
@@ -748,8 +748,9 @@ button.flat_button {
 	padding: 15px;
 }
 
-li.pop_of_red {
+em.pop_of_red {
 	background-color: RGBA(247, 112, 91, 1);
+	height: 75px;
 }
 
 .nav-tabs li, article.options {
@@ -962,6 +963,12 @@ h2.lower_header {
 	text-transform: none;
 }
 
+ #map-canvas {
+        height: 500px;
+        margin: 0px;
+        padding: 0px
+    }
+
 /* ---------------------------------------------------------
 	3. Custom form styles
    ---------------------------------------------------------*/
@@ -1080,7 +1087,7 @@ h2.lower_header {
 		line-height: 16px;
 		width: 41%;
 	}
-	.banner h1{font-size: 58px;}
+	.banner h1{font-size: 68px;}
 	.add .banner .btn,
 	.banner .btn {
 		margin-bottom: 30px;
@@ -1104,6 +1111,12 @@ h2.lower_header {
 }
 /* styles for screens 320px wide and narrower */
 @media only screen and (max-width: 767px){
+	img.small_on_mobile {
+		max-width: 75px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
 	#header{
 		padding: 11px 5px 36px;
 		margin: 0;
@@ -1193,7 +1206,7 @@ h2.lower_header {
 		background-position: -156px -557px;
 	}
 	.banner {height: 393px;}
-	.add .banner{height: 485px;}
+	.add .banner{height: 300px;}
 	.banner header{padding-bottom: 38px;}
 	.banner h1{
 		font-size: 35px;
@@ -1392,9 +1405,10 @@ h2.lower_header {
 		margin: 0 -16px 27px;
 		min-height: 171px;
 	}
+	.jumbotron h1 {font-size: 28px;}
 	.jumbotron h2{
-		font-size: 16px;
-		line-height: 20px;
+		font-size: 20px;
+		line-height: 22px;
 	}
 	.jumbotron p{
 		line-height: 17px;
@@ -1409,12 +1423,17 @@ h2.lower_header {
 
 	#large_green_circle {
 	background-color: RGBA(20, 171, 88, .6);
-	width: 500px;
-	height: 500px;
-	overflow: hidden;
-	border-radius: 50%;
+	width: 100%;
+	border-radius: 0%;
 	margin: auto;
-	vertical-align: middle;
+	/*vertical-align: middle;*/
+	}
+	h2.tagline {
+		margin-top: 0;
+	}
+
+	h1.new_header {
+		padding-top: 20%;
 	}
 	
 
