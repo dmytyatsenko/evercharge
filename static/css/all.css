@@ -224,7 +224,9 @@ h3{
 }
 
 
-h4 { font-weight: 300 }
+h4 {
+	font-weight: 300;
+	color: #939393; }
 p {
 	font-size: 12px;
 	line-height: 2.5rem;
@@ -748,7 +750,7 @@ button.flat_button {
 	padding: 15px;
 }
 
-em.pop_of_red {
+li.pop_of_red {
 	background-color: RGBA(247, 112, 91, 1);
 	height: 75px;
 }
@@ -831,12 +833,12 @@ article.options:hover {
 	background-image: url(../images/black_car.jpg);
 	filter: contrast(115%) sepia(35%) opacity(90%);
 	-webkit-filter: contrast(115%) sepia(35%) opacity(90%);
-	height: 600px;
+	height: 200px;
 }
 
 .parallax { 
 	height: auto;  
-	margin: 0 auto; 
+	margin: 0; 
 	width: 100%; 
 	position: relative; 
 	box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
@@ -850,7 +852,8 @@ article.options:hover {
 	text-align: center;
 	font-family: 'Source Sans Pro', serif;
 	text-transform: uppercase;
-	font-size: 60px;
+	font-size: 70px;
+	font-weight: 300;
 	/*margin-bottom: 5px;*/
 }
 
@@ -866,8 +869,9 @@ article.options:hover {
 
 h1.parallax_header {
 	color: white;
-	font-size: 60px;
+	font-size: 70px;
 	width: 100%;
+	font-weight: 100;
 }
 
 article.white_space {
@@ -878,7 +882,7 @@ article.white_space {
 .process_text {
 	text-align: center;
 	height: 470px;
-	position: relative;
+	position: relative;p
 	
 
 }

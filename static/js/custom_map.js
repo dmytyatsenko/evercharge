@@ -36,9 +36,9 @@ function initialize() {
     },
     scrollwheel: false,
     navigationControl: false,
-    mapTypeControl: false,
-    scaleControl: false,
-    draggable: false,
+    // mapTypeControl: false,
+    // scaleControl: false,
+    // draggable: false,
     mapTypeId: MY_MAPTYPE_ID,
 
   };
