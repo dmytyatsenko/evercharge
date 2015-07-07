@@ -956,12 +956,13 @@ article.no_padding {
 	display: none;
 	text-decoration: none;
 	color: RGBA(20, 171, 88, 1);
-	display: none;
 }
 
 .back-to-top i {
 	font-size: 80px;
+	/*display: none;*/
 }
+
 
 h2.lower_header {
 	text-transform: none;

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var offset = 500;
+	var offset = 300;
 	var duration = 300;
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > offset) {
