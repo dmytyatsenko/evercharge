@@ -1438,7 +1438,7 @@ h2.lower_header {
 		line-height: 19px
 	}
 	#content .jumbotron{
-		padding: 29px 24px 1px;
+		padding: 29px 24px;
 		margin: 0 -16px 0px;
 		/*min-height: 171px;*/
 	}
