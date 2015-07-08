@@ -1,7 +1,7 @@
 var map;
 var emeryville = new google.maps.LatLng(37.825187, -122.289265);
 var bolt = new google.maps.LatLng(37.800081, -122.397838);
-var bay = new google.maps.LatLng(37.813098, -122.359018)
+var bay = new google.maps.LatLng(37.807980, -122.369946)
 
 var emeryString = '<h3>3425 Ettie Street</h3>'+
                   'Emeryville, CA 94608'
@@ -36,7 +36,7 @@ function initialize() {
   ];
 
   var mapOptions = {
-    zoom: 13,
+    zoom: 12,
     center: bay,
     mapTypeControlOptions: {
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]

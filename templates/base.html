@@ -146,66 +146,53 @@
 
 <form action="/thankyou", method='post' class="validate-form">
 	<input name="lead_source" value="Web Signup" type="hidden">
-		<fieldset>
-			<legend id="quote"><span>
-				{% block form_name %}Get a Free Quote{% endblock %}
-			</span></legend>
-					<div class="wrap">
-						<div class="col">
-							<h3>Are you an EV Driver or Building Management?</h3>
-							<ul class="tabset js-ajax-tabs">
-								<li data-href="inc/tab00.html" class="active">
-									<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1">
-									<p>EV Driver</p>
-								</li>
+	<fieldset>
+	<legend id="quote"><span>
+		{% block form_name %}Get a Free Quote{% endblock %}
+	</span></legend>
+	
+	<div class="wrap">
+		<div class="col">
+			<h3>Are you an EV Driver or Building Management?</h3>
+				<ul class="tabset js-ajax-tabs">
+					<li data-href="inc/tab00.html" class="active">
+						<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1">
+						<p>EV Driver</p>
+					</li>
+					<li data-href="inc/tab01.html">
+						<input type="radio" value="Property Manager" name="customer_type" class="radio2">
+						<p>Management</p>
+					</li>
 
-								<li data-href="inc/tab01.html">
-									<input type="radio" value="Property Manager" name="customer_type" class="radio2">
-									<p>Management</p>
-								</li>
-
-							</ul>
-							<div class="tab-content ajax-hold"></div>
-						</div>
-						<div class="col">
-							<h3>How can we contact you?</h3>
-							<div class="holder">
-								<div class="form-group">
-
-									<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name">
-								</div>
-								<div class="form-group">
-
-									<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email">
-								</div>
-								<div class="form-group">
-
-									<input name="quote_phone" type="tel" class="form-control bfh-phone required-number" id="label3" placeholder="Phone" data-format="ddd-ddd-dddd" >
-								</div>
-								<div class="form-group">
-
-									<input type="text" data-provide="typeahead" class="typeahead form-control" id="label4" placeholder="Address" name="quote_address"></input>
-									<input id="street_number" class="field" type="hidden" name="address_1">
-									<input id="route" class="field" type="hidden" name="address_2">
-									<input id="locality" class="field" type="hidden" name="address_city">
-									<input id="administrative_area_level_1" class="field" type="hidden" name="address_state">
-									<input id="country" class="field" type="hidden" name="address_country">
-									<input id="postal_code" class="field" type="hidden" name="address_postal_code">
-
-									<input type="submit" value="Get your quote">
-							</fieldset>
-
-									
-								</div>
-							</div>
-
-
-						</div>
-
+				</ul>
+			<div class="tab-content ajax-hold"></div>
+		</div>
+		<div class="col">
+			<h3>How can we contact you?</h3>
+				<div class="holder">
+					<div class="form-group">
+						<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name" autocomplete="false"> 
+					</div>
+					<div class="form-group">
+						<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email" autocomplete="false">
+					</div>
+					<div class="form-group">
+						<input name="quote_phone" type="tel" class="form-control bfh-phone required-number" id="label3" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="false">
+					</div>
+					<div class="form-group">
+						<input type="text" data-provide="typeahead" class="typeahead form-control" id="label4" placeholder="Address" name="quote_address" autocomplete="false"></input>
+						
+						<input id="street_number" class="field" type="hidden" name="address_1">
+						<input id="route" class="field" type="hidden" name="address_2">
+						<input id="locality" class="field" type="hidden" name="address_city">
+						<input id="administrative_area_level_1" class="field" type="hidden" name="address_state">
+						<input id="country" class="field" type="hidden" name="address_country">
+						<input id="postal_code" class="field" type="hidden" name="address_postal_code">
 					</div>
 
-
-			</form>
+						<input type="submit" value="Get your quote">
+	</fieldset>
+</form>
 			</br></br>
 
 	{% endblock %}
@@ -226,7 +213,7 @@
 				<div class="row features">
 
 				<article class="col-md-4 col-xs-5" style="margin-top:25px;">
-					<a href="/"><img src="images/new_logo_transparent.png"></a>
+					<a href="/"><img src="images/new_logo_transparent.png" id='footer_logo'></a>
 				</article>
 				<article class="col-md-4 col-xs-5">
 					<h5>Navigate</h5>
