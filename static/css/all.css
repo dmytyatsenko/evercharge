@@ -753,6 +753,7 @@ button.flat_button {
 	text-shadow: none;
 	color: white;
 	padding: 15px;
+	font-weight: 200;
 }
 
 li.pop_of_red {
