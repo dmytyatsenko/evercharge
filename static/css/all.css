@@ -704,6 +704,7 @@ h1.new_header {
 	font-weight: 200;
 	font-size: 100px;
 	padding-top: 30%;
+	line-height: 100px;
 }
 
 
@@ -731,7 +732,6 @@ h2.difficulties {
 	cursor: pointer;
 
 }
-
 
 .hidden_difficulty {
 	display: none;
@@ -864,9 +864,13 @@ article.options:hover {
 }
 
 .narrow {
-	padding: 75px 0;
+	padding: 60px 0;
 }
 
+h4.extra_padded {
+	padding-left: 15%;
+	padding-right: 15%;
+}
 
 #parallax_process {
 	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/garage_scape.jpg) 50% 0 fixed; 
@@ -1472,7 +1476,8 @@ h2.lower_header {
 
 	h1.new_header {
 		padding-top: 150px;
-		font-size: 40px
+		font-size: 40px;
+		line-height: 44px;
 	}
 	
 
