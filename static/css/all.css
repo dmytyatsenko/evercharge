@@ -927,6 +927,10 @@ img.distinguishing {
 	border-radius: 50%;
 }
 
+img.header_logo {
+	height: 50px;
+}
+
 h2.diff_title {
 	font-weight: 100;
 	text-transform: uppercase;
