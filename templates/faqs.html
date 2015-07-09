@@ -1,97 +1,205 @@
 {% extends 'base.html' %}
 
-
-	{% block background %}
+{% block background %}
 	<img src="images/image11.jpg" alt="image description" width="1200" height="526">
-	{% endblock %}
+{% endblock %}
 
-	{% block maincontent %}
-		<div class="col-md-14 col-md-offset-1 article-quote">
-			<img src="images/evercharge-logo.png" alt="image description" class="img-circle" width="99" style='visibility:hidden;'>
-			<h1>FAQs</h1>
-			<br>
-			<!-- <h2>Frequenty Asked Questions</h2> -->
-			<a href="#quote" class="btn">Get a quote</a>
-		</div>
-	{% endblock %}
-	{% block video %}
-	{% endblock %}
+{% block maincontent %}
+	<section class="col-md-12 col-md-offset-2">
+		<div class="row threecolumn">
+		<article class="col-md-16 col-sm-16 col-xs-16">
+			<div id='large_green_circle'>
+				<div id='header_text'>
+					<h1 class='new_header'>FAQ</h1>
+					<h2 class='tagline hidden_mobile'>
+						More Questions?
+						<br>
+						<a href='tel:8883427383'>888.342.7383</a>
+					</h2>
+				</div>
+			</div>
+			
+		</article>
+	</div>
+{% endblock %}
+
+{% block video %}
+{% endblock %}
 
 {% block content_one %}
-<div style="height:50px"></div>
-<article>
-<div class="row features">
-	<article class="col-md-2 col-xs-5"></article>
-	<article class="col-md-4 col-xs-5">
-		<img src="images/distributed.png" alt="compatibility image" width="125">
-		<h2><a href='#basics'>BASICS</a></h2>
-			<a href='#benefits'>Benefits of Evercharge</a><br>
-			<a href='#compatible'>Compatible EVs</a><br>
-			<a href='#how_it_works'>How it works</a><br>
-	</article>
-	<article class="col-md-4 col-xs-5">
-		<img src="images/ev_icon.png" alt="compatibility image" width="101">
-		<h2>INSTALLATION</h2>
-		<a href='#install_location'>Installation location</a><br>
-		<a href='#install_savings'>Saving money on installation</a><br>
-		<a href='#installers'>Who installs Evercharge</a><br>
-	</article>
-	<article class="col-md-4 col-xs-5">
-		<img src="images/billing.png" alt="automatic billing image" width="92">
-		<h2><a href='#billing'>BILLING</a></h2>
-		<a href='#cost'>Cost of service</a><br>
-		<a href='#autopay'>Autopay</a><br>
-		<a href='#bill_questions'>Questions about your bill</a><br>
-	</article>
-	<article class="col-md-2 col-xs-5"></article>
 
-	<article class='col-md-16 col-xs-5'>
-		<hr>
-		<h2><a href='#quote'>MORE QUESTIONS</a></h2>
-		Call us at <a href='tel:888-342-7383'>1(888) 342-7383</a>
-	</article>
-</div>
-
+<article class='jumbotron whitejumbo white_space'>
+	<a href='#quote'>
+		<button class='flat_button'>Get a Quote Now</button>
+	</a>
 </article>
 
 
-
-
-
-<article class='greyjumbo jumbotron' id='basics'>
-	<h2>Basics</h2>
-	<br>
-	<br>
-	<hr>
-	<div class="row features">
-		<div class="col-md-4 col-xs-5 hideme">
-			<img src="images/evercharge-logo.png" alt="california" width="120" class='img-circle desaturate'>
+<section class="parallax narrow" data-speed="4" data-type="background" id='parallax_process'>
+	<div class="container">
+		<div class="row-fluid">
+			<h1 class='parallax_header'>You've got Questions</h1>
 		</div>
-		<article class="col-md-12 col-xs-5">
+	</div>
+</section>
 
-			<h4 id="benefits">Benefits of Evercharge</h4>
+<div style="height:50px"></div>
+<article class='whitejumbo jumbotron'>
+	<div class="row features">
+
+		<div class="col-md-4 col-xs-5">
+			<h2><a href='#ev_basics'>Charging Basics</a></h2>
+			<hr class='short'><br>
+			
+				<h4><a href='#evse_definition'>What is EVSE</a></h4>
+				<h4><a href='#charge_levels'>Charging Levels</a></h4>
+				<h4><a href='#plugs'>Adaptor Types</a></h4>
+			</p>
+		</div>
+
+		<div class="col-md-4 col-xs-5">
+			<h2><a href='#basics'>Evercharge Basics</a></h2>
+			<hr class='short'><br>
+			<h4><a href='#benefits'>Benefits of Evercharge</a>
+			</h4>
+			<h4><a href='#compatible'>Compatible EVs</a>
+			</h4>
+			<h4><a href='#how_it_works'>How it works</a><br>
+			</h4>
+		</div>
+
+		<div class="col-md-4 col-xs-5">
+			<h2><a href='#installation'>Installation</a></h2>
+			<hr class='short'><br>
+				<h4><a href='#install_cost'>Install cost</a></h4>
+				<h4><a href='#install_location'>Installation location</a></h4>
+				<h4><a href='#installers'>Who installs Evercharge</a></h4>
+				<h4><a href='#permitting'>Permitting</a></h4>
+		</div>
+
+		<div class="col-md-4 col-xs-16">
+			<h2><a href='#billing'>Billing</a></h2>
+				<hr class='short'><br>
+				<h4><a href='#cost'>Cost of service</a></h4>
+				<h4><a href='#autopay'>Autopay</a></h4>
+				<h4><a href='#bill_questions'>Questions about your bill</a></h4>
+		</div>
+	</div>
+</article>
+
+<div style="height:50px"></div>
+
+
+<section class="parallax narrow" data-speed="4" data-type="background" id='parallax_process'>
+	<div class="container">
+		<div class="row-fluid">
+			<h1 class='parallax_header'>We've got answers</h1>
+		</div>
+	</div>
+</section>
+
+
+
+<article class='whitejumbo jumbotron'>
+	<h1 id='ev_basics'>Charging Basics</h1>
+	<hr class='short'>
+	<br>
+	<br>
+	<div class='row features'>
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='evse_definition'>What is EVSE?</h2>
+			EVSE stands for Electric Vehicle Supply Equipment and refers to any off-board equipment used to supply energy to vehicles. This can include cords, wall-, pedestal-, or pole-mounted charges, and the different outlets and plugs that make up the circuit.
+			<hr>
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='charge_levels'>Levels of EV Charging</h2>
+			There are considered to be three levels of charging for EVs - each pulling different amounts of power.
+			<ul>
+				<li><strong>Level 1</strong>: Standard 110v household outlet, not generally recommended for EV charging.
+					<br>
+					<em>1 - 4 miles of range per hour of charging.</em>
+				</li>
+				<li><strong>Level 2</strong>: 208, 220, or 240v outlet, similar to an electric dryer. This level is compatible with all electric vehicles and plug-in hybrids and is the best option for charging in homes and mulit-tenant buildings.
+					<br>
+					<em>20 - 60 miles of range per hour of charging.</em>
+				</li>
+				<li><strong>Level 3 (DC Quick Charger)</strong>: An off-board charger that connects directly to a vehicle's high-voltage battery bus. This type of charging allows for high power tranfer and can charge a battery to 80% capacity in minutes, instead of hours. DC Quick Charging can cost over $100,000 to install, so generally is cost-prohibitive for residential charging.
+					<br>
+					<em>Up to 200 miles of range per hour of charging.</em>
+				</li>
+			</ul>
+			
+			SAE J-1772 is the Society of Automotive Engineers (SAE) standard that covers AC Level 1 and 2 and DC Level 1 and 2 charging. J-1772 is the standard for AC charging in the United States.
+			<hr>
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='plugs'>Types of EV Adaptors</h2>
+			<ul>
+				<li><strong>SAE J-1772 Connector</strong>: This is the standard plug type for EVs in the United States, and can connect directly to most EVs manufactured for the North American market after 2000. Society of Automotive Engineers (SAE) developed this connector standard, and though not required, most vehicle manufacturers have adopted this connector type. It can be AC Level 1 and 2 and DC Level 1 and 2 charging.</li>
+				<li><strong>Tesla Connector</strong>: The Tesla connector is the standard connector for all Tesla vehicles. Tesla offers an adaptor that can be used to charge with J-1772 connector. Evercharge also offers a Tesla plug, so no adaptor is necessary.</li>
+			</ul>
+			
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+	</div>
+</article>
+
+<article class='greyjumbo jumbotron jumbo_shadow'>
+	<h1 id='basics'>Evercharge Basics</h1>
+	<hr class='short'>
+	<br>
+	<br>
+	<div class='row features'>
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='benefits'>Benefits of Evercharge</h2>
 			Evercharge is a unique EV charging service that makes charging in condos and apartments easy. Without it, HOAs, property managers, and residents have to navigate the complexities of EV charging regulations, power balancing, and limited voltage by themselves. Evercharge handles all of this, providing:
 			<ul>
 				<li>
-					<strong>Fully managed service</strong>: insurance, support, maintenance and automated billing services are all included -- we take care of everything.
+					<strong>Fully managed service</strong>: Ongoing insurance, support, maintenance and automated billing services are all included at no cost to building management. We take care of everything.
 				</li>
 				<li>
-					<strong>Power Management</strong>: Evercharge intelligently manages buildings power to maximize your infrastructure potential up to 10x. Read more about <a href='/about-us#power_management'>power management</a>.
+					<strong>Power Management</strong>: Evercharge intelligently manages buildings power to maximize your infrastructure potential by up to 10x. Read more about <a href='/aboutus#power_management'>power management</a>.
 				</li>
 			</ul>
-			<hr>
 
+			<hr>
 		</article>
 
-		<div class="col-md-4 col-xs-5 hideme">
-			<img src="images/ev_icon.png" alt="california" width="120">
-		</div>
-		<article class="col-md-12 col-xs-5">
+		<article class='col-md-4 hidden-xs'>
+		</article>
 
-			<h4 id="compatible">Compatible Electric Vehicles</h4>
-			All Electric Vehicles sold in North America are compatible with the Evercharge charging system. This includes, but is not limited to.
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='compatible'>Compatible EVs</h2>
+			All Electric Vehicles sold in North America are compatible with the Evercharge charging system. This includes, but is not limited to:
 			<ul>
 				<li>BMW i3</li>
+				<li>BMW i8</li>
 				<li>Chevrolet Volt</li>
 				<li>Fiat 500e</li>
 				<li>Ford Focus Electric</li>
@@ -99,279 +207,169 @@
 				<li>Kia Soul EV</li>
 				<li>Nissan Leaf</li>
 				<li>Tesla (all models)</li>
+				<li>Toyota Prius Plug-in</li>
 				<li>Volswagen e-Golf</li>
+				<li>And more</li>
 			</ul>
 			<hr>
 		</article>
-					
-				<div class="col-md-4 col-xs-5 hideme">
-					<img src="images/full_battery.png" alt="full_battery" width="50">
-				</div>
-				<article class="col-md-12 col-xs-5">
-					
-					<h4 id='how_it_works'>How does Evercharge work?</h4>
-						
-							Our system connects to readily available common area power in the building. This enables us to get commercial electricity rates and to easily scale throughout the garage for additional users.
-						<br>
-						<br>
 
-						
-							Each unit meters the electricity consumed. We then bill each resident for the energy they personally used, and fully reimburse the HOA for all energy used by Evercharge units on the property.
-						<br>
-						<br>
-						
-							All members receive <strong>ID Cards</strong> that your charging unit recognizes - just tap your card and charge away. Our <a href='/about-us#power_management'>propietary power management technology</a> balances power automatically, so residents never need to worry about charging.
-						<br>
-					
-				</article>
-</div>
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='how_it_works'>How Evercharge Works</h2>
+			Our charging stations connect to readily available common area power in the building. This enables us to get commercial electricity rates and to easily scale throughout the garage for additional users by consolidating conduit and wire.
+			<br>
+			<br>
+			Each unit meters the electricity consumed. We then bill each resident for the energy they personally used, and fully reimburse the HOA for all energy used by Evercharge units on the property.
+			<br>
+			<br>
+			Using access cards, our charge stations monitor electricity consumed by residents. Monthly we bill members for the amount of energy used, and quarterly we fully reimburse the HOA for all energy consumed by EV charging. 
+			<br>
+			<br>
+			Our proprietary power management technology intelligently allocates power among chargers via a wireless mesh network. This enables us to  quickly charge more vehicles and support up to ten times as many chargers. All without costly building infrastructure upgrades or recurring costs to the HOA or building owner.
+
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+	</div>
 </article>
 
-
-<article class='greyjumbo jumbotron' id='installation'>
-	<h2>Installation</h2>
+<article class='whitejumbo jumbotron'>
+	<h1 id='installation'>Installation</h1>
+	<hr class='short'>
 	<br>
 	<br>
-	<hr>
-	<div class="row features">
-		<div class="col-md-4 col-xs-5 hideme">
-			<img src="images/electrician_van.png" alt="van" width="120">
-		</div>
-		<article class="col-md-12 col-xs-5">
+	<div class='row features'>
 
-			<h4 id="install_location">Installation Location</h4>
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='install_cost'>Cost of Installation</h2>
+			Installation costs are determined by an onsite evaluation. Existing electrical infrastructure, distance from the electrical room, and complexity determine the variable installation costs.
+			<br>
+			<br>
+			<strong>Lowering Installation Costs</strong>
+			<br>
+
+			Installing multilpe chargers at the same time can significantly decrease per-unit installation costs. In cases where a building requires infrastructure upgrades (such as a new panel or transformer), we can work with the interested residents and the HOA to distribute the costs appropriately. Evercharge is happy to assist with surveying residents to better understand the interest within the community.
+			<br>
+			<br>
+			Since every building is different, the best way to get started is to <a href='#quote'>contact Evercharge</a>, so we can get started on the quote process today.
+			<hr>
+
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='install_location'>Installation Location</h2>
 			All Evercharge chargers are installed directly in the owner's personal parking space for their exclusive use. A building that has multiple Evercharge customers will all use the same power source, but are still able to charge directly from their own space.
-				<br>
-				<br>
+			<br>
+			<br>
 			Access is granted to each charger by a personal ID card, exclusive to each customer.
-				<br>
-				<br>
+			<br>
+			<br>
 			We have several customers who live in buildings with valet or unassigned parking, and in these cases we work directly with the building to ensure that every resident still has 24/7, exclusive access to a charger.
 			<hr>
-
 		</article>
 
-		<div class="col-md-4 col-xs-5 hideme">
-			<img src="images/money_bag.png" alt="money" width="100">
-		</div>
-		<article class="col-md-12 col-xs-5">
+		<article class='col-md-4 hidden-xs'>
+		</article>
 
-			<h4 id="install_savings">Saving money on installation</h4>
-			When we install chargers, it often require significant infrastructure updates, and the costs of these are unavoidable. However, if you are an EV owner and property manager, you can significantly decrease your per-unit cost by installing multiple chargers at the same time.
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='installers'>Who Installs Evercharge units?</h2>
+			An insured and licensed electrician. We only use the most reliable and competitively priced electrical contractors.
+			<hr>
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='permitting'>Required Permits</h2>
+			Installation of EV charging in common areas of a residential or commercial building requires an electrical permit and final inspection by the city. A city permit provides a description of the installation, outline of the electrical infrastructure, account address, workers compensation declaration, and more.
 			<br>
 			<br>
-			If you're interested in getting a quote for your building, <a href='#quote'>contact us</a> today.
-			<hr>
+			Evercharge handles the entire time-consuming application and inspection process for city permits.
 		</article>
-					
-				<div class="col-md-4 col-xs-5 hideme">
-					<img src="images/electrician.png" alt="full_battery" width="75">
-				</div>
-				<article class="col-md-12 col-xs-5">
-				
-					<h4 id='installers'>Who installs Evercharge?</h4>
-						An insured and licensed electrician. We only use the most reliable and competitively priced electrical contractors.
-					
-				</article>
-</div>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+	</div>
 </article>
 
-<article class='greyjumbo jumbotron' id='billing'>
-	<h2>Billing</h2>
+<article class='greyjumbo jumbotron'jumbo_shadow>
+	<h1 id='billing'>Billing</h1>
+	<hr class='short'>
 	<br>
 	<br>
-	<hr>
-	<div class="row features">
-	
-		<article class="col-md-16 col-xs-5">
-
-			<h4 id="cost">Cost of Service</h4>
-			Evercharge bills you only for the energy you have used, based on the rate of your power provider. We also charge a small monthly fee of $15 which covers 24/7 lifetime support and $1,000,000 in liability insurance.
-			<hr>
-
+	<div class='row features'>
+		<article class='col-md-4 hidden-xs'>
 		</article>
 
-	
-		<article class="col-md-16 col-xs-5">
-
-			<h4 id="autopay">Autopay</h4>
-			All customers have the option to set up autopay -- when you get your first bill you will see instructions to do so. If you have questions about setting this up, please reach out to us at <a href='tel:888-342-7383'>1(888) 342-7383.</a>.
-
-
-				<br>
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='cost'>Cost of Service</h2>
+			We offer the lowest rates of any service provider. Evercharge bills only for the energy you have used. For $15/month we provide $1,000,000 liability insurance, all maintenance, 24/7 lifetime support and billing services. Hourly rates are determined by your building’s rate schedule. <a href='#quote'>Contact us</a> for details. 
 			<hr>
 		</article>
-					
-			
-				<article class="col-md-16 col-xs-5">
-					
-					<h4 id='bill_questions'>Questions about your bill</h4>
-						If you ever have any questions about your bill, please contact us at<a href='tel:888-342-7383'> 1(888) 342-7383</a>.
-					
-				</article>
-</div>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='autopay'>Automatic Billing</h2>
+			All customers have the option to set up autopay -- on your first bill you will see instructions to do so. If you have questions about setting this up, please reach out to us at <a href='tel:888-342-7383'>1(888) 342-7383.</a>.
+			<hr>
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+
+		<article class='col-md-8 col-xs-5'>
+			<h2 id='bill_questions'>Questions about your bill</h2>
+			If you ever have any questions about your bill, please contact us at<a href='tel:888-342-7383'> 1(888) 342-7383</a>.
+		</article>
+
+		<article class='col-md-4 hidden-xs'>
+		</article>
+	</div>
 </article>
-
 
 
 
 <div style="height:50px"></div>
 <div style="height:50px"></div>
 
-
+<a href="#" class="back-to-top">
+	<i class="fa fa-arrow-circle-o-up"></i>
+</a>
 {% endblock %}
 
 {% block content_two %}
-<!-- <div style="height:50px"></div>
-<div class="bs-example">
-	<div class="panel-group" id="accordion">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-						What are the benefits of Evercharge?
-					
-				</h4>
-			</div>
-			<div id="collapseOne">
-				<div class="panel-body">
-					<p><ul>
-
-						<li><strong>Fully managed service</strong>: insurance, support, maintenance and automated billing services are all included -- we take care of everything.</li>
-						<li><strong>Power Management</strong>: Evercharge intelligently manages buildings power to maximize your infrastructure potential up to 10x.</li>
-					</ul>
-
-				</p>
-				</div>
-			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-
-						What type of electric vehicles can charge with Evercharge?</a>
-				</h4>
-			</div>
-			<div id="collapseTwo" class="panel-collapse collapse in">
-				<div class="panel-body">
-					<p>All EVs and Plug-in-hybrids sold in North America. This includes vehicles like the Tesla Model S, Nissan Leaf, Chevrolet Volt and Prius Plug-in.</p>
-				</div>
-			</div>
-		</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Where is the charger installed?</a>
-				</h4>
-			</div>
-
-			<div id="collapseThree" class="panel-collapse collapse in">
-				<div class="panel-body">
-					<p>Directly in your parking space for exclusive use. Access is granted by personal ID key card.</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Who will install the system?</a>
-				</h4>
-			</div>
-			<div id="collapseFour" class="panel-collapse collapse in">
-				<div class="panel-body">
-					<p>An insured and licensed electrician. We only use the most reliable and competitively priced electrical contractors.</p>
-				</div>
-			</div>
-		</div>
-
-        <div class="panel panel-default">
-		<div class="panel-heading">
-			<h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Do the units have wireless communication?</a>
-			</h4>
-		</div>
-		<div id="collapseFive" class="panel-collapse collapse in">
-			<div class="panel-body">
-				<p>Our network boxes communicate wirelessly in the garage - no strings attached. This enables the Power Management System to direct power and transmit local data for billing and analytics. </p>
-			</div>
-		</div>
-	</div>
- --><!-- 
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Are there any tax credits or rebates available for installation?</a>
-				</h4>
-			</div>
-			<div id="collapseSix" class="panel-collapse collapse in">
-				<div class="panel-body">
-					<p><ul>
-						<li>ADD: Tesla’s online incentive page</li>
-						<li>ADD: Federal and State Incentives: </li>
-						<li>ADD: Take a look at your state’s incentives. </li>
-						<li>ADD: Illinois Rebate: open to anyone installing our charging station in Illinois 50% rebate for charging station, electrical infrastructure, and installation up to $3,750 reimbursement learn more here</li>
-						<li>ADD: Austin Energy Rebate:must be customer of Austin Energy. 50% rebate for charging station, electrical infrastructure, and installation up to $1,500 reimbursement. learn more here</li>
-				</div>
-			</div>
-		</div>
-
-		<div class="panel panel-default">
-		<div class="panel-heading">
-			<h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" href="#collapseSix">How can I save money on installation?</a>
-			</h4>
-		</div>
-		<div id="collapseSix" class="panel-collapse collapse in">
-			<div class="panel-body">
-				<p>If more than one residents install their Evercharge chargers at the same time, the installation costs can be signicantly reduced because infrastructure can be shared. The more, the merrier!</p>
-			</div>
-		</div>
-	</div>
-
-		<div class="panel panel-default">
-		<div class="panel-heading">
-			<h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">Can I set up auto pay?</a>
-			</h4>
-		</div>
-		<div id="collapseSeven" class="panel-collapse collapse in">
-			<div class="panel-body">
-				<p>Yes. On your monthly statement you'll see an option to set up auto pay.  </p>
-			</div>
-		</div>
-	</div>
-
-		<div class="panel panel-default">
-		<div class="panel-heading">
-			<h4 class="panel-title">
-				<a data-toggle="collapse" data-parent="#accordion" href="#collapseEight">Does Evercharge cover service outside of the United?</a>
-			</h4>
-		</div>
-		<div id="collapseEight" class="panel-collapse collapse in">
-			<div class="panel-body">
-				<p>
-					Not yet, but we are actively investigating to expand to the global market.
-				</p>
-			</div>
-		</div>
-	</div>
-		<div class="panel panel-default">
-			<div class="panel-heading">
-				<h4 class="panel-title">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapseNine">How does it work?</a>
-				</h4>
-			</div>
-			<div id="collapseNine" class="panel-collapse toggle">
-				<div class="panel-body">
-					<p>For an in-depty explanation about how Evercharge's patented Power Management Technology works, <a href="/about-us" style="color:#3D9F2B">check out our About Us</a> page.</p>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<br><br> -->
-
 {% endblock %}
 
 

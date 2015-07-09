@@ -1,10 +1,10 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang='EN'>
 <head>
-	<!-- set the encoding of your site -->
-	<meta charset="utf-8">
-	<meta name="description" content="Electric Vehicle (EV) charging for owners who live in common area garages at apartments & condos, HOA, property manager, & Multi Family Dwelling (MFD) Solution">
-	<meta name="keywords" content="electric car apartment,electric car charging stations apartments, condo electric, charging an electric car in an apartment, apartments with electric car charging, how to charge electric car in apartment, EV, Electric Vehicle, Electric Car, chargers, charging, condo, apartment, Tesla, Nissan Leaf, Model S, Roadster, Chevy Volt, community, common area, residential, HOA, Homeowner's Association distributed power,sequencing, line capacity management, ">
+	<meta charset='UTF-8'>
+	<meta name="description" content="Electric Vehicle (EV) charging for residents of multi-tenant buildings, including condominiums and apartments. Chargers are installed directly in parking spaces in common area garags. A solution for condos, HOAs, building managers.">
+
+	<meta name='keywords' content="electric car apartment,electric car charging stations apartments, condo electric, charging an electric car in an apartment, apartments with electric car charging, how to charge electric car in apartment, EV, Electric Vehicle, Electric Car, chargers, charging, condo, apartment, Tesla, Nissan Leaf, Model S, Model X, Roadster, Chevy Volt, community, common area, residential, HOA, Homeowner's Association distributed power,sequencing, line capacity management,">
 
 	<!-- set the viewport width and initial-scale on mobile devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,41 +15,19 @@
 	<!-- include the site stylesheet -->
 
 	<link rel="stylesheet" href="/css/bootstrap.min.css">
-
 	<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
 	<link rel="stylesheet" href="/css/all.css">
 	<link rel="stylesheet" href="/css/modal.css">
-
-
 	<link rel="stylesheet" type="text/css" href="/css/shadowbox.css">
+	<link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
 
 	<!-- include the google font -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800italic,800' rel='stylesheet' type='text/css'>
+
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300italic,400,400italic,600' rel='stylesheet' type='text/css'>
+
+
 	<!-- include jQuery library -->
-
-
-
-
-	<!-- <script type="text/javascript" src="js/shadowbox.js"></script>
-	 <script type="text/javascript">
-		Shadowbox.init({
-    	handleOversize: "drag",
-    	modal: true
-		});
-
-		window.onload = function() {
-
-		    // open a welcome message as soon as the window loads
-		    Shadowbox.open({
-		        content:    '<div id="welcome-msg">teadsa;sdka;lsdka;lsdk;laskd;laskd;laksd;laks;ldk</div>',
-		        player:     "html",
-		        title:      "Welcome",
-		        height:     500,
-		        width:      500
-		    });
-
-		};
-	</script> -->
 	<!-- include script for window -->
 	<script type="text/javascript">
 		if (navigator.userAgent.match(/IEMobile\/10\.0/) || navigator.userAgent.match(/MSIE 10.*Touch/)) {
@@ -62,6 +40,7 @@
 			document.querySelector('head').appendChild(msViewportStyle)
 		}
 	</script>
+
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -91,53 +70,39 @@
 	<div class="bg-stretch">
 		{% block background %}
 		{% endblock %}
-		</div>
-			<div class="container">
-				<!-- header of the page -->
-				<header class="row" id="header">
-					<!-- logo of the page -->
-					<div class="logo">
-						<div><a href="/"></a></div>
-						<center><h2><a href="tel:18883427383">(888) 342-7383</a></h2></center>
-					</div>
+	</div>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+      	<img class='header_logo' src='images/white_logo.png' height='50px'>
+      </a>
+    </div>
 
-					{% block social_media %}
-					<div class="right-block">
-						<!-- social networks -->
-						<ul class="social-networks">
-							<li class="blog"><a href="/blog">Blog</a></li>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href='/learnmore'>LEARN MORE</a></li>
+        <li><a href="/aboutus">ABOUT</a></li>
+        <li><a href="/faqs">FAQs</a></li>
+        <li><a href="http://blog.evercharge.net">BLOG</a></li>
+        <li><a href="tel:8883427383">888.342.7383</a></li>
+        <li class='pop_of_red'><a href="#quote">CONTACT</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+	<div class="container">
 
-							<li class="facebook"><a href="https://www.facebook.com/evevercharge">facebook</a></li>
-							
-							<li class="twitter"><a href="https://twitter.com/evercharge">twitter</a></li>
-
-						</ul>
-					{% endblock %}
-
-						{% block rightheader %}
-						<nav class="navbar navbar-default" role="navigation">
-							<!-- Brand and toggle get grouped for better mobile display -->
-							<div class="navbar-header">
-								<button title="Menu" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-									<span class="sr-only">Menu</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-							</div>
-							<!-- Collect the nav links, forms, and other content for toggling -->
-							<div class="collapse navbar-collapse" id="navbar-collapse-1">
-								<ul id="nav">
-							
-									<li class="menu2"><a href="/building-management">Building Management</a></li>
-									<li class="menu1"><a href="/ev-owner">Ev owner</a></li>
-								</ul>
-							</div>
-						</nav>
-						{% endblock %}
-					</div>
-					
-				</header>
+	</div>
 
 
 				<div class="row text-center">
@@ -149,7 +114,7 @@
 		</div>
 	</div>
 
-	<main id="content" class="container">
+	<main id="content">
 		<!-- video -->
 
 {% block intro %}
@@ -176,67 +141,58 @@
 
 
 
-	
+
 {% block quote_form %}
 
-<form id='quote_form' action="/thankyou", method='post' class="get-quote validate-form">
+<form action="/thankyou", method='post' class="validate-form">
 	<input name="lead_source" value="Web Signup" type="hidden">
-		<fieldset>
-			<legend id="quote"><span>
-				{% block form_name %}Get a Free Quote{% endblock %}
-			</span></legend>
-					<div class="wrap">
-						<div class="col">
-							<h3>What are you?</h3>
-							<ul class="tabset js-ajax-tabs">
-								<li data-href="inc/tab00.html" class="active">
-									<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1">
-									<p>EV Driver</p>
-								</li>
-								
-								<li data-href="inc/tab01.html">
-									<input type="radio" value="Property Manager" name="customer_type" class="radio2">
-									<p>Building Management</p>
-								</li>
+	<fieldset>
+	<legend id="quote"><span>
+		{% block form_name %}Get a Free Quote{% endblock %}
+	</span></legend>
+	
+	<div class="wrap">
+		<div class="col">
+			<h3>Are you an EV Driver or Building Management?</h3>
+				<ul class="tabset js-ajax-tabs">
+					<li data-href="inc/tab00.html" class="active">
+						<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1">
+						<p>EV Driver</p>
+					</li>
+					<li data-href="inc/tab01.html">
+						<input type="radio" value="Property Manager" name="customer_type" class="radio2">
+						<p>Management</p>
+					</li>
 
-							</ul>
-							<div class="tab-content ajax-hold"></div>
-						</div>
-						<div class="col">
-							<h3>How can we contact you?</h3>
-							<div class="holder">
-								<div class="form-group">
-									<label for="label1" class="label1">name</label>
-									<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name">
-								</div>
-								<div class="form-group">
-									<label for="label2" class="label2">email</label>
-									<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email">
-								</div>
-								<div class="form-group">
-									<label for="label3" class="label3">phone</label>
-									<input name="quote_phone" type="tel" class="form-control bfh-phone required-number" id="label3" placeholder="Phone" data-format="ddd-ddd-dddd" >
-								</div>
-								<div class="form-group">
-									<label for="label4" class="label4">address</label>
-									<input type="text" data-provide="typeahead" class="typeahead form-control" id="label4" placeholder="Address" name="quote_address"></input>
-							</fieldset>
-
-									<input id="street_number" class="field" type="hidden" name="address_1">
-									<input id="route" class="field" type="hidden" name="address_2">
-									<input id="locality" class="field" type="hidden" name="address_city">
-									<input id="administrative_area_level_1" class="field" type="hidden" name="address_state">
-									<input id="country" class="field" type="hidden" name="address_country">
-									<input id="postal_code" class="field" type="hidden" name="address_postal_code">
-
-								</div>
-							</div>
-						</div>
+				</ul>
+			<div class="tab-content ajax-hold"></div>
+		</div>
+		<div class="col">
+			<h3>How can we contact you?</h3>
+				<div class="holder">
+					<div class="form-group">
+						<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name" autocomplete="false"> 
 					</div>
-					<div class="btn-wrapper">
+					<div class="form-group">
+						<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email" autocomplete="false">
+					</div>
+					<div class="form-group">
+						<input name="quote_phone" type="tel" class="form-control bfh-phone required-number" id="label3" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="false">
+					</div>
+					<div class="form-group">
+						<input type="text" data-provide="typeahead" class="typeahead form-control" id="label4" placeholder="Address" name="quote_address" autocomplete="false"></input>
+						
+						<input id="street_number" class="field" type="hidden" name="address_1">
+						<input id="route" class="field" type="hidden" name="address_2">
+						<input id="locality" class="field" type="hidden" name="address_city">
+						<input id="administrative_area_level_1" class="field" type="hidden" name="address_state">
+						<input id="country" class="field" type="hidden" name="address_country">
+						<input id="postal_code" class="field" type="hidden" name="address_postal_code">
+					</div>
+
 						<input type="submit" value="Get your quote">
-					</div>
-			</form>
+	</fieldset>
+</form>
 			</br></br>
 
 	{% endblock %}
@@ -257,15 +213,24 @@
 				<div class="row features">
 
 				<article class="col-md-4 col-xs-5" style="margin-top:25px;">
-					<a href="/"><img src="images/new_logo_transparent.png"></a>
+					<a href="/"><img src="images/new_logo_transparent.png" id='footer_logo'></a>
 				</article>
 				<article class="col-md-4 col-xs-5">
 					<h5>Navigate</h5>
 					<div class="footer-list">
 						<a href="/">Home</a>
-						<br><a href="/ev-owner">EV Owners</a>
-						<br><a href="/building-management">Building Management</a>
-						<br><a href="http://blog.evercharge.net">Blog</a>
+						<br><a href="/learnmore">Learn More</a>
+						<br><a href="/faqs">FAQs</a>
+						<br><a href="http://blog.evercharge.net">Evercharge Blog</a>
+					</div>
+				</article>
+				
+				<article class="col-md-4 col-xs-5">
+					<h5>About Evercharge</h5>
+					<div class="footer-list">
+						<a href="/aboutus">About Us</a>
+						<br><a href="https://angel.co/evercharge/jobs">Careers</a>
+						<br><a href="/images/SF_Case_Study.pdf">SF Case Study</a>
 					</div>
 				</article>
 				<article class="col-md-4 col-xs-5">
@@ -274,58 +239,42 @@
 						<a href="mailto:sales@evercharge.net">Sales</a>
 						<br><a href="mailto:support@evercharge.net">Support</a>
 						<br><a href="mailto:support@evercharge.net">Installation Experts</a>
+						<br><a href='tel:8883427383'>888.342.7383</a>
 
 					</div>
 				</article>
-				<article class="col-md-4 col-xs-5">
-					<h5>About Evercharge</h5>
-					<div class="footer-list">
-						<a href="/about-us">About Us</a>
-						<br><a href="/faqs">FAQs</a>
-						<br><a href="https://angel.co/evercharge/jobs">Careers</a>
-						<br><a href="/images/SF_Case_Study.pdf">SF Case Study</a>
-					</div>
-				</article>
 
-	<!-- 			<ul class="footer-nav">
-          <li><a href="/">Home</a></li>
-          <li><a href="mailto:sales@evercharge.net">Contact Us</a></li>
-          <li><a href="mailto:support@evercharge.net">Installers</a></li>
-          <li><a href="https://angel.co/evercharge/jobs">Jobs</a></li>
-          <li><a href="/about-us">About Us</a></li>
-          <li><a href="/faqs">FAQs</a></li>
-          <li><a href="http://blog.evercharge.net">Blog</a></li>
-				</ul> -->
-				<!-- copyright -->
-				</div>
-				<span class="copyright">&copy; 2015 Evercharge, Inc. All Right Reserved. Made in California.</span>
-			
+			<span class="copyright">&copy; 2015 Evercharge, Inc. All Rights Reserved. Made in California.</span>
+
 		</footer>
 	</div>
 
 
 </body>
 	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	
+	<script type='text/javascript' src='js/navbar.js'></script>
+
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="js/bootstrap-formhelpers-phone.js"></script>
 
 	<script type="text/javascript" src="js/jquery.main.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&signed_in=true"></script>
+
 	<script type="text/javascript" src="js/typeahead.bundle.js"></script>
 	<script type="text/javascript" src="js/smoothscroll.js"></script>
 	<script type="text/javascript" src="js/conditionalform.js"></script>
 	<script type="text/javascript" src="js/scroll_fade.js"></script>
 	<script type='text/javascript' src='js/transition.js'></script>
 	<script type='text/javascript' src='js/collapse.js'></script>
+	<script type='text/javascript' src='js/difficulties.js'></script>
+	<script type='text/javascript' src='js/parallax.js'></script>
+	<script type='text/javascript' src='js/back_to_top.js'></script>
+	<script type='text/javascript' src='js/custom_map.js'></script>
+
+
+
 	<script>
 	$('#myModal').on('shown.bs.modal', function () {
   $('#myInput').focus()
 })
 	</script>
-
-
-
-
-
-	

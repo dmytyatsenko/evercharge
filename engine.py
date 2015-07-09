@@ -18,6 +18,9 @@ def evercharge():
 def root():
 	return app.send_static_file('robots.txt')
 
+@app.route('/learnmore', methods= ['GET'])
+def learn_more():
+	return render_template('learn-more.html')
 
 @app.route('/ev-owner', methods = ['POST', 'GET'])
 def ev_owner():
@@ -28,10 +31,14 @@ def hoa_property_manager():
 	# print  nut.search_sources('Web')
 	return render_template("inner-pms.html")
 
-@app.route('/about-us', methods = ['POST', 'GET'])
+@app.route('/aboutus', methods = ['POST', 'GET'])
 def about_us():
 	# print nut.search_contacts(50169)
 	return render_template("about-us.html")
+
+@app.route('/powermanagement', methods = ['POST', 'GET'])
+def power_management():
+	return render_template("power-management.html")
 
 @app.route('/faqs', methods = ['POST', 'GET'])
 def faqs():
