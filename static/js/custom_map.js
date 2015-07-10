@@ -54,7 +54,7 @@ function initialize() {
       mapOptions);
 
   var styledMapOptions = {
-    name: 'Evercharge Custom Style'
+    name: 'EverCharge Custom Style'
   };
 
   var emeryMarker = new google.maps.Marker({
