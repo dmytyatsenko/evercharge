@@ -1181,12 +1181,11 @@ h2.lower_header {
 		background-color: #14AB58;
 	}
 	.navbar-toggle .icon-bar{
-		height: 10px;
-		padding-top: 10px;
+		height: 1px;
+		padding-top: 7px;
 		width: 50px;
-		border-radius: 3px;
 	}
-	.navbar-toggle .icon-bar + .icon-bar{margin-top: 2px;}
+	.navbar-toggle .icon-bar + .icon-bar{margin-top: 7px;}
 	.navbar-collapse{
 		position: absolute;
 		/*top: 21px;*/
@@ -1195,7 +1194,7 @@ h2.lower_header {
 		border:none;
 		z-index: 2;
 		padding: 10px;
-		background: RGBA(20, 171, 88, .8);
+		background: RGBA(20, 171, 88, .85);
 	}
 
 	.navbar-nav>li>a {
