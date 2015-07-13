@@ -66,11 +66,7 @@
 {% block bannersize %}
 {% endblock %}
 
-<div class="banner">
-	<div class="bg-stretch">
-		{% block background %}
-		{% endblock %}
-	</div>
+
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -100,19 +96,23 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-	<div class="container">
 
+<div class="banner">
+	<div class="bg-stretch">
+		{% block background %}
+		{% endblock %}
+	</div>
+	<div class="container">
 	</div>
 
 
-				<div class="row text-center">
+		<div class="row text-center">
 
-						{% block maincontent %}
-						{% endblock %}
-				</div>
-			</div>
+				{% block maincontent %}
+				{% endblock %}
 		</div>
 	</div>
+</div>
 
 	<main id="content">
 		<!-- video -->
