@@ -185,6 +185,11 @@ form {
 	left: auto;
 	right: 0;
 }
+
+h2.greenheading {
+	color: #14AB58;
+
+}
 .get-quote legend{
 	margin: 0;
 	font-size: 32px;
