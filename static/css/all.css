@@ -709,6 +709,10 @@ h1.new_header {
 	line-height: 100px;
 }
 
+h1.new_header span {
+	text-transform: none;
+}
+
 
 div.text-center {
 	height: 500px;
