@@ -18,6 +18,14 @@ def evercharge():
 def root():
 	return app.send_static_file('robots.txt')
 
+@app.route('/installspecsfull', methods=['GET'])
+def install_specs():
+	return app.send_static_file('InstallSpecsFull.pdf')
+
+@app.route('/installspecsshort', methods=['GET'])
+def install_specs_short():
+	return app.send_static_file('InstallSpecsShort.pdf')
+
 @app.route('/learnmore', methods= ['GET'])
 def learn_more():
 	return render_template('learn-more.html')
