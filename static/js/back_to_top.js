@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var offset = 300;
+	var offset = 400;
 	var duration = 300;
 	$(window).scroll(function() {
 		if ($(this).scrollTop() > offset) {
@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	$('.back-to-top').click(function(event) {
 		event.preventDefault();
-		$('html, body').animate({scrollTop: 0}, duration);
+		$('html, body').animate({scrollTop: 400}, duration);
 		return false;
 	})
 });
