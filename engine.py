@@ -10,9 +10,12 @@ app = Flask(__name__, static_url_path='')
 
 app.config['SECRET_KEY'] = SECRET_KEY
 
-@app.route('/', methods = ['POST', 'GET'])
-def evercharge():
-	return render_template("index.html")
+
+##############################
+##							##
+##		 STATIC FILES		##
+##							##
+##############################
 
 @app.route('/robots.txt', methods=['GET'])
 def root():
@@ -25,6 +28,21 @@ def install_specs():
 @app.route('/installspecsshort', methods=['GET'])
 def install_specs_short():
 	return app.send_static_file('InstallSpecsShort.pdf')
+
+@app.route('/companyoverview', methods = ['GET'])
+def company_overview():
+	return app.send_static_file('EverChargeOverview.pdf')
+
+
+##############################
+##							##
+##		WEBSITE ROUTES		##
+##							##
+##############################
+
+@app.route('/', methods = ['POST', 'GET'])
+def evercharge():
+	return render_template("index.html")
 
 @app.route('/learnmore', methods= ['GET'])
 def learn_more():
