@@ -157,11 +157,11 @@
 				<ul class="tabset js-ajax-tabs">
 					<li data-href="inc/tab00.html" class="active">
 						<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1">
-						<p>EV Driver</p>
+						<p class='label_form'>EV Driver</p>
 					</li>
 					<li data-href="inc/tab01.html">
 						<input type="radio" value="Property Manager" name="customer_type" class="radio2">
-						<p>Management</p>
+						<p class='label_form'>Management</p>
 					</li>
 
 				</ul>
@@ -190,7 +190,17 @@
 						<input id="postal_code" class="field" type="hidden" name="address_postal_code">
 					</div>
 
-						<input type="submit" value="Get your quote">
+						
+				</div>
+			</div>
+			<div class='col'>
+				<h3>Anything else we should know?</h3>
+				<div class="form-group">
+					<textarea name="quote_notes" height='60' class="form-control" autocomplete="false"></textarea>
+				</div>
+				<input type="submit" value="Get your quote">
+
+			</div>
 	</fieldset>
 </form>
 			</br></br>

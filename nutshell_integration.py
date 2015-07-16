@@ -24,12 +24,11 @@ def add_new_contact(name, email, phone, address1,
 
 	return new_contact
 
-def add_new_lead(contact_id, source, buildingSize=None):
+def add_new_lead(contact_id, source, note=None, buildingSize=None):
 	new_lead = n.newLead(contacts=[{'id': contact_id}], sources=[{'id': source}],
-	 customFields={'Approximate Bldg Size': buildingSize})
+	note=note, customFields={'Approximate Bldg Size': buildingSize})
 	
 	return new_lead
-
 
 
 # Follow-up Form

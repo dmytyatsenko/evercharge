@@ -1021,7 +1021,7 @@ h2.lower_header {
 }
 /* custom radio styles */
 .rad-area {
-	margin: 0;
+	margin: 3px 10px 0 10px;
 	/*float: left;*/
 	width: 57px;
 	height: 57px;
@@ -1029,6 +1029,10 @@ h2.lower_header {
 	background:#e7e7e7 url(../images/sprite2.png) no-repeat;
 }
 
+p.label_form {
+	margin-top: 0;
+	font-size: 13px;
+}
 .rad-area:hover {
 	background-color: #C2C2C2;
 	cursor: pointer;
@@ -1047,8 +1051,8 @@ h2.lower_header {
 .rad-checked:hover {
 	background-color: RGBA(45, 152, 58, 1);
 }
-.jcf-class-radio1{background-position: 0 0; margin:auto;}
-.jcf-class-radio2{background-position: -57px 0; margin: auto;}
+.jcf-class-radio1{background-position: 0 0;}
+.jcf-class-radio2{background-position: -57px 0;}
 .jcf-class-radio3{background-position: -114px 0;}
 .jcf-class-radio4{background-position: -171px 0;}
 .jcf-class-radio5{background-position: -228px 0;}

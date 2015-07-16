@@ -81,6 +81,7 @@ def thank_you():
 	email 		= request.form.get('quote_email')
 	address1 	= request.form.get('address_1')
 	address2 	= request.form.get('address_2')
+	note		= request.form.get('quote_notes')
 
 	if address1:
 		address = address1 + ' ' + address2
@@ -107,7 +108,7 @@ def thank_you():
 
 		contactId 	= new_contact['result']['id']
 
-		newLeadId 	= nut.add_new_lead(contactId, source)['result']['id']
+		newLeadId 	= nut.add_new_lead(contactId, source, note)['result']['id']
 
 		return render_template("evthankyou.html",
 								newLeadId=newLeadId,
@@ -119,7 +120,7 @@ def thank_you():
 			address, city, state, postal_code, country)
 
 		contactId 	= new_contact['result']['id']
-		newLeadId 	= nut.add_new_lead(contactId, source, build_size)['result']['id']
+		newLeadId 	= nut.add_new_lead(contactId, source, note, build_size)['result']['id']
 
 		return render_template("hoathankyou.html",
 								newLeadId=newLeadId,
