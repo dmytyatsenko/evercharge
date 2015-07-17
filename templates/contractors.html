@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+
+{% block bannersize %}
+	<div id="wrapper" class="add">
+{% endblock %}
+
+{% block background %}
+	<img src="images/garage_wall.jpg" alt="image description">
+{% endblock %}
+
+{% block rightheader %}
+{% endblock %}
+
+{% block social_media %}
+{% endblock %}
+
+	
+{% block maincontent %}
+
+	<section class="col-md-12 col-md-offset-2">
+		<div class="row threecolumn">
+		<article class="col-md-16 col-sm-16 col-xs-16">
+			<div id='large_green_circle'>
+				<h1 class='new_header'>CONTRACTORS</h1>
+				<h2 class='tagline hidden_mobile'>
+					Resources for installation and maintenance
+				</h2>
+			</div>
+			
+		</article>
+		</div>
+	</section>
+
+{% endblock %}
+
+{% block content_one %}
+
+<article class='whitejumbo jumbotron'></article>
+
+<section class="parallax narrow" data-speed="4" data-type="background" >
+	<div class="container">
+		<div class="row-fluid">
+			<h1 class='parallax_header'>Installation Specs</h1>
+		</div>
+	</div>
+</section>
+
+
+<div class='row features'>
+	<div class='col-md-8 col-sm-8 process_photos' id='step_one_image'>
+		<div class='show_on_mobile'>
+			<p><a href='#'>Download<br>Full Specifications</a></p>
+		</div>
+	</div>
+	<div class='col-md-8 col-sm-8 hidden-xs process_text'>
+		<div class='vertical_aligned'>
+			<h2 class='step'>Full Specs</h2>
+			<p class='step_title'>
+				<a href='/installspecsfull'>In-Depth Install Specifications</a>
+			</p>
+			<hr class='short'>
+			<p class='step_description'>
+				To be read in full before installing an EverCharge unit.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class='row features'>
+	<div class='col-md-8 col-sm-8 col-xs-16 process_photos' id='step_three_image'>
+		<div class='show_on_mobile'>
+			<p>Download
+				<br>
+			Short Specifications</p>
+		</div>
+	</div>
+	<div class='col-md-8 col-sm-8 hidden-xs process_text'>
+		
+		<div class='vertical_aligned'>
+			<h2 class='step'>Short Specs</h2>
+			<p class='step_title'>
+				<a href='/installspecsshort'>Truncated Install Specifications</a>
+			</p>
+			<hr class='short'>
+			
+			<p class='step_description'>
+				For quick reference, and to keep on-hand for onsite visits.
+			</p>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}
+
+
+
+{% block video %}
+{% endblock %}
+
+{% block quote_form %}
+{% endblock %}
+
+{% block content_one_bottom %}
+{% endblock %}

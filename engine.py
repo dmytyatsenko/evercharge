@@ -70,6 +70,10 @@ def about_us():
 def power_management():
 	return render_template("power-management.html")
 
+# @app.route('/contractors', methods = ['GET'])
+# def contractors():
+# 	return render_template('contractors.html')
+
 @app.route('/faqs', methods = ['POST', 'GET'])
 def faqs():
 	return render_template("faqs.html")
