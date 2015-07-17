@@ -324,8 +324,21 @@ input[type="submit"]{
 	list-style: none;
 }
 
+
+#footer a i {
+	font-size: 30px;
+	text-align: left;
+	margin: 0 10px 10px 10px;
+}
+
+#footer a:hover {
+	text-decoration: none;
+}
+
+
 .footer-nav ul{
 	list-style-type: none;
+
 }
 .footer-nav li{
 
@@ -878,7 +891,7 @@ h4.extra_padded {
 	padding-right: 15%;
 }
 
-#parallax_process {
+.parallax {
 	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/garage_scape.jpg) 50% 0 fixed; 
 
 }
