@@ -1,4 +1,4 @@
-// $(document).ready(function () {
+$(document).ready(function () {
 
 var placeSearch, autocomplete;
 var componentForm = {
@@ -66,5 +66,5 @@ var componentForm = {
         displayKey: 'description',
     });
 
-
+})
 
