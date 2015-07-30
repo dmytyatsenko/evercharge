@@ -37,6 +37,10 @@ def company_overview():
 def potrero_case_study():
 	return app.send_static_file('SF_Case_Study.pdf')
 
+@app.route('/datasheet', methods = ['GET'])
+def data_sheet():
+	return app.send_static_file('evercharge_data_sheet.pdf')
+
 
 ##############################
 ##							##
