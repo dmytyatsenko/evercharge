@@ -41,6 +41,10 @@ def potrero_case_study():
 def data_sheet():
 	return app.send_static_file('evercharge_data_sheet.pdf')
 
+@app.route('/install', methods = ['GET'])
+def install_info():
+	return app.send_static_file('install.pdf')
+
 
 ##############################
 ##							##
