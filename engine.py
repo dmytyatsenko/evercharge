@@ -45,7 +45,6 @@ def data_sheet():
 def install_info():
 	return app.send_static_file('install.pdf')
 
-
 ##############################
 ##							##
 ##		WEBSITE ROUTES		##
