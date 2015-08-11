@@ -45,6 +45,10 @@ def data_sheet():
 def install_info():
 	return app.send_static_file('install.pdf')
 
+@app.route('/preferred', methods = ['GET'])
+def preferred_electricians():
+	return app.send_static_file('preferred.pdf')
+
 ##############################
 ##							##
 ##		WEBSITE ROUTES		##
