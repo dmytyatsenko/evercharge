@@ -65,12 +65,12 @@ def learn_more():
 
 @app.route('/ev-owner', methods = ['POST', 'GET'])
 def ev_owner():
-	return render_template("inner-owner.html")
+	return redirect('/')
 
 @app.route('/building-management', methods = ['POST', 'GET'])
 def hoa_property_manager():
 	# print  nut.search_sources('Web')
-	return render_template("inner-pms.html")
+	return redirect('/')
 
 @app.route('/aboutus', methods = ['POST', 'GET'])
 def about_us():
