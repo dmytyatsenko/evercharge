@@ -92,6 +92,7 @@ def faqs():
 @app.route('/thankyou', methods = ['POST', 'GET'])
 def thank_you():
 	name 		= request.form.get('quote_name')
+	print name
 	phone 		= request.form.get('quote_phone')
 	email 		= request.form.get('quote_email')
 	address1 	= request.form.get('address_1')
@@ -114,32 +115,36 @@ def thank_you():
 	print build_size
 	
 	source		= ''
-	if cust_type == 'EV Driver':
-		source 	=  29
-		new_contact = nut.add_new_contact(name, email, phone,
-				address, city, state, postal_code, country, veh_type)
-
-		# print new_contact
-
-		contactId 	= new_contact['result']['id']
-
-		newLeadId 	= nut.add_new_lead(contactId, source, note)['result']['id']
-
-		return render_template("evthankyou.html",
-								newLeadId=newLeadId,
-								contactId=contactId)
-
+	if name == None:
+		return redirect('/')
 	else:
-		source =  33
-		new_contact = nut.add_new_contact(name, email, phone,
-			address, city, state, postal_code, country)
 
-		contactId 	= new_contact['result']['id']
-		newLeadId 	= nut.add_new_lead(contactId, source, note, build_size)['result']['id']
+		if cust_type == 'EV Driver':
+			source 	=  29
+			new_contact = nut.add_new_contact(name, email, phone,
+					address, city, state, postal_code, country, veh_type)
 
-		return render_template("hoathankyou.html",
-								newLeadId=newLeadId,
-								contactId=contactId)
+			# print new_contact
+
+			contactId 	= new_contact['result']['id']
+
+			newLeadId 	= nut.add_new_lead(contactId, source, note)['result']['id']
+
+			return render_template("evthankyou.html",
+									newLeadId=newLeadId,
+									contactId=contactId)
+
+		else:
+			source =  33
+			new_contact = nut.add_new_contact(name, email, phone,
+				address, city, state, postal_code, country)
+
+			contactId 	= new_contact['result']['id']
+			newLeadId 	= nut.add_new_lead(contactId, source, note, build_size)['result']['id']
+
+			return render_template("hoathankyou.html",
+									newLeadId=newLeadId,
+									contactId=contactId)
 
 @app.route('/nutshell/parkingspot', methods = ['POST', 'GET'])
 def parking_spot():
