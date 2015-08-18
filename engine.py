@@ -98,6 +98,9 @@ def thank_you():
 	address1 	= request.form.get('address_1')
 	address2 	= request.form.get('address_2')
 	note		= request.form.get('quote_notes')
+	# print note == ''
+	if note == '':
+		note = "No Customer Note"
 
 	if address1:
 		address = address1 + ' ' + address2
@@ -117,6 +120,7 @@ def thank_you():
 	source		= ''
 	if name == None:
 		return redirect('/')
+
 	else:
 
 		if cust_type == 'EV Driver':
@@ -127,8 +131,8 @@ def thank_you():
 			# print new_contact
 
 			contactId 	= new_contact['result']['id']
-
-			newLeadId 	= nut.add_new_lead(contactId, source, note)['result']['id']
+			newLead 	= nut.add_new_lead(contactId, source, note)
+			newLeadId = newLead['result']['id']
 
 			return render_template("evthankyou.html",
 									newLeadId=newLeadId,
