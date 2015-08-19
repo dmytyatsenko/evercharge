@@ -51,6 +51,23 @@ def preferred_electricians():
 
 ##############################
 ##							##
+##		ADMIN ROUTES		##
+##							##
+##############################
+
+@app.route('/login', methods = ['GET', 'POST'])
+def customer_login():
+	error = None
+	if request.method == 'POST':
+		error = "User not recognized. If you are an existing EverCharge customer, and have not yet received your login information, EverCharge will contact you shortly."
+
+	return render_template('login.html',
+							error=error)
+
+
+
+##############################
+##							##
 ##		WEBSITE ROUTES		##
 ##							##
 ##############################

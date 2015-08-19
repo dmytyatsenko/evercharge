@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+
+{% block bannersize %}
+	<div id="wrapper" class="add">
+{% endblock %}
+
+{% block background %}
+	<img src="images/garage_wall.jpg" alt="image description">
+{% endblock %}
+
+{% block rightheader %}
+{% endblock %}
+
+{% block social_media %}
+{% endblock %}
+
+{%block video %}
+{% endblock %}
+
+	
+{% block maincontent %}
+
+	<section class="col-md-12 col-md-offset-2">
+		<div class="row threecolumn">
+		<article class="col-md-16 col-sm-16 col-xs-16">
+			<div id='large_green_circle'>
+				<h1 class='new_header'>CUSTOMER LOGIN</h1>
+				<h2 class='tagline hidden_mobile'>
+					If you are an existing EverCharge customer, login below to access account, charging, and billing information.
+				</h2>
+			</div>
+			
+		</article>
+		</div>
+	</section>
+
+{% endblock %}
+{% block quote_form %}
+<form id='login' action="", method='post' class="get-quote validate-form">
+	<fieldset>
+		<legend id="quote"></legend>
+
+		<div class="form-group login-page">
+			<input type="email" placeholder="Email Address" name="email" class="form-control">
+		</div>
+		<div class="form-group login-page">
+			<input type="password" placeholder="Password" name="password" class="form-control">
+		</div>
+
+		{% if error %}
+		<div id="login_error">
+			<center>
+				<p class=error><strong>Error:</strong> {{ error }}</p>
+			</center>
+		</div>
+		{% endif %}
+		
+
+			<div class="btn-wrapper">
+				<input id="final_submit_button" type="submit" value="LOGIN">
+			</div>
+	</fieldset>
+
+	{{ building }}
+
+	{% endblock %}
