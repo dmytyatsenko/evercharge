@@ -712,12 +712,15 @@ nav.navbar-fixed-top {
 	vertical-align: middle;
 }
 
+i#white {
+	color: white;
+}
 h1.new_header {
 	font-family: 'Source Sans Pro', serif;
 	text-transform: uppercase;
 	font-weight: 200;
 	font-size: 70px;
-	padding-top: 25%;
+	padding-top: 30%;
 	line-height: 100px;
 }
 
@@ -726,7 +729,7 @@ h1.new_header span {
 }
 
 div.text-center {
-	height: 450px;
+	height: 500px;
 	overflow: hidden;
 	vertical-align: middle;
 }
