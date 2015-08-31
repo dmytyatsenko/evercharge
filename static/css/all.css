@@ -729,9 +729,8 @@ h1.new_header span {
 }
 
 button.homeNav {
-	margin-right: 15px;
-	margin-left: 15px;
 	width: 220px;
+	margin-bottom: 10px;
 }
 
 div.text-center {
@@ -959,7 +958,7 @@ img.distinguishing {
 }
 
 img.header_logo {
-	height: 50px;
+	height: 46px;
 }
 
 h2.diff_title {
@@ -1186,6 +1185,9 @@ p.label_form {
 		padding-bottom: 10px;
 	}
 
+	button.homeNav {
+		margin-bottom: 10px;
+	}
 	#header{
 		padding: 11px 5px 36px;
 		margin: 0;
