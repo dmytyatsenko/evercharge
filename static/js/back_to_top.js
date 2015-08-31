@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 	$('.back-to-top').click(function(event) {
 		event.preventDefault();
-		$('html, body').animate({scrollTop: 400}, duration);
+		$('html, body').animate({scrollTop: 350}, duration);
 		return false;
 	})
 });

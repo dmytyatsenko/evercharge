@@ -720,7 +720,7 @@ h1.new_header {
 	text-transform: uppercase;
 	font-weight: 200;
 	font-size: 70px;
-	padding-top: 30%;
+	padding-top: 20%;
 	line-height: 100px;
 }
 
@@ -728,8 +728,14 @@ h1.new_header span {
 	text-transform: none;
 }
 
+button.homeNav {
+	margin-right: 15px;
+	margin-left: 15px;
+	width: 220px;
+}
+
 div.text-center {
-	height: 500px;
+	height: 410px;
 	overflow: hidden;
 	vertical-align: middle;
 }
@@ -868,7 +874,7 @@ article.options:hover {
 	width: 100%; 
 	position: relative; 
 	box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
-	padding: 125px 0;
+	padding: 75px 0;
 	-webkit-filter:  grayscale(100%);
 	-moz-filter:  grayscale(100%);
 	-o-filter:  grayscale(100%);

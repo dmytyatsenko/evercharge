@@ -3,7 +3,7 @@ var emeryville = new google.maps.LatLng(37.825187, -122.289265);
 var bolt = new google.maps.LatLng(37.800081, -122.397838);
 var bay = new google.maps.LatLng(37.807980, -122.369946)
 
-var emeryString = '<h3>3425 Ettie Street</h3>'+
+var emeryString = '<h3>Homebase</h3>'+
                   'Emeryville, CA 94608'
 var boltString = '<h3>PIER 9</h3>'+
       'San Francisco, CA 94111'
