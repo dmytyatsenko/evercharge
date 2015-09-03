@@ -416,7 +416,7 @@ footer article h4{
 }
 
 
-
+#map-canvas img{max-width:none;}
 .greyjumbo {
 	background-color: #E7E7E7;
 	color: RGBA(50, 50, 50, 1);

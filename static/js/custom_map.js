@@ -6,7 +6,7 @@ var bay = new google.maps.LatLng(37.807980, -122.369946)
 var emeryString = '<h3>Homebase</h3>'+
                   'Emeryville, CA 94608'
 var boltString = '<h3>PIER 9</h3>'+
-      'San Francisco, CA 94111'
+                  'San Francisco, CA 94111'
 
 var MY_MAPTYPE_ID = 'custom_style';
 
