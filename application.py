@@ -99,9 +99,9 @@ def about_us():
 	# print nut.search_contacts(50169)
 	return render_template("about-us.html")
 
-@app.route('/powermanagement', methods = ['POST', 'GET'])
-def power_management():
-	return render_template("power-management.html")
+@app.route('/smartpower', methods = ['POST', 'GET'])
+def smart_power():
+	return render_template("smart-power.html")
 
 # @app.route('/contractors', methods = ['GET'])
 # def contractors():

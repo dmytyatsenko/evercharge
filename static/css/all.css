@@ -909,6 +909,17 @@ h1.parallax_header {
 	font-weight: 100;
 }
 
+h2.smart_power, h1.smart_power {
+	text-transform: none;
+}
+
+sup.header {
+	line-height: 1em;
+	font-size: .3em;
+	vertical-align: super;
+
+}
+
 article.white_space {
 	padding-top: 100px;
 	padding-bottom: 100px;
