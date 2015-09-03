@@ -4,11 +4,16 @@ import nutshell_integration as nut
 from datetime import datetime
 import time
 
+
 SECRET_KEY 	= os.environ.get("FLASK_SECRET_KEY")
 
-app = Flask(__name__, static_url_path='')
+application = Flask(__name__, static_url_path='')
+app = application
 
-app.config['SECRET_KEY'] = SECRET_KEY
+if SECRET_KEY:
+	app.config['SECRET_KEY'] = SECRET_KEY
+else:
+	app.config['SECRET_KEY'] = 'testingkey'
 
 
 ##############################
