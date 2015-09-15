@@ -5,8 +5,6 @@ n = Nutshell('kate@evercharge.net', '91bd928f9b1cf611b758d15e44849227c7d46389')
 def search_contacts(query):
 	return n.getContact(query)
 
-
-
 def get_lead(query):
 	return n.getLead(query)
 
@@ -21,15 +19,13 @@ def add_new_contact(name, email, phone, address1,
 		'state': state, 'postalCode' : zipcode, 'country': country}],
 		customFields={'Vehicle': vehicleType,})
 
-
 	return new_contact
 
 def add_new_lead(contact_id, source, note=None, buildingSize=None):
 	new_lead = n.newLead(contacts=[{'id': contact_id}], sources=[{'id': source}],
 	note=note, customFields={'Approximate Bldg Size': buildingSize})
-	
-	return new_lead
 
+	return new_lead
 
 # Follow-up Form
 
@@ -60,7 +56,7 @@ class UpdateLead(object):
 	def miles(self, rev, daily_commute):
 		edited_lead = n.editLead(self.lead_id, rev, customFields=
 			{'Average Daily Commute': daily_commute})
-		print edited_lead
+
 		return edited_lead
 
 	def spot_type(self, rev, spot_type):
@@ -87,9 +83,6 @@ class UpdateLead(object):
 
 		return edited_lead
 
-
-
-
 class UpdateContact(object):
 	"""Update account after initial quote request"""
 	def __init__(self, contact_id):
@@ -105,9 +98,7 @@ class UpdateContact(object):
 	def ev_ownership_status(self, rev, ownership_status):
 		edited_contact = n.editContact(self.contact_id, rev, customFields=
 			{'EV Owner': ownership_status})
-
-		print edited_contact
-
+		
 		return edited_contact
 
 

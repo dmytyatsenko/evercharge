@@ -103,10 +103,6 @@ def about_us():
 def smart_power():
 	return render_template("smart-power.html")
 
-# @app.route('/contractors', methods = ['GET'])
-# def contractors():
-# 	return render_template('contractors.html')
-
 @app.route('/faqs', methods = ['POST', 'GET'])
 def faqs():
 	return render_template("faqs.html")
@@ -114,13 +110,12 @@ def faqs():
 @app.route('/thankyou', methods = ['POST', 'GET'])
 def thank_you():
 	name 		= request.form.get('quote_name')
-	print name
 	phone 		= request.form.get('quote_phone')
 	email 		= request.form.get('quote_email')
 	address1 	= request.form.get('address_1')
 	address2 	= request.form.get('address_2')
 	note		= request.form.get('quote_notes')
-	# print note == ''
+
 	if note == '':
 		note = "No Customer Note"
 
@@ -154,8 +149,7 @@ def thank_you():
 
 			contactId 	= new_contact['result']['id']
 			newLead 	= nut.add_new_lead(contactId, source, note)
-			newLeadId = newLead['result']['id']
-
+			newLeadId 	= newLead['result']['id']
 			return render_template("evthankyou.html",
 									newLeadId=newLeadId,
 									contactId=contactId)
@@ -171,6 +165,19 @@ def thank_you():
 			return render_template("hoathankyou.html",
 									newLeadId=newLeadId,
 									contactId=contactId)
+
+
+@app.route('/testthankyou', methods=['POST', 'GET'])
+def test_thanks():
+	"""Route to test follow-up form template updates and scheduling
+
+	implementation without creating new Nutshell leads"""
+
+
+	return render_template('evthankyou.html',
+							newLeadId='newLeadId',
+							contactId='contactId')
+
 
 @app.route('/nutshell/parkingspot', methods = ['POST', 'GET'])
 def parking_spot():
