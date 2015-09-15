@@ -11,9 +11,12 @@
 			<div id='large_green_circle'>
 				<h1 class='new_header'>Thank You</h1>
 				<h2 class='tagline hidden_mobile'>
+					We'll be in touch shortly.
+					<hr class='short'>
 					Want to talk to someone now?
 					<br>
-					Give us a call,<br><a href='tel:8883427383'>888.342.7383</a>
+					Give us a call at <a href='tel:8883427383'>888.342.7383</a>
+					<br>
 				</h2>
 			</div>
 		</article>
@@ -48,16 +51,28 @@
 {% endblock %}
 
 {% block quote_form %}	
-<br>
-<br>
+
 </div>
+
+
+<article class='jumbotron '>
+	<h1>Schedule a Call</h1>
+	<hr class='short'>
+	<h4>If you'd prefer, you can schedule a time that is convenient for you and a member of our Member Services team will give you a call.</h4>
+	<br>
+
+	<a href='https://calendly.com/evercharge' target='_blank'>
+		<button class="flat_button">Schedule Now</button>
+	</a>
+</article>
+<article class='jumbotron whitejumbo'></article>
 
 <div style='display:none;'>
 	<iframe id='submit_frame' name='submit_frame'></iframe>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -76,7 +91,7 @@
 </div>
 </div>
 
-
+ -->
 <form action='/nutshell/submit' class='get-quote validate-form' id='existing_customer'
 method='post' name='existing_customer' target='submit_frame'>
 <input name='lead_id' type='hidden' value='{{ newLeadId }}'>
@@ -94,9 +109,7 @@ method='post' name='existing_customer' target='submit_frame'>
 	<form action='/nutshell/existingcustomer' class='validate-form' id='existing_customer_form' method='post' name='existing_customer_form' target='submit_frame'>
 		<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
 		<!-- Button trigger modal -->
-			<button type="button" class="flat_button" data-toggle="modal" data-target="#myModal">
-				Schedule an Appointment
-			</button>
+
 		<h3>Is EverCharge Already in your Building?</h3>
 		
 		<div class='row features' id='customer_listener'>
