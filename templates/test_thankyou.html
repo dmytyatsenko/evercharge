@@ -57,6 +57,29 @@
 </div>
 
 
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Select an Available Time</h4>
+      </div>
+      <div class="modal-body">
+      	<center>
+        	<iframe src="https://www.google.com/calendar/b/0/selfsched?sstoken=UU9waDRaR1htN0xnfGRlZmF1bHR8ZGY0ZTUzOGE1YTExODM3OWEyZWI0MzBiMTlmMzE4Yjc" frameborder="0" scrolling="no" width="500" height="600"></iframe>
+    	</center>
+      <div class="modal-footer">
+        <button type="button" class="flat_button" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
 <form action='/nutshell/submit' class='get-quote validate-form' id='existing_customer'
 method='post' name='existing_customer' target='submit_frame'>
 <input name='lead_id' type='hidden' value='{{ newLeadId }}'>
@@ -73,7 +96,10 @@ method='post' name='existing_customer' target='submit_frame'>
 
 	<form action='/nutshell/existingcustomer' class='validate-form' id='existing_customer_form' method='post' name='existing_customer_form' target='submit_frame'>
 		<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-
+		<!-- Button trigger modal -->
+			<button type="button" class="flat_button" data-toggle="modal" data-target="#myModal">
+				Schedule an Appointment
+			</button>
 		<h3>Is EverCharge Already in your Building?</h3>
 
 

@@ -174,7 +174,7 @@ def test_thanks():
 	implementation without creating new Nutshell leads"""
 
 
-	return render_template('evthankyou.html',
+	return render_template('test_thankyou.html',
 							newLeadId='newLeadId',
 							contactId='contactId')
 
