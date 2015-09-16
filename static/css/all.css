@@ -781,6 +781,12 @@ button.flat_button {
 	font-weight: 200;
 }
 
+iframe {
+	border: none;
+	height: 650px;
+	width: 95%;
+}
+
 li.pop_of_red {
 	background-color: RGBA(247, 112, 91, 1);
 	height: 75px;
