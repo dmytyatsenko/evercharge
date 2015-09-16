@@ -783,6 +783,19 @@ button.flat_button {
 	font-weight: 200;
 }
 
+button.scroll-down {
+	margin: 45px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+	display: none;
+	text-decoration: none;
+	padding: 20px;
+	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+	-webkit-transform: translateZ(0);
+	}
+
 iframe {
 	border: none;
 	height: 650px;
@@ -1002,7 +1015,7 @@ article.no_padding {
 }
 
 
-.back-to-top, .scroll-down {
+.back-to-top,{
 	background: none;
 	margin: 0;
 	position: fixed;
@@ -1016,7 +1029,9 @@ article.no_padding {
 	color: RGBA(20, 171, 88, 1);
 }
 
-.back-to-top i, .scroll-down i {
+
+
+.back-to-top i {
 	font-size: 80px;
 	/*display: none;*/
 }
@@ -1210,7 +1225,11 @@ p.label_form {
 		padding-top: 10px;
 		padding-bottom: 10px;
 	}
-
+	button.scroll-down {
+		width: 100%;
+		margin: 0;
+		
+	}
 	button.homeNav {
 		margin-bottom: 10px;
 	}
