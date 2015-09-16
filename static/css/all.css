@@ -740,10 +740,10 @@ div.text-center {
 }
 
 h2.tagline {
-	padding: 10px 100px 10px 100px;
+	padding: 0px 100px 10px 100px;
 	font-family: 'Source Sans Pro', serif;
 	font-weight: 100;
-	line-height: 35px;
+	line-height: 30px;
 	font-size: 25px;
 }
 
@@ -779,6 +779,12 @@ button.flat_button {
 	color: white;
 	padding: 15px;
 	font-weight: 200;
+}
+
+iframe {
+	border: none;
+	height: 650px;
+	width: 95%;
 }
 
 li.pop_of_red {
@@ -1044,6 +1050,10 @@ p.error {
 	font-size: 15px;
 }
 
+p.form_more_info {
+	font-size: 15px;
+	color: #3C3D39;
+}
 /* ---------------------------------------------------------
 	3. Custom form styles
    ---------------------------------------------------------*/
@@ -1064,8 +1074,11 @@ p.error {
 }
 
 p.label_form {
-	margin-top: 0;
+	margin-top: 5px;
 	font-size: 13px;
+	line-height: 1.5rem;
+	color: #3C3D39;
+	font-weight: 400;
 }
 .rad-area:hover {
 	background-color: #C2C2C2;
