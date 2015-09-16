@@ -310,12 +310,14 @@ input[type="submit"]{
 /* copyright */
 #footer .copyright{
 	float: right;
-	font-size: 11px;
+	font-size: 12px;
 	line-height: 18px;
 	width: 100%;
 	text-align: center;
+	font-weight: 100;
+
 }
- footer nav styles 
+ /*footer nav styles */
 #footer .footer-nav{
 	float: left;
 	width: 60%;
@@ -1000,7 +1002,7 @@ article.no_padding {
 }
 
 
-.back-to-top {
+.back-to-top, .scroll-down {
 	background: none;
 	margin: 0;
 	position: fixed;
@@ -1014,7 +1016,7 @@ article.no_padding {
 	color: RGBA(20, 171, 88, 1);
 }
 
-.back-to-top i {
+.back-to-top i, .scroll-down i {
 	font-size: 80px;
 	/*display: none;*/
 }
