@@ -992,11 +992,17 @@ img.header_logo {
 	height: 46px;
 }
 
+
 h2.diff_title {
 	font-weight: 100;
 	text-transform: uppercase;
-	font-size: ;
 }
+
+h2.smart_power, h1.smart_power {
+	text-transform: none;
+}
+
+
 
 p.diff_text {
 	font-size: 2rem;
