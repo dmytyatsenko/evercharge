@@ -23,7 +23,7 @@ html, body {
 
 img{vertical-align: top; border:none; height: auto;}
 input[type=image]{padding:0;border:none;}
-input [type=email],
+input[type=email],
 input[type=search],
 input[type=text],
 input[type=password],
@@ -1268,7 +1268,7 @@ p.label_form {
 	.navbar-toggle .icon-bar{
 		height: 1px;
 		padding-top: 7px;
-		width: 50px;
+		width: 44px;
 	}
 	.navbar-toggle .icon-bar + .icon-bar{margin-top: 7px;}
 	.navbar-collapse{
@@ -1589,6 +1589,7 @@ p.label_form {
 		font-weight: 200;
 		text-align: center;
 		background-color: RGBA(20, 171, 88, .6);
+		width: 100%;
 	}
 
 	.show_on_mobile>p {
