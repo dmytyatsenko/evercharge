@@ -22,9 +22,7 @@ var fadeNavbar = function() {
 
 //Checking for mobile to disable navbar fade
 
-
 if($(window).width() < 480) { 
-    // do any 480 width stuff here, or simply do nothing
     var mobile = true;
 } else {
 	fadeNavbar();
