@@ -69,8 +69,6 @@ def customer_login():
 	return render_template('login.html',
 							error=error)
 
-
-
 ##############################
 ##							##
 ##		WEBSITE ROUTES		##
@@ -171,6 +169,7 @@ def thank_you():
 									contactId=contactId)
 
 
+<<<<<<< HEAD
 @app.route('/testthankyou', methods=['POST', 'GET'])
 def test_thanks():
 	"""Route to test follow-up form template updates and scheduling
@@ -191,6 +190,16 @@ def update_address_in_nutshell():
 	contact_id = request.form.get('contact_id')
 
 	nut.UpdateContact(contact_id).address('REV_IGNORE', address, city, state)
+
+@app.route('/press', methods = ['POST', 'GET'])
+def press_page():
+
+	return render_template('press.html')
+
+# @app.route('/testthankyou', methods=['POST', 'GET'])
+# def test_thanks():
+# 	"""Route to test follow-up form template updates and scheduling
+
 
 	return "Successfully updated %r's address" % contact_id
 
