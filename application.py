@@ -69,8 +69,6 @@ def customer_login():
 	return render_template('login.html',
 							error=error)
 
-
-
 ##############################
 ##							##
 ##		WEBSITE ROUTES		##
@@ -166,6 +164,11 @@ def thank_you():
 									newLeadId=newLeadId,
 									contactId=contactId)
 
+
+@app.route('/press', methods = ['POST', 'GET'])
+def press_page():
+
+	return render_template('press.html')
 
 # @app.route('/testthankyou', methods=['POST', 'GET'])
 # def test_thanks():
