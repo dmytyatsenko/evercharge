@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'layout/base.html' %}
 
 {% block background %}
 	<img src="images/three_char.jpg" alt="image description" width="1200" height="526">
@@ -30,8 +30,34 @@
 	</div>
 </section>
 
-<article class='jumbotron'>
-ADMIN INFORMATION
+<article class='jumbotron whitejumbo'>
+<h2>We go by:</h2>
+<h4>EverCharge</h4>
+<hr class='short'>
+
+<h2>We do not go by:</h2>
+<h4>Evercharge</h4>
+<h4>evercharge</h4>
+<h4>eVerCHarGe</h4>
+<hr class='short'>
+
+<h2>What we do:</h2>
+<h4>A lot of cool shit that Joseph is going to write about</h4>
+<hr class='short'>
+
+<h2>Our History:</h2>
+<h4>Is long and storied</h4>
+<h4 class='short'>
+
+<h2>Social Media Links</h2>
+<a href="https://twitter.com/evercharge">
+	<i class="fa fa-twitter-square"></i>
+</a>
+<a href="https://www.facebook.com/evevercharge">
+	<i class="fa fa-facebook-square"></i>
+</a>
+
+
 </article>
 
 <section class="parallax" data-speed="4" data-type="background" >
@@ -54,7 +80,7 @@ LOGO
 	</div>
 </section>
 
-<article class='jumbotron'>
+<article class='jumbotron whitejumbo'>
 COLORS
 </article>
 
@@ -70,9 +96,10 @@ COLORS
 VIDEOS
 </article>
 
-<button class='scroll-down flat_button'>Get your Quote</button>
 {% endblock %}
 
+{% block quote_form %}
+{% endblock %}
 
 {% block custom_scripts %}
 {% endblock %}

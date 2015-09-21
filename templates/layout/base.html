@@ -9,21 +9,21 @@
 	<!-- set the viewport width and initial-scale on mobile devices -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>EverCharge - Smart EV Charging for Apartments and Condominiums</title>
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="{{url_for('static', filename='/favicon.ico') }}" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
 	<!-- include the site stylesheet -->
 
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='//css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='//css/bootstrap-theme.min.css') }}">
 	
 
 	<!-- <link rel='stylesheet' href='/css/all.css'> -->
 	<!-- <link rel='stylesheet' hreft='/css/modal.css'> -->
 	
-	<link rel="stylesheet" href="/css/all.min.css">
-	<link rel="stylesheet" href="/css/modal.min.css">
-	<link rel="stylesheet" type="text/css" href="/css/shadowbox.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='//css/all.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='//css/modal.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/shadowbox.css') }}">
 	<link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
 
 	<!-- include the google font -->
