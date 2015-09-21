@@ -85,6 +85,8 @@ a:focus{outline: none !important; text-decoration: none;}
 .jumbotron h1 {
 	font-size: 40px;
 	font-weight: 300;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 .banner h2{
 	font-size: 20px;
@@ -946,13 +948,18 @@ h2.press {
 	margin-bottom: 35px;
 }
 
+img#press_logo {
+	width: 65%;
+}
+
 div.color_circle {
-	width: 200px;
-	height: 200px;
+	width: 175px;
+	height: 175px;
 	margin: auto;
-	border: 10px #D3D3D3 solid;
+	border: 6px #E7E7E7 solid;
 	border-radius: 50%;
 	background-color: #14AB58;
+	margin-bottom: 15px;
 }
 
 sup.header {
