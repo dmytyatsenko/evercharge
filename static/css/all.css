@@ -327,11 +327,12 @@ input[type="submit"]{
 }
 
 
-#footer a i {
+#footer a i,{
 	font-size: 30px;
 	text-align: left;
 	margin: 0 10px 10px 10px;
 }
+
 
 #footer a:hover {
 	text-decoration: none;
@@ -781,10 +782,11 @@ button.flat_button {
 	color: white;
 	padding: 15px;
 	font-weight: 200;
+	margin: 10px;
 }
 
 button.scroll-down {
-	margin: 45px;
+	margin: 15px;
 	position: fixed;
 	bottom: 0;
 	right: 0;
@@ -929,8 +931,21 @@ h1.parallax_header {
 	font-weight: 100;
 }
 
-h2.smart_power, h1.smart_power {
+h2.smart_power, h1.smart_power, h2.press {
 	text-transform: none;
+}
+
+h2.press {
+	margin-bottom: 35px;
+}
+
+div.color_circle {
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	border: 10px #D3D3D3 solid;
+	border-radius: 50%;
+	background-color: #14AB58;
 }
 
 sup.header {
