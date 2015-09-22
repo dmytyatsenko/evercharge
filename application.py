@@ -48,7 +48,7 @@ def data_sheet():
 
 @app.route('/install', methods = ['GET'])
 def install_info():
-	return app.send_static_file('install.pdf')
+	return app.send_static_file('InstallSpecsShort.pdf')
 
 @app.route('/preferred', methods = ['GET'])
 def preferred_electricians():
