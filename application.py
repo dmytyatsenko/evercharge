@@ -179,6 +179,15 @@ def thank_you():
 # 							contactId='contactId')
 
 
+@app.route('/nutshell/phonenumber', methods = ['POST', 'GET'])
+def phone_number():
+	phone_number = request.form.get('phone_number')
+	new_contact_id = request.form.get('contact_id')
+
+	nut.UpdateContact(new_contact_id).phone_number('REV_IGNORE', phone_number)
+
+	return "Successfully updated Phone Number"
+
 @app.route('/nutshell/parkingspot', methods = ['POST', 'GET'])
 def parking_spot():
 	spot_type 		= request.form.get('parking_type')

@@ -176,3 +176,9 @@ function customerSubmit()
 		}
 	}
 };
+
+// PHONE NUMBER
+function phoneSubmit()
+	{
+		document.getElementById("phone_number_form").submit();
+	}
