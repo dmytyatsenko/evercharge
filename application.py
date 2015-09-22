@@ -167,17 +167,26 @@ def thank_you():
 									contactId=contactId)
 
 
-# @app.route('/testthankyou', methods=['POST', 'GET'])
-# def test_thanks():
-# 	"""Route to test follow-up form template updates and scheduling
+@app.route('/testthankyou', methods=['POST', 'GET'])
+def test_thanks():
+	"""Route to test follow-up form template updates and scheduling
 
-# 	implementation without creating new Nutshell leads"""
+	implementation without creating new Nutshell leads"""
 
 
-# 	return render_template('test_thankyou.html',
-# 							newLeadId='newLeadId',
-# 							contactId='contactId')
+	return render_template('test_thankyou.html',
+							newLeadId='newLeadId',
+							contactId='contactId')
 
+
+@app.route('/nutshell/phonenumber', methods = ['POST', 'GET'])
+def phone_number():
+	phone_number = request.form.get('phone_number')
+	new_contact_id = request.form.get('contact_id')
+
+	nut.UpdateContact(new_contact_id).phone_number('REV_IGNORE', phone_number)
+
+	return "Successfully updated Phone Number"
 
 @app.route('/nutshell/parkingspot', methods = ['POST', 'GET'])
 def parking_spot():

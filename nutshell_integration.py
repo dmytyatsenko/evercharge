@@ -98,6 +98,11 @@ class UpdateContact(object):
 	def ev_ownership_status(self, rev, ownership_status):
 		edited_contact = n.editContact(self.contact_id, rev, customFields=
 			{'EV Owner': ownership_status})
+
+		return edited_contact
+
+	def phone_number(self, rev, phone_number):
+		edited_contact = n.editContact(self.contact_id, rev, phone=phone_number)
 		
 		return edited_contact
 
