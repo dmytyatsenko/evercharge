@@ -1268,7 +1268,7 @@ p.label_form {
 
 	.navbar-toggle{
 		padding: 20px;
-		margin-right: 2px;
+		/*margin-right: 2px;*/
 		background-color: #14AB58;
 	}
 	.navbar-toggle .icon-bar{
@@ -1280,18 +1280,19 @@ p.label_form {
 	.navbar-collapse{
 		position: absolute;
 		/*top: 21px;*/
-		right: 2px;
-		width: 240px;
+		/*right: 2px;*/
+		max-height: 1000px;
+		width: 100%;
 		border:none;
 		z-index: 2;
-		padding: 10px;
+		padding: 20px;
 		background: RGBA(20, 171, 88, .85);
 	}
 
 	.navbar-nav>li>a {
-		font-size: 18px;
-		line-height: 20px;
-		padding: 5px;
+		font-size: 22px;
+		line-height: 25px;
+		padding: 20px;
 	}
 	#nav li{
 		float: none;
