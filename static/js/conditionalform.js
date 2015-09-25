@@ -182,3 +182,8 @@ function phoneSubmit()
 	{
 		document.getElementById("phone_number_form").submit();
 	}
+
+// ADDRESS
+function addressSumbit() {
+	document.getElementById('address_form').submit();
+}

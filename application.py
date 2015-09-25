@@ -167,17 +167,28 @@ def thank_you():
 									contactId=contactId)
 
 
-# @app.route('/testthankyou', methods=['POST', 'GET'])
-# def test_thanks():
-# 	"""Route to test follow-up form template updates and scheduling
+@app.route('/testthankyou', methods=['POST', 'GET'])
+def test_thanks():
+	"""Route to test follow-up form template updates and scheduling
 
-# 	implementation without creating new Nutshell leads"""
+	implementation without creating new Nutshell leads"""
 
 
-# 	return render_template('test_thankyou.html',
-# 							newLeadId='newLeadId',
-# 							contactId='contactId')
+	return render_template('test_thankyou.html',
+							newLeadId='newLeadId',
+							contactId='contactId')
 
+
+@app.route('/nutshell/address', methods = ['POST', 'GET'])
+def update_address_in_nutshell():
+	address = request.form.get('address')
+	city = request.form.get('city')
+	state = request.form.get('state')
+	contact_id = request.form.get('contact_id')
+
+	nut.UpdateContact(contact_id).address('REV_IGNORE', address, city, state)
+
+	return "Successfully updated %r's address" % contact_id
 
 @app.route('/nutshell/phonenumber', methods = ['POST', 'GET'])
 def phone_number():

@@ -129,13 +129,34 @@ method='post' name='existing_customer' target='submit_frame'>
 		<input name='contact_id' type='hidden' value='{{ contactId }}'>
 		<h3>What's the best number where we can reach you?</h3>
 		<input name='phone_number' type='tel' class='form-control bfh-phone'
-		placeholder='Phone Number' data-format='ddd-ddd-dddd' autocompelte='false'
-		onchange='phoneSubmit()'>
+		placeholder='Phone Number' data-format='ddd-ddd-dddd' onchange='phoneSubmit()'>
 		<br>
 	</form>
 	<br>
 	<hr>
 	<br>
+
+
+
+	<form action='/nutshell/address' id='address_form' method='post' name='address_form' target='submit_frame'>
+		<input name='contact_id' type='hidden' value='{{ contactId }}'>
+		<h3>Where are you located?</h3>
+			<div class='row columns'>
+				<div class="col-md-5 col-xs-16">
+					<input name='building_name' type='text' class='form-control' onchange='addressSubmit()' placeholder ='Building Name'>
+					<br>
+				</div>
+				<div class="col-md-5 col-xs-16">
+					<input name='address' type='text' class='form-control' onchange='addressSubmit()' placeholder='Address'>
+				</div>
+				<div class="col-md-6 col-xs-16">
+					<input name='city' type='text' class='form-control' onchange='addressSubmit()' placeholder = 'City'>
+				</div>
+			</div>
+	</form>
+	<hr>
+	<br>
+
 	<form action='/nutshell/parkingspot' class='validate-form' id=
 	'parking_spot_form' method='post' name='parking_spot_form' target=
 	'submit_frame'>
