@@ -791,6 +791,9 @@ button.case_study {
 	margin-bottom: 10px;
 	background-color: #239096;
 }
+button.normalize_case {
+	text-transform: none;
+}
 
 button.scroll-down {
 	margin: 15px;
