@@ -66,15 +66,7 @@
 </div>
 
 
-<article class='jumbotron '>
-	<h1>Schedule a Call</h1>
-	<hr class='short'>
-	<h4>If you'd prefer, you can schedule a time that is convenient for you and a member of our Member Services team will give you a call.</h4>
-	<br>
 
-		<button type="button" class="flat_button" data-toggle="modal" data-target="#myModal">Schedule</button>
-
-</article>
 
 <article class='jumbotron whitejumbo'></article>
 
@@ -114,7 +106,7 @@ method='post' name='existing_customer' target='submit_frame'>
 	
 	<form id='blank' name='blank'>
 	</form>
-	<form action='/nutshell/phonenumber' id='phone_number_form' method='post' name='phone_number_form' target='submit_frame'>
+<!-- 	<form action='/nutshell/phonenumber' id='phone_number_form' method='post' name='phone_number_form' target='submit_frame'>
 		<input name='contact_id' type='hidden' value='{{ contactId }}'>
 		<h3>What's the best number where we can reach you?</h3>
 		<input name='phone_number' type='tel' class='form-control bfh-phone'
@@ -124,7 +116,7 @@ method='post' name='existing_customer' target='submit_frame'>
 	</form>
 	<br>
 	<hr>
-	<br>
+	<br> -->
 
 	<form action='/nutshell/existingcustomer' class='validate-form' id='existing_customer_form' method='post' name='existing_customer_form' target='submit_frame'>
 		<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
@@ -382,6 +374,16 @@ method='post' name='existing_customer' target='submit_frame'>
 </form>
 <br>
 <br>
+
+<article class='jumbotron greyjumbo'>
+	<h1>Schedule a Call</h1>
+	<hr class='short'>
+	<h4>If you'd prefer, you can schedule a time that is convenient for you and a member of our Member Services team will give you a call.</h4>
+	<br>
+
+		<button type="button" class="flat_button" data-toggle="modal" data-target="#myModal">Schedule</button>
+
+</article>
 {% endblock %}
 
 {% block custom_scripts %}

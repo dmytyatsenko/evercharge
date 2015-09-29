@@ -119,6 +119,9 @@ def thank_you():
 	if note == '':
 		note = "No Customer Note"
 
+	if phone == '':
+		phone = None
+
 	if address1:
 		address = address1 + ' ' + address2
 	else:
@@ -145,7 +148,8 @@ def thank_you():
 			new_contact = nut.add_new_contact(name, email, phone,
 					address, city, state, postal_code, country, veh_type)
 
-			# print new_contact
+			print new_contact
+			print 'HELLO'
 
 			contactId 	= new_contact['result']['id']
 			newLead 	= nut.add_new_lead(contactId, source, note)
