@@ -787,6 +787,10 @@ button.flat_button {
 	margin: 10px;
 }
 
+button.normalize_case {
+	text-transform: none;
+}
+
 button.scroll-down {
 	margin: 15px;
 	position: fixed;
