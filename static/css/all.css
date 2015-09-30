@@ -783,6 +783,11 @@ button.flat_button {
 	font-weight: 200;
 }
 
+button.case_study {
+	margin-bottom: 10px;
+	background-color: #239096;
+}
+
 button.scroll-down {
 	margin: 45px;
 	position: fixed;
@@ -929,7 +934,7 @@ h1.parallax_header {
 	font-weight: 100;
 }
 
-h2.smart_power, h1.smart_power {
+h2.smart_power, h1.smart_power, h1 > span.smart_power {
 	text-transform: none;
 }
 
