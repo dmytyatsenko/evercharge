@@ -163,7 +163,6 @@ def thank_you():
 									contactId=contactId)
 
 
-<<<<<<< HEAD
 @app.route('/testthankyou', methods=['POST', 'GET'])
 def test_thanks():
 	"""Route to test follow-up form template updates and scheduling
@@ -190,12 +189,6 @@ def press_page():
 
 	return render_template('press.html')
 
-# @app.route('/testthankyou', methods=['POST', 'GET'])
-# def test_thanks():
-# 	"""Route to test follow-up form template updates and scheduling
-
-
-	return "Successfully updated %r's address" % contact_id
 
 @app.route('/nutshell/phonenumber', methods = ['POST', 'GET'])
 def phone_number():
