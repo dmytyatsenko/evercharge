@@ -500,20 +500,23 @@ footer article h4{
 }
 
 .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 0px; height: 0; overflow: hidden;
+	position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+	margin: auto;
 }
- 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+
+.video-container iframe {
+	position:absolute;
+	top:0;
+	left:0;
+	width:60%;
+	height:60%;
 }
+
+
 
 .jumbotron article, span {
 	text-align: left;
@@ -792,6 +795,10 @@ button.case_study {
 	background-color: #239096;
 }
 
+button.normalize_case {
+	text-transform: none;
+}
+
 button.scroll-down {
 	margin: 15px;
 	position: fixed;
@@ -938,9 +945,7 @@ h1.parallax_header {
 	font-weight: 100;
 }
 
-
-
-h2.smart_power, h1.smart_power, h2.press, h1 >span.smart_power {
+h2.smart_power, h1.smart_power, h2.press, h1 > span.smart_power {
 	text-transform: none;
 }
 

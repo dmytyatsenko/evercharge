@@ -794,6 +794,7 @@ button.case_study {
 	margin-bottom: 10px;
 	background-color: #239096;
 }
+
 button.normalize_case {
 	text-transform: none;
 }
@@ -944,9 +945,7 @@ h1.parallax_header {
 	font-weight: 100;
 }
 
-
-
-h2.smart_power, h1.smart_power, h2.press, h1 >span.smart_power {
+h2.smart_power, h1.smart_power, h2.press, h1 > span.smart_power {
 	text-transform: none;
 }
 

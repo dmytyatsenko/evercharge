@@ -181,8 +181,15 @@ def update_address_in_nutshell():
 	city = request.form.get('city')
 	state = request.form.get('state')
 	contact_id = request.form.get('contact_id')
-
 	nut.UpdateContact(contact_id).address('REV_IGNORE', address, city, state)
+
+@app.route('/press', methods = ['POST', 'GET'])
+def press_page():
+
+	return render_template('press.html')
+
+
+
 
 @app.route('/press', methods = ['POST', 'GET'])
 def press_page():
