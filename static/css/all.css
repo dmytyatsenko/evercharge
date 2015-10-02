@@ -957,6 +957,9 @@ img#press_logo {
 	width: 65%;
 }
 
+img.resources {
+	height: 200px;
+}
 div.color_circle {
 	width: 175px;
 	height: 175px;
@@ -965,6 +968,7 @@ div.color_circle {
 	border-radius: 50%;
 	background-color: #14AB58;
 	margin-bottom: 15px;
+	display: inline-block;
 }
 
 sup.header {
