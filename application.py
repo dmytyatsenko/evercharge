@@ -189,14 +189,6 @@ def press_page():
 	return render_template('press.html')
 
 
-
-
-@app.route('/press', methods = ['POST', 'GET'])
-def press_page():
-
-	return render_template('press.html')
-
-
 @app.route('/nutshell/phonenumber', methods = ['POST', 'GET'])
 def phone_number():
 	phone_number = request.form.get('phone_number')
