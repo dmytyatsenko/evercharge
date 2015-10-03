@@ -16,11 +16,9 @@ else:
 	app.config['SECRET_KEY'] = 'testingkey'
 
 
-##############################
-##							##
-##		 STATIC FILES		##
-##							##
-##############################
+##################
+## STATIC FILES ##
+##################
 
 @app.route('/robots.txt', methods=['GET'])
 def root():
@@ -54,11 +52,9 @@ def install_info():
 def preferred_electricians():
 	return app.send_static_file('preferred.pdf')
 
-##############################
-##							##
-##		ADMIN ROUTES		##
-##							##
-##############################
+##################
+## ADMIN ROUTES ##
+##################
 
 @app.route('/login', methods = ['GET', 'POST'])
 def customer_login():
@@ -69,13 +65,9 @@ def customer_login():
 	return render_template('login.html',
 							error=error)
 
-
-
-##############################
-##							##
-##		WEBSITE ROUTES		##
-##							##
-##############################
+####################
+## WEBSITE ROUTES ##
+####################
 
 @app.route('/', methods = ['POST', 'GET'])
 def evercharge():
@@ -189,10 +181,13 @@ def update_address_in_nutshell():
 	city = request.form.get('city')
 	state = request.form.get('state')
 	contact_id = request.form.get('contact_id')
-
 	nut.UpdateContact(contact_id).address('REV_IGNORE', address, city, state)
 
-	return "Successfully updated %r's address" % contact_id
+@app.route('/press', methods = ['POST', 'GET'])
+def press_page():
+
+	return render_template('press.html')
+
 
 @app.route('/nutshell/phonenumber', methods = ['POST', 'GET'])
 def phone_number():
@@ -260,6 +255,7 @@ def tesla_contact():
 @app.route('/nutshell/evownership', methods = ['POST', 'GET'])
 def ev_owner_status():
 	owner_status 	= request.form.get('ev_status')
+	
 	dummy_date		= '1420099200'
 	#dummy date to add to Nutshell is Jan 1, 2015 -- expedites Sales process
 	contact_id 		= request.form.get('contact_id')
@@ -314,7 +310,10 @@ def display_blog():
 @app.route('/memberkeyterms', methods=['GET'])
 def display_key_terms():
 	return render_template('keyterms.html')
-	
+
+
+################################################################################
+
 if __name__ == '__main__':
 	PORT = int(os.environ.get("PORT",5000))
 	DEBUG = "NO_DEBUG" not in os.environ
