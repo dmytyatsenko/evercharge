@@ -162,6 +162,12 @@ def thank_you():
 									newLeadId=newLeadId,
 									contactId=contactId)
 
+@app.route('/incentives', methods = ['GET'])
+def state_incentives():
+	"""" EV Incentives page - State by State """
+
+	return render_template('incentives.html')
+
 
 @app.route('/testthankyou', methods=['POST', 'GET'])
 def test_thanks():
@@ -173,6 +179,8 @@ def test_thanks():
 	return render_template('test_thankyou.html',
 							newLeadId='newLeadId',
 							contactId='contactId')
+
+
 
 
 @app.route('/nutshell/address', methods = ['POST', 'GET'])
@@ -315,7 +323,7 @@ def display_key_terms():
 ################################################################################
 
 if __name__ == '__main__':
-	PORT = int(os.environ.get("PORT",5000))
+	PORT = int(os.environ.get("PORT",8000))
 	DEBUG = "NO_DEBUG" not in os.environ
 
 	app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
