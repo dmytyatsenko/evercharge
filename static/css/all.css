@@ -450,7 +450,7 @@ footer article h4{
 }
 
 .greyjumbo hr {
-	color: white;
+	color: #3C3D39;
 }
 
 .whitejumbo {
@@ -461,6 +461,10 @@ footer article h4{
 	font-weight: 200;
 }
 
+.whitejumbo p.large_text {
+	font-size: 22px;
+	line-height: 27px;
+}
 .whitejumbo h5 {
 	line-height: 24px;
 }
@@ -619,8 +623,8 @@ hr {
     border-color: #E5E5E5;
 }
 
-.greyjumbo hr {
-	border-color: RGBA(60, 61, 57, 1);
+.narrowjumbo {
+	padding-left: 100px
 }
 
 hr.short {

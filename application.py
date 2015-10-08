@@ -162,6 +162,12 @@ def thank_you():
 									newLeadId=newLeadId,
 									contactId=contactId)
 
+@app.route('/incentives', methods = ['GET'])
+def state_incentives():
+	"""" EV Incentives page - State by State """
+
+	return render_template('incentives.html')
+
 
 @app.route('/testthankyou', methods=['POST', 'GET'])
 def test_thanks():
@@ -173,6 +179,8 @@ def test_thanks():
 	return render_template('test_thankyou.html',
 							newLeadId='newLeadId',
 							contactId='contactId')
+
+
 
 
 @app.route('/nutshell/address', methods = ['POST', 'GET'])
