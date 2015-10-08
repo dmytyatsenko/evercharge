@@ -319,6 +319,11 @@ input[type="submit"]{
 	font-weight: 100;
 
 }
+
+#footer .copyright .fa {
+	font-size: 22px;
+	padding: 5px;
+}
  /*footer nav styles */
 #footer .footer-nav{
 	float: left;
