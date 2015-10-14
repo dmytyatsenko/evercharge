@@ -941,7 +941,7 @@ h4.extra_padded {
 }
 
 .parallax {
-	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/garage_scape.jpg) 50% 0 fixed; 
+	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/garage_large.jpg) 50% 0 fixed; 
 
 }
 
