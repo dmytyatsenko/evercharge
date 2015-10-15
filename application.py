@@ -133,6 +133,12 @@ def thank_you():
 	if name == None:
 		return redirect('/')
 
+	elif name == 'Driver Test':
+		return render_template('evthankyou.html')
+
+	elif name == 'PM Test':
+		return render_template('hoathankyou.html')
+
 	else:
 
 		if cust_type == 'EV Driver':
