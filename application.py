@@ -133,10 +133,10 @@ def thank_you():
 	if name == None:
 		return redirect('/')
 
-	elif name == 'Driver Test':
+	elif name.lower() == 'driver test':
 		return render_template('evthankyou.html')
 
-	elif name == 'PM Test':
+	elif name.lower() == 'pm test':
 		return render_template('hoathankyou.html')
 
 	else:
