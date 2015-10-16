@@ -1263,6 +1263,13 @@ class Nutshell(object):
     self.r=requests.post(self.uri, auth=self.auth, data=self.payload)
     Nutshell.response=json.loads(self.r.content) ; return Nutshell.response
 
+  def searchTags(self, string=None, limit=10):
+    self.payload = json.dumps({"method" : "searchTags",
+      "params" : {"string" : string, "limit" : limit},
+      "id" : "apeye"})
+    self.r=requests.post(self.uri, auth=self.auth, data=self.payload)
+    Nutshell.response=json.loads(self.r.content) ; return Nutshell.response
+
   def searchUniversal(self, string=None):
     self.payload = json.dumps({"method" : "searchUniversal",
       "params" : {"string" : string},"id" : "apeye"})

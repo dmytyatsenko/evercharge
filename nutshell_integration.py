@@ -11,6 +11,15 @@ def get_lead(query):
 def search_sources(query):
 	return n.searchSources(query)
 
+def search_tags(query):
+	return n.searchTags(query)
+
+def find_tags():
+	return n.findTags()
+
+def find_leads():
+	return n.findLeads()
+
 # Original Form
 def add_new_contact(name, email, phone, address1, 
 	city, state, zipcode, country, vehicleType=None):
@@ -35,6 +44,10 @@ class UpdateLead(object):
 		super(UpdateLead, self).__init__()
 		self.lead_id = lead_id
 
+	def tag(self, rev, tag):
+		edited_lead = n.editLead(self.lead_id, rev, tags=[tag])
+
+		return edited_lead
 	def parking_spot(self, rev, parking_spot):
 		edited_lead = n.editLead(self.lead_id, rev, customFields=
 			{'Parking Spot #': parking_spot})
@@ -116,7 +129,8 @@ class UpdateContact(object):
 		return edited_contact
 		
 
-
+# print search_sources('blahblah')
+# print find_tags()['result']['Leads']
 
 
 
