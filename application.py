@@ -153,7 +153,7 @@ def thank_you():
 			contactId 	= new_contact['result']['id']
 			newLead 	= nut.add_new_lead(contactId, source, note)
 			newLeadId 	= newLead['result']['id']
-			if tag:
+			if tag != '':
 				nut.UpdateLead(newLeadId).tag("REV_IGNORE", tag)
 
 			return render_template("evthankyou.html",
@@ -168,7 +168,7 @@ def thank_you():
 			contactId 	= new_contact['result']['id']
 			newLeadId 	= nut.add_new_lead(contactId, source, note, build_size)['result']['id']
 			
-			if tag:
+			if tag != '':
 				nut.UpdateLead(newLeadId).tag("REV_IGNORE", tag)
 
 			return render_template("hoathankyou.html",
