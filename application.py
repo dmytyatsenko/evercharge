@@ -127,6 +127,7 @@ def thank_you():
 	veh_type	= request.form.get('veh_type')
 	build_size 	= request.form.get('building_size')
 	tag			= request.form.get('adwordsField')
+	gran 		= request.form.get('granularField')
 
 	print build_size
 	
@@ -154,7 +155,7 @@ def thank_you():
 			newLead 	= nut.add_new_lead(contactId, source, note)
 			newLeadId 	= newLead['result']['id']
 			if tag != '':
-				nut.UpdateLead(newLeadId).tag("REV_IGNORE", tag)
+				nut.UpdateLead(newLeadId).tag("REV_IGNORE", [tag, gran])
 
 			return render_template("evthankyou.html",
 									newLeadId=newLeadId,
@@ -169,7 +170,7 @@ def thank_you():
 			newLeadId 	= nut.add_new_lead(contactId, source, note, build_size)['result']['id']
 			
 			if tag != '':
-				nut.UpdateLead(newLeadId).tag("REV_IGNORE", tag)
+				nut.UpdateLead(newLeadId).tag("REV_IGNORE", [tag, gran])
 
 			return render_template("hoathankyou.html",
 									newLeadId=newLeadId,

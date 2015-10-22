@@ -2,11 +2,14 @@ from NutshellCrumpy import Nutshell
 
 n = Nutshell('kate@evercharge.net', '91bd928f9b1cf611b758d15e44849227c7d46389')
 
-def search_contacts(query):
-	return n.getContact(query)
+def get_contact(contact_id):
+	return n.getContact(contact_id)
 
-def get_lead(query):
-	return n.getLead(query)
+def get_lead(lead_id):
+	return n.getLead(lead_id)
+
+def search_leads(query):
+	return n.searchLeads(query)
 
 def search_sources(query):
 	return n.searchSources(query)
@@ -45,7 +48,7 @@ class UpdateLead(object):
 		self.lead_id = lead_id
 
 	def tag(self, rev, tag):
-		edited_lead = n.editLead(self.lead_id, rev, tags=[tag])
+		edited_lead = n.editLead(self.lead_id, rev, tags=tag)
 
 		return edited_lead
 	def parking_spot(self, rev, parking_spot):
@@ -132,12 +135,12 @@ class UpdateContact(object):
 # print search_sources('blahblah')
 # print find_tags()['result']['Leads']
 
-
-
-
-
-
-
+# print find_leads()
+# print search_leads('Testing')
+# print search_contacts('Testing')
+# print get_lead(13453)
+# lst = ['condocharger', 'teslacharging']
+# print UpdateLead(29973).tag("REV_IGNORE", lst)
 
 
 
