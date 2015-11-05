@@ -8,12 +8,17 @@
 	1. General reset
    ---------------------------------------------------------*/
 *{max-height: 10000px;}
+html { /*for sticky-footer*/
+	min-height: 100%;
+	position: relative;
+}
+
 body{
-	min-width: 320px;
 	font-weight: 400;
 	-webkit-text-size-adjust:100%;
     -ms-text-size-adjust: none;
-
+  margin-bottom: 202px;
+  min-width: 320px;
 }
 
 html, body {
@@ -319,9 +324,13 @@ input[type="submit"]{
 /* footer sytles */
 #footer{
 	background: RGBA(60, 61, 57, 1);
+	bottom: 0;
 	color: #fff;
 	font-size: 13px;
+	height: 202px; /*for sticky-footer*/
 	line-height: 16px;
+	position: absolute;
+	width: 100%;
 }
 #footer .container{
 	padding: 0 0 11px 0;
@@ -1298,6 +1307,10 @@ p.label_form {
 }
 /* styles for screens 320px wide and narrower */
 @media only screen and (max-width: 767px){
+	body { /*for sticky-footer*/
+		margin-bottom: 560px;
+	}
+
 	.col-xs-16 {
 		margin-bottom: 16px;
 	}
@@ -1550,6 +1563,10 @@ p.label_form {
 	.jcf-class-radioyes.rad-checked{background-position: -185px -540px}
 	.jcf-class-radiono.rad-checked{background-position: -205px -540px}
 	.jcf-class-radioblank{background-position: -2005px -5040px}
+
+	#footer { /*for sticky-footer*/
+		height: 560px;
+	}
 
 	#footer .container{
 		padding: 0 18px 9px 18px;
