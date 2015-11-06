@@ -149,7 +149,7 @@ a:focus{outline: none !important; text-decoration: none;}
 }
 .banner .text{padding-bottom: 22px;}
 .banner .btn:hover,
-.get-quote input[type="submit"]:hover{background: #262826;}
+.get-quote input[type="submit"]:hover{background: #00594F;}
 /* main informative part styles */
 
 /* get quote form styles */
@@ -303,7 +303,7 @@ form li{
 	z-index: 1;
 }
 input[type="submit"]{
-	background: RGBA(247, 112, 91, 1);
+	background: #00A499;
 	color: #fff;
 	font-size: 16px;
 	line-height: 18px;
@@ -448,6 +448,7 @@ footer article h4{
 	line-height: 20px;
 	text-align: left;
 }
+
 
 .jumbotron p.large_text.ec-teal {
 	color: #00A499;
@@ -635,7 +636,7 @@ input:hover {
 }
 
 input[type=submit]:hover {
-	background-color:  RGBA(20, 171, 88, .8);
+	background-color:  #00594F;
 	/*opacity: .9;*/
 
 
@@ -823,9 +824,10 @@ button.flat_button {
 	margin: 10px;
 }
 
+
 button.case_study {
 	margin-bottom: 10px;
-	background-color: #239096;
+	background-color: #00594F;
 }
 
 button.normalize_case {
@@ -943,11 +945,6 @@ article.options:hover {
 	position: relative; 
 	box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
 	padding: 75px 0;
-	-webkit-filter:  grayscale(100%);
-	-moz-filter:  grayscale(100%);
-	-o-filter:  grayscale(100%);
-	-ms-filter:  grayscale(100%);
-	filter:  grayscale(100%);
 	color: white;
 	text-align: center;
 	font-family: 'Work Sans', sans-serif;
@@ -1201,11 +1198,11 @@ p.label_form {
 }
 
 .rad-checked {
-	background-color: RGBA(20, 171, 88, 1);
+	background-color: #00A499;
 }
 
 .rad-checked:hover {
-	background-color: RGBA(57, 135, 88, 1);
+	background-color: #00594F;
 }
 .jcf-class-radio1{background-position: 0 0;}
 .jcf-class-radio2{background-position: -57px 0;}

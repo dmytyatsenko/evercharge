@@ -15,7 +15,7 @@ function initialize() {
   var featureOpts = [
     {
       stylers: [
-        { hue: '#14AB58' },
+        { hue: '#00594F' },
         { visibility: 'simplified' },
         { gamma: 0.5 },
         { weight: 0.5 }
@@ -30,7 +30,7 @@ function initialize() {
     {
       featureType: 'water',
       stylers: [
-        { color: '#3C3D39' }
+        { color: '#B6B8DC' }
       ]
     }
   ];
