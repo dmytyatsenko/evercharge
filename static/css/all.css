@@ -449,6 +449,10 @@ footer article h4{
 	text-align: left;
 }
 
+.jumbotron p.large_text.ec-teal {
+	color: #00A499;
+	margin-bottom: 30px;
+}
 
 #map-canvas img{max-width:none;}
 .greyjumbo {
