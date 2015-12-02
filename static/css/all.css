@@ -1124,6 +1124,37 @@ article.no_padding {
 	/*display: none;*/
 }
 
+.ec-index-quote-form {
+	padding-bottom: 20px;
+	padding-top: 40px;
+}
+
+.ec-index-quote-form input[type="submit"] {
+	background-color: rgba(247, 112, 91, 1);
+	margin-top: 0;
+	padding: 14px 15px;
+}
+
+.ec-index-quote-form input[type="submit"]:hover {
+	background-color: #d35440;
+}
+
+.ec-index-quote-form .form-group {
+	margin-bottom: 0;
+}
+
+.onesidedropshadow {
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+}
+
+.onesidedropshadow:hover {
+	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.8);
+	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.8);
+	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.8);
+}
+
 
 h2.lower_header {
 	text-transform: none;
@@ -1313,6 +1344,10 @@ p.label_form {
 	}
 
 	.col-xs-16 {
+		margin-bottom: 16px;
+	}
+
+	.ec-index-quote-form .col-xs-16 {
 		margin-bottom: 16px;
 	}
 

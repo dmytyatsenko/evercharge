@@ -58,8 +58,13 @@
 {% block video %} {% endblock %}
 
 {% block content_one %}
-<br>
-<br>
+<article class='jumbotron greyjumbo'>
+	<h1>Schedule a Call</h1>
+	<hr class='short'>
+	<h4>If you'd prefer, you can schedule a time that is convenient for you and a member of our Member Services team will give you a call.</h4>
+	<br>
+	<button type="button" class="flat_button" data-toggle="modal" data-target="#myModal">Schedule</button>
+</article>
 {% endblock %}
 
 
@@ -264,14 +269,6 @@ method='post' name='existing_customer' target='submit_frame'>
 </form>
 <br>
 <br>
-
-<article class='jumbotron greyjumbo'>
-	<h1>Schedule a Call</h1>
-	<hr class='short'>
-	<h4>If you'd prefer, you can schedule a time that is convenient for you and a member of our Member Services team will give you a call.</h4>
-	<br>
-		<button type="button" class="flat_button" data-toggle="modal" data-target="#myModal">Schedule</button>
-</article>
 {% endblock %}
 
 {% block custom_scripts %}
