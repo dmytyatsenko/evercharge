@@ -40,31 +40,33 @@
 
 {% block content_one %}
 
-
-<article class='jumbotron whitejumbo white_space' id='get_a_quote'>
-	<div class='row features'>
-		<div class='col-xs-16 col-sm-8 col-md-4'>
-			<a href='#charging_made_easy' class='smoothScroll'>
-				<button class='flat_button homeNav'>Why EverCharge</button>
-			</a>
-		</div>
-		<div class='col-xs-16 col-sm-8 col-md-4'>
-			<a href='#our_process' class='smoothScroll'>
-				<button class='flat_button homeNav'>Our Process</button>
-			</a>
-		</div>
-		<div class='col-xs-16 col-sm-8 col-md-4'>
-			<a href='#what_makes_us_different' class='smoothScroll'>
-				<button class='flat_button homeNav'>Our Technology</button>
-			</a>
-		</div>
-		<div class='col-xs-16 col-sm-8 col-md-4'>
-			<a href='#quote' class='smoothScroll'>
-				<button class='flat_button purple_button homeNav'>Get a Quote Now</button>
-			</a>
-		</div>
-	</div>
-</article>
+<div id="get_a_quote" class="container ec-index-quote-form">
+	<form action="/thankyou", method='post' class="validate-form">
+		<input name="lead_source" value="Web Signup" type="hidden">
+		<input name="adwordsField" id='adwordsField' type="hidden">
+		<input name="granularField" id="granularField" type="hidden">
+		<fieldset>		
+			<div class="row">
+				<div class="col-xs-16">
+					<legend>Want to Know More?</legend>
+				</div>
+			</div>
+			<div class="row">
+				<div class="holder">
+					<div class="form-group col-xs-16 col-sm-6">
+						<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name" autocomplete="false"> 
+					</div>
+					<div class="form-group col-xs-16 col-sm-6">
+						<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email" autocomplete="false">
+					</div>
+					<div class="col-sm-4">
+						<input type="submit" value="Connect With Us" class="onesidedropshadow">
+					</div>
+				</div>
+			</div>
+		</fieldset>
+	</form>
+</div>
 
 <section class="parallax" data-speed="4" data-type="background" id='charging_made_easy'>
 	<div class="container">
