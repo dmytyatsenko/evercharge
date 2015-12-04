@@ -8,3 +8,5 @@
 venv
 nutshell_integration.pyc
 NutshellCrumpy.pyc
+
+.idea/

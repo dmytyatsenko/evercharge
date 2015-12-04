@@ -33,6 +33,9 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='/css/modal.min.css') }}">
 
 	<link rel="stylesheet" href="{{ url_for('static', filename='/css/all.css') }}">
+    {% assets "css_all" %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}">
+    {% endassets %}
 	<!-- <link rel='stylesheet' hreft="{{ url_for('static', filename='/css/modal.css') }}"> -->
 
 <!-- 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/shadowbox.css') }}"> -->

@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect
+from flask.ext.assets import Environment, Bundle
 import os
 import nutshell_integration as nut
 from datetime import datetime
@@ -15,6 +16,11 @@ if SECRET_KEY:
 else:
 	app.config['SECRET_KEY'] = 'testingkey'
 
+# Assets
+assets = Environment(app)
+sass = Bundle('sass/all.sass', filters='sass', output='css/sass.css')
+css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
+assets.register('css_all', css_all)
 
 ##################
 ## STATIC FILES ##
@@ -129,8 +135,6 @@ def thank_you():
 	tag			= request.form.get('adwordsField')
 	gran 		= request.form.get('granularField')
 
-	print build_size
-	
 	source		= ''
 	if name == None:
 		return redirect('/')
@@ -340,4 +344,5 @@ if __name__ == '__main__':
 	PORT = int(os.environ.get("PORT",5000))
 	DEBUG = "NO_DEBUG" not in os.environ
 
-	app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
+	# app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
+	app.run()
