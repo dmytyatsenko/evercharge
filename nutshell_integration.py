@@ -122,7 +122,8 @@ class UpdateContact(object):
 		
 		return edited_contact
 
-	def address(self, rev, address=None, city=None):
+	def address(self, rev, address=None, city=None, state=None):
+		edited_contact = None
 		if address:
 			edited_contact = n.editContact(self.contact_id, rev, address=address)
 
