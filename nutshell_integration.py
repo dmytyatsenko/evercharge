@@ -35,7 +35,8 @@ def add_new_contact(name, email, phone, address1,
 
 def add_new_lead(contact_id, source, note=None, buildingSize=None):
 	new_lead = n.newLead(contacts=[{'id': contact_id}], sources=[{'id': source}],
-	note=note, customFields={'Approximate Bldg Size': buildingSize})
+	note=note)
+	# customFields={'Approximate Bldg Size': buildingSize}
 
 	return new_lead
 
@@ -122,7 +123,8 @@ class UpdateContact(object):
 		
 		return edited_contact
 
-	def address(self, rev, address=None, city=None):
+	def address(self, rev, address=None, city=None, state=None):
+		edited_contact = None
 		if address:
 			edited_contact = n.editContact(self.contact_id, rev, address=address)
 
