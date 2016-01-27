@@ -1,6 +1,8 @@
 branch-defaults:
   master:
     environment: webMain-env
+  webadmin-102-swtich-to-sass:
+    environment: webMain-env-stage
 global:
   application_name: web-main
   default_ec2_keyname: EverChargeMaster

@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect
+from flask_assets import Environment, Bundle
 import os
 import nutshell_integration as nut
 from datetime import datetime
@@ -9,12 +10,14 @@ application = Flask(__name__, static_url_path='')
 app = application
 
 app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY", 'testingkey')
-
+assets = Environment(app)
+sass = Bundle('sass/all.sass', filters='sass', output='css/sass.css')
+css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
+assets.register('css_all', css_all)
 
 ################
 # STATIC FILES #
 ################
-
 @app.route('/robots.txt')
 def root():
     return app.send_static_file('robots.txt')
@@ -347,7 +350,8 @@ def display_key_terms():
 ################################################################################
 
 if __name__ == '__main__':
-    PORT = int(os.environ.get("PORT",5000))
-    DEBUG = "NO_DEBUG" not in os.environ
 
+    PORT = int(os.environ.get("PORT", 5000))
+    DEBUG = os.environ.get("FLASK_DEBUG", False)
+    # DEBUG = "NO_DEBUG" not in os.environ
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
