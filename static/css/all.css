@@ -269,18 +269,15 @@ form li{
 	z-index: 1;
 }
 input[type="submit"]{
-	background: #00A499;
+	background: RGBA(0,164,153,1.0);
+	border: none;
 	color: #fff;
-	font-size: 16px;
-	line-height: 18px;
-	font-weight: 200;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 14px;
+	padding: 15px 30px;
 	text-transform: uppercase;
-	border:none;
-	padding:11px 15px 12px;
 	width: 100%;
-	min-width: 175px;
-	margin-top: 15px;
-	float: left;
 }
 #tab2 li,
 #tab3 li{
