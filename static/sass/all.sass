@@ -15,17 +15,20 @@ $ec-letter-space: -0.5px
 //////////////////////
 // COMPONENTS
 // buttons
-.ec-button-teal-border
-  background: transparent
-  border: 2px solid $ec-teal
-  color: $ec-teal
-  font-size: 14px
-  margin-top: 14px
-  min-height: 40px
-  padding: 15px 30px
-  text-transform: uppercase
-  &:hover 
-    background: white
+a, button
+  &.ec-button-teal-border
+    background: transparent
+    border: 2px solid $ec-teal
+    color: $ec-teal
+    font-size: 14px
+    font-weight: 600
+    margin-top: 14px
+    min-height: 40px
+    padding: 15px 30px
+    text-transform: uppercase
+    &:hover 
+      background: RGBA(0,164,153,0.1)
+      text-decoration: none
 
 .ec-button-teal
   background: $ec-teal
@@ -35,6 +38,28 @@ $ec-letter-space: -0.5px
   min-height: 40px
   padding: 15px 30px
   text-transform: uppercase
+
+//boxes
+.ec-box-white-border
+  background: white
+  border: 1px solid black
+  outline: 10px solid white
+
+// misc
+hr.ec-hr-extra
+  margin-bottom: 20px
+  margin-top: 20px
+
+h4.ec-caps
+  color: #58595B
+  font-size: 16px
+  font-weight: 600
+  text-transform: uppercase
+
+p.black
+  color: black
+  line-height: 1.4em
+  margin-bottom: 10px
 //////////////////////
 
 // page: thankyou
@@ -54,12 +79,6 @@ $ec-letter-space: -0.5px
     text-align: left
   .bitter
     font-family: $ec-font-bitter
-
-h2.ec-teal
-  color: $ec-teal
-hr.ec-hr-extra
-  margin-bottom: 20px
-  margin-top: 20px
 
 fieldset.ec-fieldset
   legend.ec-legend
@@ -84,3 +103,10 @@ fieldset.ec-fieldset
 
 p.ec-p 
   line-height: 1.2em
+
+
+// page: partnership
+.ec-schneider-partner
+  position: absolute
+  top: -140px
+  z-index: 2

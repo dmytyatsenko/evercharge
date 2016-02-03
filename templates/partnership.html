@@ -1,7 +1,7 @@
 {% extends 'layout/base.html' %}
 
 {% block background %}
-	<img src="images/parking-1.jpg" alt="image description" width="1200" height="526">
+	<img src="images/building-1.jpg" alt="image description" width="1200" height="526">
 {% endblock %}
 
 {% block maincontent %}
@@ -28,29 +28,6 @@
 			<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l6v64&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
 			<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l6v64&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
 		</noscript>
-
-		<div class="container ec-thankyou">
-			<div class="row">
-				<div class="col-xs-16">
-					<div class="row">
-						<div class="col-md-6 ec-box-white">
-							<h1>Thank You</h1>
-							<p class="bitter">We'll be in touch shortly.</p>
-						</div>
-						<div class="col-md-10 ec-box-lt-gray">
-							<img src="https://cdn3.iconfinder.com/data/icons/abstract-pattern-shape/100/Icon_AbstractZigzag-512.png" class="pull-left" style="height:100px; width:100px; margin-right: 16px" />
-
-							<p><strong>YOU’VE BEEN ASSIGNED...</strong></p>
-							<p>Team Member: CJ</p>
-							<p>Email: cj@evercharge.net</p>
-							<p>Phone: 415.851.0956</p>
-							<button type="button" class="ec-button-teal-border" data-toggle="modal" data-target="#myModal">Schedule a call now</button>
-						</div>
-					</div>
-					<!-- end row2 -->
-				</div>
-			</div>
-		</div>
 	</header>
 {% endblock %}
 
@@ -58,6 +35,15 @@
 {% endblock %}
 
 {% block intro %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-1 col-md-14">
+				<div class="ec-schneider-partner ec-box-white-border">
+					<img src="images/EverCharge-Schneider-logos.jpg" alt="EverCharge and Shneider Electric" class="img-responsive" />
+				</div>
+			</div>
+		</div>
+	</div>
 {% endblock %}
 
 {% block content_one %}
@@ -65,189 +51,30 @@
 {% endblock %}
 
 {% block content_two %}
+	<article class='jumbotron whitejumbo'></article>
 {% endblock %}
 
 {% block content_three %}
-{% endblock %}
-
-{% block quote_form %}	
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Schedule an Appointment</h4>
-	      </div>
-	      <div class="modal-body">
-	      	<center>
-	        	<iframe src='https://calendly.com/evercharge/quote' scrolling='no'></iframe>
-	        </center>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="flat_button" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-
-	<div style="display:none;">
-		<iframe id="submit_frame" name="submit_frame"></iframe>
-	</div>
-
 	<div class="container">
-		<form action='/nutshell/submit' class='get-quote validate-form' id='existing_customer'
-		method='post' name='existing_customer' target='submit_frame'>
-			<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-			<input name='contact_id' type='hidden' value='{{ contactId }}'>
-			
-			<div class="row">
-				<div class="col-md-offset-2 col-md-12">
-					<legend id='thankyou'>
-						<span id='form_heading'>More About You</span>
-					</legend>
-				</div>
+		<div class="row">
+			<div class="col-md-offset-2 col-md-12">
+				<h2 class="ec-teal">Schneider Partnership</h2>
+				<p class="black">EverCharge has the fully backing and support of Schneider Electric further enabling the widespread adoption of EVs in cities.</p>
+				<p class="black">The partnership will integrate Schneider Electric’s EVlink Home EV Charger with its SmartPower technology to solve the challenge of EV station installation in multi-tenant facilities including apartments, condominiums, and offices.</p>
+				<br>
+				<br>
+				<h4 class="ec-caps">About Schneider Electric</h4>
+				<p class="black">Schneider Electric is the global specialist in energy management and automation. With revenues of $30 billion in FY2014, our 170,000 employees serve customers in over 100 countries, helping them to manage their energy and process in ways that are safe, reliable, efficient and sustainable. From the simplest of switches to complex operational systems, our technology, software and services improve the way our customers manage and automate their operations.</p>
+				<br><br><br><br>
 			</div>
-
-			<fieldset id='primary_form_content' class="ec-fieldset">
-				<form id='blank' name='blank'></form>
-				<div class="row">
-					<div class="col-md-offset-2 col-md-8">
-						<form action='/nutshell/parkingspot' class='validate-form' id=
-						'parking_spot_form' method='post' name='parking_spot_form' target=
-						'submit_frame'>
-							<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-					    <p><strong>Are your parking spots...</strong></p>
-					    <div id="parking_listener">
-					    	<p>
-					    	  <input type="radio" name="parking_type" id="assignedparking" value="Assigned/Deeded" />
-					    	  <label for="assignedparking">Assigned/Deeded</label>
-					    	</p>
-					    	<p>
-					    	  <input type="radio" name="parking_type" id="assignedparking" value="Unassigned" />
-					    	  <label for="assignedparking_2">Unassigned</label>
-					    	</p>
-					    	<p>
-					    	  <input type="radio" name="parking_type" id="assignedparking" value="Valet" />
-					    	  <label for="assignedparking_3">Valet</label>
-					    	</p>
-					    	<p>
-					    	  <input type="radio" name="parking_type" id="assignedparking" value="Other" />
-					    	  <label for="assignedparking_4">Other</label>
-					    	</p>
-					    </div>
-						</form>
-					</div>
-					<div class="col-md-4">
-						<p class="ec-p">This helps us understand what installation options will be best suited for your property.</p>
-					</div>
-				</div><!-- end question 1 row -->
-
-				<div class="row">
-					<div class="col-md-offset-2 col-md-12">
-						<hr class="ec-hr-extra" />
-					</div>
-					<div class="clearfix"></div>
-					<div class="col-md-offset-2 col-md-8">
-						<form action='/nutshell/numberofspots' class='validate-form' id='number_spots_form' method='post' name='number_spots_form' target='submit_frame'>
-							<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-							<input name='contact_id' type='hidden' value='{{ contactId }}'>
-					    <p><strong>How many parking spots are in your building?</strong></p>
-					    <div class="number_spots_listener">
-					    	<p>
-					    	  <input type="radio" name="number_of_spots" id="number_of_spots" value="Under 25" />
-					    	  <label for="number_of_spots">Under 25</label>
-					    	</p>
-					    	<p>
-					    	  <input type="radio" name="number_of_spots" id="number_of_spots_2" value="26-50" />
-					    	  <label for="number_of_spots_2">26-50</label>
-					    	</p>
-					    	<p>
-					    	  <input type="radio" name="number_of_spots" id="number_of_spots_3" value="51-100" />
-					    	  <label for="number_of_spots_3">51-100</label>
-					    	</p>
-					    	<p>
-					    	  <input type="radio" name="number_of_spots" id="number_of_spots_4" value="101-200" />
-					    	  <label for="number_of_spots_4">101-200</label>
-					    	</p>
-					    	<p>
-					    	  <input type="radio" name="number_of_spots" id="number_of_spots_5" value="Over 200" />
-					    	  <label for="number_of_spots_5">Over 200</label>
-					    	</p>
-					    </div>
-						</form>
-					</div>
-					<div class="col-md-4">
-						<p class="ec-p">Buildings of different sizes have different electrical infrastructure requirements.</p>
-					</div>
-				</div><!-- end question 2 row -->
-
-				<div class="row">
-					<div class="col-md-offset-2 col-md-12">
-						<hr class="ec-hr-extra" />
-					</div>
-					<div class="clearfix"></div>
-					<div class="col-md-offset-2 col-md-8">
-						<form action='/nutshell/reference' class=' validate-form' id='reference_form'
-						method='post' name='reference_form' target='submit_frame'>
-							<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-							<input name='contact_id' type='hidden' value='{{ contactId }}'>
-							<p><strong>How did you hear about us?</strong></p>
-							<div id="tesla_listener">
-								<p>
-								  <input type="radio" name="reference" id="reference" value="Website" />
-								  <label for="reference">Online</label>
-								</p>
-								<p>
-								  <input type="radio" name="reference" id="reference_2" value="Property Manager/HOA" />
-								  <label for="reference_2">HOA</label>
-								</p>
-								<p>
-								  <input type="radio" name="reference" id="reference_3" value="Friend" />
-								  <label for="reference_3">Friend</label>
-								</p>
-								<p>
-								  <input type="radio" name="reference" id="reference_4" value="Tesla" />
-								  <label for="reference_4">Tesla</label>
-								</p>
-								<p>
-								  <input type="radio" name="reference" id="reference_5" value="Other" />
-								  <label for="reference_5">Other</label>
-								</p>
-							</div>
-
-							<form action='/nutshell/teslacontact' class=' validate-form' id=
-							'tesla_contact_form' method='post' name='tesla_contact_form' target=
-							'submit_frame'>
-								<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-
-								<div class='form-group' id='tesla_div'>
-									<p>Who from Tesla referred you?</p>
-									<input class='form-control' id='tesla_contact' name=
-									'tesla_contact' onchange='teslaContactSubmit()' placeholder=
-									'Name of Tesla Contact' type='text'>
-								</div>
-							</form>
-
-						</form>
-					</div>
-				</div><!-- end question 3 row -->
-
-				<div class="row">
-					<div class="col-md-offset-2 col-md-12">
-						<hr class="ec-hr-extra" />
-					</div>
-					<div class="clearfix"></div>
-					<div class="col-md-offset-2 col-md-6 col-sm-8 col-xs-16">
-						<input id='final_submit_button' type='submit' value='Submit'>
-					</div>
-				</div>
-
-			</fieldset>
-		</form>
-	</div><!-- end container -->
+			<div class="col-md-offset-2 col-md-6">
+				<a class="ec-button-teal-border" href="http://blog.evercharge.net/schneider-electric-and-evercharge-collaborate-to-accelerate-electric-vehicle-charging-in-multi-tenant-buildings/">View full press release &#8594;</a>
+			</div>
+		</div>
+	</div>
 	<br><br><br><br><br>
 {% endblock %}
+
 
 {% block custom_scripts %}
 	<script type="text/javascript" src="js/conditionalform.js"></script>
