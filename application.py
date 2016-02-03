@@ -346,6 +346,10 @@ def display_blog():
 def display_key_terms():
     return render_template('keyterms.html')
 
+@app.route('/schneider-partnership')
+def schneider_partnership():
+    return render_template('partnership.html')
+
 
 ################################################################################
 
