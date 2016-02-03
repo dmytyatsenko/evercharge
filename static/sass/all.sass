@@ -1,2 +1,77 @@
 .sasscheck
   background: red
+
+//////////////////////
+// VARIABLES
+// colors
+$ec-teal: RGBA(0,164,153,1.0)
+// type
+$ec-font-bitter: 'Bitter', serif
+$ec-font-s-body: 16px
+$ec-font-w-body: 400
+$ec-letter-space: -0.5px
+//////////////////////
+
+//////////////////////
+// COMPONENTS
+// buttons
+.ec-button-teal-border
+  background: transparent
+  border: 2px solid $ec-teal
+  color: $ec-teal
+  font-size: 14px
+  margin-top: 14px
+  min-height: 40px
+  padding: 15px 30px
+  text-transform: uppercase
+  &:hover 
+    background: white
+//////////////////////
+
+// page: thankyou
+.container.ec-thankyou 
+  margin-top: 140px
+  p
+    color: black
+    line-height: 1.1em
+  .ec-box-white
+    background: white
+    padding: 20px
+    h1
+      color: $ec-teal
+  .ec-box-lt-gray
+    background: #E7E7E7
+    padding: 20px
+    text-align: left
+  .bitter
+    font-family: $ec-font-bitter
+
+h2.ec-teal
+  color: $ec-teal
+hr.ec-hr-extra
+  margin-bottom: 20px
+  margin-top: 20px
+
+fieldset.ec-fieldset
+  legend.ec-legend
+    border: 0
+    color: black
+    font-size: $ec-font-s-body
+    font-weight: 600
+    letter-spacing: $ec-letter-space
+    margin-bottom: 4px
+    text-transform: none
+  input[type="radio"],
+  label
+    &:hover
+      cursor: pointer
+  label
+    color: black
+    font-weight: $ec-font-w-body
+    margin-bottom: 0
+    margin-left: 10px
+  p
+    line-height: 1.1em
+
+p.ec-p 
+  line-height: 1.2em

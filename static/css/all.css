@@ -155,48 +155,14 @@ a:focus{outline: none !important; text-decoration: none;}
 /* get quote form styles */
 form {
 	max-width: 960px;
-	margin: 0 auto 28px;
 	position:relative;
-}
-.get-quote fieldset{
-	position: relative;
-	padding: 64px 50px 57px;
-}
-.get-quote:before,
-.get-quote:after,
-.get-quote fieldset:after,
-.get-quote fieldset:before{
-	content: '';
-	position: absolute;
-	top:0;
-	left: 0;
-	right: 0;
-	height: 5px;
-	/*background:url(../images/bg-dot.png) repeat-x;*/
-}
-.get-quote:after{
-	top: auto;
-	bottom: 0;
-}
-.get-quote fieldset:after,
-.get-quote fieldset:before{
-	height: auto;
-	width: 4px;
-	right: auto;
-	bottom: 3px;
-	top: 3px;
-	/*background: url(../images/bg-dot01.png) repeat-y;*/
-}
-.get-quote fieldset:before{
-	left: auto;
-	right: 0;
 }
 
 h2.greenheading {
 	color: #14AB58;
 
 }
-.get-quote legend{
+/*.get-quote legend{
 	margin: 0;
 	font-size: 32px;
 	line-height: 44px;
@@ -213,7 +179,7 @@ h2.greenheading {
 	vertical-align: top;
 	padding: 0 10px;
 	background: #fff;
-}
+}*/
 .wrap{
 	overflow: hidden;
 }
@@ -1169,7 +1135,6 @@ h2.lower_header {
  legend {
  	color: RGBA(60, 61, 57, 1);
  	text-transform: uppercase;
- 	font-weight: 300;
  	/*text-align: center;*/
  }
 

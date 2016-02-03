@@ -4,10 +4,7 @@
 	<img src="images/image11.jpg" alt="image description" width="1200" height="526">
 {% endblock %}
 
-
-
 {% block maincontent %}
-
 	<header id='thankyouHeader'>
 		<script>(function() {
 		  var _fbq = window._fbq || (window._fbq = []);
@@ -25,250 +22,233 @@
 		</script>
 		<noscript><img height='1' width='1' alt='' style='display:none' src='https://www.facebook.com/tr?ev=6030657035620&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1' /></noscript>
 
-
 		<script src="//platform.twitter.com/oct.js" type="text/javascript"></script>
-<script type="text/javascript">twttr.conversion.trackPid('l6v64', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
-<noscript>
-<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l6v64&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
-<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l6v64&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
-</noscript>
+		<script type="text/javascript">twttr.conversion.trackPid('l6v64', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+		<noscript>
+			<img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l6v64&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+			<img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l6v64&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+		</noscript>
 
-	</header>
+		<div class="container ec-thankyou">
+			<div class="row">
+				<div class="col-xs-16">
+					<div class="row">
+						<div class="col-md-6 ec-box-white">
+							<h1>Thank You</h1>
+							<p class="bitter">We'll be in touch shortly.</p>
+						</div>
+						<div class="col-md-10 ec-box-lt-gray">
+							<img src="https://cdn3.iconfinder.com/data/icons/abstract-pattern-shape/100/Icon_AbstractZigzag-512.png" class="pull-left" style="height:100px; width:100px; margin-right: 16px" />
 
-	
-	<section class='col-md-12 col-md-offset-2'>
-		<div class='row threecolumn'>
-		<article class='col-md-16 col-sm-16 col-xs-16'>
-			<div id='large_green_circle'>
-				<h1 class='new_header'>Thank You</h1>
-				<h2 class='tagline hidden_mobile'>
-					We'll be in touch shortly.
-					<hr class='short'>
-					Want to talk to someone now?
-					<br>
-					Give us a call at <a href='tel:8883427383'>888.342.7383</a>
-					<br>
-				</h2>
+							<p><strong>YOU’VE BEEN ASSIGNED...</strong></p>
+							<p>Team Member: CJ</p>
+							<p>Email: cj@evercharge.net</p>
+							<p>Phone: 415.851.0956</p>
+							<button type="button" class="ec-button-teal-border" data-toggle="modal" data-target="#myModal">Schedule a call now</button>
+						</div>
+					</div>
+					<!-- end row2 -->
+				</div>
 			</div>
-		</article>
 		</div>
-	</section>
-
+	</header>
 {% endblock %}
-{% block video %} {% endblock %}
+
+{% block video %}
+{% endblock %}
+
+{% block intro %}
+{% endblock %}
 
 {% block content_one %}
-<article class='jumbotron greyjumbo'>
-	<h1>Schedule a Call</h1>
-	<hr class='short'>
-	<h4>If you'd prefer, you can schedule a time that is convenient for you and a member of our Member Services team will give you a call.</h4>
-	<br>
-	<button type="button" class="flat_button" data-toggle="modal" data-target="#myModal">Schedule</button>
-</article>
+	<article class='jumbotron whitejumbo'></article>
 {% endblock %}
 
+{% block content_two %}
+{% endblock %}
 
+{% block content_three %}
+{% endblock %}
 
 {% block quote_form %}	
-<br>
-<br>
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Schedule an Appointment</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<center>
+	        	<iframe src='https://calendly.com/evercharge/quote' scrolling='no'></iframe>
+	        </center>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="flat_button" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
-</div>
+	<div style="display:none;">
+		<iframe id="submit_frame" name="submit_frame"></iframe>
+	</div>
 
-
-
-
-<article class='jumbotron whitejumbo'></article>
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Schedule an Appointment</h4>
-      </div>
-      <div class="modal-body">
-      	<center>
-        	<iframe src='https://calendly.com/evercharge/quote' scrolling='no'></iframe>
-        </center>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="flat_button" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div style="display:none;">
-	<iframe id="submit_frame" name="submit_frame"></iframe>
-</div>
-
-
-<form action='/nutshell/submit' class='get-quote validate-form' id='existing_customer'
-method='post' name='existing_customer' target='submit_frame'>
-<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-<input name='contact_id' type='hidden' value='{{ contactId }}'>
-<legend id='thankyou'>
-	<span id='form_heading'>Have time for a few more questions?</span>
-</legend>
-
-<fieldset id='primary_form_content'>
-	
-	<form id='blank' name='blank'>
-	</form>
-
-
-<!-- 	<form action='/nutshell/phonenumber' id='phone_number_form' method='post' name='phone_number_form' target='submit_frame'>
-		<input name='contact_id' type='hidden' value='{{ contactId }}'>
-		<h3>What's the best number where we can reach you?</h3>
-		<input name='phone_number' type='tel' class='form-control bfh-phone'
-		placeholder='Phone Number' data-format='ddd-ddd-dddd' autocompelte='false'
-		onchange='phoneSubmit()'>
-		<br>
-	</form>
-	<br>
-	<hr>
-	<br> -->
-	<form action='/nutshell/parkingspot' class='validate-form' id=
-	'parking_spot_form' method='post' name='parking_spot_form' target=
-	'submit_frame'>
-		<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-
-		<h3>Are your parking spots...</h3>
-		<div class='row features' id='parking_listener'>
-			<div class='col-md-9 col-xs-16'>
-				<ul>
-					<li>
-						<input class='radioblank' id='assignedparking' name='parking_type' type='radio' value='Assigned/Deeded'>
-						<p class='label_form'>Assigned /<br> Deeded</p>
-					</li>
-					<li>
-						<input class='radioblank' id='assignedparking' name='parking_type' type='radio' value='Unassigned'>
-						<p class='label_form'>Unassigned</p>
-					</li>
-					<li>
-						<input class='radioblank' id='assignedparking' name='parking_type' type='radio' value='Valet'>
-						<p class='label_form'>Valet</p>
-					</li>
-					<li>
-						<input class='radioblank' id='assignedparking' name='parking_type' type='radio' value='Other'>
-						<p class='label_form'>Other</p>
-					</li>
-				</ul>
+	<div class="container">
+		<form action='/nutshell/submit' class='get-quote validate-form' id='existing_customer'
+		method='post' name='existing_customer' target='submit_frame'>
+			<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
+			<input name='contact_id' type='hidden' value='{{ contactId }}'>
+			
+			<div class="row">
+				<div class="col-md-offset-2 col-md-12">
+					<legend id='thankyou'>
+						<span id='form_heading'>More About You</span>
+					</legend>
+				</div>
 			</div>
 
-			<div class='col-md-7 col-xs-16'>
-				<p class='form_more_info'>
-					This helps us understand what installation options will be best suited for your property.
-				</p>
-			</div>
-		</div>
-	</form>
-	<hr>
-	<br>
+			<fieldset id='primary_form_content' class="ec-fieldset">
+				<form id='blank' name='blank'></form>
+				<div class="row">
+					<div class="col-md-offset-2 col-md-8">
+						<form action='/nutshell/parkingspot' class='validate-form' id=
+						'parking_spot_form' method='post' name='parking_spot_form' target=
+						'submit_frame'>
+							<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
+					    <p><strong>Are your parking spots...</strong></p>
+					    <div id="parking_listener">
+					    	<p>
+					    	  <input type="radio" name="parking_type" id="assignedparking" value="Assigned/Deeded" />
+					    	  <label for="assignedparking">Assigned/Deeded</label>
+					    	</p>
+					    	<p>
+					    	  <input type="radio" name="parking_type" id="assignedparking" value="Unassigned" />
+					    	  <label for="assignedparking_2">Unassigned</label>
+					    	</p>
+					    	<p>
+					    	  <input type="radio" name="parking_type" id="assignedparking" value="Valet" />
+					    	  <label for="assignedparking_3">Valet</label>
+					    	</p>
+					    	<p>
+					    	  <input type="radio" name="parking_type" id="assignedparking" value="Other" />
+					    	  <label for="assignedparking_4">Other</label>
+					    	</p>
+					    </div>
+						</form>
+					</div>
+					<div class="col-md-4">
+						<p class="ec-p">This helps us understand what installation options will be best suited for your property.</p>
+					</div>
+				</div><!-- end question 1 row -->
 
+				<div class="row">
+					<div class="col-md-offset-2 col-md-12">
+						<hr class="ec-hr-extra" />
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-md-offset-2 col-md-8">
+						<form action='/nutshell/numberofspots' class='validate-form' id='number_spots_form' method='post' name='number_spots_form' target='submit_frame'>
+							<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
+							<input name='contact_id' type='hidden' value='{{ contactId }}'>
+					    <p><strong>How many parking spots are in your building?</strong></p>
+					    <div class="number_spots_listener">
+					    	<p>
+					    	  <input type="radio" name="number_of_spots" id="number_of_spots" value="Under 25" />
+					    	  <label for="number_of_spots">Under 25</label>
+					    	</p>
+					    	<p>
+					    	  <input type="radio" name="number_of_spots" id="number_of_spots_2" value="26-50" />
+					    	  <label for="number_of_spots_2">26-50</label>
+					    	</p>
+					    	<p>
+					    	  <input type="radio" name="number_of_spots" id="number_of_spots_3" value="51-100" />
+					    	  <label for="number_of_spots_3">51-100</label>
+					    	</p>
+					    	<p>
+					    	  <input type="radio" name="number_of_spots" id="number_of_spots_4" value="101-200" />
+					    	  <label for="number_of_spots_4">101-200</label>
+					    	</p>
+					    	<p>
+					    	  <input type="radio" name="number_of_spots" id="number_of_spots_5" value="Over 200" />
+					    	  <label for="number_of_spots_5">Over 200</label>
+					    	</p>
+					    </div>
+						</form>
+					</div>
+					<div class="col-md-4">
+						<p class="ec-p">Buildings of different sizes have different electrical infrastructure requirements.</p>
+					</div>
+				</div><!-- end question 2 row -->
 
+				<div class="row">
+					<div class="col-md-offset-2 col-md-12">
+						<hr class="ec-hr-extra" />
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-md-offset-2 col-md-8">
+						<form action='/nutshell/reference' class=' validate-form' id='reference_form'
+						method='post' name='reference_form' target='submit_frame'>
+							<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
+							<input name='contact_id' type='hidden' value='{{ contactId }}'>
+							<p><strong>How did you hear about us?</strong></p>
+							<div id="tesla_listener">
+								<p>
+								  <input type="radio" name="reference" id="reference" value="Website" />
+								  <label for="reference">Online</label>
+								</p>
+								<p>
+								  <input type="radio" name="reference" id="reference_2" value="Property Manager/HOA" />
+								  <label for="reference_2">HOA</label>
+								</p>
+								<p>
+								  <input type="radio" name="reference" id="reference_3" value="Friend" />
+								  <label for="reference_3">Friend</label>
+								</p>
+								<p>
+								  <input type="radio" name="reference" id="reference_4" value="Tesla" />
+								  <label for="reference_4">Tesla</label>
+								</p>
+								<p>
+								  <input type="radio" name="reference" id="reference_5" value="Other" />
+								  <label for="reference_5">Other</label>
+								</p>
+							</div>
 
-	<form action='/nutshell/numberofspots' class=' validate-form' id='number_spots_form' method='post' name='number_spots_form' target='submit_frame'>
-		<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-		<input name='contact_id' type='hidden' value='{{ contactId }}'>
-		<h3>How many parking spots are in your building?</h3>
-		<div class='row features' id='number_spots_listener'>
-			<div class='col-md-9 col-xs-16'>
-				<ul>
-					<li>
-						<input class='radioblank' name='number_of_spots' type='radio' value='Under 25'>
-						<p class='label_form'>Under 25</p>
-					</li>
-					<li>
-						<input class='radioblank' name='number_of_spots' type='radio' value='26-50'>
-						<p class='label_form'>26-50</p>
-					</li>
-					<li>
-						<input class='radioblank' name='number_of_spots' type='radio' value='51-100'>
-						<p class='label_form'>51-100</p>
-					</li>
-					<li>
-						<input class='radioblank' name='number_of_spots' type='radio' value='101-200'>
-						<p class='label_form'>101-200</p>
-					</li>
-					<li>
-						<input class='radioblank' name='number_of_spots' type='radio' value='Over 200'>
-						<p class='label_form'>Over 200</p>
-					</li>
-				</ul>
-			</div>
-			<div class='col-md-7 col-xs-16'>
-				<p class='form_more_info'>
-					Buildings of different sizes have different electrical infrastructure requirements.
-				</p>
-			</div>
-		</div>
-	</form>
+							<form action='/nutshell/teslacontact' class=' validate-form' id=
+							'tesla_contact_form' method='post' name='tesla_contact_form' target=
+							'submit_frame'>
+								<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
 
-	<hr>
-	<br>
+								<div class='form-group' id='tesla_div'>
+									<p>Who from Tesla referred you?</p>
+									<input class='form-control' id='tesla_contact' name=
+									'tesla_contact' onchange='teslaContactSubmit()' placeholder=
+									'Name of Tesla Contact' type='text'>
+								</div>
+							</form>
 
-	<form action='/nutshell/reference' class=' validate-form' id='reference_form'
-	method='post' name='reference_form' target='submit_frame'>
-		<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-		<input name='contact_id' type='hidden' value='{{ contactId }}'>
+						</form>
+					</div>
+				</div><!-- end question 3 row -->
 
-		<h3>How did you hear about us?</h3>
-		<div class='row features' id='tesla_listener'>
-			<div class='col-md-16 col-xs-6'>
-				<ul>
-					<li>
-						<input class='radioblank' name='reference' type='radio' value='Website'>
-						<p class='label_form'>Online</p>
-					</li>
-					<li>
-						<input class='radioblank' name='reference' type='radio' value='Property Manager/HOA'>
-						<p class='label_form'>HOA</p>
-					</li>
-					<li>
-						<input class='radioblank' name='reference' type='radio' value='Friend'>
-						<p class='label_form'>Friend</p>
-					</li>
-					<li>
-						<input class='radioblank' name='reference' type='radio' value='Tesla' id='teslaradio_control'>
-						<p class='label_form'>Tesla</p>
-					</li>
-					<li>
-						<input class='radioblank' name='reference' type='radio' value='Other'>
-						<p class='label_form'>Other</p>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</form>
+				<div class="row">
+					<div class="col-md-offset-2 col-md-12">
+						<hr class="ec-hr-extra" />
+					</div>
+					<div class="clearfix"></div>
+					<div class="col-md-offset-2 col-md-6 col-sm-8 col-xs-16">
+						<div class='btn-wrapper'>
+							<input id='final_submit_button' type='submit' value='Submit'>
+						</div>
+					</div>
+				</div>
 
-
-	<form action='/nutshell/teslacontact' class=' validate-form' id=
-	'tesla_contact_form' method='post' name='tesla_contact_form' target=
-	'submit_frame'>
-		<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-
-		<div class='form-group' id='tesla_div'>
-			<p>Who from Tesla referred you?</p>
-			<input class='form-control' id='tesla_contact' name=
-			'tesla_contact' onchange='teslaContactSubmit()' placeholder=
-			'Name of Tesla Contact' type='text'>
-		</div>
-	</form>
-	
-
-		<div class='btn-wrapper'>
-			<input id='final_submit_button' type='submit' value='Submit'>
-		</div>
-	</fieldset>
-</form>
-<br>
-<br>
+			</fieldset>
+		</form>
+	</div><!-- end container -->
+	<br><br><br><br><br>
 {% endblock %}
 
 {% block custom_scripts %}
