@@ -103,16 +103,16 @@ function teslaContactSubmit()
 		var teslaContact = document.getElementById("tesla_contact");
 	}
 	// PARKING SPOT NUMBER
-parkingOptions.addEventListener('click', parkingCheck, false);
-
-function parkingCheck()
-{
-	if (document.getElementById('assignedparking').checked)
-	{
-		document.getElementById('parking_spot_div').style.display = 'block';
-	}
-	else document.getElementById('parking_spot_div').style.display = 'none';
-};
+//parkingOptions.addEventListener('click', parkingCheck, false);
+//
+//function parkingCheck()
+//{
+//	if (document.getElementById('assignedparking').checked)
+//	{
+//		document.getElementById('parking_spot_div').style.display = 'block';
+//	}
+//	else document.getElementById('parking_spot_div').style.display = 'none';
+//};
 
 function parkingSpotNumberSubmit()
 {

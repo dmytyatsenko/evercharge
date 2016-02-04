@@ -118,7 +118,7 @@ def thank_you():
     name = request.form.get('quote_name')
     phone = request.form.get('quote_phone', None)
     email = request.form.get('quote_email')
-    address1 = request.form.get('address_1')
+    address1 = request.form.get('address_1')  # TODO: Where addresses are on form?
     address2 = request.form.get('address_2')
     note = request.form.get('quote_notes')
     note = note if note else "No Customer Note"
@@ -128,7 +128,7 @@ def thank_you():
         address = address1 + ' ' + address2
     else:
         address = None
-
+    # TODO: where all these fields are on form?
     city = request.form.get('address_city')
     state = request.form.get('address_state')
     country = request.form.get('address_country')
@@ -173,6 +173,7 @@ def state_incentives():
     return render_template('incentives.html')
 
 
+# TODO: Is it still required or could be removed?
 @app.route('/testthankyou', methods=['POST', 'GET'])
 def test_thanks():
     """Route to test follow-up form template updates and scheduling
@@ -209,12 +210,16 @@ def phone_number():
     return "Successfully updated Phone Number"
 
 
-@app.route('/nutshell/parkingspot', methods=['POST', 'GET'])
-def parking_spot():
-    spot_type = request.form.get('parking_type')
+@app.route('/nutshell/parkingspot', methods=['POST'])
+def parking_spot_type():
+    current_parking_spot_type = request.form.get('parking_type')
     new_lead_id = request.form.get('lead_id')
 
-    nut.UpdateLead(new_lead_id).spot_type("REV_IGNORE", spot_type)
+    print('Parking spot type')
+    print(current_parking_spot_type)
+    print(new_lead_id)
+
+    nut.UpdateLead(new_lead_id).spot_type("REV_IGNORE", current_parking_spot_type)
 
     return "Successfully added parking type."
 
@@ -239,32 +244,39 @@ def parking_spot_number():
     return "Successfully added parking spot number."
 
 
-@app.route('/nutshell/numberofspots', methods=['POST', 'GET'])
+# TODO: WTF? what the difference with parking_spot_number? Why it updates approx building size?
+@app.route('/nutshell/numberofspots', methods=['POST'])
 def approximate_number_spots():
     approx_bldg_size = request.form.get('number_of_spots')
     new_lead_id = request.form.get('lead_id')
-
+    print('Parking spots number')
+    print(new_lead_id)
+    print(approx_bldg_size)
     nut.UpdateLead(new_lead_id).approx_bldg_size("REV_IGNORE", approx_bldg_size)
 
     return "Successfully added number of spots."
 
 
-@app.route('/nutshell/reference', methods=['POST', 'GET'])
+@app.route('/nutshell/reference', methods=['POST'])
 def referred_customer():
     reference = request.form.get('reference')
     new_lead_id = request.form.get('lead_id')
-
+    print('References')
+    print(new_lead_id)
+    print(reference)
     nut.UpdateLead(new_lead_id).lead_reference("REV_IGNORE", reference)
 
     return "Successfully added reference to EverCharge."
 
 
-@app.route('/nutshell/teslacontact', methods=['POST', 'GET'])
-def tesla_contact():
-    tesla_contact = request.form.get('tesla_contact')
+@app.route('/nutshell/auto-dealer-contact', methods=['POST'])
+def auto_dealer_contact():
+    current_auto_dealer_contact = request.form.get('tesla_contact')
     new_lead_id = request.form.get('lead_id')
-
-    nut.UpdateLead(new_lead_id).tesla_contact("REV_IGNORE", tesla_contact)
+    print('Tesla Contact')
+    print(new_lead_id)
+    print(current_auto_dealer_contact)
+    nut.UpdateLead(new_lead_id).auto_dealer_contact("REV_IGNORE", current_auto_dealer_contact)
 
     return "Successfully added Tesla contact."
 
@@ -312,6 +324,7 @@ def avg_commute():
     return "Succesfully added daily commute."
 
 
+# TODO: What is this? What is purpose of this? There is reference to this in thank_you.html
 @app.route('/nutshell/submit', methods=['POST', 'GET'])
 def follow_up():
     new_lead_id = request.form.get('lead_id')
