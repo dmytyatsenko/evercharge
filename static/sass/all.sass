@@ -31,6 +31,15 @@ a, button
       background: RGBA(0,164,153,0.1)
       text-decoration: none
 
+a.ec-text-link
+  color: $ec-teal
+  font-size: 14px
+  font-weight: 600
+  text-decoration: underline
+  text-transform: uppercase
+  &:hover
+    color: black
+
 .ec-button-teal
   background: $ec-teal
   border: 1px solid $ec-dk-teal
@@ -46,6 +55,23 @@ a, button
   background: white
   border: 1px solid black
   outline: 10px solid white
+
+.ec-box-white
+  background: white
+  padding: 20px
+
+.ec-title-box
+  color: white
+  display: table-cell
+  padding: 80px 20px 20px 20px
+  vertical-align: bottom
+  &-intro
+    @extend .ec-title-box
+    position: absolute
+    top: -120px
+    z-index: 2
+  &.blue 
+    background: #68CEF2
 
 // misc
 hr.ec-hr-extra
@@ -116,6 +142,14 @@ p.ec-p
   position: absolute
   top: -140px
   z-index: 2
+
+// page: properties
+.greyjumbo .ec-box-white
+  h2
+    margin-bottom: 3px
+    margin-top: 0
+  h2 + p
+    margin-bottom: 15px
 
 // page: base
 .ec-stretch-grey
