@@ -173,18 +173,6 @@ def state_incentives():
     return render_template('incentives.html')
 
 
-# TODO: Is it still required or could be removed?
-@app.route('/testthankyou', methods=['POST', 'GET'])
-def test_thanks():
-    """Route to test follow-up form template updates and scheduling
-
-    implementation without creating new Nutshell leads"""
-
-    return render_template('test_thankyou.html',
-                           newLeadId='newLeadId',
-                           contactId='contactId')
-
-
 @app.route('/nutshell/address', methods=['POST', 'GET'])
 def update_address_in_nutshell():
     address = request.form.get('address')
