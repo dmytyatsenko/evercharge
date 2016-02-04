@@ -113,18 +113,16 @@ def faqs():
 
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
+    if request.method == 'GET':
+        return redirect('/')
     name = request.form.get('quote_name')
-    phone = request.form.get('quote_phone')
+    phone = request.form.get('quote_phone', None)
     email = request.form.get('quote_email')
     address1 = request.form.get('address_1')
     address2 = request.form.get('address_2')
     note = request.form.get('quote_notes')
-
-    if note == '':
-        note = "No Customer Note"
-
-    if phone == '':
-        phone = None
+    note = note if note else "No Customer Note"
+    phone = phone if phone else None
 
     if address1:
         address = address1 + ' ' + address2
@@ -135,52 +133,37 @@ def thank_you():
     state = request.form.get('address_state')
     country = request.form.get('address_country')
     postal_code = request.form.get('address_postal_code')
-    cust_type = request.form.get('customer_type')
+    customer_type = request.form.get('customer_type')
     veh_type = request.form.get('veh_type')
     build_size = request.form.get('building_size')
-    tag = request.form.get('adwordsField')
+    tag = request.form.get('adwordsField', None)
     gran = request.form.get('granularField')
 
-    source = ''
-    if name is None:
-        return redirect('/')
-
-    elif name.lower() == 'driver test':
-        return render_template('evthankyou.html')
-
-    elif name.lower() == 'pm test':
-        return render_template('hoathankyou.html')
-
+    if customer_type == 'EV Driver':
+        source = 29
+        new_contact = nut.add_new_contact(name, email, phone,
+                                          address, city, state, postal_code, country, veh_type)
+        contact_id = new_contact['result']['id']
+        new_lead = nut.add_new_lead(contact_id, source, note)
     else:
+        source = 33
+        new_contact = nut.add_new_contact(name, email, phone,
+                                          address, city, state, postal_code, country)
 
-        if cust_type == 'EV Driver':
-            source = 29
-            new_contact = nut.add_new_contact(name, email, phone,
-                                              address, city, state, postal_code, country, veh_type)
-            contactId = new_contact['result']['id']
-            newLead = nut.add_new_lead(contactId, source, note)
-            newLeadId = newLead['result']['id']
-            if tag != '':
-                nut.UpdateLead(newLeadId).tag("REV_IGNORE", [tag, gran])
+        contact_id = new_contact['result']['id']
+        new_lead = nut.add_new_lead(contact_id, source, note, build_size)
 
-            return render_template("evthankyou.html",
-                                   newLeadId=newLeadId,
-                                   contactId=contactId)
+    print('______')
+    print(new_lead)
+    print('------')
+    new_lead_id = new_lead['result']['id']
 
-        else:
-            source = 33
-            new_contact = nut.add_new_contact(name, email, phone,
-                                              address, city, state, postal_code, country)
+    if tag:
+        nut.UpdateLead(new_lead_id).tag("REV_IGNORE", [tag, gran])
 
-            contactId = new_contact['result']['id']
-            newLeadId = nut.add_new_lead(contactId, source, note, build_size)['result']['id']
-
-            if tag != '':
-                nut.UpdateLead(newLeadId).tag("REV_IGNORE", [tag, gran])
-
-            return render_template("hoathankyou.html",
-                                   newLeadId=newLeadId,
-                                   contactId=contactId)
+    return render_template("thank_you.html",
+                           newLeadId=new_lead_id,
+                           contactId=contact_id)
 
 
 @app.route('/incentives', methods = ['GET'])

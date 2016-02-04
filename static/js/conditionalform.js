@@ -81,11 +81,8 @@ teslaOptions.addEventListener('click', referenceSubmit, false);
 
 function teslaCheck()
 {
-	if (document.getElementById('teslaradio_control').checked)
-	{
-		document.getElementById('tesla_div').style.display = 'block';
-	}
-	else document.getElementById('tesla_div').style.display = 'none';
+	if (document.getElementById('auto_dealer_reference').checked){ $('#tesla_div').fadeIn('fast'); }
+	else {document.getElementById('tesla_div').style.display = 'none';}
 };
 
 function referenceSubmit()
@@ -122,18 +119,19 @@ function parkingSpotNumberSubmit()
 	document.getElementById("spot_number_form").submit();
 	var spotNumber = document.getElementById("parking_spot_number_input");
 };
-// DELIVERY DATE
-var deliveryOptions = document.getElementById('delivery_listener');
-deliveryOptions.addEventListener('click', deliveryCheck);
 
-function deliveryCheck()
-{
-	if (document.getElementById('knowdelivery').checked)
-	{
-		document.getElementById('delivery_date_div').style.display = 'block';
-	}
-	else document.getElementById('delivery_date_div').style.display = 'none';
-};
+// DELIVERY DATE
+//var deliveryOptions = document.getElementById('delivery_listener');
+//deliveryOptions.addEventListener('click', deliveryCheck);
+
+//function deliveryCheck()
+//{
+//	if (document.getElementById('knowdelivery').checked)
+//	{
+//		document.getElementById('delivery_date_div').style.display = 'block';
+//	}
+//	else document.getElementById('delivery_date_div').style.display = 'none';
+//};
 
 function deliveryDateSubmit()
 {
@@ -146,36 +144,37 @@ function dailyCommuteSubmit()
 		var commuteTime = document.getElementById("commute_input");
 	}
 	// DO YOU HAVE AN EV?
-var ownerListener = document.getElementById('delivery_listener');
-ownerListener.addEventListener('click', evOwnerSubmit, false);
+//var ownerListener = document.getElementById('delivery_listener');
+//ownerListener.addEventListener('click', evOwnerSubmit, false);
 
-function evOwnerSubmit()
-{
-	var ownerRadios = document.getElementsByName("ev_status");
-	for (var i = 0, len = ownerRadios.length; i < len; i++)
-	{
-		if (ownerRadios[i].checked)
-		{
-			document.getElementById("ev_owner_form").submit();
-		}
-	}
-};
+//function evOwnerSubmit()
+//{
+//	var ownerRadios = document.getElementsByName("ev_status");
+//	for (var i = 0, len = ownerRadios.length; i < len; i++)
+//	{
+//		if (ownerRadios[i].checked)
+//		{
+//			document.getElementById("ev_owner_form").submit();
+//		}
+//	}
+//};
+
 // BUILDING EXISTING CUSTOMER AUTOSUBMIT
-var customerListener = document.getElementById('customer_listener');
-customerListener.addEventListener('click', customerSubmit, false);
+//var customerListener = document.getElementById('customer_listener');
+//customerListener.addEventListener('click', customerSubmit, false);
 
-function customerSubmit()
-{
-	var customerRadios = document.getElementsByName("building_customer");
-	for (var i = 0, len = customerRadios.length; i < len; i++)
-	{
-		if (customerRadios[i].checked)
-		{
-			document.getElementById("existing_customer_form").submit();
-			console.log("submitted building customer info!");
-		}
-	}
-};
+//function customerSubmit()
+//{
+//	var customerRadios = document.getElementsByName("building_customer");
+//	for (var i = 0, len = customerRadios.length; i < len; i++)
+//	{
+//		if (customerRadios[i].checked)
+//		{
+//			document.getElementById("existing_customer_form").submit();
+//			console.log("submitted building customer info!");
+//		}
+//	}
+//};
 
 // PHONE NUMBER
 function phoneSubmit()
