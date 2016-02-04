@@ -38,7 +38,7 @@
 							<p class="bitter">We'll be in touch shortly.</p>
 						</div>
 						<div class="col-md-10 ec-box-lt-gray">
-							<img src="https://cdn3.iconfinder.com/data/icons/abstract-pattern-shape/100/Icon_AbstractZigzag-512.png" class="pull-left" style="height:100px; width:100px; margin-right: 16px" />
+							<img src="images/evercharge-circle-badge-dk-green.png" class="pull-left" style="height:100px; width:100px; margin-right: 16px" />
 
 							<p><strong>YOU’VE BEEN ASSIGNED...</strong></p>
 							<p>Team Member: CJ</p>
@@ -104,7 +104,7 @@
 			<div class="row">
 				<div class="col-md-offset-2 col-md-12">
 					<legend id='thankyou'>
-						<span id='form_heading'>More About You</span>
+						<h2 class="ec-teal">More About You</h2>
 					</legend>
 				</div>
 			</div>
@@ -117,7 +117,7 @@
 						'parking_spot_form' method='post' name='parking_spot_form' target=
 						'submit_frame'>
 							<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-					    <p><strong>Are your parking spots...</strong></p>
+					    <p class="black"><strong>Are your parking spots...</strong></p>
 					    <div id="parking_listener">
 					    	<p>
 					    	  <input type="radio" name="parking_type" id="assignedparking" value="Assigned/Deeded" />
@@ -152,7 +152,7 @@
 						<form action='/nutshell/numberofspots' class='validate-form' id='number_spots_form' method='post' name='number_spots_form' target='submit_frame'>
 							<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
 							<input name='contact_id' type='hidden' value='{{ contactId }}'>
-					    <p><strong>How many parking spots are in your building?</strong></p>
+					    <p class="black"><strong>How many parking spots are in your building?</strong></p>
 					    <div class="number_spots_listener">
 					    	<p>
 					    	  <input type="radio" name="number_of_spots" id="number_of_spots" value="Under 25" />
@@ -192,7 +192,7 @@
 						method='post' name='reference_form' target='submit_frame'>
 							<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
 							<input name='contact_id' type='hidden' value='{{ contactId }}'>
-							<p><strong>How did you hear about us?</strong></p>
+							<p class="black"><strong>How did you hear about us?</strong></p>
 							<div id="tesla_listener">
 								<p>
 								  <input type="radio" name="reference" id="reference" value="Website" />
@@ -239,7 +239,7 @@
 					</div>
 					<div class="clearfix"></div>
 					<div class="col-md-offset-2 col-md-6 col-sm-8 col-xs-16">
-						<input id='final_submit_button' type='submit' value='Submit'>
+						<input id='final_submit_button' type='submit' value='Submit' class="ec-button-teal">
 					</div>
 				</div>
 
