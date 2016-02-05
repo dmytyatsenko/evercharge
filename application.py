@@ -264,7 +264,7 @@ def referred_customer():
 
 @app.route('/nutshell/auto-dealer-contact', methods=['POST'])
 def auto_dealer_contact():
-    current_auto_dealer_contact = request.form.get('tesla_contact')
+    current_auto_dealer_contact = request.form.get('auto_dealer_contact')
     new_lead_id = request.form.get('lead_id')
     print('Tesla Contact')
     print(new_lead_id)
