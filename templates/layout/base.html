@@ -98,7 +98,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         
-        <li><a href='{{ url_for('learn_more') }}'>LEARN MORE</a></li>
+        <li><a href='{{ url_for('why_evercharge') }}'>LEARN MORE</a></li>
         <li><a href="{{ url_for('about_us') }}">ABOUT</a></li>
         <li><a href="{{ url_for('faqs') }}">FAQs</a></li>
         <li><a href="http://blog.evercharge.net">BLOG</a></li>
@@ -226,7 +226,7 @@
 				<h5>Navigate</h5>
 				<div class="footer-list">
 					<a href="/">Home</a>
-					<a href="/learnmore">Learn More</a>
+					<a href="{{ url_for('why_evercharge') }}">Learn More</a>
 					<a href="/faqs">FAQs</a>
 					<a href="http://blog.evercharge.net">EverCharge Blog</a>
 				</div>
@@ -237,7 +237,7 @@
 					<a href="/aboutus">About Us</a>
 					<a href="https://angel.co/evercharge/jobs" target='_blank'>Careers</a>
 					<a href="press" target="_blank">Press Resources</a>
-					<a href="/learnmore#case-studies" target='_blank'>Case Studies</a>
+					<a href="{{ url_for('why_evercharge') }}#case-studies" target='_blank'>Case Studies</a>
 				</div>
 			</div>
 			<div class="col-sm-4">

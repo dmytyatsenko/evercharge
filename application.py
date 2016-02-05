@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
 import os
 import nutshell_integration as nut
@@ -79,9 +79,14 @@ def evercharge():
     return render_template("index.html")
 
 
+@app.route('/why-evercharge', methods=['GET'])
+def why_evercharge():
+    return render_template('learn-more.html')
+
+
 @app.route('/learnmore', methods=['GET'])
 def learn_more():
-    return render_template('learn-more.html')
+    return redirect(url_for('why_evercharge'), 302)
 
 
 @app.route('/ev-owner', methods=['POST', 'GET'])
