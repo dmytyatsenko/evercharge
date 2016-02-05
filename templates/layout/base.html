@@ -109,22 +109,20 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+
 <div class="banner">
 	<div class="bg-stretch">
 		{% block background %}
 		{% endblock %}
 	</div>
-	<div class="container">
-	</div>
+	<div class="container"></div>
 
 
-		<div class="row text-center">
-
-				{% block maincontent %}
-				{% endblock %}
-		</div>
-	</div>
+    <div class="row text-center">
+        {% block maincontent %}{% endblock %}
+    </div>
 </div>
+
 
 	<main id="content">
 		<!-- video -->
@@ -209,9 +207,7 @@
 {% block content_one_bottom %}
 {% endblock %}
 
-</main>
-
-
+    </main>
 
 	<!-- footer of the page -->
 	<footer id="footer">
@@ -249,7 +245,7 @@
 					<a href='tel:8883427383'>888.342.7383</a>
 				</div>
 			</div>
-
+            </div> <!-- /row features -->
 			<div class="clearfix"></div>
 			
 			<p class="copyright">
