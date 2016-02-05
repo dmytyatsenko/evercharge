@@ -37,7 +37,7 @@
 
 {% endblock %}
 {% block quote_form %}
-<form id='login' action="", method='post' class="get-quote validate-form">
+<form id='login' action="" method='post' class="validate-form">
 	<fieldset>
 		<legend id="quote"></legend>
 
@@ -50,18 +50,12 @@
 
 		{% if error %}
 		<div id="login_error">
-			<center>
-				<p class=error><strong>Error:</strong> {{ error }}</p>
-			</center>
+            <p class="text-center error"><strong>Error:</strong> {{ error }}</p>
 		</div>
 		{% endif %}
-		
 
 			<div class="btn-wrapper">
 				<input id="final_submit_button" type="submit" value="LOGIN">
 			</div>
 	</fieldset>
-
-	{{ building }}
-
 	{% endblock %}
