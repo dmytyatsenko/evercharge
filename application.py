@@ -123,40 +123,19 @@ def thank_you():
     name = request.form.get('quote_name')
     phone = request.form.get('quote_phone', None)
     email = request.form.get('quote_email')
-    address1 = request.form.get('address_1')  # TODO: Where addresses are on form?
-    address2 = request.form.get('address_2')
     note = request.form.get('quote_notes')
     note = note if note else "No Customer Note"
     phone = phone if phone else None
 
-    if address1:
-        address = address1 + ' ' + address2
-    else:
-        address = None
-    # TODO: where all these fields are on form?
-    city = request.form.get('address_city')
-    state = request.form.get('address_state')
-    country = request.form.get('address_country')
-    postal_code = request.form.get('address_postal_code')
     customer_type = request.form.get('customer_type')
-    veh_type = request.form.get('veh_type')
-    build_size = request.form.get('building_size')
     tag = request.form.get('adwordsField', None)
     gran = request.form.get('granularField')
 
-    if customer_type == 'EV Driver':
-        source = 29
-        new_contact = nut.add_new_contact(name, email, phone,
-                                          address, city, state, postal_code, country, veh_type)
-        contact_id = new_contact['result']['id']
-        new_lead = nut.add_new_lead(contact_id, source, note)
-    else:
-        source = 33
-        new_contact = nut.add_new_contact(name, email, phone,
-                                          address, city, state, postal_code, country)
+    new_contact = nut.add_new_contact(name, email, phone, '', '', '', '', '')
+    contact_id = new_contact['result']['id']
 
-        contact_id = new_contact['result']['id']
-        new_lead = nut.add_new_lead(contact_id, source, note, build_size)
+    source = 29 if customer_type == 'EV Driver' else 33
+    new_lead = nut.add_new_lead(contact_id, source, note)
 
     print('______')
     print(new_lead)
