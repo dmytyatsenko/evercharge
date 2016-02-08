@@ -13,6 +13,16 @@
 		<div class="ec-home-stretch">
 			<img src="images/EverCharge-Wattson-Schneider.jpg" alt="Wattson">
 		</div>
+		<div class="container-fluid">
+			<div class="row ec-home-banner-text">
+				<div class="col-md-offset-8 col-md-7">
+					<h1 class="xl">INTRODUCING <strong>WATTSON</strong></h1>
+					<h4>EverCharge’s newest electric charging solution</h4>
+					<br>
+					<a href="{{ url_for('device_wattson') }}" class="ec-button-teal">Learn More &#8594;</a>
+				</div>
+			</div>
+		</div>
 	</div>
 {% endblock %}
 
@@ -24,15 +34,6 @@
 
 	
 {% block maincontent %}
-	<div class="container ec-home-banner-text">
-		<div class="row">
-			<h1>INTRODUCING <strong>WATTSON</strong></h1>
-			<p class="black">EverCharge’s newest electric charging solution</p>
-			<div class="col-sm-6">
-				<a href="{{ url_for('smart_power') }}" class="ec-button-teal">Learn More &#8594;</a>
-			</div>
-		</div>
-	</div>
 {% endblock %}
 
 {% block content_one %}
