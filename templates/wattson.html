@@ -5,50 +5,32 @@
 {% endblock %}
 
 {% block background %}
+	<img src="images/building-wall.jpg" />
 {% endblock %}
 
 {% block alt_background %}
 	<div class="ec-wattson-banner">
-		<div class="ec-wattson-stretch">
-			<img src="images/wattson-front.jpg" alt="Wattson">
-		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-offset-8 col-md-7">
-					<div class="ec-wattson-does">
-						<h1>WATTSON <strong>DOES</strong></h1>
-						<p>charge the widest range of vehicles on the planet and dramatically reduce installation costs</p>
+				<div class="col-md-8">
+					<img src="images/EverCharge-Wattson-only.png" alt="Wattson" class="ec-wattson-only img-responsive">
+				</div>
+				<div class="col-md-7">
+					<div class="ec-wattson-does-wrap">
+						<div class="ec-wattson-does">
+							<h1>WATTSON <strong>DOES</strong></h1>
+							<h4 class="bitter">charge the widest range of vehicles on the planet and dramatically reduce installation costs.</h4>
+						</div>
+						<div class="greyjumbo">
+							<p class="black">The first-of-its-kind charging station combines EverCharge’s SmartPower technology with Schneider’s EVLink charging station. </p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-{% endblock %}
-
-{% block rightheader %}
-{% endblock %}
-
-{% block social_media %}
-{% endblock %}
-
-	
-{% block maincontent %}
-{% endblock %}
-
-{% block content_one %}
-{% endblock %}
-
-{% block content_two %}
 	<div class="whitejumbo">
-		<div class="container">
-			
-		</div>
-	</div>
-{% endblock %}
-
-{% block content_three %}
-	<div class="whitejumbo ec-wattson-reserve">
-		<div class="container">
+		<div class="container ec-wattson-reserve">
 			<form action="/thankyou", method='post' class="validate-form">
 				<input name="lead_source" value="Web Signup" type="hidden">
 				<input name="adwordsField" id='adwordsField' type="hidden">
@@ -75,6 +57,52 @@
 			</form>
 		</div>
 	</div>
+{% endblock %}
+
+{% block rightheader %}
+{% endblock %}
+
+{% block social_media %}
+{% endblock %}
+
+	
+{% block maincontent %}
+{% endblock %}
+
+{% block content_one %}
+{% endblock %}
+
+{% block content_two %}
+	<div class="greyjumbo">
+		<div class="container ec-wattson-about">
+			<div class="row">
+				<div class="col-md-offset-2 col-md-6">
+					<br>
+					<br>
+					<h2 class="ec-teal">About Wattson</h2>
+					<p class="black">Wattson is a fully enclosed power station with SmartPower technology built-in. In addition to acting as a stand-alone Level 1 charging station in its own right, Wattson can also support high-powered Level 2 charging.</p> 
+					<p class="black">This allows Wattson to rapidly charge and power an array of products from electric cars, golf-carts, e-bikes, electric scooters, and even offer trickle charging to high-end luxury vehicles.</p>
+					<br>
+					<br>
+				</div>
+				<img src="images/EverCharge-Wattson-Schneider-front-crop.jpg" />
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content_three %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-offset-1 col-md-14">
+			<div class="ec-wattson-quote">
+				<h2 class="bitter ec-teal">“Wattson can charge anything, from Supercars that need trickle charging to golf carts, Wattson can handle any kind of power demand.”</h2>
+				<br>
+				<p class="black">&ndash; <strong>Jason</strong>, EverCharge CEO</p>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}
 
 {% block video %}
