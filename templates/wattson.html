@@ -1,0 +1,84 @@
+{% extends 'layout/base.html' %}
+
+
+{% block bannersize %}
+{% endblock %}
+
+{% block background %}
+{% endblock %}
+
+{% block alt_background %}
+	<div class="ec-wattson-banner">
+		<div class="ec-wattson-stretch">
+			<img src="images/wattson-front.jpg" alt="Wattson">
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-8 col-md-7">
+					<div class="ec-wattson-does">
+						<h1>WATTSON <strong>DOES</strong></h1>
+						<p>charge the widest range of vehicles on the planet and dramatically reduce installation costs</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block rightheader %}
+{% endblock %}
+
+{% block social_media %}
+{% endblock %}
+
+	
+{% block maincontent %}
+{% endblock %}
+
+{% block content_one %}
+{% endblock %}
+
+{% block content_two %}
+	<div class="whitejumbo">
+		<div class="container">
+			
+		</div>
+	</div>
+{% endblock %}
+
+{% block content_three %}
+	<div class="whitejumbo ec-wattson-reserve">
+		<div class="container">
+			<form action="/thankyou", method='post' class="validate-form">
+				<input name="lead_source" value="Web Signup" type="hidden">
+				<input name="adwordsField" id='adwordsField' type="hidden">
+				<input name="granularField" id="granularField" type="hidden">
+				<fieldset>		
+					<div class="row">
+						<div class="holder">
+							<div class="col-xs-16 col-sm-6">
+								<div class="form-group">
+									<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="false"> 
+								</div>
+							</div>
+							<div class="col-xs-16 col-sm-5">
+								<div class="form-group">
+									<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="false">
+								</div>
+							</div>
+							<div class="col-sm-5">
+								<input type="submit" value="Reserve Yours Now &#8594;" class="ec-button-teal-border">
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+{% endblock %}
+
+{% block video %}
+{% endblock %}
+
+{% block content_one_bottom %}
+{% endblock %}

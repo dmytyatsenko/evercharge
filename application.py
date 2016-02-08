@@ -322,6 +322,10 @@ def schneider_partnership():
 def evercharge_properties():
     return render_template('properties.html')
 
+@app.route('/wattson')
+def device_wattson():
+    return render_template('wattson.html')
+
 
 ################################################################################
 
