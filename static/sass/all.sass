@@ -16,7 +16,7 @@ $ec-letter-space: -0.5px
 //////////////////////
 // COMPONENTS
 // buttons
-a, button
+a, button, input
   &.ec-button-teal-border
     background: transparent
     border: 2px solid $ec-teal
@@ -40,6 +40,16 @@ a.ec-text-link
   &:hover
     color: black
     cursor: pointer
+
+a.ec-button-teal
+  background: $ec-teal
+  border: 1px solid $ec-dk-teal
+  color: white
+  font-size: 14px
+  margin-top: 14px
+  min-height: 40px
+  padding: 15px 30px
+  text-transform: uppercase
 
 .ec-button-teal
   background: $ec-teal
@@ -223,4 +233,43 @@ p.ec-p
       text-transform: none
     h4 + p
       margin-bottom: 30px
+
+// page: home
+.ec-home-banner
+  height: 640px
+  margin-top: -410px
+  width: 100%
+  z-index: 1
+  .ec-home-stretch
+    bottom: 0
+    z-index: -1
+    left: 0
+    position: absolute
+    right: 0
+    top: 0
+    img
+      width: 100%
+.ec-home-banner-text
+  margin-top: 300px
+.ec-home-properties
+  padding-top: 100px
+  position: relative
+  img 
+    top: 100px
+  .ec-dk-banner
+    background: $ec-dk-teal
+    left: 12px
+    padding: 200px 30px 100px 30px
+    position: absolute
+    top: 0
+    width: 320px
+    h5
+      color: white
+    a.ec-text-link
+      color: white
+.ec-home-quote
+  background: RGBA(0,164,153,0.3)
+  padding: 120px 0
+  text-align: center
+
 

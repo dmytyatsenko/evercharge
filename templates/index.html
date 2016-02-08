@@ -6,7 +6,14 @@
 {% endblock %}
 
 {% block background %}
-	<img src="images/home-wattson-1.jpg" alt="Wattson">
+{% endblock %}
+
+{% block alt_background %}
+	<div class="ec-home-banner">
+		<div class="ec-home-stretch">
+			<img src="images/home-wattson-1.jpg" alt="Wattson">
+		</div>
+	</div>
 {% endblock %}
 
 {% block rightheader %}
@@ -17,337 +24,80 @@
 
 	
 {% block maincontent %}
-	<div class="container">
+	<div class="container ec-home-banner-text">
 		<div class="row">
 			<h1>INTRODUCING <strong>WATTSON</strong></h1>
+			<p class="black">EverCharge’s newest electric charging solution</p>
+			<div class="col-sm-6">
+				<a href="{{ url_for('smart_power') }}" class="ec-button-teal">Learn More &#8594;</a>
+			</div>
 		</div>
 	</div>
 {% endblock %}
 
 {% block content_one %}
+	<div class="whitejumbo ec-index-quote-form">
+		<div class="container">
+			<form action="/thankyou", method='post' class="validate-form">
+				<input name="lead_source" value="Web Signup" type="hidden">
+				<input name="adwordsField" id='adwordsField' type="hidden">
+				<input name="granularField" id="granularField" type="hidden">
+				<fieldset>		
+					<div class="row">
+						<center><h4 class="ec-caps">Need More Info?</h4></center>
+					</div>
+					<div class="row">
+						<div class="holder">
+							<div class="col-xs-16 col-sm-6">
+								<div class="form-group">
+									<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="false"> 
+								</div>
+							</div>
+							<div class="col-xs-16 col-sm-6">
+								<div class="form-group">
+									<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="false">
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<input type="submit" value="Connect With Us" class="ec-button-teal-border">
+							</div>
+						</div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+{% endblock %}
 
-<div id="get_a_quote" class="container ec-index-quote-form">
-	<form action="/thankyou", method='post' class="validate-form">
-		<input name="lead_source" value="Web Signup" type="hidden">
-		<input name="adwordsField" id='adwordsField' type="hidden">
-		<input name="granularField" id="granularField" type="hidden">
-		<fieldset>		
-			<div class="row">
-				<div class="col-xs-16">
-					<legend>Need Some Help?</legend>
+{% block content_two %}
+	<div class="whitejumbo">
+		<div class="container">
+			<div class="row ec-home-properties">
+				<img src="images/building-4.jpg" class="img-responsive" />
+				<div class="ec-dk-banner">
+					<h5>EverCharge maximizes current building electrical infrastructure and expands capacity for EV charging well into the future.</h5>
+					<br>
+					<br>
+					<p><a href="{{ url_for('evercharge_properties') }}" class="ec-text-link">View Properties &#8594;</a></p>
 				</div>
 			</div>
-			<div class="row">
-				<div class="holder">
-					<div class="form-group col-xs-16 col-sm-6">
-						<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name" autocomplete="false"> 
-					</div>
-					<div class="form-group col-xs-16 col-sm-6">
-						<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email" autocomplete="false">
-					</div>
-					<div class="col-sm-4">
-						<input type="submit" value="Connect With Us" class="onesidedropshadow">
-					</div>
-				</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content_three %}
+	<div class="ec-home-quote">
+		<div class="container">
+			<div class="col-sm-16 col-md-offset-2 col-md-12">
+				<h2 class="bitter ec-teal">“Having EV charging in apartments and condominiums is critical to the continued success of EV adoption. This collaborative solution effectively resolves building concerns and challenges with smart energy management and automation capabilities.”</h2>
+				<br>
+				<p class="black">&ndash; <strong>Pierre Sacré</strong>, director of Electric Vehicle Solutions at Schneider Electric North America</p>
+				<br>
+				<br>
+				<p><a href="{{ url_for('schneider_partnership') }}" class="ec-text-link">Read about the Schneider Partnership &#8594;</a></p>
 			</div>
-		</fieldset>
-	</form>
-</div>
-
-<section class="parallax" data-speed="4" data-type="background" id='charging_made_easy'>
-	<div class="container">
-		<div class="row-fluid">
-			<h1 class='parallax_header'>Charging Made Easy</h1>
 		</div>
 	</div>
-</section>
-
-<article class='jumbotron'>
-	<div class='row features'>
-		<div class='col-xs-16 col-md-offset-4 col-md-8'>
-			<h2 class='lower_header'>Say goodbye to the hassle and unreliability of EV charging in condominiums and apartment buildings.</h2>
-			<br><hr class='extra_short'><br>
-			<h2 class='lower_header'>With EverCharge, you'll never have to worry about charging again.</h2>
-		</div>
-		<div class='col-md-4 hidden-xs'></div>
-	</div>
-</article>
-
-
-<article class='jumbotron greyjumbo'>
-	<div class='row features'>
-		<div class='col-md-2 xs-hidden'></div>
-		<div class='col-md-4 col-xs-16'>
-			<img src='images/circle_one.png' width='50px' class='small_on_mobile'>
-			<h2 class='easy_charging'>Installation</h2>
-			<hr class='short'>
-			<h4>We manage the process<br> from start to finish</h4>
-		</div>
-
-		<div class='col-md-4 col-xs-16'>
-			<img src='images/circle_two.png' width='50px' class='small_on_mobile'>
-			<h2 class='easy_charging'>Scalability</h2>
-			<hr class='short'>
-			<h4>Easily add vehicle capacity<br> as demand grows</h4>
-		</div>
-
-		<div class='col-md-4 col-xs-16'>
-			<img src='images/circle_three.png' width='50px' class='small_on_mobile'>
-			<h2 class='easy_charging'>Billing</h2>
-			<hr class='short'>
-			<h4>Complete resident billing<br> and reimbursements</h4>
-		</div>
-
-		<div class='col-md-2 hidden-xs'></div>
-	</div>
-	<div class='col-md-16 hidden-xs' style="height:50px;"></div>
-
-	<div class='row features'>
-		<div class='col-md-2 hidden-xs'></div>
-
-		<div class='col-md-4 col-xs-16'>
-			<img src='images/circle_four.png' width='50px' class='small_on_mobile'>
-			<h2 class='easy_charging'>Exclusive</h2>
-			<hr class='short'>
-			<h4>Owners charge in their<br> own parking space</h4>
-
-		</div>
-
-		<div class='col-md-4 col-xs-16'>
-			<img src='images/circle_five.png' width='50px' class='small_on_mobile'>
-			<h2 class='easy_charging'>Add Value</h2>
-			<hr class='short'>
-			<h4>Increase property value<br> and desirability</h4>
-
-		</div>
-		<div class='col-md-4 col-xs-16'>
-			<img src='images/circle_six.png' width='50px' class='small_on_mobile'>
-			<h2 class='easy_charging'>Savings</h2>
-			<hr class='short'>
-			<h4>Significantly reduces<br> infrastructure costs</h4>
-
-		</div>
-		<div class='col-md-2 xs-hidden'></div>
-
-	</div>
-</article>
-<section class="parallax" data-speed="4" data-type="background" >
-	<div class="container">
-		<div class="row-fluid">
-			<h1 class='parallax_header'>Charging Evolved</h1>
-		</div>
-	</div>
-</section>
-
-<article class='jumbotron whitejumbo'>
-
-	<div class='row features'>
-		<div class='col-xs-16 col-sm-offset-4 col-sm-8'>
-			<br>
-			<h2>Why charge one car when you can charge four?</h2>
-			<hr class='extra_short'>
-			<br>
-
-			<h2>More Power</h2>
-			<hr class='extra_short'>
-			
-			<h4>
-				Our SmartPower<sup>TM</sup> Technology rapidly charges multiple vehicles, increasing building charging capacity without costly infrastructure upgrades.
-			</h4>
-			<br>
-			<h2>In the Right Place</h2>
-			<hr class='extra_short'>
-			<h4>
-				EverCharge connects to building power and installs directly in your parking space to avoid the hassles of public charging.
-			</h4>
-			<br>
-			<h2>When You Need It</h2>
-			<hr class='extra_short'>
-			<h4>
-				With our solution you'll never have to wait to charge again.<br>No waiting. No sharing. Just charging.
-			</h4>
-			<br>
-			<br>
-		</div>
-		<div class='col-xs-offset-5 col-xs-8 col-sm-offset-0 col-sm-4'>
-			<img src='images/how-it-works.png' class='desaturate img-responsive'>
-		</div>
-		<div class='col-md-2 hidden-xs'></div>
-
-	</div>
-</article>
-
-
-<section class="parallax" data-speed="4" data-type="background" id='our_process'>
-	<div class="container">
-		<div class="row-fluid">
-			<h1 class='parallax_header'>Our Process</h1>
-		</div>
-	</div>
-</section>
-
-
-<div class='row features'>
-	<div class='col-md-8 col-sm-8 process_photos' id='step_one_image'>
-		<div class='show_on_mobile'>
-			<p>Step #1
-				<br>
-			Meet with us</p>
-		</div>
-	</div>
-	<div class='col-md-8 col-sm-8 hidden-xs process_text'>
-		<div class='vertical_aligned'>
-			<h2 class='step'>Step #1</h2>
-			<p class='step_title'>
-				Meet with us
-			</p>
-			<hr class='short'>
-			<p class='step_description'>
-				First, we speak with the building manager or developer directly, to gain building access and answer any initial questions.
-			</p>
-		</div>
-	</div>
-</div>
-
-
-<div class='row features'>
-
-	<div class='col-md-8 col-sm-8 hidden-xs process_text'>
-		<div class='vertical_aligned'>
-			<h2 class='step'>Step #2</h2>
-			<p class='step_title'>
-				On-Site Evaluation
-			</p>
-			<hr class='short'>
-			<p class='step_description'>
-				One of our insured, certified, and fully-licensed electricians will conduct an on-site evaluation.
-			</p>
-		</div>
-	</div>
-
-	<div class='col-md-8 col-sm-8 col-xs-16 process_photos' id='step_two_image'>
-		<div class='show_on_mobile'>
-			<p>Step #2
-				<br>
-			On-Site Evaluations</p>
-		</div>
-	</div>
-</div>
-
-<div class='row features'>
-	<div class='col-md-8 col-sm-8 col-xs-16 process_photos' id='step_three_image'>
-		<div class='show_on_mobile'>
-			<p>Step #3
-				<br>
-			Secure Building Approval</p>
-		</div>
-	</div>
-	<div class='col-md-8 col-sm-8 hidden-xs process_text'>
-		
-		<div class='vertical_aligned'>
-			<h2 class='step'>Step #3</h2>
-			<p class='step_title'>
-				Secure building Approval
-			</p>
-			<hr class='short'>
-			
-			<p class='step_description'>
-				We work with management to gain approval and move forward with the installation.
-			</p>
-		</div>
-	</div>
-</div>
-
-<div class='row features'>
-
-	<div class='col-md-8 col-sm-8 hidden-xs process_text'>
-		<div class='vertical_aligned'>
-			<h2 class='step'>Step #4</h2>
-			<p class='step_title'>
-				Installation
-			</p>
-			<hr class='short'>
-			
-			<p class='step_description'>
-				We then schedule installation, so you can start charging as soon as possible.
-			</p>
-		</div>
-	</div>
-
-	<div class='col-md-8 col-sm-8 col-xs-16 process_photos' id='step_four_image'>
-		<div class='show_on_mobile'>
-			<p>Step #4
-				<br>
-			Installation</p>
-		</div>
-
-	</div>
-
-</div>
-
-<section class="parallax" data-speed="4" data-type="background" id='what_makes_us_different'>
-	<div class="container">
-		<div class="row-fluid">
-			<h1 class='parallax_header'>What Makes Us Different</h1>
-		</div>
-	</div>
-</section>
-
-
-<article class='jumbotron'>
-	<div class='row features'>
-		<div class='col-md-2 xs-hidden'></div>
-		<div class='col-md-4 col-xs-16'>
-			<img src='images/logo_power_management.png' class='distinguishing'>
-			<h2 class='smart_power diff_title'>
-				SmartPower<sup>TM</sup>
-			</h2>
-			<hr class='short'>
-			<br>
-			<p class='diff_text'>
-				Technology that is affordable and scalable: maximizes charging potential by up to 10x, without costly upgrades. 
-			</p>
-			
-		</div>
-		<div class='col-md-4 col-xs-16'>
-			<img src='images/logo_public_charging.png' class='distinguishing'>
-			<h2 class='diff_title'>
-				Dedicated Charging
-			</h2>
-			<hr class='short'>
-			<br>
-			<p class='diff_text'>
-				With increased scalability, chargers are installed directly into residents' parking spaces.
-			</p>
-
-		</div>
-		<div class='col-md-4 col-xs-16'>
-			<img src='images/logo_insurance.png' class='distinguishing'>
-			<h2 class='diff_title'>
-				Complete Coverage
-			</h2>
-			<hr class='short'>
-			<br>
-			<p class='diff_text'>
-				$1 million in liability insurance, and on-going maintenance and 24/7 customer support.
-			</p>
-		</div>
-		<div class='col-md-2 xs-hidden'></div>
-		<div class='col-md-16 col-xs-16'>
-			<br>
-			<br>
-			<h2>Curious how EverCharge can make EV charging possible at your property?</h2>
-			<hr class='extra_short'><br>
-			<a href="{{ url_for('why_evercharge') }}">
-				<button class='flat_button'>Learn More</button>
-			</a>
-		</div>
-
-</article>
-<article class='jumbotron whitejumbo'></article>
-
-<button class='scroll-down flat_button'>Get your Quote</button>
-
 {% endblock %}
 
 {% block video %}
