@@ -233,10 +233,10 @@ def approximate_number_spots():
 def referred_customer():
     reference = request.form.get('reference')
     new_lead_id = request.form.get('lead_id')
-    print('References')
+    print('Additional Notes')
     print(new_lead_id)
     print(reference)
-    nut.UpdateLead(new_lead_id).lead_reference("REV_IGNORE", reference)
+    nut.UpdateLead(new_lead_id).additional_notes("REV_IGNORE", reference)
 
     return "Successfully added reference to EverCharge."
 
@@ -245,7 +245,7 @@ def referred_customer():
 def auto_dealer_contact():
     current_auto_dealer_contact = request.form.get('auto_dealer_contact')
     new_lead_id = request.form.get('lead_id')
-    print('Tesla Contact')
+    print('Auto Dealer Contact')
     print(new_lead_id)
     print(current_auto_dealer_contact)
     nut.UpdateLead(new_lead_id).auto_dealer_contact("REV_IGNORE", current_auto_dealer_contact)

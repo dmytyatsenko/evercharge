@@ -82,9 +82,9 @@ class UpdateLead(object):
 
 		return edited_lead
 
-	def lead_reference(self, rev, reference):
+	def additional_notes(self, rev, reference):
 		edited_lead = n.editLead(self.lead_id, rev, customFields=
-			{'Reference to EverCharge': reference})
+			{'Additional Notes': reference})
 
 		return edited_lead
 
