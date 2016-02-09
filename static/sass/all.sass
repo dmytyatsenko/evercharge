@@ -237,6 +237,22 @@ p.ec-p
       text-transform: none
     h4 + p
       margin-bottom: 30px
+.ec-why-wattson-img
+  display: inline-block
+  height: 500px
+  width: auto
+.ec-why-wattson-wrap
+  text-align: center
+.ec-why-wattson-text
+  background: $ec-teal
+  display: inline-block
+  height: 500px
+  padding: 30px
+  width: 440px
+  h2
+    color: RGBA(255,255,255,0.7)
+  p, a
+    color: white
 
 // page: home
 .ec-home-banner
@@ -317,7 +333,6 @@ p.ec-p
   .greyjumbo
     border-bottom: 4px solid white
     padding: 30px
-
 .ec-wattson-reserve
   background: RGBA(0,164,153,0.3)
   font-weight: 400
@@ -351,9 +366,40 @@ p.ec-p
 // RESPONSIVE
 // sm
 @media only screen and (max-width: 1040px)
+  .ec-why-wrap .tab-pane 
+    img
+      height: 250px
+      margin: 0 auto
+  .ec-why-wattson-text
+    height: auto
+    padding-bottom: 50px
+    width: 40%
+  .ec-why-wattson-img
+    height: auto
+    width: 40%
 
 // xs
 @media only screen and (max-width: 767px)
   .ec-featured-prop
     img
       margin-bottom: 15px
+  .ec-why-wattson-text
+    width: 100%
+  .ec-why-wattson-img
+    height: auto
+    width: 100%
+  .ec-why-wrap .tab-pane 
+    img
+      height: auto
+  .ec-why-tab-xs
+    background: #E6E6E7
+    margin-left: -10px
+    margin-right: -10px
+    padding: 10px
+    text-align: center
+    h4 
+      margin-bottom: 5px
+  .ec-why-wrap .tab-content h4+p
+    margin-bottom: 8px
+  .tab-pane
+    display: block !important

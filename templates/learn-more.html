@@ -20,15 +20,15 @@
 	<div class="container ec-why-wrap">
 		<div class="row">
 			<div class="col-sm-16">
-				<ul class="nav nav-tabs" role="tablist">
+				<ul class="nav nav-tabs hidden-xs" role="tablist">
 			    <li role="presentation" class="active">
-			    	<a href="#technology" aria-controls="technology" role="tab" data-toggle="tab">
+			    	<a href="#expertise" aria-controls="expertise" role="tab" data-toggle="tab">
 		    			<h4 class="ec-caps">Here to Help</h4>
 		    			<p>We understand your needs</p>
 			    	</a>
 			    </li>
 			    <li role="presentation">
-			    	<a href="#expertise" aria-controls="expertise" role="tab" data-toggle="tab">
+			    	<a href="#technology" aria-controls="technology" role="tab" data-toggle="tab">
 		    			<h4 class="ec-caps">Dedicated Stations</h4>
 		    			<p>No sharing, no waiting</p>
 			    	</a>
@@ -41,8 +41,45 @@
 			    </li>
 			  </ul>
 			  <div class="tab-content">
-		      <div role="tabpanel" class="tab-pane active" id="technology">
+			  	<div role="tabpanel" class="tab-pane active" id="expertise">
+			  		<div class="row">
+			  			<div class="ec-why-tab-xs visible-xs">
+			  				<h4 class="ec-caps">Here to Help</h4>
+			  				<p>We understand your needs</p>
+				  		</div>
+			  			<div class="col-md-offset-2 col-md-12">
+			  				<h2 class="ec-teal text-center">Working with EverCharge</h2>
+			  				<div class="hidden-xs hidden-sm">
+			  					<br>
+			  				</div>
+			  			</div>
+			  			<div class="clearfix"></div>
+			  			<div class="col-md-8">
+			  				<img src="images/why-electrician.jpg" class="img-responsive" />
+			  			</div>
+			  			<div class="col-md-offset-1 col-md-6">
+			  	    	<h4 class="ec-caps">ON-SITE EVALUATION</h4>
+			  	    	<p class="black">One of our preferred electricians conducts on-site evaluation.</p>
+
+			  	    	<h4 class="ec-caps">GAIN BUILDING APPROVAL</h4>
+			  	    	<p class="black">We work with management and customer to gain approval.</p>
+
+			  	    	<h4 class="ec-caps">SCHEDULE INSTALLATION</h4>
+			  	    	<p class="black">Installation is completed by the electrician.</p>
+
+			  	    	<h4 class="ec-caps">MONITOR POWER USAGE</h4>
+			  	    	<p class="black">Each charger has a built-in monitor to keep track of the electricity consumed, which we bill residents and reimburse the building for.</p>
+
+			  	    	<div class="visible-xs"><br><br></div>
+			  	    </div>
+			  	  </div>
+			  	</div>
+		      <div role="tabpanel" class="tab-pane" id="technology">
 		      	<div class="row">
+		      		<div class="ec-why-tab-xs visible-xs">
+			  				<h4 class="ec-caps">Dedicated Stations</h4>
+			    			<p>No sharing, no waiting</p>
+				  		</div>
 		      		<div class="col-md-offset-2 col-md-12">
 		      			<h2 class="ec-teal text-center">SmartPower<sup>TM</sup></h2>
 		      			<h3 class="bitter ec-teal text-center">Our SmartPower technology maximizes current building infrastructure by intelligently allocating power where and when it's needed most</h3>
@@ -59,39 +96,17 @@
 		      		<div class="col-md-offset-1 col-md-6">
 		      			<h4 class="ec-caps">HOW IT WORKS</h4>
 		      			<p class="black">Our chargers connect to common area power to effectively scale throughout the entire building. Usage is then monitored by our system to keep track of power allocated, then residents are automatically billed accordingly.</p>
-		      			<p><a href="{{ url_for('smart_power') }}" class="ec-text-link">Learn More &#8594;</a>
+		      			<p><a href="{{ url_for('smart_power') }}" class="ec-text-link">Learn More &#8594;</a></p>
+		      			<div class="visible-xs"><br><br></div>
 		      		</div>
 		      	</div>
 		      </div>
-		      <div role="tabpanel" class="tab-pane" id="expertise">
-		      	<div class="row">
-		      		<div class="col-md-offset-2 col-md-12">
-		      			<h2 class="ec-teal text-center">Working with EverCharge</h2>
-		      			<div class="hidden-xs hidden-sm">
-		      				<br>
-		      			</div>
-		      		</div>
-		      		<div class="clearfix"></div>
-		      		<div class="col-md-8">
-		      			<img src="images/why-electrician.jpg" class="img-responsive" />
-		      		</div>
-		      		<div class="col-md-offset-1 col-md-6">
-		          	<h4 class="ec-caps">ON-SITE EVALUATION</h4>
-		          	<p class="black">One of our preferred electricians conducts on-site evaluation.</p>
-
-		          	<h4 class="ec-caps">GAIN BUILDING APPROVAL</h4>
-		          	<p class="black">We work with management and customer to gain approval.</p>
-
-		          	<h4 class="ec-caps">SCHEDULE INSTALLATION</h4>
-		          	<p class="black">Installation is completed by the electrician.</p>
-
-		          	<h4 class="ec-caps">MONITOR POWER USAGE</h4>
-		          	<p class="black">Each charger has a built-in monitor to keep track of the electricity consumed, which we bill residents and reimburse the building for.</p>
-		          </div>
-		        </div>
-		      </div>
 		      <div role="tabpanel" class="tab-pane" id="value">
         		<div class="row">
+        			<div class="ec-why-tab-xs visible-xs">
+			  				<h4 class="ec-caps">Long-Term Value</h4>
+			    			<p>Affordable solution</p>
+				  		</div>
         			<div class="col-md-offset-2 col-md-12">
         				<h2 class="ec-teal text-center">Future Ready</h2>
         				<div class="hidden-xs hidden-sm">
@@ -117,5 +132,29 @@
 		    </div>
 		  </div>
 		</div>
+	</div>
+{% endblock %}
+
+{% block content_two %}
+	<div class="container">
+		<div class="row ec-why-wattson-wrap">
+			<div class="ec-why-wattson-text">
+				<h2>Wattson</h2>
+				<p>The first-of-its-kind device rapidly charges a dynamic range vehicles while maximizing the current building infrastructure. By using Wattson buildings save thousands on install costs while providing every EV driver their own charging station.</p>
+				<br>
+				<br>
+				<p><a href="{{ url_for('device_wattson') }}" class="ec-text-link">Learn More &#8594;</a>
+			</div>
+			<img src="images/EverCharge-Wattson-Schneider-front-crop.jpg" class="ec-why-wattson-img" />
+		</div>
+	</div>
+{% endblock %}
+
+{% block content_three %}
+	<div class="container hidden-xs">
+		<br>
+		<br>
+		<br>
+		<br>
 	</div>
 {% endblock %}
