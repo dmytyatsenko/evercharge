@@ -43,9 +43,8 @@
 	<link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
 
 	<!-- include the google font -->
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300italic,400,400italic,600' rel='stylesheet' type='text/css'>
-
-	<link href='https://fonts.googleapis.com/css?family=Work+Sans:200,400,600,700,800|Bitter:400italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300italic,400,400italic,600' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Work+Sans:200,400,600,700,800|Bitter:400italic' rel='stylesheet' type='text/css'>
 
 
 	<!-- include jQuery library -->
@@ -98,33 +97,31 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         
-        <li><a href='{{ url_for('learn_more') }}'>LEARN MORE</a></li>
-        <li><a href="{{ url_for('about_us') }}">ABOUT</a></li>
+        <li><a href='{{ url_for('why_evercharge') }}'>WHY EVERCHARGE</a></li>
         <li><a href="{{ url_for('faqs') }}">FAQs</a></li>
-        <li><a href="http://blog.evercharge.net">BLOG</a></li>
-        <li><a href="tel:8883427383">888.342.7383</a></li>
+        <li><a href="{{ url_for('about_us') }}">ABOUT</a></li>
         <li class='pop_of_red'><a href="{{ url_for('customer_login') }}">CUSTOMER LOGIN</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
+{% block alt_background %}
+{% endblock %}
+
 <div class="banner">
 	<div class="bg-stretch">
 		{% block background %}
 		{% endblock %}
 	</div>
-	<div class="container">
-	</div>
-
-
-		<div class="row text-center">
-
-				{% block maincontent %}
-				{% endblock %}
-		</div>
-	</div>
+	<div class="container"></div>
+  <div class="row text-center">
+      {% block maincontent %}{% endblock %}
+  </div>
 </div>
+
+
+
 
 	<main id="content">
 		<!-- video -->
@@ -151,72 +148,69 @@
 {% block content_three %}
 {% endblock %}
 
-
-
-
 {% block quote_form %}
-
-<div class="container">
-<form action="/thankyou" method='post' class="validate-form">
-	<input name="lead_source" value="Web Signup" type="hidden">
-	<input name="adwordsField" id='adwordsField' type="hidden">
-	<input name="granularField" id="granularField" type="hidden">
-	<fieldset>
-	<legend id="quote"><span>
-		{% block form_name %}Need More Info?{% endblock %}
-	</span></legend>
-	
-	<div class="wrap">
-		<div class="col">
-			<h3>Are you an EV Driver or Building Management?</h3>
-				<ul class="tabset js-ajax-tabs">
-					<li data-href="inc/tab00.html" class="active">
-						<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1">
-						<p class='label_form'>EV Driver</p>
-					</li>
-					<li data-href="inc/tab01.html">
-						<input type="radio" value="Property Manager" name="customer_type" class="radio2">
-						<p class='label_form'>Management</p>
-					</li>
-
-				</ul>
-			<div class="tab-content ajax-hold"></div>
+	<div class="ec-stretch-grey">
+		<div class="container">
+			<div class="row">
+				<form action="/thankyou" method='post' id="quote" class="validate-form">
+					<input name="lead_source" value="Web Signup" type="hidden">
+					<input name="adwordsField" id='adwordsField' type="hidden">
+					<input name="granularField" id="granularField" type="hidden">
+					<fieldset class="ec-fieldset">
+						<div class="col-xs-16">
+							<h2 class="ec-teal">{% block form_name %}Need More Info?{% endblock %}</h2>
+							<p>Connect with a team member by telling us a little about yourself.</p>
+							<br>
+						</div>
+						<div class="col-xs-16 col-sm-8 col-md-4">
+							<p data-href="inc/tab00.html" class="active">
+								<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1" id="customer_type_ev">
+								<label for="customer_type_ev">EV Driver</label>
+							</p>
+						</div>
+						<div class="col-xs-16 col-sm-8 col-md-4">
+							<p data-href="inc/tab01.html" class="active">
+								<input type="radio" value="Property Manager" name="customer_type" class="radio2" id="customer_type_hoa">
+								<label for="customer_type_hoa">Management</label>
+							</p>
+							<br>
+							<br>
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-md-6">
+              <div class="form-group">
+						    <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="false">
+              </div>
+						</div>
+						<div class="col-md-6">
+              <div class="form-group">
+                <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="false">
+              </div>
+						</div>
+						<div class="col-md-4">
+              <div class="form-group">
+						    <input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="false">
+							</div>
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-xs-16">
+							<textarea name="quote_notes" height='40' class="form-control" placeholder="Additional comments" autocomplete="false"></textarea>
+						</div>
+						<div class="clearfix"></div>
+						<div class="col-xs-16 col-md-8">
+							<input type="submit" value="Get your Quote" class="ec-button-teal">
+						</div>
+					</fieldset>
+				</form>
+			</div>
 		</div>
-		<div class="col">
-			<h3>How can we contact you?</h3>
-				<div class="holder">
-					<div class="form-group">
-						<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name" autocomplete="false"> 
-					</div>
-					<div class="form-group">
-						<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email" autocomplete="false">
-					</div>
-					<div class="form-group">
-						<input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone (Optional)" data-format="ddd-ddd-dddd" autocomplete="false">
-					</div>
-				</div>
-			</div>
-			<div class='col'>
-				<h3>Anything else we should know?</h3>
-				<div class="form-group">
-					<textarea name="quote_notes" height='60' class="form-control" autocomplete="false"></textarea>
-				</div>
-				<input type="submit" value="Get your Quote">
+	</div>
+{% endblock %}
 
-			</div>
-	</fieldset>
-</form>
-</div>
-			</br></br>
+{% block content_one_bottom %}
+{% endblock %}
 
-	{% endblock %}
-
-	{% block content_one_bottom %}
-	{% endblock %}
-
-		</main>
-
-
+    </main>
 
 	<!-- footer of the page -->
 	<footer id="footer">
@@ -231,7 +225,7 @@
 				<h5>Navigate</h5>
 				<div class="footer-list">
 					<a href="/">Home</a>
-					<a href="/learnmore">Learn More</a>
+					<a href="{{ url_for('why_evercharge') }}">Why EverCharge</a>
 					<a href="/faqs">FAQs</a>
 					<a href="http://blog.evercharge.net">EverCharge Blog</a>
 				</div>
@@ -242,7 +236,7 @@
 					<a href="/aboutus">About Us</a>
 					<a href="https://angel.co/evercharge/jobs" target='_blank'>Careers</a>
 					<a href="press" target="_blank">Press Resources</a>
-					<a href="/learnmore#case-studies" target='_blank'>Case Studies</a>
+					<a href="/properties">Properties</a>
 				</div>
 			</div>
 			<div class="col-sm-4">
@@ -254,7 +248,7 @@
 					<a href='tel:8883427383'>888.342.7383</a>
 				</div>
 			</div>
-
+            </div> <!-- /row features -->
 			<div class="clearfix"></div>
 			
 			<p class="copyright">
@@ -278,9 +272,9 @@
 	</script>
 </body>
 
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script async type='text/javascript' src="{{ url_for('static', filename='js/navbar.js') }}"></script>
-	<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script async src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script async src="js/bootstrap-formhelpers-phone.js"></script>
 	<script type="text/javascript" src="js/jquery.main.js"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/scroll_fade.js') }}"></script>
@@ -288,7 +282,6 @@
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/difficulties.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/parallax.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/back_to_top.js') }}"></script>
-	<script async type="text/javascript" src="{{ url_for('static', filename='js/scroll_bottom.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/smoothscroll.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/nutshell-adwords.js') }}"></script>
 

@@ -155,65 +155,14 @@ a:focus{outline: none !important; text-decoration: none;}
 /* get quote form styles */
 form {
 	max-width: 960px;
-	margin: 0 auto 28px;
 	position:relative;
-}
-.get-quote fieldset{
-	position: relative;
-	padding: 64px 50px 57px;
-}
-.get-quote:before,
-.get-quote:after,
-.get-quote fieldset:after,
-.get-quote fieldset:before{
-	content: '';
-	position: absolute;
-	top:0;
-	left: 0;
-	right: 0;
-	height: 5px;
-	/*background:url(../images/bg-dot.png) repeat-x;*/
-}
-.get-quote:after{
-	top: auto;
-	bottom: 0;
-}
-.get-quote fieldset:after,
-.get-quote fieldset:before{
-	height: auto;
-	width: 4px;
-	right: auto;
-	bottom: 3px;
-	top: 3px;
-	/*background: url(../images/bg-dot01.png) repeat-y;*/
-}
-.get-quote fieldset:before{
-	left: auto;
-	right: 0;
 }
 
 h2.greenheading {
 	color: #14AB58;
 
 }
-.get-quote legend{
-	margin: 0;
-	font-size: 32px;
-	line-height: 44px;
-	font-weight: 300;
-	text-align: center;
-	border:none;
-	position: absolute;
-	left: 10px;
-	right: 10px;
-	top:-24px;
-}
-.get-quote legend span{
-	display: inline-block;
-	vertical-align: top;
-	padding: 0 10px;
-	background: #fff;
-}
+
 .wrap{
 	overflow: hidden;
 }
@@ -251,7 +200,7 @@ p {
 	color: #999;
 	font-size: 14px;
 	font-weight: 400;
-	letter-spacing: -0.5px;
+	letter-spacing: -0.1px;
 	line-height: 2.5rem;
 	margin: 4px 0 0 0;	
 }
@@ -275,7 +224,6 @@ form li{
 	vertical-align: top;
 	margin:0 6px 7px 0;
 }
-.tabset{padding-bottom: 5px;}
 .tab-content{min-height: 160px;}
 .form-group{
 	overflow: hidden;
@@ -283,12 +231,13 @@ form li{
 }
 
  .form-control{
+ 	background: white;
 	float: left;
 	width: 100%;
 	height: 47px;
 	line-height: 31px;
 	border-radius: 0 3px 3px 0;
-	border: 0;
+	border: 1px solid #B5B7B9;
 	font-size: 13px;
 } .error .form-control{
 	border-color: RGBA(247, 112, 91, 1);
@@ -303,18 +252,14 @@ form li{
 	z-index: 1;
 }
 input[type="submit"]{
-	background: #00A499;
+	background: RGBA(0,164,153,1.0);
 	color: #fff;
-	font-size: 16px;
-	line-height: 18px;
-	font-weight: 200;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 14px;
+	padding: 15px 30px;
 	text-transform: uppercase;
-	border:none;
-	padding:11px 15px 12px;
 	width: 100%;
-	min-width: 175px;
-	margin-top: 15px;
-	float: left;
 }
 #tab2 li,
 #tab3 li{
@@ -474,7 +419,7 @@ footer article h4{
 }
 
 .greenjumbo h4, h5, h2 {
-	font-weight: 200;
+	font-weight: 400;
 	line-height: 32px;
 }
 
@@ -1125,18 +1070,24 @@ article.no_padding {
 }
 
 .ec-index-quote-form {
-	padding-bottom: 20px;
-	padding-top: 40px;
+	font-weight: 400;
+	padding-bottom: 30px;
+	padding-top: 20px;
 }
 
-.ec-index-quote-form input[type="submit"] {
-	background-color: rgba(247, 112, 91, 1);
+.ec-index-quote-form .ec-button-teal-border {
+	line-height: 1em;
 	margin-top: 0;
-	padding: 14px 15px;
 }
 
-.ec-index-quote-form input[type="submit"]:hover {
-	background-color: #d35440;
+.ec-index-quote-form .form-control:hover {
+  background: RGBA(0,164,153,0.2);
+  border-color: black;
+}
+
+.ec-index-quote-form .form-control:focus {
+  background: white;
+  border-color: black;
 }
 
 .ec-index-quote-form .form-group {
@@ -1165,13 +1116,6 @@ h2.lower_header {
         margin: 0px;
         padding: 0px
     }
-
- legend {
- 	color: RGBA(60, 61, 57, 1);
- 	text-transform: uppercase;
- 	font-weight: 300;
- 	/*text-align: center;*/
- }
 
  .step_title {
  	color: RGBA(60, 61, 57, 1);
@@ -1516,11 +1460,6 @@ p.label_form {
 	form fieldset{
 		padding: 38px 2px 25px;
 	}
-	form legend{
-		font-size: 21px;
-		line-height: 24px;
-		top: -13px;
-	}
 	form .col,
 	form .col:first-child{
 		float: none;
@@ -1533,7 +1472,6 @@ p.label_form {
 		margin: 0 auto;
 	}
 	form h3{margin-bottom: 11px;}
-	form .tabset{padding-bottom: 23px;}
 	form li{margin: 0 3px 7px;}
 	form .tab.add li{margin: 0 7px 16px;}
 	form .col .holder{padding: 0 18px 0 27px;}

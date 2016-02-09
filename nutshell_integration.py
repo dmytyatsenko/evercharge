@@ -58,9 +58,9 @@ class UpdateLead(object):
 
 		return edited_lead
 
-	def tesla_contact(self, rev, tesla_contact):
+	def auto_dealer_contact(self, rev, tesla_contact):
 		edited_lead = n.editLead(self.lead_id, rev, customFields=
-			{'Tesla Contact': tesla_contact})
+			{'Auto Dealer Contact': tesla_contact})
 
 		return edited_lead
 
@@ -82,9 +82,9 @@ class UpdateLead(object):
 
 		return edited_lead
 
-	def lead_reference(self, rev, reference):
+	def additional_notes(self, rev, reference):
 		edited_lead = n.editLead(self.lead_id, rev, customFields=
-			{'Reference to EverCharge': reference})
+			{'Additional Notes': reference})
 
 		return edited_lead
 

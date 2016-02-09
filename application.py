@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
 import os
 import nutshell_integration as nut
@@ -79,9 +79,14 @@ def evercharge():
     return render_template("index.html")
 
 
+@app.route('/why-evercharge', methods=['GET'])
+def why_evercharge():
+    return render_template('learn-more.html')
+
+
 @app.route('/learnmore', methods=['GET'])
 def learn_more():
-    return render_template('learn-more.html')
+    return redirect(url_for('why_evercharge'), 302)
 
 
 @app.route('/ev-owner', methods=['POST', 'GET'])
@@ -113,74 +118,36 @@ def faqs():
 
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
+    if request.method == 'GET':
+        return redirect('/')
     name = request.form.get('quote_name')
-    phone = request.form.get('quote_phone')
+    phone = request.form.get('quote_phone', None)
     email = request.form.get('quote_email')
-    address1 = request.form.get('address_1')
-    address2 = request.form.get('address_2')
     note = request.form.get('quote_notes')
+    note = note if note else "No Customer Note"
+    phone = phone if phone else None
 
-    if note == '':
-        note = "No Customer Note"
-
-    if phone == '':
-        phone = None
-
-    if address1:
-        address = address1 + ' ' + address2
-    else:
-        address = None
-
-    city = request.form.get('address_city')
-    state = request.form.get('address_state')
-    country = request.form.get('address_country')
-    postal_code = request.form.get('address_postal_code')
-    cust_type = request.form.get('customer_type')
-    veh_type = request.form.get('veh_type')
-    build_size = request.form.get('building_size')
-    tag = request.form.get('adwordsField')
+    customer_type = request.form.get('customer_type')
+    tag = request.form.get('adwordsField', None)
     gran = request.form.get('granularField')
 
-    source = ''
-    if name is None:
-        return redirect('/')
+    new_contact = nut.add_new_contact(name, email, phone, '', '', '', '', '')
+    contact_id = new_contact['result']['id']
 
-    elif name.lower() == 'driver test':
-        return render_template('evthankyou.html')
+    source = 29 if customer_type == 'EV Driver' else 33
+    new_lead = nut.add_new_lead(contact_id, source, note)
 
-    elif name.lower() == 'pm test':
-        return render_template('hoathankyou.html')
+    print('______')
+    print(new_lead)
+    print('------')
+    new_lead_id = new_lead['result']['id']
 
-    else:
+    if tag:
+        nut.UpdateLead(new_lead_id).tag("REV_IGNORE", [tag, gran])
 
-        if cust_type == 'EV Driver':
-            source = 29
-            new_contact = nut.add_new_contact(name, email, phone,
-                                              address, city, state, postal_code, country, veh_type)
-            contactId = new_contact['result']['id']
-            newLead = nut.add_new_lead(contactId, source, note)
-            newLeadId = newLead['result']['id']
-            if tag != '':
-                nut.UpdateLead(newLeadId).tag("REV_IGNORE", [tag, gran])
-
-            return render_template("evthankyou.html",
-                                   newLeadId=newLeadId,
-                                   contactId=contactId)
-
-        else:
-            source = 33
-            new_contact = nut.add_new_contact(name, email, phone,
-                                              address, city, state, postal_code, country)
-
-            contactId = new_contact['result']['id']
-            newLeadId = nut.add_new_lead(contactId, source, note, build_size)['result']['id']
-
-            if tag != '':
-                nut.UpdateLead(newLeadId).tag("REV_IGNORE", [tag, gran])
-
-            return render_template("hoathankyou.html",
-                                   newLeadId=newLeadId,
-                                   contactId=contactId)
+    return render_template("thank_you.html",
+                           newLeadId=new_lead_id,
+                           contactId=contact_id)
 
 
 @app.route('/incentives', methods = ['GET'])
@@ -188,17 +155,6 @@ def state_incentives():
     """" EV Incentives page - State by State """
 
     return render_template('incentives.html')
-
-
-@app.route('/testthankyou', methods=['POST', 'GET'])
-def test_thanks():
-    """Route to test follow-up form template updates and scheduling
-
-    implementation without creating new Nutshell leads"""
-
-    return render_template('test_thankyou.html',
-                           newLeadId='newLeadId',
-                           contactId='contactId')
 
 
 @app.route('/nutshell/address', methods=['POST', 'GET'])
@@ -226,12 +182,16 @@ def phone_number():
     return "Successfully updated Phone Number"
 
 
-@app.route('/nutshell/parkingspot', methods=['POST', 'GET'])
-def parking_spot():
-    spot_type = request.form.get('parking_type')
+@app.route('/nutshell/parkingspot', methods=['POST'])
+def parking_spot_type():
+    current_parking_spot_type = request.form.get('parking_type')
     new_lead_id = request.form.get('lead_id')
 
-    nut.UpdateLead(new_lead_id).spot_type("REV_IGNORE", spot_type)
+    print('Parking spot type')
+    print(current_parking_spot_type)
+    print(new_lead_id)
+
+    nut.UpdateLead(new_lead_id).spot_type("REV_IGNORE", current_parking_spot_type)
 
     return "Successfully added parking type."
 
@@ -256,32 +216,39 @@ def parking_spot_number():
     return "Successfully added parking spot number."
 
 
-@app.route('/nutshell/numberofspots', methods=['POST', 'GET'])
+# TODO: WTF? what the difference with parking_spot_number? Why it updates approx building size?
+@app.route('/nutshell/numberofspots', methods=['POST'])
 def approximate_number_spots():
     approx_bldg_size = request.form.get('number_of_spots')
     new_lead_id = request.form.get('lead_id')
-
+    print('Parking spots number')
+    print(new_lead_id)
+    print(approx_bldg_size)
     nut.UpdateLead(new_lead_id).approx_bldg_size("REV_IGNORE", approx_bldg_size)
 
     return "Successfully added number of spots."
 
 
-@app.route('/nutshell/reference', methods=['POST', 'GET'])
+@app.route('/nutshell/reference', methods=['POST'])
 def referred_customer():
     reference = request.form.get('reference')
     new_lead_id = request.form.get('lead_id')
-
-    nut.UpdateLead(new_lead_id).lead_reference("REV_IGNORE", reference)
+    print('Additional Notes')
+    print(new_lead_id)
+    print(reference)
+    nut.UpdateLead(new_lead_id).additional_notes("REV_IGNORE", reference)
 
     return "Successfully added reference to EverCharge."
 
 
-@app.route('/nutshell/teslacontact', methods=['POST', 'GET'])
-def tesla_contact():
-    tesla_contact = request.form.get('tesla_contact')
+@app.route('/nutshell/auto-dealer-contact', methods=['POST'])
+def auto_dealer_contact():
+    current_auto_dealer_contact = request.form.get('auto_dealer_contact')
     new_lead_id = request.form.get('lead_id')
-
-    nut.UpdateLead(new_lead_id).tesla_contact("REV_IGNORE", tesla_contact)
+    print('Auto Dealer Contact')
+    print(new_lead_id)
+    print(current_auto_dealer_contact)
+    nut.UpdateLead(new_lead_id).auto_dealer_contact("REV_IGNORE", current_auto_dealer_contact)
 
     return "Successfully added Tesla contact."
 
@@ -329,6 +296,7 @@ def avg_commute():
     return "Succesfully added daily commute."
 
 
+# TODO: What is this? What is purpose of this? There is reference to this in thank_you.html
 @app.route('/nutshell/submit', methods=['POST', 'GET'])
 def follow_up():
     new_lead_id = request.form.get('lead_id')
@@ -345,6 +313,18 @@ def display_blog():
 @app.route('/memberkeyterms', methods=['GET'])
 def display_key_terms():
     return render_template('keyterms.html')
+
+@app.route('/schneider-partnership')
+def schneider_partnership():
+    return render_template('partnership.html')
+
+@app.route('/properties')
+def evercharge_properties():
+    return render_template('properties.html')
+
+@app.route('/wattson')
+def device_wattson():
+    return render_template('wattson.html')
 
 
 ################################################################################
