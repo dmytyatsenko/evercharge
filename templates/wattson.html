@@ -26,49 +26,44 @@
 	<div class="ec-wattson-banner">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-sm-8">
 					<img src="images/EverCharge-Wattson-only.png" alt="Wattson" class="ec-wattson-only img-responsive">
 				</div>
-				<div class="col-md-7">
+				<div class="col-sm-8 col-md-7">
 					<div class="ec-wattson-does-wrap">
 						<div class="ec-wattson-does">
 							<h1>WATTSON <strong>DOES</strong></h1>
 							<h4 class="bitter">charge the widest range of vehicles on the planet and dramatically reduce installation costs.</h4>
 						</div>
-						<div class="greyjumbo">
-							<p class="black">The first-of-its-kind charging station combines EverCharge’s SmartPower technology with Schneider’s EVLink charging station. </p>
+						<div class="ec-wattson-reserve">
+							<form action="/thankyou", method='post' class="validate-form">
+								<input name="lead_source" value="Web Signup" type="hidden">
+								<input name="adwordsField" id='adwordsField' type="hidden">
+								<input name="granularField" id="granularField" type="hidden">
+								<fieldset>		
+									<div class="row">
+										<div class="holder">
+											<div class="col-xs-16">
+												<div class="form-group">
+													<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="false"> 
+												</div>
+											</div>
+											<div class="col-xs-16">
+												<div class="form-group">
+													<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="false">
+												</div>
+											</div>
+											<div class="col-xs-16">
+												<input type="submit" value="Reserve Yours Now &#8594;" class="ec-button-teal-border">
+											</div>
+										</div>
+									</div>
+								</fieldset>
+							</form>
 						</div>
-					</div>
+					</div><!-- end wattson wrap -->
 				</div>
-			</div>
-		</div>
-	</div>
-	<div class="whitejumbo">
-		<div class="container ec-wattson-reserve">
-			<form action="/thankyou", method='post' class="validate-form">
-				<input name="lead_source" value="Web Signup" type="hidden">
-				<input name="adwordsField" id='adwordsField' type="hidden">
-				<input name="granularField" id="granularField" type="hidden">
-				<fieldset>		
-					<div class="row">
-						<div class="holder">
-							<div class="col-xs-16 col-sm-6">
-								<div class="form-group">
-									<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="false"> 
-								</div>
-							</div>
-							<div class="col-xs-16 col-sm-5">
-								<div class="form-group">
-									<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="false">
-								</div>
-							</div>
-							<div class="col-sm-5">
-								<input type="submit" value="Reserve Yours Now &#8594;" class="ec-button-teal-border">
-							</div>
-						</div>
-					</div>
-				</fieldset>
-			</form>
+			</div><!-- end row -->
 		</div>
 	</div>
 {% endblock %}
@@ -77,16 +72,19 @@
 	<div class="greyjumbo">
 		<div class="container ec-wattson-about">
 			<div class="row">
-				<div class="col-md-offset-2 col-md-6">
+				<div class="col-sm-7 col-md-6">
 					<br>
 					<br>
-					<h2 class="ec-teal">About Wattson</h2>
+					<h2 class="ec-teal">The first-of-its-kind charging station combines EverCharge’s SmartPower technology with Schneider’s EVLink charging station.</h2>
+					<br>
 					<p class="black">Wattson is a fully enclosed power station with SmartPower technology built-in. In addition to acting as a stand-alone Level 1 charging station in its own right, Wattson can also support high-powered Level 2 charging.</p> 
 					<p class="black">This allows Wattson to rapidly charge and power an array of products from electric cars, golf-carts, e-bikes, electric scooters, and even offer trickle charging to high-end luxury vehicles.</p>
 					<br>
 					<br>
 				</div>
-				<img src="images/EverCharge-Wattson-Schneider-front-crop.jpg" />
+				<div class="col-sm-offset-1 col-sm-8 col-md-offset-2 col-md-7 no-padding-right">
+					<img src="images/EverCharge-Wattson-Schneider-front-crop.jpg" class="img-responsive" />
+				</div>
 			</div>
 		</div>
 	</div>

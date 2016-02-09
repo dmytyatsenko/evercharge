@@ -30,7 +30,6 @@ a, button, input
     &:hover 
       background: RGBA(0,164,153,0.1)
       text-decoration: none
-
 a.ec-text-link
   color: $ec-teal
   font-size: 14px
@@ -40,7 +39,6 @@ a.ec-text-link
   &:hover
     color: black
     cursor: pointer
-
 a.ec-button-teal
   background: $ec-teal
   border: 1px solid $ec-dk-teal
@@ -52,7 +50,6 @@ a.ec-button-teal
   text-transform: uppercase
   &:hover
     background: $ec-dk-teal
-
 .ec-button-teal
   background: $ec-teal
   border: 1px solid $ec-dk-teal
@@ -64,17 +61,17 @@ a.ec-button-teal
   text-transform: uppercase
   &:hover
     background: $ec-dk-teal
+.no-padding-right
+  padding-right: 0
 
 //boxes
 .ec-box-white-border
   background: white
   border: 1px solid black
   outline: 10px solid white
-
 .ec-box-white
   background: white
   padding: 20px
-
 .ec-title-box
   color: white
   display: table-cell
@@ -87,6 +84,17 @@ a.ec-button-teal
     z-index: 2
   &.blue 
     background: #68CEF2
+.ec-stretch-teal
+  background: $ec-teal
+  padding-bottom: 60px
+  padding-top: 30px
+  h1
+    color: RGBA(255,255,255,0.7)
+    letter-spacing: -1px
+  h3.bitter
+    color: white
+    font-size: 18px
+    text-transform: none
 
 // misc
 hr.ec-hr-extra
@@ -285,14 +293,16 @@ p.ec-p
     padding-left: 80px
     padding-right: 80px
 .ec-home-properties
-  padding-top: 100px
+  margin-top: -20px
+  padding-bottom: 60px
+  padding-top: 80px
   position: relative
   img 
     top: 100px
   .ec-dk-banner
     background: $ec-dk-teal
     left: 12px
-    padding: 200px 30px 100px 30px
+    padding: 180px 30px
     position: absolute
     top: 0
     width: 320px
@@ -304,9 +314,18 @@ p.ec-p
   background: RGBA(0,164,153,0.3)
   padding: 120px 0
   text-align: center
+.ec-home-charging-experts
+  .ec-home-why
+    padding: 20px
+    text-align: center
+    p
+      color: white
+    h4
+      color: RGBA(255,255,255,0.7)
 
 // page: wattson
 .ec-wattson-banner
+  background: #E6E6E7
   height: 410px
   width: 100%
   z-index: 1
@@ -319,26 +338,21 @@ p.ec-p
   display: none
 .ec-wattson-does-wrap
   position: absolute
-  top: -80px
+  top: -200px
   z-index: 2
   .ec-wattson-does
     background: $ec-teal
-    padding: 130px 30px 30px 30px
+    padding: 40px 30px 30px 30px
     h1
       color: white
       opacity: 0.6
     h4
       color: white
       line-height: 1.4em
-  .greyjumbo
-    border-bottom: 4px solid white
-    padding: 30px
 .ec-wattson-reserve
   background: RGBA(0,164,153,0.3)
   font-weight: 400
-  margin-bottom: 140px
-  margin-top: -60px
-  padding: 100px 30px 60px 30px
+  padding: 40px 30px 40px 30px
   .ec-button-teal-border
     line-height: 1em
     margin-top: 0
@@ -349,12 +363,11 @@ p.ec-p
     background: white
     border-color: black
 .ec-wattson-about
+  padding-bottom: 40px
   position: relative
+  z-index: 3
   img 
-    position: absolute
-    right: 60px
-    top: -100px
-    width: 340px
+    margin-top: -100px
 .ec-wattson-quote
   border: 4px solid RGBA(0,164,153,0.3)
   margin-bottom: 80px
@@ -365,7 +378,7 @@ p.ec-p
 //////////////////////
 // RESPONSIVE
 // sm
-@media only screen and (max-width: 1040px)
+@media only screen and (max-width: 992px)
   .ec-why-wrap .tab-pane 
     img
       height: 250px
@@ -377,6 +390,12 @@ p.ec-p
   .ec-why-wattson-img
     height: auto
     width: 40%
+  .ec-wattson-banner
+    height: 300px
+  .ec-wattson-does-wrap
+    margin-top: -100px
+  .ec-wattson-about img
+    margin-top: 0
 
 // xs
 @media only screen and (max-width: 767px)
@@ -411,3 +430,62 @@ p.ec-p
   .ec-schneider-partner
     position: relative
     top: 0
+
+  .ec-wattson-banner
+    height: auto
+  .ec-wattson-does-wrap
+    margin-top: -100px
+  .ec-wattson-about img
+    margin-top: 0
+    padding-right: 10px
+  .ec-wattson-banner .ec-wattson-only
+    left: 0
+    margin-top: -200px
+    position: relative
+    width: 300px
+  .ec-wattson-does-wrap
+    position: relative
+    top: -28px
+  .ec-wattson-reserve
+    form fieldset
+      padding: 0
+
+  .ec-home-banner
+    height: auto
+    margin-top: 0
+    overflow: hidden
+    position: relative
+    width: 100%
+    z-index: 1
+    .ec-home-stretch
+      position: relative
+      z-index: 0
+    .ec-home-banner-text
+      background: $ec-teal
+      margin-top: 0
+      padding-bottom: 20px
+      h1
+        font-size: 40px
+      h4
+        font-size: 16px
+        font-weight: 400
+        margin-bottom: 5px
+  .ec-home-why
+    img
+      margin: 0 auto
+      width: 180px
+  .ec-home-properties
+    margin-bottom: 2px
+    margin-top: 2px
+    padding-bottom: 0
+    padding-top: 0
+    position: relative
+    img 
+      top: 100px
+    .ec-dk-banner
+      left: 0
+      padding: 15px 20px 30px 20px
+      position: relative
+      width: 100%
+  .ec-home-quote
+    padding: 20px
