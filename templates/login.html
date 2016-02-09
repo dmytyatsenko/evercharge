@@ -37,25 +37,30 @@
 
 {% endblock %}
 {% block quote_form %}
-<form id='login' action="" method='post' class="validate-form">
-	<fieldset>
-		<legend id="quote"></legend>
+<div class="container">
+	<div class="row">
+		<form id='login' action="" method='post' class="validate-form">
+			<fieldset>
+				<legend id="quote"></legend>
 
-		<div class="form-group login-page">
-			<input type="email" placeholder="Email Address" name="email" class="form-control">
-		</div>
-		<div class="form-group login-page">
-			<input type="password" placeholder="Password" name="password" class="form-control">
-		</div>
+				<div class="form-group login-page">
+					<input type="email" placeholder="Email Address" name="email" class="form-control">
+				</div>
+				<div class="form-group login-page">
+					<input type="password" placeholder="Password" name="password" class="form-control">
+				</div>
 
-		{% if error %}
-		<div id="login_error">
-            <p class="text-center error"><strong>Error:</strong> {{ error }}</p>
-		</div>
-		{% endif %}
+				{% if error %}
+				<div id="login_error">
+		            <p class="text-center error"><strong>Error:</strong> {{ error }}</p>
+				</div>
+				{% endif %}
 
-			<div class="btn-wrapper">
-				<input id="final_submit_button" type="submit" value="LOGIN">
-			</div>
-	</fieldset>
+					<div class="btn-wrapper">
+						<input id="final_submit_button" type="submit" class="ec-button-teal" value="LOGIN">
+					</div>
+			</fieldset>
+			<br><br><br>
+	</div>
+</div>
 	{% endblock %}
