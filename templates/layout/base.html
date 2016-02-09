@@ -89,7 +89,7 @@
         
       </button>
       <a class="navbar-brand" href="/">
-          <img class="header_logo" src="{{ url_for('static', filename='images/EverCharge-logo-horizontal-white.png') }}">
+          <img class="header_logo" alt="EverCharge" src="{{ url_for('static', filename='images/EverCharge-logo-horizontal-white.png') }}">
       </a>
     </div>
 
@@ -218,7 +218,7 @@
 			<!-- footer navigation -->
 			<div class="row features">
 			<div class="col-xs-8 col-sm-3">
-				<a href="/"><img src="{{ url_for('static', filename='images/EverCharge-logo-tag-teal-shadow.png') }}" class="img-responsive"></a>
+				<a href="/"><img src="{{ url_for('static', filename='images/EverCharge-logo-tag-teal-shadow.png') }}" class="img-responsive" alt="EverCharge"></a>
 			</div>
 			<div class="clearfix visible-xs"></div>
 			<div class="col-sm-offset-1 col-sm-4">
@@ -270,8 +270,6 @@
 	  ga('send', 'pageview');
 
 	</script>
-</body>
-
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script async type='text/javascript' src="{{ url_for('static', filename='js/navbar.js') }}"></script>
 	<script async src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -296,3 +294,5 @@
 
 	{% block custom_scripts %}
 	{% endblock %}
+</body>
+</html>

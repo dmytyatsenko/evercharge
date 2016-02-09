@@ -39,7 +39,7 @@
 {% block content_one %}
 	<div class="whitejumbo ec-index-quote-form">
 		<div class="container">
-			<form action="/thankyou", method='post' class="validate-form">
+			<form action="/thankyou" method='post' class="validate-form">
 				<input name="lead_source" value="Web Signup" type="hidden">
 				<input name="adwordsField" id='adwordsField' type="hidden">
 				<input name="granularField" id="granularField" type="hidden">
@@ -84,28 +84,30 @@
 				</div><!-- end row -->
 				<div class="row">
 					<div class="col-sm-offset-2 col-sm-4 ec-home-why">
-						<img src="images/icon-1.png" class="img-responsive" />
+						<img src="images/icon-1.png" class="img-responsive" alt="" />
 						<h4 class="ec-caps">Here to Help</h4>
 						<p>We understand your needs</p>
 					</div>
 					<div class="col-sm-4 ec-home-why">
-						<img src="images/icon-3.png" class="img-responsive" />
+						<img src="images/icon-3.png" class="img-responsive" alt="" />
 						<h4 class="ec-caps">Dedicated Stations</h4>
 	    			<p>No sharing, no waiting</p>
 					</div>
 					<div class="col-sm-4 ec-home-why">
-						<img src="images/icon-2.png" class="img-responsive" />
+						<img src="images/icon-2.png" class="img-responsive" alt="" />
 						<h4 class="ec-caps">Long-Term Value</h4>
 	    			<p>Affordable solution</p>
 					</div>
 				</div><!-- end row -->
+				<br>
+				<center><a href="{{ url_for('why_evercharge') }}" class="ec-button-teal">WHY EVERCHARGE</a></center>
 			</div>
 		</div>
 	</div>
 	<div class="whitejumbo">
 		<div class="container">
 			<div class="row ec-home-properties">
-				<img src="images/building-4.jpg" class="img-responsive" />
+				<img src="images/building-4.jpg" class="img-responsive" alt="" />
 				<div class="ec-dk-banner">
 					<h5>EverCharge maximizes current building electrical infrastructure and expands capacity for EV charging well into the future.</h5>
 					<br>
