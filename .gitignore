@@ -8,3 +8,6 @@
 venv
 nutshell_integration.pyc
 NutshellCrumpy.pyc
+
+.idea/
+static/.webassets-cache/*
