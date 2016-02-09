@@ -137,9 +137,6 @@ def thank_you():
     source = 29 if customer_type == 'EV Driver' else 33
     new_lead = nut.add_new_lead(contact_id, source, note)
 
-    print('______')
-    print(new_lead)
-    print('------')
     new_lead_id = new_lead['result']['id']
 
     if tag:
@@ -186,11 +183,6 @@ def phone_number():
 def parking_spot_type():
     current_parking_spot_type = request.form.get('parking_type')
     new_lead_id = request.form.get('lead_id')
-
-    print('Parking spot type')
-    print(current_parking_spot_type)
-    print(new_lead_id)
-
     nut.UpdateLead(new_lead_id).spot_type("REV_IGNORE", current_parking_spot_type)
 
     return "Successfully added parking type."
@@ -221,9 +213,6 @@ def parking_spot_number():
 def approximate_number_spots():
     approx_bldg_size = request.form.get('number_of_spots')
     new_lead_id = request.form.get('lead_id')
-    print('Parking spots number')
-    print(new_lead_id)
-    print(approx_bldg_size)
     nut.UpdateLead(new_lead_id).approx_bldg_size("REV_IGNORE", approx_bldg_size)
 
     return "Successfully added number of spots."
@@ -233,9 +222,6 @@ def approximate_number_spots():
 def referred_customer():
     reference = request.form.get('reference')
     new_lead_id = request.form.get('lead_id')
-    print('Additional Notes')
-    print(new_lead_id)
-    print(reference)
     nut.UpdateLead(new_lead_id).additional_notes("REV_IGNORE", reference)
 
     return "Successfully added reference to EverCharge."
@@ -245,9 +231,6 @@ def referred_customer():
 def auto_dealer_contact():
     current_auto_dealer_contact = request.form.get('auto_dealer_contact')
     new_lead_id = request.form.get('lead_id')
-    print('Auto Dealer Contact')
-    print(new_lead_id)
-    print(current_auto_dealer_contact)
     nut.UpdateLead(new_lead_id).auto_dealer_contact("REV_IGNORE", current_auto_dealer_contact)
 
     return "Successfully added Tesla contact."
