@@ -44,7 +44,7 @@
 
 	<!-- include the google font -->
 	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300italic,400,400italic,600' rel='stylesheet' type='text/css'>
-	<link href='//fonts.googleapis.com/css?family=Work+Sans:200,400,600,700,800|Bitter:400italic' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Work+Sans:200,400,600,700,800%7CBitter:400italic' rel='stylesheet' type='text/css'>
 
 
 	<!-- include jQuery library -->
@@ -89,7 +89,7 @@
         
       </button>
       <a class="navbar-brand" href="/">
-          <img class="header_logo" src="{{ url_for('static', filename='images/EverCharge-logo-horizontal-white.png') }}">
+          <img class="header_logo" alt="EverCharge" src="{{ url_for('static', filename='images/EverCharge-logo-horizontal-white.png') }}">
       </a>
     </div>
 
@@ -179,22 +179,22 @@
 						<div class="clearfix"></div>
 						<div class="col-md-6">
               <div class="form-group">
-						    <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="false">
+						    <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
               </div>
 						</div>
 						<div class="col-md-6">
               <div class="form-group">
-                <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="false">
+                <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
               </div>
 						</div>
 						<div class="col-md-4">
               <div class="form-group">
-						    <input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="false">
+						    <input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="off">
 							</div>
 						</div>
 						<div class="clearfix"></div>
 						<div class="col-xs-16">
-							<textarea name="quote_notes" height='40' class="form-control" placeholder="Additional comments" autocomplete="false"></textarea>
+							<textarea name="quote_notes" rows="2" class="form-control" placeholder="Additional comments" autocomplete="off"></textarea>
 						</div>
 						<div class="clearfix"></div>
 						<div class="col-xs-16 col-md-8">
@@ -218,7 +218,7 @@
 			<!-- footer navigation -->
 			<div class="row features">
 			<div class="col-xs-8 col-sm-3">
-				<a href="/"><img src="{{ url_for('static', filename='images/EverCharge-logo-tag-teal-shadow.png') }}" class="img-responsive"></a>
+				<a href="/"><img src="{{ url_for('static', filename='images/EverCharge-logo-tag-teal-shadow.png') }}" class="img-responsive" alt="EverCharge"></a>
 			</div>
 			<div class="clearfix visible-xs"></div>
 			<div class="col-sm-offset-1 col-sm-4">
@@ -270,8 +270,6 @@
 	  ga('send', 'pageview');
 
 	</script>
-</body>
-
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script async type='text/javascript' src="{{ url_for('static', filename='js/navbar.js') }}"></script>
 	<script async src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
@@ -291,8 +289,10 @@
 	<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5061401"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
 	</script>
 	<noscript>
-		<img src="//bat.bing.com/action/0?ti=5061401&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" />
+		<img src="//bat.bing.com/action/0?ti=5061401&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" alt=""/>
 	</noscript>
 
 	{% block custom_scripts %}
 	{% endblock %}
+</body>
+</html>
