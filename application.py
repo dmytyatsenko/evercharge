@@ -37,6 +37,10 @@ def install_specs_short():
 def company_overview():
     return app.send_static_file('EverChargeOverview.pdf')
 
+@app.route('/smartpower-overview')
+def company_overview():
+    return app.send_static_file('SmartPowerOverview.pdf')
+
 
 @app.route('/potrero-case-study')
 def potrero_case_study():
