@@ -38,6 +38,11 @@ def company_overview():
     return app.send_static_file('EverChargeOverview.pdf')
 
 
+@app.route('/smartpower-overview')
+def smartpower_overview():
+    return redirect('/smartpower')
+
+
 @app.route('/potrero-case-study')
 def potrero_case_study():
     return app.send_static_file('SF_Case_Study.pdf')
