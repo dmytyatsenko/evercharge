@@ -1,15 +1,15 @@
 {% extends 'layout/base.html' %}
 
 {% block background %}
-	<img src="images/garage_wall.jpg" alt="image description" width="1200" height="526">
+	<img src="images/parking-3.jpg" alt="image description" width="1200" height="526">
 {% endblock %}
 
 {% block maincontent %}
-	<div class="col-md-14 col-md-offset-1 article-quote">
-			<div id='large_green_circle'>
-				<h1 class='new_header smart_power'>SmartPower<sup class='header'>TM</sup><br>TECHNOLOGY</h1>
-			</div>
-		<br>
+	<div class="container ec-why-maincontent">
+		<div class="row">
+			<h1>SmartPower<sup>TM</sup></h1>
+			<h2>EverCharge combines unmatched technology, industry leading expertise, and unparallel cost savings for apartments and condominiums.</h2>
+		</div>
 	</div>
 {% endblock %}
 
@@ -17,101 +17,85 @@
 {% endblock %}
 
 {% block content_one %}
-	<article class='jumbotron whitejumbo white_space'>
-		<h2 class='smart_power'>OUR PATENTED SmartPower<sup class='header'>TM</sup> TECHNOLOGY</h2>
-		<hr class='extra_short'><br>
-		<h4 class='extra_padded'>EverCharge learns each driver's unique behavior with our SmartPower<sup>TM</sup> technology. The system distributes available power and allocates it to vehicles as needed - ensuring every EverCharge customer gets the power they need, when they need it.</h4>
+	<div class="ec-smartpower-wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-1 col-md-14">
 
-	</article>
+					<div class="row">
+						<div class="col-md-offset-1 col-md-14">
+							<h2 class="bitter ec-teal text-center">Limited power is the principal barrier in providing charging for multi-family garages.</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-7">
+							<p class="black">Costs to make additional power available for charging, if at all possible, are prohibitively expensive and only support a small number of EV drivers with traditional charging options. EverCharge’s patented technology overcomes this inherent problem by intelligently managing available power to provide up to 10 times the number of chargers.</p>
+						</div>
+						<div class="col-sm-offset-2 col-sm-7">
+							<p class="black">Equipped with EverCharge, buildings make dedicated EV charging possible with ability to scale as demand increases.</p>
+							<p class="black">SmartPower is UL listed and supports single-phase and three-phase systems.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-16">
+							<h2 class="ec-teal">Dedicated Home Charging</h2>
+							<p class="black">Convenient overnight home charging makes the whole EV experience work. Without it, the hunt for an unoccupied public charger becomes a constant activity. It is typical for potential EV owners not to buy an EV if home charging is not possible.</p>
+							<img src="images/graphic-smartpower-lg.jpg" class="img-responsive">
+							<p class="black">To provide the convenience of home charging, the EV driver needs a dedicated charger in their own parking space and they need enough power to have a fully charged vehicle when they depart. By managing power and lowering install costs, EverCharge provides the ability to have a dedicated charger in the driver’s own parking space and with that comes the convenience of home charging.</p>
+						</div>
+					</div>
 
-	<section class="parallax narrow" data-speed="4" data-type="background" >
-			<div class="container">
-				<div class="row-fluid">
-					<h1 class='parallax_header'>Overview</h1>
 				</div>
 			</div>
-	</section>
-
-	<article class='jumbotron whitejumbo'>
-		<div class='row features'>
-			<div class='col-md-4 hidden-xs'></div>
-			<article class='col-md-8 col-xs-16'>
-				<h4>
-					EverCharge's SmartPower<sup>TM</sup> technology maximizes a building's potential by significantly increasing the number of EVs that can charge at a given site before costly infrastructure upgrades are needed.
-				</h4>
-				<br>
-				<h4>
-					Power is intelligently managed based on the number of vehicles using the system and available power for charging. When EverCharge senses extra power is available, or that the rated capacity is reached, the system allocates power to vehicles according to their needs. SmartPower<sup>TM</sup> maximizes total charging while preventing system overloads. In short, SmartPower<sup>TM</sup> maximizes your building's infrastructure usage while reducing costs
-				</h4>
-			</article>
-			<div class='col-md-4 hidden-xs'></div>
+		</div><!-- end container 1 -->
+		<div class="ec-intelligent-learning">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-offset-1 col-md-14">
+						<h2 class="ec-teal">Intelligent Learning</h2>
+						<p class="black">As a data-driven company, EverCharge analyzes building demographics and driving behaviors to advise on the number of vehicles the infrastructure can support using SmartPower. EverCharge will never allow a building to dilute power to a level that will not provide sufficient levels of charge and performance. On average, drivers only need 2-3 hours of charging per day (40-60 miles) and residents come in at varied times, offering us a wide window to fully charge vehicles.</p>
+						<p class="black">The SmartPower algorithm is driven by several factors: when the driver arrives and the history of the driver’s charging needs. All factors get turned into a numerical weight. Over time, the available power is distributed based on this weighted value. Additionally, electrical vehicles don’t have linear charging patterns. This enables the system to identify when a vehicle is reaching maximum charge and reallocate the unused power accordingly.</p>
+					</div>
+				</div>
+			</div>
 		</div>
-	</article>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-1 col-md-14">
 
-	<section class="parallax narrow" data-speed="4" data-type="background" >
-			<div class="container">
-				<div class="row-fluid">
-					<h1 class='parallax_header'>How it Works</h1>
+					<div class="row">
+						<div class="col-xs-16">
+							<h2 class="ec-teal">Lower Installation Costs</h2>
+							<p class="black">EverCharge designs infrastructure layouts to meet each of our customer’s needs while leveraging our technology. Traditional charging solutions require dedicated and metered runs from the main electrical panel. EverCharge uses technology embedded in our chargers to monitor electricity usage to manage customer billing and the reimbursement to the building without the need for meters or submeters.</p> 
+							<p class="black">This enables EverCharge to tap into the nearest source of community power, significantly reducing the length of the conduit run and the subsequent cost of the install. For further savings, multiple chargers are able to share wire and conduit.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-7">
+							<h2 class="ec-teal">Safety</h2>
+							<p class="black">SmartPower is listed as compliant with UL 916 (Energy Management Equipment) and UL 2231 (Electric Vehicle Service Equipment). During installation, the system is configured with a maximum amount of power that is safely available and will limit power draw to never exceed that limit.</p>
+							<p class="black">Individual 30-Amp chargers connect to building infrastructure via #6 AWG conductors and a 40-Amp disconnect (circuit breaker, fuse, etc) Depending on code or power requirements.</p>
+							<p class="black">Chargers communicate with each other in the garage using a wireless network. The best way to think about SmartPower is to visualize EverCharge as one charger with many outlets.</p>
+						</div>
+						<div class="col-xs-8 col-sm-offset-1 col-sm-7">
+							<img src="images/graphic-one-charger.jpg" class="img-responsive">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-16">
+							<h2 class="ec-teal">SmartPower in Action</h2>
+							<p class="black">SmartPower provides efficient charging for all vehicles by leveraging the fact not all vehicles charge at the same moment in time and do not always require maximum draw during the course of a charging cycle.</p>
+							<p class="black">When any vehicle finishes charging, power that was allocated to that vehicle is released and the system reallocates power accordingly. SmartPower always works to get the most vehicles charged as quickly as possible, freeing up capacity for the next driver that gets home.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-offset-1 col-md-14">
+							<h2 class="bitter ec-teal text-center">EverCharge provides ongoing service to customers ensure charging performance and driver satisfaction.</h2>
+						</div>
+					</div>
+
 				</div>
 			</div>
-	</section>
-
-	<article class='jumbotron whitejumbo'>
-		<div class='row features'>
-			<div class='col-md-4 hidden-xs'></div>
-			<article class='col-md-8 col-xs-16'>
-				<h2>Wireless Network<h2>
-					<hr>
-					<h4>
-						 EverCharge chargers within the same garage communicate with one another over a wireless network. This network enables the system to perform real-time load balancing to ensure the system remains under the rated capacity at all times.
-					</h4>
-				<br>
-
-				<h2>Power Allocation<h2>
-					<hr>
-					<h4>
-						As a user plugs in his or her car and taps their EverCharge card, the system performs a series of safety checks confirming the available power among the charge group. If multiple cars within a charge group are plugged in, and charging each simultaneously at full power will exceed the total power allocated to the group, EverCharge will redistribute the available power among vehicles.
-					</h4>
-				<br>
-				<h2>Prevent Power Dilution</h2>
-					<hr>
-					<h4>
-						As a data-driven company, EverCharge analyzes building demographics and driving behaviors to advise on the number of vehicles your infrastructure can support using our system. EverCharge will never allow a building to dilute power to a level that will not provide sufficient levels of charge and performance. On average drivers only need 2-3 hours of charging per day (40-60 miles) and residents come in at varied times, offering us a wide window to fully charge vehicles.
-					</h4>
-				<br>
-				<center><a href='http://www.pevcollaborative.org/sites/all/themes/pev/files/MUD_Brannan_final.pdf?utm_content=bufferda291&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer' target='_blank'>
-					<button class='flat_button case_study'>Real World Example</button>
-				</a></center>
-				<br>
-			</article>
-			<div class='col-md-4 hidden-xs'></div>
-
-			<div class='col-sm-16 col-xs-16'>
-				<br>
-				<img src='images/power_man.png' class='desaturate' id='three_car'>
-			</div>
-
-	</article>
-
-	<section class="parallax narrow" data-speed="4" data-type="background" >
-			<div class="container">
-				<div class="row-fluid">
-					<h1 class='parallax_header'>Safety and Compliance</h1>
-				</div>
-			</div>
-	</section>
-
-	<article class='whitejumbo jumbotron'>
-		<div class='row features'>
-			<div class='col-md-4 hidden-xs'></div>
-			<article class='col-md-8 col-xs-16'>
-			<h4>
-				EverCharge equipment is safety tested and complies with NEC and UL safety standards and meets the requirements for Association approval under California Civil Code Section 4745 (formerly 1353.9).
-			</h4>
-			</article>
-			<div class='col-md-4 hidden-xs'></div>
 		</div>
-	</article>
-<button class='scroll-down flat_button'>Get your Quote</button>
-
+	</div><!-- end ec-smartpower-wrap -->
 {% endblock %}
