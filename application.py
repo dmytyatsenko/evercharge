@@ -113,7 +113,7 @@ def about_us():
 
 @app.route('/smartpower', methods=['POST', 'GET'])
 def smart_power():
-    return render_template("smart-power.html")
+    return render_template("smartpower.html")
 
 
 @app.route('/faqs', methods=['POST', 'GET'])
