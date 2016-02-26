@@ -41,7 +41,6 @@ def company_overview():
 @app.route('/smartpower-overview')
 def smartpower_overview():
     return redirect('/smartpower')
-    #return app.send_static_file('SmartPowerOverview.pdf')
 
 
 @app.route('/potrero-case-study')

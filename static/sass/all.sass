@@ -121,6 +121,7 @@ h2
 
 .bitter
   font-family: $ec-font-bitter
+  font-style: italic
 //////////////////////
 
 // page: thankyou
@@ -380,24 +381,18 @@ p.ec-p
 
 // page: smartpower
 .ec-smartpower-wrap
-  h2:not(:first-child)
+  h2
     margin-top: 0
+    &.bitter
+      margin-top: 40px
   .row .row
     margin-bottom: 40px
-  .ec-intelligent-learning
-    background:
-      image: url('../images/bkgnd-graph.jpg')
-      position: bottom center
-      repeat: no-repeat
-      size: 100% 100%
+  a.ec-button-teal-border,
+    display: block
     margin-bottom: 40px
-  a
-    &.ec-button-teal-border,
-    &.ec-button-teal 
-      display: block
-      margin-top: 20px
-      text-align: center
-      width: 100%
+    margin-top: 20px
+    text-align: center
+    width: 100%
 
 
 //////////////////////
