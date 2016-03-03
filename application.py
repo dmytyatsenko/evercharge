@@ -63,6 +63,11 @@ def preferred_electricians():
     return app.send_static_file('preferred.pdf')
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+
 ################
 # ADMIN ROUTES #
 ################
