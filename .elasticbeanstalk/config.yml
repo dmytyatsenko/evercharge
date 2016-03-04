@@ -1,7 +1,7 @@
 branch-defaults:
   master:
     environment: webMain-env
-  webadmin-102-swtich-to-sass:
+  web-49-enable-compression:
     environment: webMain-env-stage
 global:
   application_name: web-main
@@ -10,7 +10,3 @@ global:
   default_region: us-west-2
   profile: eb-cli
   sc: git
-
-container_commands:
-    01_setup_apache:
-        command: "cp .ebextensions/enable_mod_deflate.conf /etc/httpd/conf.d/enable_mod_deflate.conf"
