@@ -157,13 +157,6 @@ def thank_you():
                            contactId=contact_id)
 
 
-@app.route('/incentives', methods = ['GET'])
-def state_incentives():
-    """" EV Incentives page - State by State """
-
-    return render_template('incentives.html')
-
-
 @app.route('/nutshell/address', methods=['POST', 'GET'])
 def update_address_in_nutshell():
     address = request.form.get('address')
