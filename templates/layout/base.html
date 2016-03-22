@@ -71,57 +71,50 @@
 
 <body>
 	<!-- main container of all the page elements -->
-{% block bannersize %}
-{% endblock %}
+	{% block bannersize %}
+	{% endblock %}
 
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/">
+              <img class="header_logo" alt="EverCharge" src="{{ url_for('static', filename='images/EverCharge-logo-horizontal-white.png') }}">
+	      </a>
+	    </div>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        
-        
-      </button>
-      <a class="navbar-brand" href="/">
-          <img class="header_logo" alt="EverCharge" src="{{ url_for('static', filename='images/EverCharge-logo-horizontal-white.png') }}">
-      </a>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href='{{ url_for('why_evercharge') }}'>Why EverCharge</a></li>
+	        <li><a href="{{ url_for('faqs') }}">FAQs</a></li>
+	        <li><a href="{{ url_for('about_us') }}">About</a></li>
+	        <li><a href='tel:8883427383'>888.342.7383</a></li>
+	        <li><a href="{{ url_for('customer_login') }}">Log In</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+    {% block alt_background %}
+    {% endblock %}
+
+    <div class="banner">
+    	<div class="bg-stretch">
+    		{% block background %}
+    		{% endblock %}
+    	</div>
+    	<div class="container"></div>
+      <div class="row text-center">
+          {% block maincontent %}{% endblock %}
+      </div>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        
-        <li><a href='{{ url_for('why_evercharge') }}'>WHY EVERCHARGE</a></li>
-        <li><a href="{{ url_for('faqs') }}">FAQs</a></li>
-        <li><a href="{{ url_for('about_us') }}">ABOUT</a></li>
-        <li><a href='tel:8883427383'>888.342.7383</a></li>
-        <li class='pop_of_red'><a href="{{ url_for('customer_login') }}">CUSTOMER LOGIN</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-{% block alt_background %}
-{% endblock %}
-
-<div class="banner">
-	<div class="bg-stretch">
-		{% block background %}
-		{% endblock %}
-	</div>
-	<div class="container"></div>
-  <div class="row text-center">
-      {% block maincontent %}{% endblock %}
-  </div>
-</div>
-
-
-
 
 	<main id="content">
 		<!-- video -->
@@ -216,46 +209,45 @@
 	<footer id="footer">
 		<div class="container">
 			<!-- footer navigation -->
-			<div class="row features">
-			<div class="col-xs-8 col-sm-3">
-				<a href="/"><img src="{{ url_for('static', filename='images/EverCharge-logo-tag-teal-shadow.png') }}" class="img-responsive" alt="EverCharge"></a>
-			</div>
-			<div class="clearfix visible-xs"></div>
-			<div class="col-sm-offset-1 col-sm-4">
-				<h5>Navigate</h5>
-				<div class="footer-list">
-					<a href="/">Home</a>
-					<a href="{{ url_for('why_evercharge') }}">Why EverCharge</a>
-					<a href="/faqs">FAQs</a>
-					<a href="http://blog.evercharge.net">EverCharge Blog</a>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<h5>About EverCharge</h5>
-				<div class="footer-list">
-					<a href="/aboutus">About Us</a>
-					<a href="https://angel.co/evercharge/jobs" target='_blank'>Careers</a>
-					<a href="press" target="_blank">Press Resources</a>
-					<a href="/properties">Properties</a>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<h5>Contact Us</h5>
-				<div class="footer-list">
-					<a href="mailto:sales@evercharge.net">Sales</a>
-					<a href="mailto:info@evercharge.net">Support</a>
-					<a href="mailto:install@evercharge.net">Installation Experts</a>
-					<a href='tel:8883427383'>888.342.7383</a>
-				</div>
-			</div>
-            </div> <!-- /row features -->
+			<div class="row">
+    			<div class="col-xs-8 col-sm-3">
+    				<a href="/"><img src="{{ url_for('static', filename='images/EverCharge-logo-tag-teal-shadow.png') }}" class="img-responsive" alt="EverCharge"></a>
+    			</div>
+    			<div class="clearfix visible-xs"></div>
+    			<div class="col-sm-offset-1 col-sm-4">
+    				<h5>Navigate</h5>
+    				<div class="footer-list">
+    					<a href="/">Home</a>
+    					<a href="{{ url_for('why_evercharge') }}">Why EverCharge</a>
+    					<a href="/faqs">FAQs</a>
+    					<a href="http://blog.evercharge.net">EverCharge Blog</a>
+    				</div>
+    			</div>
+    			<div class="col-sm-4">
+    				<h5>About EverCharge</h5>
+    				<div class="footer-list">
+    					<a href="/aboutus">About Us</a>
+    					<a href="https://angel.co/evercharge/jobs" target='_blank'>Careers</a>
+    					<a href="press" target="_blank">Press Resources</a>
+    					<a href="/properties">Properties</a>
+    				</div>
+    			</div>
+    			<div class="col-sm-4">
+    				<h5>Contact Us</h5>
+    				<div class="footer-list">
+    					<a href="mailto:sales@evercharge.net">Sales</a>
+    					<a href="mailto:info@evercharge.net">Support</a>
+    					<a href="mailto:install@evercharge.net">Installation Experts</a>
+    					<a href='tel:8883427383'>888.342.7383</a>
+    				</div>
+    			</div>
+            </div>
 			<div class="clearfix"></div>
-			
 			<p class="copyright">
 				<a href="https://twitter.com/evercharge"><i class="fa fa-twitter-square"></i></a>
 				<a href="https://www.facebook.com/evevercharge"><i class="fa fa-facebook-square"></i></a>
 				<br>
-				&copy; 2016 EverCharge, Inc. All Rights Reserved. Made in California.
+				<small>&copy; 2016 EverCharge, Inc. All Rights Reserved. Made in California.</small>
 			</p>
 		</div>
 	</footer>
@@ -271,7 +263,6 @@
 
 	</script>
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script async type='text/javascript' src="{{ url_for('static', filename='js/navbar.js') }}"></script>
 	<script async src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script async src="js/bootstrap-formhelpers-phone.js"></script>
 	<script type="text/javascript" src="js/jquery.main.js"></script>
@@ -279,7 +270,6 @@
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/transition.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/difficulties.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/parallax.js') }}"></script>
-	<script async type="text/javascript" src="{{ url_for('static', filename='js/back_to_top.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/smoothscroll.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/nutshell-adwords.js') }}"></script>
 

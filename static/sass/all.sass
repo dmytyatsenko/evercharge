@@ -1,13 +1,16 @@
-.sasscheck
-  background: red
-
 //////////////////////
 // VARIABLES
 // colors
+$ec-lt-grey: RGBA(237,237,237,1.0)
+$ec-md-grey: RGBA(190,190,190,1.0)
+$ec-dk-grey: RGBA(128,128,128,1.0)
+$ec-dk-dk-grey: RGBA(60,60,60,1.0)
 $ec-teal: RGBA(0,164,153,1.0)
 $ec-dk-teal: RGBA(0,89,79,1.0)
+$ec-red: RGBA(248,72,94,1.0)
 // type
 $ec-font-bitter: 'Bitter', serif
+$ec-font-work-sans: 'Work Sans', Arial, sans-serif
 $ec-font-s-body: 16px
 $ec-font-w-body: 400
 $ec-letter-space: -0.5px
@@ -20,505 +23,606 @@ $ec-letter-space: -0.5px
 
 // buttons
 a, button, input
-  &.ec-button-teal-border
-    background: transparent
-    border: 2px solid $ec-teal
+    &.ec-button-teal-border
+        background: transparent
+        border: 2px solid $ec-teal
+        color: $ec-teal
+        font-size: 14px
+        font-weight: 600
+        margin-top: 14px
+        min-height: 40px
+        padding: 15px 30px
+        text-transform: uppercase
+        &:hover 
+            background: RGBA(0,164,153,0.1)
+            text-decoration: none
+a.ec-text-link
     color: $ec-teal
     font-size: 14px
     font-weight: 600
+    text-decoration: underline
+    text-transform: uppercase
+    &:hover
+        color: black
+        cursor: pointer
+a.ec-button-teal
+    background: $ec-teal
+    border: 1px solid $ec-dk-teal
+    color: white
+    font-size: 14px
     margin-top: 14px
     min-height: 40px
     padding: 15px 30px
     text-transform: uppercase
-    &:hover 
-      background: RGBA(0,164,153,0.1)
-      text-decoration: none
-a.ec-text-link
-  color: $ec-teal
-  font-size: 14px
-  font-weight: 600
-  text-decoration: underline
-  text-transform: uppercase
-  &:hover
-    color: black
-    cursor: pointer
-a.ec-button-teal
-  background: $ec-teal
-  border: 1px solid $ec-dk-teal
-  color: white
-  font-size: 14px
-  margin-top: 14px
-  min-height: 40px
-  padding: 15px 30px
-  text-transform: uppercase
-  &:hover
-    background: $ec-dk-teal
+    &:hover
+        background: $ec-dk-teal
 .ec-button-teal
-  background: $ec-teal
-  border: 1px solid $ec-dk-teal
-  color: white
-  font-size: 14px
-  margin-top: 14px
-  min-height: 40px
-  padding: 15px 30px
-  text-transform: uppercase
-  &:hover
-    background: $ec-dk-teal
+    background: $ec-teal
+    border: 1px solid $ec-dk-teal
+    color: white
+    font-size: 14px
+    margin-top: 14px
+    min-height: 40px
+    padding: 15px 30px
+    text-transform: uppercase
+    &:hover
+        background: $ec-dk-teal
 .no-padding-right
-  padding-right: 0
+    padding-right: 0
 
 //boxes
 .ec-box-white-border
-  background: white
-  border: 1px solid black
-  outline: 10px solid white
+    background: white
+    border: 1px solid black
+    outline: 10px solid white
 .ec-box-white
-  background: white
-  padding: 20px
+    background: white
+    padding: 20px
 .ec-title-box
-  color: white
-  display: table-cell
-  padding: 80px 20px 20px 20px
-  vertical-align: bottom
-  &-intro
-    @extend .ec-title-box
-    position: absolute
-    top: -120px
-    z-index: 2
-  &.blue 
-    background: #68CEF2
-.ec-stretch-teal
-  background: $ec-teal
-  padding-bottom: 60px
-  padding-top: 30px
-  h1
-    color: RGBA(255,255,255,0.7)
-    letter-spacing: -1px
-  h3.bitter
     color: white
-    font-size: 18px
-    text-transform: none
+    display: table-cell
+    padding: 80px 20px 20px 20px
+    vertical-align: bottom
+    &-intro
+        @extend .ec-title-box
+        position: absolute
+        top: -120px
+        z-index: 2
+    &.blue 
+        background: #68CEF2
+.ec-stretch-teal
+    background: $ec-teal
+    padding-bottom: 60px
+    padding-top: 30px
+    h1
+        color: RGBA(255,255,255,0.7)
+        letter-spacing: -1px
+    h3.bitter
+        color: white
+        font-size: 18px
+        text-transform: none
+
+// type
+h1
+    font-family: $ec-font-work-sans
+    font-size: 3em
+    font-weight: 400
+    letter-spacing: -1px
+    margin-bottom: 20px
+    margin-top: 0
+h2
+    font-size: 1.625em
+    font-weight: 400
+    letter-spacing: -0.3px
+    margin-bottom: 16px
+    margin-top: 0
+h4.ec-caps
+    color: #58595B
+    font-size: 16px
+    font-weight: 600
+    text-transform: uppercase
+h5
+    font-size: 1em
+    font-weight: 400
+    line-height: 1.1em
+p
+    font-size: 1em
+    font-weight: 400
+    line-height: 1.4em
+    margin-bottom: 10px
+    margin-top: 0
+.bitter
+    font-family: $ec-font-bitter
+    font-style: italic
+.ec-teal
+    color: $ec-teal
+.text-center
+    text-align: center
+.white
+    color: white
+.ec-zero
+    margin: 0
 
 // misc
 hr.ec-hr-extra
-  margin-bottom: 20px
-  margin-top: 20px
-
-h4.ec-caps
-  color: #58595B
-  font-size: 16px
-  font-weight: 600
-  text-transform: uppercase
-
+    margin-bottom: 20px
+    margin-top: 20px
 p.black
-  color: black
-  line-height: 1.4em
-  margin-bottom: 10px
+    color: black
+    line-height: 1.4em
+    margin-bottom: 10px
+//////////////////////
 
-h2
-  font-size: 28px
-  letter-spacing: -1px
+//////////////////////
+// BASE TEMPLATE
+// header
+$navbar-height: 50px
+nav
+    a.navbar-brand
+        padding: 0
+    .header_logo
+        height: $navbar-height
+        margin-left: 12px
+    .navbar-fixed-top
+        border-width: 0
+    &.navbar-default
+        background: $ec-dk-dk-grey
+        background-image: none
+        border-color: $ec-dk-dk-grey
+        ul.navbar-nav>li>a
+            color: white
+            font-weight: 400
+            text-shadow: none
+            &:active,
+            &:hover
+                background: RGBA(255,255,255,0.15)
+                color: white
+        .navbar-nav>.active>a
+            background: $ec-teal
+            color: white
+            &:active,
+            &:hover
+                background: RGBA(255,255,255,0.15)
+                color: white
+        .navbar-toggle
+            background-color: $ec-dk-dk-grey
+            border-color: transparent
+            border-radius: 0
+            margin: 0
+            padding: 17px
+    .dropdown-menu>.active>a, 
+    .dropdown-menu>.active>a:focus, 
+    .dropdown-menu>.active>a:hover
+        background: $ec-lt-grey
+        color: inherit   
 
-.bitter
-  font-family: $ec-font-bitter
-  font-style: italic
+//footer
+footer#footer
+    background: $ec-dk-dk-grey
+    bottom: 0
+    color: white
+    height: 202px 
+    line-height: 1em
+    position: absolute
+    width: 100%
+    .container
+        padding: 0 0 11px 0
+    .footer-list
+        a
+            color: $ec-md-grey
+            display: block
+            font-size: 13px
+            margin-bottom: 3px
+            &:hover
+                background: none
+                text-decoration: underline
+    i
+        color: white
+        font-size: 1.4em
+        margin: 0 5px 5px 0
+    h5
+        margin-top: 24px
 //////////////////////
 
 // page: thankyou
 .container.ec-thankyou 
-  margin-top: 140px
-  p
-    color: black
-    line-height: 1.1em
-  .ec-box-white
-    background: white
-    padding: 20px
-    h1
-      color: $ec-teal
-  .ec-box-lt-gray
-    background: #E7E7E7
-    padding: 20px
-    text-align: left
-  .bitter
-    font-family: $ec-font-bitter
+    margin-top: 140px
+    p
+        color: black
+        line-height: 1.1em
+    .ec-box-white
+        background: white
+        padding: 20px
+        h1
+            color: $ec-teal
+    .ec-box-lt-gray
+        background: #E7E7E7
+        padding: 20px
+        text-align: left
+    .bitter
+        font-family: $ec-font-bitter
 
 fieldset.ec-fieldset
-  legend.ec-legend
-    border: 0
-    color: black
-    font-size: $ec-font-s-body
-    font-weight: 600
-    letter-spacing: $ec-letter-space
-    margin-bottom: 4px
-    text-transform: none
-  input[type="radio"],
-  label
-    &:hover
-      cursor: pointer
-  label
-    color: black
-    font-weight: $ec-font-w-body
-    margin-bottom: 0
-    margin-left: 10px
-  p
-    line-height: 1.1em
-  .form-control:hover
-    background: RGBA(0,164,153,0.2)
-    border-color: black
-  .form-control:focus
-    background: white
-    border-color: black
+    legend.ec-legend
+        border: 0
+        color: black
+        font-size: $ec-font-s-body
+        font-weight: 600
+        letter-spacing: $ec-letter-space
+        margin-bottom: 4px
+        text-transform: none
+    input[type="radio"],
+    label
+        &:hover
+            cursor: pointer
+    label
+        color: black
+        font-weight: $ec-font-w-body
+        margin-bottom: 0
+        margin-left: 10px
+    p
+        line-height: 1.1em
+    .form-control:hover
+        background: RGBA(0,164,153,0.2)
+        border-color: black
+    .form-control:focus
+        background: white
+        border-color: black
 p.ec-p 
-  line-height: 1.2em
+    line-height: 1.2em
 
 
 // page: partnership
 .ec-schneider-partner
-  position: absolute
-  top: -140px
-  z-index: 2
+    position: absolute
+    top: -140px
+    z-index: 2
 
 // page: properties
 .greyjumbo .ec-box-white
-  h2
-    margin-bottom: 3px
-    margin-top: 0
-  h2 + p
-    margin-bottom: 15px
+    h2
+        margin-bottom: 3px
+        margin-top: 0
+    h2 + p
+        margin-bottom: 15px
 .ec-featured-prop
-  h5
-    color: $ec-teal
-    font-weight: 600
-    line-height: 1em
-    margin-top: 0
+    h5
+        color: $ec-teal
+        font-weight: 600
+        line-height: 1em
+        margin-top: 0
 
 // page: base
 .ec-stretch-grey
-  background: #E6E6E7
-  border-top: 1px solid #B5B7B9
-  padding-bottom: 60px
-  padding-top: 10px
+    background: #E6E6E7
+    border-top: 1px solid #B5B7B9
+    padding-bottom: 60px
+    padding-top: 10px
 
 // page: why-evercharge (previously learnmore)
 .ec-why-maincontent
-  margin-top: 190px
-  h2
-    color: white
-    letter-spacing: 0px
-    text-transform: none
-.ec-why-wrap
-  .nav-tabs
-    border: none
-    h4
-      margin-bottom: 0
-  .nav-tabs li
-    background: transparent
-    border: none
-    font-size: inherit
-    padding: 0
-    text-transform: none
-    width: 33.333%
-  .nav-tabs li.active a
-    background: $ec-teal
-    padding-bottom: 22px
-    &:hover
-      background: $ec-dk-teal 
-      cursor: pointer
-    h4, p
-      color: white
-  .nav-tabs li a 
-    background: #E6E6E7
-    border-radius: 0
-    padding: 70px 20px 20px 20px
-    &:hover 
-      background: #58595B
-      cursor: pointer
-      padding-bottom: 22px
-      h4, p
+    margin-top: 190px
+    h2
         color: white
-    h4, p
-      color: black
-  .tab-content
-    border-bottom: 1px solid #58595B
-    border-left: 1px solid #58595B
-    border-right: 1px solid #58595B
-    margin-bottom: 60px
-    margin-top: 2px
-    padding: 0 20px 40px 20px
-    h3.bitter
-      text-transform: none
-    h4 + p
-      margin-bottom: 30px
+        letter-spacing: 0px
+        text-transform: none
+.ec-why-wrap
+    .nav-tabs
+        border: none
+        h4
+            margin-bottom: 0
+    .nav-tabs li
+        background: transparent
+        border: none
+        font-size: inherit
+        padding: 0
+        text-transform: none
+        width: 33.333%
+    .nav-tabs li.active a
+        background: $ec-teal
+        padding-bottom: 22px
+        &:hover
+            background: $ec-dk-teal 
+            cursor: pointer
+        h4, p
+            color: white
+    .nav-tabs li a 
+        background: #E6E6E7
+        border-radius: 0
+        padding: 70px 20px 20px 20px
+        &:hover 
+            background: #58595B
+            cursor: pointer
+            padding-bottom: 22px
+            h4, p
+                color: white
+        h4, p
+            color: black
+    .tab-content
+        border-bottom: 1px solid #58595B
+        border-left: 1px solid #58595B
+        border-right: 1px solid #58595B
+        margin-bottom: 60px
+        margin-top: 2px
+        padding: 0 20px 40px 20px
+        h3.bitter
+            text-transform: none
+        h4 + p
+            margin-bottom: 30px
 .ec-why-wattson-img
-  display: inline-block
-  height: 500px
-  width: auto
+    display: inline-block
+    height: 500px
+    width: auto
 .ec-why-wattson-wrap
-  text-align: center
+    text-align: center
 .ec-why-wattson-text
-  background: $ec-teal
-  display: inline-block
-  height: 500px
-  padding: 30px
-  width: 440px
-  h2
-    color: RGBA(255,255,255,0.7)
-  p, a
-    color: white
+    background: $ec-teal
+    display: inline-block
+    height: 500px
+    padding: 30px
+    width: 440px
+    h2
+        color: RGBA(255,255,255,0.7)
+    p, a
+        color: white
 
 // page: home
 .ec-home-banner
-  height: 640px
-  margin-top: 0
-  width: 100%
-  z-index: 1
-  .ec-home-stretch
-    bottom: 0
-    z-index: -1
-    left: 0
-    position: absolute
-    right: 0
-    top: 0
-    img
-      width: 100%
+    height: 640px
+    margin-top: 0
+    width: 100%
+    z-index: 1
+    .ec-home-stretch
+        bottom: 0
+        z-index: -1
+        left: 0
+        position: absolute
+        right: 0
+        top: 0
+        img
+            width: 100%
 .ec-home-banner + .banner
-  display: none
+    display: none
 .ec-home-banner-text
-  margin-top: 200px
-  h1, h4
-    color: white
-    text-shadow: 2px 2px 7px RGBA(0,0,0,0.5)
-  h1.xl
-    font-size: 52px
-    letter-spacing: -1px
-    margin-bottom: 30px
-  a.ec-button-teal
-    display: inline-block
-    padding-left: 80px
-    padding-right: 80px
+    margin-top: 200px
+    h1, h4
+        color: white
+        text-shadow: 2px 2px 7px RGBA(0,0,0,0.5)
+    h1.xl
+        font-size: 52px
+        letter-spacing: -1px
+        margin-bottom: 30px
+    a.ec-button-teal
+        display: inline-block
+        padding-left: 80px
+        padding-right: 80px
 .ec-home-properties
-  margin-top: -20px
-  padding-bottom: 60px
-  padding-top: 80px
-  position: relative
-  img 
-    top: 100px
-  .ec-dk-banner
-    background: $ec-dk-teal
-    left: 12px
-    padding: 180px 30px
-    position: absolute
-    top: 0
-    width: 320px
-    h5
-      color: white
-    a.ec-text-link
-      color: white
+    margin-top: -20px
+    padding-bottom: 60px
+    padding-top: 80px
+    position: relative
+    img 
+        top: 100px
+    .ec-dk-banner
+        background: $ec-dk-teal
+        left: 12px
+        padding: 180px 30px
+        position: absolute
+        top: 0
+        width: 320px
+        h5
+            color: white
+        a.ec-text-link
+            color: white
 .ec-home-quote
-  background: RGBA(0,164,153,0.3)
-  padding: 120px 0
-  text-align: center
-.ec-home-charging-experts
-  .ec-home-why
-    padding: 20px
+    background: RGBA(0,164,153,0.3)
+    padding: 120px 0
     text-align: center
-    p
-      color: white
-    h4
-      color: RGBA(255,255,255,0.7)
+.ec-home-charging-experts
+    .ec-home-why
+        padding: 20px
+        text-align: center
+        p
+            color: white
+        h4
+            color: RGBA(255,255,255,0.7)
 
 // page: wattson
 .ec-wattson-banner
-  background: #E6E6E7
-  height: 410px
-  width: 100%
-  z-index: 1
-  .ec-wattson-only
-    left: -40px
-    margin-top: -340px
-    position: absolute
-    z-index: 3
+    background: #E6E6E7
+    height: 410px
+    width: 100%
+    z-index: 1
+    .ec-wattson-only
+        left: -40px
+        margin-top: -340px
+        position: absolute
+        z-index: 3
 .ec-wattson-banner + .banner
-  display: none
+    display: none
 .ec-wattson-does-wrap
-  position: absolute
-  top: -200px
-  z-index: 2
-  .ec-wattson-does
-    background: $ec-teal
-    padding: 40px 30px 30px 30px
-    h1
-      color: white
-      opacity: 0.6
-    h4
-      color: white
-      line-height: 1.4em
+    position: absolute
+    top: -200px
+    z-index: 2
+    .ec-wattson-does
+        background: $ec-teal
+        padding: 40px 30px 30px 30px
+        h1
+            color: white
+            opacity: 0.6
+        h4
+            color: white
+            line-height: 1.4em
 .ec-wattson-reserve
-  background: RGBA(0,164,153,0.3)
-  font-weight: 400
-  padding: 40px 30px 40px 30px
-  .ec-button-teal-border
-    line-height: 1em
-    margin-top: 0
-  .form-control:hover
-    background: RGBA(0,164,153,0.2)
-    border-color: black
-  .form-control:focus
-    background: white
-    border-color: black
+    background: RGBA(0,164,153,0.3)
+    font-weight: 400
+    padding: 40px 30px 40px 30px
+    .ec-button-teal-border
+        line-height: 1em
+        margin-top: 0
+    .form-control:hover
+        background: RGBA(0,164,153,0.2)
+        border-color: black
+    .form-control:focus
+        background: white
+        border-color: black
 .ec-wattson-about
-  padding-bottom: 40px
-  position: relative
-  z-index: 3
-  img 
-    margin-top: -100px
+    padding-bottom: 40px
+    position: relative
+    z-index: 3
+    img 
+        margin-top: -100px
 .ec-wattson-quote
-  border: 4px solid RGBA(0,164,153,0.3)
-  margin-bottom: 80px
-  margin-top: 40px
-  padding: 40px 60px
-  text-align: center
+    border: 4px solid RGBA(0,164,153,0.3)
+    margin-bottom: 80px
+    margin-top: 40px
+    padding: 40px 60px
+    text-align: center
 
 // page: smartpower
 .ec-smartpower-wrap
-  margin-top: 40px
-  h2
-    margin-top: 0
-  .row .row
-    margin-bottom: 40px
-  a.ec-button-teal-border,
-    display: block
-    margin-bottom: 40px
-    margin-top: 20px
-    text-align: center
-    width: 100%
+    margin-top: 40px
+    h2
+        margin-top: 0
+    .row .row
+        margin-bottom: 40px
+    a.ec-button-teal-border,
+        display: block
+        margin-bottom: 40px
+        margin-top: 20px
+        text-align: center
+        width: 100%
 
 // page: 404
 img.img-error
-  opacity: 0.4
+    opacity: 0.4
 .ec-404 
-  margin-left: 20px
-  margin-right: 20px
-  margin-top: 140px
-  h1 
-    font-size: 60px
+    margin-left: 20px
+    margin-right: 20px
+    margin-top: 140px
+    h1 
+        font-size: 60px
 
 //////////////////////
 // RESPONSIVE
 // sm
 @media only screen and (max-width: 992px)
-  .ec-why-wrap .tab-pane 
-    img
-      height: 250px
-      margin: 0 auto
-  .ec-why-wattson-text
-    height: auto
-    padding-bottom: 50px
-    width: 40%
-  .ec-why-wattson-img
-    height: auto
-    width: 40%
-  .ec-wattson-banner
-    height: 300px
-  .ec-wattson-does-wrap
-    margin-top: -100px
-  .ec-wattson-about img
-    margin-top: 0
+    .ec-why-wrap .tab-pane 
+        img
+            height: 250px
+            margin: 0 auto
+    .ec-why-wattson-text
+        height: auto
+        padding-bottom: 50px
+        width: 40%
+    .ec-why-wattson-img
+        height: auto
+        width: 40%
+    .ec-wattson-banner
+        height: 300px
+    .ec-wattson-does-wrap
+        margin-top: -100px
+    .ec-wattson-about img
+        margin-top: 0
 
 // xs
 @media only screen and (max-width: 767px)
-  .ec-featured-prop
-    img
-      margin-bottom: 15px
-  .ec-why-wattson-text
-    width: 100%
-  .ec-why-wattson-img
-    height: auto
-    width: 100%
-  .ec-why-wrap .tab-pane 
-    img
-      height: auto
-  .ec-why-tab-xs
-    background: #E6E6E7
-    margin-left: -10px
-    margin-right: -10px
-    padding: 10px
-    text-align: center
-    h4 
-      margin-bottom: 5px
-  .ec-why-wrap .tab-content h4+p
-    margin-bottom: 8px
-  .tab-pane
-    display: block !important
-  .ec-featured-prop
-    img
-      height: 200px
-      margin-bottom: 20px
-      width: auto
-  .ec-schneider-partner
-    position: relative
-    top: 0
+    .ec-featured-prop
+        img
+            margin-bottom: 15px
+    .ec-why-wattson-text
+        width: 100%
+    .ec-why-wattson-img
+        height: auto
+        width: 100%
+    .ec-why-wrap .tab-pane 
+        img
+            height: auto
+    .ec-why-tab-xs
+        background: #E6E6E7
+        margin-left: -10px
+        margin-right: -10px
+        padding: 10px
+        text-align: center
+        h4 
+            margin-bottom: 5px
+    .ec-why-wrap .tab-content h4+p
+        margin-bottom: 8px
+    .tab-pane
+        display: block !important
+    .ec-featured-prop
+        img
+            height: 200px
+            margin-bottom: 20px
+            width: auto
+    .ec-schneider-partner
+        position: relative
+        top: 0
 
-  .ec-wattson-banner
-    height: auto
-  .ec-wattson-does-wrap
-    margin-top: -100px
-  .ec-wattson-about img
-    margin-top: 0
-    padding-right: 10px
-  .ec-wattson-banner .ec-wattson-only
-    left: 0
-    margin-top: -200px
-    position: relative
-    width: 300px
-  .ec-wattson-does-wrap
-    position: relative
-    top: -28px
-  .ec-wattson-reserve
-    form fieldset
-      padding: 0
+    .ec-wattson-banner
+        height: auto
+    .ec-wattson-does-wrap
+        margin-top: -100px
+    .ec-wattson-about img
+        margin-top: 0
+        padding-right: 10px
+    .ec-wattson-banner .ec-wattson-only
+        left: 0
+        margin-top: -200px
+        position: relative
+        width: 300px
+    .ec-wattson-does-wrap
+        position: relative
+        top: -28px
+    .ec-wattson-reserve
+        form fieldset
+            padding: 0
 
-  .ec-home-banner
-    height: auto
-    margin-top: 0
-    overflow: hidden
-    position: relative
-    width: 100%
-    z-index: 1
-    .ec-home-stretch
-      position: relative
-      z-index: 0
-    .ec-home-banner-text
-      background: $ec-teal
-      margin-top: 0
-      padding-bottom: 20px
-      h1
-        font-size: 40px
-      h4
-        font-size: 16px
-        font-weight: 400
-        margin-bottom: 5px
-  .ec-home-why
-    img
-      margin: 0 auto
-      width: 180px
-  .ec-home-properties
-    margin-bottom: 2px
-    margin-top: 2px
-    padding-bottom: 0
-    padding-top: 0
-    position: relative
-    img 
-      top: 100px
-    .ec-dk-banner
-      left: 0
-      padding: 15px 20px 30px 20px
-      position: relative
-      width: 100%
-  .ec-home-quote
-    padding: 20px
+    .ec-home-banner
+        height: auto
+        margin-top: 0
+        overflow: hidden
+        position: relative
+        width: 100%
+        z-index: 1
+        .ec-home-stretch
+            position: relative
+            z-index: 0
+        .ec-home-banner-text
+            background: $ec-teal
+            margin-top: 0
+            padding-bottom: 20px
+            h1
+                font-size: 40px
+            h4
+                font-size: 16px
+                font-weight: 400
+                margin-bottom: 5px
+    .ec-home-why
+        img
+            margin: 0 auto
+            width: 180px
+    .ec-home-properties
+        margin-bottom: 2px
+        margin-top: 2px
+        padding-bottom: 0
+        padding-top: 0
+        position: relative
+        img 
+            top: 100px
+        .ec-dk-banner
+            left: 0
+            padding: 15px 20px 30px 20px
+            position: relative
+            width: 100%
+    .ec-home-quote
+        padding: 20px
 
-  .ec-404 
-    margin-top: 100px
-    h1 
-      font-size: 30px
+    .ec-404 
+        margin-top: 100px
+        h1 
+            font-size: 30px
+    footer#footer
+        height: 560px
+        .container
+            padding: 0 18px 9px 18px
