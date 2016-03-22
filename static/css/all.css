@@ -39,9 +39,6 @@ textarea{
 	-webkit-appearance:none;
 	border-radius: 0;
 }
-a{color: #b4b4b4;}
-a:hover{color: #bfbfbf;}
-a:focus{outline: none !important; text-decoration: none;}
 
 
 /* ---------------------------------------------------------
@@ -192,15 +189,6 @@ h3.left {
 h4 {
 	font-weight: 300;
 	color: #939393; }
-
-p {
-	color: #999;
-	font-size: 14px;
-	font-weight: 400;
-	letter-spacing: -0.1px;
-	line-height: 2.5rem;
-	margin: 4px 0 0 0;	
-}
 
 p.large {
 	font-size: 16px;
@@ -355,11 +343,6 @@ input[type="submit"]{
 	line-height: 32px;
 }
 
-.greenjumbo a {
-	text-decoration: none;
-	color: #272822;
-}
-
 .greyjumbo hr {
 	color: #3C3D39;
 }
@@ -437,11 +420,6 @@ input[type="submit"]{
 .jumbotron article, span {
 	text-align: left;
 
-}
-
-.greyjumbo a {
-	color: #939393;
-	font-weight: 600;
 }
 
 .infobox {

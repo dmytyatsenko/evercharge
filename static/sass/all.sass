@@ -21,6 +21,18 @@ $ec-letter-space: -0.5px
 // bootstrap overrides
 
 
+// text links
+a
+    color: $ec-teal
+    text-decoration: none
+    &:visited
+        color: $ec-teal
+        text-decoration: none
+    &:active,
+    &:hover
+        color: $ec-dk-teal
+        text-decoration: underline
+
 // buttons
 a, button, input
     &.ec-button-teal-border
@@ -56,6 +68,7 @@ a.ec-button-teal
     text-transform: uppercase
     &:hover
         background: $ec-dk-teal
+        cursor: pointer
 .ec-button-teal
     background: $ec-teal
     border: 1px solid $ec-dk-teal
@@ -67,8 +80,16 @@ a.ec-button-teal
     text-transform: uppercase
     &:hover
         background: $ec-dk-teal
+        cursor: pointer
+    &:disabled
+        opacity: 0.3
+        &:hover
+            background: $ec-teal
 .no-padding-right
     padding-right: 0
+.block
+    display: block
+    width: 100%
 
 //boxes
 .ec-box-white-border
@@ -101,6 +122,10 @@ a.ec-button-teal
         color: white
         font-size: 18px
         text-transform: none
+.ec-stretch-white
+    background: white
+    padding-bottom: 40px
+    padding-top: 30px
 
 // type
 h1
@@ -120,6 +145,8 @@ h4.ec-caps
     color: #58595B
     font-size: 16px
     font-weight: 600
+    margin-bottom: 16px
+    margin-top: 0
     text-transform: uppercase
 h5
     font-size: 1em
@@ -151,6 +178,8 @@ p.black
     color: black
     line-height: 1.4em
     margin-bottom: 10px
+.extra-bottom-lg
+    margin-bottom: 60px
 //////////////////////
 
 //////////////////////
@@ -297,7 +326,7 @@ p.ec-p
     background: #E6E6E7
     border-top: 1px solid #B5B7B9
     padding-bottom: 60px
-    padding-top: 10px
+    padding-top: 40px
 
 // page: why-evercharge (previously learnmore)
 .ec-why-maincontent
@@ -492,6 +521,21 @@ p.ec-p
         margin-top: 20px
         text-align: center
         width: 100%
+
+// page: faqs
+.ec-faq-q
+    border: 1px solid $ec-md-grey
+    display: block
+    margin-top: 10px
+    width: 100%
+.ec-faq-a
+    border: 1px solid $ec-md-grey
+    border-top: 0px
+.ec-faq-q,
+.ec-faq-a
+    padding: 10px
+    p:last-child
+        margin-bottom: 0
 
 // page: 404
 img.img-error
