@@ -28,22 +28,14 @@
 
 {% block content_one %}
 
-<article class='jumbotron whitejumbo white_space'>
-	<a href='#quote' class='smoothScroll'>
-		<button class='flat_button'>Get a Quote Now</button>
-	</a>
-</article>
-
-
 <section class="parallax narrow" data-speed="4" data-type="background" id='parallax_questions'>
 	<div class="container">
-		<div class="row-fluid">
+		<div class="row">
 			<h1 class='parallax_header'>You've got Questions</h1>
 		</div>
 	</div>
 </section>
 
-<div style="height:50px"></div>
 <article class='whitejumbo jumbotron'>
 	<div class="row features">
 
@@ -52,7 +44,6 @@
 			<hr class='short'><br>
 			
 				<h4><a href='#evse_definition' class='smoothScroll'>What is EVSE</a></h4>
-				<h4><a href='#charge_levels' class='smoothScroll'>Charging Levels</a></h4>
 				<h4><a href='#plugs' class='smoothScroll'>Adaptor Types</a></h4>
 			</p>
 		</div>
@@ -61,8 +52,6 @@
 			<h2><a href='#basics' class='smoothScroll'>EverCharge Basics</a></h2>
 			<hr class='short'><br>
 			<h4><a href='#benefits' class='smoothScroll'>Benefits of EverCharge</a>
-			</h4>
-			<h4><a href='#compatible' class='smoothScroll'>Compatible EVs</a>
 			</h4>
 			<h4><a href='#how_it_works' class='smoothScroll'>How it works</a><br>
 			</h4>
@@ -115,39 +104,6 @@
 			<hr>
 		</article>
 
-		<article class='col-md-4 hidden-xs'>
-		</article>
-
-		<article class='col-md-4 hidden-xs'>
-		</article>
-
-		<article class='col-xs-16 col-md-8'>
-			<h2 id='charge_levels'>Levels of EV Charging</h2>
-			There are considered to be three levels of charging for EVs - each pulling different amounts of power.
-			<ul>
-				<li><strong>Level 1</strong>: Standard 110v household outlet, not generally recommended for EV charging.
-					<br>
-					<em>1 - 4 miles of range per hour of charging.</em>
-				</li>
-				<li><strong>Level 2</strong>: 208, 220, or 240v outlet, similar to an electric dryer. This level is compatible with all electric vehicles and plug-in hybrids and is the best option for charging in homes and mulit-tenant buildings.
-				</li>
-				<li><strong>Level 3 (DC Quick Charger)</strong>: An off-board charger that connects directly to a vehicle's high-voltage battery bus. This type of charging allows for high power tranfer and can charge a battery to 80% capacity in minutes, instead of hours. DC Quick Charging can cost over $100,000 to install, so generally is cost-prohibitive for residential charging.
-					<br>
-					<em>Up to 200 miles of range per hour of charging.</em>
-				</li>
-			</ul>
-			
-			SAE J-1772 is the Society of Automotive Engineers (SAE) standard that covers AC Level 1 and 2 and DC Level 1 and 2 charging. J-1772 is the standard for AC charging in the United States.
-			<hr>
-		</article>
-
-		<article class='col-md-4 hidden-xs'>
-		</article>
-
-		<article class='col-md-4 hidden-xs'>
-		</article>
-
-
 		<article class='col-xs-16 col-md-8'>
 			<h2 id='plugs'>Types of EV Adaptors</h2>
 			<ul>
@@ -173,10 +129,10 @@
 
 		<article class='col-xs-16 col-md-8'>
 			<h2 id='benefits'>Benefits of EverCharge</h2>
-			EverCharge is a unique EV charging service that makes charging in condos and apartments easy. Without it, HOAs, property managers, and residents have to navigate the complexities of EV charging regulations, power balancing, and limited voltage by themselves. EverCharge handles all of this, providing:
+			EverCharge makes charging in condos and apartments easy by navigating the complexities of EV charging regulations, permitting, approvals, capacity limitations, and property reimbursements EverCharge handles everything:
 			<ul>
 				<li>
-					<strong>Fully managed service</strong>: Ongoing insurance, support, maintenance and automated billing services are all included at no cost to building management. We take care of everything.
+					<strong>Fully managed service</strong>: Ongoing insurance, support, maintenance and automated billing services at no cost to building management or association.
 				</li>
 				<li>
 					<strong>SmartPower</strong><sup>TM</sup><strong> Technology</strong>: EverCharge intelligently manages buildings power to maximize your infrastructure potential by up to 10x. Read more about <a href='/smartpower'>SmartPower<sup>TM</sup></a>.
@@ -186,48 +142,15 @@
 			<hr>
 		</article>
 
-		<article class='col-md-4 hidden-xs'>
-		</article>
-
-		<article class='col-md-4 hidden-xs'>
-		</article>
-
-		<article class='col-xs-16 col-md-8'>
-			<h2 id='compatible'>Compatible EVs</h2>
-			All Electric Vehicles sold in North America are compatible with the EverCharge charging system. This includes, but is not limited to:
-			<ul>
-				<li>BMW i3</li>
-				<li>BMW i8</li>
-				<li>Chevrolet Volt</li>
-				<li>Fiat 500e</li>
-				<li>Ford Focus Electric</li>
-				<li>Honda Fit EV</li>
-				<li>Kia Soul EV</li>
-				<li>Nissan Leaf</li>
-				<li>Tesla (all models)</li>
-				<li>Toyota Prius Plug-in</li>
-				<li>Volswagen e-Golf</li>
-				<li>And more</li>
-			</ul>
-			<hr>
-		</article>
-
-		<article class='col-md-4 hidden-xs'>
-		</article>
-
-		<article class='col-md-4 hidden-xs'>
-		</article>
-
 		<article class='col-xs-16 col-md-8'>
 			<h2 id='how_it_works'>How EverCharge Works</h2>
-			Our charging stations connect to readily available common area power in the building. This enables us to get commercial electricity rates and to easily scale throughout the garage for additional users by consolidating conduit and wire.
+			Our charging stations connect to readily available common area power in a building. This enables us to get commercial electricity rates and to easily scale throughout the garage for additional users by consolidating conduit and wire.
 			<br>
 			<br>
-			Using access cards, our charge stations monitor electricity consumed by residents. Monthly we bill members for the amount of energy used, and quarterly we fully reimburse the HOA for all energy consumed by EV charging. 
+			Using access cards, our charge stations monitor electricity consumed by residents. Monthly members are billed for the amount of energy used, and quarterly we fully reimburse the property for energy consumed by EV charging. 
 			<br>
 			<br>
-			Our proprietary SmartPower<sup>TM</sup> technology intelligently allocates power among chargers via a wireless mesh network. This enables us to  quickly charge more vehicles and support up to ten times as many chargers. All without costly building infrastructure upgrades or recurring costs to the HOA or building owner.
-
+			Proprietary SmartPower<sup>TM</sup> technology intelligently allocates power among chargers via a wireless network. This enables us to rapidly charge more vehicles and support up to ten times as many chargers. All without costly building infrastructure upgrades or recurring costs to the HOA or building owner.
 		</article>
 
 		<article class='col-md-4 hidden-xs'>
@@ -334,7 +257,7 @@
 
 		<article class='col-xs-16 col-md-8'>
 			<h2 id='autopay'>Automatic Billing</h2>
-			All customers have the option to set up autopay -- on your first bill you will see instructions to do so. If you have questions about setting this up, please reach out to us at <a href='tel:888-342-7383'>1(888) 342-7383.</a>.
+			Customers have the option to set up autopay – on your first bill you will see instructions to do so on our customer portal.
 			<hr>
 		</article>
 
