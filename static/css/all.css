@@ -87,25 +87,6 @@ textarea{
 	font-size: 30px;
 	margin: 0 0 30px 0;
 }
-.banner h2{
-	font-size: 20px;
-	line-height: 26px;
-	font-weight: 400;
-	margin-bottom: 10px;
-}
-.banner .article-quote h2{
-	margin-bottom: 5px;
-	margin-top: 5px;
-
-}
-.banner .desc{padding: 0 10px;}
-.banner h3{
-	font-size: 16px;
-	line-height: 18px;
-	font-weight: 400;
-	margin: 0 0 16px;
-	text-transform: uppercase;
-}
 .banner .visible{display: none;}
 .banner .img-circle{
 	margin-bottom: 5px;
@@ -169,26 +150,11 @@ h2.greenheading {
 	width: 40%;
 	float: left;
 }
-h3{
-	font-size: 16px;
-	line-height: 20px;
-	color: #999;
-	text-transform: uppercase;
-	font-weight: 600;
-	margin: 0 0 8px;
-}
-
-h3.left {
-	text-align: left;
-}
 
 .ec-teal {
 	color: #00A499;
 }
 
-h4 {
-	font-weight: 300;
-	color: #939393; }
 
 p.large {
 	font-size: 16px;
@@ -616,12 +582,6 @@ h1.new_header span {
 button.homeNav {
 	width: 220px;
 	margin-bottom: 10px;
-}
-
-div.text-center {
-	height: 410px;
-	overflow: hidden;
-	vertical-align: middle;
 }
 
 h2.tagline {
@@ -1376,10 +1336,6 @@ p.label_form {
 		width: 180px;
 		padding: 9px 11px 11px;
 		height: 36px;
-	}
-	
-	div.text-center {
-		height: 250;
 	}
 
 	#large_green_circle {
