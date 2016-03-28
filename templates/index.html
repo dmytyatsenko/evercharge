@@ -1,10 +1,5 @@
 {% extends 'layout/base.html' %}
 
-
-{% block bannersize %}
-	<div id="wrapper" class="add">
-{% endblock %}
-
 {% block background %}
 {% endblock %}
 
@@ -68,70 +63,66 @@
 			</form>
 		</div>
 	</div>
-{% endblock %}
 
-{% block content_two %}
-	<div class="whitejumbo">
-		<div class="ec-stretch-teal ec-home-charging-experts">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-offset-2 col-sm-12 col-md-offset-0 col-md-16">
-						<center>
-							<h1>Charging Experts</h1>
-							<h3 class="bitter">EverCharge makes widespread EV adoption possible in apartments and condominiums.</h3>
-						</center>
-					</div>
-				</div><!-- end row -->
-				<div class="row">
-					<div class="col-sm-offset-2 col-sm-4 ec-home-why">
-						<img src="images/icon-1.png" class="img-responsive" alt="" />
-						<h4 class="ec-caps">Here to Help</h4>
-						<p>We understand your needs</p>
-					</div>
-					<div class="col-sm-4 ec-home-why">
-						<img src="images/icon-3.png" class="img-responsive" alt="" />
-						<h4 class="ec-caps">Dedicated Stations</h4>
-	    			<p>No sharing, no waiting</p>
-					</div>
-					<div class="col-sm-4 ec-home-why">
-						<img src="images/icon-2.png" class="img-responsive" alt="" />
-						<h4 class="ec-caps">Long-Term Value</h4>
-	    			<p>Affordable solution</p>
-					</div>
-				</div><!-- end row -->
-				<br>
-				<center><a href="{{ url_for('why_evercharge') }}" class="ec-button-teal">WHY EVERCHARGE</a></center>
-			</div>
-		</div>
-	</div>
-	<div class="whitejumbo">
-		<div class="container">
-			<div class="row ec-home-properties">
-				<img src="images/building-4.jpg" class="img-responsive" alt="" />
-				<div class="ec-dk-banner">
-					<h5>EverCharge maximizes current building electrical infrastructure and expands capacity for EV charging well into the future.</h5>
-					<br>
-					<br>
-					<p><a href="{{ url_for('evercharge_properties') }}" class="ec-text-link">View Properties &#8594;</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-{% endblock %}
+        <div class="whitejumbo">
+            <div class="ec-stretch-teal ec-home-charging-experts">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-offset-2 col-sm-12 col-md-offset-0 col-md-16">
+                            <center>
+                                <h1>Charging Experts</h1>
+                                <h3 class="bitter">EverCharge makes widespread EV adoption possible in apartments and condominiums.</h3>
+                            </center>
+                        </div>
+                    </div><!-- end row -->
+                    <div class="row">
+                        <div class="col-sm-offset-2 col-sm-4 ec-home-why">
+                            <img src="images/icon-1.png" class="img-responsive" alt="" />
+                            <h4 class="ec-caps">Here to Help</h4>
+                            <p>We understand your needs</p>
+                        </div>
+                        <div class="col-sm-4 ec-home-why">
+                            <img src="images/icon-3.png" class="img-responsive" alt="" />
+                            <h4 class="ec-caps">Dedicated Stations</h4>
+                        <p>No sharing, no waiting</p>
+                        </div>
+                        <div class="col-sm-4 ec-home-why">
+                            <img src="images/icon-2.png" class="img-responsive" alt="" />
+                            <h4 class="ec-caps">Long-Term Value</h4>
+                        <p>Affordable solution</p>
+                        </div>
+                    </div><!-- end row -->
+                    <br>
+                    <center><a href="{{ url_for('why_evercharge') }}" class="ec-button-teal">WHY EVERCHARGE</a></center>
+                </div>
+            </div>
+        </div>
+        <div class="whitejumbo">
+            <div class="container">
+                <div class="row ec-home-properties">
+                    <img src="images/building-4.jpg" class="img-responsive" alt="" />
+                    <div class="ec-dk-banner">
+                        <h5>EverCharge maximizes current building electrical infrastructure and expands capacity for EV charging well into the future.</h5>
+                        <br>
+                        <br>
+                        <p><a href="{{ url_for('evercharge_properties') }}" class="ec-text-link">View Properties &#8594;</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-{% block content_three %}
-	<div class="ec-home-quote">
-		<div class="container">
-			<div class="col-sm-16 col-md-offset-2 col-md-12">
-				<h2 class="bitter ec-teal">“Having EV charging in apartments and condominiums is critical to the continued success of EV adoption. This collaborative solution effectively resolves building concerns and challenges with smart energy management and automation capabilities.”</h2>
-				<br>
-				<p class="black">&ndash; <strong>Pierre Sacré</strong>, director of Electric Vehicle Solutions at Schneider Electric North America</p>
-				<br>
-				<br>
-				<p><a href="{{ url_for('schneider_partnership') }}" class="ec-text-link">Read about the Schneider Partnership &#8594;</a></p>
-			</div>
-		</div>
-	</div>
+        <div class="ec-home-quote">
+            <div class="container">
+                <div class="col-sm-16 col-md-offset-2 col-md-12">
+                    <h2 class="bitter ec-teal">“Having EV charging in apartments and condominiums is critical to the continued success of EV adoption. This collaborative solution effectively resolves building concerns and challenges with smart energy management and automation capabilities.”</h2>
+                    <br>
+                    <p class="black">&ndash; <strong>Pierre Sacré</strong>, director of Electric Vehicle Solutions at Schneider Electric North America</p>
+                    <br>
+                    <br>
+                    <p><a href="{{ url_for('schneider_partnership') }}" class="ec-text-link">Read about the Schneider Partnership &#8594;</a></p>
+                </div>
+            </div>
+        </div>
 {% endblock %}
 
 {% block video %}

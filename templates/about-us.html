@@ -1,7 +1,7 @@
 {% extends 'layout/base.html' %}
 
 {% block background %}
-	<img src="images/building-5.jpg" alt="image description" width="1200" height="560">
+	<img src="{{ url_for('static', filename='images/building-5.jpg') }}" alt="image description">
 {% endblock %}
 
 {% block maincontent %}

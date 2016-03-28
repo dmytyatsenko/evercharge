@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html lang='EN'>
 <head>
-	
 	<!-- Start of evercharge Zendesk Widget script -->
 	<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("//assets.zendesk.com/embeddable_framework/main.js","evercharge.zendesk.com");/*]]>*/</script>
 	<!-- End of evercharge Zendesk Widget script -->
@@ -70,10 +69,6 @@
 
 
 <body>
-	<!-- main container of all the page elements -->
-	{% block bannersize %}
-	{% endblock %}
-
 	<nav class="navbar navbar-default navbar-fixed-top">
 	  <div class="container-fluid">
 	    <!-- Brand and toggle get grouped for better mobile display -->
@@ -117,98 +112,84 @@
     </div>
 
 	<main id="content">
-		<!-- video -->
+        {% block content_one %}
+        {% endblock %}
 
-{% block intro %}
-{% endblock %}
+        {% block video %}
+        	<article class='whitejumbo jumbotron' id='video'>
+        		<h2>Check out our video to learn more</h2>
 
-{% block content_one %}
-{% endblock %}
+        		<div class="video-container">
+        			<iframe src="http://www.youtube.com/embed/M4t47yjCGWw?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+        		</div>
+        	</article>
+        {% endblock %}
 
-{% block video %}
-	<article class='whitejumbo jumbotron' id='video'>
-		<h2>Check out our video to learn more</h2>
+        {% block quote_form %}
+        	<div class="ec-stretch-grey">
+        		<div class="container">
+        			<div class="row">
+        				<form action="/thankyou" method='post' id="quote" class="validate-form">
+        					<input name="lead_source" value="Web Signup" type="hidden">
+        					<input name="adwordsField" id='adwordsField' type="hidden">
+        					<input name="granularField" id="granularField" type="hidden">
+        					<fieldset class="ec-fieldset">
+        						<div class="col-xs-16">
+        							<h2 class="ec-teal">{% block form_name %}Need More Info?{% endblock %}</h2>
+        							<p>Connect with a team member by telling us a little about yourself.</p>
+        							<br>
+        						</div>
+        						<div class="col-xs-16 col-sm-8 col-md-4">
+        							<p data-href="inc/tab00.html" class="active">
+        								<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1" id="customer_type_ev">
+        								<label for="customer_type_ev">EV Driver</label>
+        							</p>
+        						</div>
+        						<div class="col-xs-16 col-sm-8 col-md-4">
+        							<p data-href="inc/tab01.html" class="active">
+        								<input type="radio" value="Property Manager" name="customer_type" class="radio2" id="customer_type_hoa">
+        								<label for="customer_type_hoa">Management</label>
+        							</p>
+        							<br>
+        							<br>
+        						</div>
+        						<div class="clearfix"></div>
+        						<div class="col-md-6">
+                                    <div class="form-group">
+            						    <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
+                                    </div>
+        						</div>
+        						<div class="col-md-6">
+                                    <div class="form-group">
+                                        <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
+                                    </div>
+        						</div>
+        						<div class="col-md-4">
+                                    <div class="form-group">
+            						    <input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="off">
+        							</div>
+        						</div>
+        						<div class="clearfix"></div>
+        						<div class="col-xs-16">
+        							<textarea name="quote_notes" rows="2" class="form-control" placeholder="Additional comments" autocomplete="off"></textarea>
+        						</div>
+        						<div class="clearfix"></div>
+        						<div class="col-xs-16 col-md-8">
+        							<input type="submit" value="Get your Quote" class="ec-button-teal">
+        						</div>
+        					</fieldset>
+        				</form>
+        			</div>
+        		</div>
+        	</div>
+        {% endblock %}
 
-		<div class="video-container">
-			<iframe src="http://www.youtube.com/embed/M4t47yjCGWw?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-		</div>
-	</article>
-{% endblock %}
-
-{% block content_two %}
-{% endblock %}
-
-{% block content_three %}
-{% endblock %}
-
-{% block quote_form %}
-	<div class="ec-stretch-grey">
-		<div class="container">
-			<div class="row">
-				<form action="/thankyou" method='post' id="quote" class="validate-form">
-					<input name="lead_source" value="Web Signup" type="hidden">
-					<input name="adwordsField" id='adwordsField' type="hidden">
-					<input name="granularField" id="granularField" type="hidden">
-					<fieldset class="ec-fieldset">
-						<div class="col-xs-16">
-							<h2 class="ec-teal">{% block form_name %}Need More Info?{% endblock %}</h2>
-							<p>Connect with a team member by telling us a little about yourself.</p>
-							<br>
-						</div>
-						<div class="col-xs-16 col-sm-8 col-md-4">
-							<p data-href="inc/tab00.html" class="active">
-								<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1" id="customer_type_ev">
-								<label for="customer_type_ev">EV Driver</label>
-							</p>
-						</div>
-						<div class="col-xs-16 col-sm-8 col-md-4">
-							<p data-href="inc/tab01.html" class="active">
-								<input type="radio" value="Property Manager" name="customer_type" class="radio2" id="customer_type_hoa">
-								<label for="customer_type_hoa">Management</label>
-							</p>
-							<br>
-							<br>
-						</div>
-						<div class="clearfix"></div>
-						<div class="col-md-6">
-              <div class="form-group">
-						    <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
-              </div>
-						</div>
-						<div class="col-md-6">
-              <div class="form-group">
-                <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
-              </div>
-						</div>
-						<div class="col-md-4">
-              <div class="form-group">
-						    <input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="off">
-							</div>
-						</div>
-						<div class="clearfix"></div>
-						<div class="col-xs-16">
-							<textarea name="quote_notes" rows="2" class="form-control" placeholder="Additional comments" autocomplete="off"></textarea>
-						</div>
-						<div class="clearfix"></div>
-						<div class="col-xs-16 col-md-8">
-							<input type="submit" value="Get your Quote" class="ec-button-teal">
-						</div>
-					</fieldset>
-				</form>
-			</div>
-		</div>
-	</div>
-{% endblock %}
-
-{% block content_one_bottom %}
-{% endblock %}
-
+        {% block content_one_bottom %}
+        {% endblock %}
     </main>
 
-	<!-- footer of the page -->
 	<footer id="footer">
 		<div class="container">
-			<!-- footer navigation -->
 			<div class="row">
     			<div class="col-xs-8 col-sm-3">
     				<a href="/"><img src="{{ url_for('static', filename='images/EverCharge-logo-tag-teal-shadow.png') }}" class="img-responsive" alt="EverCharge"></a>
@@ -251,6 +232,7 @@
 			</p>
 		</div>
 	</footer>
+
     <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -260,7 +242,6 @@
 	  ga('create', 'UA-55104339-1', 'auto');
 	  ga('require', 'displayfeatures');
 	  ga('send', 'pageview');
-
 	</script>
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	<script async src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
