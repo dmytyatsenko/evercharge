@@ -191,18 +191,22 @@ p.black
 .extra-bottom-lg
     margin-bottom: 60px
 
-// parallax
+// banner + parallax
+.ec-banner
+    min-height: 260px
+    position: relative
+    text-align: center
+    .ec-banner-text
+        left: 50%
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -40%)
 .parallax
     margin: 0
     padding: 75px 0
     position: relative
     text-align: center
     width: 100%
-    .ec-banner-text
-        left: 50%
-        position: absolute
-        top: 50%
-        transform: translate(-50%, -40%)
     &.img-about-us
         background: url(../images/building-12.jpg) fixed no-repeat
         background-size: 100%

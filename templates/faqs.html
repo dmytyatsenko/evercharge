@@ -1,40 +1,18 @@
 {% extends 'layout/base.html' %}
 
-{% block background %}
+{% block banner_class %}
+    class="ec-banner ec-stretch-teal"
 {% endblock %}
 
-{% block maincontent %}
-	<section class="col-md-12 col-md-offset-2">
-		<div class="row threecolumn">
-		<article class="col-md-16 col-sm-16 col-xs-16">
-			<div id='large_green_circle'>
-				<div id='header_text'>
-					<h1 class='new_header'>FAQ<span>s</span></h1>
-					<h2 class='tagline hidden_mobile'>
-						More Questions?
-						<br>
-						<a href='tel:8883427383'>888.342.7383</a>
-					</h2>
-				</div>
-			</div>
-			
-		</article>
-	</div>
+{% block banner_text %}
+    <h1 class="white">FAQs</h1>
+    <hp class="white">More Questions? <a class="white" href="tel:8883427383">888.342.7383</a></hp>
 {% endblock %}
 
 {% block video %}
 {% endblock %}
 
 {% block content_one %}
-
-    <section class="parallax narrow" data-speed="4" data-type="background" id='parallax_questions'>
-    	<div class="container">
-    		<div class="row">
-    			<h1 class='parallax_header'>You've got Questions</h1>
-    		</div>
-    	</div>
-    </section>
-
     <div class="ec-stretch-white">
         <div class="container">
             <a class="extra-bottom-lg block" role="button" data-toggle="collapse" href="#all" aria-expanded="false" aria-controls="all">
