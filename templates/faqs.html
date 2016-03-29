@@ -15,8 +15,12 @@
 {% block content_one %}
     <div class="ec-stretch-white">
         <div class="container">
-            <a class="extra-bottom-lg block" role="button" data-toggle="collapse" href="#all" aria-expanded="false" aria-controls="all">
-                View all --> need to make this work. pressing it expands all
+            <a class="extra-bottom-lg block"
+               id="expand-all-button"
+               role="button"
+               data-toggle="collapse"
+               href="#all" aria-expanded="false" aria-controls="all">
+                It works. expands all.
             </a>
             <div class="row extra-bottom-lg">
                 <div class="col-xs-16">
@@ -170,11 +174,9 @@
     </div>
 {% endblock %}
 
-{% block content_two %}
-{% endblock %}
+{%- block content_two -%}{%- endblock -%}
 
-
-
-
-
+{%- block custom_scripts -%}
+    <script>$('#expand-all-button').click(function(e){$('.collapse:not(".in")').collapse('show');})</script>
+{%- endblock -%}
 
