@@ -6,6 +6,8 @@ $ec-md-grey: RGBA(190,190,190,1.0)
 $ec-dk-grey: RGBA(128,128,128,1.0)
 $ec-dk-dk-grey: RGBA(60,60,60,1.0)
 $ec-teal: RGBA(0,164,153,1.0)
+$ec-lt-teal: RGBA(178,224,225,1.0)
+$ec-lt-teal-60: RGBA(178,224,225,0.6)
 $ec-dk-teal: RGBA(0,89,79,1.0)
 $ec-red: RGBA(248,72,94,1.0)
 // type
@@ -392,7 +394,6 @@ p.ec-p
 // page: base
 .ec-stretch-grey
     background: #E6E6E7
-    border-top: 1px solid #B5B7B9
     padding-bottom: 60px
     padding-top: 40px
 
@@ -588,10 +589,13 @@ p.ec-p
 
 // page: faqs
 .ec-faq-q
+    background: $ec-lt-teal-60
     border: 1px solid $ec-md-grey
     display: block
     margin-top: 10px
     width: 100%
+    &:hover
+        background: $ec-lt-teal
 .ec-faq-a
     border: 1px solid $ec-md-grey
     border-top: 0px

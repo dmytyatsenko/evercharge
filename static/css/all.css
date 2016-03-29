@@ -54,13 +54,6 @@ textarea{
 /* header styles */
 .add #header{padding: 16px 0 85px;}
 
-.jumbotron h1 {
-	color: #333333;
-	font-family: 'Bitter', serif;
-	font-size: 30px;
-	margin: 0 0 30px 0;
-}
-
 .get-quote input[type="submit"]:hover{background: #00594F;}
 /* main informative part styles */
 
@@ -151,74 +144,15 @@ input[type="submit"]{
 .tab-content div.active{display: block;}
 
 /* jumbotron */
-
-#content .jumbotron{
-	padding: 40px 10084px 40px;
-	margin: 0 -9999px 0px;
-}
-
 .extra_padding {
 	padding-top: 65px;
 	padding-bottom: 65px;
 }
-.jumbotron h2{
-	margin: 		10px 0;
-	font-size: 		24px;
-	line-height: 	26px;
-	font-weight: 	200;
-	text-transform: uppercase;
-}
-.jumbotron .form-control{
-	padding: 11px 11px 13px;
-	font-size: 13px;
-	line-height: 16px;
-	background: #62cb6b;
-	margin:0 auto 28px;
-	border:none;
-	box-shadow: none;
-	width: 204px;
-	text-align: center;
-	height: 41px;
-}
-
-.jumbotron p {
-	color: #333333;
-	font-weight: 400;
-	line-height: 20px;
-	text-align: left;
-}
-
-
-.jumbotron p.large_text.ec-teal {
-	color: #00A499;
-	margin-bottom: 30px;
-}
 
 #map-canvas img{max-width:none;}
-.greyjumbo {
-	background-color: #E7E7E7;
-	color: RGBA(50, 50, 50, 1);
-	font-size: 16px;
-	font-weight: 200;
-}
 
 .jumbo_shadow {
 	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
-}
-
-.greenjumbo {
-	background-color: RGBA(20, 171, 88, 1);
-	color: white;
-
-}
-
-.greenjumbo h4, h5, h2 {
-	font-weight: 400;
-	line-height: 32px;
-}
-
-.greyjumbo hr {
-	color: #3C3D39;
 }
 
 .whitejumbo {
@@ -236,37 +170,7 @@ input[type="submit"]{
 .whitejumbo h5 {
 	line-height: 24px;
 }
-.greyjumbo .btn{
-	background: #000;
-	color: #fff;
-	text-transform: uppercase;
-	font-size: 14px;
-	line-height: 22px;
-	font-weight: 600;
-	min-width: 200px;
-	border-radius: 21px;
-	border: 3px white solid;
-}
 
-.greyjumbo .btn:hover{
-	background: #262826;
-	box-shadow: 2px 2px 5px #888888;
-
-}
-
-.greyjumbo legend {
-	margin-bottom: 5px;
-}
-
-.greenjumbo legend {
-	color: white;
-}
-
-.greyjumbo .states {
-	padding-top: 40px;
-}
-
-.greyjumbo p, 
 .whitejumbo p { /*overriding bootstrap*/
 	font-size: 14px;
 	line-height: normal;
@@ -287,13 +191,6 @@ input[type="submit"]{
 	left:0;
 	width:60%;
 	height:60%;
-}
-
-
-
-.jumbotron article, span {
-	text-align: left;
-
 }
 
 .infobox {
@@ -360,22 +257,6 @@ select {
 	display: none;
 }
 
-input:hover {
-	background: #C2C2C2;
-}
-
-input[type=submit]:hover {
-	background-color:  #00594F;
-	/*opacity: .9;*/
-
-
-}
-input:focus {
-	background: #A4A4A4;
-
-}
-
-
 hr { 
     display: block;
     margin-top: 0.5em;
@@ -414,13 +295,6 @@ img.desaturate {
 #green_header {
 	color: #409E2A;
 }
-
-.jumbotron p.indent_quote {
-	padding-left: 3em;
-	font-size: 14px;
-}
-
-
 
 #scaling_cars { font-size: 0; }
 #scaling_cars img { 
@@ -679,7 +553,7 @@ div.color_circle { /*color palette circle*/
 	width: 100px;
 }
 
-.jumbotron .palette p {
+.palette p {
 	color: #333333;
 	line-height: normal;
 	margin: 0;
@@ -1125,34 +999,6 @@ p.label_form {
 	.jcf-class-radioyes.rad-checked{background-position: -185px -540px}
 	.jcf-class-radiono.rad-checked{background-position: -205px -540px}
 	.jcf-class-radioblank{background-position: -2005px -5040px}
-
-	#content .jumbotron{
-		padding: 29px 24px;
-		margin: 0 -16px 0px;
-		/*min-height: 171px;*/
-	}
-	.jumbotron h1 {font-size: 25px;}
-	.jumbotron h2{
-		font-size: 20px;
-		line-height: 22px;
-	}
-	.jumbotron p{
-		line-height: 22px;
-		margin-bottom: 26px;
-	}
-	.jumbotron br{display: none;}
-	.jumbotron .form-control{
-		width: 180px;
-		padding: 9px 11px 11px;
-		height: 36px;
-	}
-
-	#large_green_circle {
-		width: 100%;
-		border-radius: 0%;
-		margin: auto;
-		height: 250px;
-	}
 
 	h2.tagline {
 		margin-top: 0;
