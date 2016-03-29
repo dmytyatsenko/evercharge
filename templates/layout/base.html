@@ -100,6 +100,13 @@
     {% block alt_background %}
     {% endblock %}
 
+    <div {% block banner_class %}{% endblock %}>
+        <div class="ec-banner-text">
+            {% block banner_text %}
+            {% endblock %}
+        </div>
+    </div>
+
     <div class="banner">
     	<div class="bg-stretch">
     		{% block background %}

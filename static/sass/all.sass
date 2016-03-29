@@ -193,15 +193,20 @@ p.black
 
 // parallax
 .parallax
-    box-shadow: inset 0 0 50px rgba(0,0,0,0.8)
-    height: auto
     margin: 0
     padding: 75px 0
     position: relative
     text-align: center
     width: 100%
-.parallax-img-about-us
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/garage_large.jpg) 50% 0 fixed
+    .ec-banner-text
+        left: 50%
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -40%)
+    &.img-about-us
+        background: url(../images/building-12.jpg) fixed no-repeat
+        background-size: 100%
+        height: 400px
 //////////////////////
 
 //////////////////////
