@@ -88,11 +88,6 @@ h2.greenheading {
 	float: left;
 }
 
-.ec-teal {
-	color: #00A499;
-}
-
-
 p.large {
 	font-size: 16px;
 	font-weight: 400;
@@ -155,30 +150,6 @@ input[type="submit"]{
 }
 .tab-content div.active{display: block;}
 
-.features article{
-	text-align: center;
-	padding-bottom: 25px;
-	line-height: 24px;
-}
-.features img{
-	margin-bottom: 22px;
-	max-width: 100%;
-}
-
-.features h4 {
-	margin-top: 0;
-}
-
-.features img.oblong{
-	margin-top: 21px;
-}
-.features h2{
-	margin: 0 0 20px;
-	font-weight: 300;
-	font-size: 27px;
-}
-.features h2 a{color: #010101;}
-.features h2 a:hover{color: #b4b4b4;}
 /* jumbotron */
 
 #content .jumbotron{
@@ -1155,22 +1126,6 @@ p.label_form {
 	.jcf-class-radiono.rad-checked{background-position: -205px -540px}
 	.jcf-class-radioblank{background-position: -2005px -5040px}
 
-
-	.features{padding-bottom: 4px;}
-	.features article{
-		padding: 0 44px 18px;
-		line-height: 16px;
-	}
-
-	.features h2{
-		font-size: 21px;
-		line-height: 24px;
-		margin-bottom: 8px;
-	}
-	.features h4 {
-		font-size: 16px;
-		line-height: 19px
-	}
 	#content .jumbotron{
 		padding: 29px 24px;
 		margin: 0 -16px 0px;
