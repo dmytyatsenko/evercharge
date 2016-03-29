@@ -107,17 +107,6 @@
         </div>
     </div>
 
-    <div class="banner">
-    	<div class="bg-stretch">
-    		{% block background %}
-    		{% endblock %}
-    	</div>
-    	<div class="container"></div>
-      <div class="row text-center">
-          {% block maincontent %}{% endblock %}
-      </div>
-    </div>
-
 	<main id="content">
         {% block content_one %}
         {% endblock %}
@@ -189,9 +178,6 @@
         			</div>
         		</div>
         	</div>
-        {% endblock %}
-
-        {% block content_one_bottom %}
         {% endblock %}
     </main>
 

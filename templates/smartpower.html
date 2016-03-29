@@ -1,16 +1,12 @@
 {% extends 'layout/base.html' %}
 
-{% block background %}
-	<img src="images/parking-3.jpg" alt="image description" width="1200" height="526">
+{% block banner_class %}
+    class="parallax img-smartpower" data-speed="4" data-type="background"
 {% endblock %}
 
-{% block maincontent %}
-	<div class="container ec-why-maincontent">
-		<div class="row">
-			<h1>SmartPower<sup>TM</sup></h1>
-			<h2>Maximizing building capacity to charge significantly more vehicles with less infrastructure</h2>
-		</div>
-	</div>
+{% block banner_text %}
+    <h1 class="white">SmartPower<sup>TM</sup></h1>
+    <h2 class="white">Maximizing building capacity to charge significantly more vehicles with less infrastructure</h2>
 {% endblock %}
 
 {% block video %}

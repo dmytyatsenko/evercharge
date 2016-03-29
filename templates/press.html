@@ -1,17 +1,11 @@
 {% extends 'layout/base.html' %}
 
-{% block background %}
-	<img src="images/three_char.jpg" alt="image description" width="1200" height="526">
+{% block banner_class %}
+    class="parallax img-press" data-speed="4" data-type="background"
 {% endblock %}
 
-{% block maincontent %}
-	<div class="col-md-14 col-md-offset-1 article-quote">
-
-			<div id='large_green_circle'>
-				<h1 class='new_header'>Press Resources</h1>
-			</div>
-		<br>
-	</div>
+{% block banner_text %}
+    <h1 class="white">Press Resources</h1>
 {% endblock %}
 
 {% block video %}

@@ -1,61 +1,43 @@
 {% extends 'layout/base.html' %}
 
-{% block background %}
-	<img src="images/garage_wall.jpg" alt="image description">
+{% block banner_class %}
+    class="ec-banner ec-stretch-teal"
 {% endblock %}
 
-{% block rightheader %}
+{% block banner_text %}
+    <h1 class="white">Customer Log In</h1>
+    
 {% endblock %}
 
-{% block social_media %}
+{% block video %}
 {% endblock %}
 
-{%block video %}
-{% endblock %}
-
-	
-{% block maincontent %}
-
-	<section class="col-md-12 col-md-offset-2">
-		<div class="row threecolumn">
-		<article class="col-md-16 col-sm-16 col-xs-16">
-			<div id='large_green_circle'>
-				<h1 class='new_header'>Customer Login</h1>
-				<h2 class='tagline hidden_mobile'>
-					If you are an existing EverCharge customer, login below to access account, charging, and billing information.
-				</h2>
-			</div>
-			
-		</article>
-		</div>
-	</section>
-
-{% endblock %}
 {% block quote_form %}
-<div class="container">
-	<div class="row">
-		<form id='login' action="" method='post' class="validate-form">
-			<fieldset>
-				<legend id="quote"></legend>
+    <div class="ec-stretch-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-16 col-md-offset-4 col-md-8">
+                    <p class="extra-bottom-lg text-center">If you are an existing EverCharge customer, login below to access account, charging, and billing information.</p>
+                    <form id='login' action="" method='post' class="validate-form">
+                        <fieldset>
+                            <div class="form-group login-page">
+                                <input type="email" placeholder="Email Address" name="email" class="form-control">
+                            </div>
+                            <div class="form-group login-page">
+                                <input type="password" placeholder="Password" name="password" class="form-control">
+                            </div>
 
-				<div class="form-group login-page">
-					<input type="email" placeholder="Email Address" name="email" class="form-control">
-				</div>
-				<div class="form-group login-page">
-					<input type="password" placeholder="Password" name="password" class="form-control">
-				</div>
+                            {% if error %}
+                                <div id="login_error">
+                                    <p class="error"><strong>Error:</strong> {{ error }}</p>
+                                </div>
+                            {% endif %}
 
-				{% if error %}
-				<div id="login_error">
-		            <p class="text-center error"><strong>Error:</strong> {{ error }}</p>
-				</div>
-				{% endif %}
-
-					<div class="btn-wrapper">
-						<input id="final_submit_button" type="submit" class="ec-button-teal" value="LOGIN">
-					</div>
-			</fieldset>
-			<br><br><br>
-	</div>
-</div>
-	{% endblock %}
+                            <input id="final_submit_button" type="submit" class="ec-button-teal block extra-bottom-lg" value="Log In">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

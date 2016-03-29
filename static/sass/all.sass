@@ -172,6 +172,10 @@ p
 .bitter
     font-family: $ec-font-bitter
     font-style: italic
+.error
+    color: $ec-red
+    font-size: 14px
+    margin-top: 5px
 .ec-teal
     color: $ec-teal
 .text-center
@@ -212,14 +216,34 @@ p.black
         background: url(../images/building-12.jpg) fixed no-repeat
         background-size: 100%
         height: 400px
-    &.img-properties
-        background: url(../images/building-2.jpg) fixed no-repeat
+    &.img-error
+        background: url(../images/parking-4.jpg) fixed no-repeat
         background-size: 100%
-        height: 300px
+        height: 600px
     &.img-partnership
         background: url(../images/building-1.jpg) fixed no-repeat
         background-size: 100%
         height: 500px
+    &.img-properties
+        background: url(../images/building-2.jpg) fixed no-repeat
+        background-size: 100%
+        height: 300px
+    &.img-press
+        background: url(../images/building-9.jpg) fixed no-repeat
+        background-size: 100%
+        height: 400px
+    &.img-smartpower
+        background: url(../images/parking-3.jpg) fixed no-repeat
+        background-size: 100%
+        height: 400px
+    &.img-thankyou
+        background: url(../images/parking-1.jpg) fixed no-repeat
+        background-size: 100%
+        height: 400px
+    &.img-wattson
+        background: url(../images/building-wall.jpg) fixed no-repeat
+        background-size: 100%
+        height: 400px
     &.img-why-ec
         background: url(../images/parking-2.jpg) fixed no-repeat
         background-size: 100%
@@ -454,8 +478,6 @@ p.ec-p
         top: 0
         img
             width: 100%
-.ec-home-banner + .banner
-    display: none
 .ec-home-banner-text
     margin-top: 200px
     h1, h4
@@ -511,8 +533,6 @@ p.ec-p
         margin-top: -340px
         position: absolute
         z-index: 3
-.ec-wattson-banner + .banner
-    display: none
 .ec-wattson-does-wrap
     position: absolute
     top: -200px
@@ -591,16 +611,6 @@ p.ec-p
     width: 110px
     i 
         color: white
-
-// page: 404
-img.img-error
-    opacity: 0.4
-.ec-404 
-    margin-left: 20px
-    margin-right: 20px
-    margin-top: 140px
-    h1 
-        font-size: 60px
 
 //////////////////////
 // RESPONSIVE
