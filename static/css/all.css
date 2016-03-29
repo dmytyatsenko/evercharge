@@ -771,18 +771,6 @@ div.color_circle { /*color palette circle*/
 	width: 100px;
 }
 
-.color_circle.ec-teal {
-	background-color: #00A499; /*evercharge teal*/
-}
-
-.color_circle.ec-dk-gray {
-	background-color: #333333;
-}
-
-.color_circle.ec-lt-gray {
-	background-color: #EDEDED;
-}
-
 .jumbotron .palette p {
 	color: #333333;
 	line-height: normal;
