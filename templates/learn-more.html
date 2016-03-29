@@ -1,16 +1,12 @@
 {% extends 'layout/base.html' %}
 
-{% block background %}
-	<img src="images/parking-2.jpg" alt="image description" width="1200" height="560">
+{% block banner_class %}
+    class="parallax img-why-ec" data-speed="4" data-type="background"
 {% endblock %}
 
-{% block maincontent %}
-	<div class="container ec-why-maincontent">
-		<div class="row">
-			<h1>Why EverCharge</h1>
-			<h2 class="bitter">EverCharge combines unmatched technology, industry leading expertise, and unparallel cost savings for apartments and condominiums.</h2>
-		</div>
-	</div>
+{% block banner_text %}
+    <h1 class="white">Why EverCharge</h1>
+    <h3 class="white bitter">EverCharge combines unmatched technology, industry leading expertise, and unparallel cost savings for apartments and condominiums.</h3>
 {% endblock %}
 
 {% block video %}
