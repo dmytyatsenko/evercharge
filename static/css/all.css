@@ -44,7 +44,6 @@ input[type=image]{padding:0;border:none;}
 /* header styles */
 .add #header{padding: 16px 0 85px;}
 
-.get-quote input[type="submit"]:hover{background: #00594F;}
 /* main informative part styles */
 
 /* get quote form styles */
@@ -805,7 +804,6 @@ p.label_form {
 @media only screen and (max-width: 1040px){
 	.social-networks{width: auto;}
 	.social-networks li + li{margin-left: 8px;}
-	.get-quote fieldset{padding: 64px 34px 57px;}
 }
 /* styles for screens 320px wide and narrower */
 @media only screen and (max-width: 767px){
@@ -871,9 +869,6 @@ p.label_form {
 		background-position: -178px -376px;
 		top: 6px;
 		right: 16px;
-	}
-	form fieldset{
-		padding: 38px 2px 25px;
 	}
 	form .col,
 	form .col:first-child{
