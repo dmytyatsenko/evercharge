@@ -21,6 +21,37 @@ $ec-letter-space: -0.5px
 //////////////////////
 // COMPONENTS
 // bootstrap overrides
+input[type=email],
+input[type=search],
+input[type=text],
+input[type=password],
+input[type=file],
+textarea
+    -webkit-appearance:none
+    border-radius: 0
+    @extend .form-control
+
+.form-control
+    background: white
+    border: 1px solid $ec-md-grey
+    border-radius: 0px
+    font-size: 13px
+    height: 47px
+    width: 100%
+    &::-webkit-input-placeholder
+        color: $ec-md-grey
+    &:-moz-placeholder
+        color: $ec-md-grey
+    &::-moz-placeholder
+        color: $ec-md-grey
+    &:-ms-input-placeholder
+        color: $ec-md-grey
+    &:focus
+        background: white
+        border-color: black
+    &:hover
+        background: white
+        border-color: black
 
 
 // text links
@@ -195,6 +226,10 @@ p.black
     color: black
     line-height: 1.4em
     margin-bottom: 10px
+.extra-bottom-sm
+    margin-bottom: 20px
+.extra-bottom-md
+    margin-bottom: 40px
 .extra-bottom-lg
     margin-bottom: 60px
 
@@ -359,17 +394,6 @@ fieldset.ec-fieldset
         font-weight: $ec-font-w-body
         margin-bottom: 0
         margin-left: 10px
-    p
-        line-height: 1.1em
-    .form-control:hover
-        background: RGBA(0,164,153,0.2)
-        border-color: black
-    .form-control:focus
-        background: white
-        border-color: black
-p.ec-p 
-    line-height: 1.2em
-
 
 // page: partnership
 .ec-schneider-partner
@@ -522,6 +546,11 @@ p.ec-p
             color: white
         h4
             color: RGBA(255,255,255,0.7)
+.ec-mini-quote-form 
+    .ec-button-teal-border 
+        line-height: 1em
+        margin-top: 0
+
 
 // page: wattson
 .ec-wattson-banner

@@ -27,18 +27,8 @@ html, body {
     overflow-x: hidden;
 }
 
-img{vertical-align: top; border:none; height: auto;}
 input[type=image]{padding:0;border:none;}
-input[type=email],
-input[type=search],
-input[type=text],
-input[type=password],
-input[type=file],
-input[type=submit],
-textarea{
-	-webkit-appearance:none;
-	border-radius: 0;
-}
+
 
 
 /* ---------------------------------------------------------
@@ -106,16 +96,8 @@ form li{
 	margin-bottom: 15px;
 }
 
- .form-control{
- 	background: white;
-	float: left;
-	width: 100%;
-	height: 47px;
-	line-height: 31px;
-	border-radius: 0 3px 3px 0;
-	border: 1px solid #B5B7B9;
-	font-size: 13px;
-} .error .form-control{
+
+.error .form-control{
 	border-color: RGBA(247, 112, 91, 1);
 	background: RGBA(247, 112, 91, 1);
 	opacity: 0.6;
@@ -662,31 +644,6 @@ article.no_padding {
 	/*display: none;*/
 }
 
-.ec-index-quote-form {
-	font-weight: 400;
-	padding-bottom: 30px;
-	padding-top: 20px;
-}
-
-.ec-index-quote-form .ec-button-teal-border {
-	line-height: 1em;
-	margin-top: 0;
-}
-
-.ec-index-quote-form .form-control:hover {
-  background: RGBA(0,164,153,0.2);
-  border-color: black;
-}
-
-.ec-index-quote-form .form-control:focus {
-  background: white;
-  border-color: black;
-}
-
-.ec-index-quote-form .form-group {
-	margin-bottom: 0;
-}
-
 .onesidedropshadow {
 	-webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
@@ -857,10 +814,6 @@ p.label_form {
 	}
 
 	.col-xs-16 {
-		margin-bottom: 16px;
-	}
-
-	.ec-index-quote-form .col-xs-16 {
 		margin-bottom: 16px;
 	}
 
