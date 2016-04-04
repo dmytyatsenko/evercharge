@@ -1,9 +1,9 @@
 
 
 // parkingOptions.addEventListener('click', radioSubmit('parking_type', 'parking_spot_form'), false);
-var formHeading = document.getElementById("form_heading")
-var formContent = document.getElementById("primary_form_content")
-var thankYouHeader = document.getElementById("thankyouHeader")
+var formHeading = document.getElementById("form_heading");
+var formContent = document.getElementById("primary_form_content");
+var thankYouHeader = document.getElementById("thankyouHeader");
 
 var parkingOptions = document.getElementById('parking_listener');
 var numberSpotsListener = document.getElementById('number_spots_listener');
@@ -12,26 +12,26 @@ var deliveryOptions = document.getElementById('delivery_listener');
 var ownerListener = document.getElementById('delivery_listener');
 var customerListener = document.getElementById('customer_listener');
 
-var phoneForm = document.getElementById("phone_number_form")
+var phoneForm = document.getElementById("phone_number_form");
 var existingForm = document.getElementById("existing_customer_form");
 var parkingForm = document.getElementById("parking_spot_form");
 
 var submitButton = document.getElementById("final_submit_button");
 
 var parkingRadios = document.getElementsByName("parking_type");
-var referenceRadios = document.getElementsByName("reference")
+var referenceRadios = document.getElementsByName("reference");
 
 
 function radioFormSubmit (radio_list, form) {
-	for (var i=0, i < radio_list.length, i++) {
+	for (var i=0; i < radio_list.length; i++) {
 		if (radio_list[i].checked) {
 			form.submit();
 		}
 	}
-};
+}
 
 
-teslaOptions.addEventListener('click', radioFormSubmit(, false);
+teslaOptions.addEventListener('click', radioFormSubmit([], false));
 
 
 
@@ -58,7 +58,7 @@ function parkingSubmit()
 			parkingForm.submit();
 		}
 	}
-};
+}
 // NUMBER OF SPOTS AUTOSUBMIT
 numberSpotsListener.addEventListener('click', numberSpotsSubmit, false);
 
@@ -84,7 +84,7 @@ function teslaCheck()
 		document.getElementById('tesla_div').style.display = 'block';
 	}
 	else document.getElementById('tesla_div').style.display = 'none';
-};
+}
 
 function referenceSubmit()
 {
@@ -96,7 +96,7 @@ function referenceSubmit()
 			document.getElementById("reference_form").submit();
 		}
 	}
-};
+}
 
 function teslaContactSubmit()
 	{
@@ -108,18 +108,18 @@ parkingOptions.addEventListener('click', parkingCheck, false);
 
 function parkingCheck()
 {
-	if (document.getElementById('assignedparking').checked)
+	if (document.getElementById('assigned_parking').checked)
 	{
 		document.getElementById('parking_spot_div').style.display = 'block';
 	}
 	else document.getElementById('parking_spot_div').style.display = 'none';
-};
+}
 
 function parkingSpotNumberSubmit()
 {
 	document.getElementById("spot_number_form").submit();
 	var spotNumber = document.getElementById("parking_spot_number_input");
-};
+}
 // DELIVERY DATE
 deliveryOptions.addEventListener('click', deliveryCheck);
 
@@ -130,12 +130,12 @@ function deliveryCheck()
 		document.getElementById('delivery_date_div').style.display = 'block';
 	}
 	else document.getElementById('delivery_date_div').style.display = 'none';
-};
+}
 
 function deliveryDateSubmit()
 {
 	document.getElementById("delivery_date_form").submit();
-};
+}
 
 function dailyCommuteSubmit()
 	{
@@ -155,7 +155,7 @@ function evOwnerSubmit()
 			document.getElementById("ev_owner_form").submit();
 		}
 	}
-};
+}
 // BUILDING EXISTING CUSTOMER AUTOSUBMIT
 customerListener.addEventListener('click', customerSubmit, false);
 
@@ -170,7 +170,7 @@ function customerSubmit()
 			console.log("submitted building customer info!");
 		}
 	}
-};
+}
 
 // PHONE NUMBER
 function phoneSubmit()
