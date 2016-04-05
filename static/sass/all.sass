@@ -16,6 +16,7 @@ $ec-font-work-sans: 'Work Sans', Arial, sans-serif
 $ec-font-s-body: 16px
 $ec-font-w-body: 400
 $ec-letter-space: -0.5px
+$ec-text-shadow: 2px 2px 7px RGBA(0,0,0,0.8)
 //////////////////////
 
 //////////////////////
@@ -62,6 +63,9 @@ a
         color: $ec-teal
         text-decoration: none
     &:active,
+    &:focus
+        color: $ec-teal
+        text-decoration: none
     &:hover
         color: $ec-dk-teal
         text-decoration: underline
@@ -183,6 +187,7 @@ h3
     font-size: 1.2em
     font-weight: 400
     letter-spacing: -0.2px
+    line-height: 1.3em
     margin-bottom: 16px
     margin-top: 0
 h4.ec-caps
@@ -205,6 +210,7 @@ p
 .bitter
     font-family: $ec-font-bitter
     font-style: italic
+    font-weight: 400
 .error
     color: $ec-red
     font-size: 14px
@@ -213,6 +219,10 @@ p
     color: $ec-teal
 .text-center
     text-align: center
+.text-right
+    text-align: right
+.text-shadow
+    text-shadow: $ec-text-shadow
 .white
     color: white
 .ec-zero
@@ -248,6 +258,7 @@ p.black
     padding: 75px 0
     position: relative
     text-align: center
+    text-shadow: $ec-text-shadow
     width: 100%
     &.img-about-us
         background: url(../images/building-12.jpg) fixed no-repeat
@@ -268,7 +279,7 @@ p.black
     &.img-press
         background: url(../images/building-9.jpg) fixed no-repeat
         background-size: 100%
-        height: 400px
+        height: 300px
     &.img-smartpower
         background: url(../images/parking-3.jpg) fixed no-repeat
         background-size: 100%
@@ -283,8 +294,9 @@ p.black
         height: 400px
     &.img-why-ec
         background: url(../images/parking-2.jpg) fixed no-repeat
+        background-position-y: -100px
         background-size: 100%
-        height: 300px
+        height: 340px
 //////////////////////
 
 //////////////////////
@@ -308,6 +320,7 @@ nav
             font-weight: 400
             text-shadow: none
             &:active,
+            &:focus,
             &:hover
                 background: RGBA(255,255,255,0.15)
                 color: white
@@ -315,6 +328,7 @@ nav
             background: $ec-teal
             color: white
             &:active,
+            &:focus,
             &:hover
                 background: RGBA(255,255,255,0.15)
                 color: white
@@ -324,11 +338,9 @@ nav
             border-radius: 0
             margin: 0
             padding: 17px
-    .dropdown-menu>.active>a, 
-    .dropdown-menu>.active>a:focus, 
-    .dropdown-menu>.active>a:hover
-        background: $ec-lt-grey
-        color: inherit   
+        i.fa-phone
+            margin-right: 8px
+            opacity: 0.6
 
 //footer
 footer#footer
@@ -426,6 +438,9 @@ fieldset.ec-fieldset
         color: white
         letter-spacing: 0px
         text-transform: none
+.ec-stretch-grey.ec-why-wrap
+    padding-bottom: 0
+    padding-top: 0
 .ec-why-wrap
     .nav-tabs
         border: none
@@ -459,32 +474,11 @@ fieldset.ec-fieldset
         h4, p
             color: black
     .tab-content
-        border-bottom: 1px solid #58595B
-        border-left: 1px solid #58595B
-        border-right: 1px solid #58595B
-        margin-bottom: 60px
+        margin-bottom: 20px
         margin-top: 2px
-        padding: 0 20px 40px 20px
-        h3.bitter
-            text-transform: none
+        padding: 40px 20px
         h4 + p
-            margin-bottom: 30px
-.ec-why-wattson-img
-    display: inline-block
-    height: 500px
-    width: auto
-.ec-why-wattson-wrap
-    text-align: center
-.ec-why-wattson-text
-    background: $ec-teal
-    display: inline-block
-    height: 500px
-    padding: 30px
-    width: 440px
-    h2
-        color: RGBA(255,255,255,0.7)
-    p, a
-        color: white
+            margin-bottom: 20px
 
 // page: home
 .ec-home-banner
@@ -616,19 +610,14 @@ fieldset.ec-fieldset
 
 // page: faqs
 .ec-faq-q
-    background: $ec-lt-teal-60
-    border: 1px solid $ec-md-grey
     display: block
     margin-top: 10px
     width: 100%
-    &:hover
-        background: $ec-lt-teal
 .ec-faq-a
-    border: 1px solid $ec-md-grey
-    border-top: 0px
+    border-bottom: 1px dotted $ec-teal
+    padding: 10px 0 15px 0
 .ec-faq-q,
 .ec-faq-a
-    padding: 10px
     p:last-child
         margin-bottom: 0
 
@@ -649,15 +638,7 @@ fieldset.ec-fieldset
 @media only screen and (max-width: 992px)
     .ec-why-wrap .tab-pane 
         img
-            height: 250px
-            margin: 0 auto
-    .ec-why-wattson-text
-        height: auto
-        padding-bottom: 50px
-        width: 40%
-    .ec-why-wattson-img
-        height: auto
-        width: 40%
+            margin-bottom: 10px
     .ec-wattson-banner
         height: 300px
     .ec-wattson-does-wrap
@@ -670,24 +651,19 @@ fieldset.ec-fieldset
     .ec-featured-prop
         img
             margin-bottom: 15px
-    .ec-why-wattson-text
-        width: 100%
-    .ec-why-wattson-img
-        height: auto
-        width: 100%
-    .ec-why-wrap .tab-pane 
-        img
-            height: auto
+    .ec-why-wrap
+        .tab-content
+            margin-bottom: 0
     .ec-why-tab-xs
-        background: #E6E6E7
+        background: $ec-lt-grey
+        margin-bottom: 20px
         margin-left: -10px
         margin-right: -10px
-        padding: 10px
+        margin-top: 10px
+        padding: 14px 10px 1px 10px
         text-align: center
         h4 
             margin-bottom: 5px
-    .ec-why-wrap .tab-content h4+p
-        margin-bottom: 8px
     .tab-pane
         display: block !important
     .ec-featured-prop
@@ -757,6 +733,41 @@ fieldset.ec-fieldset
             width: 100%
     .ec-home-quote
         padding: 20px
+
+    .parallax
+        margin: 0
+        padding: 75px 0
+        position: relative
+        .ec-banner-text
+            width: 90%
+        &.img-about-us
+            background-size: auto 300px
+            height: 300px
+        &.img-error
+            background-size: 100%
+            height: 600px
+        &.img-partnership
+            background-size: 100%
+            height: 500px
+        &.img-properties
+            background-size: auto 400px
+            height: 300px
+        &.img-press
+            background-size: auto 400px
+            height: 300px
+        &.img-smartpower
+            background-size: auto 500px
+            height: 500px
+        &.img-thankyou
+            background-size: 100%
+            height: 400px
+        &.img-wattson
+            background-size: 100%
+            height: 400px
+        &.img-why-ec
+            background-position-y: inherit
+            background-size: auto 500px
+            height: 500px
 
     .ec-404 
         margin-top: 100px
