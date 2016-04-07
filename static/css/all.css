@@ -18,7 +18,7 @@ body{
 	font-weight: 400;
 	-webkit-text-size-adjust:100%;
     -ms-text-size-adjust: none;
-    margin-bottom: 202px;
+    margin-bottom: 220px;
     min-width: 320px;
 }
 
@@ -28,8 +28,6 @@ html, body {
 }
 
 input[type=image]{padding:0;border:none;}
-
-
 
 /* ---------------------------------------------------------
 	2. Common site styles
@@ -387,28 +385,6 @@ button.flat_button {
 	margin: 10px;
 }
 
-
-button.case_study {
-	margin-bottom: 10px;
-	background-color: #00594F;
-}
-
-button.normalize_case {
-	text-transform: none;
-}
-
-button.scroll-down {
-	margin: 15px;
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	z-index: 100;
-	display: none;
-	text-decoration: none;
-	padding: 20px;
-	box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
-	}
-
 iframe {
 	border: none;
 	height: 650px;
@@ -438,64 +414,6 @@ article.options:hover {
 }
 
 
-.process_photos {
-	height: 470px;
-	background-size: cover;
-	margin-bottom: 0;
-	padding: 0;
-	background-position: center;
-}
-
-#step_one_image {
-	background-image: url(../images/meeting_hoa.jpg);
-}
-#step_two_image {
-	background-image: url(../images/evaluation.jpg);
-}
-
-#step_three_image {
-	background-image: url(../images/approval.jpg);
-}
-
-#step_four_image {
-	/*background: url(../images/installation.jpg);*/
-	background-image: url(../images/installation.jpg);
-}
-
-/*How it works photos*/
-
-#how_it_works_one {
-	background-image: url(../images/circuit_breaker.jpg)
-}
-
-#how_it_works_two {
-	background-image: url(../images/up_garage.jpg)
-}
-
-#how_it_works_three {
-	background-image: url(../images/meters.jpg)
-}
-
-#how_it_works_four {
-	background-image: url(../images/coins.jpg)
-}
-
-/*about us photos*/
-
-#about_us_one {
-	background-image: url(../images/red_car.jpg);
-	background-position: bottom;
-	height: 600px;
-}
-
-#about_us_two {
-	background-image: url(../images/black_car.jpg);
-	filter: contrast(115%) sepia(35%) opacity(90%);
-	-webkit-filter: contrast(115%) sepia(35%) opacity(90%);
-	height: 200px;
-}
-
-
 
 .narrow {
 	padding: 60px 0;
@@ -510,10 +428,6 @@ h4.extra_padded {
 	background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/garage_large.jpg) 50% 0 fixed; 
 
 }*/
-
-h2.smart_power, h1.smart_power, h2.press, h1 > span.smart_power {
-	text-transform: none;
-}
 
 h2.press {
 	margin-bottom: 35px;
@@ -596,15 +510,6 @@ img.distinguishing {
 	border-radius: 50%;
 }
 
-h2.diff_title {
-	font-weight: 200;
-	text-transform: uppercase;
-}
-
-h2.smart_power, h1.smart_power {
-	text-transform: none;
-}
-
 p.diff_text {
 	color: #ffffff;
 	font-size: 2rem;
@@ -613,34 +518,8 @@ p.diff_text {
 	padding-right: 15%;
 }
 
-article.no_padding {
-	margin-bottom: 0;
-}
-
 .indented {
 	padding-left: 4em;
-}
-
-
-.back-to-top,{
-	background: none;
-	margin: 0;
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	width: 100px;
-	height: 100px;
-	z-index: 100;
-	display: none;
-	text-decoration: none;
-	color: RGBA(20, 171, 88, 1);
-}
-
-
-
-.back-to-top i {
-	font-size: 80px;
-	/*display: none;*/
 }
 
 .onesidedropshadow {
@@ -660,11 +539,6 @@ h2.lower_header {
 	text-transform: none;
 }
 
- #map-canvas {
-        height: 500px;
-        margin: 0px;
-        padding: 0px
-    }
 
  .step_title {
  	color: RGBA(60, 61, 57, 1);
@@ -808,23 +682,13 @@ p.label_form {
 /* styles for screens 320px wide and narrower */
 @media only screen and (max-width: 767px){
 	body { /*for sticky-footer*/
-		margin-bottom: 560px;
+		margin-bottom: 595px;
 	}
 
 	.col-xs-16 {
 		margin-bottom: 16px;
 	}
 
-	img.small_on_mobile {
-		max-width: 75px;
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-	button.scroll-down {
-		width: 100%;
-		margin: 0;
-		
-	}
 	button.homeNav {
 		margin-bottom: 10px;
 	}
