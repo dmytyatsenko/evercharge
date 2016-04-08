@@ -518,7 +518,7 @@ fieldset.ec-fieldset
 .ec-home-properties
     margin-top: -20px
     padding-bottom: 60px
-    padding-top: 80px
+    padding-top: 60px
     position: relative
     img 
         top: 100px
@@ -527,7 +527,7 @@ fieldset.ec-fieldset
         left: 12px
         padding: 180px 30px
         position: absolute
-        top: 0
+        top: -20px
         width: 320px
         h5
             color: white
@@ -655,6 +655,18 @@ fieldset.ec-fieldset
 
 //////////////////////
 // RESPONSIVE
+//xl
+@media only screen and (min-width: 1800px)
+    .ec-home-banner
+        height: 880px
+        .ec-home-stretch
+            top: -240px
+// lg
+@media only screen and (min-width: 1400px) and (max-width: 1799px)
+    .ec-home-banner
+        height: 680px
+        .ec-home-stretch
+            top: -10px
 // sm
 @media only screen and (max-width: 992px)
     .ec-why-wrap .tab-pane 
@@ -736,6 +748,7 @@ fieldset.ec-fieldset
             background: $ec-teal
             margin-top: 0
             padding-bottom: 20px
+            padding-top: 20px
             h1
                 font-size: 40px
             h4
