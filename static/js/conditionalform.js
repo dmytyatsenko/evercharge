@@ -5,7 +5,7 @@ function replaceForm()
 {
 	document.getElementById("form_heading").innerHTML = "Thank you!";
 	document.getElementById("primary_form_content").innerHTML =
-		"<p style='text-align:center; font-size: 1.25em;'>The additional information you provided will help us expedite your quote.</p><p style='text-align:center; font-size: 1.25em;'>You're even closer to EV charging. An EverCharge expert will reach out soon. <br><br><span style='font-size:1.25em'>Want to talk to someone now? <strong>Give us a call, 888.342.7383</strong></span>.";
+		"<center><p>The additional information you provided will help us expedite your quote.</p><p>You're even closer to EV charging. An EverCharge expert will reach out soon.</p><p>Want to talk to someone now? <strong>Give us a call, 888.342.7383</strong>.</p></center>";
 	document.getElementById("thankyouHeader").innerHTML = "";
 
 }
