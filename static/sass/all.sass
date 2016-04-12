@@ -22,6 +22,9 @@ $ec-text-shadow: 2px 2px 7px RGBA(0,0,0,0.8)
 //////////////////////
 // COMPONENTS
 // bootstrap overrides
+body
+    font-family: $ec-font-work-sans
+
 input[type=email],
 input[type=search],
 input[type=text],
@@ -82,10 +85,15 @@ a, button, input
         margin-top: 14px
         min-height: 40px
         padding: 15px 30px
+        text-align: center
         text-transform: uppercase
         &:hover 
             background: RGBA(0,164,153,0.1)
             text-decoration: none
+    &.ec-button-white-border
+        @extend .ec-button-teal-border
+        border-color: white
+        color: white 
 a.ec-text-link
     color: $ec-teal
     font-size: 14px
@@ -446,6 +454,7 @@ fieldset.ec-fieldset
         letter-spacing: 0px
         text-transform: none
 .ec-stretch-grey.ec-why-wrap
+    border-bottom: 1px solid $ec-lt-grey
     padding-bottom: 0
     padding-top: 0
 .ec-why-wrap
@@ -483,7 +492,7 @@ fieldset.ec-fieldset
     .tab-content
         margin-bottom: 20px
         margin-top: 2px
-        padding: 40px 20px
+        padding: 40px 20px 0 20px
         h4 + p
             margin-bottom: 20px
 
@@ -682,12 +691,18 @@ fieldset.ec-fieldset
         &.img-error
             background-size: auto 700px
             height: 400px
+        &.img-why-ec
+            background-position-y: inherit
+            background-size: auto 600px
 
 // xs
 @media only screen and (max-width: 767px)
     .container
         padding-left: 16px
         padding-right: 16px
+    .col-xs-12
+        margin-bottom: 12px
+
     .ec-featured-prop
         img
             margin-bottom: 15px
@@ -704,6 +719,8 @@ fieldset.ec-fieldset
         text-align: center
         h4 
             margin-bottom: 5px
+    .ec-why-wrap .tab-content
+        padding-top: 0
     .tab-pane
         display: block !important
     .ec-featured-prop

@@ -31,16 +31,16 @@
 
         <div class="container ec-thankyou">
             <div class="row">
-                <div class="col-xs-16 col-sm-6">
+                <div class="col-xs-12 col-sm-6 col-md-4">
                     <h1 class="ec-teal">Thank You</h1>
                     <p class="bitter">We'll be in touch shortly.</p>
                 </div>
-                <div class="col-xs-16 col-sm-10 ec-box-lt-gray">
+                <div class="col-xs-12 col-sm-6 col-md-8 ec-box-lt-gray">
                     <div class="row">
-                        <div class="col-xs-16 col-sm-5 col-md-4">
+                        <div class="col-xs-12 col-sm-4 col-md-offset-2 col-md-2 hidden-xs">
                             <img src="{{ url_for('static', filename='images/evercharge-circle-badge-dk-green.png') }}" class="pull-left" style="height:100px; width:100px; margin-right: 16px" />
                         </div>
-                        <div class="col-xs-16 col-sm-11">
+                        <div class="col-xs-12 col-sm-8">
                             <p><strong>YOU’VE BEEN ASSIGNED...</strong></p>
                             <p>Team Member: CJ</p>
                             <p>Email: cj@evercharge.net</p>
@@ -94,7 +94,7 @@
     			<input name='contact_id' type='hidden' value='{{ contactId }}'>
     			
     			<div class="row">
-    				<div class="col-md-offset-2 col-md-12">
+    				<div class="col-md-offset-2 col-md-8">
     					<legend id='thankyou'>
     						<h2 class="ec-teal" id="form_heading">More About You</h2>
     					</legend>
@@ -104,7 +104,10 @@
     			<fieldset id='primary_form_content' class="ec-fieldset">
     				<form id='blank' name='blank'></form>
     				<div class="row">
-    					<div class="col-md-offset-2 col-md-8">
+                        <div class="col-md-offset-2 col-md-push-5 col-md-3">
+                            <p><em>This helps us understand what installation options will be best suited for your property.</em></p>
+                        </div>
+    					<div class="col-md-5 col-md-pull-3">
                             <!-- Parking Spot Type -->
     						<form action="{{ url_for('parking_spot_type') }}" class='validate-form'
                                   id='parking_spot_form' method='post' name='parking_spot_form'
@@ -131,17 +134,17 @@
     					    </div>
     						</form>
     					</div>
-    					<div class="col-md-4">
-    						<p class="ec-p">This helps us understand what installation options will be best suited for your property.</p>
-    					</div>
     				</div><!-- end question 1 row -->
 
     				<div class="row">
-    					<div class="col-md-offset-2 col-md-12">
+    					<div class="col-md-offset-2 col-md-8">
     						<hr class="ec-hr-extra" />
     					</div>
     					<div class="clearfix"></div>
-    					<div class="col-md-offset-2 col-md-8">
+                        <div class="col-md-offset-2 col-md-push-5 col-md-3">
+                            <p><em>Buildings of different sizes have different electrical infrastructure requirements.</em></p>
+                        </div>
+    					<div class="col-md-5 col-md-pull-3">
                             <!-- Number of Parking Spots -->
     						<form action="{{ url_for('approximate_number_spots') }}" class='validate-form'
                                   id='number_spots_form' method='post' name='number_spots_form'
@@ -173,17 +176,14 @@
     					    </div>
     						</form>
     					</div>
-    					<div class="col-md-4">
-    						<p>Buildings of different sizes have different electrical infrastructure requirements.</p>
-    					</div>
     				</div><!-- end question 2 row -->
 
     				<div class="row">
-    					<div class="col-md-offset-2 col-md-12">
+    					<div class="col-md-offset-2 col-md-8">
     						<hr class="ec-hr-extra" />
     					</div>
     					<div class="clearfix"></div>
-    					<div class="col-md-offset-2 col-md-8">
+    					<div class="col-md-offset-2 col-md-5">
                             <!-- Referred Customer -->
     						<form action="{{ url_for('referred_customer') }}" class=' validate-form' id='reference_form'
     						method='post' name='reference_form' target='submit_frame'>
@@ -235,22 +235,22 @@
                                 <input name='lead_id' type='hidden' value='{{ newLeadId }}'>
 
                                 <div class='form-group' id="auto_dealer_contact_div" style="display: none">
+                                    <br />
                                     <p>Who from Auto Dealer referred you?</p>
                                     <input class="form-control" id="auto_dealer_contact" name="auto_dealer_contact"
                                            onchange="autoDealerContactSubmit()"
                                            placeholder="Name of Auto Dealer Referral Contact" type='text'>
                                 </div>
                             </form>
-
     					</div>
     				</div><!-- end question 3 row -->
 
     				<div class="row">
-    					<div class="col-md-offset-2 col-md-12">
+    					<div class="col-md-offset-2 col-md-8">
     						<hr class="ec-hr-extra" />
     					</div>
     					<div class="clearfix"></div>
-    					<div class="col-md-offset-2 col-md-6 col-sm-8 col-xs-16">
+    					<div class="col-xs-12 col-sm-8 col-md-offset-2 col-md-6">
     						<input id='final_submit_button' type='submit' value='Submit' class="ec-button-teal">
     					</div>
     				</div>
