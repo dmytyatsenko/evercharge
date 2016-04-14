@@ -186,7 +186,7 @@ img.border
 // type
 h1
     font-family: $ec-font-work-sans
-    font-size: 3em
+    font-size: 3.3em
     font-weight: 400
     letter-spacing: -1px
     margin-bottom: 20px
@@ -238,7 +238,7 @@ p
 .text-shadow
     text-shadow: $ec-text-shadow
 .white
-    color: white
+    color: white !important
 .ec-zero
     margin: 0
 
@@ -356,7 +356,7 @@ nav
             margin-right: 8px
             opacity: 0.6
 
-//footer
+// footer
 footer#footer
     background: $ec-dk-dk-grey
     bottom: 0
@@ -497,68 +497,34 @@ fieldset.ec-fieldset
             margin-bottom: 20px
 
 // page: home
-.ec-home-banner
-    height: 640px
-    margin-top: 0
-    width: 100%
-    z-index: 1
-    .ec-home-stretch
-        bottom: 0
-        z-index: -1
-        left: 0
-        position: absolute
-        right: 0
-        top: 0
-        img
-            width: 100%
-.ec-home-banner-text
-    margin-top: 200px
-    h1, h4
-        color: white
-        text-shadow: 2px 2px 7px RGBA(0,0,0,0.5)
-    h1.xl
-        font-size: 52px
-        letter-spacing: -1px
-        margin-bottom: 30px
-    a.ec-button-teal
-        display: inline-block
-        padding-left: 80px
-        padding-right: 80px
+.ec-home-splash-wrap
+    background: $ec-teal
+    margin-top: 50px
+.ec-home-splash
+    background: url(../images/EverCharge-Wattson-Schneider.jpg) no-repeat
+    background-position: left center
+    background-size: auto 800px
+    height: 680px
+    padding: 0
+.ec-home-splash-text
+    padding: 100px 60px 20px 30px
 .ec-home-properties
-    margin-top: -20px
+    background: url(../images/building-4.jpg) no-repeat
+    background-position: bottom center
+    background-size: 100%
+    height: 300px
     padding-bottom: 60px
     padding-top: 60px
     position: relative
-    img 
-        top: 100px
-    .ec-dk-banner
-        background: $ec-dk-teal
-        left: 12px
-        padding: 180px 30px
-        position: absolute
-        top: -20px
-        width: 320px
-        h5
-            color: white
-        a.ec-text-link
-            color: white
-.ec-home-quote
-    background: RGBA(0,164,153,0.3)
-    padding: 120px 0
-    text-align: center
 .ec-home-charging-experts
-    .ec-home-why
-        padding: 20px
-        text-align: center
-        p
-            color: white
-        h4
-            color: RGBA(255,255,255,0.7)
+    background: url(../images/building-6.jpg) no-repeat
+    background-size: 100%
+    h4 
+        margin-top: 40px
 .ec-mini-quote-form 
     .ec-button-teal-border 
         line-height: 1em
         margin-top: 0
-
 
 // page: wattson
 .ec-wattson-banner
@@ -665,19 +631,32 @@ fieldset.ec-fieldset
 //////////////////////
 // RESPONSIVE
 //xl
-@media only screen and (min-width: 1800px)
-    .ec-home-banner
-        height: 880px
-        .ec-home-stretch
-            top: -240px
+@media only screen and (min-width: 1600px)
+    .ec-home-splash
+        background-size: auto 1200px
+        height: 800px
+    .ec-home-splash-text
+        padding: 140px 80px 20px 30px
+
 // lg
 @media only screen and (min-width: 1400px) and (max-width: 1799px)
-    .ec-home-banner
-        height: 680px
-        .ec-home-stretch
-            top: -10px
+    .ec-home-properties
+        background-position-y: -200px
+
 // sm
 @media only screen and (max-width: 992px)
+    .ec-home-splash
+        background-size: auto 600px
+        height: 460px
+    .ec-home-splash-text
+        padding: 60px 40px 20px 20px
+    .ec-home-charging-experts
+        h4 
+            margin-top: 20px
+    .ec-home-properties
+        background-position-y: -50px
+        background-size: 150%
+
     .ec-why-wrap .tab-pane 
         img
             margin-bottom: 10px
@@ -702,6 +681,13 @@ fieldset.ec-fieldset
         padding-right: 16px
     .col-xs-12
         margin-bottom: 12px
+
+    .ec-home-charging-experts
+        background-position: center center
+        background-size: auto 1160px
+    .ec-home-properties
+        background-position-y: -50px
+        background-size: auto 400px
 
     .ec-featured-prop
         img
@@ -750,47 +736,6 @@ fieldset.ec-fieldset
     .ec-wattson-reserve
         form fieldset
             padding: 0
-
-    .ec-home-banner
-        height: auto
-        margin-top: 0
-        overflow: hidden
-        position: relative
-        width: 100%
-        z-index: 1
-        .ec-home-stretch
-            position: relative
-            z-index: 0
-        .ec-home-banner-text
-            background: $ec-teal
-            margin-top: 0
-            padding-bottom: 20px
-            padding-top: 20px
-            h1
-                font-size: 40px
-            h4
-                font-size: 16px
-                font-weight: 400
-                margin-bottom: 5px
-    .ec-home-why
-        img
-            margin: 0 auto
-            width: 180px
-    .ec-home-properties
-        margin-bottom: 2px
-        margin-top: 2px
-        padding-bottom: 0
-        padding-top: 0
-        position: relative
-        img 
-            top: 100px
-        .ec-dk-banner
-            left: 0
-            padding: 15px 20px 30px 20px
-            position: relative
-            width: 100%
-    .ec-home-quote
-        padding: 20px
 
     .parallax
         margin: 0
