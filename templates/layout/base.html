@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html lang='EN'>
 <head>
-	
 	<!-- Start of evercharge Zendesk Widget script -->
 	<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("//assets.zendesk.com/embeddable_framework/main.js","evercharge.zendesk.com");/*]]>*/</script>
 	<!-- End of evercharge Zendesk Widget script -->
@@ -25,9 +24,8 @@
 	<link rel="icon" href="{{url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 
 	<!-- include the site stylesheet -->
-
-	<link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap.min.css') }}">
-	<link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap-theme.min.css') }}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='/css/all.min.css') }}"> -->
 	<link rel="stylesheet" href="{{ url_for('static', filename='/css/modal.min.css') }}">
@@ -70,195 +68,159 @@
 
 
 <body>
-	<!-- main container of all the page elements -->
-{% block bannersize %}
-{% endblock %}
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container-fluid">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/">
+              <img class="header_logo" alt="EverCharge" src="{{ url_for('static', filename='images/EverCharge-logo-horizontal-white.png') }}">
+	      </a>
+	    </div>
 
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href='{{ url_for('why_evercharge') }}'>Why EverCharge</a></li>
+	        <li><a href="{{ url_for('faqs') }}">FAQs</a></li>
+	        <li><a href="{{ url_for('about_us') }}">About</a></li>
+	        <li><a href='tel:8883427383'><i class="fa fa-phone"></i>888.342.7383</a></li>
+	        <li><a href="{{ url_for('customer_login') }}">Log In</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        
-        
-      </button>
-      <a class="navbar-brand" href="/">
-          <img class="header_logo" alt="EverCharge" src="{{ url_for('static', filename='images/EverCharge-logo-horizontal-white.png') }}">
-      </a>
+    {% block alt_background %}
+    {% endblock %}
+
+    <div {% block banner_class %}{% endblock %}>
+        <div class="ec-banner-text">
+            {% block banner_text %}
+            {% endblock %}
+        </div>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        
-        <li><a href='{{ url_for('why_evercharge') }}'>WHY EVERCHARGE</a></li>
-        <li><a href="{{ url_for('faqs') }}">FAQs</a></li>
-        <li><a href="{{ url_for('about_us') }}">ABOUT</a></li>
-        <li><a href='tel:8883427383'>888.342.7383</a></li>
-        <li class='pop_of_red'><a href="{{ url_for('customer_login') }}">CUSTOMER LOGIN</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-{% block alt_background %}
-{% endblock %}
-
-<div class="banner">
-	<div class="bg-stretch">
-		{% block background %}
-		{% endblock %}
-	</div>
-	<div class="container"></div>
-  <div class="row text-center">
-      {% block maincontent %}{% endblock %}
-  </div>
-</div>
-
-
-
-
 	<main id="content">
-		<!-- video -->
+        {% block content_one %}
+        {% endblock %}
 
-{% block intro %}
-{% endblock %}
+        {% block video %}
+        	<article class="ec-stretch-white" id='video'>
+        		<h2>Check out our video to learn more</h2>
+        		<div class="video-container">
+        			<iframe src="http://www.youtube.com/embed/M4t47yjCGWw?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
+        		</div>
+        	</article>
+        {% endblock %}
 
-{% block content_one %}
-{% endblock %}
-
-{% block video %}
-	<article class='whitejumbo jumbotron' id='video'>
-		<h2>Check out our video to learn more</h2>
-
-		<div class="video-container">
-			<iframe src="http://www.youtube.com/embed/M4t47yjCGWw?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-		</div>
-	</article>
-{% endblock %}
-
-{% block content_two %}
-{% endblock %}
-
-{% block content_three %}
-{% endblock %}
-
-{% block quote_form %}
-	<div class="ec-stretch-grey">
-		<div class="container">
-			<div class="row">
-				<form action="/thankyou" method='post' id="quote" class="validate-form">
-					<input name="lead_source" value="Web Signup" type="hidden">
-					<input name="adwordsField" id='adwordsField' type="hidden">
-					<input name="granularField" id="granularField" type="hidden">
-					<fieldset class="ec-fieldset">
-						<div class="col-xs-16">
-							<h2 class="ec-teal">{% block form_name %}Need More Info?{% endblock %}</h2>
-							<p>Connect with a team member by telling us a little about yourself.</p>
-							<br>
-						</div>
-						<div class="col-xs-16 col-sm-8 col-md-4">
-							<p data-href="inc/tab00.html" class="active">
-								<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1" id="customer_type_ev">
-								<label for="customer_type_ev">EV Driver</label>
-							</p>
-						</div>
-						<div class="col-xs-16 col-sm-8 col-md-4">
-							<p data-href="inc/tab01.html" class="active">
-								<input type="radio" value="Property Manager" name="customer_type" class="radio2" id="customer_type_hoa">
-								<label for="customer_type_hoa">Management</label>
-							</p>
-							<br>
-							<br>
-						</div>
-						<div class="clearfix"></div>
-						<div class="col-md-6">
-              <div class="form-group">
-						    <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
-              </div>
-						</div>
-						<div class="col-md-6">
-              <div class="form-group">
-                <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
-              </div>
-						</div>
-						<div class="col-md-4">
-              <div class="form-group">
-						    <input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="off">
-							</div>
-						</div>
-						<div class="clearfix"></div>
-						<div class="col-xs-16">
-							<textarea name="quote_notes" rows="2" class="form-control" placeholder="Additional comments" autocomplete="off"></textarea>
-						</div>
-						<div class="clearfix"></div>
-						<div class="col-xs-16 col-md-8">
-							<input type="submit" value="Get your Quote" class="ec-button-teal">
-						</div>
-					</fieldset>
-				</form>
-			</div>
-		</div>
-	</div>
-{% endblock %}
-
-{% block content_one_bottom %}
-{% endblock %}
-
+        {% block quote_form %}
+        	<div class="ec-stretch-grey">
+        		<div class="container">
+        			<div class="row">
+        				<form action="/thankyou" method='post' id="quote" class="validate-form">
+        					<input name="lead_source" value="Web Signup" type="hidden">
+        					<input name="adwordsField" id='adwordsField' type="hidden">
+        					<input name="granularField" id="granularField" type="hidden">
+        					<fieldset class="ec-fieldset">
+        						<div class="col-xs-12">
+        							<h2 class="ec-teal">{% block form_name %}Need More Info?{% endblock %}</h2>
+        							<p>Connect with a team member by telling us a little about yourself.</p>
+        						</div>
+        						<div class="col-xs-12 extra-bottom-sm">
+        							<p data-href="inc/tab00.html" class="active">
+        								<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1" id="customer_type_ev">
+        								<label for="customer_type_ev">EV Driver</label>
+        							</p>
+                                    <p data-href="inc/tab01.html" class="active">
+                                        <input type="radio" value="Property Manager" name="customer_type" class="radio2" id="customer_type_hoa">
+                                        <label for="customer_type_hoa">Management</label>
+                                    </p>
+        						</div>
+        						<div class="clearfix"></div>
+        						<div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+            						    <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
+                                    </div>
+        						</div>
+        						<div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+                                        <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
+                                    </div>
+        						</div>
+        						<div class="col-xs-12 col-md-4">
+                                    <div class="form-group">
+            						    <input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="off">
+        							</div>
+        						</div>
+        						<div class="clearfix"></div>
+        						<div class="col-xs-12">
+        							<textarea name="quote_notes" rows="2" class="form-control" placeholder="Additional comments" autocomplete="off"></textarea>
+        						</div>
+        						<div class="clearfix"></div>
+        						<div class="col-xs-12 col-md-8">
+        							<input type="submit" value="Get your Quote" class="ec-button-teal">
+        						</div>
+        					</fieldset>
+        				</form>
+        			</div>
+        		</div>
+        	</div>
+        {% endblock %}
     </main>
 
-	<!-- footer of the page -->
 	<footer id="footer">
 		<div class="container">
-			<!-- footer navigation -->
-			<div class="row features">
-			<div class="col-xs-8 col-sm-3">
-				<a href="/"><img src="{{ url_for('static', filename='images/EverCharge-logo-tag-teal-shadow.png') }}" class="img-responsive" alt="EverCharge"></a>
-			</div>
-			<div class="clearfix visible-xs"></div>
-			<div class="col-sm-offset-1 col-sm-4">
-				<h5>Navigate</h5>
-				<div class="footer-list">
-					<a href="/">Home</a>
-					<a href="{{ url_for('why_evercharge') }}">Why EverCharge</a>
-					<a href="/faqs">FAQs</a>
-					<a href="http://blog.evercharge.net">EverCharge Blog</a>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<h5>About EverCharge</h5>
-				<div class="footer-list">
-					<a href="/aboutus">About Us</a>
-					<a href="https://angel.co/evercharge/jobs" target='_blank'>Careers</a>
-					<a href="press" target="_blank">Press Resources</a>
-					<a href="/properties">Properties</a>
-				</div>
-			</div>
-			<div class="col-sm-4">
-				<h5>Contact Us</h5>
-				<div class="footer-list">
-					<a href="mailto:sales@evercharge.net">Sales</a>
-					<a href="mailto:info@evercharge.net">Support</a>
-					<a href="mailto:install@evercharge.net">Installation Experts</a>
-					<a href='tel:8883427383'>888.342.7383</a>
-				</div>
-			</div>
-            </div> <!-- /row features -->
+			<div class="row">
+    			<div class="col-xs-5 col-sm-3 col-md-2">
+    				<a href="/"><img src="{{ url_for('static', filename='images/EverCharge-logo-tag-teal-shadow.png') }}" class="img-responsive" alt="EverCharge"></a>
+    			</div>
+    			<div class="clearfix visible-xs"></div>
+    			<div class="col-sm-3 col-md-offset-1">
+    				<h5>Navigate</h5>
+    				<div class="footer-list">
+    					<a href="/">Home</a>
+    					<a href="{{ url_for('why_evercharge') }}">Why EverCharge</a>
+                        <a href="{{ url_for('smart_power') }}">SmartPower<sup>TM</sup></a>
+                        <a href="{{ url_for('device_wattson') }}">Wattson</a>
+    					<a href="/faqs">FAQs</a>
+    				</div>
+    			</div>
+    			<div class="col-sm-3">
+    				<h5>About EverCharge</h5>
+    				<div class="footer-list">
+    					<a href="/aboutus">About Us</a>
+    					<a href="https://angel.co/evercharge/jobs" target='_blank'>Careers</a>
+    					<a href="press">Press Resources</a>
+    					<a href="/properties">Properties</a>
+                        <a href="http://blog.evercharge.net" target="_blank">EverCharge Blog</a>
+    				</div>
+    			</div>
+    			<div class="col-xs-12 col-sm-3">
+    				<h5>Contact Us</h5>
+    				<div class="footer-list">
+    					<a href="mailto:sales@evercharge.net"><i class="fa fa-envelope-o"></i>Sales</a>
+    					<a href="mailto:info@evercharge.net"><i class="fa fa-envelope-o"></i>Support</a>
+    					<a href="mailto:install@evercharge.net"><i class="fa fa-envelope-o"></i>Installation Experts</a>
+    					<a href='tel:8883427383'><i class="fa fa-phone"></i>888.342.7383</a>
+    				</div>
+    			</div>
+            </div>
 			<div class="clearfix"></div>
-			
 			<p class="copyright">
 				<a href="https://twitter.com/evercharge"><i class="fa fa-twitter-square"></i></a>
 				<a href="https://www.facebook.com/evevercharge"><i class="fa fa-facebook-square"></i></a>
 				<br>
-				&copy; 2016 EverCharge, Inc. All Rights Reserved. Made in California.
+				<small>&copy; 2016 EverCharge, Inc. All Rights Reserved. Made in California.</small>
 			</p>
 		</div>
 	</footer>
+
     <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -268,18 +230,15 @@
 	  ga('create', 'UA-55104339-1', 'auto');
 	  ga('require', 'displayfeatures');
 	  ga('send', 'pageview');
-
 	</script>
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script async type='text/javascript' src="{{ url_for('static', filename='js/navbar.js') }}"></script>
-	<script async src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 	<script async src="js/bootstrap-formhelpers-phone.js"></script>
 	<script type="text/javascript" src="js/jquery.main.js"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/scroll_fade.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/transition.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/difficulties.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/parallax.js') }}"></script>
-	<script async type="text/javascript" src="{{ url_for('static', filename='js/back_to_top.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/smoothscroll.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/nutshell-adwords.js') }}"></script>
 

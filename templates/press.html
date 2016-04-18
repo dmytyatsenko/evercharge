@@ -1,144 +1,116 @@
-{% extends 'layout/base.html' %}
+{% extends "layout/base.html" %}
 
-{% block background %}
-	<img src="images/three_char.jpg" alt="image description" width="1200" height="526">
+{% block banner_class %}
+    class="parallax img-press" data-speed="4" data-type="background"
 {% endblock %}
 
-{% block maincontent %}
-	<div class="col-md-14 col-md-offset-1 article-quote">
-
-			<div id='large_green_circle'>
-				<h1 class='new_header'>Press Resources</h1>
-				<h2 class='tagline hidden_mobile'>
-					For further inquiries contact us at
-					<br><a href="mailto:press@evercharge.net">press@evercharge.net</a>
-				</h2>
-			</div>
-		<br>
-	</div>
+{% block banner_text %}
+    <h1 class="white">Press Resources</h1>
 {% endblock %}
 
 {% block video %}
 {% endblock %}
 
 {% block content_one %}
+    <div class="ec-stretch-white">
+        <div class="container">
+            <div class="row extra-bottom-md">
+                <div class="col-sm-12">
+                    <h3 class="extra-bottom-lg">
+                        Contact us at <a href="mailto:press@evercharge.net">press@evercharge.net</a> for any press inquiries.
+                    </h3>
+                    <h2 class="ec-teal extra-bottom-md">EverCharge provides an intelligent, scalable, fully-managed EV charging solution that enables more residents to charge their vehicles than any other competitor.</h2>
+                    <p><strong>We go by:</strong> EverCharge</p>
+                    <p><strong>We do <em>not</em> go by:</strong> Evercharge, everCharge, evercharge, or eVerCHarGe</p>
+                    <p><strong>History:</strong> Founded in 2013 by CEO Jason Appelbaum</p>
+                    <p><strong>Our Locations:</strong> We are headquartered in Emeryville, CA with offices in San Francisco</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <a href="https://twitter.com/evercharge" class="ec-social-media-circle">
+                        <i class="fa fa-lg fa-twitter"></i>@evercharge
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <a href="https://www.facebook.com/evevercharge" class="ec-social-media-circle">
+                        <i class="fa fa-lg fa-facebook"></i>/evevercharge
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <a href="https://www.youtube.com/channel/UCritiZhotBAkumyJKOsl_5w" class="ec-social-media-circle">
+                        <i class="fa fa-lg fa-youtube"></i>YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-<article class='jumbotron whitejumbo'>
-	<h1>Our Info</h1>
-	<div class='row'>
-		<div class='col-xs-16 col-lg-offset-3 col-lg-10'>
-			<h3 class='left ec-teal'>What we do</h3>
-			<p class='large_text ec-teal'>EverCharge provides an intelligent, scalable, fully-managed EV charging solution that enables more residents to charge their vehicles than any other competitor</p>
-		</div>
-		<div class='clearfix'></div>
-		<div class='col-sm-8 col-lg-offset-3 col-lg-5'>
-			<h3 class='left'>We go by</h3>
-			<p>EverCharge</p>
-			<h3 class='left'>We do <strong>not</strong> go by</h3>
-			<p>Evercharge, everCharge, evercharge, or eVerCHarGe</p>
-		</div>
-		<div class='col-xs-16 col-sm-8 col-lg-5'>
-			<h3 class='left'>Our History</h3>
-			<p>Founded in 2013 by CEO Jason Appelbaum</p>
-			<h3 class='left'>Our Locations</h3>
-			<p>We are headquartered in Emeryville, CA with offices in San Francisco</p>
-		</div>
-	</div>
-
-	<div class='row features'>
-		<div class='col-xs-16'>
-			<h3>Social Media</h3>
-			<hr class='short'>
-
-			<a href="https://twitter.com/evercharge">
-				<button class='flat_button normalize_case'><i class="fa fa-twitter"></i> @EverCharge</button>
-			</a>
-			<a href="https://www.facebook.com/evevercharge">
-				<button class='flat_button normalize_case'><i class="fa fa-facebook"></i> EverCharge</button>
-			</a>
-			<a href="https://www.youtube.com/channel/UCritiZhotBAkumyJKOsl_5w">
-				<button class='flat_button normalize_case'><i class="fa fa-youtube-play"></i> EverCharge</button>
-			</a>
-		</div>
-	</div>
-
-</article>
-
-
-<article class='jumbotron greyjumbo'>
-	<h1>Press Package</h1>
-	<div class='row features'>
-		<div class='col-sm-16'>
-			Download:
-			<a href="EverCharge-logo-files.zip" download="EverCharge-logo-files.zip">Logo (eps, jpg, png)</a> |
-			<a href="evercharge-branding-guide-logo.pdf" download="evercharge-branding-guide-logo.pdf">Logo Usage Guide</a> |
-			<a href="images/EverCharge-press-1.jpg" download="EverCharge-press-1.jpg">Press Image</a>
-		</div>
-	</div>
-
-</article>
-
-
-
-<article class='jumbotron whitejumbo'>
-	<h1>Our Colors</h1>
-
-	<div class='row features'>
-		<div class='palette col-xs-offset-0 col-xs-16 col-sm-offset-3 col-sm-4'>
-			<div class='color_circle ec-teal'></div>
-			<p class='large_text'>EverCharge Teal</p>
-			<p><strong>PMS</strong> 3272 C</p>
-			<p><strong>HEX</strong> #00A499</p>
-			<p><strong>CMYK</strong> (94, 0, 48, 0)</p>
-			<p><strong>RGB</strong> (0, 164, 153)</p>
-		</div>
-		<div class='palette col-xs-16 col-sm-4'>
-			<div class='color_circle ec-dk-gray'></div>
-			<p class='large_text'>Dark Gray</p>
-			<p><strong>PMS</strong> Black 6 C</p>
-			<p><strong>HEX</strong> #333333</p>
-			<p><strong>CMYK</strong> (0, 0, 0, 95)</p>
-			<p><strong>RGB</strong> (51, 51, 51)</p>
-		</div>
-		<div class='palette col-xs-16 col-sm-4'>
-			<div class='color_circle ec-lt-gray'></div>
-			<p class='large_text'>Light Gray</p>
-			<p><strong>PMS</strong> Cool Gray 1</p>
-			<p><strong>HEX</strong> #EDEDED</p>
-			<p><strong>CMYK</strong> (0, 0, 0, 7)</p>
-			<p><strong>RGB</strong> (237, 237, 237)</p>
-		</div>
-	</div>
-</article>
-
-
-<article class='jumbotron greyjumbo'>
-	<h1>Additional Resources</h1>
-	<div class='row features'>
-		<h2>Videos</h2>
-		<br>
-
-		<div class='col-md-8 col-xs-16'>
-			<a href='https://www.youtube.com/watch?v=M4t47yjCGWw' target='_blank'><img src='/images/ev_driver_video.png' class='desaturate'></a>
-			<h2 class='diff_title'>
-				<a href='https://www.youtube.com/watch?v=M4t47yjCGWw' target='_blank'>For EV Drivers</a>
-			</h2>
-		</div>
-		<div class='col-md-8 col-xs-16'>
-			<a href='https://www.youtube.com/watch?v=8fpj8MhywaU' target='_blank'><img src='/images/hoa.png' class='desaturate'></a>
-			<h2 class='diff_title'>
-				<a href='https://www.youtube.com/watch?v=8fpj8MhywaU' target='_blank'>For Property Managers</a>
-			</h2>
-		</div>
-	</div>
-
-</article>
-
+    <div class="ec-stretch-white">
+        <div class="container">
+            <hr class="extra-bottom-lg" />
+            <div class="row extra-bottom-lg">
+                <div class="col-xs-8 col-sm-5 col-md-6">
+                    <h2>Press Package</h2>
+                    <img src="{{ url_for('static', filename='images/EverCharge-logo-horizontal-teal.jpg') }}" class="border img-responsive extra-bottom-sm" alt="EverCharge Logo" />
+                    <p><strong>Logo</strong></p>
+                    <p>
+                        <a href="EverCharge-logo-files.zip" download="EverCharge-logo-files.zip">Logo (eps, jpg, png)</a> |
+                        <a href="evercharge-branding-guide-logo.pdf" download="evercharge-branding-guide-logo.pdf">Logo Usage Guide</a> 
+                    </p>
+                </div>
+            </div>
+            <hr class="extra-bottom-lg" />
+            <div class="row extra-bottom-lg">
+                <div class="col-xs-12">
+                    <h2>EverCharge Palette</h2>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="ec-palette-color teal"></div>
+                    <p><strong>EverCharge Teal</strong></p>
+                    <p class="ec-zero"><strong>PMS</strong> 3272 C</p>
+                    <p class="ec-zero"><strong>HEX</strong> #00A499</p>
+                    <p class="ec-zero"><strong>CMYK</strong> (94,0,48,0)</p>
+                    <p class="ec-zero"><strong>RGB</strong> (0,164,153)</p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="ec-palette-color dk-grey"></div>
+                    <p><strong>Dark Grey</strong></p>
+                    <p class="ec-zero"><strong>PMS</strong> Black 6 C</p>
+                    <p class="ec-zero"><strong>HEX</strong> #333333</p>
+                    <p class="ec-zero"><strong>CMYK</strong> (0,0,0,95)</p>
+                    <p class="ec-zero"><strong>RGB</strong> (51,51,51)</p>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="ec-palette-color lt-grey"></div>
+                    <p><strong>Light Grey</strong></p>
+                    <p class="ec-zero"><strong>PMS</strong> Cool Gray 1</p>
+                    <p class="ec-zero"><strong>HEX</strong> #EDEDED</p>
+                    <p class="ec-zero"><strong>CMYK</strong> (0,0,0,7)</p>
+                    <p class="ec-zero"><strong>RGB</strong> (237,237,237)</p>
+                </div>
+            </div>
+            <hr class="extra-bottom-lg" />
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2>Videos</h2>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5">
+                    <a href="https://www.youtube.com/watch?v=M4t47yjCGWw" target="_blank"><img src="/images/ev_driver_video.png" class="extra-bottom-md desaturate img-responsive border"></a>
+                    <p>
+                        <a href="https://www.youtube.com/watch?v=M4t47yjCGWw" target="_blank">For EV Drivers</a>
+                    </p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5">
+                    <a href="https://www.youtube.com/watch?v=8fpj8MhywaU" target="_blank"><img src="/images/hoa.png" class="extra-bottom-md desaturate img-responsive border"></a>
+                    <p>
+                        <a href="https://www.youtube.com/watch?v=8fpj8MhywaU" target="_blank">For Property Managers</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block quote_form %}
-{% endblock %}
-
-{% block custom_scripts %}
 {% endblock %}

@@ -1,35 +1,17 @@
 {% extends 'layout/base.html' %}
 
-
-{% block bannersize %}
-{% endblock %}
-
-{% block background %}
-	<img src="images/building-wall.jpg" alt=""/>
-{% endblock %}
-
-{% block alt_background %}
-	
-{% endblock %}
-
-{% block rightheader %}
-{% endblock %}
-
-{% block social_media %}
-{% endblock %}
-
-	
-{% block maincontent %}
+{% block banner_class %}
+    class="parallax img-wattson" data-speed="4" data-type="background"
 {% endblock %}
 
 {% block content_one %}
 	<div class="ec-wattson-banner">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-8">
+				<div class="col-sm-6 col-md-5">
 					<img src="images/EverCharge-Wattson-only.png" alt="Wattson" class="ec-wattson-only img-responsive">
 				</div>
-				<div class="col-sm-8 col-md-7">
+				<div class="col-sm-5 col-md-6">
 					<div class="ec-wattson-does-wrap">
 						<div class="ec-wattson-does">
 							<h1>WATTSON <strong>DOES</strong></h1>
@@ -43,17 +25,17 @@
 								<fieldset>		
 									<div class="row">
 										<div class="holder">
-											<div class="col-xs-16">
+											<div class="col-xs-12">
 												<div class="form-group">
 													<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="no"> 
 												</div>
 											</div>
-											<div class="col-xs-16">
+											<div class="col-xs-12">
 												<div class="form-group">
 													<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="no">
 												</div>
 											</div>
-											<div class="col-xs-16">
+											<div class="col-xs-12">
 												<input type="submit" value="Reserve Yours Now &#8594;" class="ec-button-teal-border">
 											</div>
 										</div>
@@ -66,46 +48,40 @@
 			</div><!-- end row -->
 		</div>
 	</div>
-{% endblock %}
 
-{% block content_two %}
-	<div class="greyjumbo">
-		<div class="container ec-wattson-about">
-			<div class="row">
-				<div class="col-sm-7 col-md-6">
-					<br>
-					<br>
-					<h2 class="ec-teal">The first-of-its-kind charging station combines EverCharge’s SmartPower technology with Schneider’s EVLink charging station.</h2>
-					<br>
-					<p class="black">Wattson can support a dynamic range of vehicles, from electric cars, golf-carts, e-bikes, electric scooters, and even offer trickle charging to high-end luxury vehicles.</p> 
-					<p class="black">With the addition of SmartPower, Wattson not only supports a wide array of vehicles it also saves thousands on infrastructure costs by maximizing the current building infrastructure.</p>
-					<br>
-					<br>
-				</div>
-				<div class="col-sm-offset-1 col-sm-8 col-md-offset-2 col-md-7 no-padding-right">
-					<img src="images/EverCharge-Wattson-Schneider-front-crop.jpg" class="img-responsive" alt="Wattson and Schneider EVLink" />
-				</div>
-			</div>
-		</div>
-	</div>
-{% endblock %}
+    <div class="ec-stretch-grey">
+        <div class="container ec-wattson-about">
+            <div class="row">
+                <div class="col-sm-6">
+                    <br>
+                    <br>
+                    <h2 class="ec-teal">The first-of-its-kind charging station combines EverCharge’s SmartPower technology with Schneider’s EVLink charging station.</h2>
+                    <br>
+                    <p class="black">Wattson can support a dynamic range of vehicles, from electric cars, golf-carts, e-bikes, electric scooters, and even offer trickle charging to high-end luxury vehicles.</p> 
+                    <p class="black">With the addition of SmartPower, Wattson not only supports a wide array of vehicles it also saves thousands on infrastructure costs by maximizing the current building infrastructure.</p>
+                    <br>
+                    <br>
+                </div>
+                <div class="col-sm-offset-1 col-sm-5 col-md-offset-2 col-md-4 no-padding-right">
+                    <img src="{{ url_for('static', filename='images/EverCharge-Wattson-Schneider-front-crop.jpg') }}" class="img-responsive" alt="Wattson and Schneider EVLink" />
+                </div>
+            </div>
+        </div>
+    </div>
 
-{% block content_three %}
-<div class="container">
-	<div class="row">
-		<div class="col-md-offset-1 col-md-14">
-			<div class="ec-wattson-quote">
-				<h2 class="bitter ec-teal">“Wattson can charge anything, from Teslas to electric bikes, Wattson can handle any kind of power demand.”</h2>
-				<br>
-				<p class="black">&ndash; <strong>Jason</strong>, EverCharge CEO</p>
-			</div>
-		</div>
-	</div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10">
+                <div class="ec-wattson-quote">
+                    <h2 class="bitter ec-teal">“Wattson can charge anything, from Teslas to electric bikes, Wattson can handle any kind of power demand.”</h2>
+                    <br>
+                    <p class="black">&ndash; <strong>Jason</strong>, EverCharge CEO</p>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block video %}
 {% endblock %}
 
-{% block content_one_bottom %}
-{% endblock %}
