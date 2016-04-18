@@ -16,7 +16,7 @@ $ec-font-work-sans: 'Work Sans', Arial, sans-serif
 $ec-font-s-body: 16px
 $ec-font-w-body: 400
 $ec-letter-space: -0.5px
-$ec-text-shadow: 2px 2px 7px RGBA(0,0,0,0.8)
+$ec-text-shadow: 2px 2px 7px RGBA(0,0,0,0.6)
 //////////////////////
 
 //////////////////////
@@ -206,7 +206,7 @@ h3
     margin-top: 0
 h4.ec-caps
     color: #58595B
-    font-size: 16px
+    font-size: 1em
     font-weight: 600
     margin-bottom: 16px
     margin-top: 0
@@ -497,9 +497,9 @@ fieldset.ec-fieldset
     margin-top: 50px
 .ec-home-splash
     background: url(../images/EverCharge-Wattson-Schneider.jpg) no-repeat
-    background-position: left center
-    background-size: auto 800px
-    height: 680px
+    background-position: 0px -130px
+    background-size: auto 940px
+    height: 510px
     padding: 0
 .ec-home-splash-text
     padding: 100px 60px 20px 30px
@@ -514,7 +514,9 @@ fieldset.ec-fieldset
 .ec-home-charging-experts
     background: url(../images/building-6.jpg) no-repeat
     background-size: 100%
-    h4 
+    h1
+        margin-top: 140px
+    h2 
         margin-top: 40px
 .ec-mini-quote-form 
     .ec-button-teal-border 
@@ -627,27 +629,48 @@ fieldset.ec-fieldset
 // RESPONSIVE
 //xl
 @media only screen and (min-width: 1600px)
+    .ec-home-splash-wrap
+        position: relative
+        .col-xl-12
+            width: 100%
+        .col-lg-5
+            position: absolute
+            right: 0
     .ec-home-splash
-        background-size: auto 1200px
-        height: 800px
+        background-position: left -210px
+        background-size: 100%
+        height: 968px
     .ec-home-splash-text
-        padding: 140px 80px 20px 30px
+        font-size: 1.4em
+        padding: 180px 80px 20px 30px
+        h1, h4, h3
+            text-shadow: $ec-text-shadow
+        a.ec-button-white-border
+            border-color: $ec-dk-teal
+            color: $ec-dk-teal
+
 
 // lg
-@media only screen and (min-width: 1400px) and (max-width: 1799px)
+@media only screen and (min-width: 1400px) and (max-width: 1599px)
+    .ec-home-splash
+        background-position: left -160px
     .ec-home-properties
         background-position-y: -200px
 
 // sm
 @media only screen and (max-width: 992px)
+    h1
+        font-size: 2.8em
     .ec-home-splash
+        background-position: 0px -50px
         background-size: auto 600px
         height: 460px
     .ec-home-splash-text
         padding: 60px 40px 20px 20px
     .ec-home-charging-experts
-        h4 
-            margin-top: 20px
+        h1, 
+        h2
+            margin-top: 10px
     .ec-home-properties
         background-position-y: -50px
         background-size: 150%
@@ -679,6 +702,11 @@ fieldset.ec-fieldset
     .col-xs-12
         margin-bottom: 12px
 
+    .ec-home-splash
+        background-position: left -75px
+        height: 460px
+    .ec-home-splash-text
+        padding-top: 20px
     .ec-home-charging-experts
         background-position: center center
         background-size: auto 1160px
