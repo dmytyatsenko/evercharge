@@ -33,9 +33,9 @@ def install_specs_short():
     return app.send_static_file('InstallSpecsShort.pdf')
 
 
-@app.route('/companyoverview')
+@app.route('/co')
 def company_overview():
-    return app.send_static_file('EverChargeOverview.pdf')
+    return app.send_static_file('doc-company-overview.pdf')
 
 
 @app.route('/smartpower-overview')
@@ -294,11 +294,6 @@ def follow_up():
 @app.route('/blog', methods=['GET'])
 def display_blog():
     return redirect('http://blog.evercharge.net')
-
-
-@app.route('/memberkeyterms', methods=['GET'])
-def display_key_terms():
-    return render_template('keyterms.html')
 
 @app.route('/schneider-partnership')
 def schneider_partnership():

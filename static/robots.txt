@@ -1,2 +1,9 @@
 User-agent: *
+Disallow: /co
+Disallow: /datasheet
+Disallow: /install
+Disallow: /installspecsfull
+Disallow: /installspecsshort
+Disallow: /potrero-case-study
+Disallow: /preferred
 Disallow: /thankyou
