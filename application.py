@@ -33,7 +33,7 @@ def install_specs_short():
     return app.send_static_file('InstallSpecsShort.pdf')
 
 
-@app.route('/companyoverview')
+@app.route('/co')
 def company_overview():
     return app.send_static_file('EverChargeOverview.pdf')
 
