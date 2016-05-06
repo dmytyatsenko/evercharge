@@ -144,6 +144,7 @@ img.border
     background: white
     border: 1px solid black
     outline: 10px solid white
+    padding: 10px
 .ec-box-white
     background: white
     padding: 20px
@@ -625,6 +626,14 @@ fieldset.ec-fieldset
         color: white
         margin-right: 10px
 
+// page: about us
+.ec-award-wrap
+    .ec-box-white-border
+        margin: 0 20px
+img.ec-award
+    margin: 0 auto 30px auto
+    padding: 0 40px
+
 //////////////////////
 // RESPONSIVE
 //xl
@@ -693,6 +702,10 @@ fieldset.ec-fieldset
         &.img-why-ec
             background-position-y: inherit
             background-size: auto 600px
+
+    .ec-award-wrap
+        .ec-box-white-border
+            margin: 0
 
 // xs
 @media only screen and (max-width: 767px)
@@ -794,6 +807,10 @@ fieldset.ec-fieldset
             background-position-y: inherit
             background-size: auto 500px
             height: 500px
+
+    .ec-award-wrap
+        .ec-box-white-border
+            margin-bottom: 30px
 
     .ec-404 
         margin-top: 100px
