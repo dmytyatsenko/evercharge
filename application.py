@@ -45,7 +45,7 @@ def smartpower_overview():
 
 @app.route('/potrero-case-study')
 def potrero_case_study():
-    return app.send_static_file('SF_Case_Study.pdf')
+    return app.send_static_file('EverCharge-Property-Case-Study-Potrero.pdf')
 
 
 @app.route('/datasheet')
