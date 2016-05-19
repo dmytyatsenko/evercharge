@@ -71,14 +71,9 @@ def page_not_found(e):
 ################
 # ADMIN ROUTES #
 ################
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login')
 def customer_login():
-    error = None
-    if request.method == 'POST':
-        error = "User not recognized. If you are an existing EverCharge customer," \
-                " and have not yet received your login information, EverCharge will contact you shortly."
-
-    return render_template('login.html', error=error)
+    return redirect('https://dashboard.evercharge.net/login')
 
 
 ##################
