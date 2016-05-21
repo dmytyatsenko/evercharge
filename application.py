@@ -16,17 +16,6 @@ EV_OWNER_SOURCE = NUTSHELL_SOURCES['Web - EV Owner']
 HOA_SOURCE = NUTSHELL_SOURCES['Web - HOA/PM']
 GOOGLE_SOURCE = 'Google'
 ONLINE_PUBLICATION_SOURCE = 'Online Publications'
-
-application = Flask(__name__, static_url_path='')
-app = application
-
-app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY", 'testingkey')
-assets = Environment(app)
-sass = Bundle('sass/all.sass', filters='sass', output='css/sass.css')
-css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
-assets.register('css_all', css_all)
-
-
 HOSTNAME_TO_SOURCE = {
     'bing.com': 'Bing',
     'facebook.com': 'Facebook',
@@ -36,17 +25,16 @@ HOSTNAME_TO_SOURCE = {
     'cleantechnica.com': ONLINE_PUBLICATION_SOURCE,
     'www.1776.vc': ONLINE_PUBLICATION_SOURCE
 }
-
-REFERRER_SOURCES = {
-    "google": 55555,
-    "bing": 6666,
-    "facebook": 3333,
-    "twitter": 444,
-    "linkedin": 2312321,
-    "reddit": 5555
-}
-
 SOCIAL_SOURCE_COOKIE = '_social_source'
+
+application = Flask(__name__, static_url_path='')
+app = application
+
+app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY", 'testingkey')
+assets = Environment(app)
+sass = Bundle('sass/all.sass', filters='sass', output='css/sass.css')
+css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
+assets.register('css_all', css_all)
 
 
 @app.after_request
