@@ -86,6 +86,29 @@ def smartpower_overview():
 def potrero_case_study():
     return app.send_static_file('EverCharge-Property-Case-Study-Potrero.pdf')
 
+@app.route('/evercharge-case-study-1')
+def property_case_study_one():
+    return app.send_static_file('EverCharge-Property-Case-Study-1.pdf')
+
+@app.route('/evercharge-case-study-2')
+def property_case_study_two():
+    return app.send_static_file('EverCharge-Property-Case-Study-2.pdf')
+
+@app.route('/evercharge-case-study-3')
+def property_case_study_three():
+    return app.send_static_file('EverCharge-Property-Case-Study-3.pdf')
+
+@app.route('/evercharge-case-study-4')
+def property_case_study_four():
+    return app.send_static_file('EverCharge-Property-Case-Study-4.pdf')
+
+@app.route('/evercharge-case-study-5')
+def property_case_study_five():
+    return app.send_static_file('EverCharge-Property-Case-Study-5.pdf')
+
+@app.route('/evercharge-case-study-6')
+def property_case_study_six():
+    return app.send_static_file('EverCharge-Property-Case-Study-6.pdf')
 
 @app.route('/datasheet')
 def data_sheet():
@@ -110,14 +133,9 @@ def page_not_found(e):
 ################
 # ADMIN ROUTES #
 ################
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login')
 def customer_login():
-    error = None
-    if request.method == 'POST':
-        error = "User not recognized. If you are an existing EverCharge customer," \
-                " and have not yet received your login information, EverCharge will contact you shortly."
-
-    return render_template('login.html', error=error)
+    return redirect('https://dashboard.evercharge.net/login')
 
 
 ##################
