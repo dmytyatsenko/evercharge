@@ -1,19 +1,29 @@
+# -*- encoding: utf-8 -*-
 import os
-from datetime import datetime
 from six.moves.urllib.parse import urlparse
 from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
 from nutshell import NutshellAPI
 
+application = Flask(__name__, static_url_path='')
+app = application
 
+app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY", 'testingkey')
+assets = Environment(app)
+sass = Bundle('sass/all.sass', filters='sass', output='css/sass.css')
+css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
+assets.register('css_all', css_all)
+
+
+# Nutshell client configuration
 NUTSHELL_USERNAME = 'jason@evercharge.net'
 NUTSHELL_API_KEY = '91bd928f9b1cf611b758d15e44849227c7d46389'
 nutshell_client = NutshellAPI(NUTSHELL_USERNAME, NUTSHELL_API_KEY)
 
 NUTSHELL_SOURCES = {source['name']: source['id'] for source in nutshell_client.findSources()}
 
-EV_OWNER_SOURCE = NUTSHELL_SOURCES['Web - EV Owner']
-HOA_SOURCE = NUTSHELL_SOURCES['Web - HOA/PM']
+EV_OWNER_SOURCE_ID = NUTSHELL_SOURCES['Web - EV Owner']
+HOA_SOURCE_ID = NUTSHELL_SOURCES['Web - HOA/PM']
 GOOGLE_SOURCE = 'Google'
 ONLINE_PUBLICATION_SOURCE = 'Online Publications'
 HOSTNAME_TO_SOURCE = {
@@ -26,15 +36,6 @@ HOSTNAME_TO_SOURCE = {
     'www.1776.vc': ONLINE_PUBLICATION_SOURCE
 }
 SOCIAL_SOURCE_COOKIE = '_social_source'
-
-application = Flask(__name__, static_url_path='')
-app = application
-
-app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY", 'testingkey')
-assets = Environment(app)
-sass = Bundle('sass/all.sass', filters='sass', output='css/sass.css')
-css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
-assets.register('css_all', css_all)
 
 
 @app.after_request
@@ -163,13 +164,11 @@ def ev_owner():
 
 @app.route('/building-management', methods=['POST', 'GET'])
 def hoa_property_manager():
-    # print  nut.search_sources('Web')
     return redirect('/')
 
 
 @app.route('/aboutus', methods=['POST', 'GET'])
 def about_us():
-    # print nut.search_contacts(50169)
     return render_template("about-us.html")
 
 
@@ -206,7 +205,7 @@ def thank_you():
     new_contact = nutshell_client.newContact(contact=dict(name=name, email=email, phone=phone))
     contact_id = new_contact['id']
 
-    source = EV_OWNER_SOURCE if customer_type == 'EV Driver' else HOA_SOURCE
+    source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
     external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
     external_source = NUTSHELL_SOURCES.get(external_source)
     if external_source is not None:
@@ -221,10 +220,7 @@ def thank_you():
     if tag:
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=[tag, gran]), rev="REV")
 
-    return render_template("thank_you.html",
-                           newLeadId=new_lead_id,
-                           contactId=contact_id,
-                           note=note)
+    return render_template("thank_you.html", newLeadId=new_lead_id, contactId=contact_id, note=note)
 
 
 ###################
@@ -285,11 +281,7 @@ def device_wattson():
     return render_template('wattson.html')
 
 
-################################################################################
-
 if __name__ == '__main__':
-
     PORT = int(os.environ.get("PORT", 5000))
     DEBUG = os.environ.get("FLASK_DEBUG", False)
-    # DEBUG = "NO_DEBUG" not in os.environ
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)
