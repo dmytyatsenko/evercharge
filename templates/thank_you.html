@@ -45,7 +45,7 @@
                             <p>Team Member: CJ</p>
                             <p>Email: cj@evercharge.net</p>
                             <p>Phone: 415.851.0956</p>
-                            <!-- <button type="button" class="ec-button-teal-border" data-toggle="modal" data-target="#myModal">Schedule a call now</button> -->
+                            <button type="button" class="ec-button-teal-border" data-toggle="modal" data-target="#myModal">Schedule a call now</button>
                         </div>
                     </div>
                 </div>
@@ -61,174 +61,114 @@
 {% block content_one %}
 {% endblock %}
 
-{% block quote_form %}	
-	<!-- Modal -->
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	        <h4 class="modal-title" id="myModalLabel">Schedule an Appointment</h4>
-	      </div>
-	      <div class="modal-body">
-	      	<center>
-	        	<iframe src='https://calendly.com/evercharge/quote' scrolling='no'></iframe>
-	        </center>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="flat_button" data-dismiss="modal">Close</button>
-	      </div>
-	    </div>
-	  </div>
-	</div>
+{% block quote_form %}
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Schedule an Appointment</h4>
+          </div>
+          <div class="modal-body">
+              <center>
+                <iframe src='https://calendly.com/evercharge/quote' scrolling='no'></iframe>
+            </center>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="flat_button" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-	<div style="display:none;">
-		<iframe id="submit_frame" name="submit_frame"></iframe>
-	</div>
+    <div style="display:none;">
+        <iframe id="submit_frame" name="submit_frame"></iframe>
+    </div>
 
     <div class="ec-stretch-white">
-    	<div class="container">
-    		<form action='/nutshell/submit' class='get-quote validate-form' id='existing_customer'
-    		method='post' name='existing_customer' target='submit_frame'>
-    			<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-    			<input name='contact_id' type='hidden' value='{{ contactId }}'>
-    			
-    			<div class="row">
-    				<div class="col-md-offset-2 col-md-8">
-    					<legend id='thankyou'>
-    						<h2 class="ec-teal" id="form_heading">More About You</h2>
-    					</legend>
-    				</div>
-    			</div>
+        <div class="container">
+            <form action="{{ url_for('follow_up') }}" class='get-quote validate-form' id='existing_customer'
+            method='post' name='existing_customer' target='submit_frame'>
+                <input name='lead_id' type='hidden' value='{{ newLeadId }}'>
+                <input name='contact_id' type='hidden' value='{{ contactId }}'>
 
-    			<fieldset id='primary_form_content' class="ec-fieldset">
-    				<form id='blank' name='blank'></form>
-    				<div class="row">
-                        <div class="col-md-offset-2 col-md-push-5 col-md-3">
-                            <p><em>This helps us understand what installation options will be best suited for your property.</em></p>
+                <div class="row">
+                    <div class="col-md-offset-2 col-md-8">
+                        <legend id='thankyou'>
+                            <h2 class="ec-teal" id="form_heading">More About You</h2>
+                        </legend>
+                    </div>
+                </div>
+
+                <fieldset id='primary_form_content' class="ec-fieldset">
+                    <form id='blank' name='blank'></form>
+
+                    <div class="row">
+                        <div class="clearfix"></div>
+                        <div class="col-md-offset-2 col-md-10">
+                            <form action="{{ url_for('update_lead_notes') }}" class="validate-form" id="notes_form" method="POST" name="notes_form" target="submit_frame">
+                                <input name="lead_id" type="hidden" value="{{ newLeadId }}">
+                                <div class="form-group">
+                                    <textarea name="notes" rows="2" class="form-control" onchange="notesSubmit()"
+                                              placeholder="Additional comments" autocomplete="off">
+                                        {%- if note -%}{{ note }}{%- endif -%}
+                                    </textarea>
+                                </div>
+                            </form>
                         </div>
-    					<div class="col-md-5 col-md-pull-3">
-                            <!-- Parking Spot Type -->
-    						<form action="{{ url_for('parking_spot_type') }}" class='validate-form'
-                                  id='parking_spot_form' method='post' name='parking_spot_form'
-                                  target='submit_frame'>
-    							<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-    					    <p class="black"><strong>Are your parking spots...</strong></p>
-    					    <div id="parking_listener">
-    					    	<p>
-    					    	  <input type="radio" name="parking_type" id="assigned_parking" value="Assigned/Deeded" />
-    					    	  <label for="assigned_parking">Assigned/Deeded</label>
-    					    	</p>
-    					    	<p>
-    					    	  <input type="radio" name="parking_type" id="unassigned_parking" value="Unassigned" />
-    					    	  <label for="unassigned_parking">Unassigned</label>
-    					    	</p>
-    					    	<p>
-    					    	  <input type="radio" name="parking_type" id="valet_parking" value="Valet" />
-    					    	  <label for="valet_parking">Valet</label>
-    					    	</p>
-    					    	<p>
-    					    	  <input type="radio" name="parking_type" id="other_parking" value="Other" />
-    					    	  <label for="other_parking">Other</label>
-    					    	</p>
-    					    </div>
-    						</form>
-    					</div>
-    				</div><!-- end question 1 row -->
+                    </div>
 
-    				<div class="row">
-    					<div class="col-md-offset-2 col-md-8">
-    						<hr class="ec-hr-extra" />
-    					</div>
-    					<div class="clearfix"></div>
-                        <div class="col-md-offset-2 col-md-push-5 col-md-3">
-                            <p><em>Buildings of different sizes have different electrical infrastructure requirements.</em></p>
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-8">
+                            <hr class="ec-hr-extra" />
                         </div>
-    					<div class="col-md-5 col-md-pull-3">
-                            <!-- Number of Parking Spots -->
-    						<form action="{{ url_for('approximate_number_spots') }}" class='validate-form'
-                                  id='number_spots_form' method='post' name='number_spots_form'
-                                  target='submit_frame'>
-    							<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-    							<input name='contact_id' type='hidden' value='{{ contactId }}'>
-    					    <p class="black"><strong>How many parking spots are in your building?</strong></p>
-    					    <div id="number_spots_listener">
-    					    	<p>
-    					    	  <input type="radio" name="number_of_spots" id="number_of_spots" value="Under 25" />
-    					    	  <label for="number_of_spots">Under 25</label>
-    					    	</p>
-    					    	<p>
-    					    	  <input type="radio" name="number_of_spots" id="number_of_spots_2" value="26-50" />
-    					    	  <label for="number_of_spots_2">26-50</label>
-    					    	</p>
-    					    	<p>
-    					    	  <input type="radio" name="number_of_spots" id="number_of_spots_3" value="51-100" />
-    					    	  <label for="number_of_spots_3">51-100</label>
-    					    	</p>
-    					    	<p>
-    					    	  <input type="radio" name="number_of_spots" id="number_of_spots_4" value="101-200" />
-    					    	  <label for="number_of_spots_4">101-200</label>
-    					    	</p>
-    					    	<p>
-    					    	  <input type="radio" name="number_of_spots" id="number_of_spots_5" value="Over 200" />
-    					    	  <label for="number_of_spots_5">Over 200</label>
-    					    	</p>
-    					    </div>
-    						</form>
-    					</div>
-    				</div><!-- end question 2 row -->
-
-    				<div class="row">
-    					<div class="col-md-offset-2 col-md-8">
-    						<hr class="ec-hr-extra" />
-    					</div>
-    					<div class="clearfix"></div>
-    					<div class="col-md-offset-2 col-md-5">
+                        <div class="clearfix"></div>
+                        <div class="col-md-offset-2 col-md-5">
                             <!-- Referred Customer -->
-    						<form action="{{ url_for('referred_customer') }}" class=' validate-form' id='reference_form'
-    						method='post' name='reference_form' target='submit_frame'>
-    							<input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-    							<input name='contact_id' type='hidden' value='{{ contactId }}'>
-    							<p class="black"><strong>How did you hear about us?</strong></p>
-    							<div id="reference_listener">
+                            <form action="{{ url_for('referred_customer') }}" class=' validate-form' id='reference_form'
+                            method='post' name='reference_form' target='submit_frame'>
+                                <input name='lead_id' type='hidden' value='{{ newLeadId }}'>
+                                <p class="black"><strong>How did you hear about us?</strong></p>
+                                <div id="reference_listener">
                                     <p>
-    								  <input type="radio" name="reference" id="reference_google" value="Google" />
-    								  <label for="reference_google">Google</label>
-    								</p>
+                                      <input type="radio" name="reference" id="reference_google" value="Google" />
+                                      <label for="reference_google">Google</label>
+                                    </p>
                                     <p>
-    								  <input type="radio" name="reference" id="reference_facebook" value="Facebook" />
-    								  <label for="reference_facebook">Facebook</label>
-    								</p>
+                                      <input type="radio" name="reference" id="reference_facebook" value="Facebook" />
+                                      <label for="reference_facebook">Facebook</label>
+                                    </p>
                                     <p>
-    								  <input type="radio" name="reference" id="reference_twitter" value="Twitter" />
-    								  <label for="reference_twitter">Twitter</label>
-    								</p>
-    								<p>
-    								  <input type="radio" name="reference" id="reference_web" value="Online Publication" />
-    								  <label for="reference_web">Online Publication</label>
-    								</p>
-    								<p>
-    								  <input type="radio" name="reference" id="auto_dealer_reference" value="Auto Dealer Referral" />
-    								  <label for="auto_dealer_reference">Auto Dealer Referral</label>
-    								</p>
+                                      <input type="radio" name="reference" id="reference_twitter" value="Twitter" />
+                                      <label for="reference_twitter">Twitter</label>
+                                    </p>
                                     <p>
-    								  <input type="radio" name="reference" id="reference_pm_hoa" value="Property Manager/HOA" />
-    								  <label for="reference_pm_hoa">HOA</label>
-    								</p>
-    								<p>
-    								  <input type="radio" name="reference" id="reference_friend" value="Friend" />
-    								  <label for="reference_friend">Friend</label>
-    								</p>
-    								<p>
-    								  <input type="radio" name="reference" id="reference_electrician" value="Electrician" />
-    								  <label for="reference_electrician">Electrician</label>
-    								</p>
-    								<p>
-    								  <input type="radio" name="reference" id="reference_other" value="Other" />
-    								  <label for="reference_other">Other</label>
-    								</p>
-    							</div>
-    						</form>
+                                      <input type="radio" name="reference" id="reference_web" value="Online Publication" />
+                                      <label for="reference_web">Online Publication</label>
+                                    </p>
+                                    <p>
+                                      <input type="radio" name="reference" id="auto_dealer_reference" value="Auto Dealer Referral" />
+                                      <label for="auto_dealer_reference">Auto Dealer Referral</label>
+                                    </p>
+                                    <p>
+                                      <input type="radio" name="reference" id="reference_pm_hoa" value="Property Manager/HOA" />
+                                      <label for="reference_pm_hoa">HOA</label>
+                                    </p>
+                                    <p>
+                                      <input type="radio" name="reference" id="reference_friend" value="Friend" />
+                                      <label for="reference_friend">Friend</label>
+                                    </p>
+                                    <p>
+                                      <input type="radio" name="reference" id="reference_electrician" value="Electrician" />
+                                      <label for="reference_electrician">Electrician</label>
+                                    </p>
+                                    <p>
+                                      <input type="radio" name="reference" id="reference_other" value="Other" />
+                                      <label for="reference_other">Other</label>
+                                    </p>
+                                </div>
+                            </form>
                             <!-- Auto Dealer Contact -->
                             <form action="{{ url_for('auto_dealer_contact') }}" class="validate-form"
                                   id="auto_dealer_contact_form" method='post' name="auto_dealer_contact_form" target="submit_frame">
@@ -242,25 +182,25 @@
                                            placeholder="Name of Auto Dealer Referral Contact" type='text'>
                                 </div>
                             </form>
-    					</div>
-    				</div><!-- end question 3 row -->
+                        </div>
+                    </div><!-- end question 3 row -->
 
-    				<div class="row">
-    					<div class="col-md-offset-2 col-md-8">
-    						<hr class="ec-hr-extra" />
-    					</div>
-    					<div class="clearfix"></div>
-    					<div class="col-xs-12 col-sm-8 col-md-offset-2 col-md-6">
-    						<input id='final_submit_button' type='submit' value='Submit' class="ec-button-teal">
-    					</div>
-    				</div>
+                    <div class="row">
+                        <div class="col-md-offset-2 col-md-8">
+                            <hr class="ec-hr-extra" />
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-xs-12 col-sm-8 col-md-offset-2 col-md-6">
+                            <input id='final_submit_button' type='submit' value='Submit' class="ec-button-teal">
+                        </div>
+                    </div>
 
-    			</fieldset>
-    		</form>
-    	</div>
+                </fieldset>
+            </form>
+        </div>
     </div>
 {% endblock %}
 
 {% block custom_scripts %}
-	<script type="text/javascript" src="{{ url_for('static', filename='js/conditionalform.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/conditionalform.js') }}"></script>
 {% endblock %}

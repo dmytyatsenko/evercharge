@@ -196,7 +196,7 @@ def thank_you():
     phone = request.form.get('quote_phone', None)
     email = request.form.get('quote_email')
     note = request.form.get('quote_notes')
-    note = note if note else "No Customer Note"
+    lead_note = note if note else "No Customer Note"
     phone = phone if phone else None
 
     customer_type = request.form.get('customer_type')
@@ -216,79 +216,20 @@ def thank_you():
 
     new_lead = nutshell_client.newLead(lead=dict(contacts=[{'id': contact_id}],
                                                  sources=sources,
-                                                 note=note))
+                                                 note=lead_note))
     new_lead_id = new_lead['id']
     if tag:
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=[tag, gran]), rev="REV")
 
     return render_template("thank_you.html",
                            newLeadId=new_lead_id,
-                           contactId=contact_id)
+                           contactId=contact_id,
+                           note=note)
 
 
 ###################
 # Nutshell Routes #
 ###################
-@app.route('/nutshell/address', methods=['POST', 'GET'])
-def update_address_in_nutshell():
-    address = request.form.get('address')
-    city = request.form.get('city')
-    state = request.form.get('state')
-    contact_id = request.form.get('contact_id')
-    nutshell_client.editContact(contactId=contact_id, rev='REV_IGNORE', contact={"address": address, "city": city,
-                                                                                 "state": state})
-
-
-@app.route('/nutshell/phonenumber', methods=['POST', 'GET'])
-def phone_number():
-    cc_phone_number = request.form.get('phone_number')
-    contact_id = request.form.get('contact_id')
-    nutshell_client.editContact(contactId=contact_id, rev='REV_IGNORE', contact=dict(phone={"work": cc_phone_number}))
-    return "Successfully updated Phone Number"
-
-
-@app.route('/nutshell/parkingspot', methods=['POST'])
-def parking_spot_type():
-    current_parking_spot_type = request.form.get('parking_type')
-    new_lead_id = request.form.get('lead_id')
-    nutshell_client.editLead(leadId=new_lead_id,
-                             rev='REV_IGNORE',
-                             lead=dict(customFields={'Parking Spots Type': current_parking_spot_type}))
-    return "Successfully added parking type."
-
-
-@app.route('/nutshell/existingcustomer', methods=['POST', 'GET'])
-def is_existing_customer():
-    cust_status = request.form.get('building_customer')
-    new_lead_id = request.form.get('lead_id')
-    nutshell_client.editLead(leadId=new_lead_id,
-                             rev='REV_IGNORE',
-                             lead=dict(customFields={'Building already customer?': cust_status}))
-
-    return "Successfully added building's customer status."
-
-
-@app.route('/nutshell/parkingspotnumber', methods=['POST', 'GET'])
-def parking_spot_number():
-    parking_spot = request.form.get('parking_spot')
-    new_lead_id = request.form.get('lead_id')
-    nutshell_client.editLead(leadId=new_lead_id,
-                             rev='REV_IGNORE',
-                             lead=dict(customFields={'Parking Spot #': parking_spot}))
-    return "Successfully added parking spot number."
-
-
-# TODO: WTF? what the difference with parking_spot_number? Why it updates approx building size?
-@app.route('/nutshell/numberofspots', methods=['POST'])
-def approximate_number_spots():
-    approx_bldg_size = request.form.get('number_of_spots')
-    new_lead_id = request.form.get('lead_id')
-    nutshell_client.editLead(leadId=new_lead_id,
-                             rev='REV_IGNORE',
-                             lead=dict(customFields={'Approximate Bldg Size': approx_bldg_size}))
-    return "Successfully added number of spots."
-
-
 @app.route('/nutshell/reference', methods=['POST'])
 def referred_customer():
     reference = request.form.get('reference')
@@ -309,60 +250,18 @@ def auto_dealer_contact():
     return "Successfully added Tesla contact."
 
 
-@app.route('/nutshell/evownership', methods=['POST', 'GET'])
-def ev_owner_status():
-    owner_status = request.form.get('ev_status')
-    # dummy date to add to Nutshell is Jan 1, 2015 -- expedites Sales process
-    dummy_date = '1420099200'
-    contact_id = request.form.get('contact_id')
-    new_lead_id = request.form.get('lead_id')
-    contact_custom_fields = {'EV Owner': owner_status}
-    if owner_status == 'Already have an EV':
-        contact_custom_fields['Car Delivery Date'] = {'timestamp': dummy_date}
-        nutshell_client.editLead(leadId=new_lead_id,
-                                 rev='REV_IGNORE',
-                                 lead=dict(customFields={'EV Delivery Date': dummy_date}))
-    nutshell_client.editContact(contactId=contact_id,
-                                rev='REV_IGNORE',
-                                contact=dict(customFields=contact_custom_fields))
-    return "Successfully added EV ownership status."
-
-
-@app.route('/nutshell/evdeliverydate', methods=['POST', 'GET'])
-def ev_delivery_date():
-    delivery_date = request.form.get('delivery_date')
-    contact_id = request.form.get('contact_id')
-    new_lead_id = request.form.get('lead_id')
-
-    if delivery_date:
-        delivery_date = datetime.strptime(delivery_date, "%Y-%m-%d").strftime('%s')
-
-    nutshell_client.editContact(contactId=contact_id,
-                                rev='REV_IGNORE',
-                                contact=dict(customFields={'Car Delivery Date': {'timestamp': delivery_date}}))
-    nutshell_client.editLead(leadId=new_lead_id,
+@app.route('/nutshell/lead-notes', methods=['POST'])
+def update_lead_notes():
+    lead_id = request.form.get('lead_id')
+    notes = request.form.get('notes')
+    nutshell_client.editLead(leadId=lead_id,
                              rev='REV_IGNORE',
-                             lead=dict(customFields={'Car Delivery Date': {'timestamp': delivery_date}}))
-    return "Successfully added delivery date."
+                             lead=dict(note=notes))
+    return "OK"
 
 
-@app.route('/nutshell/commute', methods=['POST', 'GET'])
-def avg_commute():
-    daily_commute = request.form.get('daily_commute')
-    new_lead_id = request.form.get('lead_id')
-    nutshell_client.editLead(leadId=new_lead_id,
-                             rev='REV_IGNORE',
-                             lead=dict(customFields={'Average Daily Commute': daily_commute}))
-
-    return "Successfully added daily commute."
-
-
-# TODO: What is this? What is purpose of this? There is reference to this in thank_you.html
 @app.route('/nutshell/submit', methods=['POST', 'GET'])
 def follow_up():
-    new_lead_id = request.form.get('lead_id')
-    contact_id = request.form.get('contact_id')
-
     return render_template('about-us.html')
 
 
