@@ -25,11 +25,11 @@ NUTSHELL_SOURCES = {source['name']: source['id'] for source in nutshell_client.f
 EV_OWNER_SOURCE_ID = NUTSHELL_SOURCES['Web - EV Owner']
 HOA_SOURCE_ID = NUTSHELL_SOURCES['Web - HOA/PM']
 GOOGLE_SOURCE = 'Google'
+TWITTER_SOURCE = 'Twitter'
 ONLINE_PUBLICATION_SOURCE = 'Online Publications'
 HOSTNAME_TO_SOURCE = {
     'bing.com': 'Bing',
     'facebook.com': 'Facebook',
-    'twitter.com': 'Twitter',
     'linkedin.com': 'LinkedIn',
     'reddit.com': 'Reddit',
     'cleantechnica.com': ONLINE_PUBLICATION_SOURCE,
@@ -47,6 +47,8 @@ def check_referrer(response):
                 url = urlparse(request.referrer)
                 if 'google.com' in url.hostname and 'plus.google.com' not in url.hostname:
                     response.set_cookie(SOCIAL_SOURCE_COOKIE, value=GOOGLE_SOURCE)
+                if 'twitter.com' in url.hostname or 't.co' in url.hostname:
+                    response.set_cookie(SOCIAL_SOURCE_COOKIE, value=TWITTER_SOURCE)
                 else:
                     for source_hostname in HOSTNAME_TO_SOURCE.keys():
                         if source_hostname in url.hostname:
