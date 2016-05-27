@@ -125,7 +125,7 @@
         	<div class="ec-stretch-grey">
         		<div class="container">
         			<div class="row">
-        				<form action="/thankyou" method='post' id="quote" class="validate-form">
+        				<form action="{{ url_for('thank_you') }}" method='post' id="quote" class="validate-form">
         					<input name="lead_source" value="Web Signup" type="hidden">
         					<input name="adwordsField" id='adwordsField' type="hidden">
         					<input name="granularField" id="granularField" type="hidden">
@@ -135,11 +135,11 @@
         							<p>Connect with a team member by telling us a little about yourself.</p>
         						</div>
         						<div class="col-xs-12 extra-bottom-sm">
-        							<p data-href="inc/tab00.html" class="active">
+        							<p data-href="{{ url_for('static', filename='inc/tab00.html') }}" class="active">
         								<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1" id="customer_type_ev">
         								<label for="customer_type_ev">EV Driver</label>
         							</p>
-                                    <p data-href="inc/tab01.html" class="active">
+                                    <p data-href="{{ url_for('static', filename='inc/tab01.html') }}" class="active">
                                         <input type="radio" value="Property Manager" name="customer_type" class="radio2" id="customer_type_hoa">
                                         <label for="customer_type_hoa">Management</label>
                                     </p>
@@ -190,16 +190,16 @@
     					<a href="{{ url_for('why_evercharge') }}">Why EverCharge</a>
                         <a href="{{ url_for('smart_power') }}">SmartPower<sup>TM</sup></a>
                         <a href="{{ url_for('device_wattson') }}">Wattson</a>
-    					<a href="/faqs">FAQs</a>
+    					<a href="{{ url_for('faqs') }}">FAQs</a>
     				</div>
     			</div>
     			<div class="col-sm-3">
     				<h5>About EverCharge</h5>
     				<div class="footer-list">
-    					<a href="/aboutus">About Us</a>
+    					<a href="{{ url_for('about_us') }}">About Us</a>
     					<a href="https://angel.co/evercharge/jobs" target='_blank'>Careers</a>
-    					<a href="press">Press Resources</a>
-    					<a href="/properties">Properties</a>
+    					<a href="{{ url_for('press_page') }}">Press Resources</a>
+    					<a href="{{ url_for('evercharge_properties') }}">Properties</a>
                         <a href="http://blog.evercharge.net" target="_blank">EverCharge Blog</a>
     				</div>
     			</div>
@@ -236,8 +236,8 @@
     {% endif %}
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-	<script async src="js/bootstrap-formhelpers-phone.js"></script>
-	<script type="text/javascript" src="js/jquery.main.js"></script>
+	<script async type="text/javascript" src="{{ url_for('static', filename='js/bootstrap-formhelpers-phone.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.main.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/scroll_fade.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/transition.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/difficulties.js') }}"></script>
