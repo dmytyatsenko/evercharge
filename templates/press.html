@@ -55,8 +55,8 @@
                     <img src="{{ url_for('static', filename='images/EverCharge-logo-horizontal-teal.jpg') }}" class="border img-responsive extra-bottom-sm" alt="EverCharge Logo" />
                     <p><strong>Logo</strong></p>
                     <p>
-                        <a href="EverCharge-logo-files.zip" download="EverCharge-logo-files.zip">Logo (eps, jpg, png)</a> |
-                        <a href="evercharge-branding-guide-logo.pdf" download="evercharge-branding-guide-logo.pdf">Logo Usage Guide</a> 
+                        <a href="{{ url_for('static', filename='EverCharge-logo-files.zip') }}" download="EverCharge-logo-files.zip">Logo (eps, jpg, png)</a> |
+                        <a href="{{ url_for('static', filename='evercharge-branding-guide-logo.pdf') }}" download="evercharge-branding-guide-logo.pdf">Logo Usage Guide</a>
                     </p>
                 </div>
             </div>
@@ -96,13 +96,13 @@
                     <h2>Videos</h2>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-5">
-                    <a href="https://www.youtube.com/watch?v=M4t47yjCGWw" target="_blank"><img src="/images/ev_driver_video.png" class="extra-bottom-md desaturate img-responsive border"></a>
+                    <a href="https://www.youtube.com/watch?v=M4t47yjCGWw" target="_blank"><img src="{{ url_for('static', filename='images/ev_driver_video.png') }}" class="extra-bottom-md desaturate img-responsive border"></a>
                     <p>
                         <a href="https://www.youtube.com/watch?v=M4t47yjCGWw" target="_blank">For EV Drivers</a>
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-5">
-                    <a href="https://www.youtube.com/watch?v=8fpj8MhywaU" target="_blank"><img src="/images/hoa.png" class="extra-bottom-md desaturate img-responsive border"></a>
+                    <a href="https://www.youtube.com/watch?v=8fpj8MhywaU" target="_blank"><img src="{{ url_for('static', filename='images/hoa.png') }}" class="extra-bottom-md desaturate img-responsive border"></a>
                     <p>
                         <a href="https://www.youtube.com/watch?v=8fpj8MhywaU" target="_blank">For Property Managers</a>
                     </p>

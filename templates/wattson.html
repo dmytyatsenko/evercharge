@@ -9,7 +9,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-md-5">
-					<img src="images/EverCharge-Wattson-only.png" alt="Wattson" class="ec-wattson-only img-responsive">
+					<img src="{{ url_for('static', filename='images/EverCharge-Wattson-only.png') }}" alt="Wattson" class="ec-wattson-only img-responsive">
 				</div>
 				<div class="col-sm-5 col-md-6">
 					<div class="ec-wattson-does-wrap">
@@ -18,11 +18,11 @@
 							<h4 class="bitter">charge the widest range of vehicles on the planet and dramatically reduces installation costs.</h4>
 						</div>
 						<div class="ec-wattson-reserve">
-							<form action="/thankyou" method='post' class="validate-form">
+							<form action="{{ url_for('thank_you') }}" method='post' class="validate-form">
 								<input name="lead_source" value="Web Signup" type="hidden">
 								<input name="adwordsField" id='adwordsField' type="hidden">
 								<input name="granularField" id="granularField" type="hidden">
-								<fieldset>		
+								<fieldset>
 									<div class="row">
 										<div class="holder">
 											<div class="col-xs-12">
