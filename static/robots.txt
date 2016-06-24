@@ -6,4 +6,6 @@ Disallow: /installspecsfull
 Disallow: /installspecsshort
 Disallow: /potrero-case-study
 Disallow: /preferred
+Disallow: /tesla
+Disallow: /tesla-marketing
 Disallow: /thankyou

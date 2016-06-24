@@ -128,6 +128,11 @@ def preferred_electricians():
     return app.send_static_file('preferred.pdf')
 
 
+@app.route('/tesla-marketing')
+def tesla_marketing_sheet():
+    return app.send_static_file('EverCharge-Tesla-Marketing-Handout.pdf')
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
@@ -187,6 +192,11 @@ def faqs():
 @app.route('/press', methods=['POST', 'GET'])
 def press_page():
     return render_template('press.html')
+
+
+@app.route('/tesla', methods=['POST', 'GET'])
+def tesla_page():
+    return render_template('tesla.html')
 
 
 @app.route('/thankyou', methods=['POST', 'GET'])

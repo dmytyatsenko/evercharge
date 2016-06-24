@@ -58,7 +58,7 @@ textarea
         border-color: black
 
 
-// text links
+// links
 a
     color: $ec-teal
     text-decoration: none
@@ -72,6 +72,9 @@ a
     &:hover
         color: $ec-dk-teal
         text-decoration: underline
+a img
+    &:hover
+        cursor: pointer
 
 // buttons
 a, button, input
@@ -175,6 +178,9 @@ img.border
     background: RGBA(0,164,153,0.3)
     padding-bottom: 40px
     padding-top: 40px
+.ec-stretch-lt-teal-border
+    border: 4px solid RGBA(0,164,153,0.3)
+    padding: 40px 60px
 .ec-stretch-white
     background: white
     padding-bottom: 40px
@@ -302,6 +308,11 @@ p.black
         background: url(../images/parking-3.jpg) fixed no-repeat
         background-size: 100%
         height: 400px
+    &.img-tesla
+        background: url(../images/hero-tesla.jpg) fixed no-repeat
+        background-position-x: center
+        background-size: auto 320px
+        height: 320px
     &.img-thankyou
         background: url(../images/parking-1.jpg) fixed no-repeat
         background-size: 100%
@@ -584,12 +595,6 @@ fieldset.ec-fieldset
     z-index: 3
     img 
         margin-top: -100px
-.ec-wattson-quote
-    border: 4px solid RGBA(0,164,153,0.3)
-    margin-bottom: 80px
-    margin-top: 40px
-    padding: 40px 60px
-    text-align: center
 
 // page: smartpower
 .ec-smartpower-wrap
@@ -674,6 +679,11 @@ img.ec-award
         a.ec-button-white-border
             border-color: $ec-dk-teal
             color: $ec-dk-teal
+    .parallax 
+        &.img-tesla
+            background-position-x: center
+            background-size: auto 600px
+            height: 600px
 
 
 // lg
@@ -682,6 +692,11 @@ img.ec-award
         background-position: left -160px
     .ec-home-properties
         background-position-y: -200px
+    .parallax 
+        &.img-tesla
+            background-position-x: center
+            background-size: auto 450px
+            height: 450px
 
 // sm
 @media only screen and (max-width: 992px)
@@ -716,6 +731,10 @@ img.ec-award
             height: 400px
         &.img-partnership
             background-size: auto 800px
+        &.img-tesla
+            background-position-x: center
+            background-size: auto 260px
+            height: 260px
         &.img-why-ec
             background-position-y: inherit
             background-size: auto 600px
@@ -809,6 +828,10 @@ img.ec-award
         &.img-smartpower
             background-size: auto 500px
             height: 500px
+        &.img-tesla
+            background-position-x: left
+            background-size: 200%
+            height: 170px
         &.img-thankyou
             background-size: 100%
             height: 400px

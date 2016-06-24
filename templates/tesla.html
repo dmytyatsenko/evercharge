@@ -1,0 +1,74 @@
+{% extends 'layout/base.html' %}
+
+{% block banner_class %}
+    class="parallax img-tesla" data-speed="4" data-type="background"
+{% endblock %}
+
+{% block video %}
+{% endblock %}
+
+{% block content_one %}
+    <div class="ec-stretch-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <img src="{{ url_for('static', filename='images/EverCharge-Tesla-logos.jpg') }}" alt="EverCharge and Tesla" class="img-responsive extra-bottom-md" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <div class="ec-stretch-lt-teal-border extra-bottom-lg">
+                        <h2 class="ec-teal text-center extra-bottom-md">We Handle Everything</h2>
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-4 col-sm-push-8 col-lg-3 col-lg-push-9 text-center">
+                                <a href="{{ url_for('tesla_marketing_sheet') }}" target="_blank">
+                                    <img src="{{ url_for('static', filename='images/preview-tesla-sheet.png') }}" alt="EverCharge and Tesla" class="img-responsive extra-bottom-sm border" />
+                                </a>
+                                <p class="extra-bottom-sm"><a href="{{ url_for('tesla_marketing_sheet') }}" target="_blank">View &#8594;</a></p>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-sm-pull-4 col-lg-7 col-lg-pull-3">
+                                <h4 class="ec-caps">On-Site Evaluation</h4>
+                                <p class="extra-bottom-sm">Our electrician conducts on-site evaluation</p>
+                                <h4 class="ec-caps">Building Approval</h4>
+                                <p class="extra-bottom-sm">We work with building management or HOA to gain approval</p>
+                                <h4 class="ec-caps">Installation</h4>
+                                <p class="extra-bottom-sm">Completed by our electrician</p>
+                                <h4 class="ec-caps">Monitor Power Usage</h4>
+                                <p class="extra-bottom-sm">Each charger monitors electricity usage to bill resident and fully reimburse building</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <h2 class="ec-teal">FAQs</h2>
+                    <p class="ec-faq-q">What types of EV adaptors does EverCharge provide?</p>
+                    <div class="ec-faq-a">
+                        <p><strong>Tesla Connector:</strong> The Tesla connector is the standard connector for all Tesla vehicles. Tesla offers an adaptor that can be used to charge with J-1772 connector. EverCharge also offers a Tesla plug, so no adaptor is necessary.</p>
+                        <p><strong>SAE J-1772 Connector:</strong> This is the standard plug type for EVs in the United States, and can connect directly to most EVs manufactured for the North American market after 2000. Society of Automotive Engineers (SAE) developed this connector standard, and though not required, most vehicle manufacturers have adopted this connector type. It can be AC Level 1 and 2 and DC Level 1 and 2 charging.</p>
+                    </div>
+                    <p class="ec-faq-q">What are some of the benefits of EverCharge? </p>
+                    <div class="ec-faq-a extra-bottom-lg">
+                        <p>EverCharge makes charging in condos and apartments easy by navigating the complexities of EV charging. We handle everything including regulations, permitting, approvals, capacity limitations, property reimbursements etc:</p>
+                        <p><strong>Fully managed service:</strong> Ongoing $1M insurance, 24/7 support, maintenance and automated billing services at no cost to building management or association.</p>
+                        <p><strong>SmartPower<sup>TM</sup> Technology:</strong> EverCharge intelligently manages buildings power to maximize your infrastructure allowing up to 10x the number of chargers for install. <a href="{{ url_for('smart_power') }}">Read more about SmartPower</a></p>
+                        <p><strong>Cost of service:</strong> EverCharge offers the lowest rates of any EVSE service provider. For $15/month we provide $1,000,000 liability insurance, all maintenance, 24/7 lifetime support and billing services. EverCharge bills you only the energy you have used. Hourly rates are determined by your building’s rate schedule.</p>
+                        <p><strong>Cost of installation:</strong> Installation costs are determined by an onsite evaluation. Existing electrical infrastructure, distance from the electrical room, and complexity determine the variable installation costs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-2 col-md-4">
+                    <a class="ec-button-teal-border extra-bottom-lg block" href="http://blog.evercharge.net/schneider-electric-and-evercharge-collaborate-to-accelerate-electric-vehicle-charging-in-multi-tenant-buildings/">Find out more &#8594;</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p><em>The TESLA logo and name are owned by Tesla Motors Inc</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
