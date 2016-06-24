@@ -130,7 +130,7 @@ def preferred_electricians():
 
 @app.route('/tesla-marketing')
 def tesla_marketing_sheet():
-    return app.send_static_file('EverCharge-Tesla-Markting-Handout.pdf')
+    return app.send_static_file('EverCharge-Tesla-Marketing-Handout.pdf')
 
 
 @app.errorhandler(404)
