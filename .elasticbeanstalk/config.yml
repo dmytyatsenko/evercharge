@@ -1,6 +1,8 @@
 branch-defaults:
   master:
     environment: webMain-env
+  web-103-transfer-blog-to-suburl:
+    environment: webMain-env-new-blog
   web-49-enable-compression:
     environment: webMain-env-stage
 global:
