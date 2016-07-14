@@ -52,24 +52,25 @@
                                 <p>We understand your needs</p>
                             </div>
                             <div class="col-sm-offset-2 col-sm-8">
-                                <h2 class="ec-teal text-center extra-bottom-md">Working with EverCharge</h2>
+                                <h2 class="ec-teal text-center extra-bottom-md">We Handle Everything</h2>
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-sm-6 col-md-5">
-                                <img src="{{ url_for('static', filename='images/why-electrician.jpg') }}" class="img-responsive" />
-                            </div>
-                            <div class="col-sm-6 col-md-offset-1">
                                 <h4 class="ec-caps">On-Site Evaluation</h4>
                                 <p>One of our preferred electricians conducts on-site evaluation.</p>
 
-                                <h4 class="ec-caps">Gain Building Approval</h4>
+                                <h4 class="ec-caps">Gain Building &amp; HOA Approval</h4>
                                 <p>We work with management and customer to gain approval.</p>
 
-                                <h4 class="ec-caps">Schedule Installation</h4>
-                                <p>Installation is completed by the electrician.</p>
-
-                                <h4 class="ec-caps">Monitor Power Usage</h4>
+                                <h4 class="ec-caps">Installation</h4>
+                                <p>All our hardware is installed by a certified electrician.</p>
+                            </div>
+                            <div class="col-sm-6 col-md-offset-1">
+                                <h4 class="ec-caps">Monitor Power Usage &amp; Reimburse</h4>
                                 <p>Each charger has a built-in monitor to keep track of the electricity consumed, which we bill residents and reimburse the building for.</p>
+
+                                <h4 class="ec-caps">On-going Service and Support</h4>
+                                <p>No matter what happens EverCharge provides 24/7 on-site maintenance, service &amp; support.</p>
                             </div>
                         </div>
                     </div>
@@ -82,15 +83,20 @@
                             </div>
                             <div class="col-sm-offset-2 col-sm-8">
                                 <h2 class="ec-teal text-center">SmartPower<sup>TM</sup></h2>
-                                <h3 class="bitter ec-teal text-center extra-bottom-md">Our SmartPower technology maximizes current building infrastructure by intelligently allocating power where and when it's needed most</h3>
                             </div>
                             <div class="clearfix"></div>
-                            <div class="col-sm-6 col-md-5">
+                            <div class="col-sm-12 extra-bottom-lg">
                                 <img src="{{ url_for('static', filename='images/smartpower-800.png') }}" class="img-responsive" />
                             </div>
-                            <div class="col-sm-6 col-md-offset-1">
-                                <h4 class="ec-caps">HOW IT WORKS</h4>
-                                <p>Our chargers connect to common area power to effectively scale throughout the entire building. Usage is then monitored by our system to keep track of power allocated, then residents are automatically billed accordingly.</p>
+                            <div class="clearfix"></div>
+                            <div class="col-sm-offset-1 col-sm-10">
+                                <h4 class="ec-caps">How it Works</h4>
+                                <p class="ec-zero ec-teal"><strong>Maximizes Existing Infrastructure</strong></p>
+                                <p>Our SmartPower technology maximizes existing building infrastructure by intelligently allocating power where and when it's needed most</p>
+                                <p class="ec-zero ec-teal"><strong>Lowers Install Costs</strong></p>
+                                <p>With SmartPower expensive infrastructure additions are unnecessary</p>
+                                <p class="ec-zero ec-teal"><strong>Where You Want It</strong></p>
+                                <p class="extra-bottom-md">EverCharge can install 10x more EVSE's in any given location, so every resident can have their own private station installed in their space </p>
                                 <p><a href="{{ url_for('smart_power') }}" class="ec-text-link">Learn More &#8594;</a></p>
                             </div>
                         </div>
@@ -126,18 +132,26 @@
         </div>
     </div>
 
-<div class="ec-stretch-border-top">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-6">
-                <h2 class="ec-teal">Wattson is the first-of-its-kind device that dynamically charges EVs and more while maximizing the current building infrastructure.</h2>
-                <p class="extra-bottom-lg">By using Wattson buildings save thousands on install costs while providing every EV driver their own charging station.</p>
-                <p><a href="{{ url_for('device_wattson') }}" class="ec-text-link">Learn More &#8594;</a>
-            </div>
-            <div class="col-xs-8 col-sm-offset-1 col-sm-4">
-                <img src="{{ url_for('static', filename='images/EverCharge-Wattson-Schneider-front-crop.jpg') }}" class="img-responsive" />
+    <div class="ec-stretch-border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8">
+                    <h2 class="ec-teal text-center extra-bottom-md">Working with EverCharge</h2>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-sm-6 col-md-5">
+                    <img src="{{ url_for('static', filename='images/why-electrician.jpg') }}" class="img-responsive" />
+                </div>
+                <div class="col-sm-6 col-md-offset-1">
+                    <h4>Contact EverCharge</h4>
+                    <h4>Schedule on-site evaluation</h4>
+                    <h4>Gain building approval</h4>
+                    <h4>Complete install</h4>
+                    <h4>Start charging</h4>
+                    <h4>Drivers pay monthly online</h4>
+                    <h4>Buildings receive quarterly reimbursement</h4>
+                </div>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}
