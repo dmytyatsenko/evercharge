@@ -10,6 +10,12 @@ $ec-lt-teal: RGBA(178,224,225,1.0)
 $ec-lt-teal-60: RGBA(178,224,225,0.6)
 $ec-dk-teal: RGBA(0,89,79,1.0)
 $ec-red: RGBA(248,72,94,1.0)
+$ec-lt-blue: RGBA(193,224,244,1.0)
+$ec-blue: RGBA(104,206,242,1.0)
+$ec-dk-blue: RGBA(21,152,203,1.0)
+$ec-lt-purple: RGBA(182,189,224,1.0)
+$ec-dk-purple: RGBA(69,68,149,1.0)
+$ec-dk-yellow: RGBA(239,216,0,1.0)
 // type
 $ec-font-bitter: 'Bitter', serif
 $ec-font-work-sans: 'Work Sans', Arial, sans-serif
@@ -108,9 +114,10 @@ a.ec-text-link
         cursor: pointer
 a.ec-button-teal
     background: $ec-teal
-    border: 1px solid $ec-dk-teal
+    border: 2px solid $ec-teal
     color: white
     font-size: 14px
+    font-weight: 600
     margin-top: 14px
     min-height: 40px
     padding: 15px 30px
@@ -118,17 +125,20 @@ a.ec-button-teal
     &:hover
         background: $ec-dk-teal
         cursor: pointer
+        text-decoration: none
 .ec-button-teal
     background: $ec-teal
-    border: 1px solid $ec-dk-teal
+    border: 2px solid $ec-teal
     color: white
     font-size: 14px
+    font-weight: 600
     margin-top: 14px
     min-height: 40px
     padding: 15px 30px
     text-transform: uppercase
     &:hover
         background: $ec-dk-teal
+        border-color: $ec-dk-teal
         cursor: pointer
     &:disabled
         opacity: 0.3
@@ -141,6 +151,14 @@ a.ec-button-teal
     width: 100%
 
 //boxes
+.ec-bk-lt-blue
+    background-color: $ec-lt-blue
+.ec-bk-dk-purple
+    background-color: $ec-dk-purple
+.ec-bk-lt-teal
+    background-color: $ec-lt-teal
+.ec-box
+    padding: 30px
 img.border
     border: 1px solid $ec-md-grey
 .ec-box-white-border
@@ -185,6 +203,9 @@ img.border
     background: white
     padding-bottom: 40px
     padding-top: 40px
+.extra-stretch
+    padding-bottom: 80px
+    padding-top: 80px
 .border-bottom
     border-bottom: 1px solid $ec-md-grey
 .ec-stretch-border-top
@@ -222,14 +243,32 @@ h4.ec-caps
     text-transform: uppercase
 h5
     font-size: 1em
-    font-weight: 400
+    font-weight: 600
     line-height: 1.1em
 p
-    font-size: 0.875em
+    font-size: 1em
     font-weight: 400
+    letter-spacing: -0.3px
     line-height: 1.4em
     margin-bottom: 10px
     margin-top: 0
+ul.bullet-list 
+    list-style: none
+    font-size: 1em
+    line-height: 135%
+    margin-left: 15px
+    padding-left: 0
+li.bullet
+    list-style-type: none
+    list-style-image: none
+    margin-bottom: 5px
+    padding-left: 1em
+    position: relative
+    &:before
+        content: "\02022"
+        left: 0
+        padding-top: 1px
+        position: absolute
 .bitter
     font-family: $ec-font-bitter
     font-style: italic
@@ -525,32 +564,55 @@ fieldset.ec-fieldset
     background: $ec-teal
     margin-top: 50px
 .ec-home-splash
+    background: url(../images/parking-5.jpg) no-repeat
+    background-position: right top
+    background-size: auto 940px
+    height: 510px
+    padding: 0
+.ec-home-splash-text
+    padding: 60px 60px 70px 30px
+.ec-video-wrap
+    padding: 70px 40px
+    .ec-video
+        border: 2px solid white
+        width: 100%
+.ec-home-properties
+    background: url(../images/building-4.jpg) no-repeat
+    background-position: center center
+    background-size: auto 300px
+    height: 300px
+    padding: 30px
+    width: 100%
+.ec-home-charging-experts
+    background: url(../images/building-6.jpg) no-repeat
+    background-size: 160%
+    h1
+        margin-top: 40px
+    h3
+        color: $ec-teal
+        font-weight: 600
+    .ec-col-30
+        float: left
+        margin-left: 1%
+        margin-right: 1%
+        width: 30%
+        p
+            margin-bottom: 20px
+.ec-mini-quote-form 
+    .ec-button-teal-border 
+        line-height: 1em
+        margin-top: 0
+.ec-intro-wattson-wrap
+    background: $ec-teal
+    margin-left: 15px
+.ec-intro-wattson
     background: url(../images/EverCharge-Wattson-Schneider.jpg) no-repeat
     background-position: 0px -130px
     background-size: auto 940px
     height: 510px
     padding: 0
-.ec-home-splash-text
+.ec-intro-wattsontext
     padding: 100px 60px 20px 30px
-.ec-home-properties
-    background: url(../images/building-4.jpg) no-repeat
-    background-position: bottom center
-    background-size: 100%
-    height: 300px
-    padding-bottom: 60px
-    padding-top: 60px
-    position: relative
-.ec-home-charging-experts
-    background: url(../images/building-6.jpg) no-repeat
-    background-size: 100%
-    h1
-        margin-top: 140px
-    h2 
-        margin-top: 40px
-.ec-mini-quote-form 
-    .ec-button-teal-border 
-        line-height: 1em
-        margin-top: 0
 
 // page: wattson
 .ec-wattson-banner
@@ -668,17 +730,11 @@ img.ec-award
             position: absolute
             right: 0
     .ec-home-splash
-        background-position: left -210px
         background-size: 100%
         height: 968px
     .ec-home-splash-text
         font-size: 1.4em
-        padding: 180px 80px 20px 30px
-        h1, h4, h3
-            text-shadow: $ec-text-shadow
-        a.ec-button-white-border
-            border-color: $ec-dk-teal
-            color: $ec-dk-teal
+        padding: 80px 170px 40px 30px
     .parallax 
         &.img-tesla
             background-position-x: center
@@ -689,9 +745,9 @@ img.ec-award
 // lg
 @media only screen and (min-width: 1400px) and (max-width: 1599px)
     .ec-home-splash
-        background-position: left -160px
-    .ec-home-properties
-        background-position-y: -200px
+        background-position: left top
+    .ec-video-wrap
+        padding: 40px
     .parallax 
         &.img-tesla
             background-position-x: center
@@ -703,18 +759,19 @@ img.ec-award
     h1
         font-size: 2.8em
     .ec-home-splash
-        background-position: 0px -50px
-        background-size: auto 600px
+        background-position: left top
+        background-size: 100%
         height: 460px
+    .ec-video-wrap
+        padding: 40px
     .ec-home-splash-text
-        padding: 60px 40px 20px 20px
+        padding: 40px 40px 40px 20px
+
     .ec-home-charging-experts
-        h1, 
-        h2
+        background-position: center right
+        background-size: 200%
+        h1, h2
             margin-top: 10px
-    .ec-home-properties
-        background-position-y: -50px
-        background-size: 150%
 
     .ec-why-wrap .tab-pane 
         img
@@ -754,13 +811,16 @@ img.ec-award
         padding: 20px
 
     .ec-home-splash
-        background-position: left -75px
-        height: 460px
+        height: 0px
     .ec-home-splash-text
         padding-top: 20px
     .ec-home-charging-experts
-        background-position: center center
-        background-size: auto 1160px
+        background: none
+        background-color: $ec-lt-grey
+        .ec-col-30
+            float: none
+            margin: 10px auto 20px auto
+            width: 80%
     .ec-home-properties
         background-position-y: -50px
         background-size: auto 400px

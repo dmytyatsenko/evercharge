@@ -4,12 +4,16 @@
     <div class="ec-home-splash-wrap">
         <div class="container-fluid">
             <div class="row">
-                <div class="ec-home-splash col-sm-6 col-lg-7 col-xl-12"></div>
-                <div class="col-sm-6 col-lg-5">
+                <div class="ec-home-splash col-md-6 col-lg-7">
+                    <!-- <div class="ec-video-wrap">
+                        <video src="images/video-home-splash.mp4" autoplay loop controls type="video/mp4" class="ec-video">
+                        </video>
+                    </div> -->
+                </div>
+                <div class="col-md-6 col-lg-5">
                     <div class="ec-home-splash-text">
-                        <h4 class="ec-caps white">INTRODUCING</h4>
-                        <h1 class="white"><strong>WATTSON</strong></h1>
-                        <h3 class="white extra-bottom-lg">EverCharge's newest electric charging solution is the most dynamic charger on the planet</h3>
+                        <h1 class="white"><strong>Intelligence Matters</strong></h1>
+                        <h3 class="white extra-bottom-md">EverCharge built the world's smartest EV charger specifically designed for multifamily homes like apartments and condominiums</h3>
                         <a href="{{ url_for('device_wattson') }}" class="ec-button-white-border">Learn More &#8594;</a>
                     </div>
                 </div>
@@ -24,7 +28,7 @@
 				<input name="granularField" id="granularField" type="hidden">
 				<fieldset>
 					<div class="row">
-						<center><h4 class="ec-caps">Need More Info?</h4></center>
+						<center><h4 class="ec-caps">Connect with EverCharge Today</h4></center>
 					</div>
 					<div class="row">
 						<div class="holder">
@@ -49,62 +53,112 @@
 	</div>
     <div class="ec-stretch-white ec-home-charging-experts">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-6 col-md-5">
+            <div class="row text-center extra-bottom-lg">
+                <div class="col-sm-12">
                     <h1 class="ec-teal">Charging Experts</h1>
-                    <h3 class="extra-bottom-md">EverCharge makes widespread EV adoption possible in apartments and condominiums.</h3>
-                    <a href="{{ url_for('why_evercharge') }}" class="ec-button-teal-border block">Why EverCharge</a>
-                    <div class="visible-xs extra-bottom-md"></div>
+                    <h2 class="extra-bottom-md">EverCharge makes widespread EV adoption possible in apartments and condominiums</h2>
                 </div>
-                <div class="col-sm-6 col-md-offset-1 col-md-5">
-                    <div class="row extra-bottom-sm">
-                        <div class="col-xs-4 col-md-5">
+                <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+                    <a href="{{ url_for('why_evercharge') }}" class="ec-button-teal block">See Why EverCharge &#8594;</a>
+                </div>
+            </div>
+            <div class="row extra-bottom-md">
+                <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                    <div class="ec-col-30">
+                        <div class="ec-box ec-bk-lt-blue">
                             <img src="{{ url_for('static', filename='images/icon-1.png') }}" class="img-responsive" alt="" />
                         </div>
-                        <div class="col-xs-8 col-md-7">
-                            <h2>Here to Help</h2>
-                            <h5>We understand your needs</h5>
+                        <div class="ec-box-white">
+                            <h3>Here to Help</h3>
+                            <p>We understand your needs and handle everything like</p>
+                            <ul class="bullet-list">
+                                <li class="bullet">Permitting</li>
+                                <li class="bullet">Installs</li>
+                                <li class="bullet">Maintenance</li>
+                                <li class="bullet">Support</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="row extra-bottom-sm">
-                        <div class="col-xs-4 col-md-5">
+                    <div class="ec-col-30">
+                        <div class="ec-box ec-bk-lt-teal">
                             <img src="{{ url_for('static', filename='images/icon-3.png') }}" class="img-responsive" alt="" />
                         </div>
-                        <div class="col-xs-8 col-md-7">
-                            <h2>Dedicated Stations</h2>
-                            <h5>No sharing, no waiting</h5>
+                        <div class="ec-box-white">
+                            <h3>Dedicated Stations</h3>
+                            <p>SmartPower technology gives every driver their own station</p>
+                            <ul class="bullet-list">
+                                <li class="bullet">No Sharing</li>
+                                <li class="bullet">No Waiting</li>
+                                <li class="bullet">Installed directly in your space</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xs-4 col-md-5">
+                    <div class="ec-col-30">
+                        <div class="ec-box ec-bk-dk-purple">
                             <img src="{{ url_for('static', filename='images/icon-2.png') }}" class="img-responsive" alt="" />
                         </div>
-                        <div class="col-xs-8 col-md-7">
-                            <h2>Long-Term Value</h2>
-                            <h5>Affordable solution</h5>
+                        <div class="ec-box-white">
+                            <h3>Long-Term Value</h3>
+                            <p>Our solution gets buildings EV ready now and protects them for the future</p>
+                            <ul class="bullet-list">
+                                <li class="bullet">Affordable solution</li>
+                                <li class="bullet">Future-proof your building</li>
+                                <li class="bullet">Instantly scaleable from day one</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- end row -->
         </div>
     </div>
-    <div class="ec-home-properties">
+    <div class="ec-stretch-lt-teal ec-mini-quote-form">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-md-offset-2 col-md-8">
-                    <h2 class="white extra-bottom-md">EverCharge maximizes current building electrical infrastructure and expands capacity for EV charging well into the future.</h2>
-                    <p><a href="{{ url_for('evercharge_properties') }}" class="ec-text-link white">View Properties &#8594;</a></p>
+            <form action="{{ url_for('thank_you') }}" method='post' class="validate-form">
+                <input name="lead_source" value="Web Signup" type="hidden">
+                <input name="adwordsField" id='adwordsField' type="hidden">
+                <input name="granularField" id="granularField" type="hidden">
+                <fieldset>
+                    <div class="row">
+                        <center><h4 class="ec-caps">Connect with EverCharge Today</h4></center>
+                    </div>
+                    <div class="row">
+                        <div class="holder">
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="form-group">
+                                    <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off"> 
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <div class="form-group">
+                                    <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4">
+                                <input type="submit" value="Connect With Us" class="ec-button-teal-border">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="ec-stretch-white extra-stretch">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <div class="ec-home-properties">
+                        <h2 class="white extra-bottom-md">EverCharge maximizes current building electrical infrastructure and expands capacity for EV charging well into the future.</h2>
+                        <p><a href="{{ url_for('evercharge_properties') }}" class="ec-text-link white">Success Stories &#8594;</a></p>
+                    </div>
+                    <!-- end ec-home-properties -->
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="ec-stretch-lt-teal">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-sm-12 col-md-offset-2 col-md-8">
-                    <h2 class="bitter ec-teal extra-bottom-md">“Having EV charging in apartments and condominiums is critical to the continued success of EV adoption. This collaborative solution effectively resolves building concerns and challenges with smart energy management and automation capabilities.”</h2>
-                    <p class="extra-bottom-lg">&ndash; <strong>Pierre Sacré</strong>, director of Electric Vehicle Solutions at Schneider Electric North America</p>
-                    <p><a href="{{ url_for('schneider_partnership') }}" class="ec-text-link">Read about the Schneider Partnership &#8594;</a></p>
+                <div class="col-sm-12 col-md-6">
+                    <div class="ec-box">
+                        <h2 class="bitter ec-teal extra-bottom-sm">“Having EV charging in apartments and condominiums is critical to the continued success of EV adoption.”</h2>
+                        <p class="extra-bottom-sm">&ndash; <strong>Pierre Sacré</strong>, director of Electric Vehicle Solutions at Schneider Electric North America</p>
+                        <p><a href="{{ url_for('schneider_partnership') }}" class="ec-text-link">See how EverCharge and Schneider Electric are working together &#8594;</a></p>
+                    </div>
                 </div>
             </div>
         </div>
