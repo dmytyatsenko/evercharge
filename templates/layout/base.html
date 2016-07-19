@@ -1,15 +1,13 @@
 <!DOCTYPE HTML>
 <html lang='EN'>
 <head>
-	<!-- Start of evercharge Zendesk Widget script -->
-    {%- if not config.DEBUG  -%}
-	<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("//assets.zendesk.com/embeddable_framework/main.js","evercharge.zendesk.com");/*]]>*/</script>
-    {%- endif -%}
-	<!-- End of evercharge Zendesk Widget script -->
-	<meta charset='UTF-8'>
+
+	<meta charset="UTF-8">
+    <title>EverCharge - Smart EV Charging for Apartments and Condominiums</title>
 	<meta name="description" content="Electric Vehicle (EV) charging stations for multi-tenant buildings, including condos and apartments, saves properties thousands on infrastructure upgrades.">
 
-	<meta name='keywords' content="electric car apartment,electric car charging stations apartments, condo electric, charging an electric car in an apartment, apartments with electric car charging, how to charge electric car in apartment, EV, Electric Vehicle, Electric Car, chargers, charging, condo, apartment, Tesla, Nissan Leaf, Model S, Model X, Roadster, Chevy Volt, community, common area, residential, HOA, Homeowner's Association distributed power,sequencing, line capacity management,">
+	<meta name="keywords" content="electric car apartment,electric car charging stations apartments, condo electric, charging an electric car in an apartment, apartments with electric car charging, how to charge electric car in apartment, EV, Electric Vehicle, Electric Car, chargers, charging, condo, apartment, Tesla, Nissan Leaf, Model S, Model X, Roadster, Chevy Volt, community, common area, residential, HOA, Homeowner's Association distributed power,sequencing, line capacity management,">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Enable Twitter Cards -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@evercharge">
@@ -18,54 +16,33 @@
 	<meta name="twitter:description" content="Electric Vehicle (EV) charging stations for multi-tenant buildings, including condos and apartments, saves properties thousands on infrastructure upgrades.">
 	<meta name="twitter:image" content="{{url_for('static', filename='images/badge_logo_medium.gif') }}">
 
-
-	<!-- set the viewport width and initial-scale on mobile devices -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>EverCharge - Smart EV Charging for Apartments and Condominiums</title>
 	<link rel="shortcut icon" href="{{url_for('static', filename='/favicon.ico') }}" type="image/x-icon">
 	<link rel="icon" href="{{url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 
-	<!-- include the site stylesheet -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-	<!-- <link rel="stylesheet" href="{{ url_for('static', filename='/css/all.min.css') }}"> -->
-	<link rel="stylesheet" href="{{ url_for('static', filename='/css/modal.min.css') }}">
-
-	<link rel="stylesheet" href="{{ url_for('static', filename='/css/all.css') }}">
-    {% assets "css_all" %}
-        <link rel="stylesheet" href="{{ ASSET_URL }}">
-    {% endassets %}
-	<!-- <link rel='stylesheet' href="{{ url_for('static', filename='/css/modal.css') }}"> -->
-
-<!-- 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='/css/shadowbox.css') }}"> -->
-
-	<link rel="stylesheet" id="font-awesome-css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" type="text/css" media="screen">
-
-	<!-- include the google font -->
-	<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300italic,400,400italic,600%7CWork+Sans:200,400,600,700,800%7CBitter:400italic' rel='stylesheet' type='text/css'>
-
-
-	<!-- include jQuery library -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/all.css') }}">
+    {% assets "css_all" %}<link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
+    <link rel="stylesheet" id="font-awesome-css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300italic,400,400italic,600%7CWork+Sans:200,400,600,700,800%7CBitter:400italic' type="text/css">
+    {%- block extra_css -%}{%- endblock -%}
 	<!-- include script for window -->
 	<script type="text/javascript">
 		if (navigator.userAgent.match(/IEMobile\/10\.0/) || navigator.userAgent.match(/MSIE 10.*Touch/)) {
-			var msViewportStyle = document.createElement('style')
-			msViewportStyle.appendChild(
-				document.createTextNode(
-					'@-ms-viewport{width:auto !important}'
-				)
-			)
+			var msViewportStyle = document.createElement('style');
+			msViewportStyle.appendChild(document.createTextNode('@-ms-viewport{width:auto !important}'));
 			document.querySelector('head').appendChild(msViewportStyle)
 		}
 	</script>
-
-	 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<link rel="stylesheet" href="css/ie.css">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/ie.css') }}">
 	<![endif]-->
+    {%- if not config.DEBUG  -%}
+	<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("//assets.zendesk.com/embeddable_framework/main.js","evercharge.zendesk.com");/*]]>*/</script>
+    {%- endif -%}
 </head>
 
 
@@ -244,18 +221,11 @@
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/parallax.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/smoothscroll.js') }}"></script>
 	<script async type="text/javascript" src="{{ url_for('static', filename='js/nutshell-adwords.js') }}"></script>
-
-
-	<!-- BING ADS SCRIPTS -->
     {%- if not config.DEBUG -%}
-	<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5061401"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
-	</script>
-	<noscript>
-		<img src="//bat.bing.com/action/0?ti=5061401&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" alt=""/>
-	</noscript>
-    {% endif %}
-
-	{% block custom_scripts %}
-	{% endblock %}
+        <!-- BING ADS SCRIPTS -->
+        <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5061401"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+        <noscript><img src="//bat.bing.com/action/0?ti=5061401&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" alt=""/></noscript>
+    {%- endif -%}
+    {%- block custom_scripts -%}{%- endblock -%}
 </body>
 </html>

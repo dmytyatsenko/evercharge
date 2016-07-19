@@ -1,5 +1,9 @@
 {% extends 'layout/base.html' %}
 
+{%- block extra_css -%}
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/modal.min.css') }}">
+{%- endblock -%}
+
 {% block banner_class %}
     class="parallax img-thankyou" data-speed="4" data-type="background"
 {% endblock %}
