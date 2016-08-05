@@ -14,6 +14,17 @@ sass = Bundle('sass/all.sass', filters='sass', output='css/sass.css')
 css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
 assets.register('css_all', css_all)
 
+js = Bundle('js/bootstrap-formhelpers-phone.js',
+            'js/jquery.main.js',
+            'js/scroll_fade.js',
+            'js/transition.js',
+            'js/difficulties.js',
+            'js/parallax.js',
+            'js/smoothscroll.js',
+            'js/nutshell-adwords.js',
+            filters='jsmin', output='js/gen/packed.js')
+assets.register('js_all', js)
+
 
 # Nutshell client configuration
 NUTSHELL_USERNAME = 'jason@evercharge.net'
