@@ -295,12 +295,6 @@ button.flat_button {
 	margin: 10px;
 }
 
-iframe {
-	border: none;
-	height: 650px;
-	width: 95%;
-}
-
 .nav-tabs li, article.options {
 	color: white;
 	text-transform: uppercase;

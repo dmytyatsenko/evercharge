@@ -234,6 +234,13 @@ def thank_you():
 
     return render_template("thank_you.html", newLeadId=new_lead_id, contactId=contact_id, note=note)
 
+##########################
+# BUILDING SIGNUP ROUTES #
+##########################
+@app.route('/lumina', methods=['POST', 'GET'])
+def signup_lumina():
+    return render_template("signup-lumina.html")
+
 
 ###################
 # Nutshell Routes #

@@ -4,6 +4,7 @@ Disallow: /datasheet
 Disallow: /install
 Disallow: /installspecsfull
 Disallow: /installspecsshort
+Disallow: /lumina
 Disallow: /potrero-case-study
 Disallow: /preferred
 Disallow: /tesla
