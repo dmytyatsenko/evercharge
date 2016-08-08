@@ -26,11 +26,27 @@ $ec-text-shadow: 2px 2px 7px RGBA(0,0,0,0.6)
 //////////////////////
 
 //////////////////////
-// COMPONENTS
-// bootstrap overrides
+// GENERAL
+html
+    min-height: 100%
+    position: relative // for sticky footer
 body
     font-family: $ec-font-work-sans
+    font-size: 16px
+    font-weight: 400
+    -webkit-text-size-adjust: 100%
+    -ms-text-size-adjust: none
+    margin-bottom: 220px // needs to equal height of footer in md-screen
+    min-width: 320px
+html,
+body
+    max-width: 100%
+    overflow-x: hidden
 
+
+//////////////////////
+// COMPONENTS
+// bootstrap overrides
 input[type=email],
 input[type=search],
 input[type=text],
@@ -41,6 +57,9 @@ textarea
     border-radius: 0
     @extend .form-control
 
+.form-group
+    margin-bottom: 15px
+    overflow: hidden
 .form-control
     background: white
     border: 1px solid $ec-md-grey
@@ -62,7 +81,6 @@ textarea
     &:hover
         background: white
         border-color: black
-
 
 // links
 a
@@ -146,6 +164,8 @@ a.ec-button-teal
         opacity: 0.3
         &:hover
             background: $ec-teal
+input[type="submit"]
+    @extend .ec-button-teal
 .no-padding-right
     padding-right: 0
 .block
@@ -296,9 +316,15 @@ li.bullet
     padding: 0 !important
 
 // misc
-hr.ec-hr-extra
+hr
+    border-color: $ec-lt-grey
+    border-style: solid
+    border-width: 1px
     margin-bottom: 20px
     margin-top: 20px
+hr.ec-hr-extra
+    margin-bottom: 30px
+    margin-top: 30px
 p.black
     color: black
     line-height: 1.4em
@@ -539,9 +565,11 @@ fieldset.ec-fieldset
         width: 33.333%
     .nav-tabs li.active a
         background: $ec-teal
+        border: none
         padding-bottom: 22px
         &:hover
             background: $ec-dk-teal 
+            border: none
             cursor: pointer
         h4, p
             color: white
@@ -551,6 +579,7 @@ fieldset.ec-fieldset
         padding: 70px 20px 20px 20px
         &:hover 
             background: #58595B
+            border: none
             cursor: pointer
             padding-bottom: 22px
             h4, p
@@ -819,6 +848,12 @@ img.ec-award
 
 // xs
 @media only screen and (max-width: 767px)
+    body
+        margin-bottom: 595px
+    form
+        .form-group
+            margin-bottom: 5px
+
     .container
         padding-left: 16px
         padding-right: 16px

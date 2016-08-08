@@ -21,7 +21,6 @@
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='/css/all.css') }}">
     {% assets "css_all" %}<link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
     <link rel="stylesheet" id="font-awesome-css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" type="text/css" media="screen">
     <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300italic,400,400italic,600%7CWork+Sans:200,400,600,700,800%7CBitter:400italic' type="text/css">
@@ -90,15 +89,6 @@
         {% block content_one %}
         {% endblock %}
 
-        {% block video %}
-        	<article class="ec-stretch-white" id='video'>
-        		<h2>Check out our video to learn more</h2>
-        		<div class="video-container">
-        			<iframe src="http://www.youtube.com/embed/M4t47yjCGWw?hd=1&rel=0&autohide=1&showinfo=0" frameborder="0" allowfullscreen></iframe>
-        		</div>
-        	</article>
-        {% endblock %}
-
         {% block quote_form %}
         	<div class="ec-stretch-grey">
         		<div class="container">
@@ -143,8 +133,8 @@
         							<textarea name="quote_notes" rows="2" class="form-control" placeholder="Additional comments" autocomplete="off"></textarea>
         						</div>
         						<div class="clearfix"></div>
-        						<div class="col-xs-12 col-md-8">
-        							<input type="submit" value="Get your Quote" class="ec-button-teal">
+        						<div class="col-xs-12 col-md-6">
+        							<input type="submit" value="Get your Quote" class="ec-button-teal block">
         						</div>
         					</fieldset>
         				</form>
