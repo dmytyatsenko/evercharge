@@ -271,7 +271,6 @@ def referred_customer():
     lead_id = request.form.get('lead_id')
     if lead_id:
         reference = request.form.get('reference')
-
         nutshell_client.editLead(leadId=lead_id,
                                  rev='REV_IGNORE',
                                  lead=dict(customFields={'Additional Notes': reference}))
