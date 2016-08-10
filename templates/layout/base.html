@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <html lang='EN'>
 <head>
-
 	<meta charset="UTF-8">
     <title>EverCharge - Smart EV Charging for Apartments and Condominiums</title>
 	<meta name="description" content="Electric Vehicle (EV) charging stations for multi-tenant buildings, including condos and apartments, saves properties thousands on infrastructure upgrades.">
@@ -35,13 +34,7 @@
 	</script>
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/ie.css') }}">
-	<![endif]-->
-    {%- if not config.DEBUG  -%}
-	<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("//assets.zendesk.com/embeddable_framework/main.js","evercharge.zendesk.com");/*]]>*/</script>
-    {%- endif -%}
+	<!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><link rel="stylesheet" href="{{ url_for('static', filename='css/ie.css') }}"><![endif]-->
 </head>
 
 
