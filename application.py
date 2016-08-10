@@ -100,29 +100,36 @@ def smartpower_overview():
 def potrero_case_study():
     return app.send_static_file('EverCharge-Property-Case-Study-Potrero.pdf')
 
+
 @app.route('/evercharge-case-study-1')
 def property_case_study_one():
     return app.send_static_file('EverCharge-Property-Case-Study-1.pdf')
+
 
 @app.route('/evercharge-case-study-2')
 def property_case_study_two():
     return app.send_static_file('EverCharge-Property-Case-Study-2.pdf')
 
+
 @app.route('/evercharge-case-study-3')
 def property_case_study_three():
     return app.send_static_file('EverCharge-Property-Case-Study-3.pdf')
+
 
 @app.route('/evercharge-case-study-4')
 def property_case_study_four():
     return app.send_static_file('EverCharge-Property-Case-Study-4.pdf')
 
+
 @app.route('/evercharge-case-study-5')
 def property_case_study_five():
     return app.send_static_file('EverCharge-Property-Case-Study-5.pdf')
 
+
 @app.route('/evercharge-case-study-6')
 def property_case_study_six():
     return app.send_static_file('EverCharge-Property-Case-Study-6.pdf')
+
 
 @app.route('/datasheet')
 def data_sheet():
@@ -215,6 +222,8 @@ def thank_you():
     if request.method == 'GET':
         return redirect('/')
     name = request.form.get('quote_name')
+    if name.lower() in ('driver test', 'pm test'):
+        return render_template("thank_you.html")
     phone = request.form.get('quote_phone', None)
     email = request.form.get('quote_email')
     note = request.form.get('quote_notes')
@@ -245,6 +254,7 @@ def thank_you():
 
     return render_template("thank_you.html", newLeadId=new_lead_id, contactId=contact_id, note=note)
 
+
 ##########################
 # BUILDING SIGNUP ROUTES #
 ##########################
@@ -258,31 +268,34 @@ def signup_lumina():
 ###################
 @app.route('/nutshell/reference', methods=['POST'])
 def referred_customer():
-    reference = request.form.get('reference')
-    new_lead_id = request.form.get('lead_id')
-    nutshell_client.editLead(leadId=new_lead_id,
-                             rev='REV_IGNORE',
-                             lead=dict(customFields={'Additional Notes': reference}))
-    return "Successfully added reference to EverCharge."
+    lead_id = request.form.get('lead_id')
+    if lead_id:
+        reference = request.form.get('reference')
+        nutshell_client.editLead(leadId=lead_id,
+                                 rev='REV_IGNORE',
+                                 lead=dict(customFields={'Additional Notes': reference}))
+    return "OK"
 
 
 @app.route('/nutshell/auto-dealer-contact', methods=['POST'])
 def auto_dealer_contact():
-    current_auto_dealer_contact = request.form.get('auto_dealer_contact')
-    new_lead_id = request.form.get('lead_id')
-    nutshell_client.editLead(leadId=new_lead_id,
-                             rev='REV_IGNORE',
-                             lead=dict(customFields={'Auto Dealer Contact': current_auto_dealer_contact}))
-    return "Successfully added Tesla contact."
+    lead_id = request.form.get('lead_id')
+    if lead_id:
+        current_auto_dealer_contact = request.form.get('auto_dealer_contact')
+        nutshell_client.editLead(leadId=lead_id,
+                                 rev='REV_IGNORE',
+                                 lead=dict(customFields={'Auto Dealer Contact': current_auto_dealer_contact}))
+    return "OK"
 
 
 @app.route('/nutshell/lead-notes', methods=['POST'])
 def update_lead_notes():
     lead_id = request.form.get('lead_id')
-    notes = request.form.get('notes')
-    nutshell_client.editLead(leadId=lead_id,
-                             rev='REV_IGNORE',
-                             lead=dict(note=notes))
+    if lead_id:
+        notes = request.form.get('notes')
+        nutshell_client.editLead(leadId=lead_id,
+                                 rev='REV_IGNORE',
+                                 lead=dict(note=notes))
     return "OK"
 
 
