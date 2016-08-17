@@ -1,0 +1,145 @@
+.range-holder{
+    background: url("https://dl.dropboxusercontent.com/u/4277345/codepen/pr-plan-scale.png") bottom center no-repeat;
+	margin: 3em auto;
+	padding: 200px 0 70px 0;
+	width: 960px;	
+}
+.dragdealer {
+    background: #FFF;
+    border: 1px solid #a7a7a7;
+    border-radius: 8px;
+    height: 30px;
+    position: relative;
+}
+.dragdealer .handle {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.stripe{
+    background: #ddd  url("https://dl.dropboxusercontent.com/u/4277345/codepen/stripe-bg.png") top left repeat;
+    border-radius: 8px;
+    height: 24px;
+	left: 0;
+	margin: 3px;
+    position: absolute;
+    top: 0;
+}
+#green-highlight{
+    background: #8dc63f; 
+    display: none;
+    height: 24px;
+    left: 67px;
+    opacity: .5; 
+    position: absolute; 
+    top: 0; 
+}
+#orange-highlight {
+    background: #e07c00; 
+    display: none;
+    height: 24px; 
+    position: absolute; 
+    left: 381px; 
+    opacity: .5; 
+    top: 0; 
+}
+#blue-highlight {
+    background: #008da8; 
+    display: none;
+    height: 24px; 
+    left: 814px; 
+    opacity: .5;
+    position: absolute; 
+    top: 0;  
+}
+.square{
+    position: absolute;
+    top: 0;
+    left: 0;	  
+    margin-top: -13px;
+    margin-left: -10px;
+    cursor: pointer;
+    width: 50px;
+    height: 37px;
+    background: #505054;
+    border-radius: 8px;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    padding-top: 13px;
+}
+.menu-line {
+    background: #FFF; 
+    display: block;
+    height: 5px; 
+    margin: 2px auto;
+    width: 50%; 
+}
+.infobox {
+    background: #FFF;
+    border: #008da8 solid 2px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    height: 190px;
+    left: 0;
+    margin-top: -235px;
+    margin-left: -117px;
+	padding: 0px;
+    position: absolute;
+    top: 0;
+    width: 260px;
+}
+.infobox:after {
+    border-color: #FFFFFF transparent;
+    border-style: solid;
+    border-width: 20px 23px 0;
+    bottom: -20px;
+	content: '';
+    display: block;
+    left: 107px;
+	position: absolute;
+	width: 0;
+	z-index: 1;
+}
+.infobox:before {
+    border-color: #008da8 transparent;
+    border-style: solid;
+    border-width: 21px 24px 0;
+    bottom: -23px;
+	content: '';
+    display: block;
+    left: 106px;
+	position: absolute;
+	width: 0;
+	z-index: 0;
+}
+.titlebar{
+	background: #008da8;
+	color: #FFF;
+    font-size: 15px;
+    line-height: 1.5em;
+	padding: .5em;
+}
+.innerbox{
+	padding: 1em;
+}
+.info-price{
+    color: #e07c00; 
+    font-size: 33px; 
+    line-height: 1.8em;
+}
+.annual-label{
+    color: #505054; 
+    font-size: 14px; 
+    font-weight: bold; 
+    width: 110px; 
+    line-height: 1.8em;
+}
+.annual-price{
+    color: #939393; 
+    font-size: 17px; 
+    width: 110px;
+} 
+

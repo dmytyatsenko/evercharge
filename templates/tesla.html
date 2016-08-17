@@ -1,5 +1,14 @@
 {% extends 'layout/base.html' %}
 
+{%- block extra_css -%}
+    <link rel="stylesheet" href="css/slider.css" />
+{%- endblock -%}
+
+{%- block custom_scripts -%}
+    <script type="text/javascript" src="js/slider.js" />
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+{%- endblock -%}
+
 {% block banner_class %}
     class="parallax img-tesla" data-speed="4" data-type="background"
 {% endblock %}
@@ -10,6 +19,33 @@
             <div class="row">
                 <div class="col-md-offset-2 col-md-8">
                     <img src="{{ url_for('static', filename='images/EverCharge-Tesla-logos.jpg') }}" alt="EverCharge and Tesla" class="img-responsive extra-bottom-md" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="range-holder">
+                    <div id="pr-slider" class="dragdealer">
+                        <div class="stripe">
+                            <div id="green-highlight"></div>
+                            <div id="orange-highlight"></div>
+                            <div id="blue-highlight"></div>
+                            <div class="handle">
+                                <div class="infobox">
+                                    <div class="titlebar"><span id="plan-holder"></span> <span id="device-holder"></span></div>
+                                    <div class="innerbox">
+                                        <div class="info-price"></div>
+                                        <div class="annual-label">ANNUALY:</div>
+                                        <div class="annual-price"></div>
+                                    </div>
+                                </div>  
+                                <div class="square">
+                                    <span class="value"></span>
+                                    <span class="menu-line"></span>
+                                    <span class="menu-line"></span>
+                                    <span class="menu-line"></span>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row">
