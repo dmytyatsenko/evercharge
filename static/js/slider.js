@@ -5,10 +5,7 @@
 $(document).ready(function(){
 
 	//set defaults
-	$("#plan-holder").text('Personal Plan:');
-	$("#device-holder").text('0-3 Devices');
-	$(".info-price").html('$ 0 / month');
-	$(".annual-price").html('$0');
+	$(".info-price").html('$0');
     
     new Dragdealer('pr-slider', {
     animationCallback: function(x, y) {
@@ -17,118 +14,50 @@ $(document).ready(function(){
       var stripe_width = slider_value+1;
       $(".stripe").css("width", ""+stripe_width+"%");
       
-      //set personal
-      if(slider_value > 0 && slider_value < 6){
-	     $("#plan-holder").text('Personal Plan:');
-		 $("#device-holder").text('0-3 Devices');
-	     $(".info-price").html('$ 0 / month');
-	     
-	     $("#green-highlight").hide(); 
+      //set 0
+      if(slider_value < 1){
+       $(".info-price").html('$0'); 
       }
-      
-      //set basic
-      if(slider_value > 5 && slider_value < 37){
-	      $("#plan-holder").text('Basic Plan:');
-	      
-	      $("#orange-highlight").hide();
-	      $("#green-highlight").show();
-	      $("#green-highlight").css("width", ""+(slider_value+40.5)+"%");
-		  
-	      if(slider_value > 5){ 
-	      	$(".info-price").html('$ 29 / month'); 
-	      	$(".annual-price").html('$ 290'); 
-	      	$("#device-holder").text('Up to 10 Devices');
-	      }	
-	      if(slider_value > 11){
-	      	$(".info-price").html('$ 59 / month'); 
-	      	$(".annual-price").html('$ 590'); 
-	      	$("#device-holder").text('Up to 20 Devices');
-	      }	
-	      if(slider_value > 18){
-	      	$(".info-price").html('$ 89 / month'); 
-	      	$(".annual-price").html('$ 890'); 
-	      	$("#device-holder").text('Up to 30 Devices');
-	      }
-	      if(slider_value > 24){
-	      	$(".info-price").html('$ 119 / month'); 
-	      	$(".annual-price").html('$ 1190'); 
-	      	$("#device-holder").text('Up to 40 Devices');
-	      }
-	      if(slider_value > 31){
-	      	$(".info-price").html('$ 149 / month'); 
-	      	$(".annual-price").html('$ 1490'); 
-	      	$("#device-holder").text('Up to 50 Devices');
-	      }	
-	      
-      }
-      
-      //set business
-      if(slider_value > 38 && slider_value < 83){
-	      $("#plan-holder").text('Business Plan:');
-	      
-	      $("#green-highlight").css("width", "314px");
-	      $("#orange-highlight").show();
-	      $("#blue-highlight").hide();
-	      
-	      /*
-	      if(slider_value > 38){ 
-	      	$(".info-price").html('$ 249 / month'); 
-	      	$(".annual-price").html('$ 2490');
-	      	$("#device-holder").text('Up to 50 Devices');
-	      }*/
-	      if(slider_value > 38){
-	      	$(".info-price").html('$ 359 / month'); 
-	      	$(".annual-price").html('$ 3590'); 
-	      	$("#device-holder").text('Up to 75 Devices');
-	      	
-	      }
-	      
-	      if(slider_value < 40){ $("#orange-highlight").hide(); }
-	      if(slider_value > 40){ $("#orange-highlight").css("width", ""+(slider_value/4.8)+"%"); }
-	      
-	      if(slider_value > 44){
-	      	$(".info-price").html('$ 579 / month'); 
-	      	$(".annual-price").html('$ 5790'); 
-	      	$("#device-holder").text('Up to 125 Devices');
-	      	
-	      	$("#orange-highlight").css("width", ""+(slider_value/2.5)+"%");
-	      }
-	      
-	      if(slider_value > 50){ $("#orange-highlight").css("width", ""+(slider_value/1.7)+"%"); }
-	      
-	      if(slider_value > 57){
-	      	$(".info-price").html('$ 799 / month'); 
-	      	$(".annual-price").html('$ 7990'); 
-		  	$("#device-holder").text('Up to 175 Devices');
-	      }
-	      
-	      if(slider_value > 68){ $("#orange-highlight").css("width", ""+(slider_value/1.6)+"%"); }
-	      
-	      if(slider_value > 70){
-	      	$(".info-price").html('$ 999 / month'); 
-	      	$(".annual-price").html('$ 9990'); 
-	      	$("#device-holder").text('Up to 225 Devices');
-	      }
-      }
-      
-      //set enterprise
-      if(slider_value > 83){
-      	$("#plan-holder").text('Enterprise Plan:');
-	  	$("#orange-highlight").css("width", "433px");
 
-      	
-      	if(slider_value > 84){ 
-      		$("#blue-highlight").css("width", ""+(slider_value/24)+"%"); 
-      		$("#blue-highlight").show();
-      	}
-      	if(slider_value > 88){ $("#blue-highlight").css("width", ""+(slider_value/10)+"%"); }
-      	if(slider_value > 93){ $("#blue-highlight").css("width", ""+(slider_value/8)+"%"); }
-      	if(slider_value > 97){ $("#blue-highlight").css("width", ""+(slider_value/6)+"%"); }
-      	      	
-      	$(".info-price").html('Contact us'); 
-	    $(".annual-price").html('');
-	    $("#device-holder").text('Unlimited Devices');
-	  }	
+      //set 0-25
+      if(slider_value > 1 && slider_value < 12){
+       $(".info-price").html('$1200'); 
+      }
+      
+      //set 0-50
+      if(slider_value > 13 && slider_value < 24){
+        $(".info-price").html('$1600'); 
+      }
+
+      //set 50-100
+      if(slider_value > 25 && slider_value < 36){
+        $(".info-price").html('$2400'); 
+      }
+
+      //set 100-150
+      if(slider_value > 37 && slider_value < 48){
+        $(".info-price").html('$3200'); 
+      }
+
+      //set 150-200
+      if(slider_value > 49 && slider_value < 60){
+        $(".info-price").html('$4000'); 
+      }
+
+      //set 200-250
+      if(slider_value > 61 && slider_value < 72){
+        $(".info-price").html('$4800'); 
+      }
+
+      //set 250-300
+      if(slider_value > 73 && slider_value < 84){
+        $(".info-price").html('$5600'); 
+      }
+
+      //set 300-350
+      if(slider_value > 85){
+        $(".info-price").html('$6400'); 
+      }
       
     }
 	});

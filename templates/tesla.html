@@ -17,35 +17,68 @@
     <div class="ec-stretch-white">
         <div class="container">
             <div class="row">
-                <div class="col-md-offset-2 col-md-8">
+                <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
                     <img src="{{ url_for('static', filename='images/EverCharge-Tesla-logos.jpg') }}" alt="EverCharge and Tesla" class="img-responsive extra-bottom-md" />
                 </div>
             </div>
-            <div class="row">
-                <div class="range-holder">
-                    <div id="pr-slider" class="dragdealer">
-                        <div class="stripe">
-                            <div id="green-highlight"></div>
-                            <div id="orange-highlight"></div>
-                            <div id="blue-highlight"></div>
-                            <div class="handle">
-                                <div class="infobox">
-                                    <div class="titlebar"><span id="plan-holder"></span> <span id="device-holder"></span></div>
-                                    <div class="innerbox">
-                                        <div class="info-price"></div>
-                                        <div class="annual-label">ANNUALY:</div>
-                                        <div class="annual-price"></div>
-                                    </div>
-                                </div>  
-                                <div class="square">
-                                    <span class="value"></span>
-                                    <span class="menu-line"></span>
-                                    <span class="menu-line"></span>
-                                    <span class="menu-line"></span>
-                                </div>  
+            <div class="row hidden-xs">
+                <div class="col-sm-offset-1 col-sm-10">
+                    <h2 class="text-center ec-teal"><strong>How much will it cost for me to get charging?</strong></h2>
+                    <p class="text-center">Install costs are directly related to the distance from the electrical room to your parking spot</p>
+                    <div class="clearfix"></div>
+                    <div class="range-holder">
+                        <div id="pr-slider" class="dragdealer">
+                            <div class="stripe">
+                                <div class="handle">
+                                    <div class="infobox">
+                                        <div class="innerbox">
+                                            <div class="info-price"></div>
+                                        </div>
+                                    </div>  
+                                    <div class="square">
+                                        <span class="value"></span>
+                                    </div>  
+                                </div>
                             </div>
                         </div>
+                        <div class="clearfix"></div>
+                        <div class="range-scale">
+                            <div class="scale-wrap first">
+                                <div class="scale first"></div>
+                                <div class="number">0 ft</div>
+                            </div>
+                            <div class="scale-wrap">
+                                <div class="scale"></div>
+                                <div class="number">50 ft</div>
+                            </div>
+                            <div class="scale-wrap">
+                                <div class="scale"></div>
+                                <div class="number">100 ft</div>
+                            </div>
+                            <div class="scale-wrap">
+                                <div class="scale"></div>
+                                <div class="number">150 ft</div>
+                            </div>
+                            <div class="scale-wrap">
+                                <div class="scale"></div>
+                                <div class="number">200 ft</div>
+                            </div>
+                            <div class="scale-wrap">
+                                <div class="scale"></div>
+                                <div class="number">250 ft</div>
+                            </div>
+                            <div class="scale-wrap">
+                                <div class="scale"></div>
+                                <div class="number">300 ft</div>
+                            </div>
+                            <div class="scale-wrap">
+                                <div class="scale"></div>
+                                <div class="number">350 ft</div>
+                            </div>
+                            <p class="text-center"><small><strong>Distance from electrical room</strong></small></p>
+                        </div>
                     </div>
+                    <!-- end range-holder -->
                 </div>
             </div>
             <div class="row">
