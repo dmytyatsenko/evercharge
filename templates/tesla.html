@@ -25,7 +25,6 @@
                     <h1 class="text-center extra-bottom-md"><strong>EverCharge makes charging in apartments and condominiums easy.</strong></h1>
                 </div>
             </div>
-
             <div class="row extra-bottom-md">
                 <div class="col-sm-12 col-lg-offset-1 col-lg-10">
                     <div class="ec-col-30">
@@ -38,7 +37,7 @@
                             <ul class="bullet-list">
                                 <li class="bullet">Permitting</li>
                                 <li class="bullet">Installation</li>
-                                <li class="bullet">Maintenance</li>
+                                <li class="bullet">Insurance</li>
                                 <li class="bullet">Support</li>
                             </ul>
                         </div>
@@ -71,11 +70,10 @@
             <!-- end row -->
         </div>
     </div>
-
     <div class="ec-box extra-stretch ec-home-charging-experts hidden-xs">
         <div class="container">
             <div class="row">
-                <div class="col-sm-offset-1 col-sm-10">
+                <div class="col-sm-12">
                     <h2 class="text-center ec-teal"><strong>What are my install costs?</strong></h2>
                     <p class="text-center">Install costs are directly related to the distance from the electrical room to your parking spot.</p>
                     <p class="text-center"><small><em>Price provided is an estimate only and is not an actual quote.</em></small></p>
@@ -138,7 +136,7 @@
             <!-- end row -->
         </div>
     </div>
-    <div class="ec-stretch-white ec-mini-quote-form">
+    <div class="ec-stretch-white extra-stretch ec-mini-quote-form">
         <div class="container">
             <form action="{{ url_for('thank_you') }}" method='post' class="validate-form">
                 <input name="lead_source" value="Web Signup" type="hidden">
@@ -169,29 +167,41 @@
             </form>
         </div>
     </div>
-    <div class="ec-stretch-white ec-stretch-border-top">
+    <div class="ec-stretch-lt-teal extra-stretch border-bottom">
         <div class="container">
             <div class="row">
-                <div class="col-md-offset-2 col-md-8">
-                    <h2>FAQs</h2>
-                    <p class="ec-faq-q">What types of EV adaptors does EverCharge provide?</p>
-                    <div class="ec-faq-a">
-                        <p><strong>Tesla Connector:</strong> The Tesla connector is the standard connector for all Tesla vehicles. Tesla offers an adaptor that can be used to charge with J-1772 connector. EverCharge also offers a Tesla plug, so no adaptor is necessary.</p>
-                        <p><strong>SAE J-1772 Connector:</strong> This is the standard plug type for EVs in the United States, and can connect directly to most EVs manufactured for the North American market after 2000. Society of Automotive Engineers (SAE) developed this connector standard, and though not required, most vehicle manufacturers have adopted this connector type. It can be AC Level 1 and 2 and DC Level 1 and 2 charging.</p>
+                <h2 class="text-center extra-bottom-lg ec-teal"><strong>EverCharge Customers</strong></h2>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="ec-featured-prop">
+                        <img src="{{ url_for('static', filename='images/properties-case-2.jpg') }}" class="img-responsive" alt="EverCharge Case Study Property" />
+                        <div class="ec-box-white">
+                            <h5>4 Story Lofts, San Francisco, CA</h5>
+                            <p>With limited power, this building needed SmartPower technology to avoid cost prohibitive utility upgrades. Now 12 Tesla owners charge simultaneously without any issues.</p>
+                        </div>
                     </div>
-                    <p class="ec-faq-q">What are some of the benefits of EverCharge? </p>
-                    <div class="ec-faq-a extra-bottom-lg">
-                        <p>EverCharge makes charging in condos and apartments easy by navigating the complexities of EV charging. We handle everything including regulations, permitting, approvals, capacity limitations, property reimbursements etc:</p>
-                        <p><strong>Fully managed service:</strong> Ongoing $1M insurance, 24/7 support, maintenance and automated billing services at no cost to building management or association.</p>
-                        <p><strong>SmartPower Technology:</strong> EverCharge intelligently manages buildings power to maximize your infrastructure allowing up to 10x the number of chargers for install. <a href="{{ url_for('smart_power') }}">Read more about SmartPower</a></p>
-                        <p><strong>Cost of service:</strong> EverCharge offers the lowest rates of any EVSE service provider. We provide $1,000,000 liability insurance, all maintenance, 24/7 lifetime support and billing services. EverCharge bills you only the energy you have used. Hourly rates are determined by your building’s rate schedule.</p>
-                        <p><strong>Cost of installation:</strong> Installation costs are determined by an onsite evaluation. Existing electrical infrastructure, distance from the electrical room, and complexity determine the variable installation costs.</p>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="ec-featured-prop">
+                        <img src="{{ url_for('static', filename='images/properties-case-5.jpg') }}" class="img-responsive" alt="EverCharge Case Study Property" />
+                        <div class="ec-box-white">
+                            <h5>Premier Condos, San Francisco CA</h5>
+                            <p>As the newest landmark to the San Francisco skyline, this condominium complex wanted residents to have piece-of-mind. With EverCharge, every station is covered by $1M dollar liability protection so residents can rest easy.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="ec-featured-prop">
+                        <img src="{{ url_for('static', filename='images/properties-case-4.jpg') }}" class="img-responsive" alt="EverCharge Case Study Property" />
+                        <div class="ec-box-white">
+                            <h5>High End Condos, San Francisco, CA</h5>
+                            <p>This high-end condominium building in San Francisco wanted to supply residents with dedicated charging stations. Using EverCharge certified electricians, they were able to quickly install stations with no hassle.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-offset-2 col-md-4">
-                    <a class="ec-button-teal-border extra-bottom-lg block" href="{{ url_for('faqs') }}">Find out more &#8594;</a>
+                <div class="col-md-4">
+                    <a class="ec-button-teal-border extra-bottom-lg block" href="{{ url_for('evercharge_properties') }}">See more case studies &#8594;</a>
                 </div>
             </div>
             <div class="row">
