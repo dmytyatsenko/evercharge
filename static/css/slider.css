@@ -1,5 +1,5 @@
 .range-holder{
-	padding: 120px 0 70px 0;
+	padding: 120px 0 20px 0;
 	width: 100%;	
 }
 .dragdealer {
@@ -64,7 +64,7 @@
 .range-scale .scale-wrap {
     display: inline-block;
     margin-bottom: 30px;
-    margin-left: 8%;
+    margin-left: 7%;
     margin-top: 10px;
     text-align: center;
 }
@@ -81,6 +81,27 @@
     border-right: 0 solid black;
     display: inline-block;
     height: 14px;
-    margin-left: 0;
+    margin-left: 0 !important;
 }
 
+@media only screen and (min-width: 1600px) {
+    .range-scale .scale-wrap {
+        margin-left: 8%;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1599px) {
+    .range-scale .scale-wrap {
+        margin-left: 8%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .range-scale .scale-wrap {
+        margin-left: 6%;
+    }
+
+    .scale-wrap .number {
+        font-size: 14px;
+    }
+}

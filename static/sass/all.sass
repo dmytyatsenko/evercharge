@@ -192,6 +192,9 @@ img.border
 .ec-box-white
     background: white
     padding: 20px
+.ec-box-lt-grey
+    background: $ec-lt-grey
+    padding: 20px
 .ec-title-box
     color: white
     display: table-cell
@@ -626,13 +629,13 @@ fieldset.ec-fieldset
     h3
         color: $ec-teal
         font-weight: 600
-    .ec-col-30
-        float: left
-        margin-left: 1%
-        margin-right: 1%
-        width: 30%
-        p
-            margin-bottom: 20px
+.ec-col-30
+    float: left
+    margin-left: 1%
+    margin-right: 1%
+    width: 30%
+    p
+        margin-bottom: 20px
 .ec-mini-quote-form 
     .ec-button-teal-border 
         line-height: 1em
@@ -777,9 +780,9 @@ img.ec-award
     .parallax 
         &.img-tesla
             background-position-x: center
+            background-position-y: -80px
             background-size: auto 600px
-            height: 600px
-
+            height: 460px
 
 // lg
 @media only screen and (min-width: 1400px) and (max-width: 1599px)
@@ -870,10 +873,10 @@ img.ec-award
     .ec-home-charging-experts
         background: none
         background-color: $ec-lt-grey
-        .ec-col-30
-            float: none
-            margin: 10px auto 20px auto
-            width: 80%
+    .ec-col-30
+        float: none
+        margin: 10px auto 20px auto
+        width: 80%
     .ec-home-properties
         background-position-y: -50px
         background-size: auto 400px
