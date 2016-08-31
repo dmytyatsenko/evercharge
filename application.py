@@ -4,11 +4,14 @@ from six.moves.urllib.parse import urlparse
 from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
 from nutshell import NutshellAPI
+import itsdangerous
 
 application = Flask(__name__, static_url_path='')
 app = application
 
 app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY", 'testingkey')
+singer = itsdangerous.Signer(app.config['SECRET_KEY'])
+
 assets = Environment(app)
 sass = Bundle('sass/all.sass', filters='sass', output='css/sass.css')
 css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
@@ -251,8 +254,8 @@ def thank_you():
     new_lead_id = new_lead['id']
     if tag:
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=[tag, gran]), rev="REV")
-
-    return render_template("thank_you.html", newLeadId=new_lead_id, contactId=contact_id, note=note)
+    encrypted_lead_id = singer.sign(str(new_lead_id))
+    return render_template("thank_you.html", newLeadId=encrypted_lead_id, contactId=contact_id, note=note)
 
 
 ##########################
@@ -266,9 +269,20 @@ def signup_lumina():
 ###################
 # Nutshell Routes #
 ###################
+
+def _get_lead_id(form_key='lead_id'):
+    encrypted_lead_id = request.form.get(form_key)
+    if encrypted_lead_id:
+        try:
+            lead_id = singer.unsign(encrypted_lead_id)
+            return lead_id
+        except itsdangerous.BadData as exc:
+            print('[!] Cannot verify lead {0} because {1}'.format(encrypted_lead_id, exc))
+
+
 @app.route('/nutshell/reference', methods=['POST'])
 def referred_customer():
-    lead_id = request.form.get('lead_id')
+    lead_id = _get_lead_id()
     if lead_id:
         reference = request.form.get('reference')
         nutshell_client.editLead(leadId=lead_id,
@@ -279,7 +293,7 @@ def referred_customer():
 
 @app.route('/nutshell/auto-dealer-contact', methods=['POST'])
 def auto_dealer_contact():
-    lead_id = request.form.get('lead_id')
+    lead_id = _get_lead_id()
     if lead_id:
         current_auto_dealer_contact = request.form.get('auto_dealer_contact')
         nutshell_client.editLead(leadId=lead_id,
@@ -290,7 +304,7 @@ def auto_dealer_contact():
 
 @app.route('/nutshell/lead-notes', methods=['POST'])
 def update_lead_notes():
-    lead_id = request.form.get('lead_id')
+    lead_id = _get_lead_id()
     if lead_id:
         notes = request.form.get('notes')
         nutshell_client.editLead(leadId=lead_id,
