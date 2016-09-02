@@ -17,10 +17,9 @@ $ec-lt-purple: RGBA(182,189,224,1.0)
 $ec-dk-purple: RGBA(69,68,149,1.0)
 $ec-dk-yellow: RGBA(239,216,0,1.0)
 // type
-$ec-font-bitter: 'Bitter', serif
-$ec-font-work-sans: 'Work Sans', Arial, sans-serif
-$ec-font-s-body: 16px
-$ec-font-w-body: 400
+$ec-font-quote: "rift-soft", serif // weights: 400 italic, 600
+$ec-font-headline: "acumin-pro-semi-condensed", sans-serif // weights: 200, 700
+$ec-font-body: "proxima-nova", sans-serif // weights: 100, 400, 400 italic, 700, 700 italic 
 $ec-letter-space: -0.5px
 $ec-text-shadow: 2px 2px 7px RGBA(0,0,0,0.6)
 //////////////////////
@@ -31,12 +30,12 @@ html
     min-height: 100%
     position: relative // for sticky footer
 body
-    font-family: $ec-font-work-sans
+    font-family: $ec-font-body
     font-size: 16px
     font-weight: 400
     -webkit-text-size-adjust: 100%
     -ms-text-size-adjust: none
-    margin-bottom: 220px // needs to equal height of footer in md-screen
+    margin-bottom: 270px // needs to equal height of footer in md-screen
     min-width: 320px
 html,
 body
@@ -64,7 +63,7 @@ textarea
     background: white
     border: 1px solid $ec-md-grey
     border-radius: 0px
-    font-size: 13px
+    font-size: 1em
     height: 47px
     width: 100%
     &::-webkit-input-placeholder
@@ -81,6 +80,90 @@ textarea
     &:hover
         background: white
         border-color: black
+
+// type
+h1
+    font-family: $ec-font-body
+    font-size: 5em
+    font-weight: 100
+    letter-spacing: -1.3px
+    line-height: 0.8em
+    margin-bottom: 60px
+    margin-top: 0
+h2
+    color: $ec-teal
+    font-family: $ec-font-quote
+    font-size: 2.6em
+    font-weight: 600
+    letter-spacing: 1px
+    margin-bottom: 16px
+    margin-top: 0
+    &.thin
+        font-style: italic
+        font-weight: 400
+h3
+    font-family: $ec-font-body
+    font-size: 1.4em
+    font-weight: 600
+    line-height: 1.2em
+    margin-bottom: 14px
+    margin-top: 0
+    &.thin
+        font-weight: 400
+h4
+    color: RGBA(150,150,150,1.0)
+    font-family: $ec-font-headline
+    font-size: 1.1em
+    font-weight: 700
+    letter-spacing: 0.5px
+    margin-bottom: 14px
+    margin-top: 0
+    text-transform: uppercase
+    &+p
+        margin-bottom: 40px
+h5
+    font-size: 1.1em
+    font-weight: 600
+    line-height: 1.1em
+    margin-bottom: 14px
+p
+    font-size: 1.1em
+    font-weight: 400
+    line-height: 1.4em
+    margin-bottom: 10px
+    margin-top: 0
+ul.bullet-list 
+    list-style: none
+    font-size: 1.1em
+    line-height: 1.2em
+    margin-left: 12px
+    padding-left: 0
+li.bullet
+    color: $ec-dk-dk-grey
+    list-style-type: none
+    list-style-image: none
+    margin-bottom: 5px
+    padding-left: 1em
+    position: relative
+    &:before
+        content: "\02022"
+        left: 0
+        padding-top: 0
+        position: absolute
+.error
+    color: $ec-red
+    font-size: 14px
+    margin-top: 5px
+.ec-teal
+    color: $ec-teal
+.text-center
+    text-align: center
+.text-right
+    text-align: right
+.text-shadow
+    text-shadow: $ec-text-shadow
+.white
+    color: white !important
 
 // links
 a
@@ -107,12 +190,12 @@ a, button, input
         border: 2px solid $ec-teal
         color: $ec-teal
         display: inline-block
-        font-size: 15px
+        font-size: 16px
         font-weight: 600
+        height: 48px
         letter-spacing: 0.5px
         margin-top: 14px
-        min-height: 40px
-        padding: 16px 30px 14px 30px
+        padding: 14px 40px
         text-align: center
         text-transform: uppercase
         &:hover 
@@ -137,12 +220,12 @@ a.ec-button-teal
     background: $ec-teal
     border: 2px solid $ec-teal
     color: white
-    font-size: 15px
+    font-size: 16px
     font-weight: 600
+    height: 48px
     letter-spacing: 0.5px
     margin-top: 14px
-    min-height: 40px
-    padding: 16px 30px 14px 30px
+    padding: 14px 30px 14px 30px
     text-transform: uppercase
     &:hover
         background: $ec-dk-teal
@@ -214,10 +297,6 @@ img.border
     h1
         color: RGBA(255,255,255,0.7)
         letter-spacing: -1px
-    h3.bitter
-        color: white
-        font-size: 18px
-        text-transform: none
 .ec-stretch-lt-teal
     background: RGBA(0,164,153,0.18)
     padding-bottom: 40px
@@ -239,86 +318,6 @@ img.border
     padding-bottom: 40px
     padding-top: 40px
 
-// type
-h1
-    font-family: $ec-font-work-sans
-    font-size: 3.3em
-    font-weight: 400
-    letter-spacing: -1px
-    margin-bottom: 20px
-    margin-top: 0
-h2
-    font-size: 1.625em
-    font-weight: 400
-    letter-spacing: -0.3px
-    margin-bottom: 16px
-    margin-top: 0
-h3
-    font-size: 1.2em
-    font-weight: 400
-    letter-spacing: -0.2px
-    line-height: 1.3em
-    margin-bottom: 16px
-    margin-top: 0
-h4.ec-caps
-    color: #58595B
-    font-size: 1em
-    font-weight: 600
-    margin-bottom: 16px
-    margin-top: 0
-    text-transform: uppercase
-h5
-    font-size: 1em
-    font-weight: 600
-    line-height: 1.1em
-p
-    font-size: 1em
-    font-weight: 400
-    letter-spacing: -0.3px
-    line-height: 1.4em
-    margin-bottom: 10px
-    margin-top: 0
-ul.bullet-list 
-    list-style: none
-    font-size: 1em
-    line-height: 135%
-    margin-left: 15px
-    padding-left: 0
-li.bullet
-    list-style-type: none
-    list-style-image: none
-    margin-bottom: 5px
-    padding-left: 1em
-    position: relative
-    &:before
-        content: "\02022"
-        left: 0
-        padding-top: 1px
-        position: absolute
-.bitter
-    font-family: $ec-font-bitter
-    font-style: italic
-    font-weight: 400
-.error
-    color: $ec-red
-    font-size: 14px
-    margin-top: 5px
-.ec-teal
-    color: $ec-teal
-.text-center
-    text-align: center
-.text-right
-    text-align: right
-.text-shadow
-    text-shadow: $ec-text-shadow
-.white
-    color: white !important
-.ec-zero
-    margin: 0 !important
-.ec-zero-all
-    margin: 0 !important
-    padding: 0 !important
-
 // misc
 hr
     border-color: $ec-lt-grey
@@ -339,6 +338,11 @@ p.black
     margin-bottom: 40px
 .extra-bottom-lg
     margin-bottom: 60px
+.ec-zero
+    margin: 0 !important
+.ec-zero-all
+    margin: 0 !important
+    padding: 0 !important
 
 // banner + parallax
 .ec-banner-text
@@ -346,10 +350,28 @@ p.black
     position: absolute
     top: 50%
     transform: translate(-50%, -40%)
+    h2
+        color: white
+        display: inline-block
+        font-size: 3em
+        margin-bottom: 40px
+        &:after
+            background-color: white
+            border-radius: 5px
+            box-shadow: $ec-text-shadow
+            content: ""
+            display: block
+            height: 5px
+            margin-top: 5px
+            width: 100%
+    h3
+        color: white
 .ec-banner
-    min-height: 260px
+    min-height: 300px
     position: relative
     text-align: center
+    h2:after
+        box-shadow: none
 .parallax
     margin: 0
     padding: 75px 0
@@ -450,7 +472,7 @@ footer#footer
     background: $ec-dk-dk-grey
     bottom: 0
     color: white
-    height: 220px 
+    height: 270px 
     line-height: 1em
     position: absolute
     width: 100%
@@ -460,8 +482,8 @@ footer#footer
         a
             color: $ec-md-grey
             display: block
-            font-size: 13px
-            margin-bottom: 3px
+            font-size: 16px
+            margin-bottom: 8px
             &:hover
                 background: none
                 text-decoration: underline
@@ -479,22 +501,20 @@ footer#footer
 .ec-thankyou 
     background: white
     text-shadow: none
-    h1
-        margin-top: 20px
+    h2
+        margin-top: 50px
     .ec-box-lt-gray
         background: $ec-lt-grey
         padding: 20px
         text-align: left
         p
             margin-bottom: 0
-    .bitter
-        font-family: $ec-font-bitter
 
 fieldset.ec-fieldset
     legend.ec-legend
         border: 0
         color: black
-        font-size: $ec-font-s-body
+        font-size: 16px
         font-weight: 600
         letter-spacing: $ec-letter-space
         margin-bottom: 4px
@@ -505,7 +525,7 @@ fieldset.ec-fieldset
             cursor: pointer
     label
         color: black
-        font-weight: $ec-font-w-body
+        font-weight: 400
         margin-bottom: 0
         margin-left: 10px
 
@@ -594,8 +614,6 @@ fieldset.ec-fieldset
         margin-bottom: 20px
         margin-top: 2px
         padding: 40px 20px 0 20px
-        h4 + p
-            margin-bottom: 20px
 
 // page: home
 .ec-home-splash-wrap
@@ -628,7 +646,6 @@ fieldset.ec-fieldset
         margin-top: 40px
     h3
         color: $ec-teal
-        font-weight: 600
 .ec-col-30
     float: left
     margin-left: 1%
@@ -699,8 +716,6 @@ fieldset.ec-fieldset
 // page: smartpower
 .ec-smartpower-wrap
     margin-top: 40px
-    h2
-        margin-top: 0
     .row .row
         margin-bottom: 40px
     a.ec-button-teal-border
@@ -803,7 +818,9 @@ img.ec-award
 // sm
 @media only screen and (max-width: 992px)
     h1
-        font-size: 2.8em
+        font-size: 4em
+    h3
+        font-size: 1.4em
     .ec-home-splash
         background-position: left top
         background-size: 100%
@@ -853,11 +870,14 @@ img.ec-award
 // xs
 @media only screen and (max-width: 767px)
     body
-        margin-bottom: 595px
+        margin-bottom: 495px
     form
         .form-group
             margin-bottom: 5px
-
+    h1
+        font-size: 3em
+    h3
+        font-size: 1.3em
     .container
         padding-left: 16px
         padding-right: 16px
@@ -970,6 +990,9 @@ img.ec-award
         h1 
             font-size: 30px
     footer#footer
-        height: 595px
+        height: 495px
         .container
             padding: 0 18px 9px 18px
+        .footer-list a
+            display: inline-block
+            margin-right: 20px
