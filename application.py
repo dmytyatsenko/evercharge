@@ -254,8 +254,8 @@ def thank_you():
     new_lead_id = new_lead['id']
     if tag:
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=[tag, gran]), rev="REV")
-    encrypted_lead_id = singer.sign(str(new_lead_id))
-    return render_template("thank_you.html", newLeadId=encrypted_lead_id, contactId=contact_id, note=note)
+    signed_lead_id = singer.sign(str(new_lead_id))
+    return render_template("thank_you.html", newLeadId=signed_lead_id, contactId=contact_id, note=note)
 
 
 ##########################
