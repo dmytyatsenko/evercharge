@@ -64,7 +64,8 @@ textarea
     border: 1px solid $ec-md-grey
     border-radius: 0px
     font-size: 1em
-    height: 47px
+    height: 58px
+    padding: 16px
     width: 100%
     &::-webkit-input-placeholder
         color: $ec-md-grey
@@ -184,26 +185,42 @@ a img
         cursor: pointer
 
 // buttons
+.ec-def-button
+    // use as extend only
+    border-radius: 6px
+    font-size: 16px
+    font-weight: 600
+    letter-spacing: 0.5px
+    line-height: 1em
+    margin-top: 14px
+    min-height: 58px
+    padding: 18px 40px
+    text-align: center
+    text-transform: uppercase
+@mixin btn-gradient($btn-bkgnd-color, $btn-bkgnd-shadow)
+    -moz-box-shadow: inset 0px 1px 0px 0px $btn-bkgnd-color
+    -webkit-box-shadow: inset 0px 1px 0px 0px $btn-bkgnd-color
+    box-shadow: inset 0px 1px 0px 0px $btn-bkgnd-color
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, $btn-bkgnd-color), color-stop(1, $btn-bkgnd-shadow))
+    background: -moz-linear-gradient(top, $btn-bkgnd-color 5%, $btn-bkgnd-shadow 100%)
+    background: -webkit-linear-gradient(top, $btn-bkgnd-color 5%, $btn-bkgnd-shadow 100%)
+    background: -o-linear-gradient(top, $btn-bkgnd-color 5%, $btn-bkgnd-shadow 100%)
+    background: -ms-linear-gradient(top, $btn-bkgnd-color 5%, $btn-bkgnd-shadow 100%)
+    background: linear-gradient(to bottom, $btn-bkgnd-color 5%, $btn-bkgnd-shadow 100%)
+
 a, button, input
     &.ec-button-teal-border
-        background: transparent
+        @extend .ec-def-button
+        @include btn-gradient(white, #f6f6f6)
         border: 2px solid $ec-teal
         color: $ec-teal
         display: inline-block
-        font-size: 16px
-        font-weight: 600
-        height: 48px
-        letter-spacing: 0.5px
-        margin-top: 14px
-        padding: 10px 40px
-        text-align: center
-        text-transform: uppercase
         &:hover 
-            background: RGBA(0,164,153,0.1)
+            @include btn-gradient(#f6f6f6, white)
             text-decoration: none
     &.ec-button-white-border
-        @extend .ec-button-teal-border
-        border-color: white
+        @extend .ec-def-button
+        border: 2px solid white
         color: white 
 a.ec-text-link
     color: $ec-teal
@@ -216,37 +233,17 @@ a.ec-text-link
         cursor: pointer
     &.lg
         font-size: 2em
+.ec-button-teal,
 a.ec-button-teal
-    background: $ec-teal
-    border: 2px solid $ec-teal
+    @extend .ec-def-button
+    @include btn-gradient($ec-teal, #008474)
+    border: 2px solid #008474
     color: white
-    font-size: 16px
-    font-weight: 600
-    height: 48px
-    letter-spacing: 0.5px
-    line-height: 1em
-    margin-top: 14px
-    padding: 14px 30px
-    text-transform: uppercase
     &:hover
-        background: $ec-dk-teal
+        @include btn-gradient(#008474, $ec-teal)
+        border-color: #008474
         cursor: pointer
         text-decoration: none
-.ec-button-teal
-    background: $ec-teal
-    border: 2px solid $ec-teal
-    color: white
-    font-size: 15px
-    font-weight: 600
-    letter-spacing: 0.5px
-    margin-top: 14px
-    min-height: 40px
-    padding: 16px 30px 14px 30px
-    text-transform: uppercase
-    &:hover
-        background: $ec-dk-teal
-        border-color: $ec-dk-teal
-        cursor: pointer
     &:disabled
         opacity: 0.3
         &:hover
@@ -502,8 +499,9 @@ footer#footer
 .ec-thankyou 
     background: white
     text-shadow: none
-    h2
-        margin-top: 50px
+    h3
+        color: $ec-teal
+        margin-top: 63px
     .ec-box-lt-gray
         background: $ec-lt-grey
         padding: 20px
@@ -655,6 +653,9 @@ fieldset.ec-fieldset
     p
         margin-bottom: 20px
 .ec-mini-quote-form 
+    h4
+        color: black
+        margin-bottom: 36px
     .ec-button-teal-border 
         line-height: 1em
         margin-top: 0
