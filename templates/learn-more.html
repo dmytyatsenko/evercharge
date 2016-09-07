@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content_one %}
-    <div class="ec-stretch-grey ec-why-wrap hidden-xs">
+    <div class="ec-stretch-lt-teal ec-why-wrap hidden-xs">
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
@@ -52,20 +52,33 @@
                                 <h2 class="ec-teal text-center extra-bottom-md">We Handle Everything</h2>
                             </div>
                             <div class="clearfix"></div>
-                            <div class="col-sm-6 col-md-5">
-                                <h4>On-Site Evaluation</h4>
-                                <p>One of our preferred electricians conducts on-site evaluation.</p>
-
-                                <h4>Gain Building &amp; HOA Approval</h4>
-                                <p>We work with management and customer to gain approval.</p>
-
-                                <h4>Installation</h4>
-                                <p>All our hardware is installed by a certified electrician.</p>
+                            <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                                <img src="{{ url_for('static', filename='images/graphic-building-eval-install.jpg') }}" class="img-responsive" />
                             </div>
-                            <div class="col-sm-6 col-md-offset-1">
+                            <div class="clearfix"></div>
+                            <div class="col-sm-12 col-lg-offset-1 col-lg-10 extra-bottom-lg">
+                                <div class="ec-col-30">
+                                    <h4>On-Site Evaluation</h4>
+                                    <p>One of our preferred electricians conducts on-site evaluation.</p>
+                                </div>
+                                <div class="ec-col-30">
+                                    <h4>Gain Building &amp; HOA Approval</h4>
+                                    <p>We work with management and customer to gain approval.</p>
+                                </div>
+                                <div class="ec-col-30">
+                                    <h4>Installation</h4>
+                                    <p>All our hardware is installed by a certified electrician.</p>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="col-sm-12 col-lg-offset-1 col-lg-10 extra-bottom-lg">
+                                <img src="{{ url_for('static', filename='images/graphic-usage-support.jpg') }}" class="img-responsive" />
+                            </div>
+                            <div class="col-sm-6 col-lg-offset-1 col-lg-5">
                                 <h4>Monitor Power Usage &amp; Reimburse</h4>
                                 <p>Each charger has a built-in monitor to keep track of the electricity consumed, which we bill residents and reimburse the building for.</p>
-
+                            </div>
+                            <div class="col-sm-6 col-lg-5">
                                 <h4>On-going Service and Support</h4>
                                 <p>No matter what happens EverCharge provides 24/7 on-site maintenance, service &amp; support.</p>
                             </div>
@@ -78,22 +91,28 @@
                                 <h4>Dedicated Stations</h4>
                                 <p>No sharing, no waiting</p>
                             </div>
-                            <div class="col-sm-offset-2 col-sm-8">
-                                <h2 class="ec-teal text-center">SmartPower</h2>
+                            <div class="col-sm-offset-2 col-sm-8 text-center extra-bottom-md">
+                                <h2>SmartPower</h2>
+                                <p><a href="{{ url_for('smart_power') }}" class="ec-text-link">Learn More &#8594;</a></p>
                             </div>
                             <div class="clearfix"></div>
-                            <div class="col-sm-12 col-lg-offset-1 extra-bottom-lg">
+                            <div class="col-sm-12 col-lg-offset-1 col-lg-10 extra-bottom-lg">
                                 <img src="{{ url_for('static', filename='images/smartpower-800.png') }}" class="img-responsive" />
                             </div>
                             <div class="clearfix"></div>
-                            <div class="col-sm-offset-1 col-sm-10">
-                                <h4>Maximizes Existing Infrastructure</h4>
-                                <p>Our SmartPower technology maximizes existing building infrastructure by intelligently allocating power where and when it's needed most</p>
-                                <h4>Lowers Install Costs</h4>
-                                <p>With SmartPower expensive infrastructure additions are unnecessary</p>
-                                <h4>Where You Want It</h4>
-                                <p class="extra-bottom-md">EverCharge can install 10x more EVSE's in any given location, so every resident can have their own private station installed in their space </p>
-                                <p><a href="{{ url_for('smart_power') }}" class="ec-text-link">Learn More &#8594;</a></p>
+                            <div class="col-sm-12">
+                                <div class="ec-col-30">
+                                    <h4>Maximizes Existing Infrastructure</h4>
+                                    <p>Our SmartPower technology maximizes existing building infrastructure by intelligently allocating power where and when it's needed most</p>
+                                </div>
+                                <div class="ec-col-30">
+                                    <h4>Lowers Install Costs</h4>
+                                    <p>With SmartPower expensive infrastructure additions are unnecessary</p>
+                                </div>
+                                <div class="ec-col-30">
+                                    <h4>Where You Want It</h4>
+                                    <p class="extra-bottom-md">EverCharge can install 10x more EVSE's in any given location, so every resident can have their own private station installed in their space </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -108,16 +127,23 @@
                                 <h2 class="ec-teal text-center extra-bottom-md">Future Ready</h2>
                             </div>
                             <div class="clearfix"></div>
-                            <div class="col-sm-6 col-md-5">
-                                <img src="{{ url_for('static', filename='images/why-value.jpg') }}" class="img-responsive" />
+                            <div class="col-sm-12 col-lg-offset-1 col-lg-10 extra-bottom-lg">
+                                <img src="{{ url_for('static', filename='images/graphic-future-ready.jpg') }}" class="img-responsive" />
                             </div>
-                            <div class="col-sm-6 col-md-offset-1">
-                                <h4>Savings</h4>
-                                <p>EverCharge saves properties thousands on install costs by maximizing the buildings current infrastructure</p>
-                                <h4>Easily Scalable Technology</h4>
-                                <p>Our SmartPower technology can add up 10x the number of stations to any property</p>
-                                <h4>Increase Property Value</h4>
-                                <p>Adding electric vehicle stations adds value and desirability﻿</p>
+                            <div class="clearfix"></div>
+                            <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                                <div class="ec-col-30">
+                                    <h4>Savings</h4>
+                                    <p>EverCharge saves properties thousands on install costs by maximizing the buildings current infrastructure</p>
+                                </div>
+                                <div class="ec-col-30">
+                                    <h4>Easily Scalable Technology</h4>
+                                    <p>Our SmartPower technology can add up 10x the number of stations to any property</p>
+                                </div>
+                                <div class="ec-col-30">
+                                    <h4>Increase Property Value</h4>
+                                    <p>Adding electric vehicle stations adds value and desirability﻿</p>
+                                </div>
                             </div>
                         </div>
                     </div>
