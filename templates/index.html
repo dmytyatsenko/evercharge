@@ -12,9 +12,9 @@
                 </div>
                 <div class="col-md-6 col-lg-5">
                     <div class="ec-home-splash-text">
-                        <h1 class="white"><strong>Intelligence Matters</strong></h1>
-                        <h3 class="white extra-bottom-md">EverCharge built the world's smartest EV charger specifically designed for multifamily homes like apartments and condominiums</h3>
-                        <a href="{{ url_for('why_evercharge') }}" class="ec-button-white-border">Learn More &#8594;</a>
+                        <h1 class="white">Intelligence Matters</h1>
+                        <h3 class="white extra-bottom-lg">EverCharge built the world's smartest EV charger specifically designed for multifamily homes like apartments and condominiums</h3>
+                        <h3><a href="{{ url_for('why_evercharge') }}" class="white underline">Learn More &#8594;</a></h3>
                     </div>
                 </div>
             </div>
@@ -28,7 +28,7 @@
 				<input name="granularField" id="granularField" type="hidden">
 				<fieldset>
 					<div class="row">
-						<center><h4 class="ec-caps">Connect with EverCharge Today</h4></center>
+						<h4 class="text-center">Connect with EverCharge Today</h4>
 					</div>
 					<div class="row">
 						<div class="holder">
@@ -55,8 +55,8 @@
         <div class="container">
             <div class="row text-center extra-bottom-lg">
                 <div class="col-sm-12">
-                    <h1 class="ec-teal">Charging Experts</h1>
-                    <h2 class="extra-bottom-md">EverCharge makes widespread EV adoption possible in apartments and condominiums</h2>
+                    <h1>Charging Experts</h1>
+                    <h3 class="extra-bottom-lg">EverCharge makes widespread EV adoption possible in apartments and condominiums</h3>
                 </div>
                 <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
                     <a href="{{ url_for('why_evercharge') }}" class="ec-button-teal block">See Why EverCharge &#8594;</a>
@@ -120,7 +120,7 @@
                 <input name="granularField" id="granularField" type="hidden">
                 <fieldset>
                     <div class="row">
-                        <center><h4 class="ec-caps">Connect with EverCharge Today</h4></center>
+                        <center><h4>Connect with EverCharge Today</h4></center>
                     </div>
                     <div class="row">
                         <div class="holder">
@@ -143,18 +143,47 @@
             </form>
         </div>
     </div>
+    <div class="ec-stretch-white">
+        <div class="container">
+            <div class="row ec-feat-press">
+                <div class="col-sm-12">
+                    <h2>What People Are Saying</h2>
+                </div>
+                <div class="col-sm-6 col-md-3 extra-bottom-md">
+                    <a href="http://tech.co/evercharge-schneider-electric-coming-2016-03" target="_blank"><img src="{{ url_for('static', filename='images/press-techco.jpg') }}" class="border img-responsive extra-bottom-sm" alt="Tech Co logo" /></a>
+                    <h5><a href="http://tech.co/evercharge-schneider-electric-coming-2016-03" target="_blank">EverCharge and Schneider Electric Are Coming to a Building Near You</a></h5>
+                    <p>"The potential for EverCharge’s technology is huge and timely."</p>
+                </div>
+                <div class="col-sm-6 col-md-3 extra-bottom-md">
+                    <a href="http://www.autoblog.com/2016/07/14/carve-a-wooden-bike-infineon-gets-into-evs/" target="_blank"><img src="{{ url_for('static', filename='images/press-autoblog.jpg') }}" class="border img-responsive extra-bottom-sm" alt="Auto Blog logo" /></a>
+                    <h5><a href="http://www.autoblog.com/2016/07/14/carve-a-wooden-bike-infineon-gets-into-evs/" target="_blank">Recharge Wrap-up: Carve a wooden bike, Infineon gets into EVs</a></h5>
+                    <p>"Smart cities need smart governments..."</p>
+                </div>
+                <div class="clearfix visible-sm"></div>
+                <div class="col-sm-6 col-md-3 extra-bottom-md">
+                    <a href="http://cleantechnica.com/?s=EverCharge" target="_blank"><img src="{{ url_for('static', filename='images/press-cleantechnica.jpg') }}" class="border img-responsive extra-bottom-sm" alt="Clean Technica logo" /></a>
+                    <h5><a href="http://cleantechnica.com/?s=EverCharge" target="_blank">EverCharge Articles</a></h5>
+                </div>
+                <div class="col-sm-6 col-md-3 extra-bottom-md">
+                    <a href="http://gas2.org/2015/08/19/evercharge-offers-california-tenants-ev-charging-solution/" target="_blank"><img src="{{ url_for('static', filename='images/press-gas2.jpg') }}" class="border img-responsive extra-bottom-sm" alt="Gas 2 logo" /></a>
+                    <h5><a href="http://gas2.org/2015/08/19/evercharge-offers-california-tenants-ev-charging-solution/" target="_blank">EverCharge Offers California Tenants EV Charging Solution</a></h5>
+                    <p>"Fulfilling the current need and leaving an open end to expand in the future, with affordable installation costs..."</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row ec-bk-lt-teal">
             <div class="col-sm-12 col-md-6 ec-zero-all">
                 <div class="ec-home-properties text-center">
                     <a href="{{ url_for('evercharge_properties') }}" class="ec-text-link lg white">View Our<br/>Success Stories</a>
                 </div>
                 <!-- end ec-home-properties -->
             </div>
-            <div class="col-sm-12 col-md-6 col-lg-offset-1 col-lg-4">
+            <div class="col-sm-12 col-md-6 col-lg-6">
                 <div class="ec-box extra-stretch text-center">
-                    <h2 class="bitter ec-teal extra-bottom-sm">“Having EV charging in apartments and condominiums is critical to the continued success of EV adoption.”</h2>
-                    <p class="extra-bottom-sm">&ndash; <strong>Pierre Sacré</strong>, director of Electric Vehicle Solutions at Schneider Electric North America</p>
+                    <h2 class="thin extra-bottom-sm">“Having EV charging in apartments and condominiums is critical to the continued success of EV adoption.”</h2>
+                    <p>&ndash; <strong>Pierre Sacré</strong>, director of Electric Vehicle Solutions at Schneider Electric North America</p>
                     <p><a href="{{ url_for('schneider_partnership') }}" class="ec-text-link">See how EverCharge and Schneider Electric are working together &#8594;</a></p>
                 </div>
             </div>

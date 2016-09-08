@@ -22,9 +22,11 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
     {% assets "css_all" %}<link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
     <link rel="stylesheet" id="font-awesome-css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" type="text/css" media="screen">
-    <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300italic,400,400italic,600%7CWork+Sans:200,400,600,700,800%7CBitter:400italic' type="text/css">
     {%- block extra_css -%}{%- endblock -%}
 	<!-- include script for window -->
+    <script src="https://use.typekit.net/soq4cpd.js"></script>
+    <script>try{Typekit.load({ async: false });}catch(e){}</script>
+
 	<script type="text/javascript">
 		if (navigator.userAgent.match(/IEMobile\/10\.0/) || navigator.userAgent.match(/MSIE 10.*Touch/)) {
 			var msViewportStyle = document.createElement('style');
@@ -92,7 +94,7 @@
         					<input name="granularField" id="granularField" type="hidden">
         					<fieldset class="ec-fieldset">
         						<div class="col-xs-12">
-        							<h2 class="ec-teal">{% block form_name %}Get Your Quote Today{% endblock %}</h2>
+        							<h2>{% block form_name %}Get Your Quote Today{% endblock %}</h2>
         							<p>Connect with one of our experts by telling us a little about yourself.</p>
         						</div>
         						<div class="col-xs-12 extra-bottom-sm">
@@ -150,7 +152,6 @@
     					<a href="/">Home</a>
     					<a href="{{ url_for('why_evercharge') }}">Why EverCharge</a>
                         <a href="{{ url_for('smart_power') }}">SmartPower</a>
-                        <a href="{{ url_for('device_wattson') }}">Wattson</a>
     					<a href="{{ url_for('faqs') }}">FAQs</a>
     				</div>
     			</div>
