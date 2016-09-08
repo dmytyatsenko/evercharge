@@ -180,6 +180,8 @@ a
     &:hover
         color: $ec-dk-teal
         text-decoration: underline
+    &.underline
+        text-decoration: underline
 a img
     &:hover
         cursor: pointer
@@ -218,13 +220,9 @@ a, button, input
         &:hover 
             @include btn-gradient(#f6f6f6, white)
             text-decoration: none
-    &.ec-button-white-border
-        @extend .ec-def-button
-        border: 2px solid white
-        color: white 
 a.ec-text-link
     color: $ec-teal
-    font-size: 15px
+    font-size: 1em
     font-weight: 600
     text-decoration: underline
     text-transform: uppercase
@@ -793,10 +791,11 @@ img.ec-award
             position: absolute
             right: 0
     .ec-home-splash
+        background-position-y: -30px
         background-size: 100%
-        height: 968px
+        height: 700px
     .ec-home-splash-text
-        font-size: 1.4em
+        font-size: 1.3em
         padding: 80px 170px 40px 30px
     .ec-home-properties
         background-size: auto 500px
