@@ -437,6 +437,7 @@ nav
         background: $ec-dk-dk-grey
         background-image: none
         border-color: $ec-dk-dk-grey
+        box-shadow: none
         ul.navbar-nav>li>a
             color: white
             font-weight: 400
@@ -921,16 +922,23 @@ img.ec-award
     .ec-why-wrap
         .tab-content
             margin-bottom: 0
+        .ec-col-30
+            p
+                border-bottom: 1px dotted $ec-md-grey
+                margin-bottom: 20px
+                padding-bottom: 20px
     .ec-why-tab-xs
         background: $ec-lt-grey
         margin-bottom: 20px
         margin-left: -10px
         margin-right: -10px
         margin-top: 10px
-        padding: 14px 10px 1px 10px
+        padding: 14px 10px
         text-align: center
         h4 
             margin-bottom: 5px
+        h4 + p
+            margin-bottom: 0
     .ec-why-wrap .tab-content
         padding-top: 0
     .tab-pane
