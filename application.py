@@ -314,7 +314,7 @@ def evercharge_properties():
     return render_template('properties.html')
 
 
-@app.route('/wattson')
+@app.route('/w')
 def device_wattson():
     return render_template('wattson.html')
 

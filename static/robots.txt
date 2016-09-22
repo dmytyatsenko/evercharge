@@ -10,4 +10,4 @@ Disallow: /preferred
 Disallow: /tesla
 Disallow: /tesla-marketing
 Disallow: /thankyou
-Disallow: /wattson
+Disallow: /w
