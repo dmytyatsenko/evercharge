@@ -618,16 +618,17 @@ fieldset.ec-fieldset
 
 // page: home
 .ec-home-splash-wrap
-    background: $ec-teal
-    margin-top: 50px
-.ec-home-splash
-    background: url(../images/parking-5.jpg) no-repeat
-    background-position: right top
-    background-size: auto 940px
+    background: url(../images/EverCharge-home.jpg) no-repeat
+    background-position: center -50px
+    background-size: 100%
     height: 530px
+    margin-top: 50px
     padding: 0
 .ec-home-splash-text
     padding: 60px 60px 70px 30px
+    text-shadow: $ec-text-shadow
+    h1
+        font-weight: 400
 .ec-video-wrap
     padding: 70px 40px
     .ec-video
@@ -785,19 +786,11 @@ img.ec-award
 //xxl
 @media only screen and (min-width: 1600px)
     .ec-home-splash-wrap
-        position: relative
-        .col-xl-12
-            width: 100%
-        .col-lg-5
-            position: absolute
-            right: 0
-    .ec-home-splash
-        background-position-y: -30px
-        background-size: 100%
-        height: 700px
+        background-position: center -150px
+        height: 820px
     .ec-home-splash-text
         font-size: 1.3em
-        padding: 80px 170px 40px 30px
+        padding: 170px 170px 40px 0
     .ec-home-properties
         background-size: auto 500px
         height: 390px
@@ -811,8 +804,10 @@ img.ec-award
 
 // xl
 @media only screen and (min-width: 1400px) and (max-width: 1599px)
-    .ec-home-splash
-        background-position: left top
+    .ec-home-splash-wrap
+        height: 640px
+        .ec-home-splash-text
+            padding-top: 150px
     .ec-home-properties
         background-size: auto 500px
         height: 420px
@@ -831,14 +826,15 @@ img.ec-award
         font-size: 4em
     h3
         font-size: 1.4em
-    .ec-home-splash
-        background-position: left top
-        background-size: 100%
-        height: 460px
     .ec-video-wrap
         padding: 40px
+    .ec-home-splash-wrap
+        background-size: 110%
+        height: 460px
     .ec-home-splash-text
-        padding: 40px 40px 40px 20px
+        padding: 200px 40px 40px 20px
+        h1 
+            margin-bottom: 20px
     .ec-home-properties
         background-size: auto 420px
         height: 320px
@@ -901,10 +897,11 @@ img.ec-award
     .ec-stretch-lt-teal-border
         padding: 20px
 
-    .ec-home-splash
-        height: 0px
+    .ec-home-splash-wrap
+        background-size: 230%
+        height: 510px
     .ec-home-splash-text
-        padding-top: 20px
+        padding-top: 100px
     .ec-home-charging-experts
         background: none
         background-color: $ec-lt-grey
