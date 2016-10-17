@@ -265,6 +265,10 @@ def thank_you():
 def signup_lumina():
     return render_template("signup-lumina.html")
 
+@app.route('/atwater', methods=['POST', 'GET'])
+def signup_atwater():
+    return render_template("signup-atwater.html")
+
 
 ###################
 # Nutshell Routes #
