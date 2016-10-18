@@ -199,6 +199,10 @@ def hoa_property_manager():
 def about_us():
     return render_template("about-us.html")
 
+@app.route('/electrician', methods=['POST', 'GET'])
+def electrician_lead():
+    return render_template("electrician.html")
+
 
 @app.route('/smartpower', methods=['POST', 'GET'])
 def smart_power():

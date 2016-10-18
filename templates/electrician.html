@@ -1,0 +1,78 @@
+{% extends 'layout/base.html' %}
+
+{% block banner_class %}
+    class="parallax img-electrician" data-speed="4" data-type="background"
+{% endblock %}
+
+{% block banner_text %}
+    <h2 class="ec-zero">Maximize Your Business</h2>
+{% endblock %}
+
+{% block content_one %}
+	<div class="ec-stretch-white">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-1 col-md-10">
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-10">
+                            <h2 class="thin">Bringing new business to you, through fully-scalable SmartPower technology</h2>
+                            <h4>Our Service</h4>
+                            <p>EverCharge is the right solution for multi-tenant buildings. We offer the only fully managed, scalable solution for EV charging and made things easy by providing insurance, maintenance, support and billing services for every customer.</p>
+							<h2>What makes EverCharge different?</h2>
+                            <h4>TESLA PREFERRED</h4>
+                            <p>Tesla Motors preferred EV charging solution</p>
+                            <h4>SMARTPOWER</h4>
+                            <p>Intelligent technology allows for less infrastructure and more customers</p>
+                            <h4>MONITORING</h4>
+                            <p>No need for meters or submeters</p>
+                            <h4>Exclusive</h4>
+                            <p>Owners charge in their own parking space</p>
+                            <h4>Scalability</h4>
+                            <p>Add vehicle capacity as demand grows</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<p class="black">Traditional charging options only support a small number of EV drivers. Costs to make additional power available for charging can become prohibitively expensive. SmartPower overcomes this inherent problem by intelligently managing available power to provide up to 10 times the number of chargers.</p>
+							<p class="black">Equipped with EverCharge, buildings make dedicated EV charging possible with ability to scale as demand increases.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<h2>Dedicated Home Charging</h2>
+							<p class="black">Convenient dedicated home charging makes the whole EV experience work. Without it, the hunt for an unoccupied public charger becomes a constant activity. By efficiently managing electrical capacity, EverCharge makes dedicated home charging possible.</p>
+							<img src="{{ url_for('static', filename='images/graphic-smartpower-lg.jpg') }}" class="img-responsive" alt="SmartPower in action. A vehicle with a nearly empty battery draws far more power than a vehicle with a half-full battery, and a vehicle with a full battery draws no power.">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<h2>Lower Installation Costs</h2>
+							<p class="black">EverCharge designs infrastructure layouts to meet each of our customer’s needs while leveraging our technology. Traditional charging solutions require dedicated and metered runs from the main electrical panel. EverCharge uses technology embedded in our chargers to monitor electricity usage to manage customer billing and the building reimbursement without the need for meters or submeters. </p> 
+						</div>
+					</div>
+					<div class="row">
+                        <div class="col-xs-12">
+                            <h2>SmartPower in Action</h2>
+                        </div>
+						<div class="col-sm-6">
+							<p class="black">SmartPower provides efficient charging for all vehicles by leveraging the fact not all vehicles charge at the same moment in time and do not constantly require maximum draw during a charging cycle. SmartPower always works to get the most vehicles charged as quickly as possible, freeing up capacity. The best way to think about SmartPower is to visualize EverCharge as one charger with many outlets.</p>
+						</div>
+                        <div class="col-xs-8 col-sm-offset-1 col-sm-5 col-md-4">
+                            <img src="{{ url_for('static', filename='images/graphic-one-charger.jpg') }}" class="img-responsive" alt="SmartPower: One charger with many outlets.">
+                        </div>
+                    </div>
+					<div class="row">
+						<div class="col-md-offset-1 col-md-10">
+							<h2 class="thin text-center">EverCharge provides ongoing service to ensure charging performance and driver satisfaction.</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-offset-2 col-sm-8">
+							<a class="ec-button-teal-border" href="{{ url_for('evercharge_properties') }}">View Real World Examples</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- end ec-smartpower-wrap -->
+{% endblock %}
