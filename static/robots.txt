@@ -6,6 +6,7 @@ Disallow: /install
 Disallow: /installspecsfull
 Disallow: /installspecsshort
 Disallow: /lumina
+Disallow: /mainstreet
 Disallow: /potrero-case-study
 Disallow: /preferred
 Disallow: /tesla

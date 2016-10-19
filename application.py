@@ -261,13 +261,17 @@ def thank_you():
 ##########################
 # BUILDING SIGNUP ROUTES #
 ##########################
+@app.route('/atwater', methods=['POST', 'GET'])
+def signup_atwater():
+    return render_template("signup-atwater.html")
+
 @app.route('/lumina', methods=['POST', 'GET'])
 def signup_lumina():
     return render_template("signup-lumina.html")
 
-@app.route('/atwater', methods=['POST', 'GET'])
-def signup_atwater():
-    return render_template("signup-atwater.html")
+@app.route('/mainstreet', methods=['POST', 'GET'])
+def signup_mainstreet():
+    return render_template("signup-mainstreet.html")
 
 
 ###################
