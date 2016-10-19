@@ -269,7 +269,7 @@ def signup_atwater():
 def signup_lumina():
     return render_template("signup-lumina.html")
 
-@app.route('/mainstreet', methods=['POST', 'GET'])
+@app.route('/mainstreetvillage', methods=['POST', 'GET'])
 def signup_mainstreet():
     return render_template("signup-mainstreet.html")
 
