@@ -199,7 +199,40 @@ def hoa_property_manager():
 def about_us():
     return render_template("about-us.html")
 
-@app.route('/electrician', methods=['POST', 'GET'])
+
+@app.route('/electrician/thank-you', methods=['POST', 'GET'])
+def electrician_thank_you():
+    if request.method == 'GET':
+        return redirect('/')
+    name = request.form.get('quote_name')
+    if name.lower() == 'electrician test':
+        return render_template("thank_you.html")
+    company = request.form.get('quote_company_name')
+    area = request.form.get('area')
+    phone = request.form.get('quote_phone', None)
+    email = request.form.get('quote_email')
+    tag = request.form.get('adwordsField', None)
+    gran = request.form.get('granularField')
+
+    new_contact = nutshell_client.newContact(contact=dict(name=name, email=email, phone=phone))
+    contact_id = new_contact['id']
+
+    external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
+    external_source = NUTSHELL_SOURCES.get(external_source)
+    if external_source is not None:
+        sources = [{'id': x} for x in external_source]
+    else:
+        sources = None
+    new_lead = nutshell_client.newLead(lead=dict(contacts=[{'id': contact_id}],
+                                                 sources=sources))
+    new_lead_id = new_lead['id']
+    if tag:
+        nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=[tag, gran]), rev="REV")
+    signed_lead_id = singer.sign(str(new_lead_id))
+    return render_template("thank_you.html", newLeadId=signed_lead_id, contactId=contact_id)
+
+
+@app.route('/electrician')
 def electrician_lead():
     return render_template("electrician.html")
 
@@ -260,6 +293,9 @@ def thank_you():
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=[tag, gran]), rev="REV")
     signed_lead_id = singer.sign(str(new_lead_id))
     return render_template("thank_you.html", newLeadId=signed_lead_id, contactId=contact_id, note=note)
+
+
+
 
 
 ##########################
