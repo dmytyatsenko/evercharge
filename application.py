@@ -18,7 +18,7 @@ css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
 assets.register('css_all', css_all)
 
 js = Bundle('js/bootstrap-formhelpers-phone.js',
-            'js/jquery.main.js',
+            # 'js/jquery.main.js',
             'js/scroll_fade.js',
             'js/transition.js',
             'js/difficulties.js',
