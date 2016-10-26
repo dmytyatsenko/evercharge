@@ -151,10 +151,17 @@ li.bullet
         left: 0
         padding-top: 0
         position: absolute
-.error
-    color: $ec-red
-    font-size: 14px
-    margin-top: 5px
+.error input
+    border: 1px solid $ec-red
+    font-size: inherit
+    &::-webkit-input-placeholder
+        color: $ec-red
+    &:-moz-placeholder
+        color: $ec-red
+    &::-moz-placeholder
+        color: $ec-red
+    &:-ms-input-placeholder
+        color: $ec-red
 .ec-teal
     color: $ec-teal
 .text-center
