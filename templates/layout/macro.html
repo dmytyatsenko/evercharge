@@ -1,0 +1,50 @@
+{% macro electrician_contact_form() %}
+    <form action="{{ url_for('electrician_thank_you') }}" method='post' id="quote" class="validate-form">
+        <input name="lead_source" value="Web Signup" type="hidden">
+        <input name="adwordsField" id='adwordsField' type="hidden">
+        <input name="granularField" id="granularField" type="hidden">
+
+        <fieldset class="ec-fieldset">
+            <!-- Name -->
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                    <input name="quote_name" type="text" class="form-control required" id="electrician_name_input"
+                           placeholder="Name*" autocomplete="off">
+                </div>
+            </div>
+            <!-- Company Name -->
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                    <input name="quote_company_name" type="text" class="form-control required" id="company_name_input"
+                           placeholder="Full Company Name*" autocomplete="off">
+                </div>
+            </div>
+            <!-- Area -->
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                    <input name="quote_area" type="text" class="form-control required" id="area_input"
+                           placeholder="Company Address*" autocomplete="off">
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                    <input name="quote_email" type="email" class="form-control required-email" id="electrician_email_input"
+                           placeholder="Email*" autocomplete="off">
+                </div>
+            </div>
+            <!-- Phone -->
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <div class="form-group">
+                    <input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone"
+                           data-format="ddd-ddd-dddd" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <div class="col-xs-12 col-md-6">
+                <input type="submit" value="Submit" class="ec-button-teal block">
+            </div>
+        </fieldset>
+    </form>
+{% endmacro %}

@@ -151,6 +151,12 @@ li.bullet
         left: 0
         padding-top: 0
         position: absolute
+ol.num-list
+    font-size: 1.3em
+    line-height: 1.2em
+li.num
+    margin-bottom: 10px
+    padding-left: 1em
 .error input
     border: 1px solid $ec-red
     font-size: inherit
@@ -320,6 +326,9 @@ img.border
     border-top: 1px solid $ec-md-grey
     padding-bottom: 40px
     padding-top: 40px
+.ec-left-bar
+    border-left: 6px solid $ec-lt-teal-60
+    padding-left: 20px
 
 // misc
 hr
@@ -386,6 +395,10 @@ p.black
         background: url(../images/building-12.jpg) fixed no-repeat
         background-size: 100%
         height: 400px
+    &.img-electrician
+        background: url(../images/splash-electrician.jpg) fixed no-repeat
+        background-size: 110%
+        height: 440px
     &.img-error
         background: url(../images/parking-4.jpg) fixed no-repeat
         background-size: 100%
@@ -662,7 +675,7 @@ fieldset.ec-fieldset
     width: 30%
     p
         margin-bottom: 20px
-.ec-mini-quote-form 
+.ec-mini-form
     h4
         color: black
         margin-bottom: 36px
@@ -865,6 +878,8 @@ img.ec-award
     .parallax
         &.img-about-us
             background-size: auto 400px
+        &.img-electrician
+            background-size: 200%
         &.img-error
             background-size: auto 700px
             height: 400px
@@ -976,6 +991,8 @@ img.ec-award
         &.img-about-us
             background-size: auto 300px
             height: 300px
+        &.img-electrician
+            background-size: 300%
         &.img-error
             background-size: auto 600px
             height: 380px

@@ -36,6 +36,8 @@ nutshell_client = NutshellAPI(NUTSHELL_USERNAME, NUTSHELL_API_KEY)
 
 NUTSHELL_SOURCES = {source['name']: source['id'] for source in nutshell_client.findSources()}
 
+
+WEB_SIGNUP_SOURCE = NUTSHELL_SOURCES['Web Signup']
 EV_OWNER_SOURCE_ID = NUTSHELL_SOURCES['Web - EV Owner']
 HOA_SOURCE_ID = NUTSHELL_SOURCES['Web - HOA/PM']
 GOOGLE_SOURCE = 'Google'
@@ -200,6 +202,50 @@ def about_us():
     return render_template("about-us.html")
 
 
+@app.route('/electrician/thank-you', methods=['POST', 'GET'])
+def electrician_thank_you():
+    if request.method == 'GET':
+        return redirect('/')
+    name = request.form.get('quote_name')
+    if name.lower() == 'electrician test':
+        return render_template("thank_you.html")
+    company = request.form.get('quote_company_name')
+    area = request.form.get('quote_area')
+    phone = request.form.get('quote_phone', None)
+    email = request.form.get('quote_email')
+    tag = request.form.get('adwordsField', None)
+    gran = request.form.get('granularField')
+
+    contact = dict(name=name, email=email)
+    if phone:
+        contact['phone'] = phone
+
+    account = nutshell_client.newAccount(
+        account=dict(name=company, address=[{'address_1': area, 'country': 'US'}]))
+    new_contact = nutshell_client.newContact(contact=contact)
+    contact_id = new_contact['id']
+
+    external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
+    external_source = NUTSHELL_SOURCES.get(external_source)
+    sources = [{'id': WEB_SIGNUP_SOURCE}]
+    if external_source is not None:
+        sources.append({'id': external_source})
+    new_lead = nutshell_client.newLead(
+        lead=dict(contacts=[{'id': contact_id}],
+                  primaryAccount={'id': account['id']},
+                  sources=sources))
+    new_lead_id = new_lead['id']
+    if tag:
+        nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=[tag, gran]), rev="REV")
+    signed_lead_id = singer.sign(str(new_lead_id))
+    return render_template("thank_you.html", newLeadId=signed_lead_id, contactId=contact_id)
+
+
+@app.route('/electrician')
+def electrician_lead():
+    return render_template("electrician.html")
+
+
 @app.route('/smartpower', methods=['POST', 'GET'])
 def smart_power():
     return render_template("smartpower.html")
@@ -265,9 +311,11 @@ def thank_you():
 def signup_atwater():
     return render_template("signup-atwater.html")
 
+
 @app.route('/lumina', methods=['POST', 'GET'])
 def signup_lumina():
     return render_template("signup-lumina.html")
+
 
 @app.route('/mainstreetvillage', methods=['POST', 'GET'])
 def signup_mainstreet():
