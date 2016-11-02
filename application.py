@@ -36,6 +36,8 @@ nutshell_client = NutshellAPI(NUTSHELL_USERNAME, NUTSHELL_API_KEY)
 
 NUTSHELL_SOURCES = {source['name']: source['id'] for source in nutshell_client.findSources()}
 
+
+WEB_SIGNUP_SOURCE = NUTSHELL_SOURCES['Web Signup']
 EV_OWNER_SOURCE_ID = NUTSHELL_SOURCES['Web - EV Owner']
 HOA_SOURCE_ID = NUTSHELL_SOURCES['Web - HOA/PM']
 GOOGLE_SOURCE = 'Google'
@@ -225,10 +227,9 @@ def electrician_thank_you():
 
     external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
     external_source = NUTSHELL_SOURCES.get(external_source)
+    sources = [{'id': WEB_SIGNUP_SOURCE}]
     if external_source is not None:
-        sources = [{'id': external_source}]
-    else:
-        sources = None
+        sources.append({'id': external_source})
     new_lead = nutshell_client.newLead(
         lead=dict(contacts=[{'id': contact_id}],
                   primaryAccount={'id': account['id']},
