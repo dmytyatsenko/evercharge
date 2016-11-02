@@ -18,7 +18,7 @@ css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
 assets.register('css_all', css_all)
 
 js = Bundle('js/bootstrap-formhelpers-phone.js',
-            'js/jquery.main.js',
+            # 'js/jquery.main.js',
             'js/scroll_fade.js',
             'js/transition.js',
             'js/difficulties.js',
@@ -307,14 +307,19 @@ def thank_you():
 ##########################
 # BUILDING SIGNUP ROUTES #
 ##########################
+@app.route('/atwater', methods=['POST', 'GET'])
+def signup_atwater():
+    return render_template("signup-atwater.html")
+
+
 @app.route('/lumina', methods=['POST', 'GET'])
 def signup_lumina():
     return render_template("signup-lumina.html")
 
 
-@app.route('/atwater', methods=['POST', 'GET'])
-def signup_atwater():
-    return render_template("signup-atwater.html")
+@app.route('/mainstreetvillage', methods=['POST', 'GET'])
+def signup_mainstreet():
+    return render_template("signup-mainstreet.html")
 
 
 ###################
