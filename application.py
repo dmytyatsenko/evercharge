@@ -214,9 +214,13 @@ def electrician_thank_you():
     tag = request.form.get('adwordsField', None)
     gran = request.form.get('granularField')
 
+    contact = dict(name=name, email=email)
+    if phone:
+        contact['phone'] = phone
+
     account = nutshell_client.newAccount(
         account=dict(name=company, address=[{'address_1': area, 'country': 'US'}]))
-    new_contact = nutshell_client.newContact(contact=dict(name=name, email=email, phone=phone))
+    new_contact = nutshell_client.newContact(contact=contact)
     contact_id = new_contact['id']
 
     external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
