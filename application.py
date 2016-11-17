@@ -256,6 +256,11 @@ def faqs():
     return render_template("faqs.html")
 
 
+@app.route('/fleet', methods=['POST', 'GET'])
+def fleet():
+    return render_template("fleet.html")
+
+
 @app.route('/press', methods=['POST', 'GET'])
 def press_page():
     return render_template('press.html')
