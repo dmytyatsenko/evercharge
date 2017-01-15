@@ -204,7 +204,7 @@ def about_us():
 
 @app.route('/electrician/thank-you', methods=['POST', 'GET'])
 def electrician_thank_you():
-    if request.method == 'GET':
+    if request.method == 'GET' or is_robot():
         return redirect('/')
     name = request.form.get('quote_name')
     if name.lower() == 'electrician test':
@@ -273,7 +273,7 @@ def tesla_page():
 
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
-    if request.method == 'GET':
+    if request.method == 'GET' or is_robot():
         return redirect('/')
     name = request.form.get('quote_name')
     if name.lower() in ('driver test', 'pm test'):
@@ -307,6 +307,10 @@ def thank_you():
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=[tag, gran]), rev="REV")
     signed_lead_id = singer.sign(str(new_lead_id))
     return render_template("thank_you.html", newLeadId=signed_lead_id, contactId=contact_id, note=note)
+
+
+def is_robot():
+    return request.form.get('sane-field') != ''
 
 
 ##########################
