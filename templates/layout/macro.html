@@ -3,7 +3,7 @@
         <input name="lead_source" value="Web Signup" type="hidden">
         <input name="adwordsField" id='adwordsField' type="hidden">
         <input name="granularField" id="granularField" type="hidden">
-
+        <input name="sane-field" class="sane-field">
         <fieldset class="ec-fieldset">
             <!-- Name -->
             <div class="col-xs-12 col-md-6 col-lg-4">
@@ -44,6 +44,39 @@
             <div class="clearfix"></div>
             <div class="col-xs-12 col-md-6">
                 <input type="submit" value="Submit" class="ec-button-teal block">
+            </div>
+        </fieldset>
+    </form>
+{% endmacro %}
+
+{% macro contact_us_short_form() %}
+    <form action="{{ url_for('thank_you') }}" method='post' class="validate-form">
+        <input name="lead_source" value="Web Signup" type="hidden">
+        <input name="adwordsField" id='adwordsField' type="hidden">
+        <input name="granularField" id="granularField" type="hidden">
+        <input name="sane-field" class="sane-field">
+        <fieldset>
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-12">
+                    <h4 class="text-center">Connect with EverCharge Today</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="holder">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="form-group">
+                            <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="form-group">
+                            <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <input type="submit" value="Connect With Us" class="ec-button-teal-border block">
+                    </div>
+                </div>
             </div>
         </fieldset>
     </form>
