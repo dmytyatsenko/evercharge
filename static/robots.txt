@@ -1,5 +1,7 @@
 User-agent: *
+Disallow: /akoya
 Disallow: /atwater
+Disallow: /bristol
 Disallow: /co
 Disallow: /datasheet
 Disallow: /install
@@ -7,6 +9,8 @@ Disallow: /installspecsfull
 Disallow: /installspecsshort
 Disallow: /lumina
 Disallow: /mainstreetvillage
+Disallow: /mandalayonthehudson
+Disallow: /oceanpark
 Disallow: /optima
 Disallow: /potrero-case-study
 Disallow: /preferred

@@ -316,9 +316,19 @@ def is_robot():
 ##########################
 # BUILDING SIGNUP ROUTES #
 ##########################
+@app.route('/akoya', methods=['POST', 'GET'])
+def signup_akoya():
+    return render_template("signup-akoya.html")
+
+
 @app.route('/atwater', methods=['POST', 'GET'])
 def signup_atwater():
     return render_template("signup-atwater.html")
+
+
+@app.route('/bristol', methods=['POST', 'GET'])
+def signup_bristol():
+    return render_template("signup-bristol.html")
 
 
 @app.route('/lumina', methods=['POST', 'GET'])
@@ -329,6 +339,16 @@ def signup_lumina():
 @app.route('/mainstreetvillage', methods=['POST', 'GET'])
 def signup_mainstreet():
     return render_template("signup-mainstreet.html")
+
+
+@app.route('/mandalayonthehudson', methods=['POST', 'GET'])
+def signup_mandalayonthehudson():
+    return render_template("signup-mandalayonthehudson.html")
+
+
+@app.route('/oceanpark', methods=['POST', 'GET'])
+def signup_oceanpark():
+    return render_template("signup-oceanpark.html")
 
 
 @app.route('/optima', methods=['POST', 'GET'])
