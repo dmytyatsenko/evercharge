@@ -356,6 +356,11 @@ def signup_optima():
     return render_template("signup-optima.html")
 
 
+@app.route('/thepierce', methods=['POST', 'GET'])
+def signup_thepierce():
+    return render_template("signup-thepierce.html")
+
+
 ###################
 # Nutshell Routes #
 ###################
