@@ -156,6 +156,16 @@ def tesla_marketing_sheet():
     return app.send_static_file('EverCharge-Tesla-Marketing-Handout.pdf')
 
 
+@app.route('/device')
+def device_breakdown():
+    return app.send_static_file('EverCharge-Device-Breakdown.pdf')
+
+
+@app.route('/userguide')
+def user_guide():
+    return app.send_static_file('EverCharge-User-Guide.pdf')
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
