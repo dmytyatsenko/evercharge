@@ -4,6 +4,7 @@ Disallow: /atwater
 Disallow: /bristol
 Disallow: /co
 Disallow: /datasheet
+Disallow: /device
 Disallow: /install
 Disallow: /installspecsfull
 Disallow: /installspecsshort
@@ -18,4 +19,5 @@ Disallow: /tesla
 Disallow: /tesla-marketing
 Disallow: /thankyou
 Disallow: /thepierce
+Disallow: /userguide
 Disallow: /w
