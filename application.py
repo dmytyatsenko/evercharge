@@ -138,7 +138,7 @@ def property_case_study_six():
 
 @app.route('/datasheet')
 def data_sheet():
-    return app.send_static_file('evercharge_data_sheet.pdf')
+    return app.send_static_file('doc-evercharge-accharger-datasheet.pdf')
 
 
 @app.route('/install')
