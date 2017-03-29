@@ -5,6 +5,7 @@ Disallow: /bristol
 Disallow: /co
 Disallow: /datasheet
 Disallow: /device
+Disallow: /gm-signup
 Disallow: /install
 Disallow: /installspecsfull
 Disallow: /installspecsshort
