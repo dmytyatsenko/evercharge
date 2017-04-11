@@ -341,6 +341,11 @@ def signup_bristol():
     return render_template("signup-bristol.html")
 
 
+@app.route('/customerguide', methods=['POST', 'GET'])
+def signup_customerguide():
+    return render_template("signup-customerguide.html")
+
+
 @app.route('/gm-signup', methods=['POST', 'GET'])
 def signup_gm():
     return render_template("signup-gm.html")
