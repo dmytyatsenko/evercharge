@@ -15,6 +15,7 @@ Disallow: /mainstreetvillage
 Disallow: /mandalayonthehudson
 Disallow: /oceanpark
 Disallow: /optima
+Disallow: /pilot
 Disallow: /potrero-case-study
 Disallow: /preferred
 Disallow: /tesla

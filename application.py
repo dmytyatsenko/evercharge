@@ -376,6 +376,11 @@ def signup_optima():
     return render_template("signup-optima.html")
 
 
+@app.route('/pilot', methods=['POST', 'GET'])
+def survey_pilot():
+    return redirect('https://goo.gl/forms/jScpBjvC6QNpeIfr1')
+
+
 @app.route('/thepierce', methods=['POST', 'GET'])
 def signup_thepierce():
     return render_template("signup-thepierce.html")
