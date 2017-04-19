@@ -3,6 +3,7 @@ Disallow: /akoya
 Disallow: /atwater
 Disallow: /bristol
 Disallow: /co
+Disallow: /connectortypes
 Disallow: /customerguide
 Disallow: /datasheet
 Disallow: /device

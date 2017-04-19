@@ -96,6 +96,11 @@ def company_overview():
     return app.send_static_file('doc-company-overview.pdf')
 
 
+@app.route('/connectortypes')
+def connector_types():
+    return app.send_static_file('EverCharge-Connector-Types.pdf')
+
+
 @app.route('/smartpower-overview')
 def smartpower_overview():
     return redirect('/smartpower')
