@@ -1,10 +1,12 @@
 # -*- encoding: utf-8 -*-
 import os
-from six.moves.urllib.parse import urlparse
 from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
-from nutshell import NutshellAPI
 import itsdangerous
+from nutshell import NutshellAPI
+from six.moves.urllib.parse import urlparse
+import requests
+
 
 application = Flask(__name__, static_url_path='')
 app = application
@@ -52,6 +54,11 @@ HOSTNAME_TO_SOURCE = {
     'www.1776.vc': ONLINE_PUBLICATION_SOURCE
 }
 SOCIAL_SOURCE_COOKIE = '_social_source'
+
+
+# Google Recaptcha
+app.config['RECAPTCHA_SITE_KEY'] = RECAPTCHA_SITE_KEY = '6LcZ5h8UAAAAAK1C4CuWYWvNC-Up5c2O-i1hS0mj'
+app.config['RECAPTCHA_SECRET_KEY'] = RECAPTCHA_SECRET_KEY = '6LcZ5h8UAAAAABShpha6eS9KWaVuDekFAskme_6K'
 
 
 @app.after_request
@@ -219,7 +226,7 @@ def about_us():
 
 @app.route('/electrician/thank-you', methods=['POST', 'GET'])
 def electrician_thank_you():
-    if request.method == 'GET' or is_robot():
+    if request.method == 'GET' or not is_human():
         return redirect('/')
     name = request.form.get('quote_name')
     if name.lower() == 'electrician test':
@@ -288,7 +295,7 @@ def tesla_page():
 
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
-    if request.method == 'GET' or is_robot():
+    if request.method == 'GET' or not is_human():
         return redirect('/')
     name = request.form.get('quote_name')
     if name.lower() in ('driver test', 'pm test'):
@@ -324,8 +331,16 @@ def thank_you():
     return render_template("thank_you.html", newLeadId=signed_lead_id, contactId=contact_id, note=note)
 
 
-def is_robot():
-    return request.form.get('sane-field') != ''
+def is_human():
+    recaptcha_token = request.form.get('g-recaptcha-response')
+    if recaptcha_token:
+        data = {
+            "secret": RECAPTCHA_SECRET_KEY,
+            "response": recaptcha_token,
+        }
+        r = requests.get('https://www.google.com/recaptcha/api/siteverify', params=data)
+        return r.json()['success'] if r.status_code == 200 else False
+    return False
 
 
 ##########################

@@ -3,7 +3,6 @@
         <input name="lead_source" value="Web Signup" type="hidden">
         <input name="adwordsField" id='adwordsField' type="hidden">
         <input name="granularField" id="granularField" type="hidden">
-        <input name="sane-field" class="sane-field">
         <fieldset class="ec-fieldset">
             <!-- Name -->
             <div class="col-xs-12 col-md-6 col-lg-4">
@@ -43,7 +42,7 @@
 
             <div class="clearfix"></div>
             <div class="col-xs-12 col-md-6">
-                <input type="submit" value="Submit" class="ec-button-teal block">
+                <input type="submit" value="Submit" class="g-recaptcha ec-button-teal block">
             </div>
         </fieldset>
     </form>
@@ -54,7 +53,6 @@
         <input name="lead_source" value="Web Signup" type="hidden">
         <input name="adwordsField" id='adwordsField' type="hidden">
         <input name="granularField" id="granularField" type="hidden">
-        <input name="sane-field" class="sane-field">
         <fieldset>
             <div class="row">
                 <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-12">
@@ -74,10 +72,32 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-4">
-                        <input type="submit" value="Connect With Us" class="ec-button-teal-border block">
+                        <input type="submit" value="Connect With Us" class="g-recaptcha ec-button-teal-border block">
                     </div>
                 </div>
             </div>
         </fieldset>
     </form>
+{% endmacro %}
+
+{% macro recaptcha_scripts() %}
+    <script>
+        function onRecaptchaLoadCallback() {
+            $('.g-recaptcha').each(function (index, el) {
+                grecaptcha.render(el, {
+                    sitekey: '{{ config.RECAPTCHA_SITE_KEY }}',
+                    callback: function (token) {
+                        var form = $(el).closest('form');
+                        $('<input />')
+                            .attr('type', 'hidden')
+                            .attr('name', 'recaptcha-token')
+                            .attr('value', token)
+                            .appendTo(form);
+                        form.submit();
+                    },
+                });
+            })
+        }
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoadCallback&render=explicit" async defer></script>
 {% endmacro %}

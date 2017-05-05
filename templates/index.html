@@ -1,5 +1,10 @@
 {% extends 'layout/base.html' %}
-{% from 'layout/macro.html' import contact_us_short_form %}
+{% from 'layout/macro.html' import contact_us_short_form, recaptcha_scripts %}
+
+{% block custom_scripts %}
+    {{ recaptcha_scripts() }}
+{% endblock %}
+
 
 {% block content_one %}
     <div class="ec-home-splash-wrap">
