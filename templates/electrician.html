@@ -1,5 +1,5 @@
 {% extends 'layout/base.html' %}
-{% from 'layout/macro.html' import electrician_contact_form, recaptcha_scripts %}
+{% from 'layout/macro.html' import electrician_contact_form %}
 
 {% block banner_class %}
     class="parallax img-electrician" data-speed="4" data-type="background"
@@ -7,10 +7,6 @@
 
 {% block banner_text %}
     <h2 class="ec-zero ec-teal">Maximize Your Business</h2>
-{% endblock %}
-
-{% block custom_scripts %}
-    {{ recaptcha_scripts() }}
 {% endblock %}
 
 {% block content_one %}

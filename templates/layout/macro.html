@@ -79,25 +79,3 @@
         </fieldset>
     </form>
 {% endmacro %}
-
-{% macro recaptcha_scripts() %}
-    <script>
-        function onRecaptchaLoadCallback() {
-            $('.g-recaptcha').each(function (index, el) {
-                grecaptcha.render(el, {
-                    sitekey: '{{ config.RECAPTCHA_SITE_KEY }}',
-                    callback: function (token) {
-                        var form = $(el).closest('form');
-                        $('<input />')
-                            .attr('type', 'hidden')
-                            .attr('name', 'recaptcha-token')
-                            .attr('value', token)
-                            .appendTo(form);
-                        form.submit();
-                    },
-                });
-            })
-        }
-    </script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoadCallback&render=explicit" async defer></script>
-{% endmacro %}
