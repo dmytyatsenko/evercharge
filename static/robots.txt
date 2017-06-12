@@ -24,4 +24,3 @@ Disallow: /tesla-marketing
 Disallow: /thankyou
 Disallow: /thepierce
 Disallow: /userguide
-Disallow: /w

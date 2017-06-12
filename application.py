@@ -467,11 +467,6 @@ def evercharge_properties():
     return render_template('properties.html')
 
 
-@app.route('/w')
-def device_wattson():
-    return render_template('wattson.html')
-
-
 if __name__ == '__main__':
     PORT = int(os.environ.get("PORT", 5000))
     DEBUG = os.environ.get("FLASK_DEBUG", False)
