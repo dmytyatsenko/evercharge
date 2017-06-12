@@ -457,11 +457,6 @@ def follow_up():
     return render_template('about-us.html')
 
 
-@app.route('/schneider-partnership')
-def schneider_partnership():
-    return render_template('partnership.html')
-
-
 @app.route('/properties')
 def evercharge_properties():
     return render_template('properties.html')
