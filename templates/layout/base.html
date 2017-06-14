@@ -209,6 +209,7 @@
             $('.g-recaptcha').each(function (index, el) {
                 grecaptcha.render(el, {
                     sitekey: '{{ config.RECAPTCHA_SITE_KEY }}',
+                    badge: 'inline',
                     callback: function (token) {
                         var form = $(el).closest('form');
                         $('<input />')
