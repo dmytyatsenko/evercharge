@@ -2,14 +2,39 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
+import geoip2.database
 import itsdangerous
 from nutshell import NutshellAPI
 from six.moves.urllib.parse import urlparse
 import requests
 
 
+geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
+
+
+class GuessCountryFromIP(object):
+    def __init__(self, app):
+        self.app = app
+
+    def __call__(self, environ, start_response):
+        environ['country'] = None
+        try:
+            ip = environ['HTTP_X_FORWARDED_FOR'].split(',')[-1].strip()
+            environ['country'] = geoip2_reader.country(ip).country.iso_code
+        except:
+            pass
+        return self.app(environ, start_response)
+
 application = Flask(__name__, static_url_path='')
 app = application
+app.wsgi_app = GuessCountryFromIP(app.wsgi_app)
+
+# Put 'country' into every template.
+old_render_template = render_template
+def render_template_wrapper(*args, **kwargs):
+    kwargs['country'] = request.environ['country']
+    return old_render_template(*args, **kwargs)
+render_template = render_template_wrapper
 
 app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY", 'testingkey')
 singer = itsdangerous.Signer(app.config['SECRET_KEY'])
@@ -99,7 +124,10 @@ def install_specs_short():
 
 @app.route('/co')
 def company_overview():
-    return app.send_static_file('doc-company-overview.pdf')
+    if request.environ['country'] == 'CA':
+        return app.send_static_file('doc-company-overview-2017-0713-CA.pdf')
+    else:
+        return app.send_static_file('doc-company-overview-2017-0713-US.pdf')
 
 
 @app.route('/connectortypes')

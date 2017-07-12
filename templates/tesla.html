@@ -43,7 +43,9 @@
                             <ul class="bullet-list">
                                 <li class="bullet">Permitting</li>
                                 <li class="bullet">Installation</li>
-                                <li class="bullet">Insurance</li>
+                                {% if country != 'CA' %}
+                                    <li class="bullet">Insurance</li>
+                                {% endif %}
                                 <li class="bullet">Support</li>
                             </ul>
                         </div>
