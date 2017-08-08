@@ -175,6 +175,21 @@ def property_case_study_six():
     return app.send_static_file('EverCharge-Property-Case-Study-6.pdf')
 
 
+@app.route('/evercharge-case-study-7')
+def property_case_study_seven():
+    return app.send_static_file('EverCharge-Property-Case-Study-7.pdf')
+
+
+@app.route('/evercharge-case-study-8')
+def property_case_study_eight():
+    return app.send_static_file('EverCharge-Property-Case-Study-8.pdf')
+
+
+@app.route('/evercharge-case-study-9')
+def property_case_study_nine():
+    return app.send_static_file('EverCharge-Property-Case-Study-9.pdf')
+
+
 @app.route('/datasheet')
 def data_sheet():
     return app.send_static_file('doc-evercharge-accharger-datasheet.pdf')

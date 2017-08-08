@@ -550,6 +550,7 @@ fieldset.ec-fieldset
 
 // page: properties
 .ec-case-studies
+    margin-bottom: 60px
     h2
         margin-bottom: 3px
         margin-top: 0
@@ -575,6 +576,22 @@ fieldset.ec-fieldset
         font-weight: 600
         line-height: 1em
         margin-top: 0
+    &.new
+        border-bottom: 8px solid $ec-teal
+        position: relative
+        .tag
+            background-color: $ec-teal
+            border-color: white
+            border-style: solid
+            border-width: 1px 1px 1px 0
+            color: white
+            font-size: 14px
+            font-weight: 600
+            left: 0
+            padding: 4px 8px
+            position: absolute
+            top: 15px
+
 
 
 // page: base
@@ -874,6 +891,8 @@ img.ec-award
         background-position-y: -50px
         background-size: auto 400px
 
+    .ec-case-studies
+        margin-bottom: 0
     .ec-featured-prop
         max-width: 500px
 
