@@ -1,0 +1,140 @@
+{% extends 'layout/base.html' %}
+{% from 'layout/macro.html' import contact_us_short_form %}
+
+
+{% block content_one %}
+    <div class="ec-home-splash-wrap">
+        <div class="container-fluid">
+            <div class="row">
+                    <!-- <div class="ec-video-wrap">
+                        <video src="images/video-home-splash.mp4" autoplay loop controls type="video/mp4" class="ec-video">
+                        </video>
+                    </div> -->
+                <div class="col-md-offset-6 col-md-6 col-lg-offset-7 col-lg-5">
+                    <div class="ec-home-splash-text">
+                        <h1 class="white">Charging Made Easy</h1>
+                        <h3 class="ec-teal extra-bottom-lg">EverCharge built the world's smartest charging solution specifically designed for apartments, condominiums, and fleets</h3>
+                        <h3><a href="{{ url_for('why_evercharge') }}" class="white underline">Learn More &#8594;</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ec-stretch-white ec-mini-form">
+        <div class="container">
+            {{ contact_us_short_form() }}
+        </div>
+    </div>
+    <div class="ec-stretch-white ec-home-charging-experts">
+        <div class="container">
+            <div class="row text-center extra-bottom-lg">
+                <div class="col-sm-12">
+                    <h1>Charging Experts</h1>
+                    <h3 class="extra-bottom-lg">EverCharge makes widespread EV adoption possible in apartments, condominiums, and fleets</h3>
+                </div>
+                <div class="col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+                    <a href="{{ url_for('why_evercharge') }}" class="ec-button-teal block">See Why EverCharge &#8594;</a>
+                </div>
+            </div>
+            <div class="row extra-bottom-md">
+                <div class="col-sm-12 col-lg-offset-1 col-lg-10">
+                    <div class="ec-col-30">
+                        <div class="ec-box ec-bk-lt-blue">
+                            <img src="{{ url_for('static', filename='images/icon-1.png') }}" class="img-responsive" alt="" />
+                        </div>
+                        <div class="ec-box-white">
+                            <h3>Here to Help</h3>
+                            <p>We understand your needs and handle everything like</p>
+                            <ul class="bullet-list">
+                                <li class="bullet">Permitting</li>
+                                <li class="bullet">Installation</li>
+                                <li class="bullet">Maintenance</li>
+                                <li class="bullet">Support</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ec-col-30">
+                        <div class="ec-box ec-bk-lt-teal">
+                            <img src="{{ url_for('static', filename='images/icon-3.png') }}" class="img-responsive" alt="" />
+                        </div>
+                        <div class="ec-box-white">
+                            <h3>Dedicated Stations</h3>
+                            <p>SmartPower technology gives every driver their own station</p>
+                            <ul class="bullet-list">
+                                <li class="bullet">No Sharing</li>
+                                <li class="bullet">No Waiting</li>
+                                <li class="bullet">Installed directly in your space</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="ec-col-30">
+                        <div class="ec-box ec-bk-dk-purple">
+                            <img src="{{ url_for('static', filename='images/icon-2.png') }}" class="img-responsive" alt="" />
+                        </div>
+                        <div class="ec-box-white">
+                            <h3>Long-Term Value</h3>
+                            <p>We get buildings EV ready now and protect them for the future</p>
+                            <ul class="bullet-list">
+                                <li class="bullet">Affordable solution</li>
+                                <li class="bullet">Future-proof your building</li>
+                                <li class="bullet">Instantly scaleable from day one</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end row -->
+        </div>
+    </div>
+    <div class="ec-stretch-lt-teal ec-mini-form">
+        <div class="container">
+             {{ contact_us_short_form() }}
+        </div>
+    </div>
+    <div class="ec-stretch-white">
+        <div class="container">
+            <div class="row ec-feat-press">
+                <div class="col-sm-12">
+                    <h2>What People Are Saying</h2>
+                </div>
+                <div class="col-sm-6 col-md-3 extra-bottom-md">
+                    <a href="http://fortune.com/2016/11/11/automobility-la-best-auto-startups/" target="_blank"><img src="{{ url_for('static', filename='images/press-fortune.png') }}" class="border img-responsive extra-bottom-sm" alt="Fortune logo" /></a>
+                    <h5><a href="http://fortune.com/2016/09/22/top-10-automotive-startups/" target="_blank">These 3 Auto Startups Are the Best of 2016</a></h5>
+                    <p>"For its second-annual Top Ten Automotive Startups competition, the LA Auto Show's AutoMobility LA—formerly the Connected Car Expo—today announced this year's three finalists..."</p>
+                </div>
+                <div class="col-sm-6 col-md-3 extra-bottom-md">
+                    <a href="https://techcrunch.com/2016/09/22/automobility-la-announces-its-top-10-startups/" target="_blank"><img src="{{ url_for('static', filename='images/press-techcrunch.jpg') }}" class="border img-responsive extra-bottom-sm" alt="Techcrunch logo" /></a>
+                    <h5><a href="https://techcrunch.com/2016/09/22/automobility-la-announces-its-top-10-startups/" target="_blank">AutoMobility LA announces its top 10 startups</a></h5>
+                    <p>"...this is a pivot toward the future of transportation that puts more emphasis on technology, cleaner fuels, and shared ownership."</p>
+                </div>
+                <div class="clearfix visible-sm"></div>
+                <div class="col-sm-6 col-md-3 extra-bottom-md">
+                    <a href="http://www.latimes.com/business/la-fi-hy-live-updates-2016-la-auto-show-compete-for-an-ev-charging-station-no-1479325686-htmlstory.html" target="_blank"><img src="{{ url_for('static', filename='images/press-latimes.jpg') }}" class="border img-responsive extra-bottom-sm" alt="Los Angeles Times logo" /></a>
+                    <h5><a href="http://www.autoblog.com/2016/07/14/carve-a-wooden-bike-infineon-gets-into-evs/" target="_blank">No more competition for an EV charging station?</a></h5>
+                    <p>"If you've ever left a note for a neighbor who parked in the EV charging station overnight, EverCharge has a solution for you."</p>
+                </div>
+                <div class="col-sm-6 col-md-3 extra-bottom-md">
+                    <a href="http://cleantechnica.com/?s=EverCharge" target="_blank"><img src="{{ url_for('static', filename='images/press-cleantechnica.jpg') }}" class="border img-responsive extra-bottom-sm" alt="Clean Technica logo" /></a>
+                    <h5><a href="http://cleantechnica.com/?s=EverCharge" target="_blank">EverCharge Articles</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row ec-bk-lt-teal">
+            <div class="col-sm-12 col-md-6 ec-zero-all">
+                <div class="ec-home-properties text-center">
+                    <a href="{{ url_for('evercharge_properties') }}" class="ec-text-link lg white">View Our<br/>Success Stories</a>
+                </div>
+                <!-- end ec-home-properties -->
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="ec-box extra-stretch text-center">
+                    <h2 class="thin extra-bottom-sm">“No one else can do what EverCharge does and without them I would not have been able to keep my Tesla.”</h2>
+                    <p>&ndash; <strong>Tim</strong>, Customer</p>
+                    <p><a href="{{ url_for('evercharge_properties') }}" class="ec-text-link">Read more about how EverCharge helps everyday customers &#8594;</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

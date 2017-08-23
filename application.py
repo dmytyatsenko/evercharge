@@ -335,6 +335,11 @@ def tesla_page():
     return render_template('tesla.html')
 
 
+@app.route('/letscharge', methods=['POST', 'GET'])
+def campaign_letscharge():
+    return render_template('campaign-letscharge.html')
+
+
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
     if request.method == 'GET' or not is_human():
