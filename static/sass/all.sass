@@ -448,12 +448,12 @@ p.black
 //////////////////////
 // BASE TEMPLATE
 // header
-$navbar-height: 50px
+$navbar-height: 89px
 nav
     a.navbar-brand
         padding: 0
     .header_logo
-        height: $navbar-height
+        height: 50px
         margin-left: 12px
     .navbar-fixed-top
         border-width: 0
@@ -488,6 +488,31 @@ nav
         i.fa-phone
             margin-right: 8px
             opacity: 0.6
+    .navbar-contact
+        background-color: $ec-teal
+        margin-left: -15px
+        margin-right: -15px
+        padding-left: 15px
+        padding-right: 15px
+        a
+            color: white
+            display: inline-block
+            letter-spacing: 0.5px
+        .contact-info 
+            float: left
+            a
+                padding: 8px 20px
+                i.fa-envelope,
+                i.fa-phone
+                    margin-right: 8px
+                    opacity: 1.0
+                &:first-child
+                    border-right: 1px solid RGBA(250,250,250,0.5)
+                    padding-left: 10px
+        .social
+            float: right
+            a
+                padding: 8px 5px
 
 // footer
 footer#footer
@@ -661,7 +686,7 @@ fieldset.ec-fieldset
     background-position: center -50px
     background-size: 100%
     height: 530px
-    margin-top: 50px
+    margin-top: $navbar-height
     padding: 0
 .ec-home-splash-text
     padding: 60px 60px 70px 30px
@@ -767,7 +792,7 @@ img.ec-award
 
 // page: campaign url: letscharge
 .ec-campaign-letscharge-wrap
-    margin-top: 50px
+    margin-top: $navbar-height
     .extra-stretch
         padding-bottom: 50px
         padding-top: 50px
@@ -967,6 +992,23 @@ img.ec-award
         font-size: 3em
     h3
         font-size: 1.3em
+    nav
+        .navbar-contact
+            a
+                color: white
+                display: inline-block
+                letter-spacing: 0.5px
+            .contact-info 
+                float: none
+                a
+                    padding: 8px 10px
+                    i.fa-envelope,
+                    i.fa-phone
+                        margin-right: 5px
+                    &:first-child
+                        border-right: 0px
+            .social
+                display: none
     .container
         padding-left: 16px
         padding-right: 16px
