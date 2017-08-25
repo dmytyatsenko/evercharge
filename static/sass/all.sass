@@ -449,6 +449,7 @@ p.black
 // BASE TEMPLATE
 // header
 $navbar-height: 89px
+$navbar-height-xs: 85px
 nav
     a.navbar-brand
         padding: 0
@@ -981,6 +982,9 @@ img.ec-award
         .ec-box-white-border
             margin: 0
 
+    .ec-video-wrap
+        margin-bottom: 15px
+
 // xs
 @media only screen and (max-width: 767px)
     body
@@ -994,14 +998,19 @@ img.ec-award
         font-size: 1.3em
     nav
         .navbar-contact
+            margin-left: -15px
+            margin-right: -15px
+            padding-left: 7px
+            padding-right: 7px
             a
                 color: white
                 display: inline-block
+                font-size: 13px
                 letter-spacing: 0.5px
             .contact-info 
                 float: none
                 a
-                    padding: 8px 10px
+                    padding: 8px 0 8px 8px
                     i.fa-envelope,
                     i.fa-phone
                         margin-right: 5px
@@ -1019,6 +1028,7 @@ img.ec-award
 
     .ec-home-splash-wrap
         background-size: 310%
+        margin-top: $navbar-height-xs
         height: 510px
     .ec-home-splash-text
         padding-top: 100px
@@ -1028,10 +1038,18 @@ img.ec-award
     .ec-col-30
         float: none
         margin: 10px auto 20px auto
-        width: 80%
+        width: 100%
+        .ec-box
+            padding: 10px
+        img
+            margin: 0 auto
+            width: 50% 
     .ec-home-properties
         background-position-y: -50px
         background-size: auto 400px
+    .ec-feat-press
+        img
+            max-width: 150px
 
     .ec-case-studies
         margin-bottom: 0
@@ -1109,9 +1127,10 @@ img.ec-award
             margin-bottom: 30px
 
     .ec-campaign-letscharge-wrap
+        margin-top: $navbar-height-xs
         .extra-stretch
-            padding-bottom: 40px
-            padding-top: 40px
+            padding-bottom: 30px
+            padding-top: 30px
         h2
             margin-bottom: 6px
         .ec-video-wrap
