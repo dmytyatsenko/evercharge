@@ -67,6 +67,7 @@ NUTSHELL_SOURCES = {source['name']: source['id'] for source in nutshell_client.f
 WEB_SIGNUP_SOURCE = NUTSHELL_SOURCES['Web Signup']
 EV_OWNER_SOURCE_ID = NUTSHELL_SOURCES['Web - EV Owner']
 HOA_SOURCE_ID = NUTSHELL_SOURCES['Web - HOA/PM']
+LETS_CHARGE_CAMPAIGN = NUTSHELL_SOURCES['Adwords Campaign /letscharge']
 GOOGLE_SOURCE = 'Google'
 TWITTER_SOURCE = 'Twitter'
 ONLINE_PUBLICATION_SOURCE = 'Online Publications'
@@ -367,6 +368,8 @@ def thank_you():
         sources = [{'id': x} for x in (source, external_source)]
     else:
         sources = [{'id': source}]
+    if request.form.get('lead_source') == 'campaign-letscharge':
+        sources.append({'id': LETS_CHARGE_CAMPAIGN})
 
     new_lead = nutshell_client.newLead(lead=dict(contacts=[{'id': contact_id}],
                                                  sources=sources,
