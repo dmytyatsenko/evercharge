@@ -67,6 +67,7 @@ NUTSHELL_SOURCES = {source['name']: source['id'] for source in nutshell_client.f
 WEB_SIGNUP_SOURCE = NUTSHELL_SOURCES['Web Signup']
 EV_OWNER_SOURCE_ID = NUTSHELL_SOURCES['Web - EV Owner']
 HOA_SOURCE_ID = NUTSHELL_SOURCES['Web - HOA/PM']
+LETS_CHARGE_CAMPAIGN = NUTSHELL_SOURCES['Adwords Campaign /letscharge']
 GOOGLE_SOURCE = 'Google'
 TWITTER_SOURCE = 'Twitter'
 ONLINE_PUBLICATION_SOURCE = 'Online Publications'
@@ -335,6 +336,11 @@ def tesla_page():
     return render_template('tesla.html')
 
 
+@app.route('/letscharge', methods=['POST', 'GET'])
+def campaign_letscharge():
+    return render_template('campaign-letscharge.html')
+
+
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
     if request.method == 'GET' or not is_human():
@@ -360,6 +366,8 @@ def thank_you():
     external_source = NUTSHELL_SOURCES.get(external_source)
     if external_source is not None:
         sources = [{'id': x} for x in (source, external_source)]
+    elif request.form.get('lead_source') == 'campaign-letscharge':
+        sources = [{'id': LETS_CHARGE_CAMPAIGN}]
     else:
         sources = [{'id': source}]
 
