@@ -366,10 +366,10 @@ def thank_you():
     external_source = NUTSHELL_SOURCES.get(external_source)
     if external_source is not None:
         sources = [{'id': x} for x in (source, external_source)]
+    elif request.form.get('lead_source') == 'campaign-letscharge':
+        sources = [{'id': LETS_CHARGE_CAMPAIGN}]
     else:
         sources = [{'id': source}]
-    if request.form.get('lead_source') == 'campaign-letscharge':
-        sources.append({'id': LETS_CHARGE_CAMPAIGN})
 
     new_lead = nutshell_client.newLead(lead=dict(contacts=[{'id': contact_id}],
                                                  sources=sources,
