@@ -362,87 +362,6 @@ p.black
 .ec-zero-all
     margin: 0 !important
     padding: 0 !important
-
-// banner + parallax
-.ec-banner-text
-    left: 50%
-    position: absolute
-    top: 50%
-    transform: translate(-50%, -40%)
-    h2
-        color: white
-        display: inline-block
-        font-size: 3em
-        margin-bottom: 40px
-        &:after
-            background-color: white
-            border-radius: 5px
-            box-shadow: $ec-text-shadow
-            content: ""
-            display: block
-            height: 5px
-            margin-top: 5px
-            width: 100%
-    h3
-        color: white
-.ec-banner
-    min-height: 300px
-    position: relative
-    text-align: center
-    h2:after
-        box-shadow: none
-.parallax
-    margin: 0
-    padding: 75px 0
-    position: relative
-    text-align: center
-    text-shadow: $ec-text-shadow
-    width: 100%
-    &.img-about-us
-        background: url(../images/building-12.jpg) fixed no-repeat
-        background-size: 100%
-        height: 400px
-    &.img-electrician
-        background: url(../images/splash-electrician.jpg) fixed no-repeat
-        background-position: top
-        background-size: 100%
-        height: 410px
-    &.img-error
-        background: url(../images/parking-4.jpg) fixed no-repeat
-        background-size: 100%
-        height: 600px
-    &.img-partnership
-        background: url(../images/building-1.jpg) fixed no-repeat
-        background-position-y: -180px
-        background-size: 100%
-        height: 300px
-    &.img-properties
-        background: url(../images/building-13.jpg) fixed no-repeat
-        background-size: 100%
-        height: 400px
-    &.img-press
-        background: url(../images/building-9.jpg) fixed no-repeat
-        background-size: 100%
-        height: 300px
-    &.img-smartpower
-        background: url(../images/parking-3.jpg) fixed no-repeat
-        background-size: 100%
-        height: 400px
-    &.img-tesla
-        background: url(../images/hero-tesla.jpg) fixed no-repeat
-        background-position-x: center
-        background-size: auto 320px
-        height: 320px
-    &.img-thankyou
-        background: url(../images/parking-1.jpg) fixed no-repeat
-        background-size: 100%
-        height: 400px
-    &.img-why-ec
-        background: url(../images/parking-2.jpg) fixed no-repeat
-        background-position-x: center
-        background-position-y: -100px
-        background-size: 100%
-        height: 370px
 //////////////////////
 
 //////////////////////
@@ -544,6 +463,88 @@ footer#footer
     h5
         margin-top: 24px
 //////////////////////
+
+// banner + parallax
+.ec-banner-text
+    left: 50%
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    h2
+        color: white
+        display: inline-block
+        font-size: 3em
+        margin-bottom: 40px
+        &:after
+            background-color: white
+            border-radius: 5px
+            box-shadow: $ec-text-shadow
+            content: ""
+            display: block
+            height: 5px
+            margin-top: 5px
+            width: 100%
+    h3
+        color: white
+.ec-banner
+    margin-top: $navbar-height
+    min-height: 190px
+    position: relative
+    text-align: center
+    h2:after
+        box-shadow: none
+.parallax
+    margin: $navbar-height 0 0 0
+    padding: 75px 0
+    position: relative
+    text-align: center
+    text-shadow: $ec-text-shadow
+    width: 100%
+    &.img-about-us
+        background: url(../images/building-12.jpg) fixed no-repeat
+        background-size: 100%
+        height: 350px
+    &.img-electrician
+        background: url(../images/splash-electrician.jpg) fixed no-repeat
+        background-position: top
+        background-size: 100%
+        height: 360px
+    &.img-error
+        background: url(../images/parking-4.jpg) fixed no-repeat
+        background-size: 100%
+        height: 550px
+    &.img-partnership
+        background: url(../images/building-1.jpg) fixed no-repeat
+        background-position-y: -130px
+        background-size: 100%
+        height: 250px
+    &.img-properties
+        background: url(../images/building-13.jpg) fixed no-repeat
+        background-size: 100%
+        height: 250px
+    &.img-press
+        background: url(../images/building-9.jpg) fixed no-repeat
+        background-size: 100%
+        height: 250px
+    &.img-smartpower
+        background: url(../images/parking-3.jpg) fixed no-repeat
+        background-size: 100%
+        height: 320px
+    &.img-tesla
+        background: url(../images/hero-tesla.jpg) fixed no-repeat
+        background-position-x: center
+        background-size: auto 320px
+        height: 270px
+    &.img-thankyou
+        background: url(../images/parking-1.jpg) fixed no-repeat
+        background-size: 100%
+        height: 350px
+    &.img-why-ec
+        background: url(../images/parking-2.jpg) fixed no-repeat
+        background-position-x: center
+        background-position-y: -50px
+        background-size: 100%
+        height: 320px
 
 // page: thankyou
 .ec-thankyou 
@@ -908,7 +909,7 @@ img.ec-award
             background-position-x: center
             background-position-y: -80px
             background-size: auto 600px
-            height: 460px
+            height: 410px
 
 // xl
 @media only screen and (min-width: 1400px) and (max-width: 1599px)
@@ -926,7 +927,7 @@ img.ec-award
         &.img-tesla
             background-position-x: center
             background-size: auto 450px
-            height: 450px
+            height: 400px
 
 // sm
 @media only screen and (max-width: 992px)
@@ -961,7 +962,8 @@ img.ec-award
         &.img-about-us
             background-size: auto 400px
         &.img-electrician
-            background-size: 200%
+            background-size: 100%
+            height: 200px
         &.img-error
             background-size: auto 700px
             height: 400px
@@ -969,11 +971,11 @@ img.ec-award
             background-size: auto 800px
         &.img-properties
             background-size: auto 400px
-            height: 400px
+            height: 200px
         &.img-tesla
             background-position-x: center
             background-size: auto 260px
-            height: 260px
+            height: 170px
         &.img-why-ec
             background-position-y: inherit
             background-size: auto 600px
