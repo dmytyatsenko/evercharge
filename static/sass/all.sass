@@ -21,7 +21,8 @@ $ec-font-quote: "rift-soft", serif // weights: 400 italic, 600
 $ec-font-headline: "acumin-pro-semi-condensed", sans-serif // weights: 200, 700
 $ec-font-body: "proxima-nova", sans-serif // weights: 100, 400, 400 italic, 700, 700 italic 
 $ec-letter-space: -0.5px
-$ec-text-shadow: 2px 2px 7px RGBA(0,0,0,0.6)
+$ec-text-shadow: 3px 3px 0px RGBA(0,0,0,0.7)
+$ec-text-shadow-lt: 3px 3px 0px RGBA(0,0,0,0.2)
 //////////////////////
 
 //////////////////////
@@ -88,12 +89,16 @@ textarea
 // type
 h1
     font-family: $ec-font-body
-    font-size: 5em
-    font-weight: 100
-    letter-spacing: -1.3px
-    line-height: 0.8em
-    margin-bottom: 60px
+    font-size: 4em
+    font-weight: 800
+    line-height: 0.9em
+    margin-bottom: 30px
     margin-top: 0
+    &.subhead
+        font-size: 1.5em
+        font-weight: 600
+        letter-spacing: 0.5px
+        line-height: 1.2em
 h2
     color: $ec-teal
     font-family: $ec-font-quote
@@ -179,6 +184,8 @@ li.num
     text-align: right
 .text-shadow
     text-shadow: $ec-text-shadow
+.text-shadow-lt
+    text-shadow: $ec-text-shadow-lt
 .white
     color: white !important
 
@@ -470,29 +477,14 @@ footer#footer
     position: absolute
     top: 50%
     transform: translate(-50%, -50%)
-    h2
+    h1
         color: white
-        display: inline-block
-        font-size: 3em
-        margin-bottom: 40px
-        &:after
-            background-color: white
-            border-radius: 5px
-            box-shadow: $ec-text-shadow
-            content: ""
-            display: block
-            height: 5px
-            margin-top: 5px
-            width: 100%
-    h3
-        color: white
+        margin-bottom: 30px
 .ec-banner
     margin-top: $navbar-height
-    min-height: 190px
+    min-height: 210px
     position: relative
     text-align: center
-    h2:after
-        box-shadow: none
 .parallax
     margin: $navbar-height 0 0 0
     padding: 75px 0
@@ -512,7 +504,7 @@ footer#footer
     &.img-error
         background: url(../images/parking-4.jpg) fixed no-repeat
         background-size: 100%
-        height: 550px
+        height: 350px
     &.img-partnership
         background: url(../images/building-1.jpg) fixed no-repeat
         background-position-y: -130px
@@ -693,8 +685,6 @@ fieldset.ec-fieldset
 .ec-home-splash-text
     padding: 60px 60px 70px 30px
     text-shadow: $ec-text-shadow
-    h1
-        font-weight: 400
 .ec-video-wrap
     padding: 70px 0
     .ec-video
@@ -995,7 +985,10 @@ img.ec-award
         .form-group
             margin-bottom: 5px
     h1
-        font-size: 3em
+        font-size: 3.5em
+        &.subhead
+            font-size: 1.3em
+            font-weight: 600
     h3
         font-size: 1.3em
     nav
@@ -1086,7 +1079,7 @@ img.ec-award
         display: block !important
 
     .parallax
-        margin: 0
+        margin-top: $navbar-height-xs
         padding: 75px 0
         position: relative
         .ec-banner-text
