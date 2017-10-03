@@ -1,9 +1,5 @@
 {% extends 'layout/base.html' %}
 
-{%- block extra_css -%}
-    <link rel="stylesheet" href="css/slider.css" />
-{%- endblock -%}
-
 {%- block custom_scripts -%}
     <script type="application/javascript" src="//cdnjs.cloudflare.com/ajax/libs/dragdealer/0.9.8/dragdealer.min.js"></script>
     <script type="application/javascript" src="{{ url_for('static', filename='js/slider.js') }}"></script>
@@ -13,132 +9,23 @@
     class="parallax img-tesla" data-speed="4" data-type="background"
 {% endblock %}
 
-{% block content_one %}
-    <div class="ec-stretch-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
-                    <img src="{{ url_for('static', filename='images/EverCharge-Tesla-logos.jpg') }}" alt="EverCharge and Tesla" class="img-responsive extra-bottom-md" />
-                </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-sm-12 col-lg-offset-2 col-lg-8">
-                    <h1 class="text-center extra-bottom-md">EverCharge makes charging in apartments and condominiums easy.</h1>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row extra-bottom-md">
-                <div class="col-sm-12 col-lg-offset-1 col-lg-10">
-                    <div class="ec-col-30">
-                        <div class="ec-box">
-                            <img src="{{ url_for('static', filename='images/icon-1.png') }}" class="img-responsive" alt="" />
-                        </div>
-                        <div class="ec-box-white">
-                            <h3 class="ec-teal">Here to Help</h3>
-                            <p>We understand your needs and handle everything like</p>
-                            <ul class="bullet-list">
-                                <li class="bullet">Permitting</li>
-                                <li class="bullet">Installation</li>
-                                {% if country != 'CA' %}
-                                    <li class="bullet">Insurance</li>
-                                {% endif %}
-                                <li class="bullet">Support</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="ec-col-30">
-                        <div class="ec-box">
-                            <img src="{{ url_for('static', filename='images/icon-3.png') }}" class="img-responsive" alt="" />
-                        </div>
-                        <div class="ec-box-white">
-                            <h3 class="ec-teal">Dedicated Stations</h3>
-                            <p>SmartPower technology gives every driver their own station</p>
-                            <ul class="bullet-list">
-                                <li class="bullet">No Sharing</li>
-                                <li class="bullet">No Waiting</li>
-                                <li class="bullet">Installed directly in your space</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="ec-col-30">
-                        <br/><br/>
-                        <div class="ec-box-lt-grey">
-                            <a href="{{ url_for('tesla_marketing_sheet') }}" target="_blank">
-                                <img src="{{ url_for('static', filename='images/preview-tesla-sheet.png') }}" alt="EverCharge and Tesla" class="img-responsive extra-bottom-sm border" />
-                            </a>
-                            <p class="extra-bottom-sm"><a href="{{ url_for('tesla_marketing_sheet') }}" target="_blank">View Details &#8594;</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end row -->
+{% block banner_text %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-0 col-lg-12">
+            <h1>EverCharge makes charging in apartments and condominiums easy</h1>
         </div>
     </div>
-    <div class="ec-box extra-stretch ec-home-charging-experts hidden-xs">
+</div>
+{% endblock %}
+
+{% block content_one %}
+    <div class="ec-box extra-stretch ec-home-charging-experts">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
-                    <h2 class="text-center ec-teal">What are my install costs?</h2>
-                    <p class="text-center">Install costs are directly related to the distance from the electrical room to your parking spot.</p>
-                    <p class="text-center"><small><em>Price provided is an estimate only and is not an actual quote.</em></small></p>
-                    <div class="clearfix"></div>
-                    <div class="range-holder">
-                        <div id="pr-slider" class="dragdealer">
-                            <div class="stripe">
-                                <div class="handle">
-                                    <div class="infobox">
-                                        <div class="innerbox">
-                                            <div class="info-price"></div>
-                                        </div>
-                                    </div>  
-                                    <div class="square">
-                                        <span class="value"></span>
-                                    </div>  
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="range-scale">
-                            <div class="scale-wrap first">
-                                <div class="scale first"></div>
-                                <div class="number">0 ft</div>
-                            </div>
-                            <div class="scale-wrap">
-                                <div class="scale"></div>
-                                <div class="number">50 ft</div>
-                            </div>
-                            <div class="scale-wrap">
-                                <div class="scale"></div>
-                                <div class="number">100 ft</div>
-                            </div>
-                            <div class="scale-wrap">
-                                <div class="scale"></div>
-                                <div class="number">150 ft</div>
-                            </div>
-                            <div class="scale-wrap">
-                                <div class="scale"></div>
-                                <div class="number">200 ft</div>
-                            </div>
-                            <div class="scale-wrap">
-                                <div class="scale"></div>
-                                <div class="number">250 ft</div>
-                            </div>
-                            <div class="scale-wrap">
-                                <div class="scale"></div>
-                                <div class="number">300 ft</div>
-                            </div>
-                            <div class="scale-wrap">
-                                <div class="scale"></div>
-                                <div class="number">350 ft</div>
-                            </div>
-                            <p class="text-center"><small><strong>Distance from electrical room</strong></small></p>
-                        </div>
-                    </div>
-                    <!-- end range-holder -->
+                <div class="col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                    <h2 class="text-center ec-teal">EverCharge Advantage</h2>
+                    <p class="text-center">EverCharge can install more stations without adding expensive infrastructure upgrades meaning more residents get access to charging for far lower install costs</p>
                 </div>
             </div>
             <!-- end row -->
