@@ -275,7 +275,7 @@ a.ec-button-teal
     display: block
     width: 100%
 
-//boxes
+// boxes
 .ec-bk-lt-blue
     background-color: $ec-lt-blue
 .ec-bk-dk-purple
@@ -524,10 +524,13 @@ footer#footer
         background-size: 100%
         height: 320px
     &.img-tesla
-        background: url(../images/hero-tesla.jpg) fixed no-repeat
-        background-position-x: center
-        background-size: auto 320px
-        height: 270px
+        background: url(../images/tesla-charging.jpg) fixed no-repeat
+        background-position: center 36px
+        background-size: 150% auto
+        height: 540px
+        text-align: left
+        h2.thin
+            margin-top: 100px
     &.img-thankyou
         background: url(../images/parking-1.jpg) fixed no-repeat
         background-size: 100%
@@ -570,7 +573,8 @@ fieldset.ec-fieldset
         color: black
         font-weight: 400
         margin-bottom: 0
-        margin-left: 10px
+        margin-left: 3px
+        margin-right: 10px
 
 // page: properties
 .ec-case-studies
@@ -839,7 +843,7 @@ img.ec-award
             color: RGBA(250, 250, 250, 0.8)
     .section-smartpower
         background: url(../images/building-6.jpg) no-repeat
-        background-size: 100%
+        background-size: auto 100%
         text-align: center
         h2
             font-size: 3.3em
@@ -864,21 +868,11 @@ img.ec-award
             position: absolute
             top: 0
             width: 100%
-        .ec-stretch-lt-teal
-            background-color: $ec-lt-teal
-            margin-bottom: 20px
-            padding: 20px
-            p
-                margin-bottom: 0
-        img.border
-            background-color: white
-            padding: 15px
-        .ec-stretch-grey
-            padding: 25px
-            h4
-                color: black
-            p
-                margin-bottom: 0
+        .ec-stretch-border-top
+            border-top: 5px solid $ec-teal
+            margin-top: 40px
+            padding-bottom: 0
+            padding-top: 20px
             
 
 //////////////////////
@@ -897,10 +891,8 @@ img.ec-award
         padding: 115px 60px 60px 60px
     .parallax 
         &.img-tesla
-            background-position-x: center
-            background-position-y: -80px
-            background-size: auto 600px
-            height: 410px
+            background-size: 100% auto
+            height: 580px
 
 // xl
 @media only screen and (min-width: 1400px) and (max-width: 1599px)
@@ -916,9 +908,8 @@ img.ec-award
         padding: 40px
     .parallax 
         &.img-tesla
-            background-position-x: center
-            background-size: auto 450px
-            height: 400px
+            background-size: 100% auto
+            height: 550px
 
 // sm
 @media only screen and (max-width: 992px)
@@ -965,8 +956,7 @@ img.ec-award
             height: 200px
         &.img-tesla
             background-position-x: center
-            background-size: auto 260px
-            height: 170px
+            background-size: 180% auto
         &.img-why-ec
             background-position-y: inherit
             background-size: auto 600px
@@ -1107,9 +1097,10 @@ img.ec-award
             background-size: auto 500px
             height: 500px
         &.img-tesla
-            background-position-x: left
-            background-size: auto 190px
-            height: 190px
+            background-size: auto 100%
+            height: 810px
+            h2.thin
+                margin-top: 0
         &.img-thankyou
             background-size: 100%
             height: 400px
