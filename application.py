@@ -235,6 +235,11 @@ def user_guide():
     return app.send_static_file('EverCharge-User-Guide.pdf')
 
 
+@app.route('/gm-user')
+def gm_user():
+    return app.send_static_file('EverCharge-GM-User-Guide.pdf')
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
