@@ -184,38 +184,6 @@
                 </div>
             </div>
         </div>
-        <div class="ec-stretch-lt-teal ec-mini-form">
-            <div class="container">
-                <form action="{{ url_for('thank_you') }}" method='post' class="validate-form">
-                    <input name="lead_source" value="Web Signup" type="hidden">
-                    <input name="adwordsField" id='adwordsField' type="hidden">
-                    <input name="granularField" id="granularField" type="hidden">
-                    <input name="sane-field" class="sane-field">
-                    <fieldset>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h2>Get a Quote</h2>
-                            </div>
-                            <div class="holder">
-                                <div class="col-xs-12 col-sm-3">
-                                    <div class="form-group">
-                                        <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-3">
-                                    <div class="form-group">
-                                        <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-3">
-                                    <input type="submit" value="Submit &#8594;" class="g-recaptcha ec-button-teal-border block">
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
     </div>
 {% endblock %}
 
