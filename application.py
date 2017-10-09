@@ -80,6 +80,7 @@ HOSTNAME_TO_SOURCE = {
     'www.1776.vc': ONLINE_PUBLICATION_SOURCE
 }
 SOCIAL_SOURCE_COOKIE = '_social_source'
+ADWORDS_COOKIE = '_adwords_cookie'
 
 # Google Recaptcha
 app.config['RECAPTCHA_SITE_KEY'] = RECAPTCHA_SITE_KEY = '6LcZ5h8UAAAAAK1C4CuWYWvNC-Up5c2O-i1hS0mj'
@@ -91,7 +92,7 @@ def check_referrer(response):
     source_cookie = request.cookies.get(SOCIAL_SOURCE_COOKIE)
     if source_cookie is None:
         if request.referrer:
-            if not request.referrer.startswith('http://evercharge.net'):
+            if not request.referrer.startswith('https://evercharge.net'):
                 url = urlparse(request.referrer)
                 if 'google.com' in url.hostname and 'plus.google.com' not in url.hostname:
                     response.set_cookie(SOCIAL_SOURCE_COOKIE, value=GOOGLE_SOURCE)
@@ -102,6 +103,19 @@ def check_referrer(response):
                         if source_hostname in url.hostname:
                             source = HOSTNAME_TO_SOURCE[source_hostname]
                             response.set_cookie(SOCIAL_SOURCE_COOKIE, value=source)
+    return response
+
+
+@app.after_request
+def check_adwords(response):
+    adwords_cookie = request.cookies.get(ADWORDS_COOKIE)
+    if adwords_cookie is None and request.referrer:
+        if not request.referrer.startswith('https://evercharge.net'):
+            url = urlparse(request.referrer)
+            if 'www.googleadservices.com' in url.hostname:
+                response.set_cookie(ADWORDS_COOKIE, value='1')
+            else:
+                response.set_cookie(ADWORDS_COOKIE, value='0')
     return response
 
 
@@ -300,8 +314,15 @@ def electrician_thank_you():
                   primaryAccount={'id': account['id']},
                   sources=sources))
     new_lead_id = new_lead['id']
+    lead_tags = []
     if tag:
-        nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=[tag, gran]), rev="REV")
+        lead_tags.append(tag)
+        lead_tags.append(gran)
+    adwords_cookie = request.cookies.get(ADWORDS_COOKIE)
+    if adwords_cookie == '1':
+        lead_tags.append('Adwords')
+    if lead_tags:
+        nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
     signed_lead_id = singer.sign(str(new_lead_id))
     return render_template("thank_you.html", newLeadId=signed_lead_id, contactId=contact_id)
 
@@ -375,8 +396,15 @@ def thank_you():
                                                  sources=sources,
                                                  note=lead_note))
     new_lead_id = new_lead['id']
+    lead_tags = []
     if tag:
-        nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=[tag, gran]), rev="REV")
+        lead_tags.append(tag)
+        lead_tags.append(gran)
+    adwords_cookie = request.cookies.get(ADWORDS_COOKIE)
+    if adwords_cookie == '1':
+        lead_tags.append('Adwords')
+    if lead_tags:
+        nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
     signed_lead_id = singer.sign(str(new_lead_id))
     return render_template("thank_you.html", newLeadId=signed_lead_id, contactId=contact_id, note=note)
 
