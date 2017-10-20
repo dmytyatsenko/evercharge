@@ -352,19 +352,24 @@ def fleets():
     return render_template("fleets.html")
 
 
+@app.route('/letscharge', methods=['POST', 'GET'])
+def campaign_letscharge():
+    return render_template('campaign-letscharge.html')
+
+
 @app.route('/press', methods=['POST', 'GET'])
 def press_page():
     return render_template('press.html')
 
 
+@app.route('/properties')
+def evercharge_properties():
+    return render_template('properties.html')
+
+
 @app.route('/tesla', methods=['POST', 'GET'])
 def tesla_page():
     return render_template('tesla.html')
-
-
-@app.route('/letscharge', methods=['POST', 'GET'])
-def campaign_letscharge():
-    return render_template('campaign-letscharge.html')
 
 
 @app.route('/thankyou', methods=['POST', 'GET'])
@@ -539,11 +544,6 @@ def update_lead_notes():
 @app.route('/nutshell/submit', methods=['POST', 'GET'])
 def follow_up():
     return render_template('about-us.html')
-
-
-@app.route('/properties')
-def evercharge_properties():
-    return render_template('properties.html')
 
 
 if __name__ == '__main__':
