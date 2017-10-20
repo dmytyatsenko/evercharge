@@ -367,6 +367,11 @@ def evercharge_properties():
     return render_template('properties.html')
 
 
+@app.route('/signup')
+def evercharge_signup():
+    return render_template('signup.html')
+
+
 @app.route('/tesla', methods=['POST', 'GET'])
 def tesla_page():
     return render_template('tesla.html')
