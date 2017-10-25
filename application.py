@@ -387,12 +387,19 @@ def thank_you():
     phone = request.form.get('quote_phone', None)
     email = request.form.get('quote_email')
     note = request.form.get('quote_notes')
-    lead_note = note if note else "No Customer Note"
+    lead_notes = [note if note else "No Customer Note"]
+    mailing_address = request.form.get('quote_mailing_address')
+    if mailing_address:
+        lead_notes.append(mailing_address)
+    building_name = request.form.get('quote_building_name')
+    if building_name:
+        lead_notes.append(building_name)
     phone = phone if phone else None
 
     customer_type = request.form.get('customer_type')
     tag = request.form.get('adwordsField', None)
     gran = request.form.get('granularField')
+    no_final_form = bool(request.form.get('no_final_form'))
 
     new_contact = nutshell_client.newContact(contact=dict(name=name, email=email, phone=phone))
     contact_id = new_contact['id']
@@ -409,7 +416,7 @@ def thank_you():
 
     new_lead = nutshell_client.newLead(lead=dict(contacts=[{'id': contact_id}],
                                                  sources=sources,
-                                                 note=lead_note))
+                                                 note=lead_notes))
     new_lead_id = new_lead['id']
     lead_tags = []
     if tag:
@@ -421,7 +428,11 @@ def thank_you():
     if lead_tags:
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
     signed_lead_id = singer.sign(str(new_lead_id))
-    return render_template("thank_you.html", newLeadId=signed_lead_id, contactId=contact_id, note=note)
+    return render_template("thank_you.html",
+                           newLeadId=signed_lead_id,
+                           contactId=contact_id,
+                           note=note,
+                           no_final_form=no_final_form)
 
 
 def is_human():
