@@ -12,6 +12,12 @@
     <div class="ec-stretch-white">
         <div class="container">
             <div class="row">
+                <div class="col-xs-12 col-md-offset-1 col-md-10 text-center">
+                    <h3 class="extra-bottom-sm">{% block form_name %}If your building already has EverCharge stations installed, simply fill out the form below to get started. You will receive a link within 24 hours to complete the signup process.{% endblock %}</h3>
+                    <p class="extra-bottom-md">All fields required.</p>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
                     <div class="row">
                         <form action="{{ url_for('thank_you') }}" method='post' id="quote" class="validate-form">
@@ -21,9 +27,6 @@
                             <input name="customer_type" id="customer_type" type="hidden" value="EV Driver">
                             <input name="no_final_form" id="no_final_form" type="hidden" value="True">
                             <fieldset class="ec-fieldset">
-                                <div class="col-xs-12">
-                                    <h3 class="extra-bottom-md">{% block form_name %}If your building already has EverCharge stations installed, simply fill out the form below to get started. You will receive a link within 24 hours to complete the signup process.{% endblock %}</h3>
-                                </div>
                                 <div class="col-xs-12">
                                     <div class="form-group">
                                         <label for="label1" class="label-input">Name</label>
@@ -39,7 +42,7 @@
                                 <div class="col-xs-12">
                                     <div class="form-group">
                                         <label for="label3" class="label-input">Phone</label>
-                                        <input name="quote_phone" id="label3" type="tel" class="form-control bfh-phone" data-format="ddd-ddd-dddd" autocomplete="off">
+                                        <input name="quote_phone" id="label3" type="tel" class="form-control bfh-phone required" data-format="ddd-ddd-dddd" autocomplete="off">
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
