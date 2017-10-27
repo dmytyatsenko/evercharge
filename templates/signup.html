@@ -1,0 +1,76 @@
+{% extends 'layout/base.html' %}
+
+{% block banner_class %}
+    class="ec-banner ec-stretch-dk-teal"
+{% endblock %}
+
+{% block banner_text %}
+    <h1 class="text-shadow">Sign Up for EverCharge</h1>
+{% endblock %}
+
+{% block content_one %}
+    <div class="ec-stretch-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+                    <div class="row">
+                        <form action="{{ url_for('thank_you') }}" method='post' id="quote" class="validate-form">
+                            <input name="lead_source" value="Web Signup" type="hidden">
+                            <input name="adwordsField" id='adwordsField' type="hidden">
+                            <input name="granularField" id="granularField" type="hidden">
+                            <input name="customer_type" id="customer_type" type="hidden" value="EV Driver">
+                            <input name="no_final_form" id="no_final_form" type="hidden" value="True">
+                            <fieldset class="ec-fieldset">
+                                <div class="col-xs-12">
+                                    <h3 class="extra-bottom-md">{% block form_name %}If your building already has EverCharge stations installed, simply fill out the form below to get started. You will receive a link within 24 hours to complete the signup process.{% endblock %}</h3>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="label1" class="label-input">Name</label>
+                                        <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Full name" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="label2" class="label-input">Email</label>
+                                        <input name="quote_email" type="email" class="form-control required-email" id="label2"  autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="label3" class="label-input">Phone</label>
+                                        <input name="quote_phone" id="label3" type="tel" class="form-control bfh-phone" data-format="ddd-ddd-dddd" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="quote_building_name" class="label-input">Building name</label>
+                                        <input name="quote_building_name" rows="2" class="form-control" autocomplete="off" id="quote_building_name">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="quote_mailing_address" class="label-input">Mailing address</label>
+                                        <input name="quote_mailing_address" rows="2" class="form-control" autocomplete="off" id="quote_mailing_address">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="quote_notes" class="label-input">Vehicle make and model</label>
+                                        <input name="quote_notes" rows="2" class="form-control" autocomplete="off" id="quote_notes">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <input type="submit" value="Submit" class="g-recaptcha ec-button-teal block">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block quote_form %}
+{% endblock %}
