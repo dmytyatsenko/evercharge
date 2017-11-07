@@ -233,6 +233,7 @@
                             .attr('value', token)
                             .appendTo(form);
                         form.submit();
+                        grecaptcha.reset();
                     },
                 });
             })

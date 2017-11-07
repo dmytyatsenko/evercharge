@@ -1,5 +1,7 @@
 var submitButton = document.getElementById("final_submit_button");
-submitButton.addEventListener('click', replaceForm, false);
+if (submitButton) {
+	submitButton.addEventListener('click', replaceForm, false);
+}
 
 function replaceForm() {
 	document.getElementById("form_heading").innerHTML = "Thank you!";
@@ -10,8 +12,11 @@ function replaceForm() {
 
 // REFERENCE AUTOSUBMIT
 var teslaOptions = document.getElementById('reference_listener');
-teslaOptions.addEventListener('click', autoDealerCheck, false);
-teslaOptions.addEventListener('click', referenceSubmit, false);
+if (teslaOptions) {
+	teslaOptions.addEventListener('click', autoDealerCheck, false);
+	teslaOptions.addEventListener('click', referenceSubmit, false);
+}
+
 
 function autoDealerCheck()
 {
