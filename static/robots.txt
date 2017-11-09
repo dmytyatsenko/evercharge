@@ -1,4 +1,9 @@
 User-agent: *
+
+Allow: /
+Sitemap : https://evercharge.net/sitemap.xml
+
+User-agent: *
 Disallow: /akoya
 Disallow: /atwater
 Disallow: /bristol

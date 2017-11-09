@@ -17,7 +17,7 @@ $ec-lt-purple: RGBA(182,189,224,1.0)
 $ec-dk-purple: RGBA(69,68,149,1.0)
 $ec-dk-yellow: RGBA(239,216,0,1.0)
 // type
-$ec-font-quote: "rift-soft", serif // weights: 400 italic, 600
+$ec-font-quote: "rift-soft", sans-serif // weights: 400 italic, 600
 $ec-font-headline: "acumin-pro-semi-condensed", sans-serif // weights: 200, 700
 $ec-font-body: "proxima-nova", sans-serif // weights: 100, 400, 400 italic, 700, 700 italic 
 $ec-letter-space: -0.5px
@@ -107,6 +107,12 @@ h2
     letter-spacing: 1px
     margin-bottom: 30px
     margin-top: 0
+    &.subhead
+        font-family: $ec-font-body
+        font-size: 1.5em
+        font-weight: 600
+        letter-spacing: 0.5px
+        line-height: 1.2em
     &.thin
         font-style: italic
         font-weight: 400
@@ -694,7 +700,7 @@ fieldset.ec-fieldset
     margin-top: $navbar-height
     padding: 0
 .ec-home-splash-text
-    padding: 60px 60px 70px 30px
+    padding: 160px 60px 70px 30px
     text-shadow: $ec-text-shadow
 .ec-video-wrap
     padding: 70px 0
@@ -902,7 +908,7 @@ img.ec-award
 @media only screen and (min-width: 1600px)
     .ec-home-splash-wrap
         background-position: center -150px
-        height: 820px
+        height: 670px
     .ec-home-splash-text
         font-size: 1.3em
         padding: 170px 170px 40px 0
