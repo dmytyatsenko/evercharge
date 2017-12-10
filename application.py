@@ -87,6 +87,12 @@ app.config['RECAPTCHA_SITE_KEY'] = RECAPTCHA_SITE_KEY = '6LcZ5h8UAAAAAK1C4CuWYWv
 app.config['RECAPTCHA_SECRET_KEY'] = RECAPTCHA_SECRET_KEY = '6LcZ5h8UAAAAABShpha6eS9KWaVuDekFAskme_6K'
 
 
+@app.before_request
+def redirect_www_to_non_www():
+    if request.headers.get('Host', '') == 'www.evercharge.net':
+        return redirect('https://evercharge.net' + request.path, code=301)
+
+
 @app.after_request
 def check_referrer(response):
     source_cookie = request.cookies.get(SOCIAL_SOURCE_COOKIE)
