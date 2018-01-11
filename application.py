@@ -442,6 +442,8 @@ def thank_you():
 
 
 def is_human():
+    if app.config.get('DEBUG') is True:
+        return True
     recaptcha_token = request.form.get('g-recaptcha-response')
     if recaptcha_token:
         data = {
