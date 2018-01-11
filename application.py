@@ -395,6 +395,7 @@ def thank_you():
     note = request.form.get('quote_notes')
     lead_notes = [note if note else "No Customer Note"]
     mailing_address = request.form.get('quote_mailing_address')
+    parking_spot = request.form.get('quote_parking_space')
     if mailing_address:
         lead_notes.append(mailing_address)
     building_name = request.form.get('quote_building_name')
@@ -420,9 +421,17 @@ def thank_you():
     else:
         sources = [{'id': source}]
 
-    new_lead = nutshell_client.newLead(lead=dict(contacts=[{'id': contact_id}],
-                                                 sources=sources,
-                                                 note=lead_notes))
+    # Parking Spot #
+    lead = dict(contacts=[{'id': contact_id}],
+                sources=sources,
+                note=lead_notes)
+    if parking_spot:
+        # Lead custom field
+        # List of all custom fields name can be retrieved using client
+        # nutshell_client.findCustomFields()
+        lead['customFields'] = {}
+        lead['customFields']['Parking Spot #'] = parking_spot
+    new_lead = nutshell_client.newLead(lead=lead)
     new_lead_id = new_lead['id']
     lead_tags = []
     if tag:
