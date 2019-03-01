@@ -374,6 +374,7 @@ def evercharge_properties():
 
 
 @app.route('/signup')
+@app.route('/Signup')
 def evercharge_signup():
     return render_template('signup.html')
 
