@@ -33,15 +33,42 @@
             <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l6v64&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
         </noscript>
 
-        <div class="container ec-thankyou" style="background: unset;">
-            <div class="row">
-                <div class="col-xs-12 col-md-6 col-md-offset-3" style="background-color: white;">
-                    <h3 style="margin-top: 16px;">Thank You</h3>
-                    <p>We'll email you shortly with the next steps</p>
-                    <p><a href="mailto:ops@evercharge.net">ops@evercharge.net</a></p>
+        {% if no_final_form %}
+            <div class="container ec-thankyou" style="background: unset;">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-md-offset-3" style="background-color: white;">
+                        <h3 style="margin-top: 16px;">Thank You</h3>
+                        <p>We'll email you shortly with the next steps</p>
+                        <p><a href="mailto:ops@evercharge.net">ops@evercharge.net</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
+        {% else %}
+            <div class="container ec-thankyou">
+                 <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <h3>Thank You</h3>
+                        <p>We'll be in touch shortly.</p>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-8 ec-box-lt-gray">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-offset-2 col-md-2 hidden-xs">
+                                <img src="{{ url_for('static', filename='images/evercharge-circle-badge-dk-green.png') }}" class="pull-left" style="height:100px; width:100px; margin-right: 16px" />
+                            </div>
+                            <div class="col-xs-12 col-sm-8">
+                                <p><strong>YOU’VE BEEN ASSIGNED...</strong></p>
+                                <p>Team Member: CJ</p>
+                                <p>Email: cj@evercharge.net</p>
+                                <p>Phone: 415.851.0956</p>
+                                <button type="button" class="ec-button-teal-border" data-toggle="modal" data-target="#myModal">Schedule a call now</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end box-lt-gray -->
+                 </div>
+            </div>
+        {% endif %}
     </header>
 {% endblock %}
 
