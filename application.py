@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
 import geoip2.database
 import itsdangerous
+from itsdangerous import want_bytes
 from nutshell import NutshellAPI
 from six.moves.urllib.parse import urlparse
 import requests
@@ -334,7 +335,7 @@ def electrician_thank_you():
         lead_tags.append('Adwords')
     if lead_tags:
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
-    signed_lead_id = singer.sign(str(new_lead_id))
+    signed_lead_id = singer.sign(want_bytes(str(new_lead_id)))
     return render_template("thank_you.html", newLeadId=signed_lead_id, contactId=contact_id)
 
 
@@ -443,7 +444,7 @@ def thank_you():
         lead_tags.append('Adwords')
     if lead_tags:
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
-    signed_lead_id = singer.sign(str(new_lead_id))
+    signed_lead_id = singer.sign(want_bytes(str(new_lead_id)))
     return render_template("thank_you.html",
                            newLeadId=signed_lead_id,
                            contactId=contact_id,
@@ -578,6 +579,18 @@ def update_lead_notes():
 @app.route('/nutshell/submit', methods=['POST', 'GET'])
 def follow_up():
     return render_template('about-us.html')
+
+
+@app.route('/nutshell/more-about-you', methods=['POST'])
+def more_about_you():
+    lead_id = _get_lead_id()
+    if lead_id:
+        custom_fields = dict(request.form.items())
+        print(custom_fields)
+        nutshell_client.editLead(leadId=lead_id,
+                                 rev='REV_IGNORE',
+                                 lead=dict(customFields=custom_fields))
+    return "OK"
 
 
 if __name__ == '__main__':
