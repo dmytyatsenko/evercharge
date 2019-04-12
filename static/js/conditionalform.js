@@ -1,5 +1,6 @@
 var submitButton = document.getElementById("final_submit_button");
 if (submitButton) {
+	submitButton.addEventListener('click', referenceSubmit, false);
 	submitButton.addEventListener('click', replaceForm, false);
 }
 
@@ -26,11 +27,7 @@ function autoDealerCheck()
 
 function referenceSubmit()
 {
-	var referenceRadios = document.getElementsByName("reference");
-	for (var i = 0, len = referenceRadios.length; i < len; i++)
-	{
-		if (referenceRadios[i].checked) {document.getElementById("reference_form").submit();}
-	}
+	document.getElementById("reference_form").submit();
 }
 
 function autoDealerContactSubmit() {

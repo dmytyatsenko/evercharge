@@ -586,7 +586,6 @@ def more_about_you():
     lead_id = _get_lead_id()
     if lead_id:
         custom_fields = dict(request.form.items())
-        print(custom_fields)
         nutshell_client.editLead(leadId=lead_id,
                                  rev='REV_IGNORE',
                                  lead=dict(customFields=custom_fields))
