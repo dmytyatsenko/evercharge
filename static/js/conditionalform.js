@@ -33,4 +33,18 @@ function referenceSubmit()
 function autoDealerContactSubmit() {
 	document.getElementById("auto_dealer_contact_form").submit();}
 
-function notesSubmit() {document.getElementById("notes_form").submit();}
+function notesSubmit() {
+	var notes = $('#notes_text');
+	var url = notes.data('link');
+	var form_data = {
+		'lead_id': $('#lead_id').val(),
+		'notes': notes.val()
+	};
+
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: form_data,
+		success: function (data) {}
+	});
+}

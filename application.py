@@ -4,7 +4,6 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
 import geoip2.database
 import itsdangerous
-from itsdangerous import want_bytes
 from nutshell import NutshellAPI
 from six.moves.urllib.parse import urlparse
 import requests
@@ -335,7 +334,7 @@ def electrician_thank_you():
         lead_tags.append('Adwords')
     if lead_tags:
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
-    signed_lead_id = singer.sign(want_bytes(str(new_lead_id)))
+    signed_lead_id = singer.sign(str(new_lead_id))
     return render_template("thank_you.html", newLeadId=signed_lead_id, contactId=contact_id)
 
 
@@ -444,11 +443,13 @@ def thank_you():
         lead_tags.append('Adwords')
     if lead_tags:
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
-    signed_lead_id = singer.sign(want_bytes(str(new_lead_id)))
+    signed_lead_id = singer.sign(str(new_lead_id))
+
     return render_template("thank_you.html",
                            newLeadId=signed_lead_id,
                            contactId=contact_id,
                            note=note,
+                           phone=phone,
                            no_final_form=no_final_form)
 
 
@@ -583,12 +584,25 @@ def follow_up():
 
 @app.route('/nutshell/more-about-you', methods=['POST'])
 def more_about_you():
-    lead_id = _get_lead_id()
-    if lead_id:
-        custom_fields = dict(request.form.items())
-        nutshell_client.editLead(leadId=lead_id,
-                                 rev='REV_IGNORE',
-                                 lead=dict(customFields=custom_fields))
+    contact_id = request.form.get('contact_id')
+
+    description = '|'.join([':'.join((key, request.form.get(key))) for key in ('property_type', 'reference', 'parking_space', 'unit_number')])
+
+    contact = {
+        'phone': request.form.get('phone'),
+        'address': [{
+            'name': request.form.get('building_name'),
+            'address_1': request.form.get('address'),
+            'city': request.form.get('city'),
+            'state': request.form.get('state'),
+            'postalCode': request.form.get('zip'),
+        }],
+        'description': description,
+    }
+
+    if contact_id:
+        nutshell_client.editContact(contactId=contact_id, rev='REV_IGNORE', contact=contact)
+
     return "OK"
 
 
