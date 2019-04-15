@@ -602,10 +602,10 @@ def more_about_you():
 
     lead_id = _get_lead_id()
     if lead_id:
+        nutshell_client.editLead(leadId=lead_id, rev='REV_IGNORE', lead=dict(note=request.form.get('notes')))
+
         notes = '|'.join([':'.join((key, request.form.get(key))) for key in ('property_type', 'reference', 'parking_space', 'unit_number')])
-        nutshell_client.editLead(leadId=lead_id,
-                                 rev='REV_IGNORE',
-                                 lead=dict(note=notes))
+        nutshell_client.editLead(leadId=lead_id, rev='REV_IGNORE', lead=dict(note=notes))
 
     return "OK"
 
