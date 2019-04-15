@@ -586,8 +586,6 @@ def follow_up():
 def more_about_you():
     contact_id = request.form.get('contact_id')
 
-    description = '|'.join([':'.join((key, request.form.get(key))) for key in ('property_type', 'reference', 'parking_space', 'unit_number')])
-
     contact = {
         'phone': request.form.get('phone'),
         'address': [{
@@ -597,11 +595,17 @@ def more_about_you():
             'state': request.form.get('state'),
             'postalCode': request.form.get('zip'),
         }],
-        'description': description,
     }
 
     if contact_id:
         nutshell_client.editContact(contactId=contact_id, rev='REV_IGNORE', contact=contact)
+
+    lead_id = _get_lead_id()
+    if lead_id:
+        notes = '|'.join([':'.join((key, request.form.get(key))) for key in ('property_type', 'reference', 'parking_space', 'unit_number')])
+        nutshell_client.editLead(leadId=lead_id,
+                                 rev='REV_IGNORE',
+                                 lead=dict(note=notes))
 
     return "OK"
 
