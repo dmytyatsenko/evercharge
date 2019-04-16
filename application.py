@@ -393,8 +393,17 @@ def thank_you():
         return render_template("thank_you.html")
     phone = request.form.get('quote_phone', None)
     email = request.form.get('quote_email')
-    note = request.form.get('quote_notes')
-    lead_notes = [note if note else "No Customer Note"]
+    lead_notes = []
+    note = ''
+
+    if request.args.get('form') == 'quote':
+        note = request.form.get('quote_notes')
+        lead_notes = [note if note else "No Customer Note"]
+        customer_type = request.form.get('customer_type')
+        source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
+    else:
+        source = EV_OWNER_SOURCE_ID
+
     mailing_address = request.form.get('quote_mailing_address')
     parking_spot = request.form.get('quote_parking_space')
     if mailing_address:
@@ -404,18 +413,12 @@ def thank_you():
         lead_notes.append(building_name)
     phone = phone if phone else None
 
-    customer_type = request.form.get('customer_type')
     tag = request.form.get('adwordsField', None)
     gran = request.form.get('granularField')
     no_final_form = bool(request.form.get('no_final_form'))
 
     new_contact = nutshell_client.newContact(contact=dict(name=name, email=email, phone=phone))
     contact_id = new_contact['id']
-
-    if request.args.get('form') == 'quote':
-        source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
-    else:
-        source = EV_OWNER_SOURCE_ID
 
     external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
     external_source = NUTSHELL_SOURCES.get(external_source)
