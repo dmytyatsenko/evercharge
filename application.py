@@ -584,6 +584,7 @@ def follow_up():
 
 @app.route('/nutshell/more-about-you', methods=['POST'])
 def more_about_you():
+    lead_id = _get_lead_id()
     contact_id = request.form.get('contact_id')
 
     contact = {
@@ -600,12 +601,19 @@ def more_about_you():
     if contact_id:
         nutshell_client.editContact(contactId=contact_id, rev='REV_IGNORE', contact=contact)
 
-    lead_id = _get_lead_id()
     if lead_id:
-        nutshell_client.editLead(leadId=lead_id, rev='REV_IGNORE', lead=dict(note=request.form.get('notes')))
-
-        notes = '|'.join([':'.join((key, request.form.get(key))) for key in ('property_type', 'reference', 'parking_space', 'unit_number')])
+        notes = '|'.join([':'.join((key, request.form.get(key))) for key in ('property_type', 'reference', 'unit_number')])
         nutshell_client.editLead(leadId=lead_id, rev='REV_IGNORE', lead=dict(note=notes))
+
+        custom_fields = {}
+        parking_space = request.form.get('parking_space')
+        if parking_space:
+            custom_fields['Parking Spot #'] = parking_space
+
+        nutshell_client.editLead(
+            leadId=lead_id,
+            rev='REV_IGNORE',
+            lead=dict(customFields=custom_fields))
 
     return "OK"
 
