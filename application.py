@@ -412,7 +412,11 @@ def thank_you():
     new_contact = nutshell_client.newContact(contact=dict(name=name, email=email, phone=phone))
     contact_id = new_contact['id']
 
-    source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
+    if request.args.get('form') == 'quote':
+        source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
+    else:
+        source = EV_OWNER_SOURCE_ID
+
     external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
     external_source = NUTSHELL_SOURCES.get(external_source)
     if external_source is not None:
