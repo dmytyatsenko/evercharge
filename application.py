@@ -609,7 +609,7 @@ def more_about_you():
         nutshell_client.editContact(contactId=contact_id, rev='REV_IGNORE', contact=contact)
 
     if lead_id:
-        notes = '|'.join([':'.join((key, request.form.get(key))) for key in ('property_type', 'reference', 'unit_number')])
+        notes = request.form.get('notes') + '\n\n' + '|'.join([':'.join((key, request.form.get(key))) for key in ('property_type', 'reference', 'unit_number')])
         nutshell_client.editLead(leadId=lead_id, rev='REV_IGNORE', lead=dict(note=notes))
 
         custom_fields = {}

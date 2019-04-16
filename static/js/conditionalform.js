@@ -1,7 +1,6 @@
 var submitButton = document.getElementById("final_submit_button");
 if (submitButton) {
 	submitButton.addEventListener('click', referenceSubmit, false);
-	submitButton.addEventListener('click', notesSubmit, false);
 	submitButton.addEventListener('click', replaceForm, false);
 }
 
