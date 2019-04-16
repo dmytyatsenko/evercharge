@@ -444,10 +444,12 @@ def thank_you():
     if lead_tags:
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
     signed_lead_id = singer.sign(str(new_lead_id))
+
     return render_template("thank_you.html",
                            newLeadId=signed_lead_id,
                            contactId=contact_id,
                            note=note,
+                           phone=phone,
                            no_final_form=no_final_form)
 
 
@@ -578,6 +580,42 @@ def update_lead_notes():
 @app.route('/nutshell/submit', methods=['POST', 'GET'])
 def follow_up():
     return render_template('about-us.html')
+
+
+@app.route('/nutshell/more-about-you', methods=['POST'])
+def more_about_you():
+    lead_id = _get_lead_id()
+    contact_id = request.form.get('contact_id')
+
+    contact = {
+        'phone': request.form.get('phone'),
+        'address': [{
+            'name': request.form.get('building_name'),
+            'address_1': request.form.get('address'),
+            'city': request.form.get('city'),
+            'state': request.form.get('state'),
+            'postalCode': request.form.get('zip'),
+        }],
+    }
+
+    if contact_id:
+        nutshell_client.editContact(contactId=contact_id, rev='REV_IGNORE', contact=contact)
+
+    if lead_id:
+        notes = '|'.join([':'.join((key, request.form.get(key))) for key in ('property_type', 'reference', 'unit_number')])
+        nutshell_client.editLead(leadId=lead_id, rev='REV_IGNORE', lead=dict(note=notes))
+
+        custom_fields = {}
+        parking_space = request.form.get('parking_space')
+        if parking_space:
+            custom_fields['Parking Spot #'] = parking_space
+
+        nutshell_client.editLead(
+            leadId=lead_id,
+            rev='REV_IGNORE',
+            lead=dict(customFields=custom_fields))
+
+    return "OK"
 
 
 if __name__ == '__main__':

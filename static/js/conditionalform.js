@@ -1,5 +1,6 @@
 var submitButton = document.getElementById("final_submit_button");
 if (submitButton) {
+	submitButton.addEventListener('click', referenceSubmit, false);
 	submitButton.addEventListener('click', replaceForm, false);
 }
 
@@ -26,14 +27,24 @@ function autoDealerCheck()
 
 function referenceSubmit()
 {
-	var referenceRadios = document.getElementsByName("reference");
-	for (var i = 0, len = referenceRadios.length; i < len; i++)
-	{
-		if (referenceRadios[i].checked) {document.getElementById("reference_form").submit();}
-	}
+	document.getElementById("reference_form").submit();
 }
 
 function autoDealerContactSubmit() {
 	document.getElementById("auto_dealer_contact_form").submit();}
 
-function notesSubmit() {document.getElementById("notes_form").submit();}
+function notesSubmit() {
+	var notes = $('#notes_text');
+	var url = notes.data('link');
+	var form_data = {
+		'lead_id': $('#lead_id').val(),
+		'notes': notes.val()
+	};
+
+	$.ajax({
+		type: "POST",
+		url: url,
+		data: form_data,
+		success: function (data) {}
+	});
+}

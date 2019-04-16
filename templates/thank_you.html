@@ -1,7 +1,15 @@
 {% extends 'layout/base.html' %}
 
 {%- block extra_css -%}
-<link rel="stylesheet" href="{{ url_for('static', filename='/css/modal.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/modal.min.css') }}">
+    <style type="text/css">
+        #reference_form label.control-label {
+            line-height: 40px;
+        }
+        h2#form_heading {
+            text-align: center;
+        }
+    </style>
 {%- endblock -%}
 
 {% block banner_class %}
@@ -43,31 +51,6 @@
                     </div>
                 </div>
             </div>
-        {% else %}
-            <div class="container ec-thankyou">
-                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4">
-                        <h3>Thank You</h3>
-                        <p>We'll be in touch shortly.</p>
-                    </div>
-
-                    <div class="col-xs-12 col-sm-6 col-md-8 ec-box-lt-gray">
-                        <div class="row">
-                            <div class="col-xs-12 col-sm-4 col-md-offset-2 col-md-2 hidden-xs">
-                                <img src="{{ url_for('static', filename='images/evercharge-circle-badge-dk-green.png') }}" class="pull-left" style="height:100px; width:100px; margin-right: 16px" />
-                            </div>
-                            <div class="col-xs-12 col-sm-8">
-                                <p><strong>YOU’VE BEEN ASSIGNED...</strong></p>
-                                <p>Team Member: CJ</p>
-                                <p>Email: cj@evercharge.net</p>
-                                <p>Phone: 415.851.0956</p>
-                                <button type="button" class="ec-button-teal-border" data-toggle="modal" data-target="#myModal">Schedule a call now</button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end box-lt-gray -->
-                 </div>
-            </div>
         {% endif %}
     </header>
 {% endblock %}
@@ -104,7 +87,7 @@
         <div class="container">
             <form action="{{ url_for('follow_up') }}" class='get-quote validate-form' id='existing_customer'
             method='post' name='existing_customer' target='submit_frame'>
-                <input name='lead_id' type='hidden' value='{{ newLeadId }}'>
+                <input id="lead_id" name='lead_id' type='hidden' value='{{ newLeadId }}'>
                 <input name='contact_id' type='hidden' value='{{ contactId }}'>
                 {% if no_final_form %}
                     <div class="row">
@@ -125,79 +108,99 @@
                     <div class="row">
                         <div class="clearfix"></div>
                         <div class="col-md-offset-2 col-md-8">
-                            <form action="{{ url_for('update_lead_notes') }}" class="validate-form" id="notes_form" method="POST" name="notes_form" target="submit_frame">
-                                <input name="lead_id" type="hidden" value="{{ newLeadId }}">
-                                <div class="form-group">
-                                    <textarea name="notes" rows="2" class="form-control" onchange="notesSubmit()"
-                                              placeholder="Additional comments" autocomplete="off">
-                                        {%- if note -%}{{ note }}{%- endif -%}
-                                    </textarea>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-offset-2 col-md-8">
-                            <hr class="ec-hr-extra" />
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="col-md-offset-2 col-md-5">
-                            <!-- Referred Customer -->
-                            <form action="{{ url_for('referred_customer') }}" class=' validate-form' id='reference_form'
+                            <form action="{{ url_for('more_about_you') }}" class='validate-form form-horizontal' id='reference_form'
                             method='post' name='reference_form' target='submit_frame'>
                                 <input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-                                <h5>How did you hear about us?</h5>
-                                <div id="reference_listener">
-                                    <p>
-                                      <input type="radio" name="reference" id="reference_google" value="Google" />
-                                      <label for="reference_google" class="label-radio">Google</label>
-                                    </p>
-                                    <p>
-                                      <input type="radio" name="reference" id="reference_facebook" value="Facebook" />
-                                      <label for="reference_facebook" class="label-radio">Facebook</label>
-                                    </p>
-                                    <p>
-                                      <input type="radio" name="reference" id="reference_twitter" value="Twitter" />
-                                      <label for="reference_twitter" class="label-radio">Twitter</label>
-                                    </p>
-                                    <p>
-                                      <input type="radio" name="reference" id="reference_web" value="Online Publication" />
-                                      <label for="reference_web" class="label-radio">Online Publication</label>
-                                    </p>
-                                    <p>
-                                      <input type="radio" name="reference" id="auto_dealer_reference" value="Auto Dealer Referral" />
-                                      <label for="auto_dealer_reference" class="label-radio">Auto Dealer Referral</label>
-                                    </p>
-                                    <p>
-                                      <input type="radio" name="reference" id="reference_pm_hoa" value="Property Manager/HOA" />
-                                      <label for="reference_pm_hoa" class="label-radio">HOA</label>
-                                    </p>
-                                    <p>
-                                      <input type="radio" name="reference" id="reference_friend" value="Friend" />
-                                      <label for="reference_friend" class="label-radio">Friend</label>
-                                    </p>
-                                    <p>
-                                      <input type="radio" name="reference" id="reference_electrician" value="Electrician" />
-                                      <label for="reference_electrician" class="label-radio">Electrician</label>
-                                    </p>
-                                    <p>
-                                      <input type="radio" name="reference" id="reference_other" value="Other" />
-                                      <label for="reference_other" class="label-radio">Other</label>
-                                    </p>
-                                </div>
-                            </form>
-                            <!-- Auto Dealer Contact -->
-                            <form action="{{ url_for('auto_dealer_contact') }}" class="validate-form"
-                                  id="auto_dealer_contact_form" method='post' name="auto_dealer_contact_form" target="submit_frame">
-                                <input name='lead_id' type='hidden' value='{{ newLeadId }}'>
+                                <input name='contact_id' type='hidden' value='{{ contactId }}'>
 
-                                <div class='form-group' id="auto_dealer_contact_div" style="display: none">
-                                    <br />
-                                    <p>Who from Auto Dealer referred you?</p>
-                                    <input class="form-control" id="auto_dealer_contact" name="auto_dealer_contact"
-                                           onchange="autoDealerContactSubmit()"
-                                           placeholder="Name of Auto Dealer Referral Contact" type='text'>
+                                <div class="form-group">
+                                    <label for="phone" class="col-sm-4 control-label">Phone</label>
+                                    <div class="col-sm-8">
+                                        <input name="phone" type="tel" class="form-control bfh-phone" data-format="ddd-ddd-dddd" autocomplete="off" {% if phone %}value="{{ phone }}"{% endif %} />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="parking_space" class="col-sm-4 control-label">Parking Space Number</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="parking_space" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-4 col-sm-8">
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="property_type" value="existing_property" checked="checked" /> Existing EverCharge Property
+                                            </label>
+                                        </div>
+                                        <div class="radio">
+                                            <label>
+                                                <input type="radio" name="property_type" value="new_property" /> New Property
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="building_name" class="col-sm-4 control-label">Building Name</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="building_name" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address" class="col-sm-4 control-label">Address</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="address" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="unit_number" class="col-sm-4 control-label">Unit Number</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="unit_number" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city" class="col-sm-4 control-label">City</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="city" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="state" class="col-sm-4 control-label">State</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="state" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="zip" class="col-sm-4 control-label">Zip Code</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" name="zip" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="comments" class="col-sm-4 control-label">Comments</label>
+                                    <div class="col-sm-8">
+                                        <textarea id="notes_text" name="notes" rows="2" class="form-control" onchange="notesSubmit()"
+                                            data-link="{{ url_for('update_lead_notes') }}"
+                                            placeholder="Additional comments" autocomplete="off">
+                                            {%- if note -%}{{ note }}{%- endif -%}
+                                        </textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="reference" class="col-sm-4 control-label">How did you hear about us?</label>
+                                    <div class="col-sm-8">
+                                        <select name="reference" class="form-control">
+                                            <option value="Google">Google</option>
+                                            <option value="Facebook">Facebook</option>
+                                            <option value="Twitter">Twitter</option>
+                                            <option value="Online Publication">Online Publication</option>
+                                            <option value="Auto Dealer Referral">Auto Dealer Referral</option>
+                                            <option value="Property Manager/HOA">HOA</option>
+                                            <option value="Friend">Friend</option>
+                                            <option value="Electrician">Electrician</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -208,8 +211,8 @@
                             <hr class="ec-hr-extra" />
                         </div>
                         <div class="clearfix"></div>
-                        <div class="col-xs-12 col-sm-8 col-md-offset-2 col-md-6">
-                            <input id='final_submit_button' type='submit' value='Submit' class="ec-button-teal block">
+                        <div class="col-md-offset-2 col-md-8">
+                            <input id='final_submit_button' type='submit' value='Submit' class="ec-button-teal col-md-offset-2 col-md-8">
                         </div>
                     </div>
 
