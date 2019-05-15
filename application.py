@@ -375,6 +375,15 @@ def evercharge_properties():
 
 @app.route('/signup')
 @app.route('/Signup')
+@app.route('/atwater')
+@app.route('/akoya')
+@app.route('/bristol')
+@app.route('/lumina')
+@app.route('/mainstreetvillage')
+@app.route('/mandalayonthehudson')
+@app.route('/oceanpark')
+@app.route('/optima')
+@app.route('/thepierce')
 def evercharge_signup():
     return render_template('signup.html')
 
@@ -477,20 +486,6 @@ def is_human():
 ##########################
 # BUILDING SIGNUP ROUTES #
 ##########################
-@app.route('/akoya', methods=['POST', 'GET'])
-def signup_akoya():
-    return render_template("signup-akoya.html")
-
-
-@app.route('/atwater', methods=['POST', 'GET'])
-def signup_atwater():
-    return render_template("signup-atwater.html")
-
-
-@app.route('/bristol', methods=['POST', 'GET'])
-def signup_bristol():
-    return render_template("signup-bristol.html")
-
 
 @app.route('/customerguide', methods=['POST', 'GET'])
 def signup_customerguide():
@@ -502,40 +497,9 @@ def signup_gm():
     return render_template("signup-gm.html")
 
 
-@app.route('/lumina', methods=['POST', 'GET'])
-def signup_lumina():
-    return render_template("signup-lumina.html")
-
-
-@app.route('/mainstreetvillage', methods=['POST', 'GET'])
-def signup_mainstreet():
-    return render_template("signup-mainstreet.html")
-
-
-@app.route('/mandalayonthehudson', methods=['POST', 'GET'])
-def signup_mandalayonthehudson():
-    return render_template("signup-mandalayonthehudson.html")
-
-
-@app.route('/oceanpark', methods=['POST', 'GET'])
-def signup_oceanpark():
-    return render_template("signup-oceanpark.html")
-
-
-@app.route('/optima', methods=['POST', 'GET'])
-def signup_optima():
-    return render_template("signup-optima.html")
-
-
 @app.route('/pilot', methods=['POST', 'GET'])
 def survey_pilot():
     return redirect('https://goo.gl/forms/jScpBjvC6QNpeIfr1')
-
-
-@app.route('/thepierce', methods=['POST', 'GET'])
-def signup_thepierce():
-    return render_template("signup-thepierce.html")
-
 
 ###################
 # Nutshell Routes #
