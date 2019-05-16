@@ -245,6 +245,10 @@ def user_guide():
 def gm_user():
     return app.send_static_file('EverCharge-GM-User-Guide.pdf')
 
+@app.route('/signupsteps')
+def signupsteps():
+    return app.send_static_file('EverCharge-sheet-signup-3steps.pdf')
+
 
 @app.errorhandler(404)
 def page_not_found(e):
