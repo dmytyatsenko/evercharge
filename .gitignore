@@ -11,3 +11,6 @@ NutshellCrumpy.pyc
 
 .idea/
 static/.webassets-cache/*
+.DS_Store
+__pycache__/
+source

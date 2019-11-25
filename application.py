@@ -364,6 +364,22 @@ def faqs():
 def fleets():
     return render_template("fleets.html")
 
+@app.route('/multifamily', methods=['POST', 'GET'])
+def multifamily():
+    return render_template('multifamily.html')
+
+@app.route('/commerical', methods=['POST', 'GET'])
+def commerical():
+    return render_template('commerical.html')       
+
+@app.route('/hardware', methods=['POST', 'GET'])
+def hardware():
+    return render_template('hardware.html')
+
+@app.route('/tech', methods=['POST', 'GET'])
+def tech():
+    return render_template('technology.html')
+
 
 @app.route('/letscharge', methods=['POST', 'GET'])
 def campaign_letscharge():
