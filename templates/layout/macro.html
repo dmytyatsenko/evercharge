@@ -1,3 +1,11 @@
+{% macro smartpower_row() %}
+    <div class="row">
+        <div class="col-xs-12">
+            <p class="black">EverCharge’s proprietary SmartPower technology allocates available power, maximizing building capacity to charge significantly more vehicles before costly infrastructure upgrades are needed. </p>
+        </div>
+    </div>
+{% endmacro %}
+
 {% macro electrician_contact_form() %}
     <form action="{{ url_for('electrician_thank_you') }}" method='post' id="quote" class="validate-form">
         <input name="lead_source" value="Web Signup" type="hidden">
