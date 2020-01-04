@@ -370,11 +370,6 @@ def multifamily():
     return render_template('multifamily.html')
 
 
-@app.route('/workplace', methods=['POST', 'GET'])
-def workplace():
-    return render_template('workplace.html')
-
-
 @app.route('/hardware', methods=['POST', 'GET'])
 def hardware():
     return render_template('hardware.html')
