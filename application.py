@@ -368,9 +368,9 @@ def fleets():
 def multifamily():
     return render_template('multifamily.html')
 
-@app.route('/commerical', methods=['POST', 'GET'])
-def commerical():
-    return render_template('commerical.html')       
+@app.route('/workplace', methods=['POST', 'GET'])
+def workplace():
+    return render_template('workplace.html')
 
 @app.route('/hardware', methods=['POST', 'GET'])
 def hardware():
@@ -614,5 +614,5 @@ def more_about_you():
 
 if __name__ == '__main__':
     PORT = int(os.environ.get("PORT", 5000))
-    DEBUG = os.environ.get("FLASK_DEBUG", False)
+    DEBUG = True  # os.environ.get("FLASK_DEBUG", False)
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)

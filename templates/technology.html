@@ -12,6 +12,23 @@
 {% block content_one %}
     <div class="ec-stretch-white">
         <div class="container">
+            {% with hide_learn_more=True %}
+                {% include 'blocks/1b_smart_power.html' %}
+            {% endwith %}
+            <div class="clearfix"></div>
+            <div class="col-xs-12">
+                <hr class="ec-hr-extra" />
+            </div>
+            {% include 'blocks/1c_evse.html' %}
+            <div class="clearfix"></div>
+            <div class="col-xs-12">
+                <hr class="ec-hr-extra" />
+            </div>
+            {% include 'blocks/1d_evse_installation.html' %}
+            <div class="clearfix"></div>
+            <div class="col-xs-12">
+                <hr class="ec-hr-extra" />
+            </div>
             <div class="row">
                 <div class="col-md-offset-1 col-md-10 text-center">
                     <div class="ec-stretch-white">
@@ -19,7 +36,7 @@
                         <p>EverCharge maximizes existing building infrastructure to make adding EVs to your fleet easy and affordable.</p>
                     </div>
                     <hr class="ec-hr-extra" />
-                </div>            
+                </div>
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5">
