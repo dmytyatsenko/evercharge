@@ -1,11 +1,12 @@
 {% extends 'layout/base.html' %}
 
 {% block banner_class %}
-    class="ec-banner ec-stretch-dk-teal"
+    class="parallax img-why-ec" data-speed="4" data-type="background"
 {% endblock %}
 
 {% block banner_text %}
-    <h1>Fleet Charging</h1>
+    <h1>Workplace & Commercial</h1>
+{#    <h1 class="subhead">TODO:</h1>#}
 {% endblock %}
 
 {% block content_one %}
@@ -58,6 +59,12 @@
                     <p>As an all-in-one solution, EverCharge allows for in-depth analysis on every charge station giving our clients unmatched data analytics to understand vehicle and user needs. Doing this means EverCharge can provide a tailored solution for any site.</p>
                 </div>
             </div>
+            <div class="clearfix"></div>
+            <div class="col-xs-10">
+                <hr class="ec-hr-extra" />
+            </div>
+            {% include 'blocks/1b_smart_power.html' %}
+
         </div>
     </div>
 {% endblock %}

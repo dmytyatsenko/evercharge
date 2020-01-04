@@ -360,21 +360,25 @@ def faqs():
     return render_template("faqs.html")
 
 
-@app.route('/fleets', methods=['POST', 'GET'])
-def fleets():
-    return render_template("fleets.html")
+@app.route('/commercial', methods=['POST', 'GET'])
+def commercial():
+    return render_template("commercial.html")
+
 
 @app.route('/multifamily', methods=['POST', 'GET'])
 def multifamily():
     return render_template('multifamily.html')
 
+
 @app.route('/workplace', methods=['POST', 'GET'])
 def workplace():
     return render_template('workplace.html')
 
+
 @app.route('/hardware', methods=['POST', 'GET'])
 def hardware():
     return render_template('hardware.html')
+
 
 @app.route('/tech', methods=['POST', 'GET'])
 def tech():

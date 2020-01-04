@@ -6,16 +6,11 @@
     <div class="ec-home-splash-wrap">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-6">
+                <div class="col-xs-12 col-sm-offset-6 col-sm-6">
                     <div class="ec-home-splash-text">
                         <h2 class="white">High speed charging with any electrical service</h2>
                         <h2 class="subhead ec-teal extra-bottom-lg">Smart charging solution for apartments, condominiums, and fleets.</h2>
                         <h3><a href="{{ url_for('why_evercharge') }}" class="white">Learn More &#8594;</a></h3>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <div class="ec-home-splash-text">
-                        <img src="{{ url_for('static', filename='images/graph-fleets-1.jpg') }}" class="img-responsive border extra-bottom-sm" />
                     </div>
                 </div>
             </div>
@@ -31,11 +26,6 @@
     </div>
     <div class="ec-stretch-white">
         <div class="container">
-            {% include 'blocks/1b_smart_power.html' %}
-            <div class="clearfix"></div>
-            <div class="col-xs-12">
-                <hr class="ec-hr-extra" />
-            </div>
             <div class="row text-center extra-bottom-lg">
                 <div class="col-sm-12">
                     <h1 class="ec-teal text-shadow-lt">Charging Experts</h1>
@@ -53,11 +43,9 @@
                         </div>
                         <div class="ec-box-white">
                             <h3>Here to Help</h3>
-                            <p>We understand your needs and handle everything like</p>
                             <ul class="bullet-list">
                                 <li class="bullet">Permitting</li>
                                 <li class="bullet">Installation</li>
-                                <li class="bullet">Maintenance</li>
                                 <li class="bullet">Support</li>
                             </ul>
                         </div>
@@ -68,11 +56,9 @@
                         </div>
                         <div class="ec-box-white">
                             <h3>Dedicated Stations</h3>
-                            <p>SmartPower technology gives every driver their own station</p>
                             <ul class="bullet-list">
                                 <li class="bullet">No Sharing</li>
                                 <li class="bullet">No Waiting</li>
-                                <li class="bullet">Installed directly in your space</li>
                             </ul>
                         </div>
                     </div>
@@ -82,17 +68,23 @@
                         </div>
                         <div class="ec-box-white">
                             <h3>Long-Term Value</h3>
-                            <p>We get buildings and condos EV charger ready now and protect them for the future</p>
                             <ul class="bullet-list">
-                                <li class="bullet">Affordable solution</li>
-                                <li class="bullet">Future-proof your building</li>
-                                <li class="bullet">Instantly scalable from day one</li>
+                                <li class="bullet">Affordable deployments</li>
+                                <li class="bullet">Instantly scalable</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- end row -->
+            <div class="clearfix"></div>
+            <div class="col-xs-12">
+                <hr class="ec-hr-extra" />
+            </div>
+            {% include 'blocks/1b_smart_power.html' %}
+            <div class="clearfix"></div>
+            <div class="col-xs-12">
+                <hr class="ec-hr-extra" />
+            </div>
         </div>
     </div>
     <div class="ec-stretch-lt-teal ec-mini-form">

@@ -77,14 +77,10 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav navbar-right">
-            <li><a href='{{ url_for('hardware') }}'>Hardware</a></li>
 	        <li><a href='{{ url_for('tech') }}'>Technology</a></li>
             <li><a href='{{ url_for('multifamily') }}'>Multifamily</a></li>
-            <li><a href='{{ url_for('commerical') }}'>Workplace</a></li>
-            <li><a href='{{ url_for('fleets') }}'>Commerical</a></li>
-	        <li><a href="{{ url_for('faqs') }}">FAQs</a></li>
-	        <!-- <li><a href="{{ url_for('about_us') }}">About</a></li> -->
-            <li><a href="/blog">Blog</a></li>
+            <li><a href='{{ url_for('commercial') }}'>Commercial</a></li>
+            <li><a href='{{ url_for('hardware') }}'>Hardware</a></li>
 	        <li><a href="{{ url_for('customer_login') }}">Log In</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
@@ -172,7 +168,7 @@
     				<div class="footer-list">
     					<a href="/">Home</a>
     					<a href="{{ url_for('why_evercharge') }}">Why EverCharge</a>
-                        <a href="{{ url_for('fleets') }}">Fleets</a>
+                        <a href="{{ url_for('commercial') }}">Commercial</a>
                         <a href="{{ url_for('electrician_lead') }}">Work With Us</a>
                         <a href="{{ url_for('smart_power') }}">SmartPower</a>
     					<a href="{{ url_for('faqs') }}">FAQs</a>
