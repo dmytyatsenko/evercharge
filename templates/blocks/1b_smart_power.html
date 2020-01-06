@@ -1,9 +1,6 @@
 <div class="row">
     <div class="col-sm-offset-2 col-sm-8 text-center extra-bottom-md">
         <h2>SmartPower</h2>
-        {% if not hide_learn_more %}
-            <p><a href="{{ url_for('tech') }}" class="ec-text-link">Learn More &#8594;</a></p>
-        {% endif %}
     </div>
     <div class="clearfix"></div>
     <div class="col-sm-12 col-lg-offset-1 col-lg-10 extra-bottom-lg">
@@ -23,5 +20,10 @@
             <h4>Where You Want It</h4>
             <p class="extra-bottom-md">EverCharge can install 10x more EVSE's in any given location, so every vehicle can have dedicated charging</p>
         </div>
+    </div>
+    <div class="col-sm-12 text-center">
+        {% if not hide_learn_more %}
+            <p><a href="{{ url_for('tech') }}" class="ec-text-link">Learn More &#8594;</a></p>
+        {% endif %}
     </div>
 </div>
