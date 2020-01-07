@@ -2,7 +2,113 @@
     <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
         <h2>Technical Specs</h2>
         <h3>208A-240V / 30A</h3>
+    </div>
+    <table class="col-xs-12 tech-specs-datasheet">
+        <tbody>
+            <tr>
+                <th rowspan="4">Power input</th>
+                <th>Input rating</th>
+                <td>208-240 Vac, single phase, 30 A maximum, 60 Hz</td>
+            </tr>
+            <tr>
+                <th>Connections and wiring</th>
+                <td>L1, L2, and ground, hardwired with terminal block</td>
+            </tr>
+            <tr>
+                <th>Standby power</th>
+                <td>< 5 W</td>
+            </tr>
+            <tr>
+                <th>Metering</th>
+                <td>Embedded non-revenue grade meter with 1% accuracy</td>
+            </tr>
 
+            <tr>
+                <th>Power output</th>
+                <th>Output rating</th>
+                <td>208-240 Vac, single phase, 30 A maximum, 60 Hz, 7.2 kW max.</td>
+            </tr>
+
+            <tr>
+                <th rowspan="4">Protection</th>
+                <th>Internal residual current detection</th>
+                <td>20 mA CCID per UL 2231</td>
+            </tr>
+            <tr>
+                <th>Upstream breaker</th>
+                <td>2-pole 40 A breaker, non-GFCI type</td>
+            </tr>
+            <tr>
+                <th>Plug-out protection</th>
+                <td>Power output is terminated upon detection of charging connector plug-out</td>
+            </tr>
+            <tr>
+                <th>Electrical protection</th>
+                <td>Over current, short circuit, over voltage, under voltage, ground fault, surge</td>
+            </tr>
+
+            <tr>
+                <th rowspan="3">User interface & control</th>
+                <th>Status indicators</th>
+                <td>Standby (green), charging (flashing green), fault (red), warning (flashing red)</td>
+            </tr>
+            <tr>
+                <th>Buttons/switches</th>
+                <td>Charger on/off, stop charging</td>
+            </tr>
+            <tr>
+                <th>User authentication</th>
+                <td>RFID, ISO14443 Type A (Mifare), ISO 14443 Type B</td>
+            </tr>
+
+            <tr>
+                <th rowspan="2">Environmental</th>
+                <th>Operating temperature</th>
+                <td>-22°F to +122°F (-30°C to +50°C)</td>
+            </tr>
+            <tr>
+                <th>Humidity</th>
+                <td>Humidity 95% relative humidity, non-condensing</td>
+            </tr>
+
+            <tr>
+                <th rowspan="6">Mechanical</th>
+                <th>Charging cable length</th>
+                <td>18 ft (5.5 m) straight cable</td>
+            </tr>
+            <tr>
+                <th>Ingress protection</th>
+                <td>NEMA 4X</td>
+            </tr>
+            <tr>
+                <th>Mounting type</th>
+                <td>Wall-mount (standard); pedetal-mount, pole-mount (optional)</td>
+            </tr>
+            <tr>
+                <th>Cooling</th>
+                <td>Natural cooling</td>
+            </tr>
+            <tr>
+                <th>Dimensions</th>
+                <td>13.8 in width x 15.7 in height x 5.0 in depth<br/>(350 x 400 x 126 mm)</td>
+            </tr>
+            <tr>
+                <th>Net weight</th>
+                <td>15.4 lbs (7 kg)</td>
+            </tr>
+
+            <tr>
+                <th rowspan="2">Regulation</th>
+                <th>Certificate</th>
+                <td>UL, cUL</td>
+            </tr>
+            <tr>
+                <th>Charging interface</th>
+                <td>SAE J1772 compliant charging plug</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="col-xs-12 text-center">
 {#        TODO: Button#}
         <h3><a href="{{ url_for('data_sheet') }}" class="">Download Datasheet</a></h3>
     </div>

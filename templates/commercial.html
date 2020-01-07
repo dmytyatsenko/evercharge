@@ -6,7 +6,7 @@
 
 {% block banner_text %}
     <h1>Workplace & Commercial</h1>
-{#    <h1 class="subhead">TODO:</h1>#}
+    <h1 class="subhead">Scalable, fully managed charging solutions</h1>
 {% endblock %}
 
 {% block content_one %}
@@ -20,6 +20,10 @@
                     </div>
                     <hr class="ec-hr-extra" />
                 </div>            
+            </div>
+            {% include 'blocks/3b_case_study.html' %}
+            <div class="col-md-offset-1 col-md-10">
+                <hr class="ec-hr-extra" />
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5">
@@ -44,7 +48,7 @@
                     <h2 class="thin">Scale as Needed</h2>
                     <p>
                         Using <a href="{{ url_for('smart_power') }}" class="ec-text-link" style="text-transform: unset;">SmartPower Technology</a>,
-                        EverCharge intelligently charges vehicles, optimizing existing building infrastructure to support 10x more stations at any location.
+                        EverCharge intelligently charges vehicles, optimizing existing building infrastructure to support more stations at any location.
                     </p>
                 </div>
                 <div class="clearfix"></div>

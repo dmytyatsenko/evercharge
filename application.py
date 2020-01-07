@@ -160,9 +160,16 @@ def connector_types():
 def smartpower_overview():
     return redirect('/smartpower')
 
+
 @app.route('/200brannan-case-study')
 def brannan_case_study():
     return app.send_static_file('MUD_Brannan_final.pdf')
+
+
+@app.route('/corporate-campus-case-study')
+def corp_campus_case_study():
+    return app.send_static_file('EverCharge-Property-Case-Study-CorporateCampus.pdf')
+
 
 @app.route('/potrero-case-study')
 def potrero_case_study():

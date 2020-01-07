@@ -1,5 +1,15 @@
 {% extends 'layout/base.html' %}
 
+{%- block extra_css -%}
+    <style type="text/css">
+        table.tech-specs-datasheet th,
+        table.tech-specs-datasheet td {
+            border: 1px solid black;
+            padding: 5px 10px;
+        }
+    </style>
+{%- endblock -%}
+
 {% block banner_class %}
     class="parallax img-why-ec" data-speed="4" data-type="background"
 {% endblock %}
@@ -24,11 +34,6 @@
             </div>
             {# TODO: picture of car charging... #}
             {% include 'blocks/1b_smart_power.html' %}
-            <div class="clearfix"></div>
-            <div class="col-md-offset-1 col-md-10">
-                <hr class="ec-hr-extra" />
-            </div>
-            {% include 'blocks/4f_warranty.html' %}
         </div>
     </div>
 {% endblock %}
