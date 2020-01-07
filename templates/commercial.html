@@ -1,5 +1,27 @@
 {% extends 'layout/base.html' %}
 
+{%- block extra_css -%}
+    <style type="text/css">
+        .ec-campaign-letscharge-wrap .section-handle.bg-electrician {
+            background-image: url('{{ url_for('static', filename='images/splash-electrician.jpg') }}');
+            background-size: unset;
+            background-position: center;
+        }
+        .bg-electrician .container h2 {
+            text-shadow: 3px 3px 0 RGBA(0,0,0,0.7);
+        }
+        .bg-electrician .container h3 {
+            text-shadow: 2px 2px 0 RGBA(0,0,0,0.7);
+        }
+        .bg-electrician .container p {
+            text-shadow: 1px 1px 0 RGBA(0,0,0,0.7);
+        }
+        .bg-electrician .container h3, .bg-electrician .container p {
+            color: white;
+        }
+    </style>
+{%- endblock -%}
+
 {% block banner_class %}
     class="parallax img-why-ec" data-speed="4" data-type="background"
 {% endblock %}
@@ -82,16 +104,18 @@
                 </div>
             </div>
             {% include 'blocks/1b_smart_power.html' %}
-            <div class="extra-stretch section-handle bg-electrician">
-                <div class="container">
-                    {% include 'blocks/2e_install_services.html' %}
-                </div>
-            </div>
+
             <div class="col-md-offset-1 col-md-10">
                 <hr class="ec-hr-extra" />
             </div>
             {% include 'blocks/3b_case_study.html' %}
-
+        </div>
+    </div>
+    <div class="ec-campaign-letscharge-wrap ec-zero">
+        <div class="extra-stretch section-handle bg-electrician">
+            <div class="container">
+                {% include 'blocks/2e_install_services.html' %}
+            </div>
         </div>
     </div>
 {% endblock %}
