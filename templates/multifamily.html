@@ -1,5 +1,27 @@
 {% extends 'layout/base.html' %}
 
+{%- block extra_css -%}
+    <style type="text/css">
+        .ec-campaign-letscharge-wrap .section-handle.bg-electrician {
+            background-image: url('{{ url_for('static', filename='images/splash-electrician.jpg') }}');
+            background-size: unset;
+            background-position: center;
+        }
+        .bg-electrician .container h2 {
+            text-shadow: 3px 3px 0 RGBA(0,0,0,0.7);
+        }
+        .bg-electrician .container h3 {
+            text-shadow: 2px 2px 0 RGBA(0,0,0,0.7);
+        }
+        .bg-electrician .container p {
+            text-shadow: 1px 1px 0 RGBA(0,0,0,0.7);
+        }
+        .bg-electrician .container h3, .bg-electrician .container p {
+            color: white;
+        }
+    </style>
+{%- endblock -%}
+
 {% block banner_class %}
     class="parallax img-why-ec" data-speed="4" data-type="background"
 {% endblock %}
@@ -28,21 +50,16 @@
                 <div class="col-xs-12">
                     <hr class="ec-hr-extra" />
                 </div>
-                {% include 'blocks/1b_smart_power.html' %}
-                <div class="clearfix"></div>
-                <div class="col-xs-12">
-                    <hr class="ec-hr-extra" />
-                </div>
                 {% include 'blocks/2d_case_studies.html' %}
-                <div class="clearfix"></div>
-                <div class="col-xs-12">
-                    <hr class="ec-hr-extra" />
-                </div>
+            </div>
+        </div>
+        <div class="extra-stretch section-handle bg-electrician">
+            <div class="container">
                 {% include 'blocks/2e_install_services.html' %}
-                <div class="clearfix"></div>
-                <div class="col-xs-12">
-                    <hr class="ec-hr-extra" />
-                </div>
+            </div>
+        </div>
+        <div class="ec-stretch-white">
+            <div class="container">
                 {% include 'blocks/2f_billing_admin.html' %}
                 <div class="clearfix"></div>
                 <div class="col-xs-12">

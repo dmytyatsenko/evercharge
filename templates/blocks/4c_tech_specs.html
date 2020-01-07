@@ -3,11 +3,11 @@
         <h2>Technical Specs</h2>
         <h3>208A-240V / 30A</h3>
     </div>
-    <table class="col-xs-12 tech-specs-datasheet">
+    <table class="col-xs-12 col-sm-10 col-sm-offset-1 tech-specs-datasheet">
         <tbody>
             <tr>
-                <th rowspan="4">Power input</th>
-                <th>Input rating</th>
+                <th rowspan="4" style="width: 20%;">Power input</th>
+                <th style="width: 20%;">Input rating</th>
                 <td>208-240 Vac, single phase, 30 A maximum, 60 Hz</td>
             </tr>
             <tr>
@@ -109,7 +109,8 @@
         </tbody>
     </table>
     <div class="col-xs-12 text-center">
-{#        TODO: Button#}
-        <h3><a href="{{ url_for('data_sheet') }}" class="">Download Datasheet</a></h3>
+        <a href="{{ url_for('data_sheet') }}">
+            <input type="button" value="Download Datasheet" class="ec-button-teal-border">
+        </a>
     </div>
 </div>
