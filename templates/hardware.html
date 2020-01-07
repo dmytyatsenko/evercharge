@@ -25,11 +25,12 @@
             {% with hide_view_product = True %}
                 {% include 'blocks/1c_evse.html' %}
             {% endwith %}
-            <div class="clearfix"></div>
-            <div class="col-md-offset-1 col-md-10">
-                <hr class="ec-hr-extra" />
+            <div class="col-xs-12 text-center">
+                <a href="{{ url_for('data_sheet') }}">
+                    <input type="button" value="Download Datasheet" class="ec-button-teal-border">
+                </a>
             </div>
-            {% include 'blocks/4c_tech_specs.html' %}
+    
             <div class="clearfix"></div>
             <div class="col-md-offset-1 col-md-10">
                     <hr class="ec-hr-extra" />
