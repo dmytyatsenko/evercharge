@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
 import geoip2.database
-import itsdangerous
+from itsdangerous import want_bytes, Signer, BadData
 from nutshell import NutshellAPI
 from six.moves.urllib.parse import urlparse
 import requests
@@ -37,7 +37,7 @@ def render_template_wrapper(*args, **kwargs):
 render_template = render_template_wrapper
 
 app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY", 'testingkey')
-singer = itsdangerous.Signer(app.config['SECRET_KEY'])
+singer = Signer(app.config['SECRET_KEY'])
 
 assets = Environment(app)
 sass = Bundle('sass/all.sass', filters='sass', output='css/sass.css')
@@ -417,6 +417,11 @@ def evercharge_signup():
     return render_template('signup.html')
 
 
+@app.route('/dell')
+def dell_signup():
+    return render_template('dell_signup.html')
+
+
 @app.route('/tesla', methods=['POST', 'GET'])
 def tesla_page():
     return render_template('tesla.html')
@@ -424,36 +429,56 @@ def tesla_page():
 
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
+    return _thank_you(request.form)
+
+
+@app.route('/dell-thankyou', methods=['POST', 'GET'])
+def dell_thank_you():
+    request_form = request.form.copy()
+
+    first_name = request_form.pop('quote_first_name', '')
+    last_name = request_form.pop('quote_last_name', '')
+    request_form['quote_name'] = f'{first_name} {last_name}'
+
+    address = request_form.pop('quote_address', '')
+    city = request_form.pop('quote_city', '')
+    zip = request_form.pop('quote_zip', '')
+    request_form['quote_mailing_address'] = f'{address}\n{city} {zip}'
+
+    return _thank_you(request_form)
+
+
+def _thank_you(request_form):
     if request.method == 'GET' or not is_human():
         return redirect('/')
-    name = request.form.get('quote_name')
+    name = request_form.get('quote_name')
     if name.lower() in ('driver test', 'pm test'):
         return render_template("thank_you.html")
-    phone = request.form.get('quote_phone', None)
-    email = request.form.get('quote_email')
+    phone = request_form.get('quote_phone', None)
+    email = request_form.get('quote_email')
     lead_notes = []
     note = ''
 
     if request.args.get('form') == 'quote':
-        note = request.form.get('quote_notes')
+        note = request_form.get('quote_notes')
         lead_notes = [note if note else "No Customer Note"]
-        customer_type = request.form.get('customer_type')
+        customer_type = request_form.get('customer_type')
         source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
     else:
         source = EV_OWNER_SOURCE_ID
 
-    mailing_address = request.form.get('quote_mailing_address')
-    parking_spot = request.form.get('quote_parking_space')
+    mailing_address = request_form.get('quote_mailing_address')
+    parking_spot = request_form.get('quote_parking_space', '')
     if mailing_address:
         lead_notes.append(mailing_address)
-    building_name = request.form.get('quote_building_name')
+    building_name = request_form.get('quote_building_name', '')
     if building_name:
         lead_notes.append(building_name)
     phone = phone if phone else None
 
-    tag = request.form.get('adwordsField', None)
-    gran = request.form.get('granularField')
-    no_final_form = bool(request.form.get('no_final_form'))
+    tag = request_form.get('adwordsField', None)
+    gran = request_form.get('granularField')
+    no_final_form = bool(request_form.get('no_final_form'))
 
     new_contact = nutshell_client.newContact(contact=dict(name=name, email=email, phone=phone))
     contact_id = new_contact['id']
@@ -462,7 +487,7 @@ def thank_you():
     external_source = NUTSHELL_SOURCES.get(external_source)
     if external_source is not None:
         sources = [{'id': x} for x in (source, external_source)]
-    elif request.form.get('lead_source') == 'campaign-letscharge':
+    elif request_form.get('lead_source') == 'campaign-letscharge':
         sources = [{'id': LETS_CHARGE_CAMPAIGN}]
     else:
         sources = [{'id': source}]
@@ -488,7 +513,7 @@ def thank_you():
         lead_tags.append('Adwords')
     if lead_tags:
         nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
-    signed_lead_id = singer.sign(str(new_lead_id))
+    signed_lead_id = singer.sign(want_bytes(str(new_lead_id)))
 
     return render_template("thank_you.html",
                            newLeadId=signed_lead_id,
@@ -540,7 +565,7 @@ def _get_lead_id(form_key='lead_id'):
         try:
             lead_id = singer.unsign(encrypted_lead_id)
             return lead_id
-        except itsdangerous.BadData as exc:
+        except BadData as exc:
             print('[!] Cannot verify lead {0} because {1}'.format(encrypted_lead_id, exc))
 
 

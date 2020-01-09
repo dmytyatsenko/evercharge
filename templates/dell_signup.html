@@ -1,0 +1,82 @@
+{% extends 'layout/base.html' %}
+
+{% block banner_class %}
+    class="ec-banner ec-stretch-dk-teal"
+{% endblock %}
+
+{% block banner_text %}
+    <h1 class="text-shadow">Sign Up for EverCharge</h1>
+{% endblock %}
+
+{% block content_one %}
+    <div class="ec-stretch-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-offset-1 col-md-10 text-center">
+                    <h3 class="extra-bottom-sm">{% block form_name %}If your building has signed with EverCharge, simply fill out the form below to get started. You will receive an email within 24 hours to complete the signup process.{% endblock %}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8 col-md-offset-1 col-md-10">
+                    <div class="row">
+                        <form action="{{ url_for('dell_thank_you') }}" method='post' id="quote" class="validate-form">
+                            <input name="lead_source" value="Web Signup" type="hidden">
+                            <input name="adwordsField" id='adwordsField' type="hidden">
+                            <input name="granularField" id="granularField" type="hidden">
+                            <input name="customer_type" id="customer_type" type="hidden" value="EV Driver">
+                            <input name="no_final_form" id="no_final_form" type="hidden" value="True">
+                            <fieldset class="ec-fieldset">
+                                <div class="col-xs-6 form-group">
+                                    <label for="id_quote_first_name" class="label-input">First name *</label>
+                                    <input name="quote_first_name" type="text" class="form-control required" id="id_quote_first_name" placeholder="First name" autocomplete="off">
+                                </div>
+                                <div class="col-xs-6 form-group">
+                                    <label for="id_quote_last_name" class="label-input">Last name *</label>
+                                    <input name="quote_last_name" type="text" class="form-control required" id="id_quote_last_name" placeholder="Last name" autocomplete="off">
+                                </div>
+                                <div class="col-xs-6 form-group">
+                                    <label for="id_quote_email" class="label-input">Email *</label>
+                                    <input name="quote_email" type="email" class="form-control required-email" id="id_quote_email"  autocomplete="off">
+                                </div>
+                                <div class="col-xs-6 form-group">
+                                    <label for="id_quote_phone" class="label-input">Phone *</label>
+                                    <input name="quote_phone" id="id_quote_phone" type="tel" class="form-control bfh-phone required" data-format="ddd-ddd-dddd" autocomplete="off">
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label for="id_quote_address" class="label-input">Address *</label>
+                                        <input name="quote_address" class="form-control required" autocomplete="off" id="id_quote_address">
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="form-group">
+                                        <label for="id_quote_city" class="label-input">City *</label>
+                                        <input name="quote_city" class="form-control required" autocomplete="off" id="id_quote_city">
+                                    </div>
+                                </div>
+                                <div class="col-xs-2">
+                                    <div class="form-group">
+                                        <label for="id_quote_zip" class="label-input">Zip *</label>
+                                        <input name="quote_zip" class="form-control required" autocomplete="off" id="id_quote_zip">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="id_quote_notes" class="label-input">Vehicle make and model *</label>
+                                        <input name="quote_notes" class="form-control required" autocomplete="off" id="id_quote_notes">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <input type="submit" value="Submit" class="g-recaptcha ec-button-teal block">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block quote_form %}
+{% endblock %}
