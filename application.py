@@ -438,12 +438,12 @@ def dell_thank_you():
 
     first_name = request_form.pop('quote_first_name', '')
     last_name = request_form.pop('quote_last_name', '')
-    request_form['quote_name'] = f'{first_name} {last_name}'
+    request_form['quote_name'] = '{} {}'.format(first_name, last_name)
 
     address = request_form.pop('quote_address', '')
     city = request_form.pop('quote_city', '')
     zip = request_form.pop('quote_zip', '')
-    request_form['quote_mailing_address'] = f'{address}\n{city} {zip}'
+    request_form['quote_mailing_address'] = '{}\n{} {}'.format(address, city, zip)
 
     return _thank_you(request_form)
 
