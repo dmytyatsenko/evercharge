@@ -160,6 +160,9 @@ def connector_types():
 def smartpower_overview():
     return redirect('/smartpower')
 
+@app.route('/soma-case-study')
+def soma_case_study():
+    return app.send_static_file('soma-case-study.pdf')
 
 @app.route('/200brannan-case-study')
 def brannan_case_study():
