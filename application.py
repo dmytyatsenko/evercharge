@@ -405,8 +405,7 @@ def evercharge_properties():
     return render_template('properties.html')
 
 
-@app.route('/signup')
-@app.route('/Signup')
+
 @app.route('/atwater')
 @app.route('/akoya')
 @app.route('/bristol')
@@ -416,6 +415,8 @@ def evercharge_properties():
 @app.route('/oceanpark')
 @app.route('/optima')
 @app.route('/thepierce')
+@app.route('/Signup')
+@app.route('/signup')
 def evercharge_signup():
     return render_template('signup.html')
 
