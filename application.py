@@ -418,7 +418,7 @@ def evercharge_properties():
 @app.route('/Signup')
 @app.route('/signup')
 def evercharge_signup():
-    return render_template('signup.html')
+    return render_template('easy_signup_code.html')
 
 
 @app.route('/dell')
@@ -429,6 +429,16 @@ def dell_signup():
 @app.route('/tesla', methods=['POST', 'GET'])
 def tesla_page():
     return render_template('tesla.html')
+
+
+@app.route('/signup-for-building', methods=['GET'])
+def signup_with_building_code():
+    return render_template('signup.html')
+
+
+@app.route('/signup-new')
+def signup_no_building_code():
+    return render_template('signup.html')
 
 
 @app.route('/thankyou', methods=['POST', 'GET'])
