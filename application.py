@@ -1,12 +1,14 @@
 # -*- encoding: utf-8 -*-
 import os
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_assets import Environment, Bundle
 import geoip2.database
 from itsdangerous import want_bytes, Signer, BadData
 from nutshell import NutshellAPI
 from six.moves.urllib.parse import urlparse
 import requests
+from base64 import b64encode
+import json
 
 
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
@@ -86,6 +88,16 @@ ADWORDS_COOKIE = '_adwords_cookie'
 app.config['RECAPTCHA_SITE_KEY'] = RECAPTCHA_SITE_KEY = '6LcZ5h8UAAAAAK1C4CuWYWvNC-Up5c2O-i1hS0mj'
 app.config['RECAPTCHA_SECRET_KEY'] = RECAPTCHA_SECRET_KEY = '6LcZ5h8UAAAAABShpha6eS9KWaVuDekFAskme_6K'
 
+# Device configuration for communicating to Dashboard
+EVERCHARGE_CHARGER_DEVICE_USERNAME = "device1@evercharge.net"
+EVERCHARGE_CHARGER_DEVICE_PASSWORD = "^#bhB@s8QHVy$3u_8XU7p_te#fpTWkqE"
+HEADERS = {
+    "Authorization": b"Basic " + b64encode(
+        ("{}:{}".format(EVERCHARGE_CHARGER_DEVICE_USERNAME, EVERCHARGE_CHARGER_DEVICE_PASSWORD)).encode('ascii')),
+    "Content-Type": "application/json",
+    "Content-Encoding": "gzip",
+}
+BUILDING_CODE_URL = 'http://dashboard.evercharge.net/api/v1/building-code'
 
 @app.before_request
 def redirect_www_to_non_www():
@@ -433,7 +445,20 @@ def tesla_page():
 
 @app.route('/signup-for-building', methods=['GET'])
 def signup_with_building_code():
-    return render_template('signup.html')
+    building_code = request.args.get('building_code', '')
+    data = {'building_code': building_code}
+    json_data = json.dumps(data).encode('utf-8')
+    BUILDING_CODE_URL = "http://136.24.241.201:8000/api/v1/building-code"
+    r = requests.post(BUILDING_CODE_URL, headers=HEADERS, data=json_data)
+
+    if r.status_code == 200:
+        results = json.loads(r.content)
+
+        if results['is_building'] is False:
+            flash(message='Building code provided is not valid', category='danger')
+            return redirect('/signup')
+
+    return redirect('/signup')
 
 
 @app.route('/signup-new')
