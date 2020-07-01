@@ -458,6 +458,11 @@ def signup_with_building_code():
             flash(message='Building code provided is not valid', category='danger')
             return redirect('/signup')
 
+        return render_template('signup_known_building.html',
+                               building_id=results['building_id'],
+                               building_name=results['building_name'],
+                               cars=results['cars'])
+
     return redirect('/signup')
 
 
@@ -560,6 +565,11 @@ def _thank_you(request_form):
                            note=note,
                            phone=phone,
                            no_final_form=no_final_form)
+
+
+@app.route('/thankyou-complete', methods=['POST', 'GET'])
+def thank_you_easy_signup():
+    return
 
 
 def is_human():
