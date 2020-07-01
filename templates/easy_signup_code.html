@@ -24,7 +24,8 @@
                                 <div class="col-xs-12">
                                     <div class="form-group">
                                         <label for="building_code" class="label-input">Building Code</label>
-                                        <input name="building_code" type="text" class="form-control required" id="building_id" placeholder="Building Code" autocomplete="off">
+                                        <input name="building_code" type="text" class="form-control required" id="building_id" placeholder="Building Code" autocomplete="off"
+                                        {% if building_code %}value="{{ building_code }}"{% endif %}>
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
