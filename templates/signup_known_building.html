@@ -13,7 +13,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-offset-1 col-md-10 text-center">
-                    <h3 class="extra-bottom-sm">{% block form_name %}Please complete signup for building: {{ building_name }}{% endblock %}</h3>
+                    <h3 class="extra-bottom-sm">{% block form_name %}Please complete signup for {{ building_name }}{% endblock %}</h3>
                 </div>
             </div>
             <div class="row">
@@ -95,7 +95,8 @@
         $(document).ready(function() {
                 $('#car_choice').select2();
             });
-        $(document).on('click', '#add_card_button', function() {
+        $(document).on('click', '#add_card_button', function(e) {
+            e.preventDefault();
             let new_html = '<div class="row" name="single_id_card">\n' +
                 '<br><div class="col-xs-11"><input name="id_cards" type="text"></div>\n' +
                 '<div class="col-xs-1 fa-lg"><i class="fa fa-times delete_card"></i></div></div>';
