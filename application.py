@@ -98,6 +98,7 @@ HEADERS = {
     "Content-Encoding": "gzip",
 }
 BUILDING_CODE_URL = 'http://dashboard.evercharge.net/api/v1/building-code'
+ADD_CUSTOMER_URL = 'http://dashboard.evercharge.net/api/v1/add-customer'
 
 @app.before_request
 def redirect_www_to_non_www():
@@ -455,13 +456,15 @@ def signup_with_building_code():
         results = json.loads(r.content)
 
         if results['is_building'] is False:
-            flash(message='Building code provided is not valid', category='danger')
+            flash(message=f"Building code *{building_code}* is not valid", category='danger')
             return redirect('/signup')
 
         return render_template('signup_known_building.html',
                                building_id=results['building_id'],
                                building_name=results['building_name'],
                                cars=results['cars'])
+
+    flash(message='An error occurred while validating the building code', category='danger')
 
     return redirect('/signup')
 
@@ -569,7 +572,23 @@ def _thank_you(request_form):
 
 @app.route('/thankyou-complete', methods=['POST', 'GET'])
 def thank_you_easy_signup():
-    return
+    form_data = request.form
+    print(form_data)
+    data_to_send = {}
+    for field in form_data:
+        if field == 'id_cards':
+            id_cards = form_data.getlist(field)
+            if len(id_cards) == 1 and id_cards[0] == '':
+                id_cards = []
+            data_to_send['id_cards'] = id_cards
+        else:
+            data_to_send[field] = form_data[field]
+    json_data = json.dumps(data_to_send).encode('utf-8')
+    ADD_CUSTOMER_URL = "http://136.24.241.201:8000/api/v1/add-customer"
+    r = requests.post(ADD_CUSTOMER_URL, headers=HEADERS, data=json_data)
+    print(r)
+    # if r.status_code == 200:
+    return redirect('/signup')
 
 
 def is_human():
