@@ -573,21 +573,24 @@ def _thank_you(request_form):
 @app.route('/thankyou-complete', methods=['POST', 'GET'])
 def thank_you_easy_signup():
     form_data = request.form
-    print(form_data)
     data_to_send = {}
+    fields_to_exclude = ['lead_source', 'adwordsField', 'granularField', 'customer_type', 'no_final_form',
+                         'customer_already_created']
     for field in form_data:
         if field == 'id_cards':
             id_cards = form_data.getlist(field)
             if len(id_cards) == 1 and id_cards[0] == '':
                 id_cards = []
             data_to_send['id_cards'] = id_cards
-        else:
+        elif field not in fields_to_exclude:
             data_to_send[field] = form_data[field]
     json_data = json.dumps(data_to_send).encode('utf-8')
     ADD_CUSTOMER_URL = "http://136.24.241.201:8000/api/v1/add-customer"
     r = requests.post(ADD_CUSTOMER_URL, headers=HEADERS, data=json_data)
     print(r)
     # if r.status_code == 200:
+    #     request_form = request.form.copy()
+    #     return _thank_you(request_form)
     return redirect('/signup')
 
 
