@@ -20,6 +20,12 @@
                 <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
                     <div class="row">
                         <form action="{{ url_for('thank_you_easy_signup') }}" method='post' id="quote" class="validate-form">
+                            <input name="lead_source" value="Web Signup" type="hidden">
+                            <input name="adwordsField" id='adwordsField' type="hidden">
+                            <input name="granularField" id="granularField" type="hidden">
+                            <input name="customer_type" id="customer_type" type="hidden" value="EV Driver">
+                            <input name="no_final_form" id="no_final_form" type="hidden" value="True">
+                            <input name="customer_already_created" id="customer_already_created" type="hidden" value="True">
                             <input name="building_id" value="{{ building_id }}" type="hidden">
                             <fieldset class="ec-fieldset">
                                 <div class="col-xs-12">
@@ -37,7 +43,7 @@
                                 <div class="col-xs-12">
                                     <div class="form-group">
                                         <label for="last_name" class="label-input">Last name *</label>
-                                        <input name="last_name" type="email" class="form-control required" id="last_name"  autocomplete="off">
+                                        <input name="last_name" type="text" class="form-control required" id="last_name"  autocomplete="off">
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
