@@ -498,11 +498,18 @@ def dell_thank_you():
 def _thank_you(request_form):
     if request.method == 'GET' or not is_human():
         return redirect('/')
-    name = request_form.get('quote_name')
+    already_created = bool(request_form.get('customer_already_created', False))
+    name = request_form.get('quote_name', '')
+    phone = request_form.get('quote_phone', None)
+    email = request_form.get('quote_email', '')
+
+    if already_created is True:
+        name = ' '.join([request_form.get('first_name'), request_form.get('last_name')])
+        email = request_form.get('email')
+        phone = request_form.get('mobile', '')
     if name.lower() in ('driver test', 'pm test'):
         return render_template("thank_you.html")
-    phone = request_form.get('quote_phone', None)
-    email = request_form.get('quote_email')
+
     lead_notes = []
     note = ''
 
@@ -513,6 +520,15 @@ def _thank_you(request_form):
         source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
     else:
         source = EV_OWNER_SOURCE_ID
+
+    if already_created is True:
+        lead_notes.append('Customer has already been created in dashboard')
+        lead_notes.append('Signed up with building code')
+        id_cards = request_form.getlist('id_cards')
+        if len(id_cards) == 1 and id_cards[0] == '':
+            lead_notes.append('No id cards provided by customer')
+        else:
+            lead_notes.append(f'Id cards added in dashboard: {id_cards}')
 
     mailing_address = request_form.get('quote_mailing_address')
     parking_spot = request_form.get('quote_parking_space', '')
@@ -567,7 +583,8 @@ def _thank_you(request_form):
                            contactId=contact_id,
                            note=note,
                            phone=phone,
-                           no_final_form=no_final_form)
+                           no_final_form=no_final_form,
+                           already_created=already_created)
 
 
 @app.route('/thankyou-complete', methods=['POST', 'GET'])
@@ -575,7 +592,7 @@ def thank_you_easy_signup():
     form_data = request.form
     data_to_send = {}
     fields_to_exclude = ['lead_source', 'adwordsField', 'granularField', 'customer_type', 'no_final_form',
-                         'customer_already_created']
+                         'customer_already_created', 'quote_building_name']
     for field in form_data:
         if field == 'id_cards':
             id_cards = form_data.getlist(field)
@@ -587,10 +604,10 @@ def thank_you_easy_signup():
     json_data = json.dumps(data_to_send).encode('utf-8')
     ADD_CUSTOMER_URL = "http://136.24.241.201:8000/api/v1/add-customer"
     r = requests.post(ADD_CUSTOMER_URL, headers=HEADERS, data=json_data)
-    print(r)
-    # if r.status_code == 200:
-    #     request_form = request.form.copy()
-    #     return _thank_you(request_form)
+
+    if r.status_code == 200:
+        request_form = request.form.copy()
+        return _thank_you(request_form)
     return redirect('/signup')
 
 
