@@ -449,14 +449,14 @@ def signup_with_building_code():
     building_code = request.args.get('building_code', '')
     data = {'building_code': building_code}
     json_data = json.dumps(data).encode('utf-8')
-    BUILDING_CODE_URL = "http://136.24.241.201:8000/api/v1/building-code"
+    
     r = requests.post(BUILDING_CODE_URL, headers=HEADERS, data=json_data)
 
     if r.status_code == 200:
         results = json.loads(r.content)
 
         if results['is_building'] is False:
-            flash(message=f"Building code *{building_code}* is not valid", category='danger')
+            flash(message=f'Building code "{building_code}" is not valid', category='danger')
             return redirect('/signup')
 
         return render_template('signup_known_building.html',
@@ -602,12 +602,15 @@ def thank_you_easy_signup():
         elif field not in fields_to_exclude:
             data_to_send[field] = form_data[field]
     json_data = json.dumps(data_to_send).encode('utf-8')
-    ADD_CUSTOMER_URL = "http://136.24.241.201:8000/api/v1/add-customer"
+
     r = requests.post(ADD_CUSTOMER_URL, headers=HEADERS, data=json_data)
 
     if r.status_code == 200:
         request_form = request.form.copy()
         return _thank_you(request_form)
+
+    flash(message='An error occurred while processing your request. Please try again.', category='danger')
+
     return redirect('/signup')
 
 
