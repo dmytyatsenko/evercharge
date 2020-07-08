@@ -12,7 +12,7 @@ let scanning = false;
 
 qrcode.callback = res => {
   if (res) {
-    outputData.innerText = res;
+    outputData.innerHTML = `<strong>QR code successfully scanned</strong><br>Redirecting to <a href="${res}">${res}</a>...`;
     scanning = false;
 
     video.srcObject.getTracks().forEach(track => {
@@ -22,6 +22,8 @@ qrcode.callback = res => {
     qrResult.hidden = false;
     canvasElement.hidden = true;
     btnScanQR.hidden = false;
+
+    window.location.href = res;
   }
 };
 

@@ -10,13 +10,13 @@
 
 {% block content_one %}
     <div id="scanner_container">
-        <h1>QR Code Scanner</h1>
+        <br><h3>Click the QR Code image to scan QR code</h3>
         <a id="btn-scan-qr">
             <img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2017/07/1499401426qr_icon.svg">
         </a>
         <canvas hidden="" id="qr-canvas"></canvas>
         <div id="qr-result" hidden="">
-            <b>Data:</b> <span id="outputData"></span>
+            <span id="outputData"></span>
         </div>
     </div>
 {% endblock %}
