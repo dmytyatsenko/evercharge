@@ -647,7 +647,7 @@ def more_about_you():
     return "OK"
 
 
-@app.route('/scan', methods=['GET'])
+@app.route('/charge', methods=['GET'])
 def scan_qr_code():
     return render_template('qr_scanner.html')
 
