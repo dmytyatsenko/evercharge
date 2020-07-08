@@ -652,6 +652,11 @@ def scan_qr_code():
     return render_template('qr_scanner.html')
 
 
+@app.route('/charge/<charger_id>', methods=['GET'])
+def review_terms_pre_charging(charger_id):
+    return render_template('start_charging.html', charger_id=charger_id)
+
+
 if __name__ == '__main__':
     PORT = int(os.environ.get("PORT", 9000))
     DEBUG = True  # os.environ.get("FLASK_DEBUG", False)
