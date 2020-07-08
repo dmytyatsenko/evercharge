@@ -9,7 +9,6 @@
 {% endblock %}
 
 {% block content_one %}
-    <input name="charger_id" id="charger_id" type="hidden" value="{{ charger_id }}">
     <div class="ec-stretch-white">
         <div class="container">
             <div class="row">
@@ -29,6 +28,7 @@
                     <br><br><h3 class="extra-bottom-sm">Price per kWh: $X.XX</h3>
                 </div>
                 <div class="col-xs-10 col-md-offset-1 col-md-10 text-center">
+{#                    url will need to include charger_id#}
                     <a href="" class="ec-button-teal block">Start Charging</a>
                 </div>
             </div>
