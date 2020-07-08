@@ -647,6 +647,11 @@ def more_about_you():
     return "OK"
 
 
+@app.route('/scan', methods=['GET'])
+def scan_qr_code():
+    return render_template('qr_scanner.html')
+
+
 if __name__ == '__main__':
     PORT = int(os.environ.get("PORT", 9000))
     DEBUG = True  # os.environ.get("FLASK_DEBUG", False)
