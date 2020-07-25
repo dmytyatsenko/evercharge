@@ -1,1628 +1,1656 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+
 <url>
   <loc>https://evercharge.net/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://evercharge.net/tech</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://evercharge.net/multifamily</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/commercial</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://evercharge.net/hardware</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://evercharge.net/properties</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/why-evercharge</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/electrician</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://evercharge.net/smartpower</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/faqs</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/aboutus</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/press</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/evercharge-branding-guide-logo.pdf</loc>
-  <lastmod>2020-01-14T05:13:05+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://evercharge.net/press</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/what-is-power-management-and-why-is-it-important/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/how-converting-old-buildings-to-ev-ready-is-easy-with-evercharge/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/power-management/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/smartpower/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/evse/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/evercharge/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/smartpower-makes-ev-fleets-supercharged/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/fleets/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/buses/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/commerical/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/electric-vehicles-deserve-better/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/electric-vehicle/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/tesla/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/evs/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/the-cybertruck-might-not-be-for-everyone-but-its-hiding-one-huge-feature-in-plain-sight/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/charging/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/how-evercharge-and-pacific-current-are-solving-multifamily-home-charging-in-hawaii/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/evercharge/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/case-study/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/new-partnership-brings-public-ev-charging-to-the-masses/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/public-charging/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/ev-charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/apartments/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/partnership/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/hawaii/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/volta/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/the-next-industrial-revolution-is-renewable/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/evercharge-makes-mud-ev-charging-possible/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/renewable-energy/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/multifamily/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/wind/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/evse/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/solar/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/installs/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/what-is-power-management-and-why-is-it-important/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/power-management/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/smartpower/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/smartpower-makes-ev-fleets-supercharged/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/fleets/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/buses/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/commerical/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/electric-vehicles-deserve-better/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/electric-vehicle/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/tesla/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/rss/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/getting-charging-installed-at-an-apartment-or-condo/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/condominiums/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/what-is-demand-response-and-do-electric-cars-need-it/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/public-charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/demand-response/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/the-future-of-mobility-ultra-rapid-charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/supercharger/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/expensive/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/ev-charging-2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/dc-fast/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/how-do-we-build-a-public-charging-network-2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/volkswagen/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/evercharge-close-1-4mm-seed-round/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/electric/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/electric-cars/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/power-management/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/why-buildings-keep-switching-to-evercharge/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/multifamily/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/smartpower-technology-how-does-it-work/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/smart-city/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/level-2-charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/smart-charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/ev-charging-for-condos/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/5-myths-about-electric-cars-debunked/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/in-home-charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/range-anxiety/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/heres-how-every-city-can-go-all-in-on-electric-cars/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/elon-musk/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/jerry-brown/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/california/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/smartpower/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/evs-have-a-charger-probelm/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/if-you-want-to-win-with-evs-you-need-to-build-an-ecosystem/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/charging-station/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/ecosystem/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/chargers-should-solve-problems/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/3-reasons-the-ev-charging-station-you-need-already-exists/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/evse/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/what-you-need-and-what-you-dont-with-a-home-charging-station/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/apps-tag/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/evercharge-goes-to-the-moon-12-5-times-and-counting/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/2019/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/evercharge/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/how-to-build-an-electric-fleet/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/can-stop-evs-from-taking-over-the-auto-industry/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/model-3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/time-loss/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/model-s/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/why-evercharge-was-named-one-of-the-best-automotive-startups/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/gm/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/autonomous-car/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/innovation/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/the-easiest-ways-to-increase-ev-adoption/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/china/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/hov-lane/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/incentives/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/electric-cars-vs-gas-vehicles-what-you-need-to-know/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/author/chris-donovan/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/5-things-tesla-model-3-owners-need-to-know/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/the-future-of-mobility-vehicle-to-grid-v2g-2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/mobility/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/v2g/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/charging/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/electric-cars-are-already-killing-off-big-oil-in-china/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/china/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/oil/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/evs-are-facing-a-supply-and-demand-problem/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/hyundai/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/kona/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/can-autonomous-rideshare-save-cities/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/lyft/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/uber/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/government/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/rideshare/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/advice-to-automakers-how-to-win-with-electric/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/usa/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/ev-sales/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/europe/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/electric-vehicle/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/the-future-is-electric-and-its-in-china/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/byd/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tesla-created-the-perfect-ev-blueprint-other-manufactuerers/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/proche/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/does-tesla-actually-have-a-production-problem/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/production/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/bolt/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/chevrolet/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/tesla/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/ev-adoption-hits-the-accelerator/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/ev-sales/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/electric-cars/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/electric-cars-are-green-and-getting-greener/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/renewable-energy/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/evs-have-a-charger-probelm/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/in-home-charging/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/smart-charging/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/evs/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/getting-charging-installed-at-an-apartment-or-condo/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/condominiums/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/apartments/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-easiest-ways-to-increase-ev-adoption/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/california/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/hov-lane/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/incentives/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/electric-cars-vs-gas-vehicles-what-you-need-to-know/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/author/chris-donovan/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/5-things-tesla-model-3-owners-need-to-know/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/model-3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/level-2-charging/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/charging-station/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/supercharger/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/charging/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/how-evercharge-and-pacific-current-are-solving-multifamily-home-charging-in-hawaii/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/hawaii/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/evercharge/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tesla-created-the-perfect-ev-blueprint-other-manufactuerers/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/proche/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/public-charging-inst-the-key-its-charging-at-home/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/ev-charging-2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/community-charging/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/innovation/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/is-2018-the-year-of-the-electric-car/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/bolt/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/used-cars/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/how-utilities-can-help-the-ev-industry/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/government/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/public-charging/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/if-you-live-in-an-apartment-or-condo-and-want-an-ev-heres-what-you-need-to-know/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/how-to/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/how-to-build-an-electric-fleet/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/ev-charging/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/apartments/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/why-buildings-keep-switching-to-evercharge/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/what-happens-when-electricity-is-dirty-cheap/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/solving-the-electric-car-charger-problem/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/the-numbers-are-in-automakers-should-be-worried/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/why-are-we-asking-for-public-chargers/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/multifamily/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/if-you-want-to-win-with-evs-you-need-to-build-an-ecosystem/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/ecosystem/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/chargers-should-solve-problems/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/evse/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/how-to-save-money-on-evse-installs/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/problem-solver/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/savings/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/what-is-demand-response-and-do-electric-cars-need-it/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/demand-response/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-future-of-mobility-ultra-rapid-charging/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/expensive/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/dc-fast/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/how-do-we-build-a-public-charging-network-2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/volkswagen/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/evercharge-close-1-4mm-seed-round/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/electric/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/power-management/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/smartpower-technology-how-does-it-work/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/smart-city/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/ev-charging-for-condos/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/5-myths-about-electric-cars-debunked/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/range-anxiety/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/heres-how-every-city-can-go-all-in-on-electric-cars/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/elon-musk/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/jerry-brown/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/smartpower/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/can-stop-evs-from-taking-over-the-auto-industry/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/time-loss/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/model-s/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/why-evercharge-was-named-one-of-the-best-automotive-startups/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/gm/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/autonomous-car/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/evs-are-facing-a-supply-and-demand-problem/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/hyundai/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/kona/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/can-autonomous-rideshare-save-cities/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/lyft/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/uber/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/mobility/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/rideshare/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/advice-to-automakers-how-to-win-with-electric/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/usa/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/europe/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/electric-vehicle/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-future-is-electric-and-its-in-china/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/byd/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/evercharge-goes-to-the-moon-12-5-times-and-counting/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/2019/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/does-tesla-actually-have-a-production-problem/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/production/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/chevrolet/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/tesla/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-cybertruck-might-not-be-for-everyone-but-its-hiding-one-huge-feature-in-plain-sight/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-next-industrial-revolution-is-renewable/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/wind/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/solar/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/ev-charging-for-dummies/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/level-1-charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/owning-an-electric-car-in-an-apartment-is-difficult-but-it-doesnt-have-to-be/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/what-makes-ev-charging-in-apartments-so-difficult-anyway/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/problem-solver/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/condominiums/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/public-charging-inst-the-key-its-charging-at-home/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/community-charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/is-2018-the-year-of-the-electric-car/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/used-cars/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/how-utilities-can-help-the-ev-industry/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/public-charging/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/solving-the-electric-car-charger-problem/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tesla-doesnt-need-to-worry-about-production/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/the-future-of-mobility-long-range-evs/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/concept-cars/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/supercharger/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/how-does-public-charging-work-anyway/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/the-revolution-explained/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/the-future-of-mobility-wireless-charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/wireless-charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/china-is-now-dominating-the-ev-market/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/ev-charging-2/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/evs-are-here-to-stay-now-what/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/what-happens-when-electric-cars-are-everywhere/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/dc-fast/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/get-ready-evs-are-about-to-be-everywhere/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/chevy/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/what-will-happen-to-evs-in-2017/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/beijing/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/despite-the-election-oil-and-gas-are-on-their-way-out-2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/autonomous-electric-taxis-are-changing-the-auto-industry/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/why-dieselgate-is-good-for-volkswagon-2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/volkswagon/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/vw/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/diesel/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/the-numbers-are-in-automakers-should-be-worried/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/why-oil-and-gas-are-about-to-die/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/start-ups/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/electric-cars/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/the-challenged-88-million-americans/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/author/kyle/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/ul916/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/why-are-we-asking-for-public-chargers/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/is-multifamily-housing-a-forgotten-ev-market-2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/teslas-gigafactory-is-a-bigger-game-changer-than-you-think/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/gigafactory/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/smart-city/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/level-2-charging/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/in-home-charging/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/what-does-300-mile-range-really-get-you/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/why-you-need-to-stop-worring-about-range/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/how-jerry-brown-and-elon-musk-made-california-an-electric-vehicle-stronghold/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/california-continues-to-drive-u-s-ev-adoption/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/dont-worry-about-losing-the-ev-tax-credit/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/supercharging-is-no-longer-free-now-what/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/workplace-charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/how-to-save-money-on-evse-installs/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/installs/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/savings/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/how-we-power-450-000-tesla-model-3s/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/charging-station/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/who-will-power-the-evs-of-the-future-2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/evse/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/evercharge/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/model-3-reservation-holders-have-nothing-to-worry-about/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/model-3/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/how-gms-eu-deal-is-a-huge-gain/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/opel/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/psa/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/2016-year-in-evs-review/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/nextev/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/gm/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/the-missing-link-between-smart-cities-and-autonomous-vehicles-2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/in-just-under-seven-minutes-nio-proved-evs-are-here-to-stay/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/nio/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/innovation/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/china/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/the-3-things-evs-need-in-order-to-go-mainstream/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/how-gms-eu-deal-is-a-huge-gain/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/is-china-the-real-ev-leader/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/chevy/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/faraday/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/opel/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/faraday-future/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/4-things-new-ev-buyers-should-know/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/charging/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/smart-cities-need-smart-governments/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/government/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/psa/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/infographic-worldwide-ev-sales-are-on-the-move/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/infographic/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/usa/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/electric-cars/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/electric-vehicle/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/what-happens-when-electricity-is-dirty-cheap/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/bolt/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/v2g/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/chevy-bolt-vs-tesla-model-3-which-ev-is-right-for-you/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/what-you-need-and-what-you-dont-with-a-home-charging-station/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/volt/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/apps-tag/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/building-the-future-of-evs-ces-and-beyond-2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/evs-are-here-to-stay-now-what/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/ff/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/in-home-charging/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/tesla/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/california-continues-to-drive-u-s-ev-adoption/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/evs/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/ev-charging-for-dummies/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/level-1-charging/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/owning-an-electric-car-in-an-apartment-is-difficult-but-it-doesnt-have-to-be/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/what-makes-ev-charging-in-apartments-so-difficult-anyway/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/condominiums/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/apartments/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/how-jerry-brown-and-elon-musk-made-california-an-electric-vehicle-stronghold/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/why-you-need-to-stop-worring-about-range/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/dont-worry-about-losing-the-ev-tax-credit/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-revolution-explained/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/model-3-reservation-holders-have-nothing-to-worry-about/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/what-happens-when-electric-cars-are-everywhere/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/how-we-power-450-000-tesla-model-3s/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/model-3/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/level-2-charging/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-future-of-mobility-vehicle-to-grid-v2g-2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/charging-station/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tesla-doesnt-need-to-worry-about-production/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/3-reasons-the-ev-charging-station-you-need-already-exists/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-future-of-mobility-long-range-evs/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/concept-cars/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/supercharger/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-3-things-evs-need-in-order-to-go-mainstream/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/is-china-the-real-ev-leader/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/faraday/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/faraday-future/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/4-things-new-ev-buyers-should-know/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/how-does-public-charging-work-anyway/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/charging/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/evercharge/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-future-of-mobility-wireless-charging/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/wireless-charging/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/china-is-now-dominating-the-ev-market/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/ev-charging-2/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/las-massive-led-energy-savings-leads-to-major-ev-waste/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/how-many-chargers-does-a-community-need/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/pain-points/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/in-just-under-seven-minutes-nio-proved-evs-are-here-to-stay/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/nextev/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/nio/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/innovation/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/get-ready-evs-are-about-to-be-everywhere/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/what-will-happen-to-evs-in-2017/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/beijing/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/bolt/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/despite-the-election-oil-and-gas-are-on-their-way-out-2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/government/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/public-charging/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/ev-charging/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/is-multifamily-housing-a-forgotten-ev-market-2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/evse/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/5-more-things-ev-buyers-should-know/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/pollution/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/teslas-gigafactory-is-a-bigger-game-changer-than-you-think/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/gigafactory/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/problem-solver/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/dc-fast/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/autonomous-electric-taxis-are-changing-the-auto-industry/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/why-dieselgate-is-good-for-volkswagon-2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/volkswagon/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/vw/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/diesel/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-challenged-88-million-americans/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/author/kyle/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/ul916/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/smart-city/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/what-does-300-mile-range-really-get-you/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/supercharging-is-no-longer-free-now-what/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/workplace-charging/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/2016-year-in-evs-review/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/gm/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-missing-link-between-smart-cities-and-autonomous-vehicles-2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/smart-cities-need-smart-governments/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/usa/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/electric-vehicle/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/chevy-bolt-vs-tesla-model-3-which-ev-is-right-for-you/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/volt/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/building-the-future-of-evs-ces-and-beyond-2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/ff/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/tesla/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/4/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/4/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/are-we-heading-for-an-ev-disaster/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/5-more-things-ev-buyers-should-know/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/pollution/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/las-massive-led-energy-savings-leads-to-major-ev-waste/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/how-many-chargers-does-a-community-need/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/pain-points/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/problem-solver/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/public-charging/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/how-china-is-driving-the-ev-market/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/ev-charging-2/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/chevy/page/2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.33</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/china-pollution-fueling-innovation/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.33</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/venture-capital/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.33</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/tag/electric-cars/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/quantifying-evercharge-infrastructure-savings/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/private-use-of-public-charging-stations-could-spoil-the-electric-vehicle-market/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/evercharge-takes-home-the-win-in-1776s-challenge-cup/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/launch-festival/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/challenge-cup/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/1776/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/press-release-evercharge-expands-nationwide/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/trouble-charging-at-home/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/nissan-leaf/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/how-to-get-every-city-to-100-electric-vehicles/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/level-2-charging/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/in-home-charging/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/charging-station/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/evse/page/4/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/evercharge/page/4/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/model-3/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/gm/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/how-china-is-driving-the-ev-market/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.33</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/china/page/3/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.33</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/3-easily-solved-problems-facing-ev-owners/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/chevy/page/2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.33</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/how-electric-vehicles-could-solve-chinas-air-pollution-problem/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/electric-cars/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.33</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/one-big-missing-piece-in-ev-adoption-2/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/electric-vehicle/page/4/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.33</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/tesla/page/4/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/tag/in-home-charging/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.33</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/evs/page/4/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/are-we-heading-for-an-ev-disaster/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/model-3/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/who-will-power-the-evs-of-the-future-2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/level-2-charging/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/charging-station/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/3-easily-solved-problems-facing-ev-owners/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/evercharge/page/4/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/ev-charging-2/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/public-charging/page/4/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.33</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/ev-charging/page/4/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/evse/page/4/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/how-electric-vehicles-could-solve-chinas-air-pollution-problem/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/quantifying-evercharge-infrastructure-savings/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/private-use-of-public-charging-stations-could-spoil-the-electric-vehicle-market/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/evercharge-takes-home-the-win-in-1776s-challenge-cup/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/launch-festival/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/challenge-cup/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/1776/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/press-release-evercharge-expands-nationwide/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/trouble-charging-at-home/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/nissan-leaf/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/how-to-get-every-city-to-100-electric-vehicles/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/gm/page/3/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/one-big-missing-piece-in-ev-adoption-2/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/electric-vehicle/page/4/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/tesla/page/4/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.33</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/5/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.33</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/5/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.26</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/public-charging/page/4/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.26</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/electric-cars/page/4/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.26</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/in-home-charging/page/4/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.26</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/the-math-behind-public-charging/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.26</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/evercharge/page/5/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.26</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/model-3/page/4/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.26</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/tesla/page/5/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.26</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/evs/page/5/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/model-3/page/4/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/the-math-behind-public-charging/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/evercharge/page/5/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/public-charging/page/5/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.26</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/ev-charging/page/5/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/tesla/page/5/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.26</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/6/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.26</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/6/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.21</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/public-charging/page/5/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.21</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/electric-cars/page/5/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.21</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/evercharge/page/6/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.21</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/tesla/page/6/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.21</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/evs/page/6/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/evercharge/page/6/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.21</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/tesla/page/6/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.21</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/7/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.21</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/7/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.17</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/evercharge/page/7/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
-  <priority>0.17</priority>
-</url>
-<url>
-  <loc>https://evercharge.net/blog/tag/tesla/page/7/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.17</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/evs/page/7/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/evercharge/page/7/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.17</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/tag/tesla/page/7/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.17</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/8/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.17</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/8/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.13</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/tag/evs/page/8/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.13</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/9/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.13</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/9/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.11</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/10/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.11</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/10/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.09</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/11/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.09</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/11/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.07</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/12/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.07</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/12/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.05</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/13/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.05</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/13/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.04</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/14/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.04</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/14/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.04</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/15/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.04</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/15/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.03</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/16/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.03</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/author/joseph-2/page/16/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.02</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/17/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.02</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/high-powered-charging-and-why-you-dont-need-it/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
+  <priority>0.02</priority>
+</url>
+<url>
+  <loc>https://evercharge.net/blog/author/joseph-2/page/17/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.02</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/the-case-for-smarter-chargers/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.02</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/page/18/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.02</priority>
 </url>
 <url>
   <loc>https://evercharge.net/blog/why-americans-cant-charge-at-home/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.01</priority>
 </url>
 <url>
-  <loc>https://evercharge.net/blog/author/jason/</loc>
-  <lastmod>2020-03-10T05:43:10+00:00</lastmod>
+  <loc>https://evercharge.net/blog/page/19/</loc>
+  <lastmod>2020-07-25T07:27:11+00:00</lastmod>
   <priority>0.01</priority>
 </url>
+
+
 </urlset>
