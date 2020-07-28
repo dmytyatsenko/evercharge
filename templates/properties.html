@@ -13,28 +13,54 @@
         <div class="container">
             <div class="row ec-case-studies">
                 <div class="col-xs-12 col-md-6">
-                    <div class="ec-property brannan">
-                        <h2 class="white">200 Brannan</h2>
+                    <div class="ec-property potrero">
+                        <h2 class="white">450 unit Builing</h2>
                         <p><small>in San Francisco</small></p>
-                        <p class="extra-bottom-md">Without EverCharge the building only had capacity to support 3 residents. With over 6 EV owners, SmartPower Technology makes it possible for more than ten residents to charge simultaneously making charging possible for years to come.</p>
-                        <p><a href="/200brannan-case-study" target="_blank" class="ec-text-link">Read full case study &#8594;</a></p>
+                        <p class="extra-bottom-md">Without EverCharge the building only had capacity to support 6 valet charing stations. With over 50 EV owners, SmartPower Technology made it possible to install 20 charging staitons with room to expand making charging possible for years to come.</p>
+                        <p><a href="{{ url_for('soma_case_study') }}" target="_blank" class="ec-text-link">Read full case study &#8594;</a></p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-6">
-                    <div class="ec-property potrero">
-                        <h2 class="white">The Potrero</h2>
-                        <p><small>in San Francisco</small></p>
-                        <p class="extra-bottom-md">The Homeowners Association turned to EverCharge after traditional solutions didn’t fit the needs or budget of the community. EverCharge provided a scalable and affordable electric vehicle charging solution to residents of the property. </p>
-                        <p><a href="/potrero-case-study" target="_blank" class="ec-text-link">Read full case study &#8594;</a></p>
+                    <div class="ec-property brannan">
+                        <h2 class="white">Corporate Campus</h2>
+                        <p><small>in Michigan</small></p>
+                        <p class="extra-bottom-md">Without EverCharge the site had reached the maximum EV connector potential on existing infrastructure.
+                            Using EverCharge technology the corporate campus was able to leverage existing electrical capacity to
+                            support 300+ EV connectors and avoid the costly electrical upgrades</p>
+                        <p><a href="{{ url_for('corp_campus_case_study') }}" target="_blank" class="ec-text-link">Read full case study &#8594;</a></p>
                     </div>
                 </div>
             </div>
             <!-- end main case studies -->
-            
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="ec-featured-prop new">
-                        <div class="tag">Recently Added</div>
+                        <!-- <div class="tag">Recently Added</div> -->
+                        <img src="{{ url_for('static', filename='images/the-potrero.jpg') }}" class="img-responsive" alt="EverCharge Case Study Property" />
+                        <div class="ec-box-white">
+                            <h5>The Potrero</h5>
+                            <p class="extra-bottom-md">The Homeowners Association turned to EverCharge after traditional solutions didn’t fit the needs or budget of the community. EverCharge provided a scalable and affordable electric vehicle charging solution to residents of the property. </p>
+                            <p><a href="/potrero-case-study" target="_blank" class="ec-text-link">Read full case study &#8594;</a></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="ec-featured-prop new">
+                        <!-- <div class="tag">Recently Added</div> -->
+                        <img src="{{ url_for('static', filename='images/200-brannan-n.jpg') }}" class="img-responsive" alt="EverCharge Case Study Property" />
+                        <div class="ec-box-white">
+                            <h5>200 Brannan</h5>
+                            <p class="extra-bottom-md">Without EverCharge the building only had capacity to support 3 residents. With over 6 EV owners, SmartPower Technology makes it possible for more than ten residents to charge simultaneously making charging possible for years to come.</p>
+                            <p><a href="/200brannan-case-study" target="_blank" class="ec-text-link">Read full case study &#8594;</a></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix visible-sm"></div>
+                <div class="col-xs-12 col-sm-6 col-md-4">
+                    <div class="ec-featured-prop new">
+                        <!-- <div class="tag">Recently Added</div> -->
                         <img src="{{ url_for('static', filename='images/properties-case-7.jpg') }}" class="img-responsive" alt="EverCharge Case Study Property" />
                         <div class="ec-box-white">
                             <h5>Private Condominium Residents, San Francisco, CA</h5>
@@ -43,9 +69,10 @@
                         </div>
                     </div>
                 </div>
+                <div class="clearfix visible-md visible-lg"></div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="ec-featured-prop new">
-                        <div class="tag">Recently Added</div>
+                    <div class="ec-featured-prop">
+                        <!-- <div class="tag">Recently Added</div> -->
                         <img src="{{ url_for('static', filename='images/properties-case-8.jpg') }}" class="img-responsive" alt="EverCharge Case Study Property" />
                         <div class="ec-box-white">
                             <h5>Designer Condos, San Francisco, CA</h5>
@@ -56,8 +83,8 @@
                 </div>
                 <div class="clearfix visible-sm"></div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="ec-featured-prop new">
-                        <div class="tag">Recently Added</div>
+                    <div class="ec-featured-prop">
+                        <!-- <div class="tag">Recently Added</div> -->
                         <img src="{{ url_for('static', filename='images/properties-case-9.jpg') }}" class="img-responsive" alt="EverCharge Case Study Property" />
                         <div class="ec-box-white">
                             <h5>Luxury Condos, San Francisco, CA</h5>
@@ -66,7 +93,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="clearfix visible-md visible-lg"></div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="ec-featured-prop">
                         <img src="{{ url_for('static', filename='images/properties-case-1.jpg') }}" class="img-responsive" alt="EverCharge Case Study Property" />
@@ -77,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="clearfix visible-sm"></div>
+                <div class="clearfix visible-sm visible-md visible-lg"></div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="ec-featured-prop">
                         <img src="{{ url_for('static', filename='images/properties-case-2.jpg') }}" class="img-responsive" alt="EverCharge Case Study Property" />
@@ -98,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="clearfix"></div>
+                <div class="clearfix visible-sm"></div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="ec-featured-prop">
                         <img src="{{ url_for('static', filename='images/properties-case-4.jpg') }}" class="img-responsive" alt="EverCharge Case Study Property" />
@@ -109,6 +135,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="clearfix visible-md visible-lg"></div>
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="ec-featured-prop">
                         <img src="{{ url_for('static', filename='images/properties-case-5.jpg') }}" class="img-responsive" alt="EverCharge Case Study Property" />
