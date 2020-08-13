@@ -97,8 +97,8 @@ HEADERS = {
     "Content-Type": "application/json",
     "Content-Encoding": "gzip",
 }
-BUILDING_CODE_URL = 'http://dashboard.evercharge.net/api/v1/building-code'
-ADD_CUSTOMER_URL = 'http://dashboard.evercharge.net/api/v1/add-customer'
+BUILDING_CODE_URL = 'https://dashboard.evercharge.net/api/v1/building-code'
+ADD_CUSTOMER_URL = 'https://dashboard.evercharge.net/api/v1/add-customer'
 
 @app.before_request
 def redirect_www_to_non_www():
