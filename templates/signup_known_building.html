@@ -1,0 +1,117 @@
+{% extends 'layout/base.html' %}
+
+{% block banner_class %}
+    class="ec-banner ec-stretch-dk-teal"
+{% endblock %}
+
+{% block banner_text %}
+    <h1 class="text-shadow">Sign Up for EverCharge</h1>
+{% endblock %}
+
+{% block content_one %}
+    <div class="ec-stretch-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-offset-1 col-md-10 text-center">
+                    <h3 class="extra-bottom-sm">{% block form_name %}Please complete signup for {{ building_name }}{% endblock %}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+                    <div class="row">
+                        <form action="{{ url_for('thank_you_easy_signup') }}" method='post' id="quote" class="validate-form">
+                            <input name="lead_source" value="Web Signup" type="hidden">
+                            <input name="adwordsField" id='adwordsField' type="hidden">
+                            <input name="granularField" id="granularField" type="hidden">
+                            <input name="customer_type" id="customer_type" type="hidden" value="EV Driver">
+                            <input name="no_final_form" id="no_final_form" type="hidden" value="True">
+                            <input name="customer_already_created" id="customer_already_created" type="hidden" value="True">
+                            <input name="building_id" value="{{ building_id }}" type="hidden">
+                            <input name="quote_building_name" value="{{ building_name }}" type="hidden">
+                            <fieldset class="ec-fieldset">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="email" class="label-input">Email *</label>
+                                        <input name="email" type="text" class="form-control required-email" id="email" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="first_name" class="label-input">First name *</label>
+                                        <input name="first_name" type="email" class="form-control required" id="first_name"  autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="last_name" class="label-input">Last name *</label>
+                                        <input name="last_name" type="text" class="form-control required" id="last_name"  autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="mobile" class="label-input">Mobile Phone *</label>
+                                        <input name="mobile" id="label3" type="tel" class="form-control bfh-phone required" data-format="ddd-ddd-dddd" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="car_choice" class="label-input">Vehicle make and model *</label>
+                                        <select name="car" id="car_choice" type="tel" class="form-control">
+                                            {% for car in cars %}
+                                                <option values="{{ car[0] }}">{{ car[1] }}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label class="label-input">ID cards</label>
+                                        <div id="id_card_div">
+                                            <div class="row" name="single_id_card">
+                                                <div class="col-xs-11">
+                                                    <input name="id_cards" type="text">
+                                                </div>
+                                                <div class="col-xs-1 fa-lg">
+                                                    <i class="fa fa-times delete_card"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button id="add_card_button" class="building_code_signup ec-button-teal-border pull-right">Add card</button>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <input type="submit" value="Submit" class="g-recaptcha ec-button-teal block">
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block quote_form %}
+{% endblock %}
+
+
+{%- block custom_scripts -%}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+                $('#car_choice').select2();
+            });
+        $(document).on('click', '#add_card_button', function(e) {
+            e.preventDefault();
+            let new_html = '<div class="row" name="single_id_card">\n' +
+                '<br><div class="col-xs-11"><input name="id_cards" type="text"></div>\n' +
+                '<div class="col-xs-1 fa-lg"><i class="fa fa-times delete_card"></i></div></div>';
+            $('#id_card_div').append(new_html);
+        });
+        $(document).on('click', '.delete_card', function() {
+            let parent_div = $(this).parent().parent();
+            parent_div.html('');
+        })
+    </script>
+{%- endblock -%}

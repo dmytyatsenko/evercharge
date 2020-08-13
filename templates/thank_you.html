@@ -46,7 +46,11 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-6 col-md-offset-3" style="background-color: white;">
                         <h3 style="margin-top: 16px;">Thank You</h3>
-                        <p>We'll email you shortly with the next steps</p>
+                        {% if already_created %}
+                            <p>Your account has been created <br> Please allow up to 1 hour for provided id cards to be activated</p>
+                        {% else %}
+                            <p>We'll email you shortly with the next steps</p>
+                        {% endif %}
                         <p><a href="mailto:ops@evercharge.net">ops@evercharge.net</a></p>
                     </div>
                 </div>

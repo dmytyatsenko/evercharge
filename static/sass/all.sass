@@ -16,6 +16,7 @@ $ec-dk-blue: RGBA(21,152,203,1.0)
 $ec-lt-purple: RGBA(182,189,224,1.0)
 $ec-dk-purple: RGBA(69,68,149,1.0)
 $ec-dk-yellow: RGBA(239,216,0,1.0)
+$ec-lt-red-60: RGBA(248,72,94,0.6)
 // type
 $ec-font-quote: "rift-soft", sans-serif // weights: 400 italic, 600
 $ec-font-headline: "acumin-pro-semi-condensed", sans-serif // weights: 200, 700
@@ -399,6 +400,7 @@ nav
         background-image: none
         border-color: $ec-dk-dk-grey
         box-shadow: none
+        z-index: 200
         ul.navbar-nav>li>a
             color: white
             font-weight: 400
@@ -902,8 +904,41 @@ img.ec-award
             border-top: 5px solid $ec-teal
             margin-top: 40px
             padding: 20px 20px 1px 20px
-            
 
+// page: signup
+.delete_card
+    color: red
+    margin-top: 13px
+    cursor: pointer
+
+//Flask messages
+.alert
+    border-radius: 0px
+    margin-bottom: 12px
+    padding: 10px
+    position: fixed
+    left: 0
+    right: 0
+    z-index: 250
+    &-info,
+    &-danger
+        background-image: none
+.ec-server-msg-wrap
+    margin-bottom: -50px
+    margin-top: 90px
+    &.alert
+        padding: 15px
+        text-align: center
+        &-message
+            background: $ec-lt-teal-60
+        &-error
+            background: $ec-lt-red-60
+    &.alert-dismissable .close,
+    &.alert-dismissible .close
+        opacity: 0.5
+        right: 21px
+        text-shadow: none
+        top: 0
 //////////////////////
 // RESPONSIVE
 //xxl

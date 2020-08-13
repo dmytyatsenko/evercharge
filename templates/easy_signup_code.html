@@ -1,0 +1,45 @@
+{% extends 'layout/base.html' %}
+
+{% block banner_class %}
+    class="ec-banner ec-stretch-dk-teal"
+{% endblock %}
+
+{% block banner_text %}
+    <h1 class="text-shadow">Sign Up for EverCharge</h1>
+{% endblock %}
+
+{% block content_one %}
+    <div class="ec-stretch-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-offset-1 col-md-10 text-center">
+                    <h3 class="extra-bottom-sm">{% block form_name %}If your building has signed with EverCharge and you have been provided with a building code please enter it below.{% endblock %}</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+                    <div class="row">
+                        <form action="{{ url_for('signup_with_building_code') }}" method='get' id="quote" class="validate-form">
+                            <fieldset class="ec-fieldset">
+                                <div class="col-xs-12">
+                                    <div class="form-group">
+                                        <label for="building_code" class="label-input">Building Code</label>
+                                        <input name="building_code" type="text" class="form-control required" id="building_id" placeholder="Building Code" autocomplete="off"
+                                        {% if building_code %}value="{{ building_code }}"{% endif %}>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <input type="submit" value="Submit" class="g-recaptcha ec-button-teal block">
+                                    <a href="{{ url_for('signup_no_building_code') }}" class="g-recaptcha ec-button-teal block">I Don't Have a Code</a>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block quote_form %}
+{% endblock %}
