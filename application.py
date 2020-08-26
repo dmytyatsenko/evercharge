@@ -145,6 +145,9 @@ def check_adwords(response):
 def root():
     return app.send_static_file('robots.txt')
 
+@app.route('/101')
+def webinar():
+    return redirect("https://youtu.be/_dL5KgnI1qQ", code=200)
 
 @app.route('/installspecsfull')
 def install_specs():
