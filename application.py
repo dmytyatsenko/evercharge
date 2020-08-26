@@ -456,7 +456,7 @@ def signup_with_building_code():
         results = json.loads(r.content)
 
         if results['is_building'] is False:
-            flash(message=f'Building code "{building_code}" is not valid', category='danger')
+            flash(message='Building code "{}" is not valid'.format(building_code), category='danger')
             return redirect('/signup')
 
         return render_template('signup_known_building.html',
@@ -528,7 +528,7 @@ def _thank_you(request_form):
         if len(id_cards) == 1 and id_cards[0] == '':
             lead_notes.append('No id cards provided by customer')
         else:
-            lead_notes.append(f'Id cards added in dashboard: {id_cards}')
+            lead_notes.append('Id cards added in dashboard: {}'.format(id_cards))
 
     mailing_address = request_form.get('quote_mailing_address')
     parking_spot = request_form.get('quote_parking_space', '')
