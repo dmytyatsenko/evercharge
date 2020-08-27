@@ -134,7 +134,7 @@ def root():
 
 @app.route('/101')
 def webinar():
-    return redirect("https://youtu.be/_dL5KgnI1qQ", code=200)
+    return redirect("https://youtu.be/IXNT-nvTJYI")
 
 @app.route('/installspecsfull')
 def install_specs():
