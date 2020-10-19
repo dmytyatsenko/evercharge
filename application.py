@@ -8,7 +8,6 @@ from nutshell import NutshellAPI
 from six.moves.urllib.parse import urlparse
 import requests
 from base64 import b64encode
-import json
 
 
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
@@ -97,8 +96,7 @@ HEADERS = {
     "Content-Type": "application/json",
     "Content-Encoding": "gzip",
 }
-BUILDING_CODE_URL = 'https://dashboard.evercharge.net/api/v1/building-code'
-ADD_CUSTOMER_URL = 'https://dashboard.evercharge.net/api/v1/add-customer'
+
 
 @app.before_request
 def redirect_www_to_non_www():
@@ -431,7 +429,7 @@ def evercharge_properties():
 @app.route('/Signup')
 @app.route('/signup')
 def evercharge_signup():
-    return render_template('easy_signup_code.html')
+    return render_template('signup.html')
 
 
 @app.route('/dell')
@@ -442,36 +440,6 @@ def dell_signup():
 @app.route('/tesla', methods=['POST', 'GET'])
 def tesla_page():
     return render_template('tesla.html')
-
-
-@app.route('/signup-for-building', methods=['GET'])
-def signup_with_building_code():
-    building_code = request.args.get('building_code', '')
-    data = {'building_code': building_code}
-    json_data = json.dumps(data).encode('utf-8')
-    
-    r = requests.post(BUILDING_CODE_URL, headers=HEADERS, data=json_data)
-
-    if r.status_code == 200:
-        results = json.loads(r.content)
-
-        if results['is_building'] is False:
-            flash(message='Building code "{}" is not valid'.format(building_code), category='danger')
-            return redirect('/signup')
-
-        return render_template('signup_known_building.html',
-                               building_id=results['building_id'],
-                               building_name=results['building_name'],
-                               cars=results['cars'])
-
-    flash(message='An error occurred while validating the building code', category='danger')
-
-    return redirect('/signup')
-
-
-@app.route('/signup-new')
-def signup_no_building_code():
-    return render_template('signup.html')
 
 
 @app.route('/thankyou', methods=['POST', 'GET'])
@@ -503,10 +471,6 @@ def _thank_you(request_form):
     phone = request_form.get('quote_phone', None)
     email = request_form.get('quote_email', '')
 
-    if already_created is True:
-        name = ' '.join([request_form.get('first_name'), request_form.get('last_name')])
-        email = request_form.get('email')
-        phone = request_form.get('mobile', '')
     if name.lower() in ('driver test', 'pm test'):
         return render_template("thank_you.html")
 
@@ -520,15 +484,6 @@ def _thank_you(request_form):
         source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
     else:
         source = EV_OWNER_SOURCE_ID
-
-    if already_created is True:
-        lead_notes.append('Customer has already been created in dashboard')
-        lead_notes.append('Signed up with building code')
-        id_cards = request_form.getlist('id_cards')
-        if len(id_cards) == 1 and id_cards[0] == '':
-            lead_notes.append('No id cards provided by customer')
-        else:
-            lead_notes.append('Id cards added in dashboard: {}'.format(id_cards))
 
     mailing_address = request_form.get('quote_mailing_address')
     parking_spot = request_form.get('quote_parking_space', '')
@@ -585,33 +540,6 @@ def _thank_you(request_form):
                            phone=phone,
                            no_final_form=no_final_form,
                            already_created=already_created)
-
-
-@app.route('/thankyou-complete', methods=['POST', 'GET'])
-def thank_you_easy_signup():
-    form_data = request.form
-    data_to_send = {}
-    fields_to_exclude = ['lead_source', 'adwordsField', 'granularField', 'customer_type', 'no_final_form',
-                         'customer_already_created', 'quote_building_name']
-    for field in form_data:
-        if field == 'id_cards':
-            id_cards = form_data.getlist(field)
-            if len(id_cards) == 1 and id_cards[0] == '':
-                id_cards = []
-            data_to_send['id_cards'] = id_cards
-        elif field not in fields_to_exclude:
-            data_to_send[field] = form_data[field]
-    json_data = json.dumps(data_to_send).encode('utf-8')
-
-    r = requests.post(ADD_CUSTOMER_URL, headers=HEADERS, data=json_data)
-
-    if r.status_code == 200:
-        request_form = request.form.copy()
-        return _thank_you(request_form)
-
-    flash(message='An error occurred while processing your request. Please try again.', category='danger')
-
-    return redirect('/signup')
 
 
 def is_human():
