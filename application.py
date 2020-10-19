@@ -429,7 +429,8 @@ def evercharge_properties():
 @app.route('/Signup')
 @app.route('/signup')
 def evercharge_signup():
-    return render_template('signup.html')
+    return redirect('https://dashboard.evercharge.net/signup/new-customer-signup')
+    # return redirect('http://localhost:5000/signup/new-customer-signup')
 
 
 @app.route('/dell')
@@ -538,8 +539,7 @@ def _thank_you(request_form):
                            contactId=contact_id,
                            note=note,
                            phone=phone,
-                           no_final_form=no_final_form,
-                           already_created=already_created)
+                           no_final_form=no_final_form,)
 
 
 def is_human():
