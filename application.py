@@ -648,13 +648,8 @@ def more_about_you():
 
 
 @app.route('/charge', methods=['GET'])
-def scan_qr_code():
+def redirect_to_dashboard_charge():
     return render_template('qr_scanner.html')
-
-
-@app.route('/charge/<charger_id>', methods=['GET'])
-def review_terms_pre_charging(charger_id):
-    return render_template('start_charging.html', charger_id=charger_id)
 
 
 if __name__ == '__main__':
