@@ -649,7 +649,17 @@ def more_about_you():
 
 @app.route('/charge', methods=['GET'])
 def redirect_to_dashboard_charge():
-    return render_template('qr_scanner.html')
+    return redirect('https://dashboard.evercharge.net/charge')
+
+
+@app.route('/charge/<connector_code>', methods=['GET'])
+def redirect_to_dashboard_charge_connector(connector_code):
+    return redirect('https://dashboard.evercharge.net/charge/{}'.format(connector_code))
+
+
+@app.route('/charge/<connector_code>/charging-stats', methods=['GET'])
+def redirect_to_dashboard_charging_stats(connector_code):
+    return redirect('https://dashboard.evercharge.net/charge/{}/charging-stats'.format(connector_code))
 
 
 if __name__ == '__main__':
