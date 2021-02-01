@@ -143,6 +143,9 @@ def check_adwords(response):
 def root():
     return app.send_static_file('robots.txt')
 
+@app.route('/101')
+def webinar():
+    return redirect("https://youtu.be/IXNT-nvTJYI")
 
 @app.route('/installspecsfull')
 def install_specs():
@@ -661,6 +664,21 @@ def more_about_you():
             lead=dict(customFields=custom_fields))
 
     return "OK"
+
+
+@app.route('/charge', methods=['GET'])
+def redirect_to_dashboard_charge():
+    return redirect('https://dashboard.evercharge.net/charge')
+
+
+@app.route('/charge/<connector_code>', methods=['GET'])
+def redirect_to_dashboard_charge_connector(connector_code):
+    return redirect('https://dashboard.evercharge.net/charge/{}'.format(connector_code))
+
+
+@app.route('/charge/<connector_code>/charging-stats', methods=['GET'])
+def redirect_to_dashboard_charging_stats(connector_code):
+    return redirect('https://dashboard.evercharge.net/charge/{}/charging-stats'.format(connector_code))
 
 
 if __name__ == '__main__':
