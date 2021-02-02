@@ -431,13 +431,17 @@ def evercharge_properties():
 @app.route('/Signup')
 @app.route('/signup')
 def evercharge_signup():
-    return redirect('https://dashboard.evercharge.net/signup/new-customer-signup')
-    # return redirect('https://localhost/signup/new-customer-signup')
+    route_endpoint = request.path
+    if route_endpoint in ['/Signup', '/signup']:
+        route_endpoint = '/new-customer-signup'
+    return redirect('https://dashboard.evercharge.net/signup{}'.format(route_endpoint))
+    # return redirect('https://localhost/signup{}'.format(route_endpoint))
 
 
 @app.route('/dell')
 def dell_signup():
-    return render_template('dell_signup.html')
+    return redirect('https://dashboard.evercharge.net/signup/dell')
+    # return redirect('https://localhost/signup/dell')
 
 
 @app.route('/tesla', methods=['POST', 'GET'])
