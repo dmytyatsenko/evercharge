@@ -87,16 +87,6 @@ ADWORDS_COOKIE = '_adwords_cookie'
 app.config['RECAPTCHA_SITE_KEY'] = RECAPTCHA_SITE_KEY = '6LcZ5h8UAAAAAK1C4CuWYWvNC-Up5c2O-i1hS0mj'
 app.config['RECAPTCHA_SECRET_KEY'] = RECAPTCHA_SECRET_KEY = '6LcZ5h8UAAAAABShpha6eS9KWaVuDekFAskme_6K'
 
-# Device configuration for communicating to Dashboard
-EVERCHARGE_CHARGER_DEVICE_USERNAME = "device1@evercharge.net"
-EVERCHARGE_CHARGER_DEVICE_PASSWORD = "^#bhB@s8QHVy$3u_8XU7p_te#fpTWkqE"
-HEADERS = {
-    "Authorization": b"Basic " + b64encode(
-        ("{}:{}".format(EVERCHARGE_CHARGER_DEVICE_USERNAME, EVERCHARGE_CHARGER_DEVICE_PASSWORD)).encode('ascii')),
-    "Content-Type": "application/json",
-    "Content-Encoding": "gzip",
-}
-
 
 @app.before_request
 def redirect_www_to_non_www():
