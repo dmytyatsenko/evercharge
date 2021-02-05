@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 import os
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
 import geoip2.database
 from itsdangerous import want_bytes, Signer, BadData
