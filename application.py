@@ -435,13 +435,11 @@ def evercharge_signup():
     if route_endpoint in ['/Signup', '/signup']:
         route_endpoint = '/new-customer-signup'
     return redirect('https://dashboard.evercharge.net/signup{}'.format(route_endpoint))
-    # return redirect('https://localhost/signup{}'.format(route_endpoint))
 
 
 @app.route('/dell')
 def dell_signup():
     return redirect('https://dashboard.evercharge.net/signup/dell')
-    # return redirect('https://localhost/signup/dell')
 
 
 @app.route('/tesla', methods=['POST', 'GET'])
