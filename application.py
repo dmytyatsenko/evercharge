@@ -7,7 +7,6 @@ from itsdangerous import want_bytes, Signer, BadData
 from nutshell import NutshellAPI
 from six.moves.urllib.parse import urlparse
 import requests
-from base64 import b64encode
 
 
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
