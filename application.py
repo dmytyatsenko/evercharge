@@ -408,7 +408,6 @@ def evercharge_properties():
     return render_template('properties.html')
 
 
-
 @app.route('/atwater')
 @app.route('/akoya')
 @app.route('/bristol')
@@ -421,12 +420,15 @@ def evercharge_properties():
 @app.route('/Signup')
 @app.route('/signup')
 def evercharge_signup():
-    return render_template('signup.html')
+    route_endpoint = request.path
+    if route_endpoint in ['/Signup', '/signup']:
+        route_endpoint = '/new-customer-signup'
+    return redirect('https://dashboard.evercharge.net/signup{}'.format(route_endpoint))
 
 
 @app.route('/dell')
 def dell_signup():
-    return render_template('dell_signup.html')
+    return redirect('https://dashboard.evercharge.net/signup/dell')
 
 
 @app.route('/tesla', methods=['POST', 'GET'])
@@ -437,6 +439,11 @@ def tesla_page():
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
     return _thank_you(request.form)
+
+
+@app.route('/signup-thankyou', methods=['POST', 'GET'])
+def thank_you_from_dashboard():
+    return _thank_you(request.form, dashboard_redirect=True)
 
 
 @app.route('/dell-thankyou', methods=['POST', 'GET'])
@@ -455,79 +462,88 @@ def dell_thank_you():
     return _thank_you(request_form)
 
 
-def _thank_you(request_form):
-    if request.method == 'GET' or not is_human():
-        return redirect('/')
-    name = request_form.get('quote_name')
-    if name.lower() in ('driver test', 'pm test'):
-        return render_template("thank_you.html")
-    phone = request_form.get('quote_phone', None)
-    email = request_form.get('quote_email')
-    lead_notes = []
-    note = ''
+def _thank_you(request_form, dashboard_redirect=False):
+    if not dashboard_redirect:
+        if request.method == 'GET' or not is_human():
+            return redirect('/')
+        name = request_form.get('quote_name', '')
+        if name.lower() in ('driver test', 'pm test'):
+            return render_template("thank_you.html")
+        phone = request_form.get('quote_phone', None)
+        email = request_form.get('quote_email', '')
+        lead_notes = []
+        note = ''
 
-    if request.args.get('form') == 'quote':
-        note = request_form.get('quote_notes')
-        lead_notes = [note if note else "No Customer Note"]
-        customer_type = request_form.get('customer_type')
-        source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
+        if request.args.get('form') == 'quote':
+            note = request_form.get('quote_notes')
+            lead_notes = [note if note else "No Customer Note"]
+            customer_type = request_form.get('customer_type')
+            source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
+        else:
+            source = EV_OWNER_SOURCE_ID
+
+        mailing_address = request_form.get('quote_mailing_address')
+        parking_spot = request_form.get('quote_parking_space', '')
+        if mailing_address:
+            lead_notes.append(mailing_address)
+        building_name = request_form.get('quote_building_name', '')
+        if building_name:
+            lead_notes.append(building_name)
+        phone = phone if phone else None
+
+        tag = request_form.get('adwordsField', None)
+        gran = request_form.get('granularField')
+        no_final_form = bool(request_form.get('no_final_form'))
+
+        new_contact = nutshell_client.newContact(contact=dict(name=name, email=email, phone=phone))
+        contact_id = new_contact['id']
+
+        external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
+        external_source = NUTSHELL_SOURCES.get(external_source)
+        if external_source is not None:
+            sources = [{'id': x} for x in (source, external_source)]
+        elif request_form.get('lead_source') == 'campaign-letscharge':
+            sources = [{'id': LETS_CHARGE_CAMPAIGN}]
+        else:
+            sources = [{'id': source}]
+
+        # Parking Spot #
+        lead = dict(contacts=[{'id': contact_id}],
+                    sources=sources,
+                    note=lead_notes)
+        if parking_spot:
+            # Lead custom field
+            # List of all custom fields name can be retrieved using client
+            # nutshell_client.findCustomFields()
+            lead['customFields'] = {}
+            lead['customFields']['Parking Spot #'] = parking_spot
+        new_lead = nutshell_client.newLead(lead=lead)
+        new_lead_id = new_lead['id']
+        lead_tags = []
+        if tag:
+            lead_tags.append(tag)
+            lead_tags.append(gran)
+        adwords_cookie = request.cookies.get(ADWORDS_COOKIE)
+        if adwords_cookie == '1':
+            lead_tags.append('Adwords')
+        if lead_tags:
+            nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
+        signed_lead_id = singer.sign(want_bytes(str(new_lead_id)))
     else:
-        source = EV_OWNER_SOURCE_ID
-
-    mailing_address = request_form.get('quote_mailing_address')
-    parking_spot = request_form.get('quote_parking_space', '')
-    if mailing_address:
-        lead_notes.append(mailing_address)
-    building_name = request_form.get('quote_building_name', '')
-    if building_name:
-        lead_notes.append(building_name)
-    phone = phone if phone else None
-
-    tag = request_form.get('adwordsField', None)
-    gran = request_form.get('granularField')
-    no_final_form = bool(request_form.get('no_final_form'))
-
-    new_contact = nutshell_client.newContact(contact=dict(name=name, email=email, phone=phone))
-    contact_id = new_contact['id']
-
-    external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
-    external_source = NUTSHELL_SOURCES.get(external_source)
-    if external_source is not None:
-        sources = [{'id': x} for x in (source, external_source)]
-    elif request_form.get('lead_source') == 'campaign-letscharge':
-        sources = [{'id': LETS_CHARGE_CAMPAIGN}]
-    else:
-        sources = [{'id': source}]
-
-    # Parking Spot #
-    lead = dict(contacts=[{'id': contact_id}],
-                sources=sources,
-                note=lead_notes)
-    if parking_spot:
-        # Lead custom field
-        # List of all custom fields name can be retrieved using client
-        # nutshell_client.findCustomFields()
-        lead['customFields'] = {}
-        lead['customFields']['Parking Spot #'] = parking_spot
-    new_lead = nutshell_client.newLead(lead=lead)
-    new_lead_id = new_lead['id']
-    lead_tags = []
-    if tag:
-        lead_tags.append(tag)
-        lead_tags.append(gran)
-    adwords_cookie = request.cookies.get(ADWORDS_COOKIE)
-    if adwords_cookie == '1':
-        lead_tags.append('Adwords')
-    if lead_tags:
-        nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
-    signed_lead_id = singer.sign(want_bytes(str(new_lead_id)))
+        signed_lead_id = None
+        contact_id = None
+        note = None
+        phone = None
+        no_final_form = True
 
     return render_template("thank_you.html",
                            newLeadId=signed_lead_id,
                            contactId=contact_id,
                            note=note,
                            phone=phone,
-                           no_final_form=no_final_form)
+                           no_final_form=no_final_form,
+                           dashboard_redirect=dashboard_redirect
+                            )
 
 
 def is_human():
