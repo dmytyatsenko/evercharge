@@ -1,29 +1,31 @@
-<div class="row">
-    <div class="col-sm-offset-2 col-sm-8 text-center extra-bottom-md">
-        <h2>SmartPower</h2>
+<div class="management-section">
+  {% if not headerContent %}
+    <h2>SmartPower Load Mangement</h2>
+  {% else %}
+    <h2>{{ headerContent }}</h2>
+  {% endif %}
+  <div class="management-img"><img src="{{ url_for('static', filename=imageUrl) }}" alt=""></div>
+  <div class="management-listing">
+    <div class="management-list">
+      <h4>Maximize Existing  Infrastructure</h4>
+      <p>Our SmartPower load management technology maximizes existing building infrastructure by intelligently allocating power where and when it's needed most</p>
     </div>
-    <div class="clearfix"></div>
-    <div class="col-sm-12 col-lg-offset-1 col-lg-10 extra-bottom-lg">
-        <img src="{{ url_for('static', filename='images/smartpower-800.png') }}" class="img-responsive" />
+    <div class="management-list">
+      <div class="manage-sml">
+        <h4>Lowers Install Costs</h4>
+        <p>With SmartPower load management, expensive infrastructure additions are unnecessary</p>
+      </div>
     </div>
-    <div class="clearfix"></div>
-    <div class="col-sm-12">
-        <div class="col-sm-4 col-sm-offset-1">
-            <h4>Maximize Existing Infrastructure</h4>
-            <p>Our SmartPower load management technology maximizes existing building infrastructure by intelligently allocating power where and when it's needed most</p>
-        </div>
-        <div class="col-sm-3">
-            <h4>Lowers Install Costs</h4>
-            <p>With SmartPower load management, expensive infrastructure additions are unnecessary</p>
-        </div>
-        <div class="col-sm-3">
-            <h4>Where You Want It</h4>
-            <p class="extra-bottom-md">EverCharge can install more EV connectors in any given location, so every vehicle can have dedicated charging</p>
-        </div>
+    <div class="management-list">
+      <div class="manage-sml">
+        <h4>Where You Want It</h4>
+        <p>EverCharge can install more EV connectors in any given location, so every vehicle can have dedicated charging</p>
+      </div>
     </div>
-    <div class="col-sm-12 text-center">
-        {% if not hide_learn_more %}
-            <p><a href="{{ url_for('tech') }}" class="ec-text-link">Learn More &#8594;</a></p>
-        {% endif %}
-    </div>
+  </div>
+  <div class="btn-big">
+    {% if not hide_learn_more %}
+      <a href="{{ url_for('tech') }}" class="bttn-primary">Learn More</a>
+    {% endif %}
+  </div>
 </div>

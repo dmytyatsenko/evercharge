@@ -19,31 +19,33 @@ $ec-dk-yellow: RGBA(239,216,0,1.0)
 // type
 $ec-font-quote: "rift-soft", sans-serif // weights: 400 italic, 600
 $ec-font-headline: "acumin-pro-semi-condensed", sans-serif // weights: 200, 700
-$ec-font-body: "proxima-nova", sans-serif // weights: 100, 400, 400 italic, 700, 700 italic 
-$ec-letter-space: -0.5px
+// $ec-font-body: "proxima-nova", sans-serif // weights: 100, 400, 400 italic, 700, 700 italic 
+$ec-font-body : 'Work Sans', sans-serif
+$ec-letter-space: 1px
+// $ec-letter-space: -0.5px
 $ec-text-shadow: 3px 3px 0px RGBA(0,0,0,0.7)
 $ec-text-shadow-lt: 3px 3px 0px RGBA(0,0,0,0.2)
 //////////////////////
 
 //////////////////////
 // GENERAL
-html
-    min-height: 100%
-    position: relative // for sticky footer
-body
-    font-family: $ec-font-body
-    font-size: 16px
-    font-weight: 400
-    -webkit-text-size-adjust: 100%
-    -ms-text-size-adjust: none
-    margin-bottom: 280px // needs to equal height of footer in md-screen
-    min-width: 320px
-html,
-body
-    max-width: 100%
-    overflow-x: hidden
-input.sane-field
-    display: none
+// html
+//     min-height: 100%
+//     position: relative // for sticky footer
+// body
+//     font-family: $ec-font-body
+//     font-size: 16px
+//     font-weight: 400
+//     -webkit-text-size-adjust: 100%
+//     -ms-text-size-adjust: none
+//     // margin-bottom: 280px // needs to equal height of footer in md-screen
+//     min-width: 320px
+// html,
+// body
+//     max-width: 100%
+//     overflow-x: hidden
+// input.sane-field
+//     display: none
 //////////////////////
 // COMPONENTS
 // bootstrap overrides
@@ -87,66 +89,67 @@ textarea
     display: none
 
 // type
-h1
-    font-family: $ec-font-body
-    font-size: 4em
-    font-weight: 800
-    line-height: 0.9em
-    margin-bottom: 30px
-    margin-top: 0
-    &.subhead
-        font-size: 1.5em
-        font-weight: 600
-        letter-spacing: 0.5px
-        line-height: 1.2em
-h2
-    color: $ec-teal
-    font-family: $ec-font-quote
-    font-size: 2.6em
-    font-weight: 600
-    letter-spacing: 1px
-    margin-bottom: 30px
-    margin-top: 0
-    &.subhead
-        font-family: $ec-font-body
-        font-size: 1.5em
-        font-weight: 600
-        letter-spacing: 0.5px
-        line-height: 1.2em
-    &.thin
-        font-style: italic
-        font-weight: 400
-h3
-    font-family: $ec-font-body
-    font-size: 1.4em
-    font-weight: 600
-    line-height: 1.2em
-    margin-bottom: 14px
-    margin-top: 0
-    &.thin
-        font-weight: 400
-h4
-    color: RGBA(150,150,150,1.0)
-    font-family: $ec-font-headline
-    font-size: 1.1em
-    font-weight: 700
-    letter-spacing: 0.5px
-    margin-bottom: 14px
-    margin-top: 0
-    text-transform: uppercase
-    &+p
-        margin-bottom: 40px
-h5
-    font-size: 1.1em
-    font-weight: 600
-    line-height: 1.1em
-    margin-bottom: 14px
-p
-    font-size: 1.1em
-    font-weight: 400
-    line-height: 1.4em
-    margin-bottom: 10px
-    margin-top: 0
+// h1
+//     font-family: $ec-font-body
+//     font-size: 4em
+//     font-weight: 800
+//     line-height: 0.9em
+//     margin-bottom: 30px
+//     margin-top: 0
+//     &.subhead
+//         font-size: 1.5em
+//         font-weight: 600
+//         letter-spacing: 0.5px
+//         line-height: 1.2em
+// h2
+//     color: $ec-teal
+//     font-family: $ec-font-quote
+//     font-size: 2.6em
+//     font-weight: 600
+//     letter-spacing: 1px
+//     margin-bottom: 30px
+//     margin-top: 0
+//     &.subhead
+//         font-family: $ec-font-body
+//         font-size: 1.5em
+//         font-weight: 600
+//         letter-spacing: 0.5px
+//         line-height: 1.2em
+//     &.thin
+//         font-style: italic
+//         font-weight: 400
+// h3
+//     font-family: $ec-font-body
+//     font-size: 1.4em
+//     font-weight: 600
+//     line-height: 1.2em
+//     margin-bottom: 14px
+//     margin-top: 0
+//     &.thin
+//         font-weight: 400
+// h4
+//     color: RGBA(150,150,150,1.0)
+//     font-family: $ec-font-headline
+//     font-size: 1.1em
+//     font-weight: 700
+//     letter-spacing: 0.5px
+//     margin-bottom: 14px
+//     margin-top: 0
+//     text-transform: uppercase
+//     &+p
+//         margin-bottom: 40px
+// h5
+//     font-size: 1.1em
+//     font-weight: 600
+//     line-height: 1.1em
+//     margin-bottom: 14px
+// p
+//     font-size: 1.1em
+//     font-weight: 400
+//     line-height: 1.4em
+//     margin-bottom: 10px
+//     margin-top: 0
+
 ul.bullet-list 
     list-style: none
     font-size: 1.1em
@@ -199,24 +202,24 @@ li.num
     padding: 20px
 
 // links
-a
-    color: $ec-teal
-    text-decoration: none
-    &:visited
-        color: $ec-teal
-        text-decoration: none
-    &:active,
-    &:focus
-        color: $ec-teal
-        text-decoration: none
-    &:hover
-        color: $ec-dk-teal
-        text-decoration: underline
-    &.underline
-        text-decoration: underline
-a img
-    &:hover
-        cursor: pointer
+// a
+//     color: $ec-teal
+//     text-decoration: none
+//     &:visited
+//         color: $ec-teal
+//         text-decoration: none
+//     &:active,
+//     &:focus
+//         color: $ec-teal
+//         text-decoration: none
+//     &:hover
+//         color: $ec-dk-teal
+//         text-decoration: underline
+//     &.underline
+//         text-decoration: underline
+// a img
+//     &:hover
+//         cursor: pointer
 
 // buttons
 .ec-def-button
@@ -384,8 +387,10 @@ p.black
 //////////////////////
 // BASE TEMPLATE
 // header
-$navbar-height: 89px
-$navbar-height-xs: 85px
+// $navbar-height: 89px
+$navbar-height: 0px
+// $navbar-height-xs: 85px
+$navbar-height-xs : 0px
 nav
     a.navbar-brand
         padding: 0

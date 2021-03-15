@@ -1,90 +1,60 @@
 {% extends 'layout/base.html' %}
-
-{% block banner_class %}
-    class="parallax img-why-ec" data-speed="4" data-type="background"
-{% endblock %}
-
-{% block banner_text %}
-    <h1>Technology</h1>
-    <h1 class="subhead">EverCharge combines unmatched technology, industry leading expertise, and unparalleled cost savings.</h1>
-{% endblock %}
-
 {% block content_one %}
-    <div class="ec-stretch-white">
-        <div class="container">
-            {% with hide_learn_more=True %}
-                {% include 'blocks/1b_smart_power.html' %}
-            {% endwith %}
-            <div class="clearfix"></div>
-            <div class="col-md-offset-1 col-md-10">
-                    <hr class="ec-hr-extra" />
-                </div>
-            {% include 'blocks/1c_evse.html' %}
-            <div class="clearfix"></div>
-            <div class="col-md-offset-1 col-md-10">
-                    <hr class="ec-hr-extra" />
-                </div>
-            {% include 'blocks/1d_evse_installation.html' %}
-            <div class="clearfix"></div>
-            <div class="col-md-offset-1 col-md-10">
-                    <hr class="ec-hr-extra" />
-                </div>
-            {% include 'blocks/1e_mesh_network.html' %}
-            <div class="clearfix"></div>
-            <div class="col-md-offset-1 col-md-10">
-                    <hr class="ec-hr-extra" />
-                </div>
-            <div class="row">
-                <div class="col-md-offset-1 col-md-10 text-center">
-                    <div class="ec-stretch-white">
-                        <h2>The perfect solution for EV charging at any location</h2>
-                        <p>EverCharge maximizes existing building infrastructure to make adding EVs easy and affordable.</p>
-                    </div>
-                    <hr class="ec-hr-extra" />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5">
-                    <img src="{{ url_for('static', filename='images/graph-fleets-1.jpg') }}" class="img-responsive border extra-bottom-sm" />
-                    <p><small><strong><span class="ec-teal">EverCharge</span></strong> facilitates 400% more stations per $1M </small></p>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-5">
-                    <h2 class="thin">Save Money</h2>
-                    <p>Our charging solution drastically reduces install costs by intelligently managing power, allowing more charger installs for far less money. EverCharge eliminates the need for expensive infrastructure additions, keeping project costs at a minimum.</p>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-md-offset-1 col-md-10">
-                    <hr class="ec-hr-extra" />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5">
-                    <img src="{{ url_for('static', filename='images/graph-fleets-2.jpg') }}" class="img-responsive border extra-bottom-sm" />
-                    <p><small>A garage <strong><span class="ec-teal">with</span></strong> and <strong>without</strong> EverCharge</small></p>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-5">
-                    <h2 class="thin">Scale as Needed</h2>
-                    <p>Using <a href="{{ url_for('smart_power') }}" class="ec-text-link" style="text-transform: unset;">SmartPower Technology</a>,
-                        EverCharge intelligently charges vehicles, optimizing existing building infrastructure to
-                        support more stations at any location.</p>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-md-offset-1 col-md-10">
-                    <hr class="ec-hr-extra" />
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5">
-                    <img src="{{ url_for('static', filename='images/graph-fleets-3.jpg') }}" class="img-responsive border extra-bottom-sm" />
-                    <p><small>Cars at different states of charge reach 100% throughout the day</small></p>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-5">
-                    <h2 class="thin">Extensive Analytics</h2>
-                    <p>As an all-in-one solution, EverCharge allows for in-depth analysis on every charge station
-                        giving our clients unmatched data analytics to understand vehicle and user needs. EverCharge
-                        provides a tailored solution to meet your needs.</p>
-                </div>
-            </div>
-        </div>
+<section class="page-content">
+  <div class="container">
+    <div class="green-box inner-top-green">
+      <div class="green-content">
+          <h2>Technology</h2>
+          <p>EverCharge combines unmatched technology, industry leading<br>expertise, and unparalleled cost savings.</p>
+      </div>
     </div>
+    <div class="center-title">
+      <h2>The Perfect Solution for EV Charging at Any Location</h2>
+      <p>EverCharge maximizes existing building infrastructure to make adding EVs easy and affordable.</p>
+    </div>
+
+    <div class="half-and-half paddin-half-right">
+      <div class="half-and-half-img">
+        <div class="half-right-wrapper">
+          <img class="image-shadow-right" src="{{ url_for('static', filename='images/save-money.png') }}" alt="">
+          <p><span>EverCharge</span> Facilitates 400% More Stations per $1M</p>
+        </div>
+      </div>
+      {% include 'blocks/1c_svme.html' %}
+    </div>
+    <div class="half-and-half paddin-half-right">
+      <div class="half-and-half-img">
+        <div class="half-right-wrapper">
+          <img class="image-shadow-right" src="{{ url_for('static', filename='images/scale-as-needed.png') }}" alt="">
+          <p>A Garage <span>With</span> and <b>Without</b> EverCharge</p>
+        </div>
+      </div>
+      <div class="half-and-half-text">
+        <div class="half-left-wrapper">
+          <h3>Scale as Needed</h3>
+          <p>Using <a href="{{ url_for('smart_power') }}" style="font-weight: 600;">SmartPower Technology</a>, EverCharge intelligently charges vehicles, optimizing existing building infrastructure to support more stations at any location.</p>
+        </div>
+      </div>
+    </div>
+    <div class="half-and-half paddin-half-right">
+      <div class="half-and-half-img">
+        <div class="half-right-wrapper tech-extensive-padding">
+          <img class="image-shadow-right" src="{{ url_for('static', filename='images/extensive.png') }}" alt="">
+          <p>Cars at different states of charge reach 100% throughout the day</p>
+        </div>
+      </div>
+      {% include 'blocks/1c_extensive.html' %}
+    </div>
+
+    {% include 'blocks/1d_evse_installation.html' %}
+
+    {% with hide_learn_more=True, imageUrl='images/car-frame.png' %}
+        {% include 'blocks/1b_smart_power.html' %}
+    {% endwith %}
+    
+    {% include 'blocks/1e_mesh_network.html' %}
+
+    {% include 'blocks/1c_evse.html' %}
+  </div>
+</section>
 {% endblock %}

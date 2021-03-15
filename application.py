@@ -40,7 +40,11 @@ app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY", 'testingkey')
 singer = Signer(app.config['SECRET_KEY'])
 
 assets = Environment(app)
-sass = Bundle('sass/all.sass', filters='sass', output='css/sass.css')
+sass = Bundle(
+        'sass/all.sass', 
+        'sass/new.sass', 
+        filters='sass', 
+        output='css/sass.css')
 css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
 assets.register('css_all', css_all)
 
@@ -284,7 +288,8 @@ def customer_login():
 ##################
 @app.route('/', methods=['POST', 'GET'])
 def evercharge():
-    return render_template("index.html")
+    url = True
+    return render_template("index.html", url=url)
 
 
 @app.route('/why-evercharge', methods=['GET'])
