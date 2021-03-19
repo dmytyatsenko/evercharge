@@ -12,13 +12,7 @@ branch-defaults:
 global:
   application_name: web-main
   default_ec2_keyname: EverChargeMaster
-  default_platform: arn:aws:elasticbeanstalk:us-west-2::platform/Docker running on
-    64bit Amazon Linux/2.12.7
+  default_platform: Python 3.8 running on 64bit Amazon Linux 2/3.2.0
   default_region: us-west-2
-  include_git_submodules: true
-  instance_profile: null
-  platform_name: null
-  platform_version: null
   profile: eb-cli
   sc: git
-  workspace_type: Application
