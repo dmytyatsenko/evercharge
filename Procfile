@@ -1,1 +1,1 @@
-web: python engine.py
+web: python3 engine.py
