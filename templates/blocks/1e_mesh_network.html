@@ -1,7 +1,12 @@
-<div class="half-and-half paddin-half-left">
+<div class="half-and-half paddin-half-left paddin-half-right">
   <div class="half-and-half-text">
-    <div class="half-right-wrapper mesh-padding">
+    <div class="half-right-wrapper">
       <h2>Mesh Network</h2>
+      <div class="half-and-half-img mobile-img">
+        <div class="half-left-wrapper">
+          <img src="{{ url_for('static', filename='images/mesh-network.png') }}" alt="">
+        </div>
+      </div>
       <p>SmartPower is completely wireless and built directly into our hardware. No need for cell repeaters, WiFi, ethernet cables, gateways or control units.</p>
       <ul>
         <li>Wireless mesh network, no cell repeaters required</li>
@@ -14,7 +19,7 @@
       <p>Chargers communicate over proprietary wireless &nbsp;&nbsp; mesh network designed to work in harshest underground garage environments.</p>
     </div>
   </div>
-  <div class="half-and-half-img">
+  <div class="half-and-half-img desktop-img">
     <div class="half-left-wrapper">
       <img src="{{ url_for('static', filename='images/mesh-network.png') }}" alt="">
     </div>

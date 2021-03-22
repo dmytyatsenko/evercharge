@@ -1,147 +1,217 @@
 {% extends "layout/base.html" %}
 
-{% block banner_class %}
-    class="parallax img-press" data-speed="4" data-type="background"
-{% endblock %}
-
-{% block banner_text %}
-    <h1>Press Resources</h1>
-{% endblock %}
-
 {% block content_one %}
-    <div class="ec-stretch-white">
+    <div class="page-content">
         <div class="container">
-            <div class="row extra-bottom-md">
-                <div class="col-sm-12">
-                    <h3 class="extra-bottom-lg">
-                        Contact us at <a href="mailto:press@evercharge.net">press@evercharge.net</a> for any press inquiries.
-                    </h3>
-                </div>
-                <div class="col-sm-12 col-lg-8">
-                    <h3 class="ec-teal extra-bottom-md">EverCharge provides an intelligent, scalable, fully-managed EV charging solution that enables more residents to charge their vehicles than any other competitor.</h3>
-                    <p><strong>We go by:</strong> EverCharge</p>
-                    <p><strong>We do <em>not</em> go by:</strong> Evercharge, everCharge, evercharge, or eVerCHarGe</p>
-                    <p><strong>History:</strong> Founded in 2013 by CEO Jason Appelbaum</p>
-                    <p><strong>Our Locations:</strong> We are headquartered in Oakland, CA with offices in Kansas City and Honolulu</p>
-                </div>
-                <div class="clearfix hidden-lg extra-bottom-md"></div>
-                <div class="col-sm-4 col-md-3 col-lg-offset-1">
-                    <a href="https://twitter.com/evercharge" class="ec-social-media-circle">
-                        <i class="fa fa-lg fa-twitter"></i>@evercharge
-                    </a>
-                </div>
-                <div class="col-sm-4 col-md-3 col-lg-offset-1">
-                    <a href="https://www.facebook.com/evevercharge" class="ec-social-media-circle">
-                        <i class="fa fa-lg fa-facebook"></i>/evevercharge
-                    </a>
-                </div>
-                <div class="col-sm-4 col-md-3 col-lg-offset-1">
-                    <a href="https://www.youtube.com/channel/UCritiZhotBAkumyJKOsl_5w" class="ec-social-media-circle">
-                        <i class="fa fa-lg fa-youtube"></i>YouTube
-                    </a>
-                </div>
+            <div class="green-box inner-top-green">
+              <div class="green-content">
+                  <h2>Press Resources</h2>
+                  <p>EverCharge provides an intelligent, scalable, fully-managed EV charging solution that enables more resident.</p>
+              </div>
             </div>
-            <hr class="extra-bottom-lg" />
-            <div class="row extra-bottom-lg">
-                <div class="col-xs-8 col-sm-5 col-lg-4">
-                    <h2>Press Package</h2>
-                    <img src="{{ url_for('static', filename='images/EverCharge-logo-horizontal-teal.jpg') }}" class="border img-responsive extra-bottom-sm" alt="EverCharge Logo" />
-                    <h5>Logo</h5>
-                    <p>
-                        <a href="{{ url_for('static', filename='EverCharge-logo-files.zip') }}" download="EverCharge-logo-files.zip">Logo (eps, jpg, png)</a> |
-                        <a href="{{ url_for('static', filename='evercharge-branding-guide-logo.pdf') }}" download="evercharge-branding-guide-logo.pdf">Logo Usage Guide</a>
-                    </p>
+            <div class="half-and-half paddin-half-left paddin-half-right">
+              <div class="half-and-half-text">
+                <div class="half-right-wrapper">
+                  <div>
+                    <h2 class="text-center">
+                        Contact us for any press inquiries
+                        <a href="mailto:press@evercharge.net">press@evercharge.net</a>
+                    </h2>
+                    <P class="ec-teal extra-bottom-md">EverCharge provides an intelligent, scalable, fully-managed EV charging solution that enables more residents to charge their vehicles than any other competitor.</P>
+                  </div>
+                  <ul class="Fleet">
+                      <li><p><strong>We go by:</strong> EverCharge</p></li>
+                      <li><p><strong>We do <em>not</em> go by:</strong> Evercharge, everCharge, evercharge, or eVerCHarGe</p></li>
+                      <li><p><strong>History:</strong> Founded in 2013 by CEO Jason Appelbaum</p></li>
+                      <li><p><strong>Our Locations:</strong> We are headquartered in Oakland, CA with offices in Kansas City and Honolulu</p></li>
+                  </ul>
+                  <div class="clearfix hidden-lg extra-bottom-md"></div>
+                  <div class="col-sm-4 col-md-3">
+                      <a href="https://twitter.com/evercharge" class="ec-social-media-circle">
+                          <i class="fa fa-lg fa-twitter"></i>@evercharge
+                      </a>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-offset-1">
+                      <a href="https://www.facebook.com/evevercharge" class="ec-social-media-circle">
+                          <i class="fa fa-lg fa-facebook"></i>/evevercharge
+                      </a>
+                  </div>
+                  <div class="col-sm-4 col-md-3 col-lg-offset-1">
+                      <a href="https://www.youtube.com/channel/UCritiZhotBAkumyJKOsl_5w" class="ec-social-media-circle">
+                          <i class="fa fa-lg fa-youtube"></i>YouTube
+                      </a>
+                  </div>
                 </div>
+              </div>
             </div>
-            <hr class="extra-bottom-lg" />
-            <div class="row extra-bottom-lg ec-feat-press">
-                <div class="col-sm-12">
-                    <h2>Featured Press</h2>
-                </div>
-                <div class="col-sm-6 col-md-3 extra-bottom-md">
-                    <a href="https://electrek.co/2020/07/22/charging-hundreds-of-evs-parked-at-a-condo-is-a-solvable-problem-heres-how/" target="_blank"><img src="{{ url_for('static', filename='images/press-electrek.png') }}" class="border img-responsive extra-bottom-sm" alt="electrek logo" /></a>
-                    <h5><a href="https://electrek.co/2020/07/22/charging-hundreds-of-evs-parked-at-a-condo-is-a-solvable-problem-heres-how/" target="_blank">Charging hundreds of EVs parked at a condo is a solvable problem, here’s how</a></h5>
 
-                    <p>"...current lack of charging stations at condos as an impenetrable obstacle to EV adoption..."</p>
-                </div>
-                <div class="col-sm-6 col-md-3 extra-bottom-md">
-                    <a href="https://www.bizjournals.com/pacific/news/2019/11/07/partnership-brings-evercharge-ev-chargers-to.html" target="_blank"><img src="{{ url_for('static', filename='images/press-PBN.png') }}" class="border img-responsive extra-bottom-sm" alt="Pacific Business News logo" /></a>
-                    <h5><a href="https://www.bizjournals.com/pacific/news/2019/11/07/partnership-brings-evercharge-ev-chargers-to.html" target="_blank">Partnership brings EverCharge EV chargers to Hawaii</a></h5>
-                    <p>"EverCharge minimizes infrastructure requirements making EV charging installation scalable..."</p>
-                </div>
-                <div class="clearfix visible-sm"></div>
-                <div class="col-sm-6 col-md-3 extra-bottom-md">
-                    <a href="http://www.latimes.com/business/la-fi-hy-live-updates-2016-la-auto-show-compete-for-an-ev-charging-station-no-1479325686-htmlstory.html" target="_blank"><img src="{{ url_for('static', filename='images/press-latimes.jpg') }}" class="border img-responsive extra-bottom-sm" alt="Los Angeles Times logo" /></a>
-                    <h5><a href="http://www.autoblog.com/2016/07/14/carve-a-wooden-bike-infineon-gets-into-evs/" target="_blank">No more competition for an EV charging station?</a></h5>
-                    <p>"If you've ever left a note for a neighbor who parked in the EV charging station overnight, EverCharge has a solution for you."</p>
-                </div>
-                <div class="col-sm-6 col-md-3 extra-bottom-md">
-                    <a href="http://cleantechnica.com/?s=EverCharge" target="_blank"><img src="{{ url_for('static', filename='images/press-cleantechnica.jpg') }}" class="border img-responsive extra-bottom-sm" alt="Clean Technica logo" /></a>
-                    <h5><a href="http://cleantechnica.com/?s=EverCharge" target="_blank">EverCharge Articles</a></h5>
-                </div>
-                <div class="col-sm-12">
-                    <h4 class="extra-bottom-sm">More Press</h4>
-                    <p><strong>Fortune</strong> <a href="http://fortune.com/2016/09/22/top-10-automotive-startups/" target="_blank">These 3 Auto Startups Are the Best of 2016</a></p>
-                    <p><strong>Autoblog</strong> <a href="http://www.autoblog.com/2016/07/14/carve-a-wooden-bike-infineon-gets-into-evs/" target="_blank">Recharge Wrap-up: Carve a wooden bike, Infineon gets into EVs</a></p>
-                    <p><strong>Yahoo Finance</strong> <a href="http://finance.yahoo.com/news/cybersecurity-ev-charging-system-software-130000634.html" target="_blank">Cybersecurity, EV Charging, and System Software for Autonomous Cars Included as Part of AutoMobility LA's 2016 Top Ten Automotive Startup List</a></p>
-                    <p><strong>Gas 2</strong> <a href="http://gas2.org/2015/08/19/evercharge-offers-california-tenants-ev-charging-solution/" target="_blank">EverCharge Offers California Tenants EV Charging Solution</a></p>
-                    <p><strong>Newsweek</strong> <a href="http://www.newsweek.com/challenge-cup-seeks-innovations-312118" target="_blank">BEYOND A FASTER PIZZA: CHALLENGE CUP SEEKS WORLD-SAVING INNOVATIONS</a></p>
-                    <p><strong>Business Insider</strong> <a href="http://www.businessinsider.com/1776-challenge-cup-challenge-festival-2015-5" target="_blank">These startups from around the globe are innovating their way to a better world</a></p>
-                    <p><strong>BostInno</strong> <a href="http://bostinno.streetwise.co/2015/10/30/boston-hardware-tech-startups-bolt-is-leading-vc-dollars-east/" target="_blank">How Ben Einstein and Bolt Are Making Boston the Center of Hardware Tech</a></p>
-                    <p><strong>MIT Technology Review</strong> <a href="https://www.technologyreview.com/s/601489/why-tech-companies-should-work-with-government-rather-than-against-it/" target="_blank">Why Tech Companies Should Work with Government Rather than Against It</a></p>
-                </div>
+
+            <div class="content-area">
+              <div class="content-wrapper text-center">
+                <h2>Press Package</h2>
+                <img src="{{ url_for('static', filename='images/logo.svg') }}" class="logo-width border-round border img-responsive extra-bottom-sm" alt="EverCharge Logo" />
+                <p>
+                  <a href="{{ url_for('static', filename='EverCharge-logo-files.zip') }}" download="EverCharge-logo-files.zip">Logo (eps, jpg, png)</a> |
+                  <a href="{{ url_for('static', filename='evercharge-branding-guide-logo.pdf') }}" download="evercharge-branding-guide-logo.pdf">Logo Usage Guide</a>
+              </p>
+              </div>
             </div>
-            <hr class="extra-bottom-lg" />
-            <div class="row extra-bottom-lg">
-                <div class="col-xs-12">
-                    <h2>Color Palette</h2>
+            
+            	<!-- testimonial-listings -->
+            <section class="testimonial-listings paddin-none">
+              <h2>Featured Press</h2>
+              <div class="testimonial-details">
+                <div class="row">
+                  <div class="col-sm-6 col-md-3">
+                    <div class="testimonial-listings-column">
+                      <div class="testimonial-listings-logo">
+                          <a href="https://electrek.co/2020/07/22/charging-hundreds-of-evs-parked-at-a-condo-is-a-solvable-problem-heres-how/" target="_blank">
+                            <img src="images/testimonial-listings-logo-1.png" alt="">
+                          </a>
+                      </div>
+                      <h3>
+                        <a href="https://electrek.co/2020/07/22/charging-hundreds-of-evs-parked-at-a-condo-is-a-solvable-problem-heres-how/" target="_blank">
+                          Chargung hundred of EV’s parked at a condo is a solvable problem,
+                        </a>
+                      </h3>
+                      <p>"...current lack of charging stations at condos as an impenetrable obstacle to EV adoption..."</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3">
+                    <div class="testimonial-listings-column">
+                      <div class="testimonial-listings-logo">
+                        <a href="https://www.bizjournals.com/pacific/news/2019/11/07/partnership-brings-evercharge-ev-chargers-to.html" target="_blank">
+                          <img src="images/testimonial-listings-logo-2.png" alt="">
+                        </a>
+                      </div>
+                      <h3>
+                        <a href="https://www.bizjournals.com/pacific/news/2019/11/07/partnership-brings-evercharge-ev-chargers-to.html" target="_blank">
+                          Partnership brings EverCharge EV chargers to Hawaii
+                        </a>
+                      </h3>
+                      <p>"EverCharge minimizes infrastructure requirements making EV charging installation scalable..."</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3">
+                    <div class="testimonial-listings-column">
+                      <div class="testimonial-listings-logo">
+                        <a href="http://www.latimes.com/business/la-fi-hy-live-updates-2016-la-auto-show-compete-for-an-ev-charging-station-no-1479325686-htmlstory.html" rel="nofollow" target="_blank">
+                          <img src="images/testimonial-listings-logo-3.png" alt="">
+                        </a>
+                      </div>
+                      <h3>
+                        <a href="http://www.latimes.com/business/la-fi-hy-live-updates-2016-la-auto-show-compete-for-an-ev-charging-station-no-1479325686-htmlstory.html" rel="nofollow" target="_blank">
+                          No more competition for an EV charging station?
+                        </a>
+                      </h3>
+                      <p>"If you've ever left a note for a neighbor who parked in the EV charging station overnight, EverCharge has a solution for you."</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-3">
+                    <div class="testimonial-listings-column">
+                      <div class="testimonial-listings-logo">
+                          <a href="http://cleantechnica.com/?s=EverCharge" rel="nofollow" target="_blank">
+                            <img src="images/testimonial-listings-logo-4.png" alt="">
+                          </a>
+                      </div>
+                      <h3>
+                        <a href="http://cleantechnica.com/?s=EverCharge" rel="nofollow" target="_blank">
+                            EverCharge Articles</a>
+                      </h3>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+              </div>
+            </section>
+            <div class="half-and-half paddin-half-left paddin-half-right">
+              <div class="half-and-half-text">
+                <div class="half-right-wrapper">
+                  <h2 class="text-center">More Press</h2>
+                  
+                  <ul>
+                    <li><p><strong>Fortune</strong> <a href="http://fortune.com/2016/09/22/top-10-automotive-startups/" target="_blank">These 3 Auto Startups Are the Best of 2016</a></p></li>
+                    <li><p><strong>Autoblog</strong> <a href="http://www.autoblog.com/2016/07/14/carve-a-wooden-bike-infineon-gets-into-evs/" target="_blank">Recharge Wrap-up: Carve a wooden bike, Infineon gets into EVs</a></p></li>
+                    <li><p><strong>Yahoo Finance</strong> <a href="http://finance.yahoo.com/news/cybersecurity-ev-charging-system-software-130000634.html" target="_blank">Cybersecurity, EV Charging, and System Software for Autonomous Cars Included as Part of AutoMobility LA's 2016 Top Ten Automotive Startup List</a></p></li>
+                    <li><p><strong>Gas 2</strong> <a href="http://gas2.org/2015/08/19/evercharge-offers-california-tenants-ev-charging-solution/" target="_blank">EverCharge Offers California Tenants EV Charging Solution</a></p></li>
+                    <li><p><strong>Newsweek</strong> <a href="http://www.newsweek.com/challenge-cup-seeks-innovations-312118" target="_blank">BEYOND A FASTER PIZZA: CHALLENGE CUP SEEKS WORLD-SAVING INNOVATIONS</a></p></li>
+                    <li><p><strong>Business Insider</strong> <a href="http://www.businessinsider.com/1776-challenge-cup-challenge-festival-2015-5" target="_blank">These startups from around the globe are innovating their way to a better world</a></p></li>
+                    <li><p><strong>BostInno</strong> <a href="http://bostinno.streetwise.co/2015/10/30/boston-hardware-tech-startups-bolt-is-leading-vc-dollars-east/" target="_blank">How Ben Einstein and Bolt Are Making Boston the Center of Hardware Tech</a></p></li>
+                    <li><p><strong>MIT Technology Review</strong> <a href="https://www.technologyreview.com/s/601489/why-tech-companies-should-work-with-government-rather-than-against-it/" target="_blank">Why Tech Companies Should Work with Government Rather than Against It</a></p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="list-item color-palette">
+              <h2>Color Palette</h2>
+              <div class="row">
+                <div class="col-sm-4">
+                  <div class="white-box">
+                    
                     <div class="ec-palette-color teal"></div>
-                    <p><strong>EverCharge Teal</strong></p>
-                    <p class="ec-zero"><strong>PMS</strong> 3272 C</p>
-                    <p class="ec-zero"><strong>HEX</strong> #00A499</p>
-                    <p class="ec-zero"><strong>CMYK</strong> (94,0,48,0)</p>
-                    <p class="ec-zero"><strong>RGB</strong> (0,164,153)</p>
+                    <!-- <i class="icon-icon-1"></i> -->
+                    
+                    <h4>EverCharge Teal</h4>
+                    <ul>
+                      <li><p class="ec-zero"><strong>PMS</strong> 3272 C</p></li>
+                      <li><p class="ec-zero"><strong>HEX</strong> #00A499</p></li>
+                      <li><p class="ec-zero"><strong>CMYK</strong> (94,0,48,0)</p></li>
+                      <li><p class="ec-zero"><strong>RGB</strong> (0,164,153)</p></li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-sm-4">
+                  <div class="white-box">
                     <div class="ec-palette-color dk-grey"></div>
-                    <p><strong>Dark Grey</strong></p>
-                    <p class="ec-zero"><strong>PMS</strong> Black 6 C</p>
-                    <p class="ec-zero"><strong>HEX</strong> #333333</p>
-                    <p class="ec-zero"><strong>CMYK</strong> (0,0,0,95)</p>
-                    <p class="ec-zero"><strong>RGB</strong> (51,51,51)</p>
+                    <h4>Dark Grey</h4>
+                    <ul>
+                      <li><p class="ec-zero"><strong>PMS</strong> Black 6 C</p></li>
+                      <li><p class="ec-zero"><strong>HEX</strong> #333333</p></li>
+                      <li><p class="ec-zero"><strong>CMYK</strong> (0,0,0,95)</p></li>
+                      <li><p class="ec-zero"><strong>RGB</strong> (51,51,51)</p></li>
+
+                    </ul>
+                  </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-3">
+                <div class="col-sm-4">
+                  <div class="white-box">
                     <div class="ec-palette-color lt-grey"></div>
-                    <p><strong>Light Grey</strong></p>
-                    <p class="ec-zero"><strong>PMS</strong> Cool Gray 1</p>
-                    <p class="ec-zero"><strong>HEX</strong> #EDEDED</p>
-                    <p class="ec-zero"><strong>CMYK</strong> (0,0,0,7)</p>
-                    <p class="ec-zero"><strong>RGB</strong> (237,237,237)</p>
+
+                    <h4>Light Grey</h4>
+                    <ul>
+                      <li><p class="ec-zero"><strong>PMS</strong> Cool Gray 1</p></li>
+                      <li><p class="ec-zero"><strong>HEX</strong> #EDEDED</p></li>
+                      <li><p class="ec-zero"><strong>CMYK</strong> (0,0,0,7)</p></li>
+                      <li><p class="ec-zero"><strong>RGB</strong> (237,237,237)</p></li>
+
+                    </ul>
+                  </div>
                 </div>
+              </div>
             </div>
-            <hr class="extra-bottom-lg" />
-            <div class="row">
-                <div class="col-xs-12">
-                    <h2>Videos</h2>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-5">
-                    <a href="https://www.youtube.com/watch?v=M4t47yjCGWw" target="_blank"><img src="{{ url_for('static', filename='images/ev_driver_video.png') }}" class="extra-bottom-md desaturate img-responsive border"></a>
+            <div class="case-studies">
+              <h2>Videos</h2>
+              <div class="flr">
+                <div class="flx flx-6">
+                  <div class="case-listings">
+                    <a href="https://www.youtube.com/watch?v=M4t47yjCGWw" target="_blank"><img src="{{ url_for('static', filename='images/ev_driver_video.png') }}" class="extra-bottom-md desaturate img-responsive border border-round"></a>
                     <p>
                         <a href="https://www.youtube.com/watch?v=M4t47yjCGWw" target="_blank">For EV Drivers</a>
                     </p>
+                  </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-5">
-                    <a href="https://www.youtube.com/watch?v=8fpj8MhywaU" target="_blank"><img src="{{ url_for('static', filename='images/hoa.png') }}" class="extra-bottom-md desaturate img-responsive border"></a>
+                <div class="flx flx-6">
+                  <div class="case-listings">
+                    <a href="https://www.youtube.com/watch?v=8fpj8MhywaU" target="_blank"><img src="{{ url_for('static', filename='images/hoa.png') }}" class="extra-bottom-md desaturate img-responsive border border-round"></a>
                     <p>
                         <a href="https://www.youtube.com/watch?v=8fpj8MhywaU" target="_blank">For Property Managers</a>
                     </p>
+                  </div>
                 </div>
+                
+              </div>
             </div>
+
         </div>
-    </div>
+    </section>
 {% endblock %}
 
-{% block quote_form %}
-{% endblock %}

@@ -24,7 +24,7 @@
       </div>
 
       <div class="half-and-half paddin-half-right">
-        <div class="half-and-half-img">
+        <div class="half-and-half-img desktop-img">
           <div class="half-right-wrapper">
             <img class="image-shadow-right" src="{{ url_for('static', filename='images/control-image.png') }}">
             <p><span>EverCharge</span> Web Dashboard</p>
@@ -33,6 +33,12 @@
         <div class="half-and-half-text">
           <div class="half-left-wrapper">
             <h3>Complete Control</h3>
+            <div class="half-and-half-img mobile-img">
+              <div class="half-right-wrapper">
+                <img class="image-shadow-right" src="{{ url_for('static', filename='images/control-image.png') }}">
+                <p><span>EverCharge</span> Web Dashboard</p>
+              </div>
+            </div>
             <p>With EverCharge’s Management Dashboard Fleet Administrators have access to real time charging statuses, health reports, alerts and system prioritizations to easily manage fleet charging.</p>
           </div>
         </div>
@@ -41,7 +47,7 @@
       <div class="half-and-half full-width paddin-half-left">
         <div class="half-and-half-text">
           <div class="half-right-wrapper">
-            <h2>Fleet Vehicle & Infrastructure Planning</h2>
+            <h3>Fleet Vehicle & Infrastructure Planning</h3>
             <p>Let us help you with EV purchasing decisions:</p>
 
             <ul class="Fleet">
@@ -57,7 +63,7 @@
       </div>
 
       <div class="half-and-half paddin-half-right">
-        <div class="half-and-half-img">
+        <div class="half-and-half-img desktop-img">
           <div class="half-right-wrapper">
             <img class="image-shadow-right"  src="{{ url_for('static', filename='images/money-image.png') }}" alt="">
             <p> <span>EverCharge</span>  Facilitates 400% More Stations per $1M</p>
@@ -68,12 +74,18 @@
 
       <div class="half-and-half paddin-half-left">
         <div class="half-and-half-text">
-          <div class="half-right-wrapper">
+          <div class="half-right-wrapper comm-right-padding">
             <h3>Scale as Needed</h3>
+            <div class="half-and-half-img mobile-img">
+              <div class="half-left-wrapper">
+                <img class="image-shadow-left"  src="{{ url_for('static', filename='images/needed-image.png') }}" alt="">
+                <p>A Garage <span> With</span> and <strong> Without</strong> EverCharge</p>
+              </div>
+            </div>
             <p class="scale-padding">Using <a href="{{ url_for('smart_power') }}" style="font-weight: 600;">SmartPower Technology</a>, EverCharge intelligently charges vehicles, optimizing existing building infrastructure to support more stations at any location.</p>
           </div>
         </div>
-        <div class="half-and-half-img">
+        <div class="half-and-half-img desktop-img">
           <div class="half-left-wrapper">
             <img class="image-shadow-left"  src="{{ url_for('static', filename='images/needed-image.png') }}" alt="">
             <p>A Garage <span> With</span> and <strong> Without</strong> EverCharge</p>
@@ -84,7 +96,7 @@
         {% include 'blocks/1b_smart_power.html' %}
       {% endwith %}
       <div class="half-and-half paddin-half-right">
-        <div class="half-and-half-img">
+        <div class="half-and-half-img desktop-img">
           <div class="half-right-wrapper">
             <img class="image-shadow-right" src="{{ url_for('static', filename='images/power.png') }}" alt="">
             <p> 150amp 'Full' Electrical Panel With Intermittent Available Capacity</p>
@@ -93,6 +105,12 @@
         <div class="half-and-half-text">
           <div class="half-left-wrapper">
             <h3>Full Building Power Management</h3>
+            <div class="half-and-half-img mobile-img">
+              <div class="half-right-wrapper">
+                <img class="image-shadow-right" src="{{ url_for('static', filename='images/power.png') }}" alt="">
+                <p> 150amp 'Full' Electrical Panel With Intermittent Available Capacity</p>
+              </div>
+            </div>
             <p>Eliminates expensive load studies and because electrical panels are designed to support the peak anticipated load of the building, there is significant unutilized power when large appliances and other electrical loads are not in full use.</p>
             <p>Infrastructure may only reach peak utilization for a few minutes once a day, week or month. The rest of the time the full electrical capacity is simply unused. This also can be used to reduce demand charges while increased EV charging capacity.</p>
           </div>
@@ -101,12 +119,17 @@
 
       <div class="half-and-half paddin-half-left">
         <div class="half-and-half-text">
-          <div class="half-right-wrapper">
+          <div class="half-right-wrapper comm-right-padding">
             <h3>Demand Response</h3>
+            <div class="half-and-half-img mobile-img">
+              <div class="half-left-wrapper">
+                <img class="image-shadow-left" src="{{ url_for('static', filename='images/demand-image.png') }}" alt="">
+              </div>
+            </div>
             <p class="demand-padding">WIth EverCharge Administrators can manage charging output limits during set times to minimize, control and avoid additional demand charges or to prioritize off-peak charging.</p>
           </div>
         </div>
-        <div class="half-and-half-img">
+        <div class="half-and-half-img desktop-img">
           <div class="half-left-wrapper">
             <img class="image-shadow-left" src="{{ url_for('static', filename='images/demand-image.png') }}" alt="">
           </div>
@@ -114,7 +137,7 @@
       </div>
 
       <div class="half-and-half paddin-half-right">
-        <div class="half-and-half-img">
+        <div class="half-and-half-img desktop-img">
           <div class="half-right-wrapper">
             <img class="image-shadow-right" src="{{ url_for('static', filename='images/analytic.png') }}" alt="">
             <p>Cars at different states of charge reach 100% throughout the day</p>
@@ -125,8 +148,13 @@
 
       <div class="half-and-half paddin-half-left">
         <div class="half-and-half-text">
-          <div class="half-right-wrapper">
+          <div class="half-right-wrapper comm-right-padding">
             <h3>Sustainability & Efficiency Metrics</h3>
+            <div class="half-and-half-img mobile-img">
+              <div class="half-left-wrapper">
+                <img src="{{ url_for('static', filename='images/metrics.png') }}" alt="">
+              </div>
+            </div>
             <p class="sustain-padding">Capitalize on sustainability and efficiency reporting for your business. With ability to view reports by facility, vehicle or driver extensive reporting metrics include:</p>
             <ul class="Fleet">
               <li>C02 / GreenHouse Gas Reduction</li>
@@ -136,7 +164,7 @@
 
           </div>
         </div>
-        <div class="half-and-half-img">
+        <div class="half-and-half-img desktop-img">
           <div class="half-left-wrapper">
             <img src="{{ url_for('static', filename='images/metrics.png') }}" alt="">
           </div>
@@ -146,7 +174,7 @@
       <div class="half-and-half full-width paddin-half-left">
         <div class="half-and-half-text">
           <div class="half-right-wrapper">
-            <h2>User Management</h2>
+            <h3>User Management</h3>
             <p>Critical to provide the correct prioritization, billing or usage experience regardless if its business or personal use EverCharge supports all available authentication methods for additional control.</p>
 
             <ul class="Fleet">

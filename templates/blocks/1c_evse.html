@@ -1,24 +1,29 @@
-<div class="half-and-half paddin-half-left">
+<div class="half-and-half paddin-half-left paddin-half-right">
   <div class="half-and-half-text">
     <div class="half-right-wrapper">
       <h2>EV Connector</h2>
+      <div class="half-and-half-img mobile-img">
+        <div class="half-left-wrapper ev-right">
+          <img class="ev-width" src="{{ url_for('static', filename='images/ev-connect.png') }}" alt="">
+        </div>
+      </div>
       <ul>
         <li>Level 2 EV Charging</li>
         <li>Integrated on-site <a href="/smartpower">load management</a></li>
         <li>Access control & Remote updates</li>
         <li>Designed for ease of install</li>
-        <li>CTEP, Engery Star, UL & cUL certified</li>
+        <li>UL & cUL certified</li>
         <li>Integrated wireless mesh network</li>
         <li>J1772 or Tesla connector compatible</li>
         <li>Open ADR Support</li>
         <li>Power monitoring with automated billing</li>
-        <li>48 or 80 amp power output</li>
+        <li>30, 48 or 80 amp power output</li>
       </ul>
     </div>
   </div>
-  <div class="half-and-half-img">
-    <div class="half-left-wrapper">
-      <img src="{{ url_for('static', filename='images/ev.png') }}" alt="">
+  <div class="half-and-half-img desktop-img">
+    <div class="half-left-wrapper ev-right">
+      <img class="ev-width" src="{{ url_for('static', filename='images/ev-connect.png') }}" alt="">
     </div>
   </div>
 </div>

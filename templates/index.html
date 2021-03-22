@@ -19,15 +19,50 @@
             <a href='{{ url_for('evercharge_signup') }}' class="bttn-white">Sign Up</a>
           </div>
         </div>
+		<section class="get-a-quote connect pos-rel">
+			<div class="container">
+				<div class="get-custom-quote-wrapper">
+					<h2>Connect With EverCharge Today</h2>
+					<form action="{{ url_for('thank_you') }}" method='post' class="get-a-quote connect validate-form custom-quote-form">
+						<input name="lead_source" value="Web Signup" type="hidden">
+						<input name="adwordsField" id='adwordsField' type="hidden">
+						<input name="granularField" id="granularField" type="hidden">
+						<div class="row">
+							<div class="col-sm-9">
+								<div class="row">
+								<div class="col-sm-6">
+									<div class="custom-quote-col form-group">
+									<!-- <input type="text" placeholder="Name*"> -->
+									<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="custom-quote-col form-group">
+									<!-- <input type="text" placeholder="Email*"> -->
+									<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-sm-3">
+								<div class="custom-quote-col">
+								<!-- <input type="submit" value="Connect With Us"> -->
+								<input type="submit" value="Connect With Us" class="g-recaptcha ec-button-teal-border block">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
     </section>
 
-    
     <!-- Page content -->
     <section class="page-content">
 		<div class="container">
-			<div class="green-box">
+			<div class="green-box custom-margin">
 				<div class="green-content">
-					<h2>Full Service Solution</h2>
+					<h2>Charging Experts</h2>
 					<p>EverCharge makes widespread EV adoption possible in apartments, condominiums, and fleets.</p>
 					<a href="{{ url_for('multifamily') }}" class="bttn-secondary">Multi Family</a>
 					<a href="{{ url_for('commercial') }}" class="bttn-secondary">Commercial</a>
@@ -75,7 +110,6 @@
 							<ul>
 								<li>Affordable Deployments</li>
 								<li>Instantly Scalable</li>
-								<li>Integrated Billing</li>
 							</ul>
 						</div>
 					</div>
@@ -84,9 +118,12 @@
 			{% with hide_learn_more=False, imageUrl='images/car-frame.png' %}
 				{% include 'blocks/1b_smart_power.html' %}
 			{% endwith %}
+			
+			{% include 'blocks/1c_receipt.html' %}
 		</div>
 	</section>
 
+	
 	
 	<section class="get-a-quote connect">
 		<div class="get-a-quote-wrapper container">
