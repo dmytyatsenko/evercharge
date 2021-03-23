@@ -1,14 +1,12 @@
 # -*- encoding: utf-8 -*-
 import os
-from flask import Flask, render_template, request, redirect, url_for, flash
+from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
 import geoip2.database
 from itsdangerous import want_bytes, Signer, BadData
 from nutshell import NutshellAPI
 from six.moves.urllib.parse import urlparse
 import requests
-from base64 import b64encode
-import json
 
 
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
@@ -88,17 +86,6 @@ ADWORDS_COOKIE = '_adwords_cookie'
 app.config['RECAPTCHA_SITE_KEY'] = RECAPTCHA_SITE_KEY = '6LcZ5h8UAAAAAK1C4CuWYWvNC-Up5c2O-i1hS0mj'
 app.config['RECAPTCHA_SECRET_KEY'] = RECAPTCHA_SECRET_KEY = '6LcZ5h8UAAAAABShpha6eS9KWaVuDekFAskme_6K'
 
-# Device configuration for communicating to Dashboard
-EVERCHARGE_CHARGER_DEVICE_USERNAME = "device1@evercharge.net"
-EVERCHARGE_CHARGER_DEVICE_PASSWORD = "^#bhB@s8QHVy$3u_8XU7p_te#fpTWkqE"
-HEADERS = {
-    "Authorization": b"Basic " + b64encode(
-        ("{}:{}".format(EVERCHARGE_CHARGER_DEVICE_USERNAME, EVERCHARGE_CHARGER_DEVICE_PASSWORD)).encode('ascii')),
-    "Content-Type": "application/json",
-    "Content-Encoding": "gzip",
-}
-BUILDING_CODE_URL = 'https://dashboard.evercharge.net/api/v1/building-code'
-ADD_CUSTOMER_URL = 'https://dashboard.evercharge.net/api/v1/add-customer'
 
 @app.before_request
 def redirect_www_to_non_www():
@@ -147,7 +134,7 @@ def root():
 
 @app.route('/101')
 def webinar():
-    return redirect("https://youtu.be/_dL5KgnI1qQ", code=200)
+    return redirect("https://youtu.be/IXNT-nvTJYI")
 
 @app.route('/installspecsfull')
 def install_specs():
@@ -421,7 +408,6 @@ def evercharge_properties():
     return render_template('properties.html')
 
 
-
 @app.route('/atwater')
 @app.route('/akoya')
 @app.route('/bristol')
@@ -434,12 +420,15 @@ def evercharge_properties():
 @app.route('/Signup')
 @app.route('/signup')
 def evercharge_signup():
-    return render_template('easy_signup_code.html')
+    route_endpoint = request.path
+    if route_endpoint in ['/Signup', '/signup']:
+        route_endpoint = '/new-customer-signup'
+    return redirect('https://dashboard.evercharge.net/signup{}'.format(route_endpoint))
 
 
 @app.route('/dell')
 def dell_signup():
-    return render_template('dell_signup.html')
+    return redirect('https://dashboard.evercharge.net/signup/dell')
 
 
 @app.route('/tesla', methods=['POST', 'GET'])
@@ -447,39 +436,14 @@ def tesla_page():
     return render_template('tesla.html')
 
 
-@app.route('/signup-for-building', methods=['GET'])
-def signup_with_building_code():
-    building_code = request.args.get('building_code', '')
-    data = {'building_code': building_code}
-    json_data = json.dumps(data).encode('utf-8')
-    
-    r = requests.post(BUILDING_CODE_URL, headers=HEADERS, data=json_data)
-
-    if r.status_code == 200:
-        results = json.loads(r.content)
-
-        if results['is_building'] is False:
-            flash(message='Building code "{}" is not valid'.format(building_code), category='danger')
-            return redirect('/signup')
-
-        return render_template('signup_known_building.html',
-                               building_id=results['building_id'],
-                               building_name=results['building_name'],
-                               cars=results['cars'])
-
-    flash(message='An error occurred while validating the building code', category='danger')
-
-    return redirect('/signup')
-
-
-@app.route('/signup-new')
-def signup_no_building_code():
-    return render_template('signup.html')
-
-
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
     return _thank_you(request.form)
+
+
+@app.route('/signup-thankyou', methods=['POST', 'GET'])
+def thank_you_from_dashboard():
+    return _thank_you(request.form, dashboard_redirect=True)
 
 
 @app.route('/dell-thankyou', methods=['POST', 'GET'])
@@ -498,88 +462,79 @@ def dell_thank_you():
     return _thank_you(request_form)
 
 
-def _thank_you(request_form):
-    if request.method == 'GET' or not is_human():
-        return redirect('/')
-    already_created = bool(request_form.get('customer_already_created', False))
-    name = request_form.get('quote_name', '')
-    phone = request_form.get('quote_phone', None)
-    email = request_form.get('quote_email', '')
+def _thank_you(request_form, dashboard_redirect=False):
+    if not dashboard_redirect:
+        if request.method == 'GET' or not is_human():
+            return redirect('/')
+        name = request_form.get('quote_name', '')
+        if name.lower() in ('driver test', 'pm test'):
+            return render_template("thank_you.html")
+        phone = request_form.get('quote_phone', None)
+        email = request_form.get('quote_email', '')
+        lead_notes = []
+        note = ''
 
-    if already_created is True:
-        name = ' '.join([request_form.get('first_name'), request_form.get('last_name')])
-        email = request_form.get('email')
-        phone = request_form.get('mobile', '')
-    if name.lower() in ('driver test', 'pm test'):
-        return render_template("thank_you.html")
-
-    lead_notes = []
-    note = ''
-
-    if request.args.get('form') == 'quote':
-        note = request_form.get('quote_notes')
-        lead_notes = [note if note else "No Customer Note"]
-        customer_type = request_form.get('customer_type')
-        source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
-    else:
-        source = EV_OWNER_SOURCE_ID
-
-    if already_created is True:
-        lead_notes.append('Customer has already been created in dashboard')
-        lead_notes.append('Signed up with building code')
-        id_cards = request_form.getlist('id_cards')
-        if len(id_cards) == 1 and id_cards[0] == '':
-            lead_notes.append('No id cards provided by customer')
+        if request.args.get('form') == 'quote':
+            note = request_form.get('quote_notes')
+            lead_notes = [note if note else "No Customer Note"]
+            customer_type = request_form.get('customer_type')
+            source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
         else:
-            lead_notes.append('Id cards added in dashboard: {}'.format(id_cards))
+            source = EV_OWNER_SOURCE_ID
 
-    mailing_address = request_form.get('quote_mailing_address')
-    parking_spot = request_form.get('quote_parking_space', '')
-    if mailing_address:
-        lead_notes.append(mailing_address)
-    building_name = request_form.get('quote_building_name', '')
-    if building_name:
-        lead_notes.append(building_name)
-    phone = phone if phone else None
+        mailing_address = request_form.get('quote_mailing_address')
+        parking_spot = request_form.get('quote_parking_space', '')
+        if mailing_address:
+            lead_notes.append(mailing_address)
+        building_name = request_form.get('quote_building_name', '')
+        if building_name:
+            lead_notes.append(building_name)
+        phone = phone if phone else None
 
-    tag = request_form.get('adwordsField', None)
-    gran = request_form.get('granularField')
-    no_final_form = bool(request_form.get('no_final_form'))
+        tag = request_form.get('adwordsField', None)
+        gran = request_form.get('granularField')
+        no_final_form = bool(request_form.get('no_final_form'))
 
-    new_contact = nutshell_client.newContact(contact=dict(name=name, email=email, phone=phone))
-    contact_id = new_contact['id']
+        new_contact = nutshell_client.newContact(contact=dict(name=name, email=email, phone=phone))
+        contact_id = new_contact['id']
 
-    external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
-    external_source = NUTSHELL_SOURCES.get(external_source)
-    if external_source is not None:
-        sources = [{'id': x} for x in (source, external_source)]
-    elif request_form.get('lead_source') == 'campaign-letscharge':
-        sources = [{'id': LETS_CHARGE_CAMPAIGN}]
+        external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
+        external_source = NUTSHELL_SOURCES.get(external_source)
+        if external_source is not None:
+            sources = [{'id': x} for x in (source, external_source)]
+        elif request_form.get('lead_source') == 'campaign-letscharge':
+            sources = [{'id': LETS_CHARGE_CAMPAIGN}]
+        else:
+            sources = [{'id': source}]
+
+        # Parking Spot #
+        lead = dict(contacts=[{'id': contact_id}],
+                    sources=sources,
+                    note=lead_notes)
+        if parking_spot:
+            # Lead custom field
+            # List of all custom fields name can be retrieved using client
+            # nutshell_client.findCustomFields()
+            lead['customFields'] = {}
+            lead['customFields']['Parking Spot #'] = parking_spot
+        new_lead = nutshell_client.newLead(lead=lead)
+        new_lead_id = new_lead['id']
+        lead_tags = []
+        if tag:
+            lead_tags.append(tag)
+            lead_tags.append(gran)
+        adwords_cookie = request.cookies.get(ADWORDS_COOKIE)
+        if adwords_cookie == '1':
+            lead_tags.append('Adwords')
+        if lead_tags:
+            nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
+        signed_lead_id = singer.sign(want_bytes(str(new_lead_id)))
     else:
-        sources = [{'id': source}]
-
-    # Parking Spot #
-    lead = dict(contacts=[{'id': contact_id}],
-                sources=sources,
-                note=lead_notes)
-    if parking_spot:
-        # Lead custom field
-        # List of all custom fields name can be retrieved using client
-        # nutshell_client.findCustomFields()
-        lead['customFields'] = {}
-        lead['customFields']['Parking Spot #'] = parking_spot
-    new_lead = nutshell_client.newLead(lead=lead)
-    new_lead_id = new_lead['id']
-    lead_tags = []
-    if tag:
-        lead_tags.append(tag)
-        lead_tags.append(gran)
-    adwords_cookie = request.cookies.get(ADWORDS_COOKIE)
-    if adwords_cookie == '1':
-        lead_tags.append('Adwords')
-    if lead_tags:
-        nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
-    signed_lead_id = singer.sign(want_bytes(str(new_lead_id)))
+        signed_lead_id = None
+        contact_id = None
+        note = None
+        phone = None
+        no_final_form = True
 
     return render_template("thank_you.html",
                            newLeadId=signed_lead_id,
@@ -587,34 +542,8 @@ def _thank_you(request_form):
                            note=note,
                            phone=phone,
                            no_final_form=no_final_form,
-                           already_created=already_created)
-
-
-@app.route('/thankyou-complete', methods=['POST', 'GET'])
-def thank_you_easy_signup():
-    form_data = request.form
-    data_to_send = {}
-    fields_to_exclude = ['lead_source', 'adwordsField', 'granularField', 'customer_type', 'no_final_form',
-                         'customer_already_created', 'quote_building_name']
-    for field in form_data:
-        if field == 'id_cards':
-            id_cards = form_data.getlist(field)
-            if len(id_cards) == 1 and id_cards[0] == '':
-                id_cards = []
-            data_to_send['id_cards'] = id_cards
-        elif field not in fields_to_exclude:
-            data_to_send[field] = form_data[field]
-    json_data = json.dumps(data_to_send).encode('utf-8')
-
-    r = requests.post(ADD_CUSTOMER_URL, headers=HEADERS, data=json_data)
-
-    if r.status_code == 200:
-        request_form = request.form.copy()
-        return _thank_you(request_form)
-
-    flash(message='An error occurred while processing your request. Please try again.', category='danger')
-
-    return redirect('/signup')
+                           dashboard_redirect=dashboard_redirect
+                            )
 
 
 def is_human():

@@ -88,23 +88,6 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 
-    {%- block flask_messages -%}
-        {%- with messages = get_flashed_messages(with_categories=true) -%}
-            {%- if messages -%}
-                <div class="container-fluid">
-                    <div class="row server-messages">
-                    {% for category, message in messages %}
-                        <div class="alert alert-{{ category }} alert-dismissable ec-server-msg-wrap">
-                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                    </div>
-                </div>
-            {%- endif -%}
-        {%- endwith -%}
-    {%- endblock -%}
-
     {% block alt_background %}
     {% endblock %}
 
