@@ -455,7 +455,7 @@ textarea
 
 @media (min-width: 1200px)
   .masthead
-    padding: 230px 0 288px 0
+    padding: 130px 0 188px 0
     position: relative
 
     h1
@@ -1074,6 +1074,47 @@ ul.quote-tabs
       border: 1px solid #ffffff
 
 .custom-quote-form
+  textarea.form-control
+    padding: 20px 20px
+    font-size: 16px
+    line-height: 1.3em
+    font-weight: 400
+    text-align: left
+    color: #333
+    display: block
+    height: 100px
+    width: 100%
+    resize: none
+    background: transparent
+    border: 1px solid #6B7382
+    border-radius: 10px
+    font-family: 'Work Sans', sans-serif
+
+    &:focus
+      border: 1px solid #6B7382
+      outline: none
+      box-shadow: none
+  
+  select.form-control
+    padding: 10px 20px
+    font-size: 16px
+    line-height: 1.3em
+    font-weight: 400
+    text-align: left
+    color: #333
+    display: block
+    width: 100%
+    resize: none
+    background: transparent
+    border: 1px solid #6B7382
+    border-radius: 10px
+    font-family: 'Work Sans', sans-serif
+
+    &:focus
+      border: 1px solid #6B7382
+      outline: none
+      box-shadow: none
+
   [type="text"], [type="email"], [type="number"], [type="password"], [type="tel"]
     padding: 0 20px
     font-size: 16px
@@ -1703,10 +1744,14 @@ ul.quote-tabs
 
   .flx-3
     width: calc(50% - 30px)
+  .flx-2
+    width: calc(50% - 30px)
 
 @media (min-width: 1200px)
   .flx-3
     width: calc(25% - 30px)
+  .flx-2
+    width: calc(20% - 30px)
 
   .service-listings h2
     font-size: 48px
@@ -1831,7 +1876,8 @@ ul.quote-tabs
 @media (min-width: 1200px)
   .flx-3
     width: calc(25% - 30px)
-
+  .flx-2
+    width: calc(20% - 30px)
   .case-studies h2
     font-size: 48px
     margin-bottom: 40px
@@ -2196,8 +2242,8 @@ ul.quote-tabs
   input[type="radio"]
     appearance: none
     border: 1px solid #d3d3d3
-    width: 25px
-    height: 25px
+    width: 26px
+    height: 26px
     content: none
     outline: none
     margin: 0
@@ -2209,7 +2255,6 @@ ul.quote-tabs
     outline: none
     padding: 0
     content: none
-    border: none
 
   input[type="radio"]:checked::before
     position: absolute
@@ -2284,3 +2329,26 @@ ul.quote-tabs
   margin: 300px 0 45px 0
 .get-custom-quote-wrapper
   box-shadow: 0 0 50px rgb(34 35 61 / 25%)
+.max-subtitle
+  font-weight: 600
+  margin-bottom: 20px
+  color: #00a499
+.step-item
+  height: 430px
+.get-a-quote-wrapper.elec-form
+  padding-top: 50px
+  h2
+    padding-bottom: 50px
+  input[type="submit"]
+    margin-top: 0px
+.text-white
+  color: white
+  font-size: 24px
+  &a:hover 
+    color: #23527c
+.thank-space
+  margin: 50px 0 100px 0
+.tab_radio.vertical_align
+  display: block
+#primary_form_content p
+  color: #333
