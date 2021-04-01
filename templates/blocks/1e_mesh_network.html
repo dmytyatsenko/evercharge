@@ -1,21 +1,27 @@
-<div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-1">
-        <img src="{{ url_for('static', filename='images/MeshNetwork.png') }}" class="img-responsive extra-bottom-sm" style="margin-top: 45px;" />
+<div class="half-and-half paddin-half-left paddin-half-right">
+  <div class="half-and-half-text">
+    <div class="half-right-wrapper">
+      <h2>Mesh Network</h2>
+      <div class="half-and-half-img mobile-img">
+        <div class="half-left-wrapper">
+          <img src="{{ url_for('static', filename='images/mesh-network.png') }}" alt="">
+        </div>
+      </div>
+      <p>SmartPower is completely wireless and built directly into our hardware. No need for cell repeaters, WiFi, ethernet cables, gateways or control units.</p>
+      <ul>
+        <li>Wireless mesh network, no cell repeaters required</li>
+        <li>All deployment components integrated into the EV connector</li>
+        <li>Access control & Remote updates</li>
+        <li>Designed for ease of install</li>
+        <li>UL & cUL certified</li>
+        <li>Integrated wireless mesh network</li>
+      </ul>
+      <p>Chargers communicate over proprietary wireless &nbsp;&nbsp; mesh network designed to work in harshest underground garage environments.</p>
     </div>
-    <div class="col-xs-12 col-sm-6 col-sm-offset-1">
-        <h2 class="text-center">Mesh Network</h2>
-        <p>SmartPower is completely wireless and built directly into our hardware. <br/>
-            No need for cell repeaters, WiFi, ethernet cables, gateways or control units.</p>
-        <ul class="bullet-list">
-            <li class="bullet">Wireless mesh network, no cell repeaters required</li>
-            <li class="bullet">All deployment components integrated into the EV connector</li>
-            <li class="bullet">Optional access control with automated billing</li>
-            <li class="bullet">Remote updates, diagnostics and reporting</li>
-            <li class="bullet">Designed for resilience with on-site load management</li>
-            <li class="bullet">Supports 10,000+ stations per site</li>
-            <li class="bullet">Removes all single points of failure</li>
-
-        </ul>
-        <p>Chargers communicate over proprietary wireless mesh network designed to work in harshest underground garage environments.</p>
+  </div>
+  <div class="half-and-half-img desktop-img">
+    <div class="half-left-wrapper">
+      <img src="{{ url_for('static', filename='images/mesh-network.png') }}" alt="">
     </div>
+  </div>
 </div>

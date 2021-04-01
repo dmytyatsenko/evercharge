@@ -20,7 +20,7 @@
 	<link rel="icon" href="{{url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap/bootstrap.min.css') }}" >
     <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap/bootstrap-theme.min.css') }}" >
-
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Mono|Work+Sans:400,700&display=swap" rel="stylesheet">
     {% assets "css_all" %}<link rel="stylesheet" href="{{ ASSET_URL }}">{% endassets %}
     <link rel="stylesheet" id="font-awesome-css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" type="text/css" media="screen">
     {%- block extra_css -%}{%- endblock -%}
@@ -45,176 +45,216 @@
 
 
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-	  <div class="container-fluid">
-        <div class="navbar-contact">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="contact-info">
-                        <a href='tel:8883427383'><i class="fa fa-phone"></i>888.342.7383</a>
-                        <a href="mailto:charging@evercharge.net"><i class="fa fa-envelope"></i> charging@evercharge.net</a>
-                    </div>
-                    <div class="social">
-                        <a href="https://twitter.com/evercharge"><i class="fa fa-twitter-square"></i></a>
-                        <a href="https://www.facebook.com/evevercharge"><i class="fa fa-facebook-square"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-	    <!-- Brand and toggle get grouped for better mobile display -->
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="/">
-              <img class="header_logo" alt="EverCharge" src="{{ url_for('static', filename='images/EverCharge-logo-horizontal-white.png') }}">
-	      </a>
-	    </div>
+	<!-- Header -->
+	<header class="pageheader">
+	  <div class="container clearfix">
 
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href='{{ url_for('tech') }}'>Technology</a></li>
-            <li><a href='{{ url_for('multifamily') }}'>Condos & Apartments</a></li>
-            <li><a href='{{ url_for('commercial') }}'>Commercial</a></li>
-            <li><a href='{{ url_for('hardware') }}'>Hardware</a></li>
-            <li><a href='{{ url_for('evercharge_signup') }}'>Sign Up</a></li>
-	        <li><a href="{{ url_for('customer_login') }}">Log In</a></li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
+		{% if url %}
+		<div class="login-sign-up">
+		  <ul class="clearfix">
+			<li><a href='{{ url_for('customer_login') }}'>Log in</a></li>
+			<li class="ml-1"><a href="{{ url_for('evercharge_signup') }}">Sign Up</a></li>
+		  </ul>
+		</div>
 
-    {% block alt_background %}
-    {% endblock %}
+		{% else %}
+		<div class="login-sign-up-other">
+			<ul class="clearfix">
+				<li><a href='{{ url_for('customer_login') }}'>Log in</a></li>
+				<li class="ml-1"><a href="{{ url_for('evercharge_signup') }}">Sign Up</a></li>
+			</ul>
+		</div>
+		{% endif %}
 
-    <div {% block banner_class %}{% endblock %}>
-        <div class="ec-banner-text">
-            {% block banner_text %}
-            {% endblock %}
-        </div>
-    </div>
+		<div class="logo">
+		  <a href="/">
+			<img src="images/logo.png" alt="Evercharge">
+		  </a>
+		</div>
+		<div class="nav-bttn"><i class="fa fa-bars" aria-hidden="true"></i></div>
+		<nav class="primary-nav">
+		  <ul class="clearfix">
+			<li><a href='{{ url_for('tech') }}'>Technology</a></li>
+			<li><a href='{{ url_for('multifamily') }}'>Condos & Apartments</a></li>
+			<li><a href='{{ url_for('commercial') }}'>Commercial</a></li>
+			<li><a href='{{ url_for('hardware') }}'>Hardware</a></li>
+		  </ul>
+		</nav>
+	  </div>
+	</header>
+	
+	
+
+	{% block alt_background %}
+	{% endblock %}
+
+	<div {% block banner_class %}{% endblock %}>
+		<div class="ec-banner-text">
+			{% block banner_text %}
+			{% endblock %}
+		</div>
+	</div>
 
 	<main id="content">
-        {% block content_one %}
-        {% endblock %}
+		{% block content_one %}
+		{% endblock %}
 
-        {% block quote_form %}
-        	<div class="ec-stretch-grey">
-        		<div class="container">
-        			<div class="row">
-        				<form action="{{ url_for('thank_you') }}?form=quote" method='post' id="quote" class="validate-form">
-        					<input name="lead_source" value="Web Signup" type="hidden">
-        					<input name="adwordsField" id='adwordsField' type="hidden">
-        					<input name="granularField" id="granularField" type="hidden">
-        					<fieldset class="ec-fieldset">
-        						<div class="col-xs-12">
-        							<h2>{% block form_name %}Get Your Quote Today{% endblock %}</h2>
-        							<p>Connect with one of our experts by telling us a little about yourself.</p>
-        						</div>
-        						<div class="col-xs-12 extra-bottom-sm">
-        							<p data-href="{{ url_for('static', filename='inc/tab00.html') }}" class="active">
-        								<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1" id="customer_type_ev">
-        								<label for="customer_type_ev" class="label-radio">EV Driver</label>
-        							</p>
-                                    <p data-href="{{ url_for('static', filename='inc/tab01.html') }}" class="active">
-                                        <input type="radio" value="Property Manager" name="customer_type" class="radio2" id="customer_type_hoa">
-                                        <label for="customer_type_hoa" class="label-radio">Management</label>
-                                    </p>
-        						</div>
-        						<div class="clearfix"></div>
-        						<div class="col-xs-12 col-md-4">
-                                    <div class="form-group">
-            						    <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
-                                    </div>
-        						</div>
-        						<div class="col-xs-12 col-md-4">
-                                    <div class="form-group">
-                                        <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
-                                    </div>
-        						</div>
-        						<div class="col-xs-12 col-md-4">
-                                    <div class="form-group">
-            						    <input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="off">
-        							</div>
-        						</div>
-        						<div class="clearfix"></div>
-        						<div class="col-xs-12">
-        							<textarea name="quote_notes" rows="2" class="form-control" placeholder="Additional comments" autocomplete="off"></textarea>
-        						</div>
-        						<div class="clearfix"></div>
-        						<div class="col-xs-12 col-md-6">
-        							<input type="submit" value="Get your Quote" class="g-recaptcha ec-button-teal block">
-        						</div>
-        					</fieldset>
-        				</form>
-        			</div>
-        		</div>
-        	</div>
-        {% endblock %}
-    </main>
+		{% block quote_form %}
+		<!-- get a quote -->
+		<section class="get-a-quote">
+			<form action="{{ url_for('thank_you') }}?form=quote" method='post' id="quote" class="validate-form">
+				<input name="lead_source" value="Web Signup" type="hidden">
+				<input name="adwordsField" id='adwordsField' type="hidden">
+				<input name="granularField" id="granularField" type="hidden">
 
-	<footer id="footer">
+				<div class="get-a-quote-wrapper">
+					<h2>Get Your Quote Today</h2>
+					<p>Connect with one of our experts by telling us a little about yourself.</p>
+					<!--tab area start-->
+					<div class="tab_area">
+						<div class="tab_radio">
+							<p data-href="{{ url_for('static', filename='inc/tab00.html') }}" class="active">
+								<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1" id="customer_type_ev">
+								<label for="customer_type_ev" class="label-radio">EV Driver</label>
+							</p>
+							<p data-href="{{ url_for('static', filename='inc/tab01.html') }}" class="active">
+								<input type="radio" value="Property Manager" name="customer_type" class="radio2" id="customer_type_hoa">
+								<label for="customer_type_hoa" class="label-radio">Management</label>
+							</p>
+						</div>
+						<div class="tab_container">
+							<!--first tab area start-->
+							<div id="Driver" class="tab_content">
+								<div class="quote-form">
+									<div class="row">
+										<div class="col-sm-4">
+											<div class="quote-form-col form-group">
+												<input name="quote_name" class="form-control required" id="label1" type="text" placeholder="Name*" autocomplete="off">
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="quote-form-col form-group">
+												<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="quote-form-col form-group">
+												<input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="off">
+											</div>
+										</div>
+										<div class="col-sm-8">
+											<div class="quote-form-col form-group">
+												<textarea name="quote_notes" rows="2" class="form-control" placeholder="Additional comments" autocomplete="off"></textarea>
+											</div>
+										</div>
+										<div class="col-sm-4">
+											<div class="quote-form-col">
+												<input type="submit" value="Get Your Quote" class="g-recaptcha ec-button-teal-border block">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--first tab area end-->
+						</div>
+					</div>
+					<!--tab area end-->
+				</div>
+			</form>
+		</section>
+		{% endblock %}
+	</main>
+
+	
+	<!-- footer -->
+	<footer class="footer">
 		<div class="container">
-			<div class="row">
-    			<div class="col-xs-5 col-sm-3 col-md-2">
-    				<a href="/"><img src="{{ url_for('static', filename='images/EverCharge-logo-tag-teal-shadow.png') }}" class="img-responsive" alt="EverCharge"></a>
-    			</div>
-    			<div class="clearfix visible-xs"></div>
-    			<div class="col-sm-3 col-md-offset-1">
-    				<h5>Navigate</h5>
-    				<div class="footer-list">
-    					<a href="/">Home</a>
-    				 
-                        <a href="{{ url_for('commercial') }}">Commercial</a>
-                        <a href="{{ url_for('electrician_lead') }}">Work With Us</a>
-                        <a href="{{ url_for('smart_power') }}">SmartPower</a>
-    					<a href="{{ url_for('faqs') }}">FAQs</a>
-    				</div>
-    			</div>
-    			<div class="col-sm-3">
-    				<h5>About EverCharge</h5>
-    				<div class="footer-list">
-    					<a href="{{ url_for('about_us') }}">About Us</a>
-    					<a href="https://www.indeedjobs.com/evercharge" rel="nofollow" target='_blank'>Careers</a>
-    					<a href="{{ url_for('press_page') }}">Press Resources</a>
-    					<a href="{{ url_for('evercharge_properties') }}">Properties</a>
-                        <a href="/blog">EverCharge Blog</a>
-    				</div>
-    			</div>
-    			<div class="col-xs-12 col-sm-3">
-    				<h5>Contact Us</h5>
-    				<div class="footer-list">
-    					<a href="mailto:charging@evercharge.net"><i class="fa fa-envelope-o"></i>Sales</a>
-    					<a href="mailto:support@evercharge.net"><i class="fa fa-envelope-o"></i>Support</a>
-    					<a href="mailto:install@evercharge.net"><i class="fa fa-envelope-o"></i>Installation Experts</a>
-    					<a href='tel:8883427383'><i class="fa fa-phone"></i>888.342.7383</a>
-    				</div>
-    			</div>
-            </div>
-			<div class="clearfix"></div>
-			<p class="copyright">
-				<a href="https://twitter.com/evercharge"><i class="fa fa-twitter-square"></i></a>
-				<a href="https://www.facebook.com/evevercharge"><i class="fa fa-facebook-square"></i></a>
-				<br>
-				<small>&copy; 2019 EverCharge, Inc. All Rights Reserved. Made in California.</small>
-			</p>
+			<div class="footer-top">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="footer-col clearfix">
+							<div class="footer-logo">
+								<a href="/">
+									<img src="images/logo.png" alt="Evercharge">
+								</a>
+							</div>
+							<div class="footer-social-media">
+								<p>Follow us on social:</p>
+								<ul class="clearfix">
+									<li><a href="https://www.youtube.com/channel/UCritiZhotBAkumyJKOsl_5w"><i class="fa fa-youtube-play" aria-hidden="true"></i> </a></li>
+									<li><a href="https://twitter.com/evercharge"><i class="fa fa-twitter" aria-hidden="true"></i> </a></li>
+									<li><a href="https://www.linkedin.com/company/evercharge"><i class="fa fa-linkedin" aria-hidden="true"></i> </a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="row">
+							<div class="col-sm-4 col-md-3">
+								<div class="footer-col">
+									<h3>Navigate</h3>
+									<ul>
+										<li><a href="/">Home</a></li>
+										<li><a href="{{ url_for('commercial') }}">Commercial</a></li>
+										<li><a href="{{ url_for('electrician_lead') }}">Work With Us</a></li>
+										<li><a href="{{ url_for('tech') }}">Technology</a></li>
+										<li><a href="{{ url_for('faqs') }}">FAQs</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-sm-5">
+								<div class="footer-col">
+									<h3>About EverCharge </h3>
+									<ul>
+										<li><a href="{{ url_for('about_us') }}">About Us </a></li>
+										<li><a href="https://www.indeedjobs.com/evercharge" rel="nofollow" target='_blank'>Careers</a></li>
+										<li><a href="{{ url_for('press_page') }}">Press Resources</a></li>
+										<li><a href="{{ url_for('evercharge_properties') }}">Properties</a></li>
+										<li><a href="/blog">EverCharge Blog</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-sm-3 col-md-4">
+								<div class="footer-col">
+									<h3>Contact Us</h3>
+									<ul>
+										<li>
+												<a href="mailto:charging@evercharge.net">
+												<i class="fa fa-envelope-o" aria-hidden="true"></i>
+												 Sales</a></li>
+										<li>
+												<a href="mailto:support@evercharge.net">
+												<i class="fa fa-envelope-o" aria-hidden="true"></i>
+												 Support</a></li>
+										<li>
+												<a href="mailto:install@evercharge.net">
+												<i class="fa fa-envelope-o" aria-hidden="true"></i>
+												 Installers</a></li>
+										<li><a href="tel:888.342.7833"><i class="fa fa-phone" aria-hidden="true"></i> 888.342.7833</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<p>© 2021 EverCharge, Inc. All Right Reserved. Made in California</p>
+			</div>
 		</div>
 	</footer>
+	
     {%- if not config.DEBUG  -%}
     <script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', 'UA-55104339-1', 'auto');
-	  ga('require', 'displayfeatures');
-	  ga('send', 'pageview');
-	</script>
+			ga('create', 'UA-55104339-1', 'auto');
+			ga('require', 'displayfeatures');
+			ga('send', 'pageview');
+		</script>
     {% endif %}
 	<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -247,7 +287,29 @@
         <!-- BING ADS SCRIPTS -->
         <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5061401"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
         <noscript><img src="//bat.bing.com/action/0?ti=5061401&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" alt=""/></noscript>
-    {%- endif -%}
-    {%- block custom_scripts -%}{%- endblock -%}
+    	{%- endif -%}
+		{%- block custom_scripts -%}{%- endblock -%}
+		
+		<script type = "text/javascript">
+			$(document).ready(function(){
+					$(".nav-bttn").click(function () {
+							$(".primary-nav").fadeToggle();
+					});
+			});
+
+			$(document).ready(function() {
+				$(".tab_content").hide();
+				$("ul.quote-tabs li:first").addClass("active").show();
+				$(".tab_content:first").show(); 
+				$("ul.quote-tabs li").click(function() {
+					$("ul.quote-tabs li").removeClass("active"); 
+					$(this).addClass("active"); 
+					$(".tab_content").hide(); 
+					var activeTab = $(this).find("a").attr("href"); 
+					$(activeTab).fadeIn(); 
+					return false;
+				});
+			});
+		</script>
 </body>
 </html>

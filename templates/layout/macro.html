@@ -6,7 +6,7 @@
     </div>
 {% endmacro %}
 
-{% macro electrician_contact_form() %}
+{% macro electrician1_contact_form() %}
     <form action="{{ url_for('electrician_thank_you') }}" method='post' id="quote" class="validate-form">
         <input name="lead_source" value="Web Signup" type="hidden">
         <input name="adwordsField" id='adwordsField' type="hidden">
@@ -55,35 +55,81 @@
         </fieldset>
     </form>
 {% endmacro %}
+    
+{% macro electrician_contact_form() %}
+  <form action="{{ url_for('electrician_thank_you') }}" method='post' class="get-a-quote connect validate-form custom-quote-form">
+    <input name="lead_source" value="Web Signup" type="hidden">
+    <input name="adwordsField" id='adwordsField' type="hidden">
+    <input name="granularField" id="granularField" type="hidden">
+    <div class="quote-form">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="custom-quote-col form-group">
+            <input name="quote_name" class="form-control required" id="label1" type="text" placeholder="Name*" autocomplete="off">
+          </div>
+        </div>
+        
+        <div class="col-sm-4">
+          <div class="custom-quote-col form-group">
+            <input name="quote_company_name" class="form-control required" id="company_name_input" type="text" placeholder="Full Company Name*" autocomplete="off">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="custom-quote-col form-group">
+            <input name="quote_area" class="form-control required" id="area_input" type="text" placeholder="Company Address*" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="col-sm-4">
+          <div class="custom-quote-col form-group">
+            <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="custom-quote-col form-group">
+            <input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="off">
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="custom-quote-col">
+            <input type="submit" value="Get Your Quote" class="g-recaptcha ec-button-teal-border block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+{% endmacro %}
 
 {% macro contact_us_short_form() %}
-    <form action="{{ url_for('thank_you') }}" method='post' class="validate-form">
+    
+    <!-- new one -->
+    <form action="{{ url_for('thank_you') }}" method='post' class="get-a-quote connect validate-form quote-form">
         <input name="lead_source" value="Web Signup" type="hidden">
         <input name="adwordsField" id='adwordsField' type="hidden">
         <input name="granularField" id="granularField" type="hidden">
-        <fieldset>
-            <div class="row">
-                <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-12">
-                    <h4 class="text-center">Connect with EverCharge Today</h4>
-                </div>
-            </div>
-            <div class="row">
-                <div class="holder">
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="form-group">
-                            <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
+        <div class="row">
+            <div class="col-sm-8 col-md-9">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="quote-form-col form-group">
+                        <!-- <input type="text" placeholder="Name*"> -->
+                        <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <div class="form-group">
-                            <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
+                    <div class="col-sm-6">
+                        <div class="quote-form-col form-group">
+                        <!-- <input type="text" placeholder="Email*"> -->
+                        <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4">
-                        <input type="submit" value="Connect With Us" class="g-recaptcha ec-button-teal-border block">
                     </div>
                 </div>
             </div>
-        </fieldset>
+            <div class="col-sm-4 col-md-3">
+                <div class="quote-form-col">
+                <!-- <input type="submit" value="Connect With Us"> -->
+                <input type="submit" value="Connect With Us" class="g-recaptcha ec-button-teal-border block">
+                </div>
+            </div>
+        </div>
     </form>
 {% endmacro %}

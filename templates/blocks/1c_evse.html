@@ -1,23 +1,29 @@
-<div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-1">
-        <img src="{{ url_for('static', filename='images/EverCharge1.0.png') }}" class="img-responsive extra-bottom-sm"/>
+<div class="half-and-half paddin-half-left paddin-half-right">
+  <div class="half-and-half-text">
+    <div class="half-right-wrapper">
+      <h2>EV Connector</h2>
+      <div class="half-and-half-img mobile-img">
+        <div class="half-left-wrapper ev-right">
+          <img class="ev-width" src="{{ url_for('static', filename='images/ev-connect.png') }}" alt="">
+        </div>
+      </div>
+      <ul>
+        <li>Level 2 EV Charging</li>
+        <li>Integrated on-site <a href="/smartpower">load management</a></li>
+        <li>Access control & Remote updates</li>
+        <li>Designed for ease of install and maintenance</li>
+        <li>CTEP, Energy Star, and UL certified</li>
+        <li>Integrated wireless mesh network</li>
+        <li>J1772 or Tesla connector options</li>
+        <li>Open ADR and ISO 15118 Support</li>
+        <li>Certified energy metering with automated billing</li>
+        <li>48(11.5 kW) or 80(19.2 kW) amp power output</li>
+      </ul>
     </div>
-    <div class="col-xs-12 col-sm-6 col-sm-offset-1">
-        <h2 class="">EV Connector</h2>
-        <ol class="bullet-list">
-            <li class="bullet">Level 2 charging</li>
-            <li class="bullet">Integrated on-site <a href="/smartpower">load management</a></li>
-            <li class="bullet">Access control & Remote updates</li>
-            <li class="bullet">Designed for ease of install</li>
-            <li class="bullet">UL &amp; cUL certified</li>
-            <li class="bullet">Integrated wireless mesh network</li>
-            <li class="bullet">J1772 or Tesla connector compatible</li>
-            <li class="bullet">OpenADR Support</li>
-            <li class="bullet">Power monitoring with automated billing</li>
-            <li class="bullet">30, 48 or 80 amp power output</li>
-        </ol>
-        {% if not hide_view_product %}
-<!--         <h3><a href="{{ url_for('data_sheet') }}" class="" style="margin-left: 40px; padding-top: 20px; display: inline-block;">View Product &#8594;</a></h3> -->
-        {% endif %}
+  </div>
+  <div class="half-and-half-img desktop-img">
+    <div class="half-left-wrapper ev-right">
+      <img class="ev-width" src="{{ url_for('static', filename='images/ev-connect.png') }}" alt="">
     </div>
+  </div>
 </div>

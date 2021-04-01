@@ -1,73 +1,33 @@
 {% extends 'layout/base.html' %}
 
 {%- block extra_css -%}
-    <style type="text/css">
-        .ec-campaign-letscharge-wrap .section-handle.bg-electrician {
-            background-image: url('{{ url_for('static', filename='images/splash-electrician.jpg') }}');
-            background-size: unset;
-            background-position: center;
-        }
-        .bg-electrician .container h2 {
-            text-shadow: 3px 3px 0 RGBA(0,0,0,0.7);
-        }
-        .bg-electrician .container h3 {
-            text-shadow: 2px 2px 0 RGBA(0,0,0,0.7);
-        }
-        .bg-electrician .container p {
-            text-shadow: 1px 1px 0 RGBA(0,0,0,0.7);
-        }
-        .bg-electrician .container h3, .bg-electrician .container p {
-            color: white;
-        }
-    </style>
+  <style type="text/css">
+  </style>
 {%- endblock -%}
-
-{% block banner_class %}
-    class="parallax img-why-ec" data-speed="4" data-type="background"
-{% endblock %}
-
-{% block banner_text %}
-    <h1>Condos & Apartments</h1>
-    <h1 class="subhead">The only fully-managed EV charging solution designed for condo & apartment communities.</h1>
-{% endblock %}
-
 {% block content_one %}
-    <div class="ec-campaign-letscharge-wrap ec-zero">
-        <div class="extra-stretch section-handle">
-            <div class="overlay-teal"></div>
-            <div class="container">
-                {% include 'blocks/2g_we_handle_everything.html' %}
-                <div class="clearfix"></div>
-                <div class="col-xs-12">
-                    <hr class="ec-hr-extra" />
-                </div>
-            </div>
-        </div>
-        <div class="ec-stretch-white">
-            <div class="container">
-                {% include 'blocks/2b_dedicated_charging.html' %}
-                <div class="clearfix"></div>
-                <div class="col-xs-12">
-                    <hr class="ec-hr-extra" />
-                </div>
-                {% include 'blocks/2d_case_studies.html' %}
-            </div>
-        </div>
-        <div class="extra-stretch section-handle bg-electrician">
-            <div class="container">
-                {% include 'blocks/2e_install_services.html' %}
-            </div>
-        </div>
-        <div class="ec-stretch-white">
-            <div class="container">
-                {% include 'blocks/2f_billing_admin.html' %}
-                <center><p><a href="{{ url_for('evercharge_properties') }}" class="ec-text-link">Read more about how EverCharge helps everyday customers</a></p></center>   
-                <div class="clearfix"></div>
-                <div class="col-xs-12">
-                    <hr class="ec-hr-extra" />
-                </div>
-                {% include 'blocks/2h_future_ready.html' %}
-            </div>
-        </div>
+<!-- Page content -->
+<section class="page-content">
+  <div class="container">
+    <div class="green-box inner-top-green">
+      <div class="green-content">
+        <h2>Condos & Apartments</h2>
+        <p>The only fully-managed EV charging solution designed for condo<br>& apartment communities.</p>
+      </div>
     </div>
+    
+    {% include 'blocks/2g_we_handle_everything.html' %}
+
+    {% include 'blocks/2b_dedicated_charging.html' %}
+    
+    {% include 'blocks/1c_receipt.html' %}
+
+    {% include 'blocks/2d_case_studies.html' %}
+    
+    {% include 'blocks/2e_install_services.html' %}
+
+    {% include 'blocks/2f_billing_admin.html' %}
+
+    {% include 'blocks/2h_future_ready.html' %}
+  </div>
+</section>
 {% endblock %}
