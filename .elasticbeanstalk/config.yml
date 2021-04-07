@@ -2,7 +2,7 @@ branch-defaults:
   feature-new-design:
     environment: WebMain-38-env
   master:
-    environment: webMain-env
+    environment: WebMain-38-env
   redesign:
     environment: webMain-env-stage
   web-103-transfer-blog-to-suburl:
