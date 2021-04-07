@@ -1,6 +1,6 @@
 branch-defaults:
   feature-new-design:
-    environment: Webmain-staging38-env
+    environment: WebMain-38-env
   master:
     environment: webMain-env
   redesign:
