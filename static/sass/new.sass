@@ -457,21 +457,21 @@ textarea
   .content-wrapper
     h2.smart-heading-size
       font-size: 44px
-    .smart-txt-size
+    .smart-subtxt-size
       font-size: 24px
   .masthead
-    padding: 130px 0 188px 0
+    padding: 168px 0 288px 0
     position: relative
 
     h1
-      font-size: 64px
-      line-height: 80px
+      font-size: 57px
+      line-height: 64px
   .banner-text
     max-width: 570px
     padding-right: 0
 
   .masthead-img
-    width: 605px
+    width: 530px
     top: 120px
 
   .banner-green
@@ -556,7 +556,6 @@ textarea
 
   .inner-top-green
     background: url(../images/inner-banner.png) 0 0 no-repeat
-
   .green-content
     width: 630px
     margin: 0 auto
@@ -679,6 +678,7 @@ textarea
     font-size: 30px
     text-align: center
     color: #333333
+    padding-bottom: 20px
 .management-listing
   display: flex
   justify-content: space-between
@@ -717,7 +717,7 @@ textarea
 
 @media (min-width: 1025px)
   .management-section
-    margin: 115px 0
+    margin: 60px 0 90px 0
 
     h4
       font-size: 23px
@@ -899,6 +899,7 @@ textarea
   input.form-control:-moz-placeholder
     color: red
     opacity: 1
+
 .get-a-quote-wrapper
   background: #00A499
   border-radius: 20px
@@ -1194,9 +1195,11 @@ ul.quote-tabs
   .half-and-half-img
     .ev-width
       width: 70%
+
 @media (min-width: 992px)
-  .ev-receipt-charge
-    margin-bottom: 10px
+
+  .inner-top-green
+    margin-top: 100px
 
   .get-a-quote-wrapper
     padding: 100px 75px 50px
@@ -1266,7 +1269,7 @@ ul.quote-tabs
 
   p
     display: block
-    font-size: 32px
+    font-size: 20px
     line-height: 37.54px
     font-weight: 400
     color: #6B7382
@@ -1303,6 +1306,7 @@ ul.quote-tabs
     &:hover
       color: #ffffff
       background: #333333
+
 .testimonial-column
   .read-more
     a:hover
@@ -1358,7 +1362,7 @@ ul.quote-tabs
     line-height: 1.2em
     text-align: center
 .color-palette
-  margin: 0px 0 50px 0
+  margin: 0px 0 90px 0
   h2
     display: block
     font-size: 30px
@@ -1366,9 +1370,10 @@ ul.quote-tabs
     color: #333333
     line-height: 1.2em
     text-align: center
-    margin-bottom: 50px
+    margin-bottom: 30px
+
 .about-list-padding
-  padding-bottom: 100px
+  padding-bottom: 90px
 
 .testimonial-details
   margin-top: 60px
@@ -1484,6 +1489,8 @@ ul.quote-tabs
     bottom: -250px
 
 @media (min-width: 1025px)
+  .inner-top-green
+    margin-top: 226px
   .pos-rel
     bottom: -130px
 .inner-top-green
@@ -1495,7 +1502,7 @@ ul.quote-tabs
   top: -25px
   right: 12px
   position: absolute
-  content: ''
+  content: ""
   background: url(../images/bullet-before.png) 0 0 no-repeat
   background-size: 100%
 
@@ -1503,6 +1510,15 @@ ul.quote-tabs
   display: none
 
 @media (min-width: 768px)
+  .inner-top-green
+    &:before
+      width: 118px
+      height: 118px
+      top: -45px
+      right: 45px
+      position: absolute
+      content: ''
+      background: url(../images/bullet-before.png) 0 0 no-repeat
 
 @media (min-width: 1200px)
 
@@ -1513,10 +1529,10 @@ ul.quote-tabs
     display: block
 
   .inner-top-green
-    margin-top: 50px
+    margin-top: 226px
 
 .center-title
-  padding-top: 30px
+  padding-top: 60px
   text-align: center
   max-width: 650px
   margin: 0 auto
@@ -1596,7 +1612,7 @@ ul.quote-tabs
     padding-bottom: 25px
 
     li
-      font-size: 18px
+      font-size: 16px
       padding: 0 0 0 45px
       line-height: 32px
       background: url(../images/bullet.png) 0 5px no-repeat
@@ -1696,7 +1712,20 @@ ul.quote-tabs
       width: 70%
 
 .service-listings
-  padding: 50px 0
+  padding: 60px 0 50px 0
+  text-align: center
+
+  h2
+    display: block
+    font-weight: 700
+    color: #333333
+    line-height: 1.2em
+    margin-bottom: 30px
+    text-align: center
+    font-size: 26px
+
+.make-listings
+  padding: 60px 0 0px 0
   text-align: center
 
   h2
@@ -1770,6 +1799,12 @@ ul.quote-tabs
     width: calc(50% - 30px)
 
 @media (min-width: 1200px)
+  .service-listings
+    padding: 104px 0 50px 0
+
+  .make-listings
+    padding: 104px 0 50px 0
+
   .flx-3
     width: calc(25% - 30px)
   .flx-2
@@ -1778,13 +1813,17 @@ ul.quote-tabs
   .service-listings h2
     font-size: 48px
     margin-bottom: 40px
+  
+  .make-listings h2
+    font-size: 48px
+    margin-bottom: 40px
 
   .check
     font-size: 35px
     top: -25px
 
 .content-area
-  padding: 50px 0
+  padding: 60px 0
   text-align: center
 
 .content-wrapper
@@ -1832,7 +1871,7 @@ ul.quote-tabs
   .content-wrapper
     h2
       font-size: 48px
-      margin-bottom: 50px
+      margin-bottom: 30px
 
     p
       margin-bottom: 30px
@@ -2069,21 +2108,31 @@ ul.quote-tabs
     a
       font-size: 24px
 
-      padding: 100px 0 30px
+      padding: 30px 0 30px
 
 .future
   padding: 0 0 50px 0
-
+  margin-top: 30px
   h2
     margin-bottom: 30px
 
+.top-space
+    padding-top: 60px
+
+.inner-content-area
+    padding-bottom: 0px
 @media (min-width: 1200px)
   .future .manage-sml
     width: 100%
     margin: 0 auto
 
+  .top-space
+    padding-top: 0px
+
+  .space-bar
+    padding-top: 45px
   .inner-content-area
-    padding: 120px 0 0
+    padding: 105px 0 0
 
   .networkss
     height: 774px
@@ -2342,47 +2391,65 @@ ul.quote-tabs
   border: 1px solid #00A499
   i
     color: RGBA(0,164,153,1)
+
 .ec-featured-prop.new
   box-shadow: 0 10px 57px rgb(34 35 61 / 10%)
   border-radius: 10px
   padding: 10px
+
 .ec-featured-prop
   box-shadow: 0 10px 57px rgb(34 35 61 / 10%)
   border-radius: 10px
   padding: 10px
+
 .logo-width
   width: 100%
   padding: 30px
+
 .pos-rel
   position: absolute
   width: 100%
   margin-top: 30px
+
 .custom-margin
   margin: 300px 0 45px 0
+
 .get-custom-quote-wrapper
   box-shadow: 0 0 50px rgb(34 35 61 / 25%)
+
 .max-subtitle
   font-weight: 600
   margin-bottom: 20px
   color: #00a499
+
 .step-item
   height: 430px
+
 .get-a-quote-wrapper.elec-form
   padding-top: 50px
   h2
     padding-bottom: 50px
   input[type="submit"]
     margin-top: 0px
+
 .text-white
   color: white
   font-size: 24px
   &a:hover
     color: #23527c
+
 .thank-space
-  margin: 50px 0 100px 0
+  margin: 105px 0 100px 0
+
 #primary_form_content p
   color: #333
-.smart-none-padding
-  padding-top:0px
-.smart-max-width
+
+.smart-home-format
   max-width: none
+  text-align: left
+
+.top-padding-remove
+  padding-top: 0px
+
+.bottom-padding-remove
+  padding-bottom: 0px

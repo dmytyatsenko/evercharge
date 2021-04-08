@@ -19,6 +19,13 @@
 		font-size: 18px;
 		line-height: 1.7em;
 	}
+	.center-title{
+		padding-top: 0px;
+	}
+	.smart-max-width{
+		max-width: none;
+		text-align: left;
+	}
   </style>
 {%- endblock -%}
 
@@ -32,23 +39,23 @@
 				</div>
 			</div>
 			<div class="row">
-
+					<div class="space-bar"></div>
 					{{ smartpower_row() }}
 					
-					<div class="content-area">
+					<div class="content-area top-padding-remove">
 						<div class="content-wrapper">
 							<h2 class="smart-heading-size">Limited power is the principal barrier in providing charging for multi-family garages.</h2>
 							<p>Traditional charging options only support a small number of EV drivers. Costs to make additional power available for charging can become prohibitively expensive. SmartPower load management overcomes this inherent problem by intelligently managing available power to provide up to 10 times the number of chargers.</p>
 							<p>Equipped with EverCharge, buildings make dedicated EV charging possible with ability to scale as demand increases.</p>
 						</div>
 					</div>
-					<div class="center-title smart-none-padding">
+					<div class="center-title">
 						<h2>Dedicated Home Charging</h2>
 						<p>Convenient dedicated home charging makes the whole EV experience work. Without it, the hunt for an unoccupied public charger becomes a constant activity. By efficiently managing electrical capacity, EverCharge makes dedicated home charging possible.</p>
 					</div>
 					<div class="management-section">
 						<div class="management-img"><img src="{{ url_for('static', filename='images/car-frame.png') }}" alt=""></div>
-						<div class="management-listing">
+						<div class="management-listing center-title">
 							<div class="management-list smart-max-width">
 								<h4>Lower Installation Costs</h4>
 								<p>EverCharge is designed for install and installed for scale. EverCharge	designs infrastructure layouts to meet each of our customer’s needs while leveraging our technology. Traditional charging solutions require dedicated and metered runs from the main electrical panel. EverCharge uses technology embedded in our chargers to monitor electricity usage to manage customer billing and the building reimbursement without the need for meters or submeters.</p>
@@ -77,6 +84,7 @@
 							<a href="{{ url_for('evercharge_properties') }}" class="bttn-primary">View Real World Examples</a>
 						</div>
 					</div>
+					<div class="space-bar"></div>
 			</div>
 		</div>
 	</section><!-- end ec-smartpower-wrap -->
