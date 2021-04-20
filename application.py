@@ -157,6 +157,9 @@ def company_overview():
     else:
         return app.send_static_file('doc-company-overview-2017-0713-US.pdf')
 
+@app.route('/fo')
+def install_specs_short():
+    return app.send_static_file('doc-fleet-overview.pdf')
 
 @app.route('/connectortypes')
 def connector_types():
