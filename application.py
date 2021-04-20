@@ -152,10 +152,8 @@ def install_specs_short():
 
 @app.route('/co')
 def company_overview():
-    if request.environ['country'] == 'CA':
-        return app.send_static_file('doc-company-overview-2017-0713-CA.pdf')
-    else:
-        return app.send_static_file('doc-company-overview-2017-0713-US.pdf')
+    return app.send_static_file('doc-company-overview-2021.pdf')
+
 
 @app.route('/fo')
 def fleet_overview():
