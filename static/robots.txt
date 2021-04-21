@@ -11,6 +11,9 @@ Disallow: /connectortypes
 Disallow: /customerguide
 Disallow: /datasheet
 Disallow: /device
+Disallow: /charge
+Disallow: /co
+Disallow: /fo
 Disallow: /gm-signup
 Disallow: /gm-user
 Disallow: /install
