@@ -141,11 +141,11 @@ def webinar():
     return redirect("https://youtu.be/IXNT-nvTJYI")
 
 @app.route('/installspecsev001')
-def install_specs():
+def install_specs_ev001():
     return app.send_static_file('InstallSpecsFullEV001.pdf')
 
 @app.route('/installspecsev002')
-def install_specs():
+def install_specs_ev002():
     return app.send_static_file('InstallSpecsFullEV002.pdf')
 
 @app.route('/co')
