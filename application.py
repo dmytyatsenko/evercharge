@@ -140,15 +140,13 @@ def root():
 def webinar():
     return redirect("https://youtu.be/IXNT-nvTJYI")
 
-@app.route('/installspecsfull')
+@app.route('/installspecsev001')
 def install_specs():
-    return app.send_static_file('InstallSpecsFull.pdf')
+    return app.send_static_file('InstallSpecsFullEV001.pdf')
 
-
-@app.route('/installspecsshort')
-def install_specs_short():
-    return app.send_static_file('InstallSpecsShort.pdf')
-
+@app.route('/installspecsev002')
+def install_specs():
+    return app.send_static_file('InstallSpecsFullEV002.pdf')
 
 @app.route('/co')
 def company_overview():
