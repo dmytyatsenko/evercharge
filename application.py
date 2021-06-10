@@ -140,6 +140,10 @@ def root():
 def webinar():
     return redirect("https://youtu.be/IXNT-nvTJYI")
 
+@app.route('/careers')
+def careers():
+    return redirect('https://www.indeed.com/cmp/Evercharge-1')
+
 @app.route('/installspecsev001')
 def install_specs_ev001():
     return app.send_static_file('InstallSpecsFullEV001.pdf')
