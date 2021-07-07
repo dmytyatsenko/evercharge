@@ -238,6 +238,9 @@ def property_case_study_nine():
 def data_sheet():
     return app.send_static_file('doc-evercharge-accharger-datasheet.pdf')
 
+@app.route('/datasheet-ctep')
+def ctep_data_sheet():
+    return app.send_static_file('doc-evercharge-accharger-ctep-datasheet.pdf')
 
 @app.route('/install')
 def install_info():
