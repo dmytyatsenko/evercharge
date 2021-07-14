@@ -19,31 +19,33 @@ $ec-dk-yellow: RGBA(239,216,0,1.0)
 // type
 $ec-font-quote: "rift-soft", sans-serif // weights: 400 italic, 600
 $ec-font-headline: "acumin-pro-semi-condensed", sans-serif // weights: 200, 700
-$ec-font-body: "proxima-nova", sans-serif // weights: 100, 400, 400 italic, 700, 700 italic 
-$ec-letter-space: -0.5px
+// $ec-font-body: "proxima-nova", sans-serif // weights: 100, 400, 400 italic, 700, 700 italic 
+$ec-font-body: 'Work Sans', sans-serif
+$ec-letter-space: 1px
+// $ec-letter-space: -0.5px
 $ec-text-shadow: 3px 3px 0px RGBA(0,0,0,0.7)
 $ec-text-shadow-lt: 3px 3px 0px RGBA(0,0,0,0.2)
 //////////////////////
 
 //////////////////////
 // GENERAL
-html
-    min-height: 100%
-    position: relative // for sticky footer
-body
-    font-family: $ec-font-body
-    font-size: 16px
-    font-weight: 400
-    -webkit-text-size-adjust: 100%
-    -ms-text-size-adjust: none
-    margin-bottom: 280px // needs to equal height of footer in md-screen
-    min-width: 320px
-html,
-body
-    max-width: 100%
-    overflow-x: hidden
-input.sane-field
-    display: none
+// html
+//     min-height: 100%
+//     position: relative // for sticky footer
+// body
+//     font-family: $ec-font-body
+//     font-size: 16px
+//     font-weight: 400
+//     -webkit-text-size-adjust: 100%
+//     -ms-text-size-adjust: none
+//     // margin-bottom: 280px // needs to equal height of footer in md-screen
+//     min-width: 320px
+// html,
+// body
+//     max-width: 100%
+//     overflow-x: hidden
+// input.sane-field
+//     display: none
 //////////////////////
 // COMPONENTS
 // bootstrap overrides
@@ -53,7 +55,7 @@ input[type=text],
 input[type=password],
 input[type=file],
 textarea
-    -webkit-appearance:none
+    -webkit-appearance: none
     border-radius: 0
     @extend .form-control
 
@@ -87,67 +89,68 @@ textarea
     display: none
 
 // type
-h1
-    font-family: $ec-font-body
-    font-size: 4em
-    font-weight: 800
-    line-height: 0.9em
-    margin-bottom: 30px
-    margin-top: 0
-    &.subhead
-        font-size: 1.5em
-        font-weight: 600
-        letter-spacing: 0.5px
-        line-height: 1.2em
-h2
-    color: $ec-teal
-    font-family: $ec-font-quote
-    font-size: 2.6em
-    font-weight: 600
-    letter-spacing: 1px
-    margin-bottom: 30px
-    margin-top: 0
-    &.subhead
-        font-family: $ec-font-body
-        font-size: 1.5em
-        font-weight: 600
-        letter-spacing: 0.5px
-        line-height: 1.2em
-    &.thin
-        font-style: italic
-        font-weight: 400
-h3
-    font-family: $ec-font-body
-    font-size: 1.4em
-    font-weight: 600
-    line-height: 1.2em
-    margin-bottom: 14px
-    margin-top: 0
-    &.thin
-        font-weight: 400
-h4
-    color: RGBA(150,150,150,1.0)
-    font-family: $ec-font-headline
-    font-size: 1.1em
-    font-weight: 700
-    letter-spacing: 0.5px
-    margin-bottom: 14px
-    margin-top: 0
-    text-transform: uppercase
-    &+p
-        margin-bottom: 40px
-h5
-    font-size: 1.1em
-    font-weight: 600
-    line-height: 1.1em
-    margin-bottom: 14px
-p
-    font-size: 1.1em
-    font-weight: 400
-    line-height: 1.4em
-    margin-bottom: 10px
-    margin-top: 0
-ul.bullet-list 
+// h1
+//     font-family: $ec-font-body
+//     font-size: 4em
+//     font-weight: 800
+//     line-height: 0.9em
+//     margin-bottom: 30px
+//     margin-top: 0
+//     &.subhead
+//         font-size: 1.5em
+//         font-weight: 600
+//         letter-spacing: 0.5px
+//         line-height: 1.2em
+// h2
+//     color: $ec-teal
+//     font-family: $ec-font-quote
+//     font-size: 2.6em
+//     font-weight: 600
+//     letter-spacing: 1px
+//     margin-bottom: 30px
+//     margin-top: 0
+//     &.subhead
+//         font-family: $ec-font-body
+//         font-size: 1.5em
+//         font-weight: 600
+//         letter-spacing: 0.5px
+//         line-height: 1.2em
+//     &.thin
+//         font-style: italic
+//         font-weight: 400
+// h3
+//     font-family: $ec-font-body
+//     font-size: 1.4em
+//     font-weight: 600
+//     line-height: 1.2em
+//     margin-bottom: 14px
+//     margin-top: 0
+//     &.thin
+//         font-weight: 400
+// h4
+//     color: RGBA(150,150,150,1.0)
+//     font-family: $ec-font-headline
+//     font-size: 1.1em
+//     font-weight: 700
+//     letter-spacing: 0.5px
+//     margin-bottom: 14px
+//     margin-top: 0
+//     text-transform: uppercase
+//     &+p
+//         margin-bottom: 40px
+// h5
+//     font-size: 1.1em
+//     font-weight: 600
+//     line-height: 1.1em
+//     margin-bottom: 14px
+// p
+//     font-size: 1.1em
+//     font-weight: 400
+//     line-height: 1.4em
+//     margin-bottom: 10px
+//     margin-top: 0
+
+ul.bullet-list
     list-style: none
     font-size: 1.1em
     line-height: 1.2em
@@ -199,24 +202,24 @@ li.num
     padding: 20px
 
 // links
-a
-    color: $ec-teal
-    text-decoration: none
-    &:visited
-        color: $ec-teal
-        text-decoration: none
-    &:active,
-    &:focus
-        color: $ec-teal
-        text-decoration: none
-    &:hover
-        color: $ec-dk-teal
-        text-decoration: underline
-    &.underline
-        text-decoration: underline
-a img
-    &:hover
-        cursor: pointer
+// a
+//     color: $ec-teal
+//     text-decoration: none
+//     &:visited
+//         color: $ec-teal
+//         text-decoration: none
+//     &:active,
+//     &:focus
+//         color: $ec-teal
+//         text-decoration: none
+//     &:hover
+//         color: $ec-dk-teal
+//         text-decoration: underline
+//     &.underline
+//         text-decoration: underline
+// a img
+//     &:hover
+//         cursor: pointer
 
 // buttons
 .ec-def-button
@@ -230,7 +233,6 @@ a img
     min-height: 58px
     padding: 18px 20px
     text-align: center
-    text-transform: uppercase
 @mixin btn-gradient($btn-bkgnd-color, $btn-bkgnd-shadow)
     -moz-box-shadow: inset 0px 1px 0px 0px $btn-bkgnd-color
     -webkit-box-shadow: inset 0px 1px 0px 0px $btn-bkgnd-color
@@ -249,7 +251,7 @@ a, button, input
         border: 2px solid $ec-teal
         color: $ec-teal
         display: inline-block
-        &:hover 
+        &:hover
             @include btn-gradient(#f6f6f6, white)
             text-decoration: none
 a.ec-text-link
@@ -316,7 +318,7 @@ img.border
         position: absolute
         top: -120px
         z-index: 2
-    &.blue 
+    &.blue
         background: #68CEF2
 .ec-stretch-teal
     background: $ec-teal
@@ -384,8 +386,10 @@ p.black
 //////////////////////
 // BASE TEMPLATE
 // header
-$navbar-height: 89px
-$navbar-height-xs: 85px
+// $navbar-height: 89px
+$navbar-height: 0px
+// $navbar-height-xs: 85px
+$navbar-height-xs: 0px
 nav
     a.navbar-brand
         padding: 0
@@ -400,14 +404,14 @@ nav
         border-color: $ec-dk-dk-grey
         box-shadow: none
         ul.navbar-nav>li>a
+        color: white
+        font-weight: 400
+        text-shadow: none
+        &:active,
+        &:focus,
+        &:hover
+            background: RGBA(255,255,255,0.15)
             color: white
-            font-weight: 400
-            text-shadow: none
-            &:active,
-            &:focus,
-            &:hover
-                background: RGBA(255,255,255,0.15)
-                color: white
         .navbar-nav>.active>a
             background: $ec-teal
             color: white
@@ -435,7 +439,7 @@ nav
             color: white
             display: inline-block
             letter-spacing: 0.5px
-        .contact-info 
+        .contact-info
             float: left
             a
                 padding: 8px 20px
@@ -456,7 +460,7 @@ footer#footer
     background: $ec-dk-dk-grey
     bottom: 0
     color: white
-    height: 280px 
+    height: 280px
     line-height: 1em
     position: absolute
     width: 100%
@@ -552,7 +556,7 @@ footer#footer
         height: 320px
 
 // page: thankyou
-.ec-thankyou 
+.ec-thankyou
     background: white
     text-shadow: none
     h3
@@ -589,7 +593,6 @@ fieldset.ec-fieldset
             margin-bottom: 0
             margin-left: 3px
             margin-right: 10px
-
 
 // page: properties
 .ec-case-studies
@@ -655,7 +658,7 @@ fieldset.ec-fieldset
     .nav-tabs
         border: none
         h4+p
-            margin-bottom: 0
+        margin-bottom: 0
     .nav-tabs li
         background: transparent
         border: none
@@ -668,16 +671,16 @@ fieldset.ec-fieldset
         border: none
         padding-bottom: 22px
         &:hover
-            background: $ec-dk-teal 
+            background: $ec-dk-teal
             border: none
             cursor: pointer
         h4, p
             color: white
-    .nav-tabs li a 
+    .nav-tabs li a
         background: transparent
         border-radius: 0
         padding: 50px 20px 20px 20px
-        &:hover 
+        &:hover
             background: $ec-teal
             border: none
             cursor: pointer
@@ -734,7 +737,7 @@ fieldset.ec-fieldset
     h4
         color: black
         margin-bottom: 36px
-    .ec-button-teal-border 
+    .ec-button-teal-border
         line-height: 1em
         margin-top: 0
 
@@ -765,9 +768,9 @@ fieldset.ec-fieldset
 // page: press
 .ec-palette-color
     border-radius: 100%
-    height: 80px
+    height: 100px
     margin-bottom: 20px
-    width: 80px
+    width: 100px
     &.teal
         background: $ec-teal
     &.dk-grey
@@ -777,14 +780,15 @@ fieldset.ec-fieldset
 .ec-social-media-circle
     background: $ec-teal
     border-radius: 30px
-    color: white !important
+    border: 1px solid white
+    color: white
     display: block
     height: 60px
     margin-bottom: 15px
     padding: 20px
     text-align: center
     width: 100%
-    i 
+    i
         color: white
         margin-right: 10px
 .ec-feat-press
@@ -821,7 +825,7 @@ img.ec-award
             height: 100%
     .ec-fieldset
         h2+p
-            margin-bottom: 8px
+        margin-bottom: 8px
         p.active
             margin-bottom: 10px
             margin-right: 20px
@@ -903,7 +907,6 @@ img.ec-award
             margin-top: 40px
             padding: 20px 20px 1px 20px
 
-
 //////////////////////
 // RESPONSIVE
 //xxl
@@ -918,7 +921,7 @@ img.ec-award
         background-size: auto 500px
         height: 390px
         padding: 115px 60px 60px 60px
-    .parallax 
+    .parallax
         &.img-tesla
             background-size: 100% auto
             height: 580px
@@ -935,7 +938,7 @@ img.ec-award
         padding: 130px 60px 60px 60px
     .ec-video-wrap
         padding: 40px
-    .parallax 
+    .parallax
         &.img-tesla
             background-size: 100% auto
             height: 550px
@@ -953,7 +956,7 @@ img.ec-award
         height: 460px
     .ec-home-splash-text
         padding: 200px 40px 40px 20px
-        h1 
+        h1
             margin-bottom: 20px
     .ec-home-properties
         background-size: auto 420px
@@ -966,7 +969,7 @@ img.ec-award
         h1, h2
             margin-top: 10px
 
-    .ec-why-wrap .tab-pane 
+    .ec-why-wrap .tab-pane
         img
             margin-bottom: 10px
     .parallax
@@ -1025,7 +1028,7 @@ img.ec-award
                 display: inline-block
                 font-size: 13px
                 letter-spacing: 0.5px
-            .contact-info 
+            .contact-info
                 float: none
                 a
                     padding: 8px 0 8px 8px
@@ -1061,7 +1064,7 @@ img.ec-award
             padding: 10px
         img
             margin: 0 auto
-            width: 50% 
+            width: 50%
     .ec-home-properties
         background-position-y: -50px
         background-size: auto 400px
@@ -1092,7 +1095,7 @@ img.ec-award
         margin-top: 10px
         padding: 14px 10px
         text-align: center
-        h4 
+        h4
             margin-bottom: 5px
         h4 + p
             margin-bottom: 0
@@ -1173,9 +1176,9 @@ img.ec-award
             .ec-stretch-grey
                 margin-bottom: 20px
 
-    .ec-404 
+    .ec-404
         margin-top: 100px
-        h1 
+        h1
             font-size: 30px
     footer#footer
         height: 495px

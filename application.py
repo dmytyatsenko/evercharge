@@ -40,7 +40,11 @@ app.config['SECRET_KEY'] = os.environ.get("FLASK_SECRET_KEY", 'testingkey')
 singer = Signer(app.config['SECRET_KEY'])
 
 assets = Environment(app)
-sass = Bundle('sass/all.sass', filters='sass', output='css/sass.css')
+sass = Bundle(
+        'sass/all.sass', 
+        'sass/new.sass', 
+        filters='sass', 
+        output='css/sass.css')
 css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
 assets.register('css_all', css_all)
 
@@ -136,23 +140,26 @@ def root():
 def webinar():
     return redirect("https://youtu.be/IXNT-nvTJYI")
 
-@app.route('/installspecsfull')
-def install_specs():
-    return app.send_static_file('InstallSpecsFull.pdf')
+@app.route('/careers')
+def careers():
+    return redirect('https://www.indeed.com/cmp/Evercharge-1')
 
+@app.route('/installspecsev001')
+def install_specs_ev001():
+    return app.send_static_file('InstallSpecsFullEV001.pdf')
 
-@app.route('/installspecsshort')
-def install_specs_short():
-    return app.send_static_file('InstallSpecsShort.pdf')
-
+@app.route('/installspecsev002')
+def install_specs_ev002():
+    return app.send_static_file('InstallSpecsFullEV002.pdf')
 
 @app.route('/co')
 def company_overview():
-    if request.environ['country'] == 'CA':
-        return app.send_static_file('doc-company-overview-2017-0713-CA.pdf')
-    else:
-        return app.send_static_file('doc-company-overview-2017-0713-US.pdf')
+    return app.send_static_file('doc-company-overview-2021.pdf')
 
+
+@app.route('/fo')
+def fleet_overview():
+    return app.send_static_file('doc-fleet-overview.pdf')
 
 @app.route('/connectortypes')
 def connector_types():
@@ -231,6 +238,9 @@ def property_case_study_nine():
 def data_sheet():
     return app.send_static_file('doc-evercharge-accharger-datasheet.pdf')
 
+@app.route('/datasheet-ctep')
+def ctep_data_sheet():
+    return app.send_static_file('doc-evercharge-accharger-ctep-datasheet.pdf')
 
 @app.route('/install')
 def install_info():
@@ -284,7 +294,8 @@ def customer_login():
 ##################
 @app.route('/', methods=['POST', 'GET'])
 def evercharge():
-    return render_template("index.html")
+    url = True
+    return render_template("index.html", url=url)
 
 
 @app.route('/why-evercharge', methods=['GET'])

@@ -1,13 +1,40 @@
-<div class="row">
-
-    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-        <h2 class="text-center">How it Works</h2>
-        <ol class="num-list">
-            <li class="num" style="font-size: 16px; line-height: 22px;">Our charge stations connect to common area power</li>
-            <li class="num" style="font-size: 16px; line-height: 22px;">Power is intelligently allocated to charge stations based on demand</li>
-            <li class="num" style="font-size: 16px; line-height: 22px;">Usage monitoring by the charge station tracks electricity consumed</li>
-            <li class="num" style="font-size: 16px; line-height: 22px;">Automated billing and building reimbursements are issued by EverCharge</li>
-        </ol>
+<div class="how-it-works">
+  <h2>How it Works</h2>
+  <div class="works-listing">
+    <div class="row">
+      <div class="col-sm-6 col-md-3">
+        <div class="works-col">
+          <div class="works-icon">
+            <img src="{{ url_for('static', filename='images/icon-1.png') }}" alt="">
+          </div>
+          <p>1. Our charge stations connect to common area power</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="works-col">
+          <div class="works-icon">
+            <img src="{{ url_for('static', filename='images/icon-2.png') }}" alt="">
+          </div>
+          <p>2. Power is intelligently allocated to charge stations based on demand</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="works-col">
+          <div class="works-icon">
+            <img src="{{ url_for('static', filename='images/icon-3.png') }}" alt="">
+          </div>
+          <p>3. Usage monitoring by the charge station tracks electricity consumed</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-md-3">
+        <div class="works-col">
+          <div class="works-icon">
+            <img src="{{ url_for('static', filename='images/icon-4.png') }}" alt="">
+          </div>
+          <p>4. Automated billing and building reimbursements are issued by EverCharge</p>
+        </div>
+      </div>
     </div>
-
+  </div>
+  <a href="{{ url_for('evercharge_properties') }}">Read More About How EverCharge Helps Everyday Customers</a>
 </div>

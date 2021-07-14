@@ -1,36 +1,18 @@
 {% extends 'layout/base.html' %}
 
-{% block banner_class %}
-    class="parallax img-properties" data-speed="4" data-type="background"
-{% endblock %}
-
-{% block banner_text %}
-    <h1>Property Case Studies</h1>
-{% endblock %}
-
 {% block content_one %}
-    <div class="ec-stretch-grey border-bottom">
+    <div class="page-content">
         <div class="container">
-            <div class="row ec-case-studies">
-                <div class="col-xs-12 col-md-6">
-                    <div class="ec-property potrero">
-                        <h2 class="white">450 unit Builing</h2>
-                        <p><small>in San Francisco</small></p>
-                        <p class="extra-bottom-md">Without EverCharge the building only had capacity to support 6 valet charing stations. With over 50 EV owners, SmartPower Technology made it possible to install 20 charging staitons with room to expand making charging possible for years to come.</p>
-                        <p><a href="{{ url_for('soma_case_study') }}" target="_blank" class="ec-text-link">Read full case study &#8594;</a></p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                    <div class="ec-property brannan">
-                        <h2 class="white">Corporate Campus</h2>
-                        <p><small>in Michigan</small></p>
-                        <p class="extra-bottom-md">Without EverCharge the site had reached the maximum EV connector potential on existing infrastructure.
-                            Using EverCharge technology the corporate campus was able to leverage existing electrical capacity to
-                            support 300+ EV connectors and avoid the costly electrical upgrades</p>
-                        <p><a href="{{ url_for('corp_campus_case_study') }}" target="_blank" class="ec-text-link">Read full case study &#8594;</a></p>
-                    </div>
-                </div>
+            <div class="green-box inner-top-green">
+              <div class="green-content">
+                <h2>Property Case Studies</h2>
+                <p>EverCharge provides Scalable, fully managed charging solutions for fleets or workplaces.</p>
+              </div>
             </div>
+            <div class="space-bar"></div>
+            <div class="space-bar"></div>
+            {% include 'blocks/2d_case_studies.html' %}
+
             <!-- end main case studies -->
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-4">

@@ -1,0 +1,32 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+certifi = "==2020.12.5"
+chardet = "==4.0.0"
+click = "==7.1.2"
+cssmin = "==0.2.0"
+geoip2 = "==4.1.0"
+idna = "==3.1"
+ipaddress = "==1.0.23"
+itsdangerous = "==1.1.0"
+jsmin = "==2.2.2"
+json-rpc = "==1.13.0"
+maxminddb = "==2.0.3"
+nutshell = "==0.2"
+requests = "==2.25.1"
+six = "==1.15.0"
+urllib3 = "==1.26.3"
+webassets = "==2.0"
+Flask = "==1.1.2"
+Flask-Assets = "==2.0"
+Jinja2 = "==2.11.3"
+MarkupSafe = "==1.1.1"
+Werkzeug = "==1.0.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

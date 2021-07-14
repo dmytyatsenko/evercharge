@@ -3,151 +3,182 @@
 
 
 {% block content_one %}
-    <div class="ec-home-splash-wrap">
-        <div class="container-fluid">
-            <div class="row">
-                    <!-- <div class="ec-video-wrap">
-                        <video src="images/video-home-splash.mp4" autoplay loop controls type="video/mp4" class="ec-video">
-                        </video>
-                    </div> -->
-                <div class="col-md-offset-6 col-md-6 col-lg-offset-7 col-lg-5">
-                    <div class="ec-home-splash-text">
-                        <h2 class="white">High speed charging with any electrical service</h2>
-                        <h2 class="subhead ec-teal extra-bottom-lg">Smart load managed charging solution for apartments, condominiums, and fleets.</h2>
-                        <h3><a href="#more" class="white">Learn More &#8594;</a></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="ec-stretch-white ec-mini-form">
-        <div class="container">
-            {{ contact_us_short_form() }}
+    
+    <!-- Banner -->
+    <section class="masthead">
+        <div class="banner-green"></div>
+        <div class="masthead-img">
+          <img src="{{ url_for('static', filename='images/hero-img.png') }}" alt="">
         </div>
-        <a name="more"/>
-    </div>
+        <div class="container">
+          <div class="banner-text">
+            <h1>High Speed Charging Within Any Electrical Service</h1>
+            <p>Smart load managed charging solution for apartments, condominiums, and fleets that works with any EV.</p>
+            <a href="#more" class="bttn-primary">Learn More</a>
+          </div>
+        </div>
+		<section class="get-a-quote connect pos-rel">
+			<div class="container">
+				<div class="get-custom-quote-wrapper">
+					<h2>Connect With EverCharge Today</h2>
+					<form action="{{ url_for('thank_you') }}" method='post' class="get-a-quote connect validate-form custom-quote-form">
+						<input name="lead_source" value="Web Signup" type="hidden">
+						<input name="adwordsField" id='adwordsField' type="hidden">
+						<input name="granularField" id="granularField" type="hidden">
+						<div class="row">
+							<div class="col-sm-8 col-md-9">
+								<div class="row">
+								<div class="col-sm-6">
+									<div class="custom-quote-col form-group">
+									<!-- <input type="text" placeholder="Name*"> -->
+									<input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="custom-quote-col form-group">
+									<!-- <input type="text" placeholder="Email*"> -->
+									<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-sm-4 col-md-3">
+								<div class="custom-quote-col">
+								<!-- <input type="submit" value="Connect With Us"> -->
+								<input type="submit" value="Connect With Us" class="g-recaptcha ec-button-teal-border block">
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+    </section>
 
-    <div class="ec-stretch-white ec-home-charging-experts">
-        <div class="container">
-            <div class="row text-center extra-bottom-lg">
-                
-                <div class="col-sm-12">
-                    <h1 class="ec-teal text-shadow-lt">Charging Experts</h1>
-                    <h1 class="subhead extra-bottom-lg">EverCharge makes widespread EV adoption possible in apartments, condominiums, and fleets</h1>
-                </div>
-                <div class="col-sm-offset-2 col-sm-4">
-                    <a href="{{ url_for('multifamily') }}" class="ec-button-teal block">Multifamily &#8594;</a>
-                </div>
-                <div class="col-sm-4">
-                    <a href="{{ url_for('commercial') }}" class="ec-button-teal block">Commercial &#8594;</a>
-                </div>
-            </div>
-            <div class="row extra-bottom-md">
-                <div class="col-sm-12 col-lg-offset-1 col-lg-10">
-                    <div class="ec-col-30">
-                        <div class="ec-box ec-bk-lt-blue">
-                            <img src="{{ url_for('static', filename='images/icon-1.png') }}" class="img-responsive" alt="" />
-                        </div>
-                        <div class="ec-box-white">
-                            <h3>Here to Help</h3>
-                            <p>We understand your needs and handle everything</p>
-                            <ul class="bullet-list">
-                                <li class="bullet">Permitting</li>
-                                <li class="bullet">Installation</li>
-                                <li class="bullet">Support</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="ec-col-30">
-                        <div class="ec-box ec-bk-lt-teal">
-                            <img src="{{ url_for('static', filename='images/icon-3.png') }}" class="img-responsive" alt="" />
-                        </div>
-                        <div class="ec-box-white" style="min-height: 125px;">
-                            <h3>Dedicated Stations</h3>
-                            <p>SmartPower load management gives drivers availability to have their own charger</p>
-                            <ul class="bullet-list">
-                                <li class="bullet">No Sharing</li>
-                                <li class="bullet">No Waiting</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="ec-col-30">
-                        <div class="ec-box ec-bk-dk-purple">
-                            <img src="{{ url_for('static', filename='images/icon-2.png') }}" class="img-responsive" alt="" />
-                        </div>
-                        <div class="ec-box-white">
-                            <h3>Long-Term Value</h3>
-                            <p>Make your property EV ready to meet current demand and future growth</p>
-                            <ul class="bullet-list">
-                                <li class="bullet">Affordable deployments</li>
-                                <li class="bullet">Instantly scalable</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clearfix"></div>
-            <div class="col-xs-12">
-                <hr class="ec-hr-extra" />
-            </div>
-            {% include 'blocks/1b_smart_power.html' %}
-            <div class="clearfix"></div>
-            <div class="col-xs-12">
-                <hr class="ec-hr-extra" />
-            </div>
-        </div>
-    </div>
-    <div class="ec-stretch-lt-teal ec-mini-form">
-        <div class="container">
-             {{ contact_us_short_form() }}
-        </div>
-    </div>
-    <div class="ec-stretch-white">
-        <div class="container">
-            <div class="row ec-feat-press">
-                <div class="col-sm-12">
-                    <h2>What People Are Saying</h2>
-                </div>
-                <div class="col-sm-6 col-md-3 extra-bottom-md">
-                    <a href="https://electrek.co/2020/07/22/charging-hundreds-of-evs-parked-at-a-condo-is-a-solvable-problem-heres-how/" target="_blank"><img src="{{ url_for('static', filename='images/press-electrek.png') }}" class="border img-responsive extra-bottom-sm" alt="electrek logo" /></a>
-                    <h5><a href="https://electrek.co/2020/07/22/charging-hundreds-of-evs-parked-at-a-condo-is-a-solvable-problem-heres-how/" target="_blank">Charging hundreds of EVs parked at a condo is a solvable problem, here’s how</a></h5>
+    <!-- Page content -->
+    <section class="page-content">
+		<div class="container">
+			<div class="green-box custom-margin">
+				<div class="green-content">
+					<h2>Charging Experts</h2>
+					<p>EverCharge makes widespread EV adoption possible in apartments, condominiums, and fleets.</p>
+					<a href="{{ url_for('multifamily') }}" class="bttn-secondary">Multi Family</a>
+					<a href="{{ url_for('commercial') }}" class="bttn-secondary">Commercial</a>
+				</div>
+			</div>
+			<div class="list-item">
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="white-box">
+							<div class="icon-box">
+								<img class="home-icon-padding" src="{{ url_for('static', filename='images/icon-6.png') }}" alt="">
+								<!-- <i class="icon-icon-1"></i> -->
+							</div>
+							<h4>Here to Help</h4>
+							<p>We understand your needs and handle everything</p>
+							<ul>
+								<li>Permitting</li>
+								<li>Installation</li>
+								<li>Support</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="white-box">
+							<div class="icon-box">
+								<img class="home-icon-padding" src="{{ url_for('static', filename='images/icon-2.png') }}" alt="">
+								<!-- <i class="icon-icon-2"></i> -->
+							</div>
+							<h4>North America</h4>
+							<p>Our services are available in the United States and Canada</p>
+							<ul>
+								<li>Site Design & Engineering</li>
+								<li>Complete Installation</li>
+								<li>Ongoing Support</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="white-box">
+							<div class="icon-box">
+								<img class="home-icon-padding" src="{{ url_for('static', filename='images/icon-4.png') }}" alt="">
+								<!-- <i class="icon-icon-3"></i> -->
+							</div>
+							<h4>Dedicated Stations</h4>
+							<p>SmartPower load management gives EVs the availability to have their own charger</p>
+							<ul>
+								<li>No Sharing</li>
+								<li>No Waiting</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="space-bar"></div>
+			{% with hide_learn_more=False, imageUrl='images/car-frame.png' %}
+				{% include 'blocks/1b_smart_power.html' %}
+			{% endwith %}
+			
+			{% include 'blocks/1c_receipt.html' %}
+		</div>
+	</section>
 
-                    <p>"...current lack of charging stations at condos as an impenetrable obstacle to EV adoption..."</p>
-                </div>
-                <div class="col-sm-6 col-md-3 extra-bottom-md">
-                    <a href="https://www.bizjournals.com/pacific/news/2019/11/07/partnership-brings-evercharge-ev-chargers-to.html" target="_blank"><img src="{{ url_for('static', filename='images/press-PBN.png') }}" class="border img-responsive extra-bottom-sm" alt="Pacific Business News logo" /></a>
-                    <h5><a href="https://www.bizjournals.com/pacific/news/2019/11/07/partnership-brings-evercharge-ev-chargers-to.html" target="_blank">Partnership brings EverCharge EV chargers to Hawaii</a></h5>
-                    <p>"EverCharge minimizes infrastructure requirements making EV charging installation scalable..."</p>
-                </div>
-                <div class="clearfix visible-sm"></div>
-                <div class="col-sm-6 col-md-3 extra-bottom-md">
-                    <a href="http://www.latimes.com/business/la-fi-hy-live-updates-2016-la-auto-show-compete-for-an-ev-charging-station-no-1479325686-htmlstory.html" rel="nofollow" target="_blank"><img src="{{ url_for('static', filename='images/press-latimes.jpg') }}" class="border img-responsive extra-bottom-sm" alt="Los Angeles Times logo" /></a>
-                    <h5><a href="http://www.autoblog.com/2016/07/14/carve-a-wooden-bike-infineon-gets-into-evs/" rel="nofollow" target="_blank">No more competition for an EV charging station?</a></h5>
-                    <p>"If you've ever left a note for a neighbor who parked in the EV charging station overnight, EverCharge has a solution for you."</p>
-                </div>
-                <div class="col-sm-6 col-md-3 extra-bottom-md">
-                    <a href="http://cleantechnica.com/?s=EverCharge" rel="nofollow" target="_blank"><img src="{{ url_for('static', filename='images/press-cleantechnica.jpg') }}" class="border img-responsive extra-bottom-sm" alt="Clean Technica logo" /></a>
-                    <h5><a href="http://cleantechnica.com/?s=EverCharge" rel="nofollow" target="_blank">EverCharge Articles</a></h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row ec-bk-lt-teal">
-            <div class="col-sm-12 col-md-6 ec-zero-all">
-                <div class="ec-home-properties text-center">
-                    <a href="{{ url_for('evercharge_properties') }}" class="ec-text-link lg white">View Our<br/>Success Stories</a>
-                </div>
-                <!-- end ec-home-properties -->
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-6">
-                <div class="ec-box extra-stretch text-center">
-                    <h2 class="thin extra-bottom-sm">“No one else can do what EverCharge does and without them I would not have been able to keep my Tesla.”</h2>
-                    <p>&ndash; <strong>Tim</strong>, Customer</p>
-                    <p><a href="{{ url_for('evercharge_properties') }}" class="ec-text-link">Read more about how EverCharge helps everyday customers &#8594;</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
+	
+	
+	<section class="get-a-quote connect">
+		<div class="get-a-quote-wrapper container">
+			<h2>Connect With EverCharge Today</h2>
+			{{ contact_us_short_form() }}
+		</div>
+	</section>
+
+
+	<!-- testimonial-listings -->
+	<section class="testimonial-listings">
+		<div class="container">
+			<h2>In The Media</h2>
+			<div class="testimonial-details text-center">
+				<div class="row">
+					<div class="col-sm-6 col-md-3">
+						<img src="images/testimonial-listings-logo-1.png" alt="">
+
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<img src="images/testimonial-listings-logo-2.png" alt="">
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<img src="images/testimonial-listings-logo-3.png" alt="">
+					</div>
+					<div class="col-sm-6 col-md-3">
+						<img src="images/testimonial-listings-logo-4.png" alt="">
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- testimonial -->
+	<section class="testimonial">
+		<div class="container">
+			<div class="row">
+				<div class="paddin-half-left paddin-half-right">
+					<div class="testimonial-column">
+						<p>“No one else can do what
+							EverCharge does and without
+							them I would not have been able to keep my Tesla.”</p>
+						<h4><span> - Tim,</span> Customer</h4>
+						<div class="read-more"> 
+							<a href="{{ url_for('evercharge_properties') }}">
+								Read More About How EverCharge Helps Everyday Customers
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- testimonial -->
+		
 {% endblock %}
