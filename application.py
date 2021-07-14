@@ -271,9 +271,15 @@ def user_guide():
 def gm_user():
     return app.send_static_file('EverCharge-GM-User-Guide.pdf')
 
+
 @app.route('/signupsteps')
 def signupsteps():
     return app.send_static_file('EverCharge-sheet-signup-3steps.pdf')
+
+
+@app.route('/install-ev002')
+def ev002_installation_manual():
+    return app.send_static_file('InstallSpecsEV002.pdf')
 
 
 @app.errorhandler(404)
