@@ -282,6 +282,11 @@ def ev002_installation_manual():
     return app.send_static_file('InstallSpecsEV002.pdf')
 
 
+@app.route('/install-ev002-80A')
+def ev002_80A_installation_manual():
+    return app.send_static_file('InstallSpecsEV002-80A.pdf')
+
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
