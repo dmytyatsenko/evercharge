@@ -142,7 +142,7 @@ def webinar():
 
 @app.route('/careers')
 def careers():
-    return redirect('https://www.indeed.com/cmp/Evercharge-1')
+    return render_template('careers.html')
 
 @app.route('/installspecsev001')
 def install_specs_ev001():
