@@ -27,16 +27,8 @@
 
     {% include 'blocks/1c_evermeter.html' %}
 
-    {% include 'blocks/1c_receipt.html' %}
-    
-    <div class="half-and-half paddin-half-right">
-      <div class="half-and-half-img desktop-img">
-        <div class="half-right-wrapper" >
-          <img class="image-shadow-right half-left-image-width" src="{{ url_for('static', filename='images/save-money.png') }}" alt="">
-          <p><span>EverCharge</span> Facilitates 400% More Stations per $1M</p>
-        </div>
-      </div>
-      {% include 'blocks/1c_svme.html' %}
+    <div style="padding-bottom: 0px;">
+          {% include 'blocks/1c_receipt.html' %}
     </div>
 
     <div class="half-and-half paddin-half-right">
@@ -59,6 +51,7 @@
         </div>
       </div>
     </div>
+
     <div class="half-and-half paddin-half-right">
       <div class="half-and-half-img desktop-img">
         <div class="half-right-wrapper tech-extensive-padding">
