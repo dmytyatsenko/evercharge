@@ -8,9 +8,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-9 col-md-7">
+                        </br>
+                        </br>
+                        </br>
                         <h2>Why EverCharge</h2>
+                        </br>
                         <div class="ec-video-wrap">
-                            <iframe src="https://www.youtube.com/embed/8fpj8MhywaU" frameborder="0" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/DL9KjDeMo9g" frameborder="0" allowfullscreen></iframe>
                             </video>
                         </div>
                     </div>
@@ -22,7 +26,11 @@
                                 <input name="granularField" id="granularField" type="hidden">
                                 <fieldset class="ec-fieldset">
                                     <div class="col-sm-12">
+                                        </br>
+                                        </br>
+                                        </br>
                                         <h2>{% block form_name %}Get Your Quote Today{% endblock %}</h2>
+                                        </br>
                                         <p><small>Connect with one of our experts by telling us a little about yourself.</small></p>
                                         <p data-href="{{ url_for('static', filename='inc/tab00.html') }}" class="active pull-left">
                                             <input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1" id="customer_type_ev">
@@ -73,26 +81,26 @@
                     <div class="col-sm-3">
                         <div class="ec-stretch-border-top">
                             <h4>Installation</h4>
-                            <p>Our hardware is installed by a certified electrician</p>
+                            <p style="line-height: 20px;">Our hardware is installed by a certified electrician</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="ec-stretch-border-top">
                             <h4>On-Site Evaluation</h4>
-                            <p>Our preferred electricians conducts on-site evaluation</p>
+                            <p style="line-height: 20px;">Our preferred electricians conducts on-site evaluation</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="ec-stretch-border-top">
                             <h4>Gain Building &amp; HOA Approval*</h4>
-                            <p>We work with management and customer to gain approval
+                            <p style="line-height: 20px;">We work with management and customer to gain approval
                             <br />*For apartments and condominiums only</p>
                         </div>
                     </div>
                     <div class="col-sm-3">
                         <div class="ec-stretch-border-top">
                             <h4>On-going Service and Support</h4>
-                            <p>No matter what happens EverCharge provides 24/7 on-site maintenance, service, &amp; support</p>
+                            <p style="line-height: 20px;">No matter what happens EverCharge provides 24/7 on-site maintenance, service, &amp; support</p>
                         </div>
                     </div>
                 </div>
@@ -104,7 +112,7 @@
                     <h2>SmartPower</h2>
                     <div class="row">
                         <div class="col-sm-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-9">
-                            <img src="{{ url_for('static', filename='images/smartpower-800.png') }}" class="img-responsive" />
+                            <img src="{{ url_for('static', filename='images/car-frame.png') }}" class="img-responsive" />
                         </div>
                     </div>
                     <div class="row">
@@ -171,13 +179,13 @@
                     <div class="col-sm-offset-1 col-sm-5 col-md-offset-0 col-md-6">
                         <div class="ec-stretch-lt-teal">
                             <h4 class="ec-teal">Savings</h4>
-                            <p>EverCharge saves properties thousands on install costs by maximizing the building's current infrastructure</p>
+                            <p style="line-height: 20px;">EverCharge saves properties thousands on install costs by maximizing the building's current infrastructure</p>
                         </div>
                     </div>
                     <div class="col-sm-5 col-md-6">
                         <div class="ec-stretch-lt-teal">
                             <h4 class="ec-teal">Increase Property Value</h4>
-                            <p>Adding electric vehicle stations adds value and desirability</p>
+                            <p style="line-height: 20px;">Adding electric vehicle stations adds value and desirability</p>
                         </div>
                     </div>
                 </div>
@@ -206,39 +214,9 @@
                 </div>
             </div>
         </div>
-        <div class="ec-stretch-lt-teal ec-mini-form">
-            <div class="container">
-                <form action="{{ url_for('thank_you') }}" method='post' class="validate-form">
-                    <input name="lead_source" value="campaign-letscharge" type="hidden">
-                    <input name="adwordsField" id='adwordsField' type="hidden">
-                    <input name="granularField" id="granularField" type="hidden">
-                    <fieldset>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h2>Get a Quote</h2>
-                            </div>
-                            <div class="holder">
-                                <div class="col-xs-12 col-sm-3">
-                                    <div class="form-group">
-                                        <input name="quote_name" type="text" class="form-control required" id="label1" placeholder="Name*" autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-3">
-                                    <div class="form-group">
-                                        <input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-3">
-                                    <input type="submit" value="Submit &#8594;" class="g-recaptcha ec-button-teal-border block">
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
-        </div>
+
     </div>
 {% endblock %}
 
-{% block quote_form %}
-{% endblock %}
+
+
