@@ -13,6 +13,22 @@
       <p>EverCharge maximizes existing building infrastructure to make adding EVs easy and affordable.</p>
     </div>
 
+    {% with hide_learn_more=True, imageUrl='images/car-frame.png' %}
+        {% include 'blocks/1b_smart_power.html' %}
+    {% endwith %}
+    
+    {% include 'blocks/1d_evse_installation.html' %}
+
+    
+
+    {% include 'blocks/1e_mesh_network.html' %}
+
+    {% include 'blocks/1c_evse.html' %}
+
+    {% include 'blocks/1c_evermeter.html' %}
+
+    {% include 'blocks/1c_receipt.html' %}
+    
     <div class="half-and-half paddin-half-right">
       <div class="half-and-half-img desktop-img">
         <div class="half-right-wrapper" >
@@ -52,20 +68,6 @@
       </div>
       {% include 'blocks/1c_extensive.html' %}
     </div>
-
-    {% include 'blocks/1d_evse_installation.html' %}
-
-    {% with hide_learn_more=True, imageUrl='images/car-frame.png' %}
-        {% include 'blocks/1b_smart_power.html' %}
-    {% endwith %}
-    
-    {% include 'blocks/1c_receipt.html' %}
-
-    {% include 'blocks/1e_mesh_network.html' %}
-
-    {% include 'blocks/1c_evse.html' %}
-
-    {% include 'blocks/1c_evermeter.html' %}
   </div>
 </section>
 {% endblock %}
