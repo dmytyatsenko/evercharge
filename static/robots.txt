@@ -27,7 +27,6 @@ Disallow: /optima
 Disallow: /pilot
 Disallow: /potrero-case-study
 Disallow: /preferred
-Disallow: /signup
 Disallow: /tesla
 Disallow: /tesla-marketing
 Disallow: /thankyou

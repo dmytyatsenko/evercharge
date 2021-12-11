@@ -142,15 +142,16 @@ def webinar():
 
 @app.route('/careers')
 def careers():
-    return redirect('https://www.indeed.com/cmp/Evercharge-1')
+    return render_template('careers.html')
 
 @app.route('/installspecsev001')
 def install_specs_ev001():
-    return app.send_static_file('InstallSpecsFullEV001.pdf')
+    return app.send_static_file('InstallSpecsFullev001.pdf')
 
+@app.route('/installspecsfull')
 @app.route('/installspecsev002')
 def install_specs_ev002():
-    return app.send_static_file('InstallSpecsFullEV002.pdf')
+    return app.send_static_file('E140-1018.pdf')
 
 @app.route('/co')
 def company_overview():
@@ -261,16 +262,19 @@ def tesla_marketing_sheet():
 def device_breakdown():
     return app.send_static_file('EverCharge-Device-Breakdown.pdf')
 
-
-@app.route('/userguide')
-def user_guide():
+@app.route('/gm-user')
+@app.route('/userguideev001')
+def user_guide_ev001():
     return app.send_static_file('EverCharge-User-Guide.pdf')
 
+@app.route('/userguide')
+@app.route('/userguideev002')
+def user_guide_ev002():
+    return app.send_static_file('userguide-ev002.pdf')
 
-@app.route('/gm-user')
-def gm_user():
-    return app.send_static_file('EverCharge-GM-User-Guide.pdf')
-
+@app.route('/userguideev002cardless')
+def user_guide_ev002_cardless():
+    return app.send_static_file('userguide-cardless-ev002.pdf')
 
 @app.route('/signupsteps')
 def signupsteps():

@@ -12,12 +12,12 @@
       <div class="green-box inner-top-green">
         <div class="green-content">
           <h2>Commercial</h2>
-          <p>Scalable, fully managed charging solutions for fleets or<br>workplaces</p>
+          <p>Scalable, fully managed charging solutions for fleets or <br>workplaces</p>
         </div>
       </div>
       <div class="content-area inner-content-area">
         <div class="content-wrapper">
-          <h2>The Perfect Solution For EV<br> Charging at Any Location</h2>
+ <!--          <h2>The Perfect Solution For EV<br> Charging at Any Location</h2> -->
           <p>Maximize existing building infrastructure to make adding EVs to your workplace or fleet easy and affordable.</p>
           <p>EverCharge’s Fleet Management tools enable organizations to be entirely hands off or provide granular<br> controls to manage charging schedules, prioritization and more with real time reporting.</p>
         </div>
@@ -39,7 +39,7 @@
                 <p><span>EverCharge</span> Web Dashboard</p>
               </div>
             </div>
-            <p>With EverCharge’s Management Dashboard Fleet Administrators have access to real time charging statuses, health reports, alerts and system prioritizations to easily manage fleet charging.</p>
+            <p>With EverCharge’s Management Dashboard, fleet administrators have access to real time charging statuses, health reports, alerts and system prioritizations to easily manage fleet charging.</p>
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@
               <li>Facility Assessment and Installation Design</li>
             </ul>
 
-            <p>Our team assists commercial customers with site assessment and design to meet their needs. Regardless if &nbsp;&nbsp; it’s Level 2 or Level 3 charging, our team is experienced in the use cases and can correctly model each option for customers to determine the best solution within their operating budget.</p>
+            <p>Our team assists commercial customers with site assessment and design to meet their needs. Regardless if it’s Level 2 or Level 3 charging, our team is experienced in the use cases and can correctly model each option for customers to determine the best solution within their operating budget.</p>
           </div>
         </div>
       </div>
@@ -92,6 +92,7 @@
           </div>
         </div>
       </div>
+      
       {% with imageUrl='images/smartt.png' %}
         {% include 'blocks/1b_smart_power.html' %}
       {% endwith %}
@@ -112,7 +113,7 @@
               </div>
             </div>
             <p>Eliminates expensive load studies and because electrical panels are designed to support the peak anticipated load of the building, there is significant unutilized power when large appliances and other electrical loads are not in full use.</p>
-            <p>Infrastructure may only reach peak utilization for a few minutes once a day, week or month. The rest of the time the full electrical capacity is simply unused. This also can be used to reduce demand charges while increased EV charging capacity.</p>
+            <p>Infrastructure may only reach peak utilization for a few minutes once a day, week or month. The rest of the time the full electrical capacity is simply unused. This also can be used to reduce demand charges while increasing EV charging capacity.</p>
           </div>
         </div>
       </div>
@@ -155,9 +156,9 @@
                 <img src="{{ url_for('static', filename='images/metrics.png') }}" alt="">
               </div>
             </div>
-            <p class="sustain-padding">Capitalize on sustainability and efficiency reporting for your business. With ability to view reports by facility, vehicle or driver extensive reporting metrics include:</p>
+            <p class="sustain-padding">Capitalize on sustainability and efficiency reporting for your business, with ability to view reports by facility, vehicle or driver. Extensive reporting metrics include:</p>
             <ul class="Fleet">
-              <li>C02 / GreenHouse Gas Reduction</li>
+              <li>C02 / Greenhouse Gas Reduction</li>
               <li>Low Carbon Fuel Standard Credits</li>
               <li>Fuel Cost Saving EV vs, ICE</li>
             </ul>
@@ -174,15 +175,24 @@
       <div class="half-and-half full-width paddin-half-left">
         <div class="half-and-half-text">
           <div class="half-right-wrapper">
-            <h3>User Management</h3>
-            <p>Critical to provide the correct prioritization, billing or usage experience regardless if its business or personal use EverCharge supports all available authentication methods for additional control.</p>
-
-            <ul class="Fleet">
-              <li>Driver RFID</li>
-              <li>Automated Vehicle (ISO 15118)</li>
-              <li>Anonymized ID from a 3rd party</li>
-              <li>Phone App</li>
-            </ul>
+            <h3>User Management and Authentication</h3>
+            <p>Critical to providing the correct prioritization, billing or usage experience. EverCharge supports many different types of authentication methods for additional control over the charging system.</p>
+            <div>
+              <div>
+                <ul class="Fleet" style="width: 30%; float: left;">
+                  <li>RFID cards</li>              
+                  <li>Remote APIs</li>
+                  <li>QR Codes</li>
+                </ul>
+              </div>
+              <div>
+                <ul class="Fleet" style="width: 50%; float: left;">
+                  <li>Automated Vehicle Authentication (ISO 15118)</li>
+                  <li>Phone App</li>
+                  <li>Web App</li>                  
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
