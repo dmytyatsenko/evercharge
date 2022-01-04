@@ -1,12 +1,15 @@
 # -*- encoding: utf-8 -*-
+from datetime import datetime
+import pytz
 import os
+import requests
+
 from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
 import geoip2.database
 from itsdangerous import want_bytes, Signer, BadData
 from nutshell import NutshellAPI
 from six.moves.urllib.parse import urlparse
-import requests
 
 
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
@@ -25,8 +28,30 @@ class GuessCountryFromIP(object):
             pass
         return self.app(environ, start_response)
 
-application = Flask(__name__, static_url_path='')
-app = application
+
+DEFAULT_TIMEZONE = pytz.timezone('America/Los_Angeles')
+
+
+def localize_timestamp(timestamp, timezone=DEFAULT_TIMEZONE):
+    """
+    Localizes given timestamp to the given timezone
+    :param datetime timestamp:
+    :param pytz.timezone timezone:
+    :return: datetime Localized timestamp
+    """
+    if timestamp and timezone:
+        if timestamp.tzinfo is None:
+            timestamp = timezone.localize(timestamp)
+        else:
+            timestamp = timestamp.astimezone(tz=timezone)
+
+    return timestamp
+
+
+app = Flask(__name__, static_url_path='')
+app.jinja_env.globals.update({
+    'now': lambda: localize_timestamp(datetime.utcnow().replace(tzinfo=pytz.utc)),
+})
 app.wsgi_app = GuessCountryFromIP(app.wsgi_app)
 
 # Put 'country' into every template.
