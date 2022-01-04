@@ -48,7 +48,8 @@ def localize_timestamp(timestamp, timezone=DEFAULT_TIMEZONE):
     return timestamp
 
 
-app = Flask(__name__, static_url_path='')
+application = Flask(__name__, static_url_path='')
+app = application
 app.jinja_env.globals.update({
     'now': lambda: localize_timestamp(datetime.utcnow().replace(tzinfo=pytz.utc)),
 })
