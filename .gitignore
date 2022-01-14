@@ -17,5 +17,4 @@ source
 .Python
 bin/
 include/
-lib/
 list/
