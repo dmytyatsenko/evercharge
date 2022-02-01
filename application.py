@@ -424,6 +424,9 @@ def smart_power():
 def faqs():
     return render_template("faqs.html")
 
+@app.route('/privacy', methods=['POST', 'GET'])
+def privacy():
+    return render_template("privacy.html")
 
 @app.route('/commercial', methods=['POST', 'GET'])
 def commercial():
