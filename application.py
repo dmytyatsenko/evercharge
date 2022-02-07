@@ -15,6 +15,9 @@ from six.moves.urllib.parse import urlparse
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
 
 
+DASHBOARD_URL = 'https://dashboard.evercharge.com'
+
+
 class GuessCountryFromIP(object):
     def __init__(self, app):
         self.app = app
@@ -327,7 +330,7 @@ def page_not_found(e):
 ################
 @app.route('/login')
 def customer_login():
-    return redirect('https://dashboard.evercharge.net/login')
+    return redirect(f'{DASHBOARD_URL}/login')
 
 
 ##################
@@ -478,12 +481,12 @@ def evercharge_signup():
     route_endpoint = request.path
     if route_endpoint in ['/Signup', '/signup']:
         route_endpoint = '/new-customer-signup'
-    return redirect('https://dashboard.evercharge.net/signup{}'.format(route_endpoint))
+    return redirect(f'{DASHBOARD_URL}/signup{route_endpoint}')
 
 
 @app.route('/dell')
 def dell_signup():
-    return redirect('https://dashboard.evercharge.net/signup/dell')
+    return redirect(f'{DASHBOARD_URL}/signup/dell')
 
 
 @app.route('/tesla', methods=['POST', 'GET'])
@@ -723,17 +726,17 @@ def more_about_you():
 
 @app.route('/charge', methods=['GET'])
 def redirect_to_dashboard_charge():
-    return redirect('https://dashboard.evercharge.net/charge')
+    return redirect(f'{DASHBOARD_URL}/charge')
 
 
 @app.route('/charge/<connector_code>', methods=['GET'])
 def redirect_to_dashboard_charge_connector(connector_code):
-    return redirect('https://dashboard.evercharge.net/charge/{}'.format(connector_code))
+    return redirect(f'{DASHBOARD_URL}/charge/{connector_code}')
 
 
 @app.route('/charge/<connector_code>/charging-stats', methods=['GET'])
 def redirect_to_dashboard_charging_stats(connector_code):
-    return redirect('https://dashboard.evercharge.net/charge/{}/charging-stats'.format(connector_code))
+    return redirect(f'{DASHBOARD_URL}/charge/{connector_code}/charging-stats')
 
 
 if __name__ == '__main__':
