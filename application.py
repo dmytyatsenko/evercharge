@@ -122,8 +122,9 @@ app.config['RECAPTCHA_SECRET_KEY'] = RECAPTCHA_SECRET_KEY = '6LcZ5h8UAAAAABShpha
 
 @app.before_request
 def redirect_www_to_non_www():
-    if request.headers.get('Host', '') == 'www.evercharge.net':
-        return redirect('https://evercharge.net' + request.path, code=301)
+    host = request.headers.get('Host', '')
+    if host == 'www.evercharge.net' or host == 'www.evercharge.com':
+        return redirect('https://evercharge.com' + request.path, code=301)
 
 
 @app.after_request
@@ -131,7 +132,7 @@ def check_referrer(response):
     source_cookie = request.cookies.get(SOCIAL_SOURCE_COOKIE)
     if source_cookie is None:
         if request.referrer:
-            if not request.referrer.startswith('https://evercharge.net'):
+            if not request.referrer.startswith('https://evercharge.com'):
                 url = urlparse(request.referrer)
                 if 'google.com' in url.hostname and 'plus.google.com' not in url.hostname:
                     response.set_cookie(SOCIAL_SOURCE_COOKIE, value=GOOGLE_SOURCE)
@@ -149,7 +150,7 @@ def check_referrer(response):
 def check_adwords(response):
     adwords_cookie = request.cookies.get(ADWORDS_COOKIE)
     if adwords_cookie is None and request.referrer:
-        if not request.referrer.startswith('https://evercharge.net'):
+        if not request.referrer.startswith('https://evercharge.com'):
             url = urlparse(request.referrer)
             if 'www.googleadservices.com' in url.hostname:
                 response.set_cookie(ADWORDS_COOKIE, value='1')
