@@ -128,7 +128,7 @@ class NetSuiteConnection(BaseNetSuiteConnection):
         last_name = None
         if is_person:
             company_name = None
-            split_name = name.rsplit(' ', 1)
+            split_name = name.strip().rsplit(' ', 1)
             first_name, last_name = split_name if len(split_name) > 1 else (split_name[0], '-')
         else:
             company_name = name
