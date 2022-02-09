@@ -111,6 +111,29 @@ NS_TOKEN_SECRET = os.environ.get('NS_TOKEN_SECRET', '')
 
 
 class NetSuiteConnection(BaseNetSuiteConnection):
+    LEAD_SOURCES = {
+        'get_your_quote': {
+            'name': '"Get Your Quote" evercharge.net',
+            'internalId': '10430',
+        },
+        'connect_with': {
+            'name': '"Connect with" evercharge.net',
+            'internalId': '10431',
+        },
+        'electrician': {
+            'name': 'evercharge.net/electrician',
+            'internalId': '10432',
+        },
+        'new_customer': {
+            'name': 'dashboard.evercharge.net/signup/new-cust',
+            'internalId': '10433',
+        },
+        'building_contact': {
+            'name': '	dashboard.evercharge.net/building',
+            'internalId': '10434',
+        },
+    }
+
     @staticmethod
     def connect():
         return NetSuiteConnection(
@@ -123,7 +146,7 @@ class NetSuiteConnection(BaseNetSuiteConnection):
         )
 
     @staticmethod
-    def new_lead(name='', phone='', email='', is_person=True):
+    def new_lead(name='', phone='', email='', is_person=True, lead_source=None):
         first_name = None
         last_name = None
         if is_person:
@@ -173,10 +196,7 @@ class NetSuiteConnection(BaseNetSuiteConnection):
             'stage': '_lead',
             'representingSubsidiary': {},
             'monthlyClosing': {},
-            'leadSource': {
-                'name': 'evercharge.com Web Lead',
-                'internalId': '10427',
-            },
+            'leadSource': NetSuiteConnection.LEAD_SOURCES.get(lead_source, None),
         }
 
     def get_lead(self, lead_id):
@@ -468,7 +488,7 @@ def electrician_thank_you():
         contact['phone'] = phone
 
     nc = NetSuiteConnection.connect()
-    new_lead = nc.new_lead(name=company_name, phone=phone, email=email, is_person=False)
+    new_lead = nc.new_lead(name=company_name, phone=phone, email=email, is_person=False, lead_source='electrician')
     new_lead['comments'] = '\n'.join([new_lead['comments'], f'Company Address: {area}'])
 
     new_lead_id = nc.save_lead(new_lead)
@@ -557,12 +577,12 @@ def tesla_page():
 
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
-    return _thank_you(request.form)
+    return _thank_you(request.form, lead_source='get_your_quote')
 
 
 @app.route('/signup-thankyou', methods=['POST', 'GET'])
 def thank_you_from_dashboard():
-    return _thank_you(request.form, dashboard_redirect=True)
+    return _thank_you(request.form, dashboard_redirect=True, lead_source='new_customer')
 
 
 @app.route('/dell-thankyou', methods=['POST', 'GET'])
@@ -578,10 +598,10 @@ def dell_thank_you():
     zip = request_form.pop('quote_zip', '')
     request_form['quote_mailing_address'] = '{}\n{} {}'.format(address, city, zip)
 
-    return _thank_you(request_form)
+    return _thank_you(request_form, lead_source='new_customer')
 
 
-def _thank_you(request_form, dashboard_redirect=False):
+def _thank_you(request_form, dashboard_redirect=False, lead_source=None):
     if not dashboard_redirect:
         if request.method == 'GET' or not is_human():
             return redirect('/')
@@ -615,7 +635,7 @@ def _thank_you(request_form, dashboard_redirect=False):
         no_final_form = bool(request_form.get('no_final_form'))
 
         nc = NetSuiteConnection.connect()
-        new_lead = nc.new_lead(name=name, phone=phone, email=email, is_person=is_person)
+        new_lead = nc.new_lead(name=name, phone=phone, email=email, is_person=is_person, lead_source=lead_source)
         if parking_spot:
             lead_notes.append(f'Parking Spot #: {parking_spot}')
 
