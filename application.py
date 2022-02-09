@@ -222,6 +222,7 @@ class NetSuiteConnection(BaseNetSuiteConnection):
         lead['comments'] = '\n'.join([lead.get('comments', ''), more_comments])
         nc.save_lead(lead)
 
+
 @app.before_request
 def redirect_www_to_non_www():
     if request.headers.get('Host', '') == 'www.evercharge.net':
@@ -489,7 +490,7 @@ def electrician_thank_you():
 
     nc = NetSuiteConnection.connect()
     new_lead = nc.new_lead(name=company_name, phone=phone, email=email, is_person=False, lead_source='electrician')
-    new_lead['comments'] = '\n'.join([new_lead['comments'], f'Company Address: {area}'])
+    new_lead['comments'] = '\n'.join([new_lead.get('comments', ''), f'Company Address: {area}'])
 
     new_lead_id = nc.save_lead(new_lead)
 
@@ -649,14 +650,15 @@ def _thank_you(request_form, dashboard_redirect=False, lead_source=None):
         phone = None
         no_final_form = True
 
-    return render_template("thank_you.html",
-                           newLeadId=signed_lead_id,
-                           # contactId=new_lead_id,
-                           note=note,
-                           phone=phone,
-                           no_final_form=no_final_form,
-                           dashboard_redirect=dashboard_redirect
-                            )
+    return render_template(
+        "thank_you.html",
+        newLeadId=signed_lead_id,
+        # contactId=new_lead_id,
+        note=note,
+        phone=phone,
+        no_final_form=no_final_form,
+        dashboard_redirect=dashboard_redirect,
+    )
 
 
 def is_human():
