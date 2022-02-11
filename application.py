@@ -146,15 +146,23 @@ class NetSuiteConnection(BaseNetSuiteConnection):
         )
 
     @staticmethod
-    def new_lead(name='', phone='', email='', is_person=True, lead_source=None):
-        first_name = None
-        last_name = None
+    def new_lead(name='', phone='', email='', address=None, is_person=True, lead_source=None):
         if is_person:
-            company_name = None
+            company_name = '-'
             split_name = name.strip().rsplit(' ', 1)
             first_name, last_name = split_name if len(split_name) > 1 else (split_name[0], '-')
         else:
             company_name = name
+            first_name = '-'
+            last_name = '-'
+
+        address_book_list = {}
+        if address is not None:
+            address_book_list = {
+                'addressbook': [{
+                    'addressbookAddress': address,
+                }],
+            }
 
         return {
             'companyName': company_name,
@@ -162,7 +170,7 @@ class NetSuiteConnection(BaseNetSuiteConnection):
             'lastName': last_name,
             'phone': phone,
             'email': email,
-            'addressbookList': {},
+            'addressbookList': address_book_list,
             'externalId': 'New Lead {}'.format(datetime.utcnow().isoformat()),
             'isPerson': is_person,
             'customForm': {
