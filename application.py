@@ -148,6 +148,7 @@ class NetSuiteConnection(BaseNetSuiteConnection):
             consumer_secret=NS_CONSUMER_SECRET,
             token_key=NS_TOKEN_KEY,
             token_secret=NS_TOKEN_SECRET,
+            caching=False,
             page_size=1000,
         )
 
