@@ -103,17 +103,11 @@ ADWORDS_COOKIE = '_adwords_cookie'
 app.config['RECAPTCHA_SITE_KEY'] = RECAPTCHA_SITE_KEY = '6LcZ5h8UAAAAAK1C4CuWYWvNC-Up5c2O-i1hS0mj'
 app.config['RECAPTCHA_SECRET_KEY'] = RECAPTCHA_SECRET_KEY = '6LcZ5h8UAAAAABShpha6eS9KWaVuDekFAskme_6K'
 
-# NS_ACCOUNT = os.environ.get('NS_ACCOUNT', '')
-# NS_CONSUMER_KEY = os.environ.get('NS_CONSUMER_KEY', '')
-# NS_CONSUMER_SECRET = os.environ.get('NS_CONSUMER_SECRET', '')
-# NS_TOKEN_KEY = os.environ.get('NS_TOKEN_KEY', '')
-# NS_TOKEN_SECRET = os.environ.get('NS_TOKEN_SECRET', '')
-
-NS_ACCOUNT = '5830703'
-NS_CONSUMER_KEY = 'fa2f4f49283d54a5a93dea9db61e0bc1dac6dbdc3113bbba2ef241acb0b4eace'
-NS_CONSUMER_SECRET = 'ddb9bfc9ab1816b4f47852db4ba9b28f57401948ab8e4a405e44e216a2af3274'
-NS_TOKEN_KEY = '646e64192cdef7d4fa892df4e0413ea932aa53d56954f63b91600559e35d2816'
-NS_TOKEN_SECRET = 'dca79129dcb450784a33285b7a65f6fe4bf50367ee5b6d88f925ab4b19ece029'
+NS_ACCOUNT = os.environ.get('NS_ACCOUNT', '')
+NS_CONSUMER_KEY = os.environ.get('NS_CONSUMER_KEY', '')
+NS_CONSUMER_SECRET = os.environ.get('NS_CONSUMER_SECRET', '')
+NS_TOKEN_KEY = os.environ.get('NS_TOKEN_KEY', '')
+NS_TOKEN_SECRET = os.environ.get('NS_TOKEN_SECRET', '')
 
 
 class NetSuiteConnection(BaseNetSuiteConnection):
