@@ -4,12 +4,13 @@ import pytz
 import os
 import requests
 
-from flask import Flask, render_template, request, redirect, url_for
-from flask_assets import Environment, Bundle
 import geoip2.database
 from itsdangerous import want_bytes, Signer, BadData
-from nutshell import NutshellAPI
 from six.moves.urllib.parse import urlparse
+from netsuitesdk import NetSuiteConnection as BaseNetSuiteConnection
+
+from flask import Flask, render_template, request, redirect, url_for
+from flask_assets import Environment, Bundle
 
 
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
@@ -81,23 +82,9 @@ js = Bundle('js/bootstrap-formhelpers-phone.js',
             'js/difficulties.js',
             'js/parallax.js',
             'js/smoothscroll.js',
-            'js/nutshell-adwords.js',
             filters='jsmin', output='js/gen/packed.js')
 assets.register('js_all', js)
 
-
-# Nutshell client configuration
-NUTSHELL_USERNAME = 'jason@evercharge.net'
-NUTSHELL_API_KEY = '91bd928f9b1cf611b758d15e44849227c7d46389'
-nutshell_client = NutshellAPI(NUTSHELL_USERNAME, NUTSHELL_API_KEY)
-
-NUTSHELL_SOURCES = {source['name']: source['id'] for source in nutshell_client.findSources()}
-
-
-WEB_SIGNUP_SOURCE = NUTSHELL_SOURCES['Web Signup']
-EV_OWNER_SOURCE_ID = NUTSHELL_SOURCES['Web - EV Owner']
-HOA_SOURCE_ID = NUTSHELL_SOURCES['Web - HOA/PM']
-LETS_CHARGE_CAMPAIGN = NUTSHELL_SOURCES['Adwords Campaign /letscharge']
 GOOGLE_SOURCE = 'Google'
 TWITTER_SOURCE = 'Twitter'
 ONLINE_PUBLICATION_SOURCE = 'Online Publications'
@@ -115,6 +102,159 @@ ADWORDS_COOKIE = '_adwords_cookie'
 # Google Recaptcha
 app.config['RECAPTCHA_SITE_KEY'] = RECAPTCHA_SITE_KEY = '6LcZ5h8UAAAAAK1C4CuWYWvNC-Up5c2O-i1hS0mj'
 app.config['RECAPTCHA_SECRET_KEY'] = RECAPTCHA_SECRET_KEY = '6LcZ5h8UAAAAABShpha6eS9KWaVuDekFAskme_6K'
+
+NS_ACCOUNT = os.environ.get('NS_ACCOUNT', '')
+NS_CONSUMER_KEY = os.environ.get('NS_CONSUMER_KEY', '')
+NS_CONSUMER_SECRET = os.environ.get('NS_CONSUMER_SECRET', '')
+NS_TOKEN_KEY = os.environ.get('NS_TOKEN_KEY', '')
+NS_TOKEN_SECRET = os.environ.get('NS_TOKEN_SECRET', '')
+
+
+class NetSuiteConnection(BaseNetSuiteConnection):
+    LEAD_SOURCES = {
+        'get_your_quote': {
+            'name': '"Get Your Quote" evercharge.net',
+            'internalId': '10430',
+        },
+        'connect_with': {
+            'name': '"Connect with" evercharge.net',
+            'internalId': '10431',
+        },
+        'electrician': {
+            'name': 'evercharge.net/electrician',
+            'internalId': '10432',
+        },
+        'new_customer': {
+            'name': 'dashboard.evercharge.net/signup/new-cust',
+            'internalId': '10433',
+        },
+        'building_contact': {
+            'name': '	dashboard.evercharge.net/building',
+            'internalId': '10434',
+        },
+    }
+
+    @staticmethod
+    def connect():
+        return NetSuiteConnection(
+            account=NS_ACCOUNT,
+            consumer_key=NS_CONSUMER_KEY,
+            consumer_secret=NS_CONSUMER_SECRET,
+            token_key=NS_TOKEN_KEY,
+            token_secret=NS_TOKEN_SECRET,
+            caching=False,
+            page_size=1000,
+        )
+
+    @staticmethod
+    def new_lead(name='', phone='', email='', address=None, is_person=True, lead_source=None, stage='lead'):
+        if is_person:
+            company_name = '-'
+            split_name = name.strip().rsplit(' ', 1)
+            first_name, last_name = split_name if len(split_name) > 1 else (split_name[0], '-')
+        else:
+            company_name = name
+            first_name = '-'
+            last_name = '-'
+
+        address_book_list = {}
+        if address is not None:
+            address_book_list = {
+                'addressbook': [{
+                    'addressbookAddress': address,
+                }],
+            }
+
+        output = {
+            'companyName': company_name,
+            'firstName': first_name,
+            'lastName': last_name,
+            'phone': phone,
+            'email': email,
+            'addressbookList': address_book_list,
+            'externalId': 'New Lead {}'.format(datetime.utcnow().isoformat()),
+            'isPerson': is_person,
+            'customForm': {
+                'name': 'Standard Customer Form',
+                'internalId': '-2',
+            },
+            # 'entityStatus': {
+            #     'name': 'LEAD-0 Open',
+            #     'internalId': '19',
+            # },
+            # 'entityStatus': {
+            #     'name': 'PROSPECT-3 In Discussion',
+            #     'internalId': '8',
+            # },
+            'isInactive': False,
+            'subsidiary': {
+                'name': 'Evercharge, Inc.',
+                'internalId': '1',
+            },
+            'currency': {
+                'name': 'USD',
+                'internalId': '1',
+            },
+            'shipComplete': False,
+            'taxable': True,
+            'giveAccess': False,
+            'accessRole': {
+                'name': 'Customer Center',
+                'internalId': '14',
+            },
+            'receivablesAccount': {
+                'name': 'Use System Preference',
+                'internalId': '-10',
+            },
+            # 'stage': '_lead',
+            # 'stage': '_prospect',
+            'representingSubsidiary': {},
+            'monthlyClosing': {},
+            'leadSource': NetSuiteConnection.LEAD_SOURCES.get(lead_source, None),
+        }
+
+        if stage == 'lead':
+            output['stage'] = '_lead'
+            output['entityStatus'] = {
+                'name': 'LEAD-0 Open',
+                'internalId': '19',
+            }
+        elif stage == 'prospect':
+            output['stage'] = '_prospect'
+            output['entityStatus'] = {
+                'name': 'PROSPECT-3 In Discussion',
+                'internalId': '8',
+            }
+        else:
+            output['stage'] = '_customer'
+            output['entityStatus'] = {
+                'name': 'CUSTOMER-9 Closed Won',
+                'internalId': '13',
+            }
+        return output
+
+    def get_lead(self, lead_id):
+        output = self.customers._serialize(self.customers.get(internalId=lead_id))
+        new_lead_keys = self.new_lead().keys()
+        return {key: output[key] for key in new_lead_keys}
+
+    def save_lead(self, lead):
+        lead['customForm'] = {
+            'name': 'Standard Customer Form',
+            'internalId': '-2',
+        }
+        lead['representingSubsidiary'] = {}
+        lead['monthlyClosing'] = {}
+        netsuite_response = self.customers.post(lead)
+        if netsuite_response:
+            return netsuite_response.get('internalId', None)
+
+    @staticmethod
+    def append_to_comments(lead_id, more_comments):
+        nc = NetSuiteConnection.connect()
+        lead = nc.get_lead(lead_id)
+        lead['comments'] = '\n'.join([lead.get('comments', ''), more_comments])
+        nc.save_lead(lead)
 
 
 @app.before_request
@@ -371,43 +511,25 @@ def electrician_thank_you():
     name = request.form.get('quote_name')
     if name.lower() == 'electrician test':
         return render_template("thank_you.html")
-    company = request.form.get('quote_company_name')
+    company_name = request.form.get('quote_company_name')
     area = request.form.get('quote_area')
     phone = request.form.get('quote_phone', None)
     email = request.form.get('quote_email')
-    tag = request.form.get('adwordsField', None)
-    gran = request.form.get('granularField')
+    # tag = request.form.get('adwordsField', None)
+    # gran = request.form.get('granularField')
 
     contact = dict(name=name, email=email)
     if phone:
         contact['phone'] = phone
 
-    account = nutshell_client.newAccount(
-        account=dict(name=company, address=[{'address_1': area, 'country': 'US'}]))
-    new_contact = nutshell_client.newContact(contact=contact)
-    contact_id = new_contact['id']
+    nc = NetSuiteConnection.connect()
+    new_lead = nc.new_lead(name=company_name, phone=phone, email=email, is_person=False, lead_source='electrician')
+    new_lead['comments'] = '\n'.join([new_lead.get('comments', ''), f'Company Address: {area}'])
 
-    external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
-    external_source = NUTSHELL_SOURCES.get(external_source)
-    sources = [{'id': WEB_SIGNUP_SOURCE}]
-    if external_source is not None:
-        sources.append({'id': external_source})
-    new_lead = nutshell_client.newLead(
-        lead=dict(contacts=[{'id': contact_id}],
-                  primaryAccount={'id': account['id']},
-                  sources=sources))
-    new_lead_id = new_lead['id']
-    lead_tags = []
-    if tag:
-        lead_tags.append(tag)
-        lead_tags.append(gran)
-    adwords_cookie = request.cookies.get(ADWORDS_COOKIE)
-    if adwords_cookie == '1':
-        lead_tags.append('Adwords')
-    if lead_tags:
-        nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
+    new_lead_id = nc.save_lead(new_lead)
+
     signed_lead_id = singer.sign(str(new_lead_id))
-    return render_template("thank_you.html", newLeadId=signed_lead_id, contactId=contact_id)
+    return render_template("thank_you.html", newLeadId=signed_lead_id)
 
 
 @app.route('/electrician')
@@ -493,12 +615,12 @@ def tesla_page():
 
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
-    return _thank_you(request.form)
+    return _thank_you(request.form, lead_source='get_your_quote')
 
 
 @app.route('/signup-thankyou', methods=['POST', 'GET'])
 def thank_you_from_dashboard():
-    return _thank_you(request.form, dashboard_redirect=True)
+    return _thank_you(request.form, dashboard_redirect=True, lead_source='new_customer')
 
 
 @app.route('/dell-thankyou', methods=['POST', 'GET'])
@@ -514,10 +636,10 @@ def dell_thank_you():
     zip = request_form.pop('quote_zip', '')
     request_form['quote_mailing_address'] = '{}\n{} {}'.format(address, city, zip)
 
-    return _thank_you(request_form)
+    return _thank_you(request_form, lead_source='new_customer')
 
 
-def _thank_you(request_form, dashboard_redirect=False):
+def _thank_you(request_form, dashboard_redirect=False, lead_source=None):
     if not dashboard_redirect:
         if request.method == 'GET' or not is_human():
             return redirect('/')
@@ -533,9 +655,9 @@ def _thank_you(request_form, dashboard_redirect=False):
             note = request_form.get('quote_notes')
             lead_notes = [note if note else "No Customer Note"]
             customer_type = request_form.get('customer_type')
-            source = EV_OWNER_SOURCE_ID if customer_type == 'EV Driver' else HOA_SOURCE_ID
+            is_person = customer_type == 'EV Driver'
         else:
-            source = EV_OWNER_SOURCE_ID
+            is_person = True
 
         mailing_address = request_form.get('quote_mailing_address')
         parking_spot = request_form.get('quote_parking_space', '')
@@ -546,59 +668,34 @@ def _thank_you(request_form, dashboard_redirect=False):
             lead_notes.append(building_name)
         phone = phone if phone else None
 
-        tag = request_form.get('adwordsField', None)
-        gran = request_form.get('granularField')
+        # tag = request_form.get('adwordsField', None)
+        # gran = request_form.get('granularField')
         no_final_form = bool(request_form.get('no_final_form'))
 
-        new_contact = nutshell_client.newContact(contact=dict(name=name, email=email, phone=phone))
-        contact_id = new_contact['id']
-
-        external_source = request.cookies.get(SOCIAL_SOURCE_COOKIE)
-        external_source = NUTSHELL_SOURCES.get(external_source)
-        if external_source is not None:
-            sources = [{'id': x} for x in (source, external_source)]
-        elif request_form.get('lead_source') == 'campaign-letscharge':
-            sources = [{'id': LETS_CHARGE_CAMPAIGN}]
-        else:
-            sources = [{'id': source}]
-
-        # Parking Spot #
-        lead = dict(contacts=[{'id': contact_id}],
-                    sources=sources,
-                    note=lead_notes)
+        nc = NetSuiteConnection.connect()
+        new_lead = nc.new_lead(name=name, phone=phone, email=email, is_person=is_person, lead_source=lead_source)
         if parking_spot:
-            # Lead custom field
-            # List of all custom fields name can be retrieved using client
-            # nutshell_client.findCustomFields()
-            lead['customFields'] = {}
-            lead['customFields']['Parking Spot #'] = parking_spot
-        new_lead = nutshell_client.newLead(lead=lead)
-        new_lead_id = new_lead['id']
-        lead_tags = []
-        if tag:
-            lead_tags.append(tag)
-            lead_tags.append(gran)
-        adwords_cookie = request.cookies.get(ADWORDS_COOKIE)
-        if adwords_cookie == '1':
-            lead_tags.append('Adwords')
-        if lead_tags:
-            nutshell_client.editLead(lead_id=new_lead_id, lead=dict(tags=lead_tags), rev="REV")
-        signed_lead_id = singer.sign(want_bytes(str(new_lead_id)))
+            lead_notes.append(f'Parking Spot #: {parking_spot}')
+
+        new_lead['comments'] = '\n'.join(lead_notes)
+
+        new_lead_id = nc.save_lead(new_lead)
+        signed_lead_id = singer.sign(want_bytes(str(new_lead_id))) if new_lead_id else None
     else:
         signed_lead_id = None
-        contact_id = None
         note = None
         phone = None
         no_final_form = True
 
-    return render_template("thank_you.html",
-                           newLeadId=signed_lead_id,
-                           contactId=contact_id,
-                           note=note,
-                           phone=phone,
-                           no_final_form=no_final_form,
-                           dashboard_redirect=dashboard_redirect
-                            )
+    return render_template(
+        "thank_you.html",
+        newLeadId=signed_lead_id,
+        # contactId=new_lead_id,
+        note=note,
+        phone=phone,
+        no_final_form=no_final_form,
+        dashboard_redirect=dashboard_redirect,
+    )
 
 
 def is_human():
@@ -639,6 +736,8 @@ def survey_pilot():
 
 def _get_lead_id(form_key='lead_id'):
     encrypted_lead_id = request.form.get(form_key)
+    if encrypted_lead_id and encrypted_lead_id.startswith("b'"):
+        encrypted_lead_id = encrypted_lead_id[2:-1]
     if encrypted_lead_id:
         try:
             lead_id = singer.unsign(encrypted_lead_id)
@@ -652,9 +751,7 @@ def referred_customer():
     lead_id = _get_lead_id()
     if lead_id:
         reference = request.form.get('reference')
-        nutshell_client.editLead(leadId=lead_id,
-                                 rev='REV_IGNORE',
-                                 lead=dict(customFields={'Additional Notes': reference}))
+        NetSuiteConnection.append_to_comments(lead_id, f'Additional Notes: {reference}')
     return "OK"
 
 
@@ -663,9 +760,7 @@ def auto_dealer_contact():
     lead_id = _get_lead_id()
     if lead_id:
         current_auto_dealer_contact = request.form.get('auto_dealer_contact')
-        nutshell_client.editLead(leadId=lead_id,
-                                 rev='REV_IGNORE',
-                                 lead=dict(customFields={'Auto Dealer Contact': current_auto_dealer_contact}))
+        NetSuiteConnection.append_to_comments(lead_id, f'Auto Dealer Contact: {current_auto_dealer_contact}')
     return "OK"
 
 
@@ -674,9 +769,7 @@ def update_lead_notes():
     lead_id = _get_lead_id()
     if lead_id:
         notes = request.form.get('notes')
-        nutshell_client.editLead(leadId=lead_id,
-                                 rev='REV_IGNORE',
-                                 lead=dict(note=notes))
+        NetSuiteConnection.append_to_comments(lead_id, f'Notes: {notes}')
     return "OK"
 
 
@@ -688,35 +781,33 @@ def follow_up():
 @app.route('/nutshell/more-about-you', methods=['POST'])
 def more_about_you():
     lead_id = _get_lead_id()
-    contact_id = request.form.get('contact_id')
 
-    contact = {
-        'phone': request.form.get('phone'),
-        'address': [{
-            'name': request.form.get('building_name'),
-            'address_1': request.form.get('address'),
-            'city': request.form.get('city'),
-            'state': request.form.get('state'),
-            'postalCode': request.form.get('zip'),
-        }],
+    phone = request.form.get('phone')
+    address = {
+        'addressee': request.form.get('building_name'),
+        'addr1': request.form.get('address'),
+        'city': request.form.get('city'),
+        'state': request.form.get('state'),
+        'zip': request.form.get('zip'),
     }
-
-    if contact_id:
-        nutshell_client.editContact(contactId=contact_id, rev='REV_IGNORE', contact=contact)
 
     if lead_id:
         notes = request.form.get('notes') + '\n\n' + '|'.join([':'.join((key, request.form.get(key))) for key in ('property_type', 'reference', 'unit_number')])
-        nutshell_client.editLead(leadId=lead_id, rev='REV_IGNORE', lead=dict(note=notes))
+        nc = NetSuiteConnection.connect()
+        lead = nc.get_lead(lead_id)
+        if phone:
+            lead['phone'] = phone
+        lead['addressbookList'] = {
+            'addressbook': [{
+                'addressbookAddress': address,
+            }]
+        }
 
-        custom_fields = {}
         parking_space = request.form.get('parking_space')
         if parking_space:
-            custom_fields['Parking Spot #'] = parking_space
+            lead['comments'] = '\n'.join([lead.get('comments', ''), f'Parking Spot #: {parking_space}', notes])
 
-        nutshell_client.editLead(
-            leadId=lead_id,
-            rev='REV_IGNORE',
-            lead=dict(customFields=custom_fields))
+        nc.save_lead(lead)
 
     return "OK"
 
