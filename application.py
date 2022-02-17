@@ -16,6 +16,9 @@ from flask_assets import Environment, Bundle
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
 
 
+DASHBOARD_URL = 'https://dashboard.evercharge.com'
+
+
 class GuessCountryFromIP(object):
     def __init__(self, app):
         self.app = app
@@ -259,8 +262,9 @@ class NetSuiteConnection(BaseNetSuiteConnection):
 
 @app.before_request
 def redirect_www_to_non_www():
-    if request.headers.get('Host', '') == 'www.evercharge.net':
-        return redirect('https://evercharge.net' + request.path, code=301)
+    host = request.headers.get('Host', '')
+    if host == 'www.evercharge.net' or host == 'www.evercharge.com':
+        return redirect('https://evercharge.com' + request.path, code=301)
 
 
 @app.after_request
@@ -268,7 +272,7 @@ def check_referrer(response):
     source_cookie = request.cookies.get(SOCIAL_SOURCE_COOKIE)
     if source_cookie is None:
         if request.referrer:
-            if not request.referrer.startswith('https://evercharge.net'):
+            if not request.referrer.startswith('https://evercharge.com'):
                 url = urlparse(request.referrer)
                 if 'google.com' in url.hostname and 'plus.google.com' not in url.hostname:
                     response.set_cookie(SOCIAL_SOURCE_COOKIE, value=GOOGLE_SOURCE)
@@ -286,7 +290,7 @@ def check_referrer(response):
 def check_adwords(response):
     adwords_cookie = request.cookies.get(ADWORDS_COOKIE)
     if adwords_cookie is None and request.referrer:
-        if not request.referrer.startswith('https://evercharge.net'):
+        if not request.referrer.startswith('https://evercharge.com'):
             url = urlparse(request.referrer)
             if 'www.googleadservices.com' in url.hostname:
                 response.set_cookie(ADWORDS_COOKIE, value='1')
@@ -467,7 +471,7 @@ def page_not_found(e):
 ################
 @app.route('/login')
 def customer_login():
-    return redirect('https://dashboard.evercharge.net/login')
+    return redirect(f'{DASHBOARD_URL}/login')
 
 
 ##################
@@ -600,12 +604,12 @@ def evercharge_signup():
     route_endpoint = request.path
     if route_endpoint in ['/Signup', '/signup']:
         route_endpoint = '/new-customer-signup'
-    return redirect('https://dashboard.evercharge.net/signup{}'.format(route_endpoint))
+    return redirect(f'{DASHBOARD_URL}/signup{route_endpoint}')
 
 
 @app.route('/dell')
 def dell_signup():
-    return redirect('https://dashboard.evercharge.net/signup/dell')
+    return redirect(f'{DASHBOARD_URL}/signup/dell')
 
 
 @app.route('/tesla', methods=['POST', 'GET'])
@@ -814,17 +818,17 @@ def more_about_you():
 
 @app.route('/charge', methods=['GET'])
 def redirect_to_dashboard_charge():
-    return redirect('https://dashboard.evercharge.net/charge')
+    return redirect(f'{DASHBOARD_URL}/charge')
 
 
 @app.route('/charge/<connector_code>', methods=['GET'])
 def redirect_to_dashboard_charge_connector(connector_code):
-    return redirect('https://dashboard.evercharge.net/charge/{}'.format(connector_code))
+    return redirect(f'{DASHBOARD_URL}/charge/{connector_code}')
 
 
 @app.route('/charge/<connector_code>/charging-stats', methods=['GET'])
 def redirect_to_dashboard_charging_stats(connector_code):
-    return redirect('https://dashboard.evercharge.net/charge/{}/charging-stats'.format(connector_code))
+    return redirect(f'{DASHBOARD_URL}/charge/{connector_code}/charging-stats')
 
 
 if __name__ == '__main__':

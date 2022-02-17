@@ -1,7 +1,7 @@
 User-agent: *
 
 Allow: /
-Sitemap : https://evercharge.net/sitemap.xml
+Sitemap : https://evercharge.com/sitemap.xml
 
 User-agent: *
 Disallow: /akoya
