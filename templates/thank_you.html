@@ -91,7 +91,6 @@
               <form action="{{ url_for('follow_up') }}" class='get-quote validate-form' id='existing_customer'
               method='post' name='existing_customer' target='submit_frame'>
                   <input id="lead_id" name='lead_id' type='hidden' value='{{ newLeadId }}'>
-                  <input name='contact_id' type='hidden' value='{{ contactId }}'>
                   {% if no_final_form %}
                       <div class="row">
                           <div class="col-md-offset-2 col-md-8">
@@ -115,8 +114,6 @@
                               <form action="{{ url_for('more_about_you') }}" class='validate-form form-horizontal quote-form' id='reference_form'
                               method='post' name='reference_form' target='submit_frame'>
                                   <input name='lead_id' type='hidden' value='{{ newLeadId }}'>
-                                  <input name='contact_id' type='hidden' value='{{ contactId }}'>
-
                                   <div class="form-group">
                                       <label for="phone" class="col-sm-4 control-label">Phone</label>
                                       <div class="custom-quote-col col-sm-8">
