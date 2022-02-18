@@ -289,29 +289,44 @@
         <!-- BING ADS SCRIPTS -->
         <script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"5061401"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
         <noscript><img src="//bat.bing.com/action/0?ti=5061401&Ver=2" height="0" width="0" style="display:none; visibility: hidden;" alt=""/></noscript>
-    	{%- endif -%}
-		{%- block custom_scripts -%}{%- endblock -%}
-		
-		<script type = "text/javascript">
-			$(document).ready(function(){
-					$(".nav-bttn").click(function () {
-							$(".primary-nav").fadeToggle();
-					});
-			});
+    {%- endif -%}
+    {%- block custom_scripts -%}{%- endblock -%}
 
-			$(document).ready(function() {
-				$(".tab_content").hide();
-				$("ul.quote-tabs li:first").addClass("active").show();
-				$(".tab_content:first").show(); 
-				$("ul.quote-tabs li").click(function() {
-					$("ul.quote-tabs li").removeClass("active"); 
-					$(this).addClass("active"); 
-					$(".tab_content").hide(); 
-					var activeTab = $(this).find("a").attr("href"); 
-					$(activeTab).fadeIn(); 
-					return false;
-				});
-			});
-		</script>
+    <script type = "text/javascript">
+        $(document).ready(function() {
+            $(".nav-bttn").click(function () {
+                $(".primary-nav").fadeToggle();
+            });
+
+            $(".tab_content").hide();
+            $("ul.quote-tabs li:first").addClass("active").show();
+            $(".tab_content:first").show();
+            $("ul.quote-tabs li").click(function() {
+                $("ul.quote-tabs li").removeClass("active");
+                $(this).addClass("active");
+                $(".tab_content").hide();
+                var activeTab = $(this).find("a").attr("href");
+                $(activeTab).fadeIn();
+                return false;
+            });
+            $('form').on('submit', function(e) {
+                let $form = $(this);
+                let submit_button =  $form.find('input[type="submit"]');
+
+                if(!submit_button.is(":disabled")) {
+                    submit_button.prop('disabled', true);
+                    submit_button.attr('old_val', submit_button.val());
+                    submit_button.val('Your request is being processed');
+
+                    function clear_button() {
+                        submit_button.prop('disabled', false);
+                        submit_button.val(submit_button.attr('old_val'));
+                    }
+
+                    setTimeout(clear_button, 3000);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
