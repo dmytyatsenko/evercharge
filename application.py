@@ -16,7 +16,7 @@ from flask_assets import Environment, Bundle
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
 
 
-DASHBOARD_URL = 'https://dashboard.evercharge.net'
+DASHBOARD_URL = 'https://dashboard.evercharge.com'
 
 
 class GuessCountryFromIP(object):
