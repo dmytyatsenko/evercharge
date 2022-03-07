@@ -97,7 +97,6 @@ HOSTNAME_TO_SOURCE = {
     'linkedin.com': 'LinkedIn',
     'reddit.com': 'Reddit',
     'cleantechnica.com': ONLINE_PUBLICATION_SOURCE,
-    'www.1776.vc': ONLINE_PUBLICATION_SOURCE
 }
 SOCIAL_SOURCE_COOKIE = '_social_source'
 ADWORDS_COOKIE = '_adwords_cookie'
