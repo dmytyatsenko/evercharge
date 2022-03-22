@@ -3,6 +3,8 @@ branch-defaults:
     environment: WebMain-38-env
   master:
     environment: WebMain-38-env
+  master-scaleable:
+    environment: Webmain-staging38-env
   redesign:
     environment: webMain-env-stage
   web-103-transfer-blog-to-suburl:
