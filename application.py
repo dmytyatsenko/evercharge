@@ -324,7 +324,7 @@ def install_specs_ev002():
 
 @app.route('/co')
 def company_overview():
-    return app.send_static_file('doc-company-overview-2021.pdf')
+    return app.send_static_file('doc-company-overview.pdf')
 
 
 @app.route('/fo')
