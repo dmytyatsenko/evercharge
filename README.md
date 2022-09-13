@@ -1,3 +1,24 @@
+# Deployment Notes
+
+## URLs
+
+- prod: https://evercharge.com (Webmain-38-env)
+- staging: https://web.staging.evercharge.com (Webmain-staging38-env)
+
+## Load balancer listeners
+
+**Listeners for port 443 are created manually** so that prod and staging can use distinct certs via ACM. This is done using the ElasticBeanstalk environment configuration in the Load Balancer section.
+
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/67282/189787043-89dce047-e9b1-4112-a843-f5ff38fe9f97.png">
+
+The production-only .net to .com redirect is also done manually, using the Load Balancer Listener Rules page:
+
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/67282/189786347-f771ccf0-58cc-4dec-be6f-4a18ac54c87b.png">
+
+HTTP to HTTPS redirection is still done for both envs in `.ebextensions/alb-http-to-https-redirection.config`.
+
+NOTE: This is a temporary solution as a stop gap until we can redeploy this with Pulumi using EB in the account based envs. Both staging and prod are deployed to the prod-aio account as of 2022-09-12.
+
 # Run locally
 
 ## Quick Start
