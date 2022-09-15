@@ -1,4 +1,27 @@
-# Deployment Notes
+# evercharge.com
+
+## Deploying with the `eb cli`
+
+Prerequisites
+- AWS SSO credentials
+- aws-vault and profile for prod-aio
+- eb cli
+- docker desktop or cli
+
+The eb cli can be installed natively, or use the devtools `docker-compose` in the infra repo, in the tools folder.
+
+    $ git checkout <branch>
+    $ aws-vault exec <profile>
+    $ cd src/infra/tools
+    $ docker compose run devtools
+
+    🟠 infra tools -> cd web
+    🟠 infra tools -> eb list
+
+    WebMain-38-env
+    * Webmain-staging38-env
+
+    🟠 infra tools -> eb deploy
 
 ## URLs
 
