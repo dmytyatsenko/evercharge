@@ -12,12 +12,9 @@ from netsuitesdk import NetSuiteConnection as BaseNetSuiteConnection
 from flask import Flask, render_template, request, redirect, url_for
 from flask_assets import Environment, Bundle
 
-
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
 
-
 DASHBOARD_URL = 'https://dashboard.evercharge.com'
-
 
 class GuessCountryFromIP(object):
     def __init__(self, app):
@@ -32,9 +29,7 @@ class GuessCountryFromIP(object):
             pass
         return self.app(environ, start_response)
 
-
 DEFAULT_TIMEZONE = pytz.timezone('America/Los_Angeles')
-
 
 def localize_timestamp(timestamp, timezone=DEFAULT_TIMEZONE):
     """
@@ -50,7 +45,6 @@ def localize_timestamp(timestamp, timezone=DEFAULT_TIMEZONE):
             timestamp = timestamp.astimezone(tz=timezone)
 
     return timestamp
-
 
 application = Flask(__name__, static_url_path='')
 app = application
@@ -71,9 +65,9 @@ singer = Signer(app.config['SECRET_KEY'])
 
 assets = Environment(app)
 sass = Bundle(
-        'sass/all.sass', 
-        'sass/new.sass', 
-        filters='sass', 
+        'sass/all.sass',
+        'sass/new.sass',
+        filters='sass',
         output='css/sass.css')
 css_all = Bundle(sass, filters='cssmin', output='css/css_all.css')
 assets.register('css_all', css_all)
@@ -110,7 +104,6 @@ NS_CONSUMER_KEY = os.environ.get('NS_CONSUMER_KEY', '')
 NS_CONSUMER_SECRET = os.environ.get('NS_CONSUMER_SECRET', '')
 NS_TOKEN_KEY = os.environ.get('NS_TOKEN_KEY', '')
 NS_TOKEN_SECRET = os.environ.get('NS_TOKEN_SECRET', '')
-
 
 class NetSuiteConnection(BaseNetSuiteConnection):
     LEAD_SOURCES = {
@@ -258,13 +251,11 @@ class NetSuiteConnection(BaseNetSuiteConnection):
         lead['comments'] = '\n'.join([lead.get('comments', ''), more_comments])
         nc.save_lead(lead)
 
-
 @app.before_request
 def redirect_www_to_non_www():
     host = request.headers.get('Host', '')
     if host == 'www.evercharge.net' or host == 'www.evercharge.com':
         return redirect('https://evercharge.com' + request.path, code=301)
-
 
 @app.after_request
 def check_referrer(response):
@@ -284,7 +275,6 @@ def check_referrer(response):
                             response.set_cookie(SOCIAL_SOURCE_COOKIE, value=source)
     return response
 
-
 @app.after_request
 def check_adwords(response):
     adwords_cookie = request.cookies.get(ADWORDS_COOKIE)
@@ -296,7 +286,6 @@ def check_adwords(response):
             else:
                 response.set_cookie(ADWORDS_COOKIE, value='0')
     return response
-
 
 ################
 # STATIC FILES #
@@ -326,7 +315,6 @@ def install_specs_ev002():
 def company_overview():
     return app.send_static_file('doc-company-overview.pdf')
 
-
 @app.route('/fo')
 def fleet_overview():
     return app.send_static_file('doc-fleet-overview.pdf')
@@ -334,7 +322,6 @@ def fleet_overview():
 @app.route('/connectortypes')
 def connector_types():
     return app.send_static_file('EverCharge-Connector-Types.pdf')
-
 
 @app.route('/smartpower-overview')
 def smartpower_overview():
@@ -348,61 +335,49 @@ def soma_case_study():
 def brannan_case_study():
     return app.send_static_file('MUD_Brannan_final.pdf')
 
-
 @app.route('/corporate-campus-case-study')
 def corp_campus_case_study():
     return app.send_static_file('EverCharge-Property-Case-Study-CorporateCampus.pdf')
-
 
 @app.route('/potrero-case-study')
 def potrero_case_study():
     return app.send_static_file('EverCharge-Property-Case-Study-Potrero.pdf')
 
-
 @app.route('/evercharge-case-study-1')
 def property_case_study_one():
     return app.send_static_file('EverCharge-Property-Case-Study-1.pdf')
-
 
 @app.route('/evercharge-case-study-2')
 def property_case_study_two():
     return app.send_static_file('EverCharge-Property-Case-Study-2.pdf')
 
-
 @app.route('/evercharge-case-study-3')
 def property_case_study_three():
     return app.send_static_file('EverCharge-Property-Case-Study-3.pdf')
-
 
 @app.route('/evercharge-case-study-4')
 def property_case_study_four():
     return app.send_static_file('EverCharge-Property-Case-Study-4.pdf')
 
-
 @app.route('/evercharge-case-study-5')
 def property_case_study_five():
     return app.send_static_file('EverCharge-Property-Case-Study-5.pdf')
-
 
 @app.route('/evercharge-case-study-6')
 def property_case_study_six():
     return app.send_static_file('EverCharge-Property-Case-Study-6.pdf')
 
-
 @app.route('/evercharge-case-study-7')
 def property_case_study_seven():
     return app.send_static_file('EverCharge-Property-Case-Study-7.pdf')
-
 
 @app.route('/evercharge-case-study-8')
 def property_case_study_eight():
     return app.send_static_file('EverCharge-Property-Case-Study-8.pdf')
 
-
 @app.route('/evercharge-case-study-9')
 def property_case_study_nine():
     return app.send_static_file('EverCharge-Property-Case-Study-9.pdf')
-
 
 @app.route('/datasheet')
 def data_sheet():
@@ -416,16 +391,13 @@ def ctep_data_sheet():
 def install_info():
     return app.send_static_file('InstallSpecsShort.pdf')
 
-
 @app.route('/preferred')
 def preferred_electricians():
     return app.send_static_file('preferred.pdf')
 
-
 @app.route('/tesla-marketing')
 def tesla_marketing_sheet():
     return app.send_static_file('EverCharge-Tesla-Marketing-Handout.pdf')
-
 
 @app.route('/device')
 def device_breakdown():
@@ -449,21 +421,17 @@ def user_guide_ev002_cardless():
 def signupsteps():
     return app.send_static_file('EverCharge-sheet-signup-3steps.pdf')
 
-
 @app.route('/install-ev002')
 def ev002_installation_manual():
     return app.send_static_file('InstallSpecsEV002.pdf')
-
 
 @app.route('/install-ev002-80A')
 def ev002_80A_installation_manual():
     return app.send_static_file('InstallSpecsEV002-80A.pdf')
 
-
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('404.html'), 404
-
 
 ################
 # ADMIN ROUTES #
@@ -471,7 +439,6 @@ def page_not_found(e):
 @app.route('/login')
 def customer_login():
     return redirect(f'{DASHBOARD_URL}/login')
-
 
 ##################
 # WEBSITE ROUTES #
@@ -481,31 +448,25 @@ def evercharge():
     url = True
     return render_template("index.html", url=url)
 
-
 @app.route('/why-evercharge', methods=['GET'])
 def why_evercharge():
     return render_template('learn-more.html')
-
 
 @app.route('/learnmore', methods=['GET'])
 def learn_more():
     return redirect(url_for('why_evercharge'), 302)
 
-
 @app.route('/ev-owner', methods=['POST', 'GET'])
 def ev_owner():
     return redirect('/')
-
 
 @app.route('/building-management', methods=['POST', 'GET'])
 def hoa_property_manager():
     return redirect('/')
 
-
 @app.route('/aboutus', methods=['POST', 'GET'])
 def about_us():
     return render_template("about-us.html")
-
 
 @app.route('/electrician/thank-you', methods=['POST', 'GET'])
 def electrician_thank_you():
@@ -534,16 +495,13 @@ def electrician_thank_you():
     signed_lead_id = singer.sign(str(new_lead_id))
     return render_template("thank_you.html", newLeadId=signed_lead_id)
 
-
 @app.route('/electrician')
 def electrician_lead():
     return render_template("electrician.html")
 
-
 @app.route('/smartpower', methods=['POST', 'GET'])
 def smart_power():
     return render_template("smartpower.html")
-
 
 @app.route('/faqs', methods=['POST', 'GET'])
 def faqs():
@@ -557,36 +515,29 @@ def privacy():
 def commercial():
     return render_template("commercial.html")
 
-
 @app.route('/multifamily', methods=['POST', 'GET'])
 def multifamily():
     return render_template('multifamily.html')
-
 
 @app.route('/hardware', methods=['POST', 'GET'])
 def hardware():
     return render_template('hardware.html')
 
-
 @app.route('/tech', methods=['POST', 'GET'])
 def tech():
     return render_template('technology.html')
-
 
 @app.route('/letscharge', methods=['POST', 'GET'])
 def campaign_letscharge():
     return render_template('campaign-letscharge.html')
 
-
 @app.route('/press', methods=['POST', 'GET'])
 def press_page():
     return render_template('press.html')
 
-
 @app.route('/properties')
 def evercharge_properties():
     return render_template('properties.html')
-
 
 @app.route('/atwater')
 @app.route('/akoya')
@@ -605,26 +556,21 @@ def evercharge_signup():
         route_endpoint = '/new-customer-signup'
     return redirect(f'{DASHBOARD_URL}/signup{route_endpoint}')
 
-
 @app.route('/dell')
 def dell_signup():
     return redirect(f'{DASHBOARD_URL}/signup/dell')
-
 
 @app.route('/tesla', methods=['POST', 'GET'])
 def tesla_page():
     return render_template('tesla.html')
 
-
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
     return _thank_you(request.form, lead_source='get_your_quote')
 
-
 @app.route('/signup-thankyou', methods=['POST', 'GET'])
 def thank_you_from_dashboard():
     return _thank_you(request.form, dashboard_redirect=True, lead_source='new_customer')
-
 
 @app.route('/dell-thankyou', methods=['POST', 'GET'])
 def dell_thank_you():
@@ -640,7 +586,6 @@ def dell_thank_you():
     request_form['quote_mailing_address'] = '{}\n{} {}'.format(address, city, zip)
 
     return _thank_you(request_form, lead_source='new_customer')
-
 
 def _thank_you(request_form, dashboard_redirect=False, lead_source=None):
     if not dashboard_redirect:
@@ -714,7 +659,6 @@ def is_human():
         return r.json()['success'] if r.status_code == 200 else False
     return False
 
-
 ##########################
 # BUILDING SIGNUP ROUTES #
 ##########################
@@ -723,11 +667,9 @@ def is_human():
 def signup_customerguide():
     return render_template("signup-customerguide.html")
 
-
 @app.route('/gm-signup', methods=['POST', 'GET'])
 def signup_gm():
     return render_template("signup-gm.html")
-
 
 @app.route('/pilot', methods=['POST', 'GET'])
 def survey_pilot():
@@ -748,7 +690,6 @@ def _get_lead_id(form_key='lead_id'):
         except BadData as exc:
             print('[!] Cannot verify lead {0} because {1}'.format(encrypted_lead_id, exc))
 
-
 @app.route('/nutshell/reference', methods=['POST'])
 def referred_customer():
     lead_id = _get_lead_id()
@@ -756,7 +697,6 @@ def referred_customer():
         reference = request.form.get('reference')
         NetSuiteConnection.append_to_comments(lead_id, f'Additional Notes: {reference}')
     return "OK"
-
 
 @app.route('/nutshell/auto-dealer-contact', methods=['POST'])
 def auto_dealer_contact():
@@ -766,7 +706,6 @@ def auto_dealer_contact():
         NetSuiteConnection.append_to_comments(lead_id, f'Auto Dealer Contact: {current_auto_dealer_contact}')
     return "OK"
 
-
 @app.route('/nutshell/lead-notes', methods=['POST'])
 def update_lead_notes():
     lead_id = _get_lead_id()
@@ -775,11 +714,9 @@ def update_lead_notes():
         NetSuiteConnection.append_to_comments(lead_id, f'Notes: {notes}')
     return "OK"
 
-
 @app.route('/nutshell/submit', methods=['POST', 'GET'])
 def follow_up():
     return render_template('about-us.html')
-
 
 @app.route('/nutshell/more-about-you', methods=['POST'])
 def more_about_you():
@@ -814,23 +751,19 @@ def more_about_you():
 
     return "OK"
 
-
 @app.route('/charge', methods=['GET'])
 def redirect_to_dashboard_charge():
     return redirect(f'{DASHBOARD_URL}/charge')
-
 
 @app.route('/charge/<connector_code>', methods=['GET'])
 def redirect_to_dashboard_charge_connector(connector_code):
     return redirect(f'{DASHBOARD_URL}/charge/{connector_code}')
 
-
 @app.route('/charge/<connector_code>/charging-stats', methods=['GET'])
 def redirect_to_dashboard_charging_stats(connector_code):
     return redirect(f'{DASHBOARD_URL}/charge/{connector_code}/charging-stats')
 
-
 if __name__ == '__main__':
     PORT = int(os.environ.get("PORT", 9000))
-    DEBUG = True  # os.environ.get("FLASK_DEBUG", False)
+    DEBUG = os.environ.get("FLASK_DEBUG", False)
     app.run(debug=DEBUG, host="0.0.0.0", port=PORT)

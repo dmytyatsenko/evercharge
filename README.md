@@ -44,22 +44,52 @@ NOTE: This is a temporary solution as a stop gap until we can redeploy this with
 
 # Run locally
 
-## Quick Start
+## Docker Compose Quick Start
 
-1. Build the container: `docker build -t evercharge/web:latest .`
-1. Start the container: `docker run -p 9000:9000 --name web evercharge/web`
-1. Get a shell in the container: `docker exec -it web bash`
-1. Download dart-sass for your target Linux architecture (use `dpkg --print-architecture` to determine) to web root.
-    - arm: `wget https://github.com/sass/dart-sass/releases/download/1.54.7/dart-sass-1.54.7-linux-arm.tar.gz`
-    - arm64: `wget https://github.com/sass/dart-sass/releases/download/1.54.7/dart-sass-1.54.7-linux-arm64.tar.gz`
-    - x64: `wget https://github.com/sass/dart-sass/releases/download/1.54.7/dart-sass-1.54.7-linux-x64.tar.gz`
-    - ia32: `wget https://github.com/sass/dart-sass/releases/download/1.54.7/dart-sass-1.54.7-linux-ia32.tar.gz`
-1. Unpack binary: `tar -xf dart-sass-1.54.7-linux-YOURARCH.tar.gz`
-1. Symlink sass binary into `$PATH`: `ln -s /opt/web/dart-sass/sass /usr/local/bin/sass`
+> Note: Support for arm64, amd64, and x64 architectures are currently built in. If the output of `dpkg --print-architecture` (in the running container) does not emit one of those three strings, you will need to either symlink your string to an existing binary, or download a new binary. See the Dockerfile and the dart-sass folder for the template.
 
-The image is now ready to run the app: go to http://localhost:9000 in your browser.
+0. (docker rm web)
+1. docker compose build
+1. docker compose up
+1. Point a browser at http://localhost:9000
 
-TBD: hot reloading with docker compose
+## In Detail
+
+### Docker Commands
+
+Build the container:
+
+`$ docker build -t evercharge/web:latest .`
+
+Start the container:
+
+`$ docker run -p 9000:9000 --name web evercharge/web`
+
+Get a shell in the container:
+
+`$ docker exec -it web bash`
+
+### Determine dart-sass architecture
+
+Attach a shell to the container and use
+
+`$ dpkg --print-architecture`
+
+to determine your architecture. Download dart-sass for your target Linux architecture from [dart-sass Releases](https://github.com/sass/dart-sass/releases) into the `./dart-sass` directory. Create a folder that matches the architecture name and/or a symlink to the architecture string that will work for your platform.
+
+> Example: `./dart-sass/amd64` is a symlink to `./dart-sass/x64`
+
+### Symlink dart-sass binary
+
+> NOTE: this is done automatically for arm64/x64/amd64 architectures in the Dockerfile.
+
+Unpack binary (Mac Silicon example):
+
+`$ tar -xf dart-sass-1.55.0-linux-arm64.tar.gz`
+
+Symlink sass binary into the container images' path
+
+`$ ln -s /opt/web/dart-sass/$(dpkg --print-architecture)/sass /usr/local/bin/sass`
 
 ## Examples
 

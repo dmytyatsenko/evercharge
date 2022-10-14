@@ -7,6 +7,9 @@ branch-defaults:
     environment: WebMain-38-env
   master-scaleable:
     environment: Webmain-staging38-env
+  notbrain/CLOUD-230/pulumi-eb-deploy:
+    environment: webEbEnvironment
+    group_suffix: null
   redesign:
     environment: webMain-env-stage
   web-103-transfer-blog-to-suburl:
@@ -19,6 +22,7 @@ environment-defaults:
     repository: null
 global:
   application_name: web-main
+  branch: null
   default_ec2_keyname: EverChargeMaster
   default_platform: Python 3.8 running on 64bit Amazon Linux 2/3.2.0
   default_region: us-west-2
@@ -27,5 +31,6 @@ global:
   platform_name: null
   platform_version: null
   profile: null
+  repository: null
   sc: git
   workspace_type: Application

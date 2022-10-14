@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  web:
+    container_name: web
+    image: evercharge/web
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - .:/opt/web
+    ports:
+      - "${DOCKER_LOCAL_WEB_PORT:-9000}:9000"
+    networks:
+      - web
+    environment:
+      - FLASK_DEBUG=True
+      - NS_ACCOUNT
+      - NS_CONSUMER_KEY
+      - NS_CONSUMER_SECRET
+      - NS_TOKEN_KEY
+      - NS_TOKEN_SECRET
+
+networks:
+  web:
