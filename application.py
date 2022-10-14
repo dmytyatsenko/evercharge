@@ -167,7 +167,7 @@ class NetSuiteConnection(BaseNetSuiteConnection):
             'phone': phone,
             'email': email,
             'addressbookList': address_book_list,
-            'externalId': 'New Lead {}'.format(datetime.utcnow().isoformat()),
+            'externalId': 'New Lead {}'.format(email),
             'isPerson': is_person,
             'customForm': {
                 'name': 'Standard Customer Form',
