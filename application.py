@@ -162,8 +162,6 @@ class NetSuiteConnection(BaseNetSuiteConnection):
 
         output = {
             'companyName': company_name,
-            'firstName': first_name,
-            'lastName': last_name,
             'phone': phone,
             'email': email,
             'addressbookList': address_book_list,
@@ -207,6 +205,12 @@ class NetSuiteConnection(BaseNetSuiteConnection):
             'monthlyClosing': {},
             'leadSource': NetSuiteConnection.LEAD_SOURCES.get(lead_source, None),
         }
+
+        if is_person:
+            output.update({
+                'firstName': first_name,
+                'lastName': last_name,
+            })
 
         if stage == 'lead':
             output['stage'] = '_lead'
