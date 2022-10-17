@@ -622,7 +622,6 @@ def _thank_you(request_form, dashboard_redirect=False, lead_source=None):
 
         # tag = request_form.get('adwordsField', None)
         # gran = request_form.get('granularField')
-        no_final_form = bool(request_form.get('no_final_form'))
 
         nc = NetSuiteConnection.connect()
         new_lead = nc.new_lead(name=name, phone=phone, email=email, is_person=is_person, lead_source=lead_source)
@@ -637,7 +636,6 @@ def _thank_you(request_form, dashboard_redirect=False, lead_source=None):
         signed_lead_id = None
         note = None
         phone = None
-        no_final_form = True
 
     return render_template(
         "thank_you.html",
@@ -645,7 +643,6 @@ def _thank_you(request_form, dashboard_redirect=False, lead_source=None):
         # contactId=new_lead_id,
         note=note,
         phone=phone,
-        no_final_form=no_final_form,
         dashboard_redirect=dashboard_redirect,
     )
 

@@ -50,7 +50,7 @@
         <div class="green-content">
           <h2>Thank You</h2>
           <p>We'll email you shortly with the next steps</p>
-          {% if no_final_form or dashboard_redirect %}
+          {% if dashboard_redirect %}
           <a class="text-white" href="mailto:ops@evercharge.com">ops@evercharge.com</a>
           {% endif %}
         </div>
@@ -91,12 +91,6 @@
               <form action="{{ url_for('follow_up') }}" class='get-quote validate-form' id='existing_customer'
               method='post' name='existing_customer' target='submit_frame'>
                   <input id="lead_id" name='lead_id' type='hidden' value='{{ newLeadId }}'>
-                  {% if no_final_form %}
-                      <div class="row">
-                          <div class="col-md-offset-2 col-md-8">
-                          </div>
-                      </div>
-                  {% else %}
                   <div class="row">
                       <div class="col-md-offset-2 col-md-8">
                           <legend id='thankyou'>
