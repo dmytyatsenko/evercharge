@@ -182,8 +182,7 @@
                                             <div class="form-group">
                                                 <label for="comments" class="col-sm-4 control-label">Comments</label>
                                                 <div class="custom-quote-col col-sm-8">
-                                                    <textarea id="notes_text" name="notes" rows="2" class="form-control" onchange="notesSubmit()"
-                                                    data-link="{{ url_for('update_lead_notes') }}"
+                                                    <textarea id="notes_text" name="notes" rows="2" class="form-control"
                                                     autocomplete="off">
                                                         {%- if note -%}{{ note }}{%- endif -%}
                                                     </textarea>

@@ -689,35 +689,11 @@ def _get_lead_id(form_key='lead_id'):
         except BadData as exc:
             print('[!] Cannot verify lead {0} because {1}'.format(encrypted_lead_id, exc))
 
-@app.route('/nutshell/reference', methods=['POST'])
-def referred_customer():
-    lead_id = _get_lead_id()
-    if lead_id:
-        reference = request.form.get('reference')
-        NetSuiteConnection.append_to_comments(lead_id, f'Additional Notes: {reference}')
-    return "OK"
-
-@app.route('/nutshell/auto-dealer-contact', methods=['POST'])
-def auto_dealer_contact():
-    lead_id = _get_lead_id()
-    if lead_id:
-        current_auto_dealer_contact = request.form.get('auto_dealer_contact')
-        NetSuiteConnection.append_to_comments(lead_id, f'Auto Dealer Contact: {current_auto_dealer_contact}')
-    return "OK"
-
-@app.route('/nutshell/lead-notes', methods=['POST'])
-def update_lead_notes():
-    lead_id = _get_lead_id()
-    if lead_id:
-        notes = request.form.get('notes')
-        NetSuiteConnection.append_to_comments(lead_id, f'Notes: {notes}')
-    return "OK"
-
-@app.route('/nutshell/submit', methods=['POST', 'GET'])
+@app.route('/netsuite/submit', methods=['POST', 'GET'])
 def follow_up():
     return render_template('about-us.html')
 
-@app.route('/nutshell/more-about-you', methods=['POST'])
+@app.route('/netsuite/more-about-you', methods=['POST'])
 def more_about_you():
     lead_id = _get_lead_id()
 

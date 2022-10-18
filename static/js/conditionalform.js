@@ -12,39 +12,10 @@ function replaceForm() {
 }
 
 // REFERENCE AUTOSUBMIT
-var teslaOptions = document.getElementById('reference_listener');
-if (teslaOptions) {
-	teslaOptions.addEventListener('click', autoDealerCheck, false);
-	teslaOptions.addEventListener('click', referenceSubmit, false);
-}
-
-
-function autoDealerCheck()
-{
-	if (document.getElementById('auto_dealer_reference').checked){ $('#auto_dealer_contact_div').fadeIn('fast'); }
-	else {document.getElementById('auto_dealer_contact_div').style.display = 'none';}
-}
-
 function referenceSubmit()
 {
 	document.getElementById("reference_form").submit();
 }
 
-function autoDealerContactSubmit() {
-	document.getElementById("auto_dealer_contact_form").submit();}
 
-function notesSubmit() {
-	var notes = $('#notes_text');
-	var url = notes.data('link');
-	var form_data = {
-		'lead_id': $('#lead_id').val(),
-		'notes': notes.val()
-	};
 
-	$.ajax({
-		type: "POST",
-		url: url,
-		data: form_data,
-		success: function (data) {}
-	});
-}
