@@ -650,13 +650,13 @@ def insert_netsuite_lead():
     nc = NetSuiteConnection.connect()
     new_lead = nc.new_lead(name=name, phone=phone, email=email, is_person=is_person, lead_source=lead_source)
 
-    new_lead['comments'] = '\n'.join(lead_notes)
+    new_lead['comments'] = ' | '.join(lead_notes)
 
     new_lead_id = nc.save_lead(new_lead)
     signed_lead_id = singer.sign(want_bytes(str(new_lead_id))) if new_lead_id else None
 
     if signed_lead_id:
-        signed_lead_id = signed_lead_id.decode('utf-8') # decode bytes for jsonify
+        signed_lead_id = signed_lead_id.decode('utf-8')  # decode bytes for jsonify
 
     return jsonify({'new_lead_id': signed_lead_id})
 
@@ -738,18 +738,32 @@ def more_about_you():
     lead_id = _get_lead_id()
 
     phone = request.form.get('phone')
+    building_name = request.form.get('building_name')
     address = {
-        'addressee': request.form.get('building_name'),
+        'addressee': building_name,
         'addr1': request.form.get('address'),
         'city': request.form.get('city'),
         'state': request.form.get('state'),
         'zip': request.form.get('zip'),
     }
-
     if lead_id:
-        notes = request.form.get('notes') + '\n\n' + '|'.join([':'.join((key, request.form.get(key))) for key in ('property_type', 'reference', 'unit_number')])
+        notes = []
+        submitted_notes = request.form.get('notes')
+        if submitted_notes:
+            notes.append(f'Customer notes: {submitted_notes}')
+
+        if building_name:
+            notes.append(f'Site Name: {building_name}')
+
+        for key in ('property_type', 'reference', 'unit_number'):
+            value = request.form.get(key)
+            if value:
+                notes.append(f'{key}: {value}')
+
         nc = NetSuiteConnection.connect()
+
         lead = nc.get_lead(lead_id)
+
         if phone:
             lead['phone'] = phone
         lead['addressbookList'] = {
@@ -760,7 +774,13 @@ def more_about_you():
 
         parking_space = request.form.get('parking_space')
         if parking_space:
-            lead['comments'] = '\n'.join([lead.get('comments', ''), f'Parking Spot #: {parking_space}', notes])
+            notes.append(f'Parking Spot #: {parking_space}')
+
+        existing_comments = lead.get('comments', '')
+        if existing_comments:
+            notes.insert(0, existing_comments)
+
+        lead['comments'] = ' | '.join(notes)
 
         nc.save_lead(lead)
 
