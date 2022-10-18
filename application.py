@@ -574,22 +574,6 @@ def thank_you():
 def thank_you_from_dashboard():
     return _thank_you(request.form, dashboard_redirect=True, lead_source='new_customer')
 
-@app.route('/dell-thankyou', methods=['POST', 'GET'])
-def dell_thank_you():
-    request_form = request.form.copy()
-
-    first_name = request_form.pop('quote_first_name', '')
-    last_name = request_form.pop('quote_last_name', '')
-    request_form['quote_name'] = '{} {}'.format(first_name, last_name)
-
-    address = request_form.pop('quote_address', '')
-    city = request_form.pop('quote_city', '')
-    zip = request_form.pop('quote_zip', '')
-    request_form['quote_mailing_address'] = '{}\n{} {}'.format(address, city, zip)
-
-    return _thank_you(request_form, lead_source='new_customer')
-
-
 def _thank_you(request_form, dashboard_redirect=False, lead_source=None):
     note = None
     phone = None
