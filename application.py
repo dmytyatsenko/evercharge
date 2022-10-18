@@ -9,7 +9,7 @@ from itsdangerous import want_bytes, Signer, BadData
 from six.moves.urllib.parse import urlparse
 from netsuitesdk import NetSuiteConnection as BaseNetSuiteConnection
 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_assets import Environment, Bundle
 
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
@@ -483,21 +483,19 @@ def electrician_thank_you():
     area = request.form.get('quote_area')
     phone = request.form.get('quote_phone', None)
     email = request.form.get('quote_email')
+
     # tag = request.form.get('adwordsField', None)
     # gran = request.form.get('granularField')
 
-    contact = dict(name=name, email=email)
-    if phone:
-        contact['phone'] = phone
-
-    nc = NetSuiteConnection.connect()
-    new_lead = nc.new_lead(name=company_name, phone=phone, email=email, is_person=False, lead_source='electrician')
-    new_lead['comments'] = '\n'.join([new_lead.get('comments', ''), f'Company Address: {area}'])
-
-    new_lead_id = nc.save_lead(new_lead)
-
-    signed_lead_id = singer.sign(str(new_lead_id))
-    return render_template("thank_you.html", newLeadId=signed_lead_id)
+    return render_template("thank_you.html",
+                           is_person=False,
+                           lead_srouce='electrician',
+                           name=name,
+                           phone=phone,
+                           email=email,
+                           prev_notes=f'Company Address: {area}',
+                           company_name=company_name,
+                           )
 
 @app.route('/electrician')
 def electrician_lead():
@@ -591,7 +589,11 @@ def dell_thank_you():
 
     return _thank_you(request_form, lead_source='new_customer')
 
+
 def _thank_you(request_form, dashboard_redirect=False, lead_source=None):
+    note = None
+    phone = None
+    email = None
     if not dashboard_redirect:
         if request.method == 'GET' or not is_human():
             return redirect('/')
@@ -600,51 +602,63 @@ def _thank_you(request_form, dashboard_redirect=False, lead_source=None):
             return render_template("thank_you.html")
         phone = request_form.get('quote_phone', None)
         email = request_form.get('quote_email', '')
-        lead_notes = []
         note = ''
 
         if request.args.get('form') == 'quote':
             note = request_form.get('quote_notes')
-            lead_notes = [note if note else "No Customer Note"]
             customer_type = request_form.get('customer_type')
             is_person = customer_type == 'EV Driver'
         else:
             is_person = True
 
-        mailing_address = request_form.get('quote_mailing_address')
-        parking_spot = request_form.get('quote_parking_space', '')
-        if mailing_address:
-            lead_notes.append(mailing_address)
-        building_name = request_form.get('quote_building_name', '')
-        if building_name:
-            lead_notes.append(building_name)
         phone = phone if phone else None
 
         # tag = request_form.get('adwordsField', None)
         # gran = request_form.get('granularField')
 
-        nc = NetSuiteConnection.connect()
-        new_lead = nc.new_lead(name=name, phone=phone, email=email, is_person=is_person, lead_source=lead_source)
-        if parking_spot:
-            lead_notes.append(f'Parking Spot #: {parking_spot}')
-
-        new_lead['comments'] = '\n'.join(lead_notes)
-
-        new_lead_id = nc.save_lead(new_lead)
-        signed_lead_id = singer.sign(want_bytes(str(new_lead_id))) if new_lead_id else None
-    else:
-        signed_lead_id = None
-        note = None
-        phone = None
-
     return render_template(
         "thank_you.html",
-        newLeadId=signed_lead_id,
-        # contactId=new_lead_id,
+        is_person=is_person,
+        lead_source=lead_source,
+        name=name,
         note=note,
         phone=phone,
+        email=email,
         dashboard_redirect=dashboard_redirect,
+        prev_notes=note,
     )
+
+@app.route('/insert-netsuite-lead', methods=['POST', 'GET'])
+def insert_netsuite_lead():
+    is_person = request.form.get('is_person') in ['true', 'True', True]
+    lead_source = request.form.get('lead_source')
+    submitted_name = request.form.get('name')
+    email = request.form.get('email')
+    notes = request.form.get('notes')
+    phone = request.form.get('phone', None)
+    company_name = request.form.get('company_name', None)
+
+    lead_notes = []
+    if notes:
+        lead_notes.append(notes)
+
+    name = submitted_name
+    if is_person is False and company_name:
+        name = company_name
+        notes.append(f'Submitter name: {submitted_name}')
+
+    nc = NetSuiteConnection.connect()
+    new_lead = nc.new_lead(name=name, phone=phone, email=email, is_person=is_person, lead_source=lead_source)
+
+    new_lead['comments'] = '\n'.join(lead_notes)
+
+    new_lead_id = nc.save_lead(new_lead)
+    signed_lead_id = singer.sign(want_bytes(str(new_lead_id))) if new_lead_id else None
+
+    if signed_lead_id:
+        signed_lead_id = signed_lead_id.decode('utf-8') # decode bytes for jsonify
+
+    return jsonify({'new_lead_id': signed_lead_id})
 
 
 def is_human():

@@ -85,6 +85,19 @@
         </div>
         <section class="get-a-quote connect">
             <div class="container">
+                <div id="netsuite-upload-fields">
+                    <span data-name="is_person" data-value="{{ is_person }}" hidden></span>
+                    <span data-name="lead_source" data-value="{{ lead_source }}" hidden></span>
+                    <span data-name="name" data-value="{{ name }}" hidden></span>
+                    <span data-name="email" data-value="{{ email }}" hidden></span>
+                    <span data-name="notes" data-value="{{ prev_notes }}" hidden></span>
+                    {% if phone %}
+                        <span data-name="phone" data-value="{{ phone }}" hidden></span>
+                    {% endif %}
+                    {% if company_name %}
+                        <span data-name="company_name" data-value="{{ company_name }}" hidden></span>
+                    {% endif %}
+                </div>
                 <div class="get-custom-quote-wrapper thank-space">
                     <form action="{{ url_for('follow_up') }}" class='get-quote validate-form' id='existing_customer'
                     method='post' name='existing_customer' target='submit_frame'>
@@ -216,6 +229,26 @@
 
 {% block custom_scripts %}
     <script type="text/javascript" src="{{ url_for('static', filename='js/conditionalform.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            let submitted_data = {};
+            $('#netsuite-upload-fields > span').each(function () {
+                submitted_data[$(this).data('name')] = $(this).data('value');
+            });
+             $.ajax({
+                 method: 'POST',
+                 url: '{{ url_for('insert_netsuite_lead') }}',
+                 dataType: 'json',
+                 data: submitted_data,
+                 success: (response) => {
+                    let new_lead_id = response['new_lead_id'];
+                 },
+                 error: function (response) {
+                     {#window.location.reload();#}
+                 }
+             });
+        })
+    </script>
     <script type="text/javascript">
         /* <![CDATA[ */
         var google_conversion_id = 913555512;
