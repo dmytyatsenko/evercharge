@@ -252,7 +252,7 @@ class NetSuiteConnection(BaseNetSuiteConnection):
     def append_to_comments(lead_id, more_comments):
         nc = NetSuiteConnection.connect()
         lead = nc.get_lead(lead_id)
-        lead['comments'] = '\n'.join([lead.get('comments', ''), more_comments])
+        lead['comments'] = ' | '.join([lead.get('comments', ''), more_comments])
         nc.save_lead(lead)
 
 @app.before_request
