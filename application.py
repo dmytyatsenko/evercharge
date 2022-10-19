@@ -717,6 +717,10 @@ def more_about_you():
             if value:
                 notes.append(f'{key}: {value}')
 
+        parking_space = request.form.get('parking_space')
+        if parking_space:
+            notes.append(f'Parking Spot #: {parking_space}')
+
         nc = NetSuiteConnection.connect()
 
         lead = nc.get_lead(lead_id)
@@ -728,10 +732,6 @@ def more_about_you():
                 'addressbookAddress': address,
             }]
         }
-
-        parking_space = request.form.get('parking_space')
-        if parking_space:
-            notes.append(f'Parking Spot #: {parking_space}')
 
         lead['comments'] = ' | '.join(notes)
 
