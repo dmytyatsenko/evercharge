@@ -59,8 +59,8 @@
     </div>
 {% endblock %}
 
-{% if not dashboard_redirect %}
-    {% block quote_form %}
+{% block quote_form %}
+    {% if not dashboard_redirect %}
         <!-- Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
@@ -220,32 +220,35 @@
                 </div>
             </div>
         </section>
-    {% endblock %}
-{% endif %}
+    {% endif %}
+{% endblock %}
 
 {% block custom_scripts %}
     <script type="text/javascript" src="{{ url_for('static', filename='js/conditionalform.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            let submitted_data = {};
-            $('#netsuite-upload-fields > span').each(function () {
-                submitted_data[$(this).data('name')] = $(this).data('value');
-            });
-             $.ajax({
-                 method: 'POST',
-                 url: '{{ url_for('insert_netsuite_lead') }}',
-                 dataType: 'json',
-                 data: submitted_data,
-                 success: (response) => {
-                    let new_lead_id = response['new_lead_id'];
-                    $('#lead_id').val(new_lead_id);
-                    $('#final_submit_button').prop('disabled', false);
+            let dashboard_redirect = '{{ dashboard_redirect }}' === 'True';
+            if (dashboard_redirect === false) {
+                let submitted_data = {};
+                $('#netsuite-upload-fields > span').each(function () {
+                    submitted_data[$(this).data('name')] = $(this).data('value');
+                });
+                 $.ajax({
+                     method: 'POST',
+                     url: '{{ url_for('insert_netsuite_lead') }}',
+                     dataType: 'json',
+                     data: submitted_data,
+                     success: (response) => {
+                        let new_lead_id = response['new_lead_id'];
+                        $('#lead_id').val(new_lead_id);
+                        $('#final_submit_button').prop('disabled', false);
 
-                 },
-                 error: function (response) {
-                     window.location.reload();
-                 }
-             });
+                     },
+                     error: function (response) {
+                         window.location.reload();
+                     }
+                 });
+            }
         })
     </script>
     <script type="text/javascript">
