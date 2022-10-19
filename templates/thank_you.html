@@ -227,14 +227,12 @@
     <script type="text/javascript" src="{{ url_for('static', filename='js/conditionalform.js') }}"></script>
     <script type="text/javascript">
         $(document).ready(function() {
-            console.log('document ready function hit');
             let dashboard_redirect = '{{ dashboard_redirect }}' === 'True';
             if (dashboard_redirect === false) {
                 let submitted_data = {};
                 $('#netsuite-upload-fields > span').each(function () {
                     submitted_data[$(this).data('name')] = $(this).data('value');
                 });
-                console.log('submitted data:', submitted_data);
                  $.ajax({
                      method: 'POST',
                      url: '{{ url_for('insert_netsuite_lead') }}',
@@ -242,7 +240,6 @@
                      data: submitted_data,
                      success: (response) => {
                         let new_lead_id = response['new_lead_id'];
-                        console.log('success! new lead id is:', new_lead_id);
                         $('#lead_id').val(new_lead_id);
                         $('#final_submit_button').prop('disabled', false);
 

@@ -707,7 +707,7 @@ def more_about_you():
             notes.append(prev_notes)
         submitted_notes = request.form.get('notes')
         if submitted_notes:
-            notes.append(f'Customer notes: {submitted_notes}')
+            notes.append(submitted_notes)
 
         if building_name:
             notes.append(f'Site Name: {building_name}')
