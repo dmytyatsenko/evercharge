@@ -316,12 +316,13 @@
                 if(!submit_button.is(":disabled")) {
                     submit_button.prop('disabled', true);
                     submit_button.attr('old_val', submit_button.val());
-                    submit_button.val('Your request is being processed');
+                    submit_button.val('Your request is processing');
 
                     function clear_button() {
                         submit_button.prop('disabled', false);
                         submit_button.val(submit_button.attr('old_val'));
                     }
+                    setTimeout(clear_button, 1000);
                 }
             });
         });
