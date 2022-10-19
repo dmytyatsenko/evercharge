@@ -476,9 +476,8 @@ def about_us():
 def electrician_thank_you():
     if request.method == 'GET' or not is_human():
         return redirect('/')
+
     name = request.form.get('quote_name')
-    if name.lower() == 'electrician test':
-        return render_template("thank_you.html")
     company_name = request.form.get('quote_company_name')
     area = request.form.get('quote_area')
     phone = request.form.get('quote_phone', None)
@@ -581,9 +580,8 @@ def _thank_you(request_form, dashboard_redirect=False, lead_source=None):
     if not dashboard_redirect:
         if request.method == 'GET' or not is_human():
             return redirect('/')
+
         name = request_form.get('quote_name', '')
-        if name.lower() in ('driver test', 'pm test'):
-            return render_template("thank_you.html")
         phone = request_form.get('quote_phone', None)
         email = request_form.get('quote_email', '')
         note = ''
