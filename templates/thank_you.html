@@ -94,9 +94,6 @@
                     {% if phone %}
                         <span data-name="phone" data-value="{{ phone }}" hidden></span>
                     {% endif %}
-                    {% if company_name %}
-                        <span data-name="company_name" data-value="{{ company_name }}" hidden></span>
-                    {% endif %}
                 </div>
                 <div class="get-custom-quote-wrapper thank-space">
                     <form action="{{ url_for('follow_up') }}" class='get-quote validate-form' id='existing_customer'
@@ -115,6 +112,7 @@
                                         <form action="{{ url_for('more_about_you') }}" class='validate-form form-horizontal quote-form' id='reference_form'
                                         method='post' name='reference_form' target='submit_frame'>
                                             <input id="lead_id" name='lead_id' type='hidden' value=''>
+                                            <input id="prev_notes" name='prev_notes' type='hidden' value='{{ prev_notes }}'>
                                             <div class="form-group">
                                                 <label for="phone" class="col-sm-4 control-label">Phone</label>
                                                 <div class="custom-quote-col col-sm-8">

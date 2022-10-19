@@ -489,11 +489,11 @@ def electrician_thank_you():
 
     return render_template("thank_you.html",
                            is_person=False,
-                           lead_srouce='electrician',
-                           name=name,
+                           lead_source='electrician',
+                           name=company_name,
                            phone=phone,
                            email=email,
-                           prev_notes=f'Company Address: {area}',
+                           prev_notes=f'Company Address: {area} | Submitter Name: {name}',
                            company_name=company_name,
                            )
 
@@ -620,16 +620,12 @@ def insert_netsuite_lead():
     email = request.form.get('email')
     notes = request.form.get('notes')
     phone = request.form.get('phone', None)
-    company_name = request.form.get('company_name', None)
 
     lead_notes = []
     if notes:
         lead_notes.append(notes)
 
     name = submitted_name
-    if is_person is False and company_name:
-        name = company_name
-        notes.append(f'Submitter name: {submitted_name}')
 
     nc = NetSuiteConnection.connect()
     new_lead = nc.new_lead(name=name, phone=phone, email=email, is_person=is_person, lead_source=lead_source)
@@ -708,6 +704,9 @@ def more_about_you():
     }
     if lead_id:
         notes = []
+        prev_notes = request.form.get('prev_notes', '')
+        if prev_notes:
+            notes.append(prev_notes)
         submitted_notes = request.form.get('notes')
         if submitted_notes:
             notes.append(f'Customer notes: {submitted_notes}')
@@ -735,10 +734,6 @@ def more_about_you():
         parking_space = request.form.get('parking_space')
         if parking_space:
             notes.append(f'Parking Spot #: {parking_space}')
-
-        existing_comments = lead.get('comments', '')
-        if existing_comments:
-            notes.insert(0, existing_comments)
 
         lead['comments'] = ' | '.join(notes)
 
