@@ -577,6 +577,8 @@ def _thank_you(request_form, dashboard_redirect=False, lead_source=None):
     note = None
     phone = None
     email = None
+    is_person = None
+    name = None
     if not dashboard_redirect:
         if request.method == 'GET' or not is_human():
             return redirect('/')
