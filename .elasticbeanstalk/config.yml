@@ -12,6 +12,8 @@ branch-defaults:
     group_suffix: null
   redesign:
     environment: webMain-env-stage
+  tyler/fix-for-new-blog-location:
+    environment: Webmain-staging38-env
   web-103-transfer-blog-to-suburl:
     environment: webMain-env-new-blog
   web-49-enable-compression:
