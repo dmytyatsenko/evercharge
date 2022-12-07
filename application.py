@@ -3,13 +3,15 @@ from datetime import datetime
 import pytz
 import os
 import requests
+import boto3
 
 import geoip2.database
 from itsdangerous import want_bytes, Signer, BadData
 from six.moves.urllib.parse import urlparse
 from netsuitesdk import NetSuiteConnection as BaseNetSuiteConnection
+from botocore.exceptions import ClientError
 
-from flask import Flask, render_template, request, redirect, url_for, jsonify
+from flask import Flask, render_template, request, redirect, url_for, jsonify, json
 from flask_assets import Environment, Bundle
 
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
@@ -99,11 +101,24 @@ ADWORDS_COOKIE = '_adwords_cookie'
 app.config['RECAPTCHA_SITE_KEY'] = RECAPTCHA_SITE_KEY = '6Lcnk4YeAAAAAKbZ58F1hXrCpn7QXF8tmwsNX4DM'
 app.config['RECAPTCHA_SECRET_KEY'] = RECAPTCHA_SECRET_KEY = '6Lcnk4YeAAAAAJvHbAttuU4SL4h87jKQF4G1X-6m'
 
-NS_ACCOUNT = os.environ.get('NS_ACCOUNT', '')
-NS_CONSUMER_KEY = os.environ.get('NS_CONSUMER_KEY', '')
-NS_CONSUMER_SECRET = os.environ.get('NS_CONSUMER_SECRET', '')
-NS_TOKEN_KEY = os.environ.get('NS_TOKEN_KEY', '')
-NS_TOKEN_SECRET = os.environ.get('NS_TOKEN_SECRET', '')
+
+def get_secrets(secret_name):
+    # Create a Secrets Manager client
+    session = boto3.session.Session()
+    client = session.client(
+        service_name='secretsmanager',
+        region_name="us-west-2"
+    )
+
+    try:
+        get_secret_value_response = client.get_secret_value(
+            SecretId=secret_name
+        )
+    except ClientError as e:
+        # For a list of exceptions thrown, see
+        # https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
+        raise e
+    return get_secret_value_response
 
 class NetSuiteConnection(BaseNetSuiteConnection):
     LEAD_SOURCES = {
@@ -131,12 +146,17 @@ class NetSuiteConnection(BaseNetSuiteConnection):
 
     @staticmethod
     def connect():
+        environment = os.environ.get('EVERCHARGE_ENV', 'dev')
+        if environment in ['dev', 'staging']:
+            environment = 'dev'
+        secret_value_response = get_secrets(f'{environment}_netsuite_credentials')
+        secrets = json.loads(secret_value_response['SecretString'])
         return NetSuiteConnection(
-            account=NS_ACCOUNT,
-            consumer_key=NS_CONSUMER_KEY,
-            consumer_secret=NS_CONSUMER_SECRET,
-            token_key=NS_TOKEN_KEY,
-            token_secret=NS_TOKEN_SECRET,
+            account=secrets.get('NS_ACCOUNT'),
+            consumer_key=secrets.get('NS_CONSUMER_KEY'),
+            consumer_secret=secrets.get('NS_CONSUMER_SECRET'),
+            token_key=secrets.get('NS_TOKEN_KEY'),
+            token_secret=secrets.get('NS_TOKEN_SECRET'),
             caching=False,
             page_size=1000,
         )
