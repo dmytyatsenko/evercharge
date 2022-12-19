@@ -583,7 +583,7 @@ def dell_signup():
 
 @app.route('/tesla', methods=['POST', 'GET'])
 def tesla_page():
-    return render_template('tesla.html')
+    return redirect(url_for('tech'))
 
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
