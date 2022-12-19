@@ -474,7 +474,7 @@ def evercharge():
 
 @app.route('/why-evercharge', methods=['GET'])
 def why_evercharge():
-    return render_template('learn-more.html')
+    return redirect('tech')
 
 @app.route('/learnmore', methods=['GET'])
 def learn_more():
