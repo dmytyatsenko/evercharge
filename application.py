@@ -550,7 +550,7 @@ def tech():
 
 @app.route('/letscharge', methods=['POST', 'GET'])
 def campaign_letscharge():
-    return render_template('campaign-letscharge.html')
+    return redirect('tech')
 
 @app.route('/press', methods=['POST', 'GET'])
 def press_page():
