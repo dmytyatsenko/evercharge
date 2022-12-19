@@ -147,7 +147,7 @@ class NetSuiteConnection(BaseNetSuiteConnection):
     @staticmethod
     def connect():
         environment = os.environ.get('EVERCHARGE_ENV', 'dev')
-        if environment in ['dev', 'staging']:
+        if environment != 'prod':  # use testing credentials if we're not in a production environment
             environment = 'dev'
         secret_value_response = get_secrets(f'{environment}_netsuite_credentials')
         secrets = json.loads(secret_value_response['SecretString'])
