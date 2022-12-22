@@ -7,7 +7,7 @@ import { ECRClient, UntagResourceCommand } from "@aws-sdk/client-ecr";
 const config = new pulumi.Config();
 
 async function main() {
-  const target = config.get("target") || "production";
+  const target = process.env.GITHUB_REF_NAME;
 
   const secretMeta = await aws.secretsmanager.getSecret({
     name: "marketing-web",
@@ -139,7 +139,7 @@ async function main() {
         bucket: `marketing-website-logs-${target}`,
         prefix: `marketing-website-${target}`,
       },
-      name: `marketing-website-${target}`,
+      name: `marketing-website-${process.env.GITHUB_REF_NAME}`,
     });
 
     const wafassoc = new aws.wafv2.WebAclAssociation(
