@@ -34,10 +34,20 @@ jobs:
         with:
           command: stack init --non-interactive
           stack-name: evercharge/marketing-${{ github.ref_name }}
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
       - name: Pulumi Preview
         uses: pulumi/actions@v3
         with:
           command: preview
+          stack-name: evercharge/marketing-${{ github.ref_name }}
+        env:
+          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+      - name: Pulumi Destroy Stack
+        uses: pulumi/actions@v3
+        continue-on-error: true
+        with:
+          command: stack destroy --non-interactive --yes
           stack-name: evercharge/marketing-${{ github.ref_name }}
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
