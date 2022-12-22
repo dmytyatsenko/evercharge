@@ -1,48 +1,33 @@
 # evercharge.com
 
-## Deploying with the `eb cli`
+# Deployment via Pulumi
 
-Prerequisites
-- AWS SSO credentials
-- aws-vault and profile for prod-aio
-- eb cli
-- docker desktop or cli
+This repository uses a workflow/action process to deploy via pulumi.
 
-The eb cli can be installed natively, or use the devtools `docker-compose` in the infra repo, in the tools folder.
+To update or change things:
 
-    $ git checkout <branch>
-    $ aws-vault exec <profile>
-    $ cd src/infra/tools
-    $ docker compose run devtools
+Create a branch from `master`, typically something like CLOUD-1234/Some Awesome Update.
 
-    🟠 infra tools -> cd web
-    🟠 infra tools -> eb list
+Make your changes, run them locally (see below), and then push to GitHub.
 
-    WebMain-38-env
-    * Webmain-staging38-env
+From there request a merge from your branch into "develop". Once approved the workflow will update the site at [development](https://www.develop.evercharge.com). 
 
-    🟠 infra tools -> eb deploy
+> Note, the blog will always point to the "production" blog as it has its own pipeline.
 
-## URLs
+Confirm your changes and request one of the following workflows:
 
-- prod: https://evercharge.com (Webmain-38-env)
-- staging: https://web.staging.evercharge.com (Webmain-staging38-env)
-
-## Load balancer listeners
-
-**Listeners for port 443 are created manually** so that prod and staging can use distinct certs via ACM. This is done using the ElasticBeanstalk environment configuration in the Load Balancer section.
-
-<img width="800" alt="image" src="https://user-images.githubusercontent.com/67282/189787043-89dce047-e9b1-4112-a843-f5ff38fe9f97.png">
-
-The production-only .net to .com redirect is also done manually, using the Load Balancer Listener Rules page:
-
-<img width="800" alt="image" src="https://user-images.githubusercontent.com/67282/189786347-f771ccf0-58cc-4dec-be6f-4a18ac54c87b.png">
-
-HTTP to HTTPS redirection is still done for both envs in `.ebextensions/alb-http-to-https-redirection.config`.
-
-NOTE: This is a temporary solution as a stop gap until we can redeploy this with Pulumi using EB in the account based envs. Both staging and prod are deployed to the prod-aio account as of 2022-09-12.
+* If you require QA merge into "staging" which updates the [staging](https://www.staging.evercharge.com) move the ticket to QA.
+* If this is a minor change that does *not* require QA (be careful assume it always needs QA) open a PR for "master"
 
 # Run locally
+
+## Quick Note
+
+This container has been switched to Alpine and runs as ARM64 in production now. So there's no need to be concerned with architectures. If you /do/ need to know the architecture:
+
+`uname -m`
+
+Note that arm64 is also aarch64 because thats how the kernel identifies it. 
 
 ## Docker Compose Quick Start
 
@@ -68,28 +53,6 @@ Start the container:
 Get a shell in the container:
 
 `$ docker exec -it web bash`
-
-### Determine dart-sass architecture
-
-Attach a shell to the container and use
-
-`$ dpkg --print-architecture`
-
-to determine your architecture. Download dart-sass for your target Linux architecture from [dart-sass Releases](https://github.com/sass/dart-sass/releases) into the `./dart-sass` directory. Create a folder that matches the architecture name and/or a symlink to the architecture string that will work for your platform.
-
-> Example: `./dart-sass/amd64` is a symlink to `./dart-sass/x64`
-
-### Symlink dart-sass binary
-
-> NOTE: this is done automatically for arm64/x64/amd64 architectures in the Dockerfile.
-
-Unpack binary (Mac Silicon example):
-
-`$ tar -xf dart-sass-1.55.0-linux-arm64.tar.gz`
-
-Symlink sass binary into the container images' path
-
-`$ ln -s /opt/web/dart-sass/$(dpkg --print-architecture)/sass /usr/local/bin/sass`
 
 ## Examples
 
