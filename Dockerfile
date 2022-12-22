@@ -26,8 +26,8 @@ RUN chmod 777 /opt/web
 RUN mkdir -p /var/lib/nginx || exit 0 # ignore error if dir exists
 RUN chmod 777 -R /var/lib/nginx
 RUN sed -i 's/user nginx;//g' /etc/nginx/nginx.conf
-RUN sed -i 's#/var/log/nginx/error.log warn;#/dev/stderr info;#g' /etc/nginx/nginx.conf
-RUN sed -i 's/access_log/#access_log/g' /etc/nginx/nginx.conf
+RUN sed -i 's#/var/log/nginx/error.log warn;#/dev/stdout info;#g' /etc/nginx/nginx.conf
+RUN sed -i 's/\/var\/log\/nginx\/access.log main;/\/dev\/stdout main;/g' /etc/nginx/nginx.conf
 RUN echo "pid /tmp/nginx.pid;" >> /etc/nginx/nginx.conf
 RUN chmod 777 -R /opt/web/static
 
