@@ -191,7 +191,7 @@ async function main() {
       listenerArn: webHttps.listener.arn,
     });
 
-    const site = config.get("target")
+    const site = process.env.GITHUB_REF_NAME !== "master"
       ? `www.${config.get("target")}.evercharge.com`
       : `www.evercharge.com`;
 
