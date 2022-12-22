@@ -178,7 +178,7 @@ async function main() {
     });
 
     var defaultCertificateArn =
-      "arn:aws:acm:us-west-2:032719859041:certificate/8cae1a5e-8ca5-4077-ac0e-102357de5f73";
+      "arn:aws:acm:us-west-2:032719859041:certificate/5756f0ad-3435-41d7-b5ef-75860854be65";
 
     if (process.env.GITHUB_REF_NAME === "master") {
       defaultCertificateArn =
