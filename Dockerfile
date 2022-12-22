@@ -23,10 +23,8 @@ RUN TAGNAME=$(curl -L https://api.github.com/repos/sass/dart-sass/releases/lates
 RUN apk del .build-deps
 RUN chmod 777 -R /opt/web/static/.webassets-cache
 RUN chmod 777 /opt/web
-RUN mkdir -p /var/lib/nginx/tmp/client_body
-RUN chmod 777 /var/lib/nginx/tmp/client_body
-RUN mkdir -p /var/lib/nginx/tmp
-RUN chmod 777 /var/lib/nginx/tmp
+RUN mkdir -p /var/lib/nginx || exit 0 # ignore error if dir exists
+RUN chmod 777 /var/lib/nginx
 
 EXPOSE 80
 
