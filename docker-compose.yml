@@ -15,7 +15,11 @@ services:
       - web
     environment:
       - FLASK_DEBUG=True
-      - EVERCHARGE_ENV
+      - NS_ACCOUNT
+      - NS_CONSUMER_KEY
+      - NS_CONSUMER_SECRET
+      - NS_TOKEN_KEY
+      - NS_TOKEN_SECRET
 
 networks:
   web:

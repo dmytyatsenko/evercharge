@@ -3,13 +3,11 @@ from datetime import datetime
 import pytz
 import os
 import requests
-import boto3
 
 import geoip2.database
 from itsdangerous import want_bytes, Signer, BadData
 from six.moves.urllib.parse import urlparse
 from netsuitesdk import NetSuiteConnection as BaseNetSuiteConnection
-from botocore.exceptions import ClientError
 
 from flask import Flask, render_template, request, redirect, url_for, jsonify, json
 from flask_assets import Environment, Bundle
@@ -103,24 +101,11 @@ ADWORDS_COOKIE = '_adwords_cookie'
 app.config['RECAPTCHA_SITE_KEY'] = RECAPTCHA_SITE_KEY = '6Lcnk4YeAAAAAKbZ58F1hXrCpn7QXF8tmwsNX4DM'
 app.config['RECAPTCHA_SECRET_KEY'] = RECAPTCHA_SECRET_KEY = '6Lcnk4YeAAAAAJvHbAttuU4SL4h87jKQF4G1X-6m'
 
-
-def get_secrets(secret_name):
-    # Create a Secrets Manager client
-    session = boto3.session.Session()
-    client = session.client(
-        service_name='secretsmanager',
-        region_name="us-west-2"
-    )
-
-    try:
-        get_secret_value_response = client.get_secret_value(
-            SecretId=secret_name
-        )
-    except ClientError as e:
-        # For a list of exceptions thrown, see
-        # https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
-        raise e
-    return get_secret_value_response
+NS_ACCOUNT = os.environ.get('NS_ACCOUNT', '')
+NS_CONSUMER_KEY = os.environ.get('NS_CONSUMER_KEY', '')
+NS_CONSUMER_SECRET = os.environ.get('NS_CONSUMER_SECRET', '')
+NS_TOKEN_KEY = os.environ.get('NS_TOKEN_KEY', '')
+NS_TOKEN_SECRET = os.environ.get('NS_TOKEN_SECRET', '')
 
 class NetSuiteConnection(BaseNetSuiteConnection):
     LEAD_SOURCES = {
@@ -148,17 +133,12 @@ class NetSuiteConnection(BaseNetSuiteConnection):
 
     @staticmethod
     def connect():
-        environment = os.environ.get('EVERCHARGE_ENV', 'dev')
-        if environment != 'prod':  # use testing credentials if we're not in a production environment
-            environment = 'dev'
-        secret_value_response = get_secrets(f'{environment}_netsuite_credentials')
-        secrets = json.loads(secret_value_response['SecretString'])
         return NetSuiteConnection(
-            account=secrets.get('NS_ACCOUNT'),
-            consumer_key=secrets.get('NS_CONSUMER_KEY'),
-            consumer_secret=secrets.get('NS_CONSUMER_SECRET'),
-            token_key=secrets.get('NS_TOKEN_KEY'),
-            token_secret=secrets.get('NS_TOKEN_SECRET'),
+            account=NS_ACCOUNT,
+            consumer_key=NS_CONSUMER_KEY,
+            consumer_secret=NS_CONSUMER_SECRET,
+            token_key=NS_TOKEN_KEY,
+            token_secret=NS_TOKEN_SECRET,
             caching=False,
             page_size=1000,
         )
@@ -476,7 +456,7 @@ def evercharge():
 
 @app.route('/why-evercharge', methods=['GET'])
 def why_evercharge():
-    return render_template('learn-more.html')
+    return redirect('tech')
 
 @app.route('/learnmore', methods=['GET'])
 def learn_more():
@@ -552,7 +532,7 @@ def tech():
 
 @app.route('/letscharge', methods=['POST', 'GET'])
 def campaign_letscharge():
-    return render_template('campaign-letscharge.html')
+    return redirect('tech')
 
 @app.route('/press', methods=['POST', 'GET'])
 def press_page():
@@ -585,7 +565,7 @@ def dell_signup():
 
 @app.route('/tesla', methods=['POST', 'GET'])
 def tesla_page():
-    return render_template('tesla.html')
+    return redirect(url_for('tech'))
 
 @app.route('/thankyou', methods=['POST', 'GET'])
 def thank_you():
