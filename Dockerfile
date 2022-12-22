@@ -24,7 +24,7 @@ RUN apk del .build-deps
 RUN chmod 777 -R /opt/web/static/.webassets-cache
 RUN chmod 777 /opt/web
 RUN mkdir -p /var/lib/nginx || exit 0 # ignore error if dir exists
-RUN chmod 777 /var/lib/nginx
+RUN chmod 777 -R /var/lib/nginx
 
 EXPOSE 80
 
