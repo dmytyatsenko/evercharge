@@ -1,0 +1,3 @@
+name: marketing-website
+description: Migrate the website into a fargate container.
+runtime: nodejs
