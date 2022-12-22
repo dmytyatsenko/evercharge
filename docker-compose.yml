@@ -7,10 +7,8 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
-    volumes:
-      - .:/opt/web
     ports:
-      - "${DOCKER_LOCAL_WEB_PORT:-9000}:9000"
+      - "80:80"
     networks:
       - web
     environment:
