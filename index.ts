@@ -19,7 +19,6 @@ async function main() {
 
   const ecrRepo = new awsx.ecr.Repository("marketing-website", {
     imageTagMutability: "MUTABLE",
-    name: "marketing-website",
     imageScanningConfiguration: {
       scanOnPush: true,
     },
