@@ -234,7 +234,7 @@ async function main() {
           cpuArchitecture: "ARM64",
         },
       },
-      desiredCount: 6,
+      desiredCount: process.env.GITHUB_REF_NAME !== "master" ? 1 : 10,
     });
   });
 }
