@@ -25,6 +25,8 @@ RUN chmod 777 -R /opt/web/static/.webassets-cache
 RUN chmod 777 /opt/web
 RUN mkdir -p /var/lib/nginx || exit 0 # ignore error if dir exists
 RUN chmod 777 -R /var/lib/nginx
+RUN sed -i 's/^error_log/#error_log/g' /etc/nginx/nginx.conf
+RUN sed -i 's/access_log/#access_log/g' /etc/nginx/nginx.conf
 
 EXPOSE 80
 
