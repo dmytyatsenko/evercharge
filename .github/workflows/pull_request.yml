@@ -32,6 +32,6 @@ jobs:
         uses: pulumi/actions@v3
         with:
           command: preview
-          stack-name: evercharge/marketing
+          stack-name: evercharge/marketing-${{ github.ref_name }}
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
