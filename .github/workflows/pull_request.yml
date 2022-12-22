@@ -28,6 +28,12 @@ jobs:
           cache: 'pnpm'
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
+      - name: Pulumi Create Stack
+        uses: pulumi/actions@v3
+        continue-on-error: true
+        with:
+          command: stack init --non-interactive
+          stack-name: evercharge/marketing-${{ github.ref_name }}
       - name: Pulumi Preview
         uses: pulumi/actions@v3
         with:
