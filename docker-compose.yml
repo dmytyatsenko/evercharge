@@ -7,17 +7,15 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+      no_cache: true
+      
     ports:
       - "80:80"
     networks:
       - web
     environment:
       - FLASK_DEBUG=True
-      - NS_ACCOUNT
-      - NS_CONSUMER_KEY
-      - NS_CONSUMER_SECRET
-      - NS_TOKEN_KEY
-      - NS_TOKEN_SECRET
+      - EVERCHARGE_ENV
 
 networks:
   web:
