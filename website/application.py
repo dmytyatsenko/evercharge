@@ -14,6 +14,8 @@ from botocore.exceptions import ClientError
 from flask import Flask, render_template, request, redirect, url_for, jsonify, json
 from flask_assets import Environment, Bundle
 
+version = '0.0.1'
+
 geoip2_reader = geoip2.database.Reader('GeoIP2-Country.mmdb')
 
 DASHBOARD_URL = 'https://dashboard.evercharge.com'
