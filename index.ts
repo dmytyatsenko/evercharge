@@ -177,8 +177,13 @@ async function main() {
       targetGroup: targetgroup1,
     });
 
-    const defaultCertificateArn =
-      "arn:aws:acm:us-west-2:032719859041:certificate/eee4fdc4-c2d8-4a3f-8a0c-f20a0392c73d";
+    var defaultCertificateArn =
+      "arn:aws:acm:us-west-2:032719859041:certificate/5756f0ad-3435-41d7-b5ef-75860854be65";
+
+    if (process.env.GITHUB_REF_NAME === "master") {
+      defaultCertificateArn =
+        "arn:aws:acm:us-west-2:032719859041:certificate/eee4fdc4-c2d8-4a3f-8a0c-f20a0392c73d";
+    }
 
     const webHttps = alb.createListener("website-https", {
       protocol: "HTTPS",
@@ -191,9 +196,10 @@ async function main() {
       listenerArn: webHttps.listener.arn,
     });
 
-    const site = process.env.GITHUB_REF_NAME !== "master"
-      ? `www.${config.get("target")}.evercharge.com`
-      : `www.evercharge.com`;
+    const site =
+      process.env.GITHUB_REF_NAME !== "master"
+        ? `www.${config.get("target")}.evercharge.com`
+        : `www.evercharge.com`;
 
     const rule1 = new awsxClassic.lb.ListenerRule("website-lr1", web, {
       conditions: [{ hostHeader: { values: [site] } }],
