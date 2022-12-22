@@ -16,7 +16,6 @@ services:
     environment:
       - FLASK_DEBUG=True
       - EVERCHARGE_ENV
-    
 
 networks:
   web:
