@@ -7,7 +7,7 @@ if port is None:
 else:
     bind = "0.0.0.0:" + str(port)
 worker_class = 'gevent'
-workers = multiprocessing.cpu_count() + 1
-threads = workers 
+workers = 4
+threads = workers * 2
 max_requests = 1000
 timeout = 300

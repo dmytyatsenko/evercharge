@@ -234,6 +234,10 @@ async function main() {
           user: "1000:1000",
           cpu: 4096,
           memory: 8192,
+          linuxParameters: {
+            initProcessEnabled: true,
+            
+          }
         },
         runtimePlatform: {
           operatingSystemFamily: "LINUX",
