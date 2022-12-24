@@ -1,7 +1,9 @@
 {
     "name": "aws-typescript",
     "devDependencies": {
-        "@types/node": "^18.11.17"
+        "@types/node": "^18.11.17",
+        "nodemon": "^2.0.20",
+        "tailwindcss": "^3.2.4"
     },
     "dependencies": {
         "@aws-sdk/client-ecr": "^3.236.0",
