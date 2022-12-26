@@ -95,7 +95,7 @@
 	</div>
 	</header>
 
-	<div class="w-full p-3 bg-gray-100 h-1/2 drop-shadow-lg">
+	{# <div class="w-full p-3 bg-gray-100 h-1/2 drop-shadow-lg">
 		<div class="container mx-auto w-full h-full flex justify-center items-center mt-20 mb-16">
 			
 				<div class="pb-20 cursor-pointer">
@@ -132,7 +132,7 @@
 					</div>
 			  </div>
 		</div>
-	</div>
+	</div> #}
 
 
 	{% block alt_background %}
@@ -144,80 +144,18 @@
 			{% endblock %}
 		</div>
 	</div>
-	{#
+
 	<main id="content">
 		{% block content_one %}
 		{% endblock %}
 
-		{% block quote_form %}
-				<!-- get a quote -->
-		<section class="get-a-quote">
-			<form action="{{ url_for('thank_you') }}?form=quote" method='post' id="quote" class="validate-form">
-				<input name="lead_source" value="Web Signup" type="hidden">
-				<input name="adwordsField" id='adwordsField' type="hidden">
-				<input name="granularField" id="granularField" type="hidden">
-
-				<div class="get-a-quote-wrapper">
-					<h2>Get Your Quote Today</h2>
-					<p style="line-height:20px">Connect with one of our experts by telling us a little about yourself.</p>
-										<!--tab area start-->
-					<div class="tab_area">
-						<div class="tab_radio">
-							<p data-href="{{ url_for('static', filename='inc/tab00.html') }}" class="active">
-								<input type="radio" checked="checked" value="EV Driver" name="customer_type" class="radio1" id="customer_type_ev">
-								<label for="customer_type_ev" class="label-radio">EV Driver</label>
-							</p>
-							<p data-href="{{ url_for('static', filename='inc/tab01.html') }}" class="active">
-								<input type="radio" value="Property Manager" name="customer_type" class="radio2" id="customer_type_hoa">
-								<label for="customer_type_hoa" class="label-radio">Management</label>
-							</p>
-						</div>
-						<div class="tab_container">
-							<!--first tab area start-->
-							<div id="Driver" class="tab_content">
-								<div class="quote-form">
-									<div class="row">
-										<div class="col-sm-4">
-											<div class="quote-form-col form-group">
-												<input name="quote_name" class="form-control required" id="label1" type="text" placeholder="Name*" autocomplete="off">
-											</div>
-										</div>
-										<div class="col-sm-4">
-											<div class="quote-form-col form-group">
-												<input name="quote_email" type="email" class="form-control required-email" id="label2" placeholder="Email*" autocomplete="off">
-											</div>
-										</div>
-										<div class="col-sm-4">
-											<div class="quote-form-col form-group">
-												<input name="quote_phone" type="tel" class="form-control bfh-phone" placeholder="Phone" data-format="ddd-ddd-dddd" autocomplete="off">
-											</div>
-										</div>
-										<div class="col-sm-8">
-											<div class="quote-form-col form-group">
-												<textarea name="quote_notes" rows="2" class="form-control" placeholder="Additional comments" autocomplete="off"></textarea>
-											</div>
-										</div>
-										<div class="col-sm-4">
-											<div class="quote-form-col">
-												<input type="submit" value="Get Your Quote" class="g-recaptcha ec-button-teal-border block">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--first tab area end-->
-						</div>
-					</div>
-					<!--tab area end-->
-				</div>
-			</form>
-		</section>
-		{% endblock %}
+	
 	</main>
-	#}
+
 
 	<!-- footer -->
-	<footer class="min-h-103 bg-black font-aeonic pt-20 pb-7">
+	{#<footer class="min-h-103 bg-black font-aeonic pt-20 pb-7">
+		<h1 class="text-green-500 text-2xl">Test text</h1>
 		<div class="container mx-auto ">
 			<div class="flex flex-col md:flex-row mt-11 md:mt-21">
 				<div class="w-full md:w-2/6 h-full relative mb-7">
@@ -292,7 +230,7 @@
 			</p>
 		</div>
 
-	</footer>
+	</footer>#}
 
     {%- if not config.DEBUG  -%}
     <script>

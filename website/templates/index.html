@@ -5,8 +5,38 @@
 {% block content_one %}
 
     
+
+{% include 'blocks/main_block.html' %}
+
+
+	{% with 
+		title="Fit for your existing infrastructure", 
+		first_paragraph="EV002 uses our SmartPower™ dynamic load management to reduce electrical infrastructure requirements.",
+		second_paragraph="Charging stations communicate via a wireless mesh network, streamlining onsite load management, remote management, and software updates.",
+		img_route="/images/CES_EV002_2.png",
+		is_img_reverse=False 
+	%}
+	{% include 'blocks/second_block.html'%}
+	{% endwith %}
+
+
+
+{% with 
+	title="Reduced deployment costs", 
+	first_paragraph="The EV002 fully integrated wireless mesh network and integrated disconnect means more simple and cost-effective deployments.",
+	second_paragraph="No cell repeaters, WiFi, ethernet cables, gateways, or control units are required, saving time and money.",
+	img_route="/images/CES_EV002_1.png",
+	is_img_reverse=True 
+%}
+{% include 'blocks/second_block.html'%}
+{% endwith %}
+
+{% with title = "EV002 Product \t Details" %}
+{% include 'blocks/product_details.html'%}
+{% endwith %}
+
     <!-- Banner -->
-    <section class="masthead">
+   {# <section class="masthead">
         <div class="banner-green"></div>
         <div class="masthead-img">
           <img src="{{ url_for('static', filename='images/hero-img.png') }}" alt="">
@@ -180,7 +210,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>#}
 	<!-- testimonial -->
 		
 {% endblock %}
