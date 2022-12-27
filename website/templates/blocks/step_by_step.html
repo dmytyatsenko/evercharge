@@ -1,0 +1,25 @@
+<div class="bg-gray-500 h-227 relative">
+    <div class="container mx-auto flex flex-col justify-center h-full">
+        <div class="flex justify-center items-center h-1/2">
+            <h3 class="text-8xl whitespace-pre-wrap text-center text-black">{{title}}</h3>
+        </div>
+        <div class="w-full h-1/2 grid grid-cols-4 gap-x-16 justify-items-center content-center">
+            {% with%}
+            {% include 'blocks/step_by_step_card.html'%}
+            {% endwith %}
+            {% with%}
+            {% include 'blocks/step_by_step_card.html'%}
+            {% endwith %}
+            {% with%}
+            {% include 'blocks/step_by_step_card.html'%}
+            {% endwith %}
+            {% with%}
+            {% include 'blocks/step_by_step_card.html'%}
+            {% endwith %}
+        </div>
+    </div>
+    <div class="absolute bottom-0 right-0 mr-80 -mb-160 -z-5">
+        <img src="/images/arrow_1.svg">
+        <img/>
+    </div>
+</div>

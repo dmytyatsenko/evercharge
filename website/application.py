@@ -755,6 +755,18 @@ def redirect_to_dashboard_charge_connector(connector_code):
 def redirect_to_dashboard_charging_stats(connector_code):
     return redirect(f'{DASHBOARD_URL}/charge/{connector_code}/charging-stats')
 
+@app.route('/products/ev002', methods=['POST', 'GET'])
+def products_ev002():
+    return render_template("ev002.html")
+
+@app.route('/products/cove', methods=['POST', 'GET'])
+def products_cove():
+    return render_template("cove.html")
+
+@app.route('/products/power-cabinet', methods=['POST', 'GET'])
+def products_power_cabinet():
+    return render_template("power_cabinet.html")
+
 if __name__ == '__main__':
     PORT = int(os.environ.get("PORT", 9000))
     DEBUG = os.environ.get("FLASK_DEBUG", False)

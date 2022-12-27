@@ -5,19 +5,23 @@
 {% block content_one %}
 
     
+{% with 
+	title="Powering the future \n of EV usage", 
+	paragraph="Smart load management charging for homes, businesses, and fleets. Compatible with any EV.",
+	img_route="/images/EverCharge_EV002.png"
+%}
+{% include 'blocks/main_block.html'%}
+{% endwith %}
 
-{% include 'blocks/main_block.html' %}
-
-
-	{% with 
-		title="Fit for your existing infrastructure", 
-		first_paragraph="EV002 uses our SmartPower™ dynamic load management to reduce electrical infrastructure requirements.",
-		second_paragraph="Charging stations communicate via a wireless mesh network, streamlining onsite load management, remote management, and software updates.",
-		img_route="/images/CES_EV002_2.png",
-		is_img_reverse=False 
-	%}
-	{% include 'blocks/second_block.html'%}
-	{% endwith %}
+{% with 
+	title="Fit for your existing infrastructure", 
+	first_paragraph="EV002 uses our SmartPower™ dynamic load management to reduce electrical infrastructure requirements.",
+	second_paragraph="Charging stations communicate via a wireless mesh network, streamlining onsite load management, remote management, and software updates.",
+	img_route="/images/CES_EV002_2.png",
+	is_img_reverse=False 
+%}
+{% include 'blocks/second_block.html'%}
+{% endwith %}
 
 
 
@@ -31,10 +35,22 @@
 {% include 'blocks/second_block.html'%}
 {% endwith %}
 
-{% with title = "EV002 Product \t Details" %}
+{% with title = "EV002\nProduct Details" %}
 {% include 'blocks/product_details.html'%}
 {% endwith %}
 
+{% with %}
+{% include 'blocks/guarantees.html'%}
+{% endwith %}
+
+{% with 
+	title="Start to finish, we’ll\nlead the charge",
+	card_number="01",
+	card_title="Infrastructure Analysis",
+	card_paragraph="With EverCharge Easy™, we’ll provide an onsite analysis and report of electrical infrastructue and capabilites."
+%}
+{% include 'blocks/step_by_step.html'%}
+{% endwith %}
     <!-- Banner -->
    {# <section class="masthead">
         <div class="banner-green"></div>
